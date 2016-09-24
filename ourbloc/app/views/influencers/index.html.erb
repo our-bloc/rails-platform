@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Influencers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @influencers.each do |influencer| %>
+      <tr>
+        <td><%= link_to 'Show', influencer %></td>
+        <td><%= link_to 'Edit', edit_influencer_path(influencer) %></td>
+        <td><%= link_to 'Destroy', influencer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Influencer', new_influencer_path %>
