@@ -1,27 +1,27 @@
-<h2>Join us as we rise</h2>
+<h2>Join Us</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
   <div class="field">
     <%= f.label :name %><br />
-    <%= f.email_field :name, autofocus: true %>
+    <%= f.text_field :name, autofocus: true %>
   </div>
   
   <div class="field">
     <%= f.label :school %><br />
-    <%= f.email_field :school, autofocus: true %>
+    <%= f.text_field :school, autofocus: true %>
   </div>
   
   <div class="field">
     <%= f.label :major %><br />
-    <%= f.email_field :major, autofocus: true %>
+    <%= f.text_field :major, autofocus: true %>
   </div>
   
   
   <div class="field">
     <%= f.label :gradyear %><br />
-    <%= f.email_field :gradyear, autofocus: true %>
+    <%= f.text_field :gradyear, autofocus: true %>
   </div>
   
   <div class="field">

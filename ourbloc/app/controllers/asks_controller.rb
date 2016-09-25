@@ -1,5 +1,7 @@
 class AsksController < ApplicationController
   before_action :set_ask, only: [:show, :edit, :update, :destroy]
+  
+  
 
   # GET /asks
   # GET /asks.json
@@ -14,7 +16,7 @@ class AsksController < ApplicationController
 
   # GET /asks/new
   def new
-    @ask = Ask.new
+    @ask = current_user.asks.build
   end
 
   # GET /asks/1/edit
@@ -24,7 +26,7 @@ class AsksController < ApplicationController
   # POST /asks
   # POST /asks.json
   def create
-    @ask = Ask.new(ask_params)
+    @ask = current_user.asks.build(ask_params)
 
     respond_to do |format|
       if @ask.save
@@ -71,4 +73,4 @@ class AsksController < ApplicationController
     def ask_params
       params.fetch(:ask, {})
     end
-end
+  end

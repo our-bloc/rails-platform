@@ -10,11 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160925170244) do
+ActiveRecord::Schema.define(version: 20160925185716) do
 
   create_table "asks", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_asks_on_user_id"
   end
 
   create_table "influencers", force: :cascade do |t|
@@ -25,16 +27,22 @@ ActiveRecord::Schema.define(version: 20160925170244) do
   create_table "jobs", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_jobs_on_user_id"
   end
 
   create_table "sectors", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_sectors_on_user_id"
   end
 
   create_table "shares", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_shares_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
