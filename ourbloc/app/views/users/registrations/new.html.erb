@@ -1,4 +1,4 @@
-<h2>Sign up</h2>
+<h2>Join us as we rise</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
@@ -9,9 +9,26 @@
   </div>
   
   <div class="field">
+    <%= f.label :school %><br />
+    <%= f.email_field :school, autofocus: true %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :major %><br />
+    <%= f.email_field :major, autofocus: true %>
+  </div>
+  
+  
+  <div class="field">
+    <%= f.label :gradyear %><br />
+    <%= f.email_field :gradyear, autofocus: true %>
+  </div>
+  
+  <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>
+
 
   <div class="field">
     <%= f.label :password %>
