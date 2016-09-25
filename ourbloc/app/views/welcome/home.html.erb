@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Our Bloc</title>
+    <!-- Materialize Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    <!-- Materialize Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+
+     <!-- STYLESHEETS -->
+     <link rel="stylesheet" href="../../assets/css/style.css">
+
+     <!-- VENDOR SCRIPTS -->
+     <!-- jquery -->
+     <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.2.min.js"></script>
+     <!-- handlebars -->
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+
+     <!-- APPLICATION SCRIPTS -->
+     <script src="../../assets//javascripts/scripts/data.js"></script>
+     <script src="../../assets/javascripts/scripts/app.js"></script>
+     <!-- CSS  -->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <link href="../../assets/stylesheets/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+     <link href="../../assets/stylesheets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+   </head>
+   <body>
+
+     <nav class="black lighten-1" role="navigation">
+       <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Our Bloc</a>
+         <ul class="right hide-on-med-and-down">
+           <li><a href="#">Register</a></li>
+         </ul>
+
+         <ul id="nav-mobile" class="side-nav">
+           <li><a href="#"></a></li>
+         </ul>
+         <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+       </div>
+     </nav>
+     <div class="section no-pad-bot" id="index-banner">
+       <div class="container">
+         <br><br>
+         <h3 class="header center light-grey-text">Choose a sector</h3>
+
+
+       </div>
+     </div>
+
+     <div id="department-list" class="department-container">
+       <script id="department-list-template" type="text/x-handlebars-template">
+         <div class="container">
+
+         {{#each department}}
+
+            <div class="row">
+            <div class="col l6 center">
+            <div class="card" id="{{name}}-department">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="images/department/{{name}}.jpeg">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">{{name}}<i class="material-icons right">more_vert</i></span>
+              <!-- <p><a href="">{{name}}</a></p> -->
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">{{name}}<i class="material-icons right">close</i></span>
+              <p>{{description}}</p>
+            </div>
+            </div>
+            </div>
+            </div>
+        {{/each}}
+
+      </div>
+       </script>
+
+     </div>
+
+
+
+     <footer class="page-footer black">
+       <div class="container">
+         <div class="row">
+           <div class="col m3 s12">
+             <h6 class="white-text">Contact</h6>
+
+
+           </div>
+           <div class="col m3 s12">
+             <h6 class="white-text">About</h6>
+           </div>
+           <div class="col m6 s12">
+             <h6 class="white-text">Empowering Black Students</h6>
+           </div>
+         </div>
+       </div>
+       <div class="footer-copyright">
+         <div class="container">
+           Our Bloc <span class="white-text text-lighten-3" Materialize>2016</span>
+         </div>
+       </div>
+     </footer>
+
+
+     <!--  Scripts-->
+     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+     <script src="../../assets/javascripts/scripts/materialize.js"></script>
+     <script src="../../assets/javascripts/scripts/materialize.min.js"></script>
+     <script src="../../assets/javascripts/scripts/init.js"></script>
+     <script scr="../../assets/javascripts/scripts/app.js"></script>
+     <script src="../../assets/javascripts/scripts/data.js"></script>
+     </body>
+</html>
