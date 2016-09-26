@@ -71,6 +71,6 @@ class AsksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def ask_params
-      params.fetch(:ask, {})
+      params.require(:ask).permit(:title, :body)
     end
   end

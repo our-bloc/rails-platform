@@ -1,0 +1,19 @@
+<h1>Shares & Asks</h1>
+
+<table>
+  <tbody>
+    <%= @combined.each do |combined| %>
+      <tr>
+       	<h2 class="title"><%= link_to combined.title, combined %></h2> 
+      </tr>
+      <tr>
+       	<h2 class="title"><%= combined.body %></h2> 
+        </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Share', new_share_path %>
+<%= link_to 'New Ask', new_ask_path %>
