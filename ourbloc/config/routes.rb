@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :influencers
   
   get '/sharesasks', to: 'sharesasks#index', as: :sharesasks
+  get '/profile', to: 'users#profile', as: :profile
 
   
   devise_for :users
