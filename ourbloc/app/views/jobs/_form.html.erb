@@ -10,6 +10,21 @@
       </ul>
     </div>
   <% end %>
+  
+   <div class="field"> 
+    <%= f.label :title %> 
+    <%= f.text_field :title %> 
+  </div>
+  
+  <div class="field"> 
+    <%= f.label :description %> 
+    <%= f.text_area :description %> 
+  </div>
+  
+  <div class="field"> 
+    <%= f.label :deadline %> 
+    <%= f.date_field :deadline %> 
+  </div>
 
   <div class="actions">
     <%= f.submit %>

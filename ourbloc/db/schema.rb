@@ -10,12 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160925185716) do
+ActiveRecord::Schema.define(version: 20160926011256) do
 
   create_table "asks", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "user_id"
+    t.string   "title"
+    t.text     "body"
     t.index ["user_id"], name: "index_asks_on_user_id"
   end
 
@@ -25,9 +27,12 @@ ActiveRecord::Schema.define(version: 20160925185716) do
   end
 
   create_table "jobs", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.integer  "user_id"
+    t.string   "title"
+    t.text     "description"
+    t.date     "deadline"
     t.index ["user_id"], name: "index_jobs_on_user_id"
   end
 
@@ -42,6 +47,8 @@ ActiveRecord::Schema.define(version: 20160925185716) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "user_id"
+    t.string   "title"
+    t.text     "body"
     t.index ["user_id"], name: "index_shares_on_user_id"
   end
 
