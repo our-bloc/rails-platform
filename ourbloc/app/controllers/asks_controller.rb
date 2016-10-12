@@ -1,7 +1,5 @@
 class AsksController < ApplicationController
   before_action :set_ask, only: [:show, :edit, :update, :destroy]
-  
-  
 
   # GET /asks
   # GET /asks.json

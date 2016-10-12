@@ -3,14 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>BLOC</title>
-    
-    
+
     <!-- Materialize Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
     <!-- Materialize Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
-    
-
 
      <!-- STYLESHEETS -->
      <link rel="stylesheet" href="../../assets/css/style.css">
@@ -26,103 +23,95 @@
      <script src="../../assets/javascripts/scripts/app.js"></script>
      <!-- CSS  -->
      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
- 
-   
-	
+
      <link href="../../assets/stylesheets/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
      <link href="../../assets/stylesheets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-   </head>
-   <body>
-       
-      
+  </head>
+  <body>
+    <nav class="black lighten-1" role="navigation">
+      <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">BLOC</a>
+        <ul class="right hide-on-med-and-down">
 
-     <nav class="black lighten-1" role="navigation">
-       <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">BLOC</a>
-         <ul class="right hide-on-med-and-down">
-	      
-	         <% if user_signed_in? %> 
-	         <li> <%= link_to "EDIT PROFILE", edit_user_registration_path %> </li>
-	         <li> <%= link_to "LOG OUT", destroy_user_session_path , method: :delete %> </li>
-	         <%else%> 
-	           <li> <%= link_to "REGISTER", new_user_registration_path %> </li>
-	         <li> <button><%= link_to "LOG IN", new_user_session_path %> </li>
-            <%end%>
+	        <% if user_signed_in? %>
+	        <li> <%= link_to "EDIT PROFILE", edit_user_registration_path %> </li>
+	        <li> <%= link_to "LOG OUT", destroy_user_session_path , method: :delete %> </li>
+	         <% else %>
+	          <li> <%= link_to "REGISTER", new_user_registration_path %> </li>
+	        <li> <button><%= link_to "LOG IN", new_user_session_path %> </li>
+            <% end %>
+        </ul>
 
-         </ul>
-
-         <ul id="nav-mobile" class="side-nav">
-           <li><a href="#"></a></li>
-         </ul>
-         <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-       </div>
-     </nav>
-     <div class="section no-pad-bot" id="index-banner">
-       <div class="container">
-         <br><br>
-         <h3 class="header center light-grey-text">Choose a sector</h3>
-
-
-       </div>
-     </div>
-<div></div>
-<<%= render 'users/login' %>
- </div>
-
-     <div id="department-list" class="department-container">
-       <script id="department-list-template" type="text/x-handlebars-template">
-         <div class="container">
-
-         {{#each department}}
-
-            <div class="row">
-            <div class="col l6 center">
-            <div class="card" id="{{name}}-department">
-            <div class="card-image waves-effect waves-block waves-light">
-              <img class="activator" src="images/department/{{name}}.jpeg">
-            </div>
-            <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4">{{name}}<i class="material-icons right">more_vert</i></span>
-              <!-- <p><a href="">{{name}}</a></p> -->
-            </div>
-            <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4">{{name}}<i class="material-icons right">close</i></span>
-              <p>{{description}}</p>
-            </div>
-            </div>
-            </div>
-            </div>
-        {{/each}}
-
+        <ul id="nav-mobile" class="side-nav">
+          <li><a href="#"></a></li>
+        </ul>
+        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
       </div>
-       </script>
+    </nav>
 
-     </div>
+    <div class="section no-pad-bot" id="index-banner">
+      <div class="container">
+        <br>
+        <div class="left light-grey-text sidebar">
+          <h3 class="header">User Bio</h3>
+          <%= link_to 'New Share', new_share_path %>
+          <%= link_to 'New Ask', new_ask_path %>
+          <h4 class="header">Recent Shares & Asks</h4>
+        </div>
+        <h3 class="right header light-grey-text">Timeline</h3>
+      </div>
+    </div>
 
+    <div></div>
+    <!-- <%= render 'users/login' %> -->
 
+    <div id="department-list" class="department-container">
+      <script id="department-list-template" type="text/x-handlebars-template">
+        <div class="container">
 
-     <footer class="page-footer black">
-       <div class="container">
-         <div class="row">
-           <div class="col m3 s12">
-             <h6 class="white-text">Contact</h6>
+          {{#each department}}
+          <div class="row">
+            <div class="col l6 center">
+              <div class="card" id="{{name}}-department">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img class="activator" src="images/department/{{name}}.jpeg">
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4">{{name}}<i class="material-icons right">more_vert</i></span>
+                  <!-- <p><a href="">{{name}}</a></p> -->
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4">{{name}}<i class="material-icons right">close</i></span>
+                  <p>{{description}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {{/each}}
 
+        </div>
+      </script>
+    </div>
 
-           </div>
-           <div class="col m3 s12">
-             <h6 class="white-text">About</h6>
-           </div>
-           <div class="col m6 s12">
-             <h6 class="white-text">Empowering Black Students</h6>
-           </div>
-         </div>
-       </div>
-       <div class="footer-copyright">
-         <div class="container">
-           Our Bloc <span class="white-text text-lighten-3" Materialize>2016</span>
-         </div>
-       </div>
-     </footer>
-
+    <footer class="page-footer black">
+      <div class="container">
+        <div class="row">
+          <div class="col m3 s12">
+            <h6 class="white-text">Contact</h6>
+          </div>
+          <div class="col m3 s12">
+            <h6 class="white-text">About</h6>
+          </div>
+          <div class="col m6 s12">
+            <h6 class="white-text">Empowering Black Students</h6>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          Our Bloc <span class="white-text text-lighten-3" Materialize>2016</span>
+        </div>
+      </div>
+    </footer>
 
      <!--  Scripts-->
      <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
