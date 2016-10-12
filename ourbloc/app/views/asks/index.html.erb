@@ -12,21 +12,22 @@
   <tbody>
     <% @asks.each do |ask| %>
       <tr>
-        <h3> <%= link_to ask.title, ask %></h3>
-        </tr> 
-        </br>
         <tr>
-        <%= ask.body %> 
-       
-        <td><%= link_to 'Show', ask %></td>
-        <td><%= link_to 'Edit', edit_ask_path(ask) %></td>
-        <td><%= link_to 'Destroy', ask, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-     </tr>
-      </br>
+          <%= ask.title %>
+        </tr>
+        <tr>
+          <%= ask.body %>
+        </tr>
+        <tr>
+          <%= ask.sector %>
+        </tr>
+        <tr>
+          <%= link_to 'Edit', edit_ask_path(ask) %> | <%= link_to 'Destroy', ask, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </tr>
+      </tr>
+      <br>
     <% end %>
   </tbody>
 </table>
-
-<br>
 
 <%= link_to 'New Ask', new_ask_path %>

@@ -12,7 +12,11 @@
 .icon-block .material-icons {
 	font-size: inherit;
 }
-
+.sector-dropdown-menu,
+#ask_sector,
+#share_sector {
+  display: block;
+}
 footer {
   position: absolute;
   bottom: 0;

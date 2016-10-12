@@ -10,11 +10,13 @@ class SharesController < ApplicationController
   # GET /shares/1
   # GET /shares/1.json
   def show
+    @user = current_user
+    @user_shares = @user.shares
   end
 
   # GET /shares/new
   def new
-    @share = current_user.shares.build
+    @share = Share.new
   end
 
   # GET /shares/1/edit
@@ -25,6 +27,7 @@ class SharesController < ApplicationController
   # POST /shares.json
   def create
     @share = current_user.shares.build(share_params)
+    @share.user_id = current_user.id
 
     respond_to do |format|
       if @share.save
@@ -42,7 +45,7 @@ class SharesController < ApplicationController
   def update
     respond_to do |format|
       if @share.update(share_params)
-        format.html { redirect_to @share, notice: 'Share was successfully updated.' }
+        format.html { redirect_to @user, notice: 'Share was successfully updated.' }
         format.json { render :show, status: :ok, location: @share }
       else
         format.html { render :edit }
@@ -56,7 +59,7 @@ class SharesController < ApplicationController
   def destroy
     @share.destroy
     respond_to do |format|
-      format.html { redirect_to shares_url, notice: 'Share was successfully destroyed.' }
+      format.html { redirect_to user_path(current_user), notice: 'Share was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -69,6 +72,6 @@ class SharesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def share_params
-      params.require(:share).permit(:title, :body)
+      params.require(:share).permit(:title, :body, :sector)
     end
   end

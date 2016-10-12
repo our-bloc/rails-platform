@@ -10,17 +10,21 @@
       </ul>
     </div>
   <% end %>
-  
-  <div class="field"> 
-    <%= f.label :title %> 
-    <%= f.text_field :title %> 
-  </div>
-  
-   <div class="field"> 
-    <%= f.label :body %> 
-    <%= f.text_area :body %> 
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
   </div>
 
+  <div class="field">
+    <%= f.label :body %>
+    <%= f.text_area :body %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sector %>
+    <%= f.select :sector, options_for_select([["Daily","Daily"], ["Weekly", "Weekly"], ["Monthly","Monthly"]]), class: "sector-dropdown-menu" %>
+  </div>
 
   <div class="actions">
     <%= f.submit %>
