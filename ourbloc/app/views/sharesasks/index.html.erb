@@ -1,18 +1,22 @@
 <h1>Shares & Asks</h1>
 
-<table>
-  <tbody>
-    <%= @combined.each do |combined| %>
-      <tr>
-       	<h2 class="title"><%= link_to combined.title, combined %></h2>
-      </tr>
-      <tr>
-       	<h2 class="title"><%= combined.body %></h2>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-<br>
+<% form_tag(:action => :index) do %>
+  <%= select_tag "sector", options_for_select([
+    ["Aerospace", "Aerospace"], ["Agriculture", "Agriculture"], ["Chemical", "Chemical"],  ["Construction", "Construction"], ["Education", "Education"], ["Energy", "Energy"], ["Entertainment", "Entertainment"], ["Financial Services", "Financial Services"], ["Food", "Food"], ["Health Care", "Health Care"], ["Hospitality", "Hospitality"], ["Information", "Information"], ["Manufacturing", "Manufacturing"], ["Mass Media", "Mass Media"], ["Tech", "Tech"], ["Telecommunications", "Telecommunications"], ["Transport", "Transport"]
+    ]) %>
+  <%= submit_tag "Filter" %>
+<% end %>
 
-<%= link_to 'New Share', new_share_path %>
-<%= link_to 'New Ask', new_ask_path %>
+<div class="row">
+  <%= @combined.each do |combined| %>
+  <div class="col s12 m6">
+    <div class="card grey darken-2">
+      <div class="card-content white-text">
+        <span class="card-title"><%= combined.title %>, <%= combined.sector %></span>
+        <p><%= combined.body %></p>
+      </div>
+      <div class="card-action white-text">POSTED: <%= combined.created_at.strftime("%m/%d/%y") %></div>
+    </div>
+  </div>
+  <% end %>
+</div>
