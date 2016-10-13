@@ -59,7 +59,7 @@ class SharesController < ApplicationController
   def destroy
     @share.destroy
     respond_to do |format|
-      format.html { redirect_to user_path(current_user), notice: 'Share was successfully destroyed.' }
+      format.html { redirect_to shares_url, notice: 'Share was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -74,4 +74,4 @@ class SharesController < ApplicationController
     def share_params
       params.require(:share).permit(:title, :body, :sector)
     end
-  end
+end

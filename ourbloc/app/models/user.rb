@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_many :jobs
   has_many :asks
   has_many :shares
+  has_many :resources
   has_many :influencers
 
 

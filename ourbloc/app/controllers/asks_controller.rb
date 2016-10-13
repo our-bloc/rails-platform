@@ -10,11 +10,13 @@ class AsksController < ApplicationController
   # GET /asks/1
   # GET /asks/1.json
   def show
+    @user = current_user
+    @user_asks = @user.asks
   end
 
   # GET /asks/new
   def new
-    @ask = current_user.asks.build
+    @ask = Ask.new
   end
 
   # GET /asks/1/edit
@@ -25,6 +27,7 @@ class AsksController < ApplicationController
   # POST /asks.json
   def create
     @ask = current_user.asks.build(ask_params)
+    @ask.user_id = current_user.id
 
     respond_to do |format|
       if @ask.save
@@ -42,7 +45,7 @@ class AsksController < ApplicationController
   def update
     respond_to do |format|
       if @ask.update(ask_params)
-        format.html { redirect_to @ask, notice: 'Ask was successfully updated.' }
+        format.html { redirect_to @user, notice: 'Ask was successfully updated.' }
         format.json { render :show, status: :ok, location: @ask }
       else
         format.html { render :edit }
@@ -54,6 +57,7 @@ class AsksController < ApplicationController
   # DELETE /asks/1
   # DELETE /asks/1.json
   def destroy
+    @ask = Ask.find(params[:id])
     @ask.destroy
     respond_to do |format|
       format.html { redirect_to asks_url, notice: 'Ask was successfully destroyed.' }
@@ -62,7 +66,7 @@ class AsksController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+    # Use callbacks to ask common setup or constraints between actions.
     def set_ask
       @ask = Ask.find(params[:id])
     end
@@ -71,4 +75,4 @@ class AsksController < ApplicationController
     def ask_params
       params.require(:ask).permit(:title, :body, :sector)
     end
-  end
+end

@@ -10,6 +10,8 @@ class ResourcesController < ApplicationController
   # GET /resources/1
   # GET /resources/1.json
   def show
+    @user = current_user
+    @user_resources = @user.resources
   end
 
   # GET /resources/new
@@ -24,7 +26,8 @@ class ResourcesController < ApplicationController
   # POST /resources
   # POST /resources.json
   def create
-    @resource = Resource.new(resource_params)
+    @resource = current_user.resources.build(resource_params)
+    @resource.user_id = current_user.id
 
     respond_to do |format|
       if @resource.save
@@ -42,7 +45,7 @@ class ResourcesController < ApplicationController
   def update
     respond_to do |format|
       if @resource.update(resource_params)
-        format.html { redirect_to @resource, notice: 'Resource was successfully updated.' }
+        format.html { redirect_to @user, notice: 'Resource was successfully updated.' }
         format.json { render :show, status: :ok, location: @resource }
       else
         format.html { render :edit }
@@ -62,13 +65,13 @@ class ResourcesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+    # Use callbacks to resource common setup or constraints between actions.
     def set_resource
       @resource = Resource.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def resource_params
-      params.require(:resource).permit(:title, :body)
+      params.require(:resource).permit(:title, :body, :sector)
     end
 end

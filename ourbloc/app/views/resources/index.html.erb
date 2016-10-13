@@ -5,25 +5,25 @@
 <table>
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Body</th>
-      <th colspan="3"></th>
+      <th data-field="title">Title</th>
+      <th data-field="body">Description</th>
+      <th data-field="sector">Bloc</th>
+      <th data-field="date">Created</th>
+      <th data-field="table-links"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @resources.each do |resource| %>
-      <tr>
-        <td><%= resource.title %></td>
-        <td><%= resource.body %></td>
-        <td><%= link_to 'Show', resource %></td>
-        <td><%= link_to 'Edit', edit_resource_path(resource) %></td>
-        <td><%= link_to 'Destroy', resource, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+  <% @resources.each do |resource| %>
+    <tr>
+      <td><%= resource.title %></td>
+      <td><%= resource.body %></td>
+      <td><%= resource.sector %></td>
+      <td><%= resource.created_at.strftime("%m/%d/%y") %></td>
+      <td><%= link_to 'Edit', edit_resource_path(resource) %> | <%= link_to 'Destroy', resource, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
   </tbody>
 </table>
-
-<br>
 
 <%= link_to 'New Resource', new_resource_path %>

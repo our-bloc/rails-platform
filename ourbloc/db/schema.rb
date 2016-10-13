@@ -13,12 +13,12 @@
 ActiveRecord::Schema.define(version: 20161012215014) do
 
   create_table "asks", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
     t.integer  "user_id"
     t.string   "title"
     t.text     "body"
-    t.string   "sector"
+    t.string   "sector",     default: ""
     t.index ["user_id"], name: "index_asks_on_user_id"
   end
 
@@ -28,23 +28,23 @@ ActiveRecord::Schema.define(version: 20161012215014) do
   end
 
   create_table "jobs", force: :cascade do |t|
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
     t.integer  "user_id"
     t.string   "title"
     t.text     "description"
     t.date     "deadline"
-    t.string   "sector"
+    t.string   "sector",      default: ""
     t.index ["user_id"], name: "index_jobs_on_user_id"
   end
 
   create_table "resources", force: :cascade do |t|
     t.string   "title"
     t.text     "body"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
     t.integer  "user_id"
-    t.string   "sector"
+    t.string   "sector",     default: ""
     t.index ["user_id"], name: "index_resources_on_user_id"
   end
 
@@ -57,12 +57,12 @@ ActiveRecord::Schema.define(version: 20161012215014) do
   end
 
   create_table "shares", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
     t.integer  "user_id"
     t.string   "title"
     t.text     "body"
-    t.string   "sector"
+    t.string   "sector",     default: ""
     t.index ["user_id"], name: "index_shares_on_user_id"
   end
 

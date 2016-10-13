@@ -14,7 +14,9 @@
 }
 .sector-dropdown-menu,
 #ask_sector,
-#share_sector {
+#share_sector,
+#resource_sector,
+#job_sector {
   display: block;
 }
 footer {

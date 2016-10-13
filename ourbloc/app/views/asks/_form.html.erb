@@ -23,7 +23,9 @@
 
   <div class="field">
     <%= f.label :sector %>
-    <%= f.select :sector, options_for_select([["Daily","Daily"], ["Weekly", "Weekly"], ["Monthly","Monthly"]]), class: "sector-dropdown-menu" %>
+    <%= f.select :sector, options_for_select([
+      ["Aerospace", "Aerospace"], ["Agriculture", "Agriculture"], ["Chemical", "Chemical"],  ["Construction", "Construction"], ["Education", "Education"], ["Energy", "Energy"], ["Entertainment", "Entertainment"], ["Financial Services", "Financial Services"], ["Food", "Food"], ["Health Care", "Health Care"], ["Hospitality", "Hospitality"], ["Information", "Information"], ["Manufacturing", "Manufacturing"], ["Mass Media", "Mass Media"], ["Tech", "Tech"], ["Telecommunications", "Telecommunications"], ["Transport", "Transport"]
+      ], :selected => @ask.sector), class: "sector-dropdown-menu" %>
   </div>
 
   <div class="actions">
