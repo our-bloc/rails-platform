@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= f.label :deadline %>
-    <%= f.date_field :deadline %>
+    <%= f.date_field :deadline, value: Date.today.strftime('%d.%m.%Y') %>
   </div>
 
   <div class="field">

@@ -45,7 +45,7 @@ class SharesController < ApplicationController
   def update
     respond_to do |format|
       if @share.update(share_params)
-        format.html { redirect_to @user, notice: 'Share was successfully updated.' }
+        format.html { redirect_to @share, notice: 'Share was successfully updated.' }
         format.json { render :show, status: :ok, location: @share }
       else
         format.html { render :edit }

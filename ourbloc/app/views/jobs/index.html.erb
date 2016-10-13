@@ -2,7 +2,7 @@
 
 <h1>Jobs</h1>
 
-<table>
+<table class="responsive-table">
   <thead>
     <tr>
       <th data-field="title">Title</th>
@@ -19,7 +19,7 @@
     <tr>
       <td><%= job.title %></td>
       <td><%= job.description %></td>
-      <td><%= job.deadline.strftime("%m/%d/%y") %></td>
+      <td><%= job.deadline %></td>
       <td><%= job.sector %></td>
       <td><%= job.created_at.strftime("%m/%d/%y") %></td>
       <td><%= link_to 'Edit', edit_job_path(job) %> | <%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
