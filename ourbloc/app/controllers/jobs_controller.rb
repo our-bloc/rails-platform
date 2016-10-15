@@ -10,6 +10,8 @@ class JobsController < ApplicationController
   # GET /jobs/1
   # GET /jobs/1.json
   def show
+    @user = current_user
+    @user_jobs = @user.jobs
   end
 
   # GET /jobs/new
@@ -24,7 +26,8 @@ class JobsController < ApplicationController
   # POST /jobs
   # POST /jobs.json
   def create
-    @job = Job.new(job_params)
+    @job = current_user.jobs.build(job_params)
+    @job.user_id = current_user.id
 
     respond_to do |format|
       if @job.save
@@ -62,13 +65,13 @@ class JobsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+    # Use callbacks to job common setup or constraints between actions.
     def set_job
       @job = Job.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def job_params
-      params.fetch(:job, {})
+      params.require(:job).permit(:title, :body, :description, :deadline, :sector)
     end
 end

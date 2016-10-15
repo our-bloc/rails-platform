@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Resources</h1>
+
+<table class="responsive-table">
+  <thead>
+    <tr>
+      <th data-field="title">Title</th>
+      <th data-field="body">Description</th>
+      <th data-field="sector">Bloc</th>
+      <th data-field="date">Created</th>
+      <th data-field="table-links"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @resources.each do |resource| %>
+    <tr>
+      <td><%= resource.title %></td>
+      <td><%= resource.body %></td>
+      <td><%= resource.sector %></td>
+      <td><%= resource.created_at.strftime("%m/%d/%y") %></td>
+      <td><%= link_to 'Edit', edit_resource_path(resource) %> | <%= link_to 'Destroy', resource, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New Resource', new_resource_path %>
