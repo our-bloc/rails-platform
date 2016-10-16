@@ -28,15 +28,15 @@
      <link href="../../assets/stylesheets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   </head>
   <body>
-    <nav class="black lighten-1" role="navigation">
-      <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">BLOC</a>
+    <nav class="white" role="navigation">
+      <div class="nav-wrapper"><a style="color:black" id="logo-container" href="#" class="brand-logo">BLOC</a>
         <ul class="right hide-on-med-and-down">
 	        <% if user_signed_in? %>
-  	        <li> <%= link_to "EDIT PROFILE", edit_user_registration_path %> </li>
-  	        <li> <%= link_to "LOG OUT", destroy_user_session_path , method: :delete %> </li>
+  	        <li class="waves-effect waves-light btn"> <%= link_to "EDIT PROFILE", edit_user_registration_path %> </li>
+  	        <li class="waves-effect waves-light btn teal lighten-5"> <%= link_to "LOG OUT", destroy_user_session_path , method: :delete %> </li>
 	        <% else %>
-  	        <li> <%= link_to "REGISTER", new_user_registration_path %> </li>
-  	        <li> <%= link_to "LOG IN", new_user_session_path %> </li>
+  	        <li class="waves-effect waves-light btn"> <%= link_to "REGISTER", new_user_registration_path %> </li>
+  	        <li class="waves-effect waves-light btn teal lighten-5"> <%= link_to "LOG IN", new_user_session_path %> </li>
           <% end %>
         </ul>
 
@@ -46,6 +46,11 @@
         <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
       </div>
     </nav>
+    
+    <!-- preloading abr, the materialie one looks crazy --> 
+    <div class="progress">
+      <div class="indeterminate"></div>
+  </div>
 
     <div class="section no-pad-bot" id="index-banner">
       <div class="container">

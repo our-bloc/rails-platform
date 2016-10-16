@@ -13,3 +13,20 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body{
+    font-family: Montserrat;
+}
+.nav-wrapper{
+    font-weight: bold;
+    padding: .5%;
+}
+
+
+.nav-wrapper li{
+    font-family: Montserrat;
+    position:relative;
+    padding: 1% 2%;
+}
