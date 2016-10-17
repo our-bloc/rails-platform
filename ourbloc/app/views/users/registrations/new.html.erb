@@ -1,3 +1,7 @@
+
+
+<div class="signup">
+  
 <h2>Join Us</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -43,9 +47,27 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
-  <div class="actions">
+ <div class="btn waves-effect waves-light">
     <%= f.submit "Sign up" %>
   </div>
 <% end %>
 
 <%= render "users/shared/links" %>
+</div>
+
+<style>
+ 
+ body {
+	background: url("http://www.ourbloc.co/uploads/2/4/0/1/24014742/blackwomen_orig.jpg") no-repeat center center fixed;
+	margin: 0 auto;
+	background-size: cover;
+	font-family: Montserrat;
+	}
+	
+	.signup {
+	  position: absolute;
+	  right: 10%;
+	  float: left;
+	  width: 40%;
+	}
+</style>
