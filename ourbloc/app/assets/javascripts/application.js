@@ -10,6 +10,10 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require app.js
+//= require init.js
+//= require materialize.js
+//= require materialize.min.js
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
@@ -18,5 +22,3 @@
 $(document).on('turbolinks:load', function() {
   $(".progress").hide();
 })
-
-
