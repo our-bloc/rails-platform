@@ -12,13 +12,14 @@
 //
 //= require app.js
 //= require init.js
-//= require materialize.js
-//= require materialize.min.js
 //= require jquery
-//= require jquery_ujs
+//= require jquery.turbolinks
 //= require turbolinks
+//= require materialize/extras/nouislider
+//= require materialize-sprockets
 //= require_tree .
 
 $(document).on('turbolinks:load', function() {
   $(".progress").hide();
+  $('ul.tabs').tabs('select_tab', 'tab_id');
 })

@@ -1,9 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  body: MyText
+  user: one
+  sector: one
+  title: MyText
+  description: MyString
+  text: MyString
 
 two:
-  title: MyString
-  body: MyText
+  user: two
+  sector: two
+  title: MyText
+  description: MyString
+  text: MyString
