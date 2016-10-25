@@ -22,4 +22,5 @@
 $(document).on('turbolinks:load', function() {
   $(".progress").hide();
   $('ul.tabs').tabs('select_tab', 'tab_id');
+  $('.scrollspy').scrollSpy();
 })
