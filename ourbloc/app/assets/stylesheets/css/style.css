@@ -19,11 +19,12 @@
 #job_sector {
   display: block;
 }
-footer {
-  position: absolute;
+/*footer {
+  position: fixed;
   bottom: 0;
+  left: 0;
   width: 100%;
-}
+}*/
 
 .tab-content {
     display: none;

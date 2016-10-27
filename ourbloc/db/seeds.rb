@@ -30,18 +30,29 @@ sectors= [
 
 # creating all of the categorys
 sectors.each do |s|
-  category = Sector.new(name: s) #don't save yet, we need to add more info
-  Share.create ({user_id: 1, sector_id: category.id, title: "Resume template for anyone interested in " + category.name, text: "Check out the link..."})
-  Share.create ({user_id: 2, sector_id: category.id, title: "Resume template for anyone interested in " + category.name, text: "Check out the link..."})
-  Share.create ({user_id: 3, sector_id: category.id, title: "Resume template for anyone interested in " + category.name, text: "Check out the link..."})
-  Ask.create ({user_id: 1, sector_id: category.id, title: "Job search help!", text: "Does anyone know of dope " + category.name + " jobs to check out?"})
-  Ask.create ({user_id: 2, sector_id: category.id, title: "Job search help!", text: "Does anyone know of dope " + category.name + " jobs to check out?"})
-  Ask.create ({user_id: 3, sector_id: category.id, title: "Job search help!", text: "Does anyone know of dope " + category.name + " jobs to check out?"})
-  Job.create ({user_id: 1, sector_id: category.id, title: category.name + " Summer Internship", description: "Full Job Description" })
-  Job.create ({user_id: 2, sector_id: category.id, title: category.name + " Summer Internship", description: "Full Job Description" })
-  Job.create ({user_id: 3, sector_id: category.id, title: category.name + " Summer Internship", description: "Full Job Description" })
-  Resource.create ({user_id: 1, sector_id: category.id, title: "Cover letter example", text: "Here it is..."})
-  Resource.create ({user_id: 2, sector_id: category.id, title: "Cover letter example", text: "Here it is..."})
-  Resource.create ({user_id: 3, sector_id: category.id, title: "Cover letter example", text: "Here it is..."})
-  category.save()
+  category = Sector.create(name: s) #don't save yet, we need to add more info
+  3.times do
+    Share.create ({user_id: 1, sector_id: category.id, title: "Resume template for anyone interested in " + category.name, text: "Check out the link..."})
+    Share.create ({user_id: 2, sector_id: category.id, title: "Resume template for anyone interested in " + category.name, text: "Check out the link..."})
+    Share.create ({user_id: 3, sector_id: category.id, title: "Resume template for anyone interested in " + category.name, text: "Check out the link..."})
+  end
+
+  3.times do
+    Ask.create ({user_id: 1, sector_id: category.id, title: "Job search help!", text: "Does anyone know of dope " + category.name + " jobs to check out?"})
+    Ask.create ({user_id: 2, sector_id: category.id, title: "Job search help!", text: "Does anyone know of dope " + category.name + " jobs to check out?"})
+    Ask.create ({user_id: 3, sector_id: category.id, title: "Job search help!", text: "Does anyone know of dope " + category.name + " jobs to check out?"})
+  end
+
+  3.times do
+    Job.create ({user_id: 1, sector_id: category.id, title: category.name + " Summer Internship", description: "Full Job Description" })
+    Job.create ({user_id: 2, sector_id: category.id, title: category.name + " Summer Internship", description: "Full Job Description" })
+    Job.create ({user_id: 3, sector_id: category.id, title: category.name + " Summer Internship", description: "Full Job Description" })
+  end
+
+  3.times do
+    Resource.create ({user_id: 1, sector_id: category.id, title: "Cover letter example", text: "Here it is..."})
+    Resource.create ({user_id: 2, sector_id: category.id, title: "Cover letter example", text: "Here it is..."})
+    Resource.create ({user_id: 3, sector_id: category.id, title: "Cover letter example", text: "Here it is..."})
+  end
+
 end

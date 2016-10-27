@@ -8,101 +8,12 @@
   </head>
 
   <body>
-    <nav class="white" role="navigation">
-      <div class="nav-wrapper"><a style="color:black" id="logo-container" href="#" class="brand-logo">BLOC</a>
-        <ul class="right hide-on-med-and-down">
-	        <% if user_signed_in? %>
-  	        <li class="waves-effect waves-light btn"> <%= link_to "EDIT PROFILE", edit_user_registration_path %> </li>
-  	        <li class="waves-effect waves-light btn teal lighten-5"> <%= link_to "LOG OUT", destroy_user_session_path , method: :delete %> </li>
-	        <% else %>
-  	        <li class="waves-effect waves-light btn"> <%= link_to "REGISTER", new_user_registration_path %> </li>
-  	        <li class="waves-effect waves-light btn teal lighten-5"> <%= link_to "LOG IN", new_user_session_path %> </li>
-          <% end %>
-        </ul>
 
-        <ul id="nav-mobile" class="side-nav">
-          <li><a href="#"></a></li>
-        </ul>
-        <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-      </div>
-    </nav>
+    <%= render '/partials/header' %>
 
-    <!-- preloading abr, the materialie one looks crazy -->
-    <div class="progress">
-      <div class="indeterminate"></div>
-  </div>
+    <%= render '/partials/tabs' %>
 
-    <div class="section no-pad-bot" id="index-banner">
-      <div class="container">
-        <% if user_signed_in? %>
-          <div class="left light-grey-text sidebar">
-            <h3 class="header">User Bio</h3>
-            <%= link_to 'New Share', new_share_path %>
-            <%= link_to 'New Ask', new_ask_path %>
-            <%= link_to 'New Resource', new_resource_path %>
-            <%= link_to 'New Job', new_job_path %>
-            <br>
-            <h4 class="header">Recent Shares & Asks</h4>
-            <%# TODO: render partial for shares and asks %>
-          </div>
-          <h3 class="right header light-grey-text">Timeline</h3>
-        <% else %>
-          <h3>Welcome to Bloc!</h3>
-        <% end %>
-      </div>
-    </div>
+    <%= render '/partials/footer' %>
 
-    <div class="container">
-    <div class="row">
-      <div class="col s12">
-        <ul class="tabs" class="scrollable">
-          <li class="tab col s3"><a class="active" href="#Academia">Academia</a></li>
-          <li class="tab col s3"><a href="#Arts">Arts</a></li>
-          <li class="tab col s3"><a href="#test3">test 3</a></li>
-          <li class="tab col s3"><a href="#test4">Test 4</a></li>
-          <li class="tab col s3"><a href="#test4">Test 4</a></li>
-          <li class="tab col s3"><a href="#test4">Test 4</a></li>
-          <li class="tab col s3"><a href="#test4">Test 4</a></li>
-          <li class="tab col s3"><a href="#test4">Test 4</a></li>
-          <li class="tab col s3"><a href="#test4">Test 4</a></li>
-          <li class="tab col s3"><a href="#test4">Test 4</a></li>
-
-
-        </ul>
-      </div>
-      <div id="Academia" class="col s12"></div>
-      <div id="Arts" class="col s12">Test 2</div>
-      <div id="test3" class="col s12">Test 3</div>
-      <div id="test4" class="col s12">Test 4</div>
-    </div>
-    </div>
-
-    <footer class="page-footer black">
-      <div class="container">
-        <div class="row">
-          <div class="col m3 s12">
-            <h6 class="white-text">Contact</h6>
-          </div>
-          <div class="col m3 s12">
-            <h6 class="white-text">About</h6>
-          </div>
-          <div class="col m6 s12">
-            <h6 class="white-text">Empowering Black Students</h6>
-          </div>
-        </div>
-      </div>
-      <div class="footer-copyright">
-        <div class="container">
-          Our Bloc <span class="white-text text-lighten-3" Materialize>2016</span>
-        </div>
-      </div>
-    </footer>
-
-     <!--  Scripts-->
-     <!-- <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-     <script src="../../assets/javascripts/scripts/materialize.js"></script>
-     <script src="../../assets/javascripts/scripts/materialize.min.js"></script>
-     <script src="../../assets/javascripts/scripts/init.js"></script> -->
-     <script scr="../../assets/javascripts/scripts/app.js"></script>
-     </body>
+  </body>
 </html>
