@@ -5,7 +5,7 @@ class WelcomeController < ApplicationController
     @arts = Sector.find_by(name: "Arts")
     @advertising = Sector.find_by(name: "Advertising, Sales, Marketing")
     @business = Sector.find_by(name: "Business")
-    @entreprenuership = Sector.find_by(name: "Entreprenuership")
+    @entrepreneurship = Sector.find_by(name: "Entreprenuership")
     @finance = Sector.find_by(name: "Finance & Consulting")
     @entertainment = Sector.find_by(name: "Media & Entertainment")
     @government = Sector.find_by(name: "Law & Government")
