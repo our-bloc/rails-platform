@@ -1,0 +1,79 @@
+<div class="container">
+  <div class="row">
+
+    <div class="col s12">
+        <ul class="tabs" class="scrollable">
+          <li class="tab col s3"><a href="#Jobs">Job</a></li>
+          <li class="tab col s3"><a href="#Resources">Resource</a></li>
+          <li class="tab col s3"><a href="#Asks">Asks</a></li>
+          <li class="tab col s3"><a href="#Shares">Shares</a></li>
+        </ul>
+    </div>
+
+    <div id="Jobs" class="col s12 center">
+      <% @government.jobs.each do |a| %>
+      <div class="row">
+        <div class="col s12 m6">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title"><%= a.title %></span>
+              <p><%= a.title %></p>
+              <p><%= a.description %></p>
+              <p><%= a.text %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+    <div id="Resources" class="col s12 center">
+      <% @government.resources.each do |a| %>
+      <div class="row">
+        <div class="col s12 m6">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title"><%= a.title %></span>
+              <p><%= a.title %></p>
+              <p><%= a.description %></p>
+              <p><%= a.text %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+    <div id="Asks" class="col s12 center">
+      <% @government.asks.each do |a| %>
+      <div class="row">
+        <div class="col s12 m6">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title"><%= a.title %></span>
+              <p><%= a.title %></p>
+              <p><%= a.description %></p>
+              <p><%= a.text %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+    <div id="Shares" class="col s12 center">
+      <% @government.shares.each do |a| %>
+      <div class="row">
+        <div class="col s12 m6">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title"><%= a.title %></span>
+              <p><%= a.title %></p>
+              <p><%= a.description %></p>
+              <p><%= a.text %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+
+  </div>
+</div>

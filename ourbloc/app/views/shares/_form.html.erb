@@ -11,6 +11,23 @@
     </div>
   <% end %>
 
+ <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :body %>
+    <%= f.text_area :body %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sector %>
+    <%= f.select :sector, options_for_select([
+      ["Aerospace", "Aerospace"], ["Agriculture", "Agriculture"], ["Chemical", "Chemical"],  ["Construction", "Construction"], ["Education", "Education"], ["Energy", "Energy"], ["Entertainment", "Entertainment"], ["Financial Services", "Financial Services"], ["Food", "Food"], ["Health Care", "Health Care"], ["Hospitality", "Hospitality"], ["Information", "Information"], ["Manufacturing", "Manufacturing"], ["Mass Media", "Mass Media"], ["Tech", "Tech"], ["Telecommunications", "Telecommunications"], ["Transport", "Transport"]
+      ], :selected => @share.sector), class: "sector-dropdown-menu" %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

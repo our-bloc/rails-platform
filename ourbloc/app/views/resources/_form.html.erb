@@ -1,0 +1,34 @@
+<%= form_for(resource) do |f| %>
+  <% if resource.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(resource.errors.count, "error") %> prohibited this resource from being saved:</h2>
+
+      <ul>
+      <% resource.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :body %>
+    <%= f.text_area :body %>
+  </div>
+
+  <div class="field">
+    <%= f.label :sector %>
+    <%= f.select :sector, options_for_select([
+      ["Aerospace", "Aerospace"], ["Agriculture", "Agriculture"], ["Chemical", "Chemical"],  ["Construction", "Construction"], ["Education", "Education"], ["Energy", "Energy"], ["Entertainment", "Entertainment"], ["Financial Services", "Financial Services"], ["Food", "Food"], ["Health Care", "Health Care"], ["Hospitality", "Hospitality"], ["Information", "Information"], ["Manufacturing", "Manufacturing"], ["Mass Media", "Mass Media"], ["Tech", "Tech"], ["Telecommunications", "Telecommunications"], ["Transport", "Transport"]
+      ], :selected => @resource.sector), class: "sector-dropdown-menu" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

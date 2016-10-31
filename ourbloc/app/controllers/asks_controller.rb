@@ -10,6 +10,8 @@ class AsksController < ApplicationController
   # GET /asks/1
   # GET /asks/1.json
   def show
+    @user = current_user
+    @user_asks = @user.asks
   end
 
   # GET /asks/new
@@ -24,7 +26,8 @@ class AsksController < ApplicationController
   # POST /asks
   # POST /asks.json
   def create
-    @ask = Ask.new(ask_params)
+    @ask = current_user.asks.build(ask_params)
+    @ask.user_id = current_user.id
 
     respond_to do |format|
       if @ask.save
@@ -54,6 +57,7 @@ class AsksController < ApplicationController
   # DELETE /asks/1
   # DELETE /asks/1.json
   def destroy
+    @ask = Ask.find(params[:id])
     @ask.destroy
     respond_to do |format|
       format.html { redirect_to asks_url, notice: 'Ask was successfully destroyed.' }
@@ -62,13 +66,13 @@ class AsksController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+    # Use callbacks to ask common setup or constraints between actions.
     def set_ask
       @ask = Ask.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def ask_params
-      params.fetch(:ask, {})
+      params.require(:ask).permit(:title, :body, :sector)
     end
 end

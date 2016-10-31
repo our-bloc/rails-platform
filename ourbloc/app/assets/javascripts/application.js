@@ -10,7 +10,17 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require app.js
+//= require init.js
 //= require jquery
-//= require jquery_ujs
+//= require jquery.turbolinks
 //= require turbolinks
+//= require materialize/extras/nouislider
+//= require materialize-sprockets
 //= require_tree .
+
+$(document).on('turbolinks:load', function() {
+  $(".progress").hide();
+  $('ul.tabs').tabs('select_tab', 'tab_id');
+  $('.scrollspy').scrollSpy();
+})
