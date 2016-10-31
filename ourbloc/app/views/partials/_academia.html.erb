@@ -8,9 +8,14 @@
           <li class="tab col s3"><a href="#Asks">Asks</a></li>
           <li class="tab col s3"><a href="#Shares">Shares</a></li>
         </ul>
+    </div><br>
+    <div class="name">
+      <br>
+      <h4><%= @academia.name %></h4>
     </div>
 
     <div id="Jobs" class="col s12 center">
+      <%= link_to "add", new_job_path, class: "btn-floating btn-large waves-effect waves-light red" %>
       <% @academia.jobs.each do |a| %>
       <div class="row">
         <div class="col s12 m6">
