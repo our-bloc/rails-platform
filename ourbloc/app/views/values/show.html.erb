@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Whoserve:</strong>
+  <%= @value.whoserve %>
+</p>
+
+<p>
+  <strong>Howserve:</strong>
+  <%= @value.howserve %>
+</p>
+
+<p>
+  <strong>Legacy:</strong>
+  <%= @value.legacy %>
+</p>
+
+<%= link_to 'Edit', edit_value_path(@value) %> |
+<%= link_to 'Back', values_path %>

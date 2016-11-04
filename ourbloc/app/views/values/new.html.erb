@@ -1,0 +1,109 @@
+<h1 id="vision-header"> 2. WHAT ARE YOUR VALUES? </h1>
+
+<div class="profile-back">
+  
+  <%= form_for(@value) do |f| %>
+    <% if @value.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@value.errors.count, "error") %> prohibited this value from being saved:</h2>
+  
+        <ul>
+        <% @value.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+  <div class="field">
+      <%= f.label "How do you serve your community"  , :class => "fieldtext"  %> <br>
+      <%= f.text_area :howserve , :class => "fieldtext"  %>
+  </div> 
+    
+  <div class="field">
+    <%= f.label "Who do you serve/ pay it forward to?"  , :class => "fieldtext"  %><br>
+    <%= f.text_area :whoserve , :class => "fieldtext"  %>
+  </div>
+  
+  <div class= "field">
+    <%= f.label "What legacy are you building"  , :class => "fieldtext"  %> <br>
+    <%= f.text_area :legacy, :class => "fieldtext"  %>
+  </div>
+
+  <div class="waves-effect waves-light btn" id="signupbtn">
+     <%= f.label "Save Values"  %>
+    <%= f.submit  %>
+  </div>
+<% end %>
+
+<%= link_to 'Back', values_path %>
+</div>
+
+<style> 
+
+html{
+    height: 100%;
+    width: 100%;
+}
+body {
+	background: url("http://www.ourbloc.co/uploads/2/4/0/1/24014742/ilike_orig.jpg") no-repeat center center fixed;
+	margin: 0 auto;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	}
+
+#vision-header{
+    font-size: 6em;
+    color: white;
+    top: 4em;
+    padding: 10%;
+}
+
+.profile-back{
+    background-color: white;
+    width:100%;
+    opacity: 1;
+    position: relative;
+    height: 100%;#vision-header{
+    font-size: 6em;
+    color: white;
+    top: 4em;
+    padding: 10%;
+}
+    padding: 1em 1em 1em 1em;
+
+}
+
+.fieldtext {
+  left: 10%;
+  font-size: 4em;
+  color: black;
+  height: 20%;
+  line-height: 1.5;
+  width: 15em;
+}
+
+input.fieldtext {
+  font-size: 4em;
+  line-height: 1.5;
+  color: black;
+  width: 10em;
+  color: teal;
+}
+
+
+
+#signupbtn{
+  color: white;
+  position: absolute;
+  font-size: 4em;
+  margin-top: 5%;
+  left: 10%;
+  height: 5%;
+  width: 70%;
+}
+
+
+</style>
+

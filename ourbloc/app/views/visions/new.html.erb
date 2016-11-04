@@ -1,0 +1,112 @@
+
+
+<h1 id="vision-header"> 1. MAP YOUR VISION </h1> 
+
+<div class="profile-back">
+<%= form_for(@vision) do |f| %>
+  <% if @vision.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@vision.errors.count, "error") %> prohibited this vision from being saved:</h2>
+
+      <ul>
+      <% @vision.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  
+
+  <div class="field">
+    <%= f.label "I Will be the Steph Curry of", :class => "fieldtext" %>
+    <%= f.text_field :industry , :placeholder => "which industry?" , :class => "fieldtext" %> 
+  </div>
+  <br style="height: 15%"> 
+  
+  
+  
+  <div class="field">
+    <%= f.label "In ten years I will be dominiating my field in" , :class => "fieldtext"%>
+    <%= f.text_field :ten , :placeholder => "what title/position", :class => "fieldtext" %>
+  </div>
+  <br> 
+  <br> 
+ 
+  <div class="field">
+    <%= f.label "My first dream job is " , :class => "fieldtext"%>
+    <%= f.text_field :dreamjob , :placeholder => "think BIG...", :class => "fieldtext" %>
+
+  </div>
+    
+    
+  
+  
+  <div class="waves-effect waves-light btn" id="signupbtn">
+    <%= f.submit  %>
+  </div>
+<% end %>
+
+
+<%= link_to 'Back', visions_path %>
+
+</div>
+
+<style> 
+html{
+    height: 100%;
+}
+
+body {
+	background: url("http://www.ourbloc.co/uploads/2/4/0/1/24014742/ilike_orig.jpg") no-repeat center center fixed;
+	margin: 0 auto;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	}
+	
+#vision-header{
+    font-size: 6em;
+    color: white;
+    top: 4em;
+    padding: 10%;
+}
+
+.profile-back{
+    position: relative;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
+
+.fieldtext {
+  font-size: 4em;
+  padding: 10% 5%;
+  height: 20%;
+  line-height: 1.1;
+  left: 10%;
+}
+
+input.fieldtext {
+  font-size: 4em;
+  color: teal;
+  height: 10%;
+}
+
+.field {
+  margin: 10%;
+}
+
+#signupbtn{
+  color: white;
+  position: relative;
+  font-size: 4em;
+  margin-top: 5%;
+  left: 10%;
+  height: 20%;
+  width: 70%;
+}
+
+
+
+</style>

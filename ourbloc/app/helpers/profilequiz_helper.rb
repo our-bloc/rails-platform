@@ -1,0 +1,2 @@
+module ProfilequizHelper
+end
