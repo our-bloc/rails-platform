@@ -14,7 +14,7 @@ class ValuesController < ApplicationController
 
   # GET /values/new
   def new
-    @value = Value.new
+    @value = current_user.values.build
   end
 
   # GET /values/1/edit
@@ -24,11 +24,11 @@ class ValuesController < ApplicationController
   # POST /values
   # POST /values.json
   def create
-    @value = Value.new(value_params)
+    @value = current_user.values.build(value_params)
 
     respond_to do |format|
       if @value.save
-        format.html { redirect_to @value, notice: 'Value was successfully created.' }
+        format.html { redirect_to root_path }
         format.json { render :show, status: :created, location: @value }
       else
         format.html { render :new }

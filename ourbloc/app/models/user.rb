@@ -10,8 +10,8 @@ class User < ApplicationRecord
   has_many :shares
   has_many :resources
   has_many :influencers
-
-
+  has_many :visions
+  has_many :values
   ROLES= %w[admin student fellow company]
 
 

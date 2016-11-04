@@ -14,7 +14,7 @@ class VisionsController < ApplicationController
 
   # GET /visions/new
   def new
-    @vision = Vision.new
+    @vision = current_user.visions.build
   end
 
   # GET /visions/1/edit
@@ -24,11 +24,11 @@ class VisionsController < ApplicationController
   # POST /visions
   # POST /visions.json
   def create
-    @vision = Vision.new(vision_params)
+    @vision = current_user.visions.build(vision_params)
 
     respond_to do |format|
       if @vision.save
-        format.html { redirect_to @vision, notice: 'Vision was successfully created.' }
+        format.html { redirect_to new_value_path }
         format.json { render :show, status: :created, location: @vision }
       else
         format.html { render :new }
