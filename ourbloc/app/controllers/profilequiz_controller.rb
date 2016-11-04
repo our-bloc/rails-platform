@@ -1,0 +1,2 @@
+class ProfilequizController < ApplicationController
+end

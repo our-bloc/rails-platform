@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Industry:</strong>
+  <%= @vision.industry %>
+</p>
+
+<p>
+  <strong>Ten:</strong>
+  <%= @vision.ten %>
+</p>
+
+<p>
+  <strong>Dreamjob:</strong>
+  <%= @vision.dreamjob %>
+</p>
+
+<p>
+  <strong>Style:</strong>
+  <%= @vision.style %>
+</p>
+
+<%= link_to 'Edit', edit_vision_path(@vision) %> |
+<%= link_to 'Back', visions_path %>
