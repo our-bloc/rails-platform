@@ -10,10 +10,10 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require app.js
-//= require init.js
 //= require jquery
 //= require jquery.turbolinks
+//= require app.js
+//= require init.js
 //= require turbolinks
 //= require materialize/extras/nouislider
 //= require materialize-sprockets
@@ -23,4 +23,15 @@ $(document).on('turbolinks:load', function() {
   $(".progress").hide();
   $('ul.tabs').tabs('select_tab', 'tab_id');
   $('.scrollspy').scrollSpy();
+  // $('.modal').modal();
+
+  $(".section-tabs").on("click", function() {
+  	var id = $(this).find("a").attr("href");
+  	console.log(id);
+
+  	//Step 2: Remove class of "active" from each of the ".section-tabs"
+  	//Step 3: Add the class of "active" to "this"
+  	//Step 4: Hide all content sections below
+  	//Step 5: Show the appropriate content section based on its ID from above
+  });
 })
