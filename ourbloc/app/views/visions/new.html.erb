@@ -1,60 +1,282 @@
+<!-- landing page/copy --> 
+<h1 id="vision-header"> GET OPPORTUNITES FOR YOU</h1> 
 
+<a href="#industry_section"> <div id="firstbutton" class=" white-text btn waves-effect waves-light" style="margin-bottom: 5%%"> 
+       TAKE THE QUIZ </div>
+      </a>
 
-<h1 id="vision-header"> 1. MAP YOUR VISION </h1> 
-
-<div class="profile-back">
-<%= form_for(@vision) do |f| %>
-  <% if @vision.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@vision.errors.count, "error") %> prohibited this vision from being saved:</h2>
-
-      <ul>
-      <% @vision.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-  
-  
-
-  <div class="field">
-    <%= f.label "I Will be the Steph Curry of", :class => "fieldtext" %>
-    <%= f.text_field :industry , :placeholder => "which industry?" , :class => "fieldtext" %> 
-  </div>
-  <br style="height: 15%"> 
-  
-  
-  
-  <div class="field">
-    <%= f.label "In ten years I will be dominiating my field in" , :class => "fieldtext"%>
-    <%= f.text_field :ten , :placeholder => "what title/position", :class => "fieldtext" %>
-  </div>
-  <br> 
-  <br> 
- 
-  <div class="field">
-    <%= f.label "My first dream job is " , :class => "fieldtext"%>
-    <%= f.text_field :dreamjob , :placeholder => "think BIG...", :class => "fieldtext" %>
-
-  </div>
-    
-    
-  
-  
-  <div class="waves-effect waves-light btn" id="signupbtn">
-    <%= f.submit  %>
-  </div>
-<% end %>
-
-
-<%= link_to 'Back', visions_path %>
-
+<div style="height:40%"> </div>
 </div>
 
+
+<!-- INDUSTRY PORTION OF QUIZ --> 
+<section  > 
+<h5 id="industry_section"  style="color:teal"> WHO ARE YOU BUILDING WITH? </h5>
+<%= form_for(@vision) do |f| %>
+  <div class="industry" id="industry">
+ 
+    <a href="#dreamjob"> <img id="pic_griots" src ="http://www.ourbloc.co/uploads/2/4/0/1/24014742/1_7_orig.png" class="form_pic col-md-4"> </a>
+    <%= f.hidden_field :industry ,:class => "hidden_industry", :value => 0; %>
+  
+   
+    <a href="#dreamjob"><img id="pic_techies" src ="http://www.ourbloc.co/uploads/2/4/0/1/24014742/4_1_orig.png" class="form_pic"></a>
+    <%= f.hidden_field :industry ,:class => "hidden_industry", :value => 0; %>
+    
+    
+    <a href="#dreamjob"><img id="pic_scientists" src ="http://www.ourbloc.co/uploads/2/4/0/1/24014742/7_orig.png" class="form_pic"></a>
+    <%= f.hidden_field :industry ,:class => "hidden_industry", :value => 0; %>
+    
+    <a href="#dreamjob"><img id="pic_csuite" src ="http://www.ourbloc.co/uploads/2/4/0/1/24014742/5_orig.png" class="form_pic"></a>
+    <%= f.hidden_field :industry ,:class => "hidden_industry", :value => 0; %>
+  
+    <a href="#dreamjob"><img id="pic_educators" src ="http://www.ourbloc.co/uploads/2/4/0/1/24014742/2_4_orig.png" class="form_pic"></a>
+    <%= f.hidden_field :industry ,:class => "hidden_industry", :value => 0; %>
+    
+    <a href="#dreamjob"><img id="pic_changers" src ="http://www.ourbloc.co/uploads/2/4/0/1/24014742/3_orig.png" class="form_pic"></a>
+    <%= f.hidden_field :industry ,:class => "hidden_industry", :value => 0; %>
+ 
+    <a href="#dreamjob"><img id="pic_makers" src ="http://www.ourbloc.co/uploads/2/4/0/1/24014742/6_orig.png" class="form_pic"></a>
+    <%= f.hidden_field :industry ,:class => "hidden_industry", :value => 0; %>
+  </div>
+</section>
+<!-- end industry portion of quiz --> 
+
+
+
+<!-- DREAM JOB PORTION OF QUIZ --> 
+<div class="field" id="dreamjob">
+    <%= f.label "My dream first oportunity out of undergrad is _________" %>
+    <%= f.text_field :dreamjob %>
+</div>
+
+<a href="#style"> <div id="nextbutton" class="white-text btn waves-effect waves-light"> 
+       NEXT </div>
+     </a>
+
+<!-- end dream job portion of quiz --> 
+
+
+<!-- STYLE PORTION OF QUIZ --> 
+<section> 
+<div class="style" id="style">
+    <h5> WHAT IS YOUR DREAM OFFICE STYLE? </h5>
+    <img id="pic_sugar" src ="https://media.giphy.com/media/qpzpFxC80Pvxu/giphy.gif" class="style_pic">
+    <%= f.hidden_field :style ,:class => "hidden_style", :value => 0; %>
+  
+    <img id="pic_earn" src ="http://ww2.kqed.org/pop/wp-content/uploads/sites/12/2016/10/glover.gif" class="style_pic">
+    <%= f.hidden_field :industry ,:class => "hidden_style", :value => 0; %>
+    
+    <img id="pic_jackson" src ="https://media.giphy.com/media/sA34qgVDgXFQY/giphy.gif" class="style_pic">
+    <%= f.hidden_field :style ,:class => "hidden_style", :value => 0; %>
+    
+    <img id="pic_issa" src ="https://media.giphy.com/media/26tjZjCi41r0cVsKQ/giphy.gif" class="style_pic">
+    <%= f.hidden_field :style ,:class => "hidden_style", :value => 0; %>
+  </div>
+</section>
+<!-- end style portion of quiz --> 
+
+  
+<% end %>
+
+<script>
+//SCRIPT FOR INDUSTRY SECTION OF QUIZ
+    $('#pic_griots').click(function(){
+        $(this).css({
+        'border': '4px solid yellow'
+        }); 
+        $('.hidden_industry').val("1") ;
+        
+        $(this).siblings().css({
+            'border': '4px solid white'
+            }); 
+            
+    });
+    
+     $('#pic_techies').click(function(){
+        $(this).css({
+        'border': '4px solid yellow'
+        }); 
+       
+        $('.hidden_industry').val("2") ;
+        $(this).siblings().css({
+            'border': '4px solid white'
+            }); 
+    });
+    
+    $('#pic_scientists').click(function(){
+        $(this).css({
+        'border': '4px solid yellow'
+        }); 
+       
+        $('.hidden_industry').val("3") ;
+        $(this).siblings().css({
+            'border': '4px solid white'
+            }); 
+    });
+        
+    $('#pic_csuite').click(function(){
+        $(this).css({
+        'border': '4px solid yellow'
+        }); 
+       
+        $('.hidden_industry').val("4") ;
+        $(this).siblings().css({
+            'border': '4px solid white'
+            }); 
+    });
+    
+    
+    $('#pic_educators').click(function(){
+        $(this).css({
+        'border': '4px solid yellow'
+        }); 
+       
+        $('.hidden_industry').val("5") ;
+        $(this).siblings().css({
+            'border': '4px solid white'
+            }); 
+    });
+    
+    $('#pic_changers').click(function(){
+        $(this).css({
+        'border': '4px solid yellow'
+        }); 
+       
+        $('.hidden_industry').val("6") ;
+        $(this).siblings().css({
+            'border': '4px solid white'
+            }); 
+    });
+    
+    $('#pic_makers').click(function(){
+        $(this).css({
+        'border': '4px solid yellow'
+        }); 
+       
+        $('.hidden_industry').val("7") ;
+        $(this).siblings().css({
+            'border': '4px solid white'
+            }); 
+    });
+    
+    
+//SCRIPT FOR STYLE  SECTION OF QUIZ    
+     $('#pic_sugar').click(function(){
+        $(this).css({
+        'border': '4px solid yellow'
+        }); 
+       
+        $('.hidden_industry').val("1") ;
+        $(this).siblings().css({
+            'border': '4px solid white'
+            }); 
+        $("form").submit();
+     }); 
+        
+        $('#pic_earn').click(function(){
+            $(this).css({
+            'border': '4px solid yellow'
+            }); 
+           
+            $('.hidden_industry').val("2") ;
+            $(this).siblings().css({
+                'border': '4px solid white'
+                }); 
+            $("form").submit();
+        }); 
+        
+        $('#pic_jackson').click(function(){
+            $(this).css({
+            'border': '4px solid yellow'
+            }); 
+           
+            $('.hidden_industry').val("3") ;
+            $(this).siblings().css({
+                'border': '4px solid white'
+                }); 
+            $("form").submit();
+        }); 
+            
+    $('#pic_issa').click(function(){
+            $(this).css({
+            'border': '4px solid yellow'
+            }); 
+           
+            $('.hidden_industry').val("4") ;
+            $(this).siblings().css({
+                'border': '4px solid white'
+                }); 
+            $("form").submit();
+        
+    });
+</script>
+
+
+
+
+
+
 <style> 
+
 html{
     height: 100%;
+    padding: 10%;
+    font-size: 3em;
+}
+h5{
+    color: teal;
+    width: 70%;
+}
+
+.form_pic{
+    width: 10%;
+    margin: 1%;
+    border: 4px solid white;
+    background-color: white;
+}
+
+.form_pic:hover {
+    width: 10%;
+    margin: 1%;
+    border: 4px solid teal;
+    background-color: white;
+}
+
+.style_pic{
+    width: 20%;
+    margin: 1%;
+    border: 4px solid white;
+    background-color: white;
+}
+
+.style_pic:hover{
+    width: 20%;
+    height: 15%;
+    margin: 1%;
+    border: 4px solid teal;
+    background-color: white;
+}
+
+.industry{
+  padding-top: 5%;
+  padding-bottom: 10%;
+    width: 100%;
+    left: 100%;
+    
+}
+table{
+    padding:0%;
+}
+
+td{
+    margin: ;
+}
+.industry a:hover {
+    background-color: white;
+}
+
+#firstbutton{
+    margin-bottom: 100%;
 }
 
 body {
@@ -63,49 +285,65 @@ body {
 	background-size: cover;
 	width: 100%;
 	height: 100%;
+	font-family: "Montserrat";
 	}
 	
 #vision-header{
+    top: 1%;
     font-size: 6em;
+    font-family: "Montserrat";
     color: white;
-    top: 4em;
+    
+}
+
+#dreamjob{
+    padding-top: 30%;
+    border-radius: 3em;
+}
+
+#nextbutton{
+     margin-bottom: 40%;
+    }
+
+#dreamjob input{
+   color: white;
+}
+
+section{
+    position: relative;
+    background-color: white;
+    width: 150%;
+    left: -15%;
     padding: 10%;
 }
 
-.profile-back{
-    position: relative;
-    background-color: white;
-    width: 100%;
-    height: 100%;
+.style{
+    padding: -10%;
 }
 
-.fieldtext {
-  font-size: 4em;
-  padding: 10% 5%;
-  height: 20%;
-  line-height: 1.1;
-  left: 10%;
-}
-
-input.fieldtext {
-  font-size: 4em;
-  color: teal;
-  height: 10%;
-}
-
-.field {
-  margin: 10%;
-}
-
-#signupbtn{
-  color: white;
-  position: relative;
-  font-size: 4em;
-  margin-top: 5%;
-  left: 10%;
-  height: 20%;
-  width: 70%;
-}
+@media only screen and (max-device-width: 480px){
+    html{
+        font-size: 4em;
+        line-height: 5em;
+    }
+    .form_pic{
+        width: 47%;
+        margin: 1%;
+        border: 4px solid teal;
+        background-color: white;
+    }
+    
+    #firstbutton{
+        width: 70%;
+        padding: 10%;
+        height: 15%;
+        font-size: 4em;
+        border-radius: 3em;
+    }
+    
+    #nextbutton{
+       padding-bottom: 100%;
+    }
 
 
 

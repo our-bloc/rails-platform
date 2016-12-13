@@ -13,7 +13,10 @@
  *= require jquery-ui
  *= require_tree .
  *= require_self
+ *= require formtastic
+  *= require my_formtastic_changes
  */
+ 
 @import "materialize/extras/nouislider";
 @import "materialize/components/color";
 @import "materialize";
@@ -21,6 +24,7 @@
 
 body{
     font-family: Montserrat;
+    background-color: #F9F9FF ;
 }
 .nav-wrapper{
     font-weight: bold;
@@ -32,4 +36,10 @@ body{
     font-family: Montserrat;
     position:relative;
     padding: 1% 2%;
+}
+
+.card {
+    position: relative;
+    width: 150%;
+    font: Montserrat;
 }

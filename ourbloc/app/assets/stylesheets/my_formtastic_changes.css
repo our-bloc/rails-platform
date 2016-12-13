@@ -1,0 +1,49 @@
+form.formtastic input {
+  font-family: "Montserrat";
+  font-size: 1em;
+  line-height: 1.2;
+  color: white;
+  font-weight: 800;
+}
+
+form.formtastic input:checked + label{
+ color: black;
+}
+
+form.formtastic label {
+  font-family: "Montserrat";
+  font-size: 1em;
+  line-height: 1.2;
+
+}
+
+form.formtastic fieldset > ol > li.radio fieldset ol li {
+  -webkit-appearance: radio;
+  width: 15em;
+  padding: .3em;
+}
+
+@media only screen and (max-device-width: 480px){
+  form.formtastic label {
+    font-family: "Montserrat";
+    font-size: 2em;
+    line-height: 1;
+
+}
+
+form.formtastic input {
+    font-family: "Montserrat";
+    font-size: 1.8em;
+    line-height: 1.2;
+    padding: .1em;
+}
+
+form.formtastic fieldset > ol > li.radio fieldset ol li {
+  -webkit-appearance: radio;
+  width: 15em;
+  padding: .3em;
+}
+
+}
+
+

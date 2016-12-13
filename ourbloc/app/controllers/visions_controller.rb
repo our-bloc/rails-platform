@@ -28,7 +28,7 @@ class VisionsController < ApplicationController
 
     respond_to do |format|
       if @vision.save
-        format.html { redirect_to new_value_path }
+        format.html { redirect_to root_path }
         format.json { render :show, status: :created, location: @vision }
       else
         format.html { render :new }

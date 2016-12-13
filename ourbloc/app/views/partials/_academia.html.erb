@@ -9,18 +9,14 @@
           <li class="tab col s1"><a href="#Shares">Shares</a></li>
         </ul>
     </div><br>
-    <div class="name">
-      <br>
-      <h4><%= @academia.name %></h4>
-    </div>
-
+  
     <div id="Jobs" class="col s12 center">
       <%= link_to "add", new_job_path, class: "btn-floating btn-large waves-effect waves-light red" %>
       <% @academia.jobs.each do |a| %>
       <div class="row">
         <div class="col s12 m6">
-          <div class="card blue-grey darken-1">
-            <div class="card-content white-text">
+            <div class="card white">
+            <div class="card-content teal-text">
               <span class="card-title"><%= a.title %></span>
               <p><%= a.title %></p>
               <p><%= a.description %></p>
@@ -35,8 +31,8 @@
       <% @academia.resources.each do |a| %>
       <div class="row">
         <div class="col s12 m6">
-          <div class="card blue-grey darken-1">
-            <div class="card-content white-text">
+            <div class="card white">
+            <div class="card-content teal-text">
               <span class="card-title"><%= a.title %></span>
               <p><%= a.title %></p>
               <p><%= a.description %></p>
@@ -51,8 +47,8 @@
       <% @academia.asks.each do |a| %>
       <div class="row">
         <div class="col s12 m6">
-          <div class="card blue-grey darken-1">
-            <div class="card-content white-text">
+            <div class="card white">
+            <div class="card-content teal-text">
               <span class="card-title"><%= a.title %></span>
               <p><%= a.title %></p>
               <p><%= a.description %></p>
@@ -67,8 +63,8 @@
       <% @academia.shares.each do |a| %>
       <div class="row">
         <div class="col s12 m6">
-          <div class="card blue-grey darken-1">
-            <div class="card-content white-text">
+          <div class="card white">
+            <div class="card-content teal-text">
               <span class="card-title"><%= a.title %></span>
               <p><%= a.title %></p>
               <p><%= a.description %></p>
