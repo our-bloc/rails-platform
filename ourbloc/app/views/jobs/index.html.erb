@@ -1,31 +1,69 @@
-<p id="notice"><%= notice %></p>
+<!-- 
+<nav>
+    <div class="nav-wrapper white  text-black">
+      <a href="#" class="brand-logo right">Logo</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">JavaScript</a></li>
+      </ul>
+    </div>
+  </nav>-->
+  
+<div class="jobs_card">
 
-<h1>Jobs</h1>
 
-<table class="responsive-table">
-  <thead>
-    <tr>
-      <th data-field="title">Title</th>
-      <th data-field="description">Description</th>
-      <th data-field="deadline">Deadline</th>
-      <th data-field="sector">Bloc</th>
-      <th data-field="date">Created</th>
-      <th data-field="table-links"></th>
-    </tr>
-  </thead>
-
-  <tbody>
   <% @jobs.each do |job| %>
-    <tr>
-      <td><%= job.title %></td>
-      <td><%= job.description %></td>
-      <td><%= job.deadline %></td>
-      <td><%= job.sector %></td>
-      <td><%= job.created_at.strftime("%m/%d/%y") %></td>
-      <td><%= link_to 'Edit', edit_job_path(job) %> | <%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-  <% end %>
-  </tbody>
-</table>
+  <div class="row">
+        <div class="col s12 m6">
+            <div class="card white">
+            <div class="card-content teal-text">
+              <span class="card-title"><%=  link_to job.title, job_path(job) %></span>
+              <p><%= job.description %></p>
+              <td><%= job.created_at.strftime("%m/%d/%y") %></td>
+              <button class="save"> Save as favorite</button>
 
-<%= link_to 'New Job', new_job_path %>
+              
+          <%= form_tag do %>
+              <%= hidden_field_tag(:saved, true) %>
+          <% end %>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+  <% end %>
+ 
+</div>
+
+<style>
+a{
+  color: teal;
+}
+p{
+  color: grey;
+}
+a:hover{
+background-color: white;
+color: grey;
+}
+
+.jobs_card{
+  left: 25%;
+  position: absolute;
+  width: 70%;
+}
+
+#like_button{
+  align:right;
+}
+
+</style>
+
+
+<script>
+  $('.save').click(function()
+    $(this).css('color':'black');
+    $('input #job_saved').submit();
+  )};
+</script>

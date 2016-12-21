@@ -1,95 +1,133 @@
 <!-- landing page/copy --> 
-<h1 id="vision-header"> GET OPPORTUNITES FOR YOU</h1> 
+    
+    <h1 id="vision-header" > </h1>
+    
+    <!-- scroll to industry section --> 
+    <a href="#industry_section"> <div id="firstbutton" class=" white-text btn waves-effect waves-light" style="margin-bottom: 5%%"> 
+       GET YOUR ROADMAP </div>
+    </a>
 
-<a href="#industry_section"> <div id="firstbutton" class=" white-text btn waves-effect waves-light" style="margin-bottom: 5%%"> 
-       TAKE THE QUIZ </div>
-      </a>
+    <div style="height:40%"> </div>
+<!-- end lander--> 
 
-<div style="height:40%"> </div>
-</div>
+
 
 
 <!-- INDUSTRY PORTION OF QUIZ --> 
-<section  > 
-<h5 id="industry_section"  style="color:teal"> WHO ARE YOU BUILDING WITH? </h5>
 <%= form_for(@vision) do |f| %>
+
+<section class="white"> 
+<h5 id="industry_section"  style="color:teal"> WHO'S ON YOUR TEAM? </h5>
   <div class="industry" id="industry">
- 
+    
+    <%= f.hidden_field :industry, :id => "field_industry" %>
+
     <a href="#dreamjob"> <img id="pic_griots" src ="http://www.ourbloc.co/uploads/2/4/0/1/24014742/1_7_orig.png" class="form_pic col-md-4"> </a>
-    <%= f.hidden_field :industry ,:class => "hidden_industry", :value => 0; %>
   
-   
     <a href="#dreamjob"><img id="pic_techies" src ="http://www.ourbloc.co/uploads/2/4/0/1/24014742/4_1_orig.png" class="form_pic"></a>
-    <%= f.hidden_field :industry ,:class => "hidden_industry", :value => 0; %>
-    
-    
+
     <a href="#dreamjob"><img id="pic_scientists" src ="http://www.ourbloc.co/uploads/2/4/0/1/24014742/7_orig.png" class="form_pic"></a>
-    <%= f.hidden_field :industry ,:class => "hidden_industry", :value => 0; %>
-    
+
     <a href="#dreamjob"><img id="pic_csuite" src ="http://www.ourbloc.co/uploads/2/4/0/1/24014742/5_orig.png" class="form_pic"></a>
-    <%= f.hidden_field :industry ,:class => "hidden_industry", :value => 0; %>
-  
+
     <a href="#dreamjob"><img id="pic_educators" src ="http://www.ourbloc.co/uploads/2/4/0/1/24014742/2_4_orig.png" class="form_pic"></a>
-    <%= f.hidden_field :industry ,:class => "hidden_industry", :value => 0; %>
-    
+
     <a href="#dreamjob"><img id="pic_changers" src ="http://www.ourbloc.co/uploads/2/4/0/1/24014742/3_orig.png" class="form_pic"></a>
-    <%= f.hidden_field :industry ,:class => "hidden_industry", :value => 0; %>
- 
+
     <a href="#dreamjob"><img id="pic_makers" src ="http://www.ourbloc.co/uploads/2/4/0/1/24014742/6_orig.png" class="form_pic"></a>
-    <%= f.hidden_field :industry ,:class => "hidden_industry", :value => 0; %>
-  </div>
+<div> 
 </section>
 <!-- end industry portion of quiz --> 
 
 
 
 <!-- DREAM JOB PORTION OF QUIZ --> 
-<div class="field" id="dreamjob">
-    <%= f.label "My dream first oportunity out of undergrad is _________" %>
-    <%= f.text_field :dreamjob %>
+<section>
+<div id="dreamjob">
+<div id="dream_section">
+    <%= f.label "What is your dream first job? ", :style => "color:teal" %>
+    <%= f.text_field :firstjob ,:id => "field_firstjob" %>
+   
+    <div id="submit_firstjob" class="white-text btn waves-effect waves-light"> Next Job </div> 
+
 </div>
-
-<a href="#style"> <div id="nextbutton" class="white-text btn waves-effect waves-light"> 
-       NEXT </div>
-     </a>
-
+</div>
+</section>
 <!-- end dream job portion of quiz --> 
 
 
+
+
 <!-- STYLE PORTION OF QUIZ --> 
-<section> 
+<section class="white"> 
 <div class="style" id="style">
-    <h5> WHAT IS YOUR DREAM OFFICE STYLE? </h5>
-    <img id="pic_sugar" src ="https://media.giphy.com/media/qpzpFxC80Pvxu/giphy.gif" class="style_pic">
-    <%= f.hidden_field :style ,:class => "hidden_style", :value => 0; %>
+    <h5> WHO IS YOUR DREAM MENTOR? </h5>
+    
+    <%= f.hidden_field :style ,:id => "field_style" %>
+
+    <a href="#prep_head"><img id="pic_olivia" src ="https://media1.popsugar-assets.com/files/thumbor/Dxm6nPdGeW51cBEPGJhst0j4QRM/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2014/09/25/775/n/1922283/417e9e397005660b_olivia-pope-options/i/When-She-Absolutely-Fearless.gif" class="style_pic"> </a>
   
-    <img id="pic_earn" src ="http://ww2.kqed.org/pop/wp-content/uploads/sites/12/2016/10/glover.gif" class="style_pic">
-    <%= f.hidden_field :industry ,:class => "hidden_style", :value => 0; %>
-    
-    <img id="pic_jackson" src ="https://media.giphy.com/media/sA34qgVDgXFQY/giphy.gif" class="style_pic">
-    <%= f.hidden_field :style ,:class => "hidden_style", :value => 0; %>
-    
-    <img id="pic_issa" src ="https://media.giphy.com/media/26tjZjCi41r0cVsKQ/giphy.gif" class="style_pic">
-    <%= f.hidden_field :style ,:class => "hidden_style", :value => 0; %>
+    <a href="#prep_head"><img id="pic_earn" src ="http://ww2.kqed.org/pop/wp-content/uploads/sites/12/2016/10/glover.gif" class="style_pic"> </a>
+
+    <a href="#prep_head"><img id="pic_jackson" src ="https://media.giphy.com/media/sA34qgVDgXFQY/giphy.gif" class="style_pic"> </a>
+
+    <a href="#prep_head"><img id="pic_issa" src ="https://media.giphy.com/media/26tjZjCi41r0cVsKQ/giphy.gif" class="style_pic"> </a>
   </div>
+  
 </section>
 <!-- end style portion of quiz --> 
 
+
+<!-- prep section -->
+<section id="prep_head">
+ <h5 style="margin-top: 20%;color:teal"> WHAT ARE YOU STRUGGLING WITH? </h5>
+    <div id="prep_section" > 
+    
+    <%= f.hidden_field :prep, :id => "field_prep" %> 
+
+    
+    <a href="/jobs" id="need_resume" class="prep_button white-text btn waves-effect waves-light"> Starting resume </a></button>
+  
+    <a href="/jobs" id="revise_resume" class="prep_button white-text btn waves-effect waves-light"> Getting my resume together </a></button>
+    
+    <a href="/jobs" id="need_connections" class="prep_button white-text btn waves-effect waves-light"> Getting responses on my current apps </a></button>
+
+    <a href="/jobs" id="need_jobs" class="prep_button white-text btn waves-effect waves-light"> Finding internships I actually care about </a></button>
+
+    <a href="/jobs" id="cover_letters" class="prep_button white-text btn waves-effect waves-light"> Damn coverletters </a></button>
+
+
+   </div>
+   </section>
+   
+   <%= f.submit %> 
   
 <% end %>
 
+
+
+
 <script>
+
+//SCRIPT FOR DREAM JOB
+
+ $("#submit_firstjob").click(function(){
+    $(location).attr('href', '#style')
+ });
+   
 //SCRIPT FOR INDUSTRY SECTION OF QUIZ
     $('#pic_griots').click(function(){
         $(this).css({
         'border': '4px solid yellow'
         }); 
-        $('.hidden_industry').val("1") ;
+        
+        $("#field_industry").val("Griots") ;
         
         $(this).siblings().css({
             'border': '4px solid white'
             }); 
-            
+                        $("form").submit();
+
     });
     
      $('#pic_techies').click(function(){
@@ -97,10 +135,13 @@
         'border': '4px solid yellow'
         }); 
        
-        $('.hidden_industry').val("2") ;
+        $('#field_industry').val("Techies") ;
         $(this).siblings().css({
             'border': '4px solid white'
             }); 
+                        $("form").submit();
+
+
     });
     
     $('#pic_scientists').click(function(){
@@ -108,10 +149,13 @@
         'border': '4px solid yellow'
         }); 
        
-        $('.hidden_industry').val("3") ;
+        $('#field_industry').val("Scientists") ;
         $(this).siblings().css({
             'border': '4px solid white'
             }); 
+                        $("form").submit();
+
+
     });
         
     $('#pic_csuite').click(function(){
@@ -119,10 +163,13 @@
         'border': '4px solid yellow'
         }); 
        
-        $('.hidden_industry').val("4") ;
+        $('#field_industry').val("CSuite") ;
         $(this).siblings().css({
             'border': '4px solid white'
             }); 
+                        $("form").submit();
+
+
     });
     
     
@@ -131,10 +178,13 @@
         'border': '4px solid yellow'
         }); 
        
-        $('.hidden_industry').val("5") ;
+        $('#field_industry').val("Educators") ;
         $(this).siblings().css({
             'border': '4px solid white'
             }); 
+                        $("form").submit();
+
+
     });
     
     $('#pic_changers').click(function(){
@@ -142,10 +192,14 @@
         'border': '4px solid yellow'
         }); 
        
-        $('.hidden_industry').val("6") ;
+        $('#field_industry').val("Activists") ;
         $(this).siblings().css({
             'border': '4px solid white'
             }); 
+                        $("form").submit();
+
+    
+
     });
     
     $('#pic_makers').click(function(){
@@ -153,24 +207,29 @@
         'border': '4px solid yellow'
         }); 
        
-        $('.hidden_industry').val("7") ;
+        $('#field_industry').val("Advocates") ;
         $(this).siblings().css({
             'border': '4px solid white'
             }); 
+                        $("form").submit();
+
+
     });
     
     
 //SCRIPT FOR STYLE  SECTION OF QUIZ    
-     $('#pic_sugar').click(function(){
+     $('#pic_olivia').click(function(){
         $(this).css({
         'border': '4px solid yellow'
         }); 
        
-        $('.hidden_industry').val("1") ;
+        $('#field_style').val("Olivia") ;
         $(this).siblings().css({
             'border': '4px solid white'
             }); 
-        $("form").submit();
+                        $("form").submit();
+
+
      }); 
         
         $('#pic_earn').click(function(){
@@ -178,11 +237,13 @@
             'border': '4px solid yellow'
             }); 
            
-            $('.hidden_industry').val("2") ;
+            $('#field_style').val("Earn") ;
             $(this).siblings().css({
                 'border': '4px solid white'
                 }); 
-            $("form").submit();
+                            $("form").submit();
+
+
         }); 
         
         $('#pic_jackson').click(function(){
@@ -190,11 +251,12 @@
             'border': '4px solid yellow'
             }); 
            
-            $('.hidden_industry').val("3") ;
+            $('#field_style').val("Jackson") ;
             $(this).siblings().css({
                 'border': '4px solid white'
                 }); 
-            $("form").submit();
+                            $("form").submit();
+
         }); 
             
     $('#pic_issa').click(function(){
@@ -202,13 +264,75 @@
             'border': '4px solid yellow'
             }); 
            
-            $('.hidden_industry').val("4") ;
+            $('#field_style').val("Issa") ;
             $(this).siblings().css({
                 'border': '4px solid white'
                 }); 
             $("form").submit();
-        
+
+
     });
+    
+// SUBMIT FORM AFTER CHOOSING PREP 
+     $('#need_resume').click(function(){
+            $(this).css({
+            'border': '4px solid yellow'
+            }); 
+           
+            $('#field_prep').val("Need_Resume");
+            
+            $(this).siblings().css({
+                'border': 'none'
+                }); 
+            $("form").submit();
+        }); 
+        
+     $('#revise_resume').click(function(){
+            $(this).css({
+            'border': '4px solid yellow'
+            }); 
+           
+            $('#field_prep').val("Revise_Resume") ;
+            $(this).siblings().css({
+                'border': 'none'
+                }); 
+            $("form").submit();
+        }); 
+        
+         $('#need_connections').click(function(){
+            $(this).css({
+            'border': '4px solid yellow'
+            }); 
+           
+            $('#field_prep').val("Need_Connections") ;
+            $(this).siblings().css({
+                'border': 'none'
+                }); 
+            $("form").submit();
+        }); 
+         $('#need_jobs').click(function(){
+            $(this).css({
+            'border': '4px solid yellow'
+            }); 
+           
+            $('#field_prep').val("Need_Jobs") ;
+            $(this).siblings().css({
+                'border': 'none'
+                }); 
+            $("form").submit();
+        }); 
+        
+        $('#cover_letters').click(function(){
+            $(this).css({
+            'border': '4px solid yellow'
+            }); 
+           
+            $('#field_prep').val("Cover_Letters") ;
+            $(this).siblings().css({
+                'border': 'none'
+                }); 
+            $("form").submit();
+        }); 
 </script>
 
 
@@ -280,7 +404,7 @@ td{
 }
 
 body {
-	background: url("http://www.ourbloc.co/uploads/2/4/0/1/24014742/ilike_orig.jpg") no-repeat center center fixed;
+	background: url("http://www.ourbloc.co/uploads/2/4/0/1/24014742/coffee_orig.jpg") no-repeat center center fixed;
 	margin: 0 auto;
 	background-size: cover;
 	width: 100%;
@@ -292,14 +416,18 @@ body {
     top: 1%;
     font-size: 6em;
     font-family: "Montserrat";
-    color: white;
+    color: teal;
+    margin-bottom:0%;
     
 }
 
 #dreamjob{
     padding-top: 30%;
     border-radius: 3em;
-}
+	}
+	
+
+
 
 #nextbutton{
      margin-bottom: 40%;
@@ -309,18 +437,36 @@ body {
    color: white;
 }
 
-section{
+.white {
     position: relative;
     background-color: white;
     width: 150%;
     left: -15%;
-    padding: 10%;
+    
+}
+section {
+    padding: 10% 10% 50% 10%;
+
+}
+
+#prep_section{
+    margin-top: 10%;
+}
+
+a:hover {
+    background-color: white;
 }
 
 .style{
     padding: -10%;
 }
 
+.prep_button{
+    padding-left: 2%;
+    padding-right: 2%;
+    width: 40%;
+    margin: 1%;
+}
 @media only screen and (max-device-width: 480px){
     html{
         font-size: 4em;
@@ -345,6 +491,13 @@ section{
        padding-bottom: 100%;
     }
 
+#prep_section button{
+    margin: 5%;
+}
+
+#prep_section button{
+    color: white;
+}
 
 
 </style>

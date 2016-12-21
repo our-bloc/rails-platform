@@ -28,7 +28,7 @@ class VisionsController < ApplicationController
 
     respond_to do |format|
       if @vision.save
-        format.html { redirect_to root_path }
+        format.html
         format.json { render :show, status: :created, location: @vision }
       else
         format.html { render :new }
@@ -69,6 +69,6 @@ class VisionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def vision_params
-      params.require(:vision).permit(:industry, :ten, :dreamjob, :style)
+      params.require(:vision).permit(:industry, :firstjob, :style, :prep)
     end
 end

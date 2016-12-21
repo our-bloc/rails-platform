@@ -17,10 +17,11 @@
         <div class="col s12 m6">
             <div class="card white">
             <div class="card-content teal-text">
-              <span class="card-title"><%= a.title %></span>
+              <span class="card-title"><%=  link_to a.title, job_path(@academia.jobs) %></span>
               <p><%= a.title %></p>
               <p><%= a.description %></p>
               <p><%= a.text %></p>
+              <p><%= link_to "upvote", like_job_path(@academia.jobs), method: :put %> 
             </div>
           </div>
         </div>

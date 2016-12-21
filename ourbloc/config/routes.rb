@@ -5,11 +5,19 @@ Rails.application.routes.draw do
   root to: "welcome#home"
   get 'welcome/home'
 
-  resources :jobs
+  resources :jobs do
+   member do
+    put "like", to: "jobs#upvote"
+    put "dislike", to: "jobs#downvote"
+  end
   resources :sectors
   resources :shares
   resources :asks
   resources :influencers
+  
+  
+ 
+end
 
   get '/sharesasks', to: 'sharesasks#index', as: :sharesasks
   get '/profile', to: 'users#profile', as: :profile
