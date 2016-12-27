@@ -7,11 +7,18 @@ class ApplicationController < ActionController::Base
   
   BLOCS = %w[TheArts Business STEM/Tech ]
   
-  def configure_permitted_parameters
+  def configure_permitted_parameters  #form fields for devise user registration/account update
     
   
-    added_registration_attrs = [:name, :school, :major, :experience, :bloc1, :bloc2, :bloc3 ]
-    added_profile_attrs = [:name, :school, :major, :experience, :bloc1, :bloc2, :bloc3, :skills, :gradyear, :orgs, :resumelink, :geo ,:hometown ,:company]
+    added_registration_attrs = [:name, :school, 
+    :industry, :firstjob, :gradschool, :prep, :style, :office, :companies] #profilequiz
+    
+    
+    
+    added_profile_attrs = [:name, :school, #required on logins
+    :major, :experience, :bloc1, :bloc2, :bloc3, :skills, #resume
+    :gradyear, :orgs, :resumelink, :geo ,:hometown ,:company, #context
+    :industry, :firstjob, :gradschool, :prep, :style, :office, :companies] #profilequiz
   
     devise_parameter_sanitizer.permit :sign_up, keys: added_registration_attrs
     devise_parameter_sanitizer.permit :account_update, keys: added_profile_attrs

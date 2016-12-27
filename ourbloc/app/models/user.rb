@@ -11,7 +11,15 @@ class User < ApplicationRecord
   has_many :resources
   has_many :influencers
   has_many :visions
-  has_many :values
+  has_many :value
+  
+  
+  def latest_vision
+    visions.order("saved DESC").first # query to get whatever record it is you want
+  end
+  
+  
+  
   ROLES= %w[admin student fellow company]
 
 

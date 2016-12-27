@@ -10,8 +10,16 @@ class VisionsController < ApplicationController
   # GET /visions/1
   # GET /visions/1.json
   def show
+
   end
 
+
+ # GET /visions/1
+  # GET /visions/1.json
+  def myprofile
+  end
+  
+  
   # GET /visions/new
   def new
     @vision = current_user.visions.build
@@ -42,7 +50,7 @@ class VisionsController < ApplicationController
   def update
     respond_to do |format|
       if @vision.update(vision_params)
-        format.html { redirect_to @vision, notice: 'Vision was successfully updated.' }
+        format.html
         format.json { render :show, status: :ok, location: @vision }
       else
         format.html { render :edit }
