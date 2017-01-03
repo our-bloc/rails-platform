@@ -1,140 +1,183 @@
-
+<nav>
+    <div class="nav-wrapper white ">
+      <a href="#" class="brand-logo">Logo</a>
+      <ul id="nav-mobile" class=" right hide-on-med-and-down">
+        <li><a class="black-text" href="sass.html">Sass</a></li>
+        <li><a class="black-text" href="badges.html">Components</a></li>
+      </ul>
+    </div>
+  </nav
+  
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Industry:</strong>
-  <%= @vision.industry %>
-</p>
+<!-- SIDE BAR --> 
+<div class="row"> 
+  <div class="col m2" style="padding: 0% 5%">  
+    <i class="fa fa-circle" style="font-size: 20em; color: grey;"></i>
+    <span>upload profile pic</span>
+    
+    <h6> What I am  working towards...</h6>
+        <h6><%= @vision.firstjob %></h6>
+        
+        <%= link_to 'Edit', edit_vision_path(@vision) %> |
+        <%= link_to 'Back', visions_path %>
+  </div> 
 
 
-<p>
-  <strong>Dreamjob:</strong>
-  <%= @vision.firstjob %>
-</p>
 
-<p>
-  <strong>Style:</strong>
-  <%= @vision.style %>
-</p>
 
-<p>
-  <strong>Prep:</strong>
-  <%= @vision.prep %>
-</p>
+<!-- Personality Quiz Results --> 
+      <% if @vision.industry=="Griots" %>
+        <% if @vision.style=="Earn" or @vision.style=="Issa" %>
+        
+          
+            <div class="col m6 push-m2">
+            
+            <h5> Ryan Coogler</h5>
+            <p> Like Ryan, who at 33 already has already directed Fruitivale Station, Creed and Black Panther, you're creative,
+            you're fearless and you have the talent to tell stories in ways can make someone laugh, ugly cry, and (most importantly) reflect.
+            You know that you'll be the GOAT in the creative space, focusing on your art, quietly pushing boundaries and allowing your work to speak for itself. 
+            You have passion for story telling, a love for community and a no bullshit mentality ...all qualities that you will need as you make waves in a career that pro strong narratives
+            and our commmunities forward. </p>
+            </div> 
+          </div>
+          
+          <!--
+          <strong>Building on the Legacy</strong>
+          <span> Debbie Allen</span>
+          -->
+        <% else %> 
+          
+          <strong>In 5 years...</strong>
+          <span> Misty Copeland</span>
+          
+          <!-- 
+          <strong>Building on the Legacy</strong>
+          <span> James Baldwin </span>
+          -->
+      <%end %> 
+      
+      <% elsif @vision.industry=="Techies" %>
+        <% if @vision.style=="Earn" or @vision.style=="Issa" %>
+          <strong>In 5 years...</strong>
+          <span> Leslie Miley</span>
+          
+          <!--
+          <strong>Building on the Legacy Legacy</strong>
+          <span> Hidden Figures </span>
+          -->
+        <% else %> 
+          <strong>In 5 years...</strong>
+          <span> Dr. Nashlie Sephus</span>
+          
+                <!--
+          <strong>Building on the Legacy</strong>
+          <span> Clarence Ellis </span>
+          -->
+        <%end %> 
+        
+      <% elsif @vision.industry=="Scientists" %>
+        <% if @vision.industry=="Earn" or @vision.industry=="Olivia" %>
+          <strong>In 5 years...</strong>
+          <span> Dr. Martez Prince </span>
+          
+                <!--
+          <strong>Building on the Legacy Legacy</strong>
+          <span> Hidden Figures </span>
+                -->
+        <% else %> 
+          <strong>In 5 years...</strong>
+          <span> Dr. Hadiyah-Nicole Green</span>
+          
+                <!--
+          <strong>Building on the Legacy</strong>
+          <span> Dr. Daniel Hale Williams </span>
+            -->
+            
+        <%end %> 
+        
+        <% elsif @vision.industry=="CSuite" %>
+        <% if @vision.style=="Earn" or @vision.style=="Issa" %>
+          <strong>In 5 years...</strong>
+          <span> Jon Jackson </span>
+          
+          <strong>Building on the Legacy Legacy</strong>
+          <span> Hidden Figures </span>
+        <% else %> 
+          <strong>In 5 years...</strong>
+          <span> Maya Watson</span>
+          
+          <strong>Building on the Legacy</strong>
+          <span> Dr. Daniel Hale Williams </span>
+        <%end %> 
+        
+        <% elsif @vision.industry=="Educators" %>
+        <% if @vision.style=="Earn" or @vision.style=="Issa" %>
+          <strong>In 5 years...</strong>
+          <span> Larry, Brothers Empowered 2 Teach </span>
+          
+          <strong>Building on the Legacy </strong>
+          <span> Septima Clarke </span>
+          
+        <% else %> 
+          <strong>In 5 years...</strong>
+          <span> Shaun Harper </span>
+          
+          <strong>Building on the Legacy</strong>
+          <span> Audre Lorde </span>
+        <%end %> 
+        
+        <% elsif @vision.industry=="Activists" %>
+        <% if @vision.style=="Earn" or @vision.style=="Issa" %>
+          <strong>In 5 years...</strong>
+          <span> B Cole </span>
+          
+          <strong>Building on the Legacy Legacy</strong>
+          <span> Ella Baker </span>
+          
+        <% else %> 
+          <strong>In 5 years...</strong>
+          <span> Kimberley Foster</span>
+          
+          <strong>Building on the Legacy</strong>
+          <span> Ida B Wells </span>
+        <%end %> 
+        
+        <% elsif @vision.industry=="Advocates" %>
+        <% if @vision.style=="Earn" or @vision.style=="Issa" %>
+          <strong>In 5 years...</strong>
+          <span> Charles Hamilton Houston </span>
+          
+          <strong>Building on the Legacy Legacy</strong>
+          <span> Hidden Figures </span>
+        <% else %> 
+          <strong>In 5 years...</strong>
+          <span> Bakari Fellers </span>
+          
+          <strong>Building on the Legacy</strong>
+          <span> Shirley Chilsolm </span>
+        <%end %> 
+      <% end %> 
+    
 
-<p>
+
+</div>
+</div>
   
-  <% if @vision.industry=="Griots" %>
-    <% if @vision.style=="Earn" or @vision.style=="Issa" %>
-      <strong>In 5 years...</strong>
-      <span> Ryan Coogler</span>
-      
-      <strong>Building on the Legacy</strong>
-      <span> Debbie Allen</span>
-    <% else %> 
-      <strong>In 5 years...</strong>
-      <span> Misty Copeland</span>
-      
-      <strong>Building on the Legacy</strong>
-      <span> James Baldwin </span>
-  <%end %> 
-  
-  <% elsif @vision.industry=="Techies" %>
-    <% if @vision.style=="Earn" or @vision.style=="Issa" %>
-      <strong>In 5 years...</strong>
-      <span> Leslie Miley</span>
-      
-      <strong>Building on the Legacy Legacy</strong>
-      <span> Hidden Figures </span>
-    <% else %> 
-      <strong>In 5 years...</strong>
-      <span> Dr. Nashlie Sephus</span>
-      
-      <strong>Building on the Legacy</strong>
-      <span> Clarence Ellis </span>
-    <%end %> 
+<h5> The <%= @vision.industry %> </h5> 
+<div class="row">
+   <div class="col m4" style="padding:5%;">
+      <%= render "visions/partials/jobs" %>
+    </div>
     
-  <% elsif @vision.industry=="Scientists" %>
-    <% if @vision.industry=="Earn" or @vision.industry=="Olivia" %>
-      <strong>In 5 years...</strong>
-      <span> Dr. Martez Prince </span>
-      
-      <strong>Building on the Legacy Legacy</strong>
-      <span> Hidden Figures </span>
-    <% else %> 
-      <strong>In 5 years...</strong>
-      <span> Dr. Hadiyah-Nicole Green</span>
-      
-      <strong>Building on the Legacy</strong>
-      <span> Dr. Daniel Hale Williams </span>
-    <%end %> 
-    
-    <% elsif @vision.industry=="CSuite" %>
-    <% if @vision.style=="Earn" or @vision.style=="Issa" %>
-      <strong>In 5 years...</strong>
-      <span> Jon Jackson </span>
-      
-      <strong>Building on the Legacy Legacy</strong>
-      <span> Hidden Figures </span>
-    <% else %> 
-      <strong>In 5 years...</strong>
-      <span> Maya Watson</span>
-      
-      <strong>Building on the Legacy</strong>
-      <span> Dr. Daniel Hale Williams </span>
-    <%end %> 
-    
-    <% elsif @vision.industry=="Educators" %>
-    <% if @vision.style=="Earn" or @vision.style=="Issa" %>
-      <strong>In 5 years...</strong>
-      <span> Larry, Brothers Empowered 2 Teach </span>
-      
-      <strong>Building on the Legacy </strong>
-      <span> Septima Clarke </span>
-      
-    <% else %> 
-      <strong>In 5 years...</strong>
-      <span> Shaun Harper </span>
-      
-      <strong>Building on the Legacy</strong>
-      <span> Audre Lorde </span>
-    <%end %> 
-    
-    <% elsif @vision.industry=="Activists" %>
-    <% if @vision.style=="Earn" or @vision.style=="Issa" %>
-      <strong>In 5 years...</strong>
-      <span> B Cole </span>
-      
-      <strong>Building on the Legacy Legacy</strong>
-      <span> Ella Baker </span>
-      
-    <% else %> 
-      <strong>In 5 years...</strong>
-      <span> Kimberley Foster</span>
-      
-      <strong>Building on the Legacy</strong>
-      <span> Ida B Wells </span>
-    <%end %> 
-    
-    <% elsif @vision.industry=="Advocates" %>
-    <% if @vision.style=="Earn" or @vision.style=="Issa" %>
-      <strong>In 5 years...</strong>
-      <span> Charles Hamilton Houston </span>
-      
-      <strong>Building on the Legacy Legacy</strong>
-      <span> Hidden Figures </span>
-    <% else %> 
-      <strong>In 5 years...</strong>
-      <span> Bakari Fellers </span>
-      
-      <strong>Building on the Legacy</strong>
-      <span> Shirley Chilsolm </span>
-    <%end %> 
-  <% end %> 
-    
-</p>
+    <div class="col m4" style="padding:5%;">
+      <%= render "visions/partials/resources" %>
+    </div>
 
 
-
-<%= link_to 'Edit', edit_vision_path(@vision) %> |
-<%= link_to 'Back', visions_path %>
+<style>
+  html, body{
+    width: 100%;
+    height: 100%;
+  }
+</style>

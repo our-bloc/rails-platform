@@ -9,24 +9,26 @@
       </ul>
     </div>
   </nav>-->
-  
+
 <div class="jobs_card">
-
-
   <% @jobs.each do |job| %>
   <div class="row">
-        <div class="col s12 m6">
+        <div class="col s12 m4">
             <div class="card white">
             <div class="card-content teal-text">
               <span class="card-title"><%=  link_to job.title, job_path(job) %></span>
               <p><%= job.description %></p>
+              <i id="save" class="unsaved fa fa-heart-o"></i>
+              <p><%= job.industry %></p>
               <td><%= job.created_at.strftime("%m/%d/%y") %></td>
-              <button class="save"> Save as favorite</button>
+              
+              
 
               
-          <%= form_tag do %>
-              <%= hidden_field_tag(:saved, true) %>
-          <% end %>
+          <%= form_for(job) do |f| %>
+              <%= f.hidden_field :saved, :id => "save_field" %>
+          <% end %> 
+        
               
             </div>
           </div>
@@ -62,8 +64,21 @@ color: grey;
 
 
 <script>
-  $('.save').click(function()
-    $(this).css('color':'black');
-    $('input #job_saved').submit();
-  )};
+  $('.unsaved').click(function(){
+    var save_class = $(this).hasClass("fa fa-heart-o");
+    
+    if ($(this).hasClass("fa fa-heart-o")){
+      $("form").submit(true);
+      console.log("saved");
+      $(this).toggleClass("fa-heart-o fa-heart active");
+
+    } else {
+      $("form").submit(false);
+      console.log("unsaved");
+      $(this).toggleClass("fa-heart-o fa-heart active");
+
+      };
+
+  });
+  
 </script>

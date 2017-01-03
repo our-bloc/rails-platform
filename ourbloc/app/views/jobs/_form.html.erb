@@ -27,13 +27,33 @@
   </div>
 
   <div class="field">
-    <%= f.label :sector %>
-    <%= f.select :sector, options_for_select([
-      ["Aerospace", "Aerospace"], ["Agriculture", "Agriculture"], ["Chemical", "Chemical"],  ["Construction", "Construction"], ["Education", "Education"], ["Energy", "Energy"], ["Entertainment", "Entertainment"], ["Financial Services", "Financial Services"], ["Food", "Food"], ["Health Care", "Health Care"], ["Hospitality", "Hospitality"], ["Information", "Information"], ["Manufacturing", "Manufacturing"], ["Mass Media", "Mass Media"], ["Tech", "Tech"], ["Telecommunications", "Telecommunications"], ["Transport", "Transport"]
-      ], :selected => @job.sector), class: "sector-dropdown-menu" %>
+    <%= f.label :industry %>
+    <%= f.hidden_field :industry , :id =>"field_jobindustry" %>
+    
+    <div class="job_industry white-text btn waves-effect waves-light" id="Griots"> Griots </div>
+    <div class="job_industry white-text btn waves-effect waves-light" id="Techies"> Techies </div>
+    <div class="job_industry white-text btn waves-effect waves-light" id="Scientists"> Scientists </div>
+    <div class="job_industry white-text btn waves-effect waves-light" id="CSuite"> CSuite </div>
+    <div class="job_industry white-text btn waves-effect waves-light" id="Educators"> Educators </div>
+    <div class="job_industry white-text btn waves-effect waves-light" id="Activists"> Activists </div>
+    <div class="job_industry white-text btn waves-effect waves-light" id="Advocates"> Advocates </div>
   </div>
 
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+
+
+
+<script>
+  $('.job_industry').click(function(){
+      var idval = $(this).attr("id");
+      console.log(idval);
+          
+      $('#field_jobindustry').val(idval);
+            
+  });
+
+  
+</script>

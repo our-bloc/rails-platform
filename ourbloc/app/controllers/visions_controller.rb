@@ -10,7 +10,8 @@ class VisionsController < ApplicationController
   # GET /visions/1
   # GET /visions/1.json
   def show
-
+    @jobs= Job.order("created_at DESC").limit(3)
+    @resources= Resource.order("created_at DESC").limit(3)
   end
 
 
@@ -77,6 +78,6 @@ class VisionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def vision_params
-      params.require(:vision).permit(:industry, :firstjob, :style, :prep)
+      params.require(:vision).permit(:industry, :firstjob, :style, :prep, :gradschool, :companies)
     end
 end

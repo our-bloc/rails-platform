@@ -30,12 +30,12 @@
   </head>
   
   
-    <h2 id="core-head"> YOU CAN HAVE A THE CAREER OF YOUR DREAMS & SERVE YOUR COMMUNITY </h2>
+    <h2 id="core-head"> LIVE THE DREAM </h2>
 
 
   
-       <button id="firstbutton"class=" white-text btn waves-effect waves-light "> 
-       <%= link_to "GET STARTED", new_vision_path, class: "white-text" %> </button>
+      
+       <%= link_to "GET STARTED", new_vision_path, :class => "white-text btn waves-effect waves-light", :id => "firstbutton" %> </button>
       
       <div style="height: 20em"> </div>
   
@@ -86,7 +86,7 @@
 
 <style>
   body {
-	background: url("http://www.ourbloc.co/uploads/2/4/0/1/24014742/ilike_orig.jpg") no-repeat center center fixed;
+	background: url("http://www.ourbloc.co/uploads/2/4/0/1/24014742/coverpic3_orig.jpg") no-repeat center center fixed;
 	margin: 0 auto;
 	background-size: cover;
 	width: 100%;
@@ -114,6 +114,8 @@
 
 #core-head{
     color: white;
+    font-family: Montserrat;
+    font-weight: 800;
     line-height: 1.2;
     top: 5%;
     font-size: 5em;
@@ -146,7 +148,20 @@ core-bloc ul {
   }
   
   
-  
+  @media only screen and (max-device-width: 480px){
+    html{
+        font-size: 4em;
+        line-height: 5em;
+    }
+    #core-head{
+      font-size: 6em;
+      font-weight: 800;
+    }
+    #firstbutton {
+      position: absolute;
+      padding: 10% 1% 1% 1%;
+      bottom: 10%;
+    }
   
   
 </style>

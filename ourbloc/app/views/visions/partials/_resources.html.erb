@@ -1,0 +1,23 @@
+
+<!-- THREE OPPORTUNITIES --> 
+    <h5> Resources </h5>
+     <% @resources.each do |resource| %>
+
+        
+            <div class="card white" style="width:100%">
+            <div class="card-content teal-text">
+              <span class="card-title"><%=  link_to resource.title, resource_path(resource) %></span>
+              <p><%= resource.description %></p>
+                <i id="save" class="unsaved fa fa-heart-o"></i>
+
+              <td><%= resource.created_at.strftime("%m/%d/%y") %></td>
+
+              
+          <%= form_tag do %>
+              <%= hidden_field_tag(:saved, true) %>
+              <% end %> 
+               </div>
+          </div>
+      <% end %>
+ 
+

@@ -1,6 +1,6 @@
 <!-- landing page/copy --> 
     
-    <h2 id="core-head"> YOU CAN HAVE A THE CAREER THAT YOU CARE ABOUT AND PAYS THE BILLS</h2>
+    <h2 id="core-head"> YOU HAVE THE DREAM, NOW IT'S TIME TO MAKE IT HAPPEN</h2>
        <button id="start_button"class=" white-text btn waves-effect waves-light "> 
        <%= link_to "GET STARTED", edit_vision_path('100'), class: "white-text" %> </button>
       
@@ -8,6 +8,7 @@
     
     <!-- take to profile quiz --> 
 <!-- end lander--> 
+
 
 <%= form_for(@vision) do |f| %>
     <%= f.hidden_field :industry , :value => "default" %>
@@ -63,6 +64,7 @@
     top: 5%;
     font-size: 5em;
     padding: 15%;
+    font-family: Montserrat;
 }
 
 core-bloc ul {

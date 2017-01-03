@@ -1,0 +1,23 @@
+
+    <h5> Opportunities </h5>
+     <% @jobs.each do |job| %>
+        <% if job.industry == @vision.industry %> 
+        
+        
+            <div class="card white" style="width:100%">
+            <div class="card-content teal-text">
+              <span class="card-title"><%=  link_to job.title, job_path(job) %></span>
+              <p><%= job.description %></p>
+                <i id="save" class="unsaved fa fa-heart-o"></i>
+
+              <td><%= job.created_at.strftime("%m/%d/%y") %></td>
+
+              
+          <%= form_tag do %>
+              <%= hidden_field_tag(:saved, true) %>
+              <% end %> 
+               </div>
+          </div>
+         <% end %>
+      <% end %>
+   
