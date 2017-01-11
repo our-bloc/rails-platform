@@ -69,6 +69,6 @@ class InfluencersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def influencer_params
-      params.fetch(:influencer, {})
+      params.require(:influencer).permit(:name, :description, :industry, :style)
     end
 end

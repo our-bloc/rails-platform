@@ -1,26 +1,24 @@
 <!-- landing page/copy --> 
+<body>
+   
+    <div id="background-filter">
+        <h2 id="core-head"> YOU HAVE THE DREAM, NOW IT'S TIME TO MAKE IT HAPPEN</h2>
+        <%= link_to "GET STARTED", edit_vision_path('100'), class: "white-text", :id => "start_button"%> 
+         
     
-    <h2 id="core-head"> YOU HAVE THE DREAM, NOW IT'S TIME TO MAKE IT HAPPEN</h2>
-       <button id="start_button"class=" white-text btn waves-effect waves-light "> 
-       <%= link_to "GET STARTED", edit_vision_path('100'), class: "white-text" %> </button>
-      
-      <div style="height: 20em"> </div>
-    
-    <!-- take to profile quiz --> 
+    </div>
 <!-- end lander--> 
 
 
 <%= form_for(@vision) do |f| %>
+    <%= f.hidden_field :username , :value => "default" %>
     <%= f.hidden_field :industry , :value => "default" %>
     <%= f.hidden_field :firstjob, :value => "default" %>
     <%= f.hidden_field :style , :value => "default" %>
     <%= f.hidden_field :prep , :value => "default" %> 
-
-   <%= f.submit %> 
-  
 <% end %>
 
-
+</body>
 </html>
 
 <script> 
@@ -63,7 +61,7 @@
     line-height: 1.2;
     top: 5%;
     font-size: 5em;
-    padding: 15%;
+    padding: 15% 15% 0% 15%;
     font-family: Montserrat;
 }
 
@@ -81,17 +79,26 @@ core-bloc ul {
   }
   
   #start_button{
-    position: relative;
-    left: 10%;
-    margin-top: 30%;
-    width: 80%;
+    position:relative;
+    left: 50%;
     color: white;
-    height: 4em;
-    font-size: 6em;
+    height: 17%;
+    font-size: 4em;
     line-height: 1.2;
-    border-radius: 3%;
+    border: .1em solid white;
   }
   
+  #background-filter{
+  position: absolute;
+  background-color:black;
+  opacity: .85;
+  width: 100%;
+  height: 100%;
+}
+
+#start_button:hover{
+    background-color:grey;
+}
   
   
   

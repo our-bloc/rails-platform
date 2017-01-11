@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161229211958) do
+ActiveRecord::Schema.define(version: 20170111040423) do
 
   create_table "asks", force: :cascade do |t|
     t.integer  "user_id"
@@ -25,8 +25,12 @@ ActiveRecord::Schema.define(version: 20161229211958) do
   end
 
   create_table "influencers", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "name"
+    t.text     "description"
+    t.string   "industry"
+    t.string   "style"
   end
 
   create_table "jobs", force: :cascade do |t|
@@ -116,6 +120,8 @@ ActiveRecord::Schema.define(version: 20161229211958) do
     t.string   "gradschool"
     t.string   "office"
     t.string   "companies"
+    t.string   "provider"
+    t.string   "uid"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -146,6 +152,8 @@ ActiveRecord::Schema.define(version: 20161229211958) do
     t.string   "prep"
     t.string   "firstjob"
     t.string   "companies"
+    t.string   "username"
+    t.string   "email"
     t.index ["user_id"], name: "index_visions_on_user_id"
   end
 

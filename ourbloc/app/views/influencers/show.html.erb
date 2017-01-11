@@ -1,4 +1,12 @@
 <p id="notice"><%= notice %></p>
 
+<h5> <%= @influencer.name %> </h5>
+<%= @influencer.description %>
+<br> 
+<br> 
+<%= @influencer.industry %> 
+<%= @influencer.style %>
+<br>
+
 <%= link_to 'Edit', edit_influencer_path(@influencer) %> |
 <%= link_to 'Back', influencers_path %>

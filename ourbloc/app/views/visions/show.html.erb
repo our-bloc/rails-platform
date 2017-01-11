@@ -1,183 +1,143 @@
-<nav>
-    <div class="nav-wrapper white ">
-      <a href="#" class="brand-logo">Logo</a>
-      <ul id="nav-mobile" class=" right hide-on-med-and-down">
-        <li><a class="black-text" href="sass.html">Sass</a></li>
-        <li><a class="black-text" href="badges.html">Components</a></li>
-      </ul>
-    </div>
-  </nav
+  <body>
+    
+    <script>
+     $(document).ready(function() {
+      $.ajaxSetup({ cache: true });
+      //init facebook
+      $.getScript('//connect.facebook.net/en_US/sdk.js', function(){
+        FB.init({
+          appId: '405857709752176',
+          version: 'v2.7' // or v2.1, v2.2, v2.3, ...
+        });    
+        $(document).trigger('fbload');
+      });
+    }); 
+      
+      
+  $(document).on(
+    'fbload',  //  <---- HERE'S OUR CUSTOM EVENT BEING LISTENED FOR
+    function(){
+        //some code that requires the FB object
+        //such as...
+        FB.getLoginStatus(function(res){
+            if( res.status == "connected" ){
+                FB.api('/me', function(fbUser) {
+                    console.log(fbUser.name);
+                    $('#field_username').val(fbUser.name); 
+                   $('.username').html(fbUser.name);
+
+                });
+            }
+        });
+
+    }
+);
+</script> =
+  <ul id="slide-out" class="side-nav">
+  
+    
+    <li><div class="userView">
+      <div class="background">
+        <img style="width:10%; padding:.2em;" src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/9544735.png?43">
+      </div>
+      <a href="#!user"><img class="circle" src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/coverpic2_orig.jpg"></a>
+      <a href="#!name"><span class="username black-text name"> </span></a>
+      <a href="#!email"><span class="black-text email"><%= @vision.email %></span></a>
+    </div></li>
+    <li><a href="#!"><i class="fa fa-twitter"></i>Twitter Account</a></li>
+    <li><a href="#!"><i class="fa fa-cloud"></i>Upload Resume</a></li>
+    <li><a class="black-text" href="users/edit.html">Account</a></li>
+    <li><%=link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+    <li><%=link_to 'Retake Quiz', edit_vision_path(@vision) %></li>
+
+    <li><div class="divider"></div></li>
+    <li><a class="subheader">Recent Activity</a></li>
+  </ul>
+  <br> 
+   <a style="margin:2em 1em" href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars fa-3x"></i></a>
+
+
   
 <p id="notice"><%= notice %></p>
 
 <!-- SIDE BAR --> 
 <div class="row"> 
-  <div class="col m2" style="padding: 0% 5%">  
-    <i class="fa fa-circle" style="font-size: 20em; color: grey;"></i>
-    <span>upload profile pic</span>
-    
-    <h6> What I am  working towards...</h6>
-        <h6><%= @vision.firstjob %></h6>
-        
-        <%= link_to 'Edit', edit_vision_path(@vision) %> |
-        <%= link_to 'Back', visions_path %>
-  </div> 
+
 
 
 
 
 <!-- Personality Quiz Results --> 
-      <% if @vision.industry=="Griots" %>
-        <% if @vision.style=="Earn" or @vision.style=="Issa" %>
-        
-          
-            <div class="col m6 push-m2">
-            
-            <h5> Ryan Coogler</h5>
-            <p> Like Ryan, who at 33 already has already directed Fruitivale Station, Creed and Black Panther, you're creative,
-            you're fearless and you have the talent to tell stories in ways can make someone laugh, ugly cry, and (most importantly) reflect.
-            You know that you'll be the GOAT in the creative space, focusing on your art, quietly pushing boundaries and allowing your work to speak for itself. 
-            You have passion for story telling, a love for community and a no bullshit mentality ...all qualities that you will need as you make waves in a career that pro strong narratives
-            and our commmunities forward. </p>
-            </div> 
-          </div>
-          
-          <!--
-          <strong>Building on the Legacy</strong>
-          <span> Debbie Allen</span>
-          -->
-        <% else %> 
-          
-          <strong>In 5 years...</strong>
-          <span> Misty Copeland</span>
-          
-          <!-- 
-          <strong>Building on the Legacy</strong>
-          <span> James Baldwin </span>
-          -->
-      <%end %> 
-      
-      <% elsif @vision.industry=="Techies" %>
-        <% if @vision.style=="Earn" or @vision.style=="Issa" %>
-          <strong>In 5 years...</strong>
-          <span> Leslie Miley</span>
-          
-          <!--
-          <strong>Building on the Legacy Legacy</strong>
-          <span> Hidden Figures </span>
-          -->
-        <% else %> 
-          <strong>In 5 years...</strong>
-          <span> Dr. Nashlie Sephus</span>
-          
-                <!--
-          <strong>Building on the Legacy</strong>
-          <span> Clarence Ellis </span>
-          -->
-        <%end %> 
-        
-      <% elsif @vision.industry=="Scientists" %>
-        <% if @vision.industry=="Earn" or @vision.industry=="Olivia" %>
-          <strong>In 5 years...</strong>
-          <span> Dr. Martez Prince </span>
-          
-                <!--
-          <strong>Building on the Legacy Legacy</strong>
-          <span> Hidden Figures </span>
-                -->
-        <% else %> 
-          <strong>In 5 years...</strong>
-          <span> Dr. Hadiyah-Nicole Green</span>
-          
-                <!--
-          <strong>Building on the Legacy</strong>
-          <span> Dr. Daniel Hale Williams </span>
-            -->
-            
-        <%end %> 
-        
-        <% elsif @vision.industry=="CSuite" %>
-        <% if @vision.style=="Earn" or @vision.style=="Issa" %>
-          <strong>In 5 years...</strong>
-          <span> Jon Jackson </span>
-          
-          <strong>Building on the Legacy Legacy</strong>
-          <span> Hidden Figures </span>
-        <% else %> 
-          <strong>In 5 years...</strong>
-          <span> Maya Watson</span>
-          
-          <strong>Building on the Legacy</strong>
-          <span> Dr. Daniel Hale Williams </span>
-        <%end %> 
-        
-        <% elsif @vision.industry=="Educators" %>
-        <% if @vision.style=="Earn" or @vision.style=="Issa" %>
-          <strong>In 5 years...</strong>
-          <span> Larry, Brothers Empowered 2 Teach </span>
-          
-          <strong>Building on the Legacy </strong>
-          <span> Septima Clarke </span>
-          
-        <% else %> 
-          <strong>In 5 years...</strong>
-          <span> Shaun Harper </span>
-          
-          <strong>Building on the Legacy</strong>
-          <span> Audre Lorde </span>
-        <%end %> 
-        
-        <% elsif @vision.industry=="Activists" %>
-        <% if @vision.style=="Earn" or @vision.style=="Issa" %>
-          <strong>In 5 years...</strong>
-          <span> B Cole </span>
-          
-          <strong>Building on the Legacy Legacy</strong>
-          <span> Ella Baker </span>
-          
-        <% else %> 
-          <strong>In 5 years...</strong>
-          <span> Kimberley Foster</span>
-          
-          <strong>Building on the Legacy</strong>
-          <span> Ida B Wells </span>
-        <%end %> 
-        
-        <% elsif @vision.industry=="Advocates" %>
-        <% if @vision.style=="Earn" or @vision.style=="Issa" %>
-          <strong>In 5 years...</strong>
-          <span> Charles Hamilton Houston </span>
-          
-          <strong>Building on the Legacy Legacy</strong>
-          <span> Hidden Figures </span>
-        <% else %> 
-          <strong>In 5 years...</strong>
-          <span> Bakari Fellers </span>
-          
-          <strong>Building on the Legacy</strong>
-          <span> Shirley Chilsolm </span>
-        <%end %> 
-      <% end %> 
+      <div class="col m4 push-m1">
+        <div class="card white" style="width:100%; margin-top:5%">
+        <div class="card-content grey-text">
+          <h5> achieving the dream... </h5>
+          <h6><%= @vision.firstjob.capitalize %></h6>
+          <br> 
+          <h5> building with ...</h5>
+          <h6>The <%= @vision.industry %></h6>
+          <br> 
+          <h5> seeing it to be it... </h5>
+          <%= render "visions/partials/influencers" %> 
+        </div>
+        </div> 
+      </div>
+    <div class="col m6"> 
+    <% if @vision.industry == "Griots" %> 
+      <img style="width: 100%" src="https://images.pexels.com/photos/33283/stack-of-books-vintage-books-book-books.jpg?w=940&h=650&auto=compress&cs=tinysrgb">
+    <% elsif @vision.industry =="Artists" %> 
+      <img style="width: 100%" src="https://images.pexels.com/photos/3104/black-and-white-music-headphones-life.jpg?h=350&auto=compress">
+    <% elsif @vision.industry =="Techies" %> 
+      <img style="width: 100%" src="https://images.pexels.com/photos/3104/black-and-white-music-headphones-life.jpg?h=350&auto=compress">
+    <% elsif @vision.industry =="CSuite" %> 
+      <img style="width: 100%" src="https://images.pexels.com/photos/229/bow-tie-sunglasses-apple-iphone.jpg?w=940&h=650&auto=compress&cs=tinysrgb">
+    <% elsif @vision.industry =="Entrepreneurs" %> 
+      <img style="width: 100%" src="https://images.pexels.com/photos/35032/pexels-photo.jpg?w=940&h=650&auto=compress&cs=tinysrgb">
+    <% elsif @vision.industry =="Scientists" %> 
+      <img style="width: 100%" src="https://images.pexels.com/photos/167682/pexels-photo-167682.jpeg?h=350&auto=compress">
+     <% elsif @vision.industry =="Advocates" %> 
+      <img style="width: 100%" src="https://images.pexels.com/photos/159621/open-book-library-education-read-159621.jpeg?w=940&h=650&auto=compress&cs=tinysrgb">
+    <% elsif @vision.industry =="Educators" %> 
+      <img style="width: 100%" src="https://images.pexels.com/photos/7098/space-desk-laptop-notebook.jpg?w=940&h=650&auto=compress&cs=tinysrgb">
+    <% elsif @vision.industry =="Activists" %> 
+      <img style="width: 100%" src="http://2a8ac4u2edl1e0l9s9sy6azj.wpengine.netdna-cdn.com/wp-content/uploads/2016/11/blm.jpg">
     
-
-
+    
+    
+    <% end %> 
+    </div>
 </div>
 </div>
   
-<h5> The <%= @vision.industry %> </h5> 
+<!-- CONNECTIONS, OPPS RESOURCES --> 
 <div class="row">
    <div class="col m4" style="padding:5%;">
+     <h5> opportunities </h5>
       <%= render "visions/partials/jobs" %>
     </div>
     
     <div class="col m4" style="padding:5%;">
+      <h5> resources </h5>
       <%= render "visions/partials/resources" %>
     </div>
+    
+    <div class="col m4" style="padding:5%;">
+      <h5> connections</h5>
+      <span> Coming Soon</span>
+    </div>
 
-
+</body>
 <style>
   html, body{
     width: 100%;
     height: 100%;
+    font-family: Work Sans;
+  }
+  a:hover{
+    background-color: inherit;
+  }
+  
+  h5{
+    color: black;
   }
 </style>

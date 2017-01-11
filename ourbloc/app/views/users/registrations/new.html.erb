@@ -1,44 +1,77 @@
+<body> 
+<script src="/path/to/jquery.fblogin.js"></script>
+
+<script>
+
+ 
+//add event listener to login button
+	//do the login
+$(document).ready(function() {
+  $.ajaxSetup({ cache: true });
+  $.getScript('//connect.facebook.net/en_US/sdk.js', function(){
+    FB.init({
+      appId: '{your-app-id}',
+      version: 'v2.7' // or v2.1, v2.2, v2.3, ...
+    });     
+    $('#loginbutton,#feedbutton').removeAttr('disabled');
+    FB.getLoginStatus(updateStatusCallback);
+  });
+});
+	
+
+</script>
+
+<div class="row">
+
+  <div class="col m6 s12" id="background-filter">
+        <div style="position: absolute; font-weight: lighter; left: 5%; font-size: 2em; top: 5%; color:white"> BLOC </div>
+          <p id="fubu" style="position: absolute; top: 0%; left: 70%; font-size: 1em; width: 40%; font-family: Montserrat; color:white"> career advice for us, by us.</p>
+          
+
+          <div id="whatyouget">
+            <h1> get your seat at the table</h1>
+              </div>
+  </div>
+              
+  <div class="loginform col s10  offset-s1 m4 push-m7" style="background-color:inherit; height: 100%" id="login_form">
 
 
+              <h5 id="first_p"> you won't stop until you're the GOAT</h5>
+              <h5 id="second_p">  and we're here to help you along the way  </h5>
+              <h5 id="third_p"> sign up for a weekly playlist of the hottest internships, career resources & connections curated by black millennials  </h5>
+              <h5 id="fourth-p"> who are committed to helping you get to the top.</h5>
+         
 
-<div class="loginform">
 
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div class="field">
-    <%= f.label :email, :class =>"fieldtext" %><br />
-    <%= f.email_field :email, autofocus: true , :class =>"fieldtext" %>
+  
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
+    
+      <div class="field" id="first_field">
+        <%= f.hidden_field :email, autofocus: true , :class =>"fieldtext", :id => "user_email" %>
+      </div>
+    
+      <div class="field">
+        <% if @minimum_password_length %>
+        <% end %><br />
+        <%= f.hidden_field :password, autocomplete: "off", :class =>"fieldtext" %>
+      </div>
+    
+      <div class="field">
+        <%= f.hidden_field :password_confirmation, autocomplete: "off" , :class =>"fieldtext" %>
+      </div>
+    
+      <div id="signupbtn">
+        <%= link_to "Sign Up With Facebook", user_facebook_omniauth_authorize_path, :id => "submitFB" %> 
+       </div>
+    <% end %>
   </div>
 
-  <div class="field">
-    <%= f.label :password , :class =>"fieldtext" %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off", :class =>"fieldtext" %>
-  </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation , :class =>"fieldtext" %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" , :class =>"fieldtext" %>
-  </div>
 
-  <div class="waves-effect waves-light btn " id="signupbtn">
-    <%= f.submit "Get My RoadMap up", class:"white-text" %>
   </div>
-<% end %>
-
-<%= render "users/shared/links"  %>
 </div>
-
-<div id="loginfooter"> 
-BLACK COLLLEGIANS ON THE RISE
-</div>
-
-
-</div>
+</body>
 
 
 <style>
@@ -48,7 +81,51 @@ body {
 	margin: 0 auto;
 	background-size: cover;
 	width: 100%;
+	height:100%;
+	font-family: Montserrat;
 	}
+p{
+  font-family: Montserrat;
+}
+
+h1{
+  font-family: Montserrat;
+  margin-top: 20%;
+}
+h5{
+  font-size: 1.2em;
+  padding: 2% 10%;
+}
+#first_field{
+  padding-top: 20%;
+}
+	
+#start_button{
+  background-color: inherit;
+  border: 5% solid white;
+  width: 70%;
+  height: 15%;
+}
+#start_button:hover{
+  background-color: grey;
+}
+	
+#page_header{
+  position: absolute;
+  font-size: 8em;
+  top:30% ;
+  left: 10%;
+  width: 100%;
+  color: white;
+  font-family: Montserrat;
+}
+#background-filter{
+  position: absolute;
+  background-color:black;
+  opacity: .85;
+  width: 60%;
+  height: 100%;
+}
 	
 #formhead {
   position: absolute;
@@ -60,40 +137,35 @@ body {
   
 }
 
-#loginfooter{
-  bottom: 0%;
-  background-color: 10%;
+.loginform {
+  position: absolute;
+  margin-top:10%;
+  margin-left: 20%;
+  height: 100%;
 }
+
+
 
 .fieldtext{
-  line-height: 2;
-  font-size: 4em;
+  line-height: 1.2;
+  font-size: 1em;
 }
 
-.loginform{
-   position: absolute;
-   left: 10%;
-   width: 80%;
-   top: 35%;
-    padding: 3%;
-    font-size: .8em;
+.field{
+  padding: 0% 15%;
 }
 
 input.fieldtext{
-  font-size: 4em;
-  color: grey;
+  font-size: 1em;
+  color: white;
 }
 
-.loginback{
-  position: absolute;
-  left: 10%;
-  top: 30%;
-  height: 60%;
-  width: 80%;
-  background-color: white;
-  opacity: .8;
+#whatyouget{
+  position:absolute;
+  color:white;
+  top: 20%;
+  left: 5%;
 }
-
 
 
 #signupbtn{
@@ -107,3 +179,17 @@ input.fieldtext{
 }
 
 </style>
+
+<script>
+
+   $('#submitFB').click(function(){
+   
+  });
+  
+
+ 
+  
+ 
+  
+  
+</script>

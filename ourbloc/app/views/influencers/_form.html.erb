@@ -9,9 +9,68 @@
       <% end %>
       </ul>
     </div>
+    
+    
+    
   <% end %>
+  
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :industry %>
+    <%= f.hidden_field :industry , :id =>"field_influencerindustry" %>
+    
+    <div class="row">
+      <div class="influencer_industry white-text btn waves-effect waves-light " id="Griots"> Griots </div>
+      <div class="influencer_industry white-text btn waves-effect waves-light col m3" id="Techies"> Techies </div>
+      <div class="influencer_industry white-text btn waves-effect waves-light col m3" id="Scientists"> Scientists </div>
+      <div class="influencer_industry white-text btn waves-effect waves-light col m3" id="CSuite"> CSuite </div>
+      <div class="influencer_industry white-text btn waves-effect waves-light col m3" id="Educators"> Educators </div>
+      <div class="influencer_industry white-text btn waves-effect waves-light col m3" id="Activists"> Activists </div>
+      <div class="influencer_industry white-text btn waves-effect waves-light col m3" id="Advocates"> Advocates </div>
+    </div>
+  </div>
+  
+  <div class="field"> 
+    <%= f.hidden_field :style ,:id => "field_influencerstyle" %>
+    <div class="row">
+      <div class="influencer_style white-text btn waves-effect waves-light " id="Olivia"> Olivia Pope </div>
+      <div class="influencer_style white-text btn waves-effect waves-light col m3" id="Earn"> Earn from Atlanta </div>
+      <div class="influencer_style white-text btn waves-effect waves-light col m3" id="Jackson"> Jackson from Grey's </div>
+      <div class="influencer_style white-text btn waves-effect waves-light col m3" id="Issa"> Issa from Insecure </div>
+    </div> 
+  </div>
 
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+
+
+<script>
+  $('.influencer_industry').click(function(){
+      var idval = $(this).attr("id");
+      console.log(idval);
+          
+      $('#field_influencerindustry').val(idval);
+            
+  });
+
+//SCRIPT FOR STYLE  SECTION OF QUIZ    
+       $('.influencer_style').click(function(){
+      var idval = $(this).attr("id");
+      console.log(idval);
+          
+      $('#field_influencerstyle').val(idval);
+            
+  });
+</script>
+

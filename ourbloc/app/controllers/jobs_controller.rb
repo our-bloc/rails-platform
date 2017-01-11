@@ -7,6 +7,11 @@ class JobsController < ApplicationController
     @jobs = Job.all
 
   end
+  
+  def indeed
+    @indeed_jobs = Job.all
+
+  end
 
   # GET /jobs/1
   # GET /jobs/1.json

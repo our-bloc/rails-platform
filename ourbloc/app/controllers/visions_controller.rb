@@ -10,8 +10,10 @@ class VisionsController < ApplicationController
   # GET /visions/1
   # GET /visions/1.json
   def show
-    @jobs= Job.order("created_at DESC").limit(3)
+    @jobs= Job.order("created_at DESC").limit(3).where(:industry => @vision.industry)
     @resources= Resource.order("created_at DESC").limit(3)
+    @influencers= Influencer.where(:industry => @vision.industry).where(:style => @vision.style)
+    @user= current_user
   end
 
 
@@ -78,6 +80,6 @@ class VisionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def vision_params
-      params.require(:vision).permit(:industry, :firstjob, :style, :prep, :gradschool, :companies)
+      params.require(:vision).permit(:industry, :firstjob, :style, :prep, :gradschool, :companies, :username, :email)
     end
 end
