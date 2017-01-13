@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   
-  root to: "visions#new"
-  get 'visions/new'
+  root to: "welcome#index"
+
 
 
   resources :values
@@ -23,7 +23,7 @@ Rails.application.routes.draw do
   get '/myprofile', to: 'profilequiz#myprofile', as: :myprofile
 
 
-  devise_for :users ,:controllers => { :omniauth_callbacks => "callbacks" },
+  devise_for :users ,:controllers => { :omniauth_callbacks => "callbacks" , :sessions => "users/sessions",  :registrations => "users/registrations"},
     format: false
 
   devise_scope :user do

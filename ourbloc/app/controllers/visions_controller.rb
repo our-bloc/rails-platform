@@ -10,10 +10,17 @@ class VisionsController < ApplicationController
   # GET /visions/1
   # GET /visions/1.json
   def show
+    @vision = Vision.order("created at DESC").where(:user => current_user)
     @jobs= Job.order("created_at DESC").limit(3).where(:industry => @vision.industry)
     @resources= Resource.order("created_at DESC").limit(3)
-    @influencers= Influencer.where(:industry => @vision.industry).where(:style => @vision.style)
+    @influencers= Influencer.where(:industry => @vision.industry).where(:style => @vision.style).limit(1)
     @user= current_user
+    
+    @indeed_search = IndeedAPI.search_jobs(:q => "summer intern " + @vision.industry , :limit => 3)
+    @indeed_results = @indeed_search.results
+   
+
+
   end
 
 
@@ -41,6 +48,7 @@ class VisionsController < ApplicationController
       if @vision.save
         format.html
         format.json { render :show, status: :created, location: @vision }
+   
       else
         format.html { render :new }
         format.json { render json: @vision.errors, status: :unprocessable_entity }

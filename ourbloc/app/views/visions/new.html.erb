@@ -1,106 +1,428 @@
-<!-- landing page/copy --> 
-<body>
-   
-    <div id="background-filter">
-        <h2 id="core-head"> YOU HAVE THE DREAM, NOW IT'S TIME TO MAKE IT HAPPEN</h2>
-        <%= link_to "GET STARTED", edit_vision_path('100'), class: "white-text", :id => "start_button"%> 
-         
-    
-    </div>
-<!-- end lander--> 
 
 
+<!-- INDUSTRY PORTION OF QUIZ --> 
 <%= form_for(@vision) do |f| %>
-    <%= f.hidden_field :username , :value => "default" %>
-    <%= f.hidden_field :industry , :value => "default" %>
-    <%= f.hidden_field :firstjob, :value => "default" %>
-    <%= f.hidden_field :style , :value => "default" %>
-    <%= f.hidden_field :prep , :value => "default" %> 
+
+
+<section> 
+<h5 id="industry_section"  style="color:teal"> WHO ARE YOU BUILDING WITH? </h5>
+  <div class="industry">
+    <div class="row">
+
+    <%= f.hidden_field :industry, :id => "field_industry" %>
+    
+    <img class="form_pic" id="Activists" src ="http://www.ourbloc.co/uploads/2/4/0/1/24014742/3_orig.png" >
+    <img class="form_pic" id="Advocates" src ="http://www.ourbloc.co/uploads/2/4/0/1/24014742/6_orig.png" >
+    <img class="form_pic" id="Techies" src ="http://www.ourbloc.co/uploads/2/4/0/1/24014742/4_1_orig.png" >
+    <img class="form_pic" id="Scientists" src ="http://www.ourbloc.co/uploads/2/4/0/1/24014742/7_orig.png" >
+    <img class="form_pic" id="CSuite" src ="http://www.ourbloc.co/uploads/2/4/0/1/24014742/5_orig.png">
+    <img class="form_pic" id="Educators" src ="http://www.ourbloc.co/uploads/2/4/0/1/24014742/2_4_orig.png" >
+    <img class="form_pic" id="Griots"  src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/1_7_orig.png" > 
+
+<div> 
+</section>
+<!-- end industry portion of quiz --> 
+
+
+
+<!-- DREAM JOB PORTION OF QUIZ --> 
+<section>
+    <div id="dreamjob">
+        <div id="dream_section">
+            <h5 style="color:white; opacity:1; z-index: 2; margin-top: -20%"> WHAT IS YOUR DREAM SUMMER OPPORTUNITY </h5>  
+            <%= f.text_field :firstjob ,:id => "field_firstjob", :value => " " %>
+           
+            <div id="submit_firstjob" class="white-text btn waves-effect waves-light"> NEXT </div> 
+        
+        </div>
+    </div>
+</section>
+<!-- end dream job portion of quiz --> 
+
+
+
+
+<!-- STYLE PORTION OF QUIZ --> 
+<section> 
+<div class="style" id="style">
+    <h5> WHO IS YOUR DREAM MENTOR? </h5>
+    
+    <%= f.hidden_field :style ,:id => "field_style" %>
+
+    <img id="Olivia" src ="https://media1.popsugar-assets.com/files/thumbor/Dxm6nPdGeW51cBEPGJhst0j4QRM/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2014/09/25/775/n/1922283/417e9e397005660b_olivia-pope-options/i/When-She-Absolutely-Fearless.gif" class="style_pic">
+    <img id="Earn" src ="http://ww2.kqed.org/pop/wp-content/uploads/sites/12/2016/10/glover.gif" class="style_pic"> 
+    <img id="Jackson" src ="https://media.giphy.com/media/sA34qgVDgXFQY/giphy.gif" class="style_pic"> 
+    <img id="Issa" src ="https://media.giphy.com/media/26tjZjCi41r0cVsKQ/giphy.gif" class="style_pic">
+  
+  </div>
+  
+</section>
+<!-- end style portion of quiz --> 
+
+<!-- grad school section --> 
+<section id="grad_section"> 
+    <%= f.hidden_field :gradschool , :id =>"field_grad" %>
+    <h5 style="color:white; opacity:1; z-index: 2"> GRAD SCHOOL DREAMS? </h5>  
+    
+    <div class="grad_button white-text btn waves-effect waves-light" id="None"> Nope </div>
+    <div class="grad_button white-text btn waves-effect waves-light" id="Grad"> Grad School </div>
+    <div class="grad_button white-text btn waves-effect waves-light" id="Law"> Med School </div>
+    <div class="grad_button white-text btn waves-effect waves-light" id="Med"> Law School </div>
+    <div class="grad_button white-text btn waves-effect waves-light" id="Business"> Business School </div>
+</section>
+
+<!-- prep section -->
+<section id="prep_head">
+ <h5 style="margin-top: 4%;color:white"> WHAT ARE YOU STRUGGLING WITH? </h5>
+    <div id="prep_section"> 
+    
+    <%= f.hidden_field :prep, :id => "field_prep" %> 
+
+   <%= link_to "Starting Resume", :id =>"need_resume", :class => "prep_button white-text btn waves-effect waves-light" %>
+   <%= link_to "Getting My Resume Together", :id =>"revise_resume", :class => "prep_button white-text btn waves-effect waves-light" %>
+   <%= link_to "Hearing back about my apps", :id =>"need_connections", :class => "prep_button white-text btn waves-effect waves-light" %>
+   <%= link_to "Finding jobs I care about", :id =>"need_jobs", :class => "prep_button white-text btn waves-effect waves-light" %>
+   <%= link_to "Cover letters are the worst", :id =>"cover_letters", :class => "prep_button white-text btn waves-effect waves-light" %>
+   <%= link_to "Personal Statements", :id =>"personal_statements", :class => "prep_button white-text btn waves-effect waves-light" %>
+
+   </div>
+   </section>
+   
+   <%= f.submit %> 
+  
 <% end %>
 
-</body>
-</html>
 
-<script> 
-    $('#start_button').click(function(){
-        $(this).next('form').submit();
+
+
+<script>
+
+//SCRIPT FOR DREAM JOB
+
+ $("#submit_firstjob").click(function(){
+    $('html,body').animate({
+            scrollTop: $("#style").offset().top},
+            'slow');
+ });
+   
+//SCRIPT FOR INDUSTRY SECTION OF QUIZ
+    $('.form_pic').click(function(){
+        var industryval = $(this).attr("id");
+            console.log(industryval);
+            
+        $("#field_industry").val(industryval);
+            
+        
+        $(this).css({
+        'border': '4px solid yellow'
+        }); 
+        
+        $(this).siblings().css({
+            'border': '4px solid white'
+            }); 
+            
+        $('html,body').animate({
+            scrollTop: $("#dreamjob").offset().top},
+            'slow');
     });
+    
+    
+    
+//SCRIPT FOR STYLE  SECTION OF QUIZ    
+     $('.style_pic').click(function(){
+        var styleval = $(this).attr("id");
+            console.log(styleval);
+            
+            $("#field_style").val(styleval);
+            
+        $(this).css({
+        'border': '4px solid yellow'
+        }); 
+       
+        $(this).siblings().css({
+            'border': '4px solid white'
+            }); 
+        $('html,body').animate({
+            scrollTop: $("#grad_section").offset().top},
+            'slow');
+
+
+     }); 
+        
+   
+    
+// Grad Section 
+       $('.grad_button').click(function(){
+            var idval = $(this).attr("id");
+            console.log(idval);
+            
+            $("#field_grad").val(idval + " School");
+            
+            $(this).css({
+            'border': '4px solid yellow'
+            }); 
+       
+            $(this).siblings().css({
+                'border': 'none'
+                }); 
+                
+        $('html,body').animate({
+            scrollTop: $("#prep_head").offset().top},
+            'slow');
+    
+        }); 
+        
+        
+// SUBMIT FORM AFTER CHOOSING PREP 
+     $('#need_resume').click(function(){
+            $(this).css({
+            'border': '4px solid yellow'
+            }); 
+           
+            $('#field_prep').val("Need_Resume");
+            
+            $(this).siblings().css({
+                'border': 'none'
+                }); 
+            $("form").submit();
+        }); 
+        
+     $('#revise_resume').click(function(){
+            $(this).css({
+            'border': '4px solid yellow'
+            }); 
+           
+            $('#field_prep').val("Revise_Resume") ;
+            $(this).siblings().css({
+                'border': 'none'
+                }); 
+            $("form").submit();
+        }); 
+        
+         $('#need_connections').click(function(){
+            $(this).css({
+            'border': '4px solid yellow'
+            }); 
+           
+            $('#field_prep').val("Need_Connections") ;
+            $(this).siblings().css({
+                'border': 'none'
+                }); 
+            $("form").submit();
+        }); 
+         $('#need_jobs').click(function(){
+            $(this).css({
+            'border': '4px solid yellow'
+            }); 
+           
+            $('#field_prep').val("Need_Jobs") ;
+            $(this).siblings().css({
+                'border': 'none'
+                }); 
+            $("form").submit();
+        }); 
+        
+        $('#cover_letters').click(function(){
+            $(this).css({
+            'border': '4px solid yellow'
+            }); 
+           
+            $('#field_prep').val("Cover_Letters") ;
+            $(this).siblings().css({
+                'border': 'none'
+                }); 
+            $("form").submit();
+        }); 
 </script>
 
 
-<style>
-  body {
+
+
+
+
+<style> 
+
+html{
+    height: 100%;
+    padding: 10%;
+    font-size: 3em;
+}
+
+h5{
+    color: teal;
+    width: 70%;
+    z-index: 3;
+    font-size: 5em;
+}
+
+form{
+    position:absolute;
+    top: 0%;
+}
+.form_pic{
+    background-color: white;
+    width: 10%;
+}
+
+.form_pic:hover {
+    border: 4px solid teal;
+    background-color: white;
+}
+
+.style_pic{
+    width: 15%;
+    margin: .5%;
+    border: 4px solid white;
+    background-color: white;
+}
+
+.style_pic:hover{
+    width: 20%;
+    height: 15%;
+    margin: 1%;
+    border: 4px solid teal;
+    background-color: white;
+}
+
+#background-filter{
+  position: absolute;
+  background-color:black;
+  opacity: .85;
+  width: 120%;
+  height: 100%;
+  right:0%;
+  z-index: -1;
+}
+
+.industry{
+  padding-top: 5%;
+  padding-bottom: 10%;
+    width: 100%;
+    left: 100%;
+    
+}
+table{
+    padding:0%;
+}
+
+td{
+    margin: ;
+}
+.industry a:hover {
+    background-color: white;
+}
+
+#firstbutton{
+    margin-bottom: 100%;
+}
+
+body {
 	background: url("http://www.ourbloc.co/uploads/2/4/0/1/24014742/ilike_orig.jpg") no-repeat center center fixed;
 	margin: 0 auto;
 	background-size: cover;
 	width: 100%;
 	height: 100%;
-	font-family: Montserrat;
+	font-family: "Montserrat";
+	}
+	
+#vision-header{
+    top: 1%;
+    font-size: 6em;
+    font-family: "Montserrat";
+    color: teal;
+    margin-bottom:0%;
+    
+}
+
+#dreamjob{
+    padding-top: 30%;
+    border-radius: 3em;
 	}
 	
 
-.core-menu{
-    position: absolute;
-    top: 20%;
-    left: 5%;
-    width: 90%;
+
+
+#nextbutton{
+     margin-bottom: 40%;
+    }
+
+#dreamjob input{
+   color: white;
 }
 
-.core-bloc{
+.white {
+    position: relative;
     background-color: white;
-    font-size: 4.5em;
-    font-family: Montserrat;
-    font-weight: bold;
-    height: 5em;
-    opacity: .8;
-    padding: 15% 10%;
+    width: 150%;
+    left: -15%;
+    margin-top: 0%;
+    padding: 8% 20% 100% 20%;
+}
+section {
+    padding: 10% 10% 50% 10%;
+
 }
 
-#core-head{
-    color: white;
-    line-height: 1.2;
-    top: 5%;
-    font-size: 5em;
-    padding: 15% 15% 0% 15%;
-    font-family: Montserrat;
+#prep_section{
+    margin-top: 10%;
 }
 
-core-bloc ul {
-    height: 5em;
+a:hover {
+    background-color: white;
 }
 
-.core-bloc:hover {
-    background-color: grey;
-}
-  
-  ul  {
-    color:black;
-    line-height: 1.2;
-  }
-  
-  #start_button{
-    position:relative;
-    left: 50%;
-    color: white;
-    height: 17%;
-    font-size: 4em;
-    line-height: 1.2;
-    border: .1em solid white;
-  }
-  
-  #background-filter{
-  position: absolute;
-  background-color:black;
-  opacity: .85;
-  width: 100%;
-  height: 100%;
+.style{
+    padding: -10%;
 }
 
-#start_button:hover{
-    background-color:grey;
+.prep_button{
+    padding-left: 2%;
+    padding-right: 2%;
+    width: 40%;
+    margin: 1%;
 }
-  
-  
-  
-  
-</style>
+
+.grad_button{
+    width: 25%;
+    padding: .5% 0%;
+}
+@media only screen and (max-device-width: 480px){
+    html{
+        font-size: 6em;
+        line-height: 5em;
+    }
+    
+    button {
+        height: 10em;
+        font-size: 5em;
+        margin: 1%;
+        padding: 2%;
+    }
+    .form_pic{
+        width: 47%;
+        margin: 1%;
+        border: 4px solid teal;
+        background-color: white;
+    }
+    
+    #firstbutton{
+        width: 70%;
+        padding: 10%;
+        height: 15%;
+        font-size: 4em;
+        border-radius: 3em;
+    }
+    
+    #nextbutton{
+       padding-bottom: 100%;
+    }
+    section{
+        height: 100%;
+    }
+    .grad_button{
+        height: 40%;
+        width: 20%;
+        padding: 1%;
+        margin: 2%;
+    }
+}
