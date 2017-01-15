@@ -1,6 +1,6 @@
 
 <!-- THREE OPPORTUNITIES --> 
-     <% @resources.each do |resource| %>
+     <% @tips.each do |tip| %>
 
         
              <div class="card horizontal" style="width:100%">
@@ -10,17 +10,7 @@
                   </div>
                   -->
             <div class="card-content teal-text">
-              <span class="card-title grey-text"><%= link_to resource.title, resource_path(resource) %></span>
-              <p><%= resource.description %></p>
-                <i id="save" class="unsaved fa fa-heart-o"></i>
-
-              <td><%= resource.created_at.strftime("%m/%d/%y") %></td>
-
-              
-          <%= form_tag do %>
-              <%= hidden_field_tag(:saved, true) %>
-              <% end %> 
-               </div>
+              <h6 class="grey-text" style="font-size: 1.2em"><%= link_to tip.title, tip_path(tip) %> </h6>
           </div>
       <% end %>
  

@@ -32,7 +32,8 @@
 
     }
 );
-</script> =
+</script>
+
   <ul id="slide-out" class="side-nav">
   
     
@@ -40,7 +41,7 @@
       <div class="background">
         <img style="width:10%; padding:.2em;" src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/9544735.png?43">
       </div>
-      <a href="#!user"><img class="circle" src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/coverpic2_orig.jpg"></a>
+      <a href="#!user"><img class="circle" src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/1/000/23f/2a2/02efbce.jpg"></a>
       <a href="#!name"><span class="username black-text name"> </span></a>
       <a href="#!email"><span class="black-text email"><%= @vision.email %></span></a>
     </div></li>
@@ -110,20 +111,25 @@
 </div>
   
 <!-- CONNECTIONS, OPPS RESOURCES --> 
-<div class="row">
-   <div class="col m4" style="padding:5%;">
+<div class="row" style="padding-left: 10%">
+   <div class="col m4" style="padding: 5%">
      <h5> opportunities </h5>
       <%= render "visions/partials/jobs" %>
     </div>
     
-    <div class="col m4" style="padding:5%;">
-      <h5> resources </h5>
+    <div class="col m6" style="padding: 5%">
+      <h5> pro tips </h5>
       <%= render "visions/partials/resources" %>
     </div>
     
-    <div class="col m4" style="padding:5%;">
-      <h5> connections</h5>
-      <span> Coming Soon</span>
+    <div class="col m7" style="padding: 5%">
+      <h5 style="width: 300%; margin-left: -10%"> friends who can plug you </h5>
+      <img class="circle" style="width: 15%; margin-left: -10% "src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm_Ufwg_IojHXiN-iFazyRW56RYciAZG6Hfi45OZ5yrmk8hfXTQw"</div>
+      <h6 style="width: 300%; margin-left: -10% "> Kayla is as an associate editor at Vice </h6> 
+      <img class="circle" style="width: 15%; margin-left: -10%" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMSBhITExIVFRMVGBgaFxgVExcVFxgYGhIYGBUWFhoYKCgsGBslGxcWIjEjJSkuLi4uGCszOD8sNygtLisBCgoKDQwNGhAQGjcmHyUsNy0tKy0tLTUwLTc3Mi0tLS0tNy0tLTctKysrNystLSs3Ny0tLTc3KystKysrKysrK//AABEIAFAAUAMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAGAgMEBQcAAQj/xAA+EAACAQICBgYFCQkBAAAAAAABAhEAAwQhBQYSMUFRBxMiMmFxcoGRkqEjNUJic7GywfAUFSQ0Q1KTotEz/8QAGAEAAwEBAAAAAAAAAAAAAAAAAAECAwT/xAAfEQACAwACAwEBAAAAAAAAAAAAAQIDERJBITEyUQT/2gAMAwEAAhEDEQA/ALrGCNYLw+vd+LA/nWlaMM6Mtegv4azbTAjWi+Prt8UB9VHWhNI2xom0GuIGCgEFxOVc0GlZLTstTdUSrwGDuWcMV6lhGQiCGmZJ/wBaj2XxSWv/ACY+sggb4nOaKxjrZ3XE94Upb6ncwPkwrXF+mfN9oBNOa6tY+TWz8uRmCxIUcC2WZ8KGbC4x8Q75lnIdgAACVMjKo2tblda8U7Tm4AgE5ACpFrTDdWLgud0QDuypOTR0V1RktbLHC6TbFRZuOy3c4V5e2/GAv0WHrEVoeriuNHAXFCttHJd2fEeFZDo/G9ZprDuhkrdTdM5sJ9tbnNVF6jnujxeIz/X1v4pvSt/fRxon5rs/Zp+EUA9ITfxR9JKPtE/Ndn7NPwis6vqRV3xEzvWnD3RrHdZbTsJBBEQZtgceRmq1uun+Xue6lajirE35iZHKmzh8u78KcqYt6whfKMcRlrG8P6D+4v651ym5GeHf/GDWm3LagiYE7pgT5VAuE/vu2g7pUll2fYf1yqHTBGq/okzI7uCZ7pQkqwP0gRw48sqcXRKfulwLw6wERnvHHKrPpQstY1hDLHy1sGORU7JnzyoZKHqw8Sd+RymN58a04s0hZGS3Cyw+AezaB25YxshTJGe8eNEA0i4Udm/7r/8Aag9G+HfEadBIlbK7TcczIUff7K1HZTZJhYXfuy5zUutS9kytSeRRl+kcRcuWICXSZBG1bczB3CZitj0apGjrQIghFyOR7o31SaMfawXWPs5FpIAgAHw8qvReBshlMgiQefjVVxUV4Oe+bk/J7g8StzCpcQyrgEesU9QX0T43rNWdmSRbcgeR7QHxo0DdqtE9RhJY8I+MwK3Htlp7DbQg8fGnCo25gTz404xypAFGCM16V7OzeW9ct7eHKC3cI79s7ZKXF8QT8aygqzY0Kl1GBHf7gAnMuD3a+iNbNCDGaEuWCdnbEAxOywIZTHHMUA2OiuymEKOC7n6ZMR6IG6nmlpvomdEVu0Ll5bDF1TY6y4ctt2LRsrwQANHOa0C9o1f2a8LYCm7JbxJWJoW6NdUG0fZvlnD9c6RkQQqBonxlzRzRhLb0D9GW3taFewyMzksGWDJDZSrbjzq9tWurwaJ/aoHsFWJWoGMMA1KWFOXJlJ0caKOG1bE73YvuiBAAHwokDZTXrsOqgR5DlTL92qF7Hw00qoth8hUicqYjn7s8qSEm74ClHuRXWmoAcIzFKpsP2aqdYsRiRhB+yi0bk59aWAiM4gb5ikLC3L1DxyyhPh+VDuq2Gxq3b9zGXVY3Cuxbt5pbCzMGBMyPZRHdvbKDKZmgpIawSnZk76cvHs1wucNoE8opN9GK7p8jn7KYdkfDXu0w5VNV8qqdHnaxdwbojflwqcwIoGPG92q62+ZqGzV1i7vnh8aBYSnudkCmrjUhGk0nFXwlkk8KCkhdts/Kn8VbLYcRwNQtHMXwoMEznuqyUEW4INIW4z//2Q=="</div>
+      <h6 style="width: 300%; margin-left: -10%"> Mario was a communications intern at Uncommon Schools </h6>
+      <img class="circle" style="width: 15% ; margin-left: -10%" src="data:image/jpeg;base64,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"</div>
+      <h6 style="width: 300% ; margin-left: -10%"> Jason is as a former intern at The Grio </h6> 
     </div>
 
 </body>

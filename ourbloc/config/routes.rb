@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :tips
   root to: "visions#new"
   get 'visions/new'
 

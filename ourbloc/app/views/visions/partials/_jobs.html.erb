@@ -7,7 +7,7 @@
                     <img src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/coverpic_orig.jpg">
                   </div> -->
             <div class="card-content teal-text">
-              <span class="card-title"><%=  link_to job.title, job_path(job) %></span>
+              <span class="card-title" style="line-height: 1em"><%=  link_to job.title, job_path(job) %></span>
               <p><%= job.description %></p>
                 <i id="save" class="unsaved fa fa-heart-o"></i>
 
@@ -20,4 +20,37 @@
                </div>
           </div>
           <% end %>
+          
+    
+     <% @indeed_results.each do |job| %>
+
+            <div class="card horizontal white" style="width:100%">
+                <!--
+                <div class="card-image">
+                    <img src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/coverpic_orig.jpg">
+                  </div> -->
+            <div class="card-content teal-text">
+              <span style="font-size: 2em"><%=  link_to job.job_title, job.url %></span>
+              <p><%= job.company %></p>
+                <i id="save" class="unsaved fa fa-heart-o"></i>
+
+              <td><%= job.date %></td>
+
+              
+          <%= form_tag do %>
+              <%= hidden_field_tag(:saved, true) %>
+              <% end %> 
+               </div>
+          </div>
+          <% end %>
+          
+          <style> 
+          a {
+              line-height: 1em;
+          }
+          
+          a:hover{
+              color: teal ;
+          }
+          </style>
    

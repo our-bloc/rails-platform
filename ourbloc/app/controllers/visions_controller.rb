@@ -10,10 +10,15 @@ class VisionsController < ApplicationController
   # GET /visions/1
   # GET /visions/1.json
   def show
-    @jobs= Job.order("created_at DESC").limit(3).where(:industry => @vision.industry)
-    @resources= Resource.order("created_at DESC").limit(3)
+    @jobs= Job.order("created_at DESC").limit(0).where(:industry => @vision.industry)
+    @tips= Tip.order("created_at DESC").limit(3)
     @influencers= Influencer.where(:industry => @vision.industry).where(:style => @vision.style)
     @user= current_user
+    
+
+    @indeed_search = IndeedAPI.search_jobs(:q => "journalism intern" , :limit => 3)
+    @indeed_results = @indeed_search.results
+   
   end
 
 
