@@ -1,31 +1,79 @@
 <!-- landing page/copy --> 
 <body>
-   
+<script> 
+       $(document).ready(function() {
+      $.ajaxSetup({ cache: true });
+      //init facebook
+      $.getScript('//connect.facebook.net/en_US/sdk.js', function(){
+        FB.init({
+          appId: '405857709752176',
+          version: 'v2.7' // or v2.1, v2.2, v2.3, ...
+        });    
+        $(document).trigger('fbload');
+      });
+    }); 
+      
+      
+  $(document).on(
+    'fbload',  //  <---- HERE'S OUR CUSTOM EVENT BEING LISTENED FOR
+    function(){
+        //some code that requires the FB object
+        //such as...
+        FB.getLoginStatus(function(res){
+            if( res.status == "connected" ){
+                FB.api('/me?fields=email,picture,name,first_name,gender,locale,timezone,age_range', function(fbUser) {
+                    var profilepic= fbUser.picture.data.url;
+                    
+                    $('#field_username').val(fbUser.name); 
+                    $('#field_email').val(fbUser.email); 
+                    $('#field_image').val(profilepic); 
+                    $('#field_timezone').val(fbUser.timezone); 
+                    $('#field_gender').val(fbUser.gender); 
+                    $('#field_age').val(fbUser.age_range.min);
+
+                    
+
+                    
+                });
+            }
+        });
+
+    }
+);
+  </script> 
     <div id="background-filter">
         <h2 id="core-head"> YOU HAVE THE DREAM, NOW IT'S TIME TO MAKE IT HAPPEN</h2>
-        <%= link_to "GET STARTED", edit_vision_path('100'), class: "white-text", :id => "start_button"%> 
-         
+
     
     </div>
 <!-- end lander--> 
 
 
 <%= form_for(@vision) do |f| %>
-    <%= f.hidden_field :username , :value => "default" %>
+
+    <%= f.hidden_field :username, :id => "field_username" %> 
+    <%= f.hidden_field :image, :id => "field_image" %> 
+    <%= f.hidden_field :email, :id => "field_email" %> 
+    <%= f.hidden_field :gender, :id => "field_gender" %> 
+    <%= f.hidden_field :age, :id => "field_age" %> 
+    <%= f.hidden_field :timezone, :id => "field_timezone" %> 
+
+
+
     <%= f.hidden_field :industry , :value => "default" %>
     <%= f.hidden_field :firstjob, :value => "default" %>
     <%= f.hidden_field :style , :value => "default" %>
     <%= f.hidden_field :prep , :value => "default" %> 
+    
+    
+      <%= f.submit 'get your playlist', :class => "new_vision" %>
+
 <% end %>
 
 </body>
 </html>
 
-<script> 
-    $('#start_button').click(function(){
-        $(this).next('form').submit();
-    });
-</script>
+
 
 
 <style>
@@ -38,6 +86,15 @@
 	font-family: Montserrat;
 	}
 	
+.new_vision{
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    width: 80%;
+    height: 30%;
+    font-size: 2em;
+    color: teal;
+}
 
 .core-menu{
     position: absolute;

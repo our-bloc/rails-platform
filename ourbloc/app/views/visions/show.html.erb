@@ -1,7 +1,6 @@
   <body>
-    
-    <script>
-     $(document).ready(function() {
+  <script> 
+       $(document).ready(function() {
       $.ajaxSetup({ cache: true });
       //init facebook
       $.getScript('//connect.facebook.net/en_US/sdk.js', function(){
@@ -21,29 +20,28 @@
         //such as...
         FB.getLoginStatus(function(res){
             if( res.status == "connected" ){
-                FB.api('/me', function(fbUser) {
-                    console.log(fbUser.name);
-                    $('#field_username').val(fbUser.name); 
-                   $('.username').html(fbUser.name);
-
+                FB.api('/me?fields=email,picture,name,first_name', function(fbUser) {
+                    console.log(fbUser.email)
+                   
                 });
             }
         });
 
     }
 );
-</script>
+  </script> 
 
   <ul id="slide-out" class="side-nav">
   
     
     <li><div class="userView">
       <div class="background">
-        <img style="width:10%; padding:.2em;" src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/9544735.png?43">
+        <img style="width:10%; padding:.2em;" src="">
       </div>
-      <a href="#!user"><img class="circle" src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/1/000/23f/2a2/02efbce.jpg"></a>
-      <a href="#!name"><span class="username black-text name"> </span></a>
+       <img class="circle" src="<%= @vision.image %>" >
+      <a href="#!name"><span class="username black-text name"> <%= @vision.username %> </span></a>
       <a href="#!email"><span class="black-text email"><%= @vision.email %></span></a>
+      
     </div></li>
     <li><a href="#!"><i class="fa fa-twitter"></i>Twitter Account</a></li>
     <li><a href="#!"><i class="fa fa-cloud"></i>Upload Resume</a></li>
@@ -69,7 +67,7 @@
 
 
 <!-- Personality Quiz Results --> 
-      <div class="col m4 push-m1">
+      <div class="col l4 s9 push-s1 push-l1">
         <div class="card white" style="width:100%; margin-top:5%">
         <div class="card-content grey-text">
           <h5> achieving the dream... </h5>
@@ -83,12 +81,12 @@
         </div>
         </div> 
       </div>
-    <div class="col m6"> 
+    <div class="col l6 s3 "> 
     <% if @vision.industry == "Griots" %> 
       <img style="width: 100%" src="https://images.pexels.com/photos/33283/stack-of-books-vintage-books-book-books.jpg?w=940&h=650&auto=compress&cs=tinysrgb">
     <% elsif @vision.industry =="Artists" %> 
       <img style="width: 100%" src="https://images.pexels.com/photos/3104/black-and-white-music-headphones-life.jpg?h=350&auto=compress">
-    <% elsif @vision.industry =="Techies" %> 
+    <% elsif @vision.industry =="Artists" %> 
       <img style="width: 100%" src="https://images.pexels.com/photos/3104/black-and-white-music-headphones-life.jpg?h=350&auto=compress">
     <% elsif @vision.industry =="CSuite" %> 
       <img style="width: 100%" src="https://images.pexels.com/photos/229/bow-tie-sunglasses-apple-iphone.jpg?w=940&h=650&auto=compress&cs=tinysrgb">
@@ -102,6 +100,8 @@
       <img style="width: 100%" src="https://images.pexels.com/photos/7098/space-desk-laptop-notebook.jpg?w=940&h=650&auto=compress&cs=tinysrgb">
     <% elsif @vision.industry =="Activists" %> 
       <img style="width: 100%" src="http://2a8ac4u2edl1e0l9s9sy6azj.wpengine.netdna-cdn.com/wp-content/uploads/2016/11/blm.jpg">
+    <% elsif @vision.industry =="Techies" %> 
+      <img style="width: 100%" src="https://images.pexels.com/photos/30964/pexels-photo-30964.png?w=940&h=650&auto=compress&cs=tinysrgb">
     
     
     

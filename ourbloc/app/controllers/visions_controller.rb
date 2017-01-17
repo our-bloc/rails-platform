@@ -11,12 +11,26 @@ class VisionsController < ApplicationController
   # GET /visions/1.json
   def show
     @jobs= Job.order("created_at DESC").limit(0).where(:industry => @vision.industry)
+    
     @tips= Tip.order("created_at DESC").limit(3)
-    @influencers= Influencer.where(:industry => @vision.industry).where(:style => @vision.style)
+    
+    if @vision.industry == "Techies"
+          @indeed_search = IndeedAPI.search_jobs(:q => @vision.firstjob + " tech" , :limit => 3)
+      elsif @vision.industry == "Advocates"
+          @indeed_search = IndeedAPI.search_jobs(:q => "legal " + @vision.firstjob , :limit => 3)
+      elsif @vision.industry == "Griots"
+          @indeed_search = IndeedAPI.search_jobs(:q => "writing " + @vision.firstjob , :limit => 3)
+      elsif @vision.industry == "Scientists"
+          @indeed_search = IndeedAPI.search_jobs(:q => "science " + @vision.firstjob , :limit => 3)
+      elsif @vision.industry == "CSuite"
+          @indeed_search = IndeedAPI.search_jobs(:q => "business"  + @vision.firstjob , :limit => 3)
+      else
+          @indeed_search = IndeedAPI.search_jobs(:q => @vision.industry+ " "  + @vision.firstjob , :limit => 3)
+      end
+   
     @user= current_user
     
-
-    @indeed_search = IndeedAPI.search_jobs(:q => "journalism intern" , :limit => 3)
+    @influencers= Influencer.where(:industry => @vision.industry).where(:style => @vision.style)
     @indeed_results = @indeed_search.results
    
   end
@@ -46,6 +60,7 @@ class VisionsController < ApplicationController
       if @vision.save
         format.html
         format.json { render :show, status: :created, location: @vision }
+        redirect_to edit_vision_path(@vision)
       else
         format.html { render :new }
         format.json { render json: @vision.errors, status: :unprocessable_entity }
@@ -60,6 +75,7 @@ class VisionsController < ApplicationController
       if @vision.update(vision_params)
         format.html
         format.json { render :show, status: :ok, location: @vision }
+        redirect_to @vision
       else
         format.html { render :edit }
         format.json { render json: @vision.errors, status: :unprocessable_entity }
@@ -85,6 +101,6 @@ class VisionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def vision_params
-      params.require(:vision).permit(:industry, :firstjob, :style, :prep, :gradschool, :companies, :username, :email)
+      params.require(:vision).permit(:industry, :firstjob, :style, :prep, :gradschool, :companies, :username, :email, :image, :age, :gender, :timezone)
     end
 end

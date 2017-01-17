@@ -1,34 +1,15 @@
 
-  <script>
-    $(document).ready(function() {
-      $.ajaxSetup({ cache: true });
-      //init facebook
-      $.getScript('//connect.facebook.net/en_US/sdk.js', function(){
-        FB.init({
-          appId: '405857709752176',
-          version: 'v2.7' // or v2.1, v2.2, v2.3, ...
-        });    
-        $(document).trigger('fbload');
-      });
-    }); 
-      
-      
-      //end fb init
- 
-</script>
 
 <!-- INDUSTRY PORTION OF QUIZ --> 
 <%= form_for(@vision) do |f| %>
 <div id="background-filter"></div>
-<%= f.hidden_field :username, :id => "field_username", :value => "default" %> 
-
 
 <section> 
 <h5 id="industry_section"  style="color:white"> WHO ARE YOU BUILDING WITH? </h5>
   <div class="industry">
 
     <%= f.hidden_field :industry, :id => "field_industry" %>
-    
+
 
     <img class="form_pic" id="Activists" src ="http://www.ourbloc.co/uploads/2/4/0/1/24014742/3_orig.png" >
     <img class="form_pic" id="Advocates" src ="http://www.ourbloc.co/uploads/2/4/0/1/24014742/6_orig.png" >
@@ -80,7 +61,7 @@
 <!-- grad school section --> 
 <section id="grad_section"> 
     <%= f.hidden_field :gradschool , :id =>"field_grad" %>
-    <h5 style="color:white; opacity:1; z-index: 2"> GRAD SCHOOL DREAMS? </h5>  
+    <h5 id"grad_header" style="color:white; opacity:1; z-index: 2"> GRAD SCHOOL DREAMS? </h5>  
 
     
     <div class="grad_button white-text btn waves-effect waves-light" id="None"> Nope </div>
@@ -98,12 +79,14 @@
     
     <%= f.hidden_field :prep, :id => "field_prep" %> 
 
-   <%= link_to "Starting Resume", vision_path(@vision), :id =>"need_resume", :class => "prep_button white-text btn waves-effect waves-light" %>
-   <%= link_to "Getting My Resume Together", vision_path(@vision), :id =>"revise_resume", :class => "prep_button white-text btn waves-effect waves-light" %>
-   <%= link_to "Hearing back about my apps", vision_path(@vision), :id =>"need_connections", :class => "prep_button white-text btn waves-effect waves-light" %>
-   <%= link_to "Finding jobs I care about", vision_path(@vision), :id =>"need_jobs", :class => "prep_button white-text btn waves-effect waves-light" %>
-   <%= link_to "Cover letters are the worst", vision_path(@vision), :id =>"cover_letters", :class => "prep_button white-text btn waves-effect waves-light" %>
-   <%= link_to "Personal Statements", vision_path(@vision), :id =>"personal_statements", :class => "prep_button white-text btn waves-effect waves-light" %>
+    <div id="need_resume" class="prep_button white-text btn waves-effect waves-light"> Starting a resume </div>
+   <div id="revise_resume" class="prep_button white-text btn waves-effect waves-light"> Getting my resume together </div>
+   <div id="need_connections" class="prep_button white-text btn waves-effect waves-light"> Hearing back on applications</div>
+   <div id="need_jobs" class="prep_button white-text btn waves-effect waves-light"> Finding jobs I care about</div>
+   <div id="cover_letters" class="prep_button white-text btn waves-effect waves-light"> Cover letters...sigh </div>
+    <div id="personal_statements" class="prep_button white-text btn waves-effect waves-light"> Writing personal statements </div>
+    <div id="salary_negotiation" class="prep_button white-text btn waves-effect waves-light"> Negotiating my salary </div>
+
 
 
    </div>
@@ -119,23 +102,6 @@
 <script>
 
 //SCRIPT FOR DREAM JOB
- $(document).on(
-    'fbload',  //  <---- HERE'S OUR CUSTOM EVENT BEING LISTENED FOR
-    function(){
-        //some code that requires the FB object
-        //such as...
-        FB.getLoginStatus(function(res){
-            if( res.status == "connected" ){
-                FB.api('/me', function(fbUser) {
-                    console.log(fbUser.name);
-                    $('#field_username').val(fbUser.name); 
-               
-                });
-            }
-        });
-
-    }
-);
  $("#submit_firstjob").click(function(){
     $('html,body').animate({
             scrollTop: $("#style").offset().top},
@@ -395,6 +361,7 @@ body {
 }
 section {
     padding: 10% 10% 50% 5%;
+    margin-bottom: 100%;
 
 }
 
@@ -454,5 +421,35 @@ a:hover {
         width: 20%;
         padding: 1%;
         margin: 2%;
+    }
+    .form_pic{
+        width: 39%;
+        margin: 1%;
+    }
+    #submit_firstjob{
+        width: 100%;
+        padding: 5%;
+        height: 4em;
+        font-size: 2em;
+    }
+    #dream_section h5{ 
+        top: 30%;
+        margin-bottom: 50%;
+    }
+    
+    .style_pic {
+        width: 45%;
+    }
+    
+    .style h5{
+        margin-bottom: 40%;
+    }
+    .grad_button{
+        width: 90%;
+        font-size: 2.5em;
+    }
+    
+    #grad_header{
+        margin-bottom: 10em; 
     }
 }

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170113061122) do
+ActiveRecord::Schema.define(version: 20170117180808) do
 
   create_table "asks", force: :cascade do |t|
     t.integer  "user_id"
@@ -163,6 +163,10 @@ ActiveRecord::Schema.define(version: 20170113061122) do
     t.string   "companies"
     t.string   "username"
     t.string   "email"
+    t.string   "image"
+    t.string   "gender"
+    t.string   "timezone"
+    t.string   "age"
     t.index ["user_id"], name: "index_visions_on_user_id"
   end
 
