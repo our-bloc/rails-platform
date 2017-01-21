@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170117180808) do
+ActiveRecord::Schema.define(version: 20170120173156) do
 
   create_table "asks", force: :cascade do |t|
     t.integer  "user_id"
@@ -22,6 +22,27 @@ ActiveRecord::Schema.define(version: 20170117180808) do
     t.datetime "updated_at",  null: false
     t.index ["sector_id"], name: "index_asks_on_sector_id"
     t.index ["user_id"], name: "index_asks_on_user_id"
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string   "org"
+    t.date     "date"
+    t.string   "user_id"
+    t.string   "contact"
+    t.string   "industry"
+    t.text     "body"
+    t.string   "social"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "image"
+  end
+
+  create_table "feedbacks", force: :cascade do |t|
+    t.text     "body"
+    t.integer  "user_id"
+    t.string   "type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "influencers", force: :cascade do |t|
@@ -167,6 +188,7 @@ ActiveRecord::Schema.define(version: 20170117180808) do
     t.string   "gender"
     t.string   "timezone"
     t.string   "age"
+    t.string   "major"
     t.index ["user_id"], name: "index_visions_on_user_id"
   end
 

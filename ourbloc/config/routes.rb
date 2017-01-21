@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :events
+  resources :feedbacks
   resources :tips
   root to: "welcome#home"
 
@@ -17,10 +19,10 @@ Rails.application.routes.draw do
  
 
   get '/sharesasks', to: 'sharesasks#index', as: :sharesasks
-  get '/profile', to: 'users#profile', as: :profile
   get '/dashboard', to: 'users#dashboard', as: :dashboard
   get '/profilequiz', to: 'profilequiz#home', as: :profilequiz
-  get '/myprofile', to: 'profilequiz#myprofile', as: :myprofile
+  get 'visions/indeed_show', to: 'visions#indeed_show', as: :indeed_show, format: false
+  
 
 
   devise_for :users ,:controllers => { :omniauth_callbacks => "callbacks" },

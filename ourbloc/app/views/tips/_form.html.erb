@@ -1,12 +1,38 @@
 <%= semantic_form_for @tip do |f| %>
   <%= f.inputs do %>
-    <%= f.input :title %>
-    <%= f.input :body %>
-    <%= f.input :industry %>
-    <%= f.input :link %>
+  <div class="input-field"> 
+    <%= f.label :title %>
+    <%= f.text_field :title, class:"teal-text" %>
+    </div>
+    
+  <div class="input-field"> 
+    <%= f.label :body %>
+    <%= f.text_area :body, class:"teal-text" %>
+  </div> 
+  
+  <div class="input-field"> 
+    <%= f.label :industry %>
+    <%= f.text_field :industry, class:"teal-text" %>
+    </div>
+    
+<div class="input-field"> 
+    <%= f.label :link %>
+    <%= f.text_field :link, class:"teal-text" %>
+    </div>
   <% end %>
 
   <%= f.actions do %>
     <%= f.action :submit, :as => :input %>
   <% end %>
 <% end %>
+
+
+<style> 
+.input-field{
+  margin: 5%;
+}
+
+.input-field input {
+  color: teal;
+}
+</style>

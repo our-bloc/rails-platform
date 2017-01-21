@@ -1,0 +1,74 @@
+<%= semantic_form_for @event do |f| %>
+  <%= f.inputs do %>
+    <div class="input-field teal-text">
+    <%= f.label "Name of your organization" %> 
+    <%= f.text_field :org, class: "teal-text"  %>
+    </div> 
+    
+    <div class="input-field teal-text">
+   
+    <%= f.date_field :date, class: "teal-text" %>
+    </div> 
+
+    <div class="input-field teal-text">
+    <%= f.label "Contact person?" %> 
+    <%= f.text_field :contact, class: "teal-text" %>
+    </div> 
+    
+    <div class="input-field teal-text">
+    <%= f.label "Event Description" %> 
+    <%= f.text_area :body, class: "teal-text" %>
+    </div> 
+    
+    <div class="input-field teal-text"></div>
+    <%= f.label "Social Media Handles" %> 
+    <%= f.text_field :social, class: "teal-text"%>
+    </div>
+    
+    <div class="input-field teal-text"> 
+    <%= f.label "Link to image address of flyer" %> 
+    <%= f.text_field :image, class: "teal-text" %> 
+    </div>
+    
+    <div class="field">
+      <%= f.label :industry %>
+      <%= f.hidden_field :industry , :id =>"field_eventindustry" %>
+      
+      <div class="event_industry white-text btn waves-effect waves-light" id="Griots"> Griots </div>
+      <div class="event_industry white-text btn waves-effect waves-light" id="Techies"> Techies </div>
+      <div class="event_industry white-text btn waves-effect waves-light" id="Scientists"> Scientists </div>
+      <div class="event_industry white-text btn waves-effect waves-light" id="CSuite"> CSuite </div>
+      <div class="event_industry white-text btn waves-effect waves-light" id="Educators"> Educators </div>
+      <div class="event_industry white-text btn waves-effect waves-light" id="Activists"> Activists </div>
+      <div class="event_industry white-text btn waves-effect waves-light" id="Advocates"> Advocates </div>
+  </div>
+ </div>
+  <% end %>
+
+  <%= f.actions do %>
+    <%= f.action :submit, :as => :input %>
+  <% end %>
+<% end %>
+
+<style>
+form{ 
+  position: absolute;
+  width: 60%;
+  left: 20%;
+}
+  input{
+   color: teal;
+  }
+</style>
+
+<script>
+  $('.event_industry').click(function(){
+      var idval = $(this).attr("id");
+      console.log(idval);
+          
+      $('#field_eventindustry').val(idval);
+            
+  });
+
+  
+</script>

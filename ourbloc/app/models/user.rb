@@ -13,6 +13,8 @@ class User < ApplicationRecord
   has_many :influencers
   has_many :visions
   has_many :value
+  has_many :feedbacks
+  has_many :events
   
   def self.from_omniauth(auth)
       where(provider: auth.provider, uid: auth.uid).first_or_create do |user|

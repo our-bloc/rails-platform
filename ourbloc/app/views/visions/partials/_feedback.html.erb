@@ -1,0 +1,19 @@
+<%= form_for(@feedback) do |f| %>
+<div class="input-field"> 
+<%= f.label "any thoughts? bugs, questions? let us know!" %> 
+<%= f.text_area :body , :class => "materialize-textarea" , :id => "feedback_input" %> 
+
+<%= f.submit "send feedback"  %> 
+</div>
+<% end %> 
+
+<style> 
+.input_field{
+    width: 150%;
+}
+#feedback_input{
+    background: white;
+    width: 100%;
+}
+
+</style>

@@ -5604,21 +5604,21 @@ label {
    ========================================================================== */
 /* Style Placeholders */
 ::-webkit-input-placeholder {
-  color: #d1d1d1;
+  color: teal;
 }
 
 :-moz-placeholder {
   /* Firefox 18- */
-  color: #d1d1d1;
+  color: teal;
 }
 
 ::-moz-placeholder {
   /* Firefox 19+ */
-  color: #d1d1d1;
+  color: teal;
 }
 
 :-ms-input-placeholder {
-  color: #d1d1d1;
+  color: teal ;
 }
 
 /* Text inputs */

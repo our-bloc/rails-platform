@@ -1,0 +1,11 @@
+<%= semantic_form_for @feedback do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :body %>
+    <%= f.input :user_id %>
+    <%= f.input :type %>
+  <% end %>
+
+  <%= f.actions do %>
+    <%= f.action :submit, :as => :input %>
+  <% end %>
+<% end %>
