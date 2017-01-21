@@ -103,7 +103,7 @@
     <% elsif @vision.industry =="Techies" %> 
       <img style="width: 100%" src="https://images.pexels.com/photos/30964/pexels-photo-30964.png?w=940&h=650&auto=compress&cs=tinysrgb">
     
-    
+   
     
     <% end %> 
     </div>
@@ -157,6 +157,7 @@
   h5{
     color: black;
   }
+  
 
   
   @media only screen and (max-device-width: 480px){
@@ -175,10 +176,7 @@
 </style>
 
 <script>
-  $('#show_tip_modal').click(function(){
-    $('#render_tip_modal').html("<%= render 'visions/partials/tip_modal' %>");
-  })
-  
+
 </script>
 
 

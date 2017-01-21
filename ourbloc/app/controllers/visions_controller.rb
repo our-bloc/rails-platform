@@ -33,17 +33,9 @@ class VisionsController < ApplicationController
       else
           @indeed_search = IndeedAPI.search_jobs(:q => @vision.industry+ " "  + @vision.firstjob , :limit => 10)
       end
-    @indeed_results = @indeed_search.results
+         @indeed_results = @indeed_search.results
     
-    @indeed_save = 
-    for @indeed_results.each |job| do 
-        Job.new(title: job.job_title,
-                user_id: current_user.id,
-                content: check_content(entry),
-                            published: entry.published,
-                            url: entry.url,
-                            )
-      new_entry
+
     
     
     
@@ -79,6 +71,12 @@ class VisionsController < ApplicationController
       @second_indeed_results = []
 end 
 
+    if params[:job_id].present?
+      @indeed_show_search = IndeedAPI.search_jobs(job_key: params[:job_id],  :limit => 3) 
+      @indeed_show = @indeed_show_search.results
+    end
+      
+
     @user= current_user
     
     #loads influencer text & image
@@ -108,12 +106,7 @@ end
     
   end
   
-  def indeed_show
-     @indeed = IndeedAPI.search_jobs(q: params[:job_id])
-     @indeed_results = @indeed.results
-     
 
-  end
   
   
   # GET /visions/new
