@@ -6,7 +6,8 @@
                     <img src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/coverpic_orig.jpg">
                   </div> -->
             <div class="card-content teal-text">
-              <span class="card-title" style="line-height: 1em"><%=  link_to job.title.downcase, job_path(job) %></span>
+              <span class="indeed_show card-title" style="line-height: 1em"><%= job.title.downcase %></span>
+              
               <p><%= job.description %></p>
                 <i id="save" class="unsaved fa fa-heart-o"></i>
 
@@ -23,42 +24,41 @@
     
      <% @indeed_results.each do |job| %>
             <div class="card horizontal white" style="width:100%">
-             
             <div class="card-content teal-text">
-              <span style="font-size: 2em"><%= link_to job.job_title, job.url %></span>
-              <p><%= job.company %></p>
-                <i id="save" class="unsaved fa fa-heart-o"></i>
-
-              <td><%= job.date %></td>
+                <span  style="font-size: 2em"><%= job.job_title %></span>
+                  <p><%= job.company %></p>
+                  <p><%= job.snippet %></p>
+                   <p><%= job.city %>, <%= job.state %></p>
+                  <i id="save" class="unsaved fa fa-heart-o"></i> <td><%= job.date %></td>
     
+                  <!-- save button --> 
+                      <%= form_tag do %>
+                          <%= hidden_field_tag(:saved, true) %>
+                      <% end %> 
+            
+            <%= link_to"more", job.url, :class => "white-text btn waves-effect waves-light" %> 
 
-           
-
-
-              
-                  <%= form_tag do %>
-                      <%= hidden_field_tag(:saved, true) %>
-                  <% end %> 
+                
                </div>
               </div>
           <% end %>
           
          <div id="second_indeed_search"> 
-         <%= form_tag(vision_path , method: "get") do  %>  
-         
-           <div class="input-field">
-            <%= label_tag :q, "Type in a new job description to refine your timeline"%> 
-             <%= text_field_tag :q %> 
-            <%= submit_tag "Refine your search", :class => "white-text btn waves-effect waves-light", :id => "second_indeed_submit" %> 
-            </div>
-            <% end %> 
-        </div> 
+             <%= form_tag(vision_path , method: "get") do  %>  
+             
+               <div class="input-field">
+                <%= label_tag :q, "Type in a new job description to refine your timeline"%> 
+                 <%= text_field_tag :q %> 
+                <%= submit_tag "Refine your search", :class => "white-text btn waves-effect waves-light", :id => "second_indeed_submit" %> 
+                </div>
+                <% end %> 
+            </div> 
         
         <% @second_indeed_results.each do |job| %>
             <div class="card horizontal white" style="width:100%">
              
             <div class="card-content teal-text">
-              <span style="font-size: 2em"><%= link_to job.job_title, job.url %></span>
+              <span style="font-size: 2em"><%= job.job_title %></span>
               <p><%= job.company %></p>
                 <i id="save" class="unsaved fa fa-heart-o"></i>
 
@@ -71,9 +71,6 @@
                </div>
               </div>
           <% end %>
-        
-         
-        
         
           <style> 
           
@@ -91,5 +88,8 @@
               $("#second_indeed_submit").click(function(){
                   $("#second_indeed_search").hide();
               });
+              
+            
+             
           </script>
    

@@ -1,13 +1,17 @@
 Rails.application.routes.draw do
   
+  root to: "welcome#home"
+
+  
   resources :events
   resources :feedbacks
   resources :tips
-  root to: "welcome#home"
+  
 
 
   resources :values
-  resources :visions
+  resources :visions 
+    
   resources :resources
   resources :jobs
   resources :sectors
@@ -22,6 +26,7 @@ Rails.application.routes.draw do
   get '/dashboard', to: 'users#dashboard', as: :dashboard
   get '/profilequiz', to: 'profilequiz#home', as: :profilequiz
   get 'visions/indeed_show', to: 'visions#indeed_show', as: :indeed_show, format: false
+
   
 
 

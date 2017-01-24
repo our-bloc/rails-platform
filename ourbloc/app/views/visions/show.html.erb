@@ -41,9 +41,10 @@
        <img class="circle" src="<%= @vision.image %>" >
       <a href="#!name"><span class="username black-text name"> <%= @vision.username %> </span></a>
       <a href="#!email"><span class="black-text email"><%= @vision.email %></span></a>
-      
+      <span class="black-text email"><%= @vision.gradyear %> | <%= @vision.major %> </span></a>
+
     </div></li>
-    <li><a href="#!"><i class="fa fa-twitter"></i>Twitter Account</a></li>
+    
     <li><a href="#!"><i class="fa fa-cloud"></i>Upload Resume</a></li>
     <li><a class="black-text" href="users/edit.html">Account</a></li>
     <li><%=link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
@@ -111,22 +112,24 @@
 </div>
   
 <!-- CONNECTIONS, OPPS RESOURCES --> 
+  
+ 
+    
+    
 <div class="row" style="padding-left: 10%">
    <div class="col s12 l5 pull-s1" style="padding: 5%">
      <h5> opportunities </h5>
       <%= render "visions/partials/jobs" %>
     </div>
+  
     
     <div class="col s12 l6 pull-s1" style="padding: 5%">
       <h5> pro tips </h5>
       <%= render "visions/partials/resources" %>
     </div>
     
-    <div class="col s12 l6 pull-s1" style="padding: 5%">
-      <h5> coming soon... </h5>
-      <%= render "visions/partials/hangout" %>
-    </div>
     
+  
     </div>
     
 <div>
@@ -158,7 +161,13 @@
     color: black;
   }
   
+  .side-nav {
+    font-family: Work Sans;
+  }
 
+  #show_view {
+    display:none;
+  }
   
   @media only screen and (max-device-width: 480px){
     html{

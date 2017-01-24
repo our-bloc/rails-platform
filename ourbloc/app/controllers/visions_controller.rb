@@ -48,7 +48,7 @@ class VisionsController < ApplicationController
        if @vision.industry == "Techies"
       @second_indeed_search = IndeedAPI.search_jobs(q: params[:q]+ " " + "tech", :limit => 3)
      
-      elsif @vision.industry == "Advocates"
+      elsif @vision.industry == "Advocates" 
          @second_indeed_search = IndeedAPI.search_jobs(q: params[:q]+ " " + "legal undergraduate", :limit => 3)
       elsif @vision.industry == "Griots"
         @second_indeed_search = IndeedAPI.search_jobs(q: params[:q]+ " " + "writer", :limit => 3)
@@ -69,12 +69,14 @@ class VisionsController < ApplicationController
     else
       @second_indeed_search = []
       @second_indeed_results = []
-end 
+  end 
+
 
     if params[:job_id].present?
-      @indeed_show_search = IndeedAPI.search_jobs(job_key: params[:job_id],  :limit => 3) 
-      @indeed_show = @indeed_show_search.results
+      @indeed_show_search = IndeedAPI.search_jobs(q: params[:job_id], :limit => 1) 
+      @indeed_modal = @indeed_show_search.results
     end
+
       
 
     @user= current_user
@@ -106,7 +108,9 @@ end
     
   end
   
-
+  def show_indeed 
+  
+  end
   
   
   # GET /visions/new
@@ -168,6 +172,6 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def vision_params
-      params.require(:vision).permit(:industry, :firstjob, :style, :prep, :gradschool, :companies, :username, :email, :image, :age, :gender, :timezone)
+      params.require(:vision).permit(:industry, :firstjob, :style, :prep, :gradschool, :companies, :username, :gradyear, :email, :image, :age, :gender, :timezone, :major)
     end
 end
