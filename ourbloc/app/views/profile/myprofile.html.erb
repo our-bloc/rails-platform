@@ -1,0 +1,20 @@
+<h5> <%= @user.name %> </h5>
+<h6> <%= @user.email %> </h6>
+<h6> <%= @vision.industry %> </h6>
+<h6> <%= @vision.major %> </h6>
+<h6> <%= @vision.gradyear %> </h6>
+
+<h6>share code: <%= link_to "https://blocview-aminabloc.c9users.io/"+ @user.profileurl, "https://blocview-aminabloc.c9users.io/"+ @user.profileurl  %> </h6>
+
+<% if @referral_count == nil %> 
+<p> You don't have any shares right now, but you can quickly upgrade to pro by sending this link with 5 friends! </p>
+
+<% elsif @referral_count < 5 %> 
+<p> You're almost there! <%= 5 - @referral_count %>more shares and you'll have pro access</p>
+
+<%else %> 
+<h6> You have <%= @referral_count %> shares and your account has been upgraded to pro! Check it out </h6>
+<% end %> 
+
+
+

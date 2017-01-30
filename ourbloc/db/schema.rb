@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170121035755) do
+ActiveRecord::Schema.define(version: 20170130020253) do
 
   create_table "asks", force: :cascade do |t|
     t.integer  "user_id"
@@ -68,6 +68,13 @@ ActiveRecord::Schema.define(version: 20170121035755) do
     t.date     "deadline"
     t.index ["sector_id"], name: "index_jobs_on_sector_id"
     t.index ["user_id"], name: "index_jobs_on_user_id"
+  end
+
+  create_table "profiles", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_profiles_on_user_id"
   end
 
   create_table "resources", force: :cascade do |t|
@@ -152,6 +159,9 @@ ActiveRecord::Schema.define(version: 20170121035755) do
     t.string   "companies"
     t.string   "provider"
     t.string   "uid"
+    t.integer  "refererred_by_user_id"
+    t.string   "profileurl"
+    t.string   "referral_code"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

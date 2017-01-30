@@ -1,6 +1,8 @@
   <body>
   <script> 
        $(document).ready(function() {
+             $('.modal').modal();
+             
       $.ajaxSetup({ cache: true });
       //init facebook
       $.getScript('//connect.facebook.net/en_US/sdk.js', function(){
@@ -118,33 +120,40 @@
     
 <div class="row" style="padding-left: 10%">
    <div class="col s12 l5 pull-s1" style="padding: 5%">
-     <h5> opportunities </h5>
-      <%= render "visions/partials/jobs" %>
+       <h5> opportunities </h5>
+        <%= render "visions/partials/jobs" %>
     </div>
-  
+
     
     <div class="col s12 l6 pull-s1" style="padding: 5%">
       <h5> pro tips </h5>
       <%= render "visions/partials/resources" %>
     </div>
-    
-    
+</div>
   
+ 
+<div>
+   <!-- Modal Trigger -->
+  <a class="waves-effect waves-light btn" href="#modal1">Modal</a>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
     </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+  
+</div>
+
     
 <div>
     <div class="col s12" style="padding: 5%">
       <%= render "visions/partials/feedback" %>
     </div>
-    
-    <div> 
-    <!--
-      <a class="waves-effect waves-light btn" id="show_tip_modal">Modal</a>
-      <div id="render_tip_modal"> </div>
-      
-      --> 
-    </div>
-    
   </div>
 </body>
 <style>
@@ -185,7 +194,7 @@
 </style>
 
 <script>
-
+          
 </script>
 
 

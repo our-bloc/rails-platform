@@ -1,0 +1,11 @@
+<h5> <%= @user.name %> </h5>
+<h6><%= @user.profileurl %> </h6>
+<h6><%= @user.id %> </h6>
+<h6><%= @vision.industry %> </h6>
+<h6><%= @vision.major %> </h6>
+
+
+
+<div id="signupbtn">
+        <%= link_to "Sign Up With Facebook", user_facebook_omniauth_authorize_path(:referred_by => @user.profileurl), :id => "submitFB" %> 
+       </div>

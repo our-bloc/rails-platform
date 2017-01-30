@@ -46,8 +46,7 @@ class VisionsController < ApplicationController
     #controls search of additional job titles
     if params[:q].present?
        if @vision.industry == "Techies"
-      @second_indeed_search = IndeedAPI.search_jobs(q: params[:q]+ " " + "tech", :limit => 3)
-     
+           @second_indeed_search = IndeedAPI.search_jobs(q: params[:q]+ " " + "tech", :limit => 3)
       elsif @vision.industry == "Advocates" 
          @second_indeed_search = IndeedAPI.search_jobs(q: params[:q]+ " " + "legal undergraduate", :limit => 3)
       elsif @vision.industry == "Griots"

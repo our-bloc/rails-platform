@@ -43,16 +43,7 @@
               </div>
           <% end %>
           
-         <div id="second_indeed_search"> 
-             <%= form_tag(vision_path , method: "get") do  %>  
-             
-               <div class="input-field">
-                <%= label_tag :q, "Type in a new job description to refine your timeline"%> 
-                 <%= text_field_tag :q %> 
-                <%= submit_tag "Refine your search", :class => "white-text btn waves-effect waves-light", :id => "second_indeed_submit" %> 
-                </div>
-                <% end %> 
-            </div> 
+         
         
         <% @second_indeed_results.each do |job| %>
             <div class="card horizontal white" style="width:100%">
@@ -72,6 +63,24 @@
               </div>
           <% end %>
         
+        
+        <div id="second_indeed_search"> 
+             <%= form_tag(vision_path , method: "get", remote: true ) do  %>  
+             
+               <div class="input-field">
+                <%= label_tag :q, "Type in a new job description to refine your timeline"%> 
+                 <%= text_field_tag :q %> 
+                <%= submit_tag "Refine your search", :class => "white-text btn waves-effect waves-light", :id => "second_indeed_submit" %> 
+                </div>
+                <% end %> 
+            </div> 
+        
+        
+        
+        
+        
+        
+        
           <style> 
           
           
@@ -86,7 +95,6 @@
           
           <script> 
               $("#second_indeed_submit").click(function(){
-                  $("#second_indeed_search").hide();
               });
               
             
