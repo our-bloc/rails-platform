@@ -41,9 +41,10 @@
         <img style="width:10%; padding:.2em;" src="">
       </div>
        <img class="circle" src="<%= @vision.image %>" >
-      <a href="#!name"><span class="username black-text name"> <%= @vision.username %> </span></a>
-      <a href="#!email"><span class="black-text email"><%= @vision.email %></span></a>
-      <span class="black-text email"><%= @vision.gradyear %> | <%= @vision.major %> </span></a>
+       <span class="username black-text name"> <%= @user.name %> </span>
+      <span class="black-text email"><%= @user.email %></span>
+      <a href="#!email"><span class="black-text email"><%= @user.school %></span></a>
+      <span class="black-text email"><%= @user.gradyear %> | <%= @user.major %> </span></a>
 
     </div></li>
     
@@ -51,6 +52,8 @@
     <li><a class="black-text" href="users/edit.html">Account</a></li>
     <li><%=link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
     <li><%=link_to 'Retake Quiz', edit_vision_path(@vision) %></li>
+        <li><%=link_to 'Edit My Profile ', edit_user_registration_path %></li>
+
 
     <li><div class="divider"></div></li>
     <li><a class="subheader">Recent Activity</a></li>
@@ -61,6 +64,9 @@
 
   
 <p id="notice"><%= notice %></p>
+
+
+
 
 <!-- SIDE BAR --> 
 <div class="row"> 
@@ -132,22 +138,6 @@
 </div>
   
  
-<div>
-   <!-- Modal Trigger -->
-  <a class="waves-effect waves-light btn" href="#modal1">Modal</a>
-
-  <!-- Modal Structure -->
-  <div id="modal1" class="modal">
-    <div class="modal-content">
-      <h4>Modal Header</h4>
-      <p>A bunch of text</p>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-    </div>
-  </div>
-  
-</div>
 
     
 <div>

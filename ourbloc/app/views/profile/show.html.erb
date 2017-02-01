@@ -1,11 +1,134 @@
-<h5> <%= @user.name %> </h5>
-<h6><%= @user.profileurl %> </h6>
-<h6><%= @user.id %> </h6>
-<h6><%= @vision.industry %> </h6>
-<h6><%= @vision.major %> </h6>
+
+<div class="profile"> 
+<div class ="profile_info row">
+    <div class="col s12 l6"> 
+        <h6><%= image_tag @user.picture, class:  "circle" %> </h6>
+        <h5> <%= @user.name %> </h5>
+        <h6> <%= @user.email %> </h6>
+        <h6> <%= @user.school %> </h6>
+        <h6> <%= @user.experience %> </h6>
+        <h6> <%= @user.major%> | <%= @user.gradyear%> </h6>
+    </div> 
+
+    <div class="col s12 l6"> 
+        <% if @vision != nil %>
+            <h5 style="margin-top: 22%"> seeing it to be it... </h5>
+            <div style="height: 2em">
+              <% @influencers.each do |influencer| %>
+                <h6><%= influencer.name %></h6>
+              <% end %>
+            </div>
+            <% else %> 
+            <h5><%= link_to "Get started by building your first playlist", new_vision_path %> </h5>
+            <div style="height: 2em"> </div>
+            <% end %>
+    
+        <h6 class="teal-text">share code: <%= link_to "https://blocview-aminabloc.c9users.io/"+ @user.profileurl, "https://blocview-aminabloc.c9users.io/"+ @user.profileurl  %> </h6>
+     </div>
+ </div> 
+ 
+ <div class="share_bar">
+   
+    <% if user_signed_in? %> 
+    <p> <%= link_to "back to my profile", myprofile_path, class: "white-text" %> </p>
+
+    <% else%> 
+    <p> <%= link_to "Create your account and get your own custom career playlist!", user_facebook_omniauth_authorize_path(:referred_by => @user.profileurl), class:"white-text" %> </p>
+    
+    <% end %> 
+</div>
+</div>
+
+
+     
+     
+     
+     
+     
+     
+      
+   
+ 
+  
+
+
+        
+
+<style> 
+ html, body{
+    width: 100%;
+    height: 100%;
+    font-family: Work Sans;
+  }
+  a:hover{
+    background-color: inherit;
+    color:teal;
+  }
+  
+  .profile {
+      position: absolute;
+      margin: 5% 20% ;
+      background-color:white;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      padding: 0%;
+  }
+  
+  .profile_info{
+      margin: 7% 7% 20% 7%;
+  }
+  
+  .share_bar{
+      background-color:teal;
+      color: white;
+      font-weight: strong;
+      width: 100%;
+      position:absolute;
+      bottom: 0px;
+      padding: 0%;
+      margin-top: 10em;
+  }
+  
+  .share_bar p,h5 {
+      font-family: Montserrat;
+  }
+  
+  #submitFB{
+  position: absolute;
+  background: #3b5998;
+  color:white;
+  border: 4px solid grey;
+  padding: 7% 5% 5% 18%;
+  margin-top: -30%;
+  width: 15em;
+  height: 3em;
+}
+  h5{
+    color: black;
+  }
+  
+  .side-nav {
+    font-family: Work Sans;
+  }
+
+  #show_view {
+    display:none;
+  }
+  
+  @media only screen and (max-device-width: 480px){
+    html{
+        font-size: 2em;
+    }
+    
+    div {
+      font-size: 1.1em;
+    }
+    p,span{
+      font-size: 1.8em;
+    }
+}
+
+</style>
 
 
 
-<div id="signupbtn">
-        <%= link_to "Sign Up With Facebook", user_facebook_omniauth_authorize_path(:referred_by => @user.profileurl), :id => "submitFB" %> 
-       </div>
+

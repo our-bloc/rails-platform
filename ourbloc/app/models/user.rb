@@ -42,11 +42,21 @@ class User < ApplicationRecord
         user.provider = auth.provider
         user.name= auth.info.name
         user.uid = auth.uid
-        user.email = Devise.friendly_token[0,10]+"@facebook.com"
+        user.email = auth.info.email
         user.password = Devise.friendly_token[0,20]
-        user.profileurl = auth.info.name.gsub(/\s+/, "")+rand(10..50).to_s
-        user.referral_code = params[:referred_by]
         
+        #creates users unique profile link
+        user.profileurl = auth.info.name.gsub(/\s+/, "")+rand(10..50).to_s
+        
+        #more details, user public profile
+        user.gender = auth.extra.raw_info.gender
+        user.timezone = auth.extra.raw_info.timezone
+        user.picture = auth.extra.raw_info.picture.data.url
+
+        #more details, needs FB approval
+        user.school = auth.extra.raw_info.education[-1].school.name
+        user.experience = auth.extra.raw_info.work[-1].employer.name
+        user.gradyear = auth.extra.raw_info.education[-1].year.name
       end
   end
 end

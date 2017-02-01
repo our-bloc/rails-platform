@@ -10,6 +10,15 @@ class VisionsController < ApplicationController
   # GET /visions/1
   # GET /visions/1.json
   def show
+    
+    if current_user && current_user.sign_in_count == 2
+      unless session[:display_welcome]
+        flash.now[:notice] = "Welcome!"
+        session[:display_welcome] = true
+      end
+    end
+    
+    
     @jobs= Job.order("created_at DESC").limit(0).where(:industry => @vision.industry)
     
     @tips= Tip.order("created_at DESC").limit(3)
@@ -79,6 +88,7 @@ class VisionsController < ApplicationController
       
 
     @user= current_user
+    current_user.update_attributes(:major => @vision.major)
     
     #loads influencer text & image
     @influencers= Influencer.where(:industry => @vision.industry).where(:style => @vision.style).limit(1)

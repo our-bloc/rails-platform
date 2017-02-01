@@ -2,6 +2,7 @@
 <body>
 <script> 
        $(document).ready(function() {
+         
       $.ajaxSetup({ cache: true });
       //init facebook
       $.getScript('//connect.facebook.net/en_US/sdk.js', function(){
@@ -21,10 +22,13 @@
         //such as...
         FB.getLoginStatus(function(res){
             if( res.status == "connected" ){
-                FB.api('/me?fields=email,picture,name,first_name,gender,locale,timezone,age_range', function(fbUser) {
+                FB.api('/me?fields=email,picture,name,first_name,gender,locale,timezone,age_range,education', function(fbUser) {
                     var profilepic= fbUser.picture.data.url;
                     
                     $('#field_username').val(fbUser.name); 
+                    console.log(fbUser.name)
+                    console.log(fbUser.education)
+
                     $('#field_email').val(fbUser.email); 
                     $('#field_image').val(profilepic); 
                     $('#field_timezone').val(fbUser.timezone); 

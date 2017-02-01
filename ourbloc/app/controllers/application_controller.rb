@@ -21,7 +21,9 @@ class ApplicationController < ActionController::Base
     added_profile_attrs = [:name, :school, #required on logins
     :major, :experience, :bloc1, :bloc2, :bloc3, :skills, #resume
     :gradyear, :orgs, :resumelink, :geo ,:hometown ,:company, #context
-    :industry, :firstjob, :gradschool, :prep, :style, :office, :companies] #profilequiz
+    :industry, :firstjob, :gradschool, :prep, :style, :office, :companies, #profilequiz
+    :gender, :picture, :timezone, :hometown
+    ]
   
     devise_parameter_sanitizer.permit :sign_up, keys: added_registration_attrs
     devise_parameter_sanitizer.permit :account_update, keys: added_profile_attrs
