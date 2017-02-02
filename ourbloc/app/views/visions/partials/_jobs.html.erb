@@ -27,13 +27,13 @@
             <div class="card-content teal-text">
                 <span  style="font-size: 2em"><%= job.job_title %></span>
                   <p><%= job.company %></p>
-                  <p><%= job.snippet %></p>
-                   <p><%= job.city %>, <%= job.state %></p>
-                  <i id="save" class="unsaved fa fa-heart-o"></i> <td><%= job.date %></td>
+                  <p class="grey-text"><%= job.snippet%></p>
+                   <p><%= job.city %>, <%= job.state %>| <%= job.date.to_s.split(" ")[0] %></p>
+                  <i id="save" class="unsaved fa fa-heart-o"></i> 
     
                   <!-- save button --> 
                       <%= form_tag do %>
-                          <%= hidden_field_tag(:saved, true) %>
+                          <%= hidden_field_tag(:saved, true)  %>
                       <% end %> 
             
             <%= link_to"more", job.url, :class => "white-text btn waves-effect waves-light" %> 
@@ -50,10 +50,12 @@
              
             <div class="card-content teal-text">
               <span style="font-size: 2em"><%= job.job_title %></span>
-              <p><%= job.company %></p>
+                <p><%= job.company %></p>
+                <p class="grey-text"><%= job.snippet%></p>
+                <p><%= job.city %>, <%= job.state %>| <%= job.date.to_s.split(" ")[0] %></p>
+
                 <i id="save" class="unsaved fa fa-heart-o"></i>
 
-              <td><%= job.date %></td>
 
               
                   <%= form_tag do %>
@@ -67,7 +69,7 @@
         <div id="second_indeed_search"> 
              <%= form_tag(vision_path , method: "get", remote: true ) do  %>  
              
-               <div class="input-field">
+               <div class="input-field" style="line-height: 1.1">
                 <%= label_tag :q, "Type in a new job description to refine your timeline"%> 
                  <%= text_field_tag :q %> 
                 <%= submit_tag "Refine your search", :class => "white-text btn waves-effect waves-light", :id => "second_indeed_submit" %> 

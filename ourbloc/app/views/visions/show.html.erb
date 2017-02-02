@@ -1,9 +1,8 @@
   <body>
   <script> 
        $(document).ready(function() {
-             $('.modal').modal();
-             
-      $.ajaxSetup({ cache: true });
+
+      $.ajaxSetup({ cache: true }); 
       //init facebook
       $.getScript('//connect.facebook.net/en_US/sdk.js', function(){
         FB.init({
@@ -23,7 +22,7 @@
         FB.getLoginStatus(function(res){
             if( res.status == "connected" ){
                 FB.api('/me?fields=email,picture,name,first_name', function(fbUser) {
-                    console.log(fbUser.email)
+                    console.log(fbUser.first_name)
                    
                 });
             }
@@ -38,9 +37,9 @@
     
     <li><div class="userView">
       <div class="background">
-        <img style="width:10%; padding:.2em;" src="">
+        <img style="width:10%; padding:.2em;" src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/9544735.png?43">
       </div>
-       <img class="circle" src="<%= @vision.image %>" >
+       <img class="circle" src="<%= @user.picture %>" >
        <span class="username black-text name"> <%= @user.name %> </span>
       <span class="black-text email"><%= @user.email %></span>
       <a href="#!email"><span class="black-text email"><%= @user.school %></span></a>
@@ -49,10 +48,10 @@
     </div></li>
     
     <li><a href="#!"><i class="fa fa-cloud"></i>Upload Resume</a></li>
-    <li><a class="black-text" href="users/edit.html">Account</a></li>
     <li><%=link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
     <li><%=link_to 'Retake Quiz', edit_vision_path(@vision) %></li>
-        <li><%=link_to 'Edit My Profile ', edit_user_registration_path %></li>
+    <li><%=link_to 'Edit My Profile ', edit_user_registration_path %></li>
+    <li><%=link_to 'View Public Profile ', root_path+ @user.profileurl %></li>
 
 
     <li><div class="divider"></div></li>
@@ -66,15 +65,35 @@
 <p id="notice"><%= notice %></p>
 
 
+<% if current_user.sign_in_count == 1 %> 
+<div class="welcome_message" > 
+  <h5> Hey, <%= @user.name.split(' ')[0] %>! </h5> 
+  <p> 
+  Thanks for signing up for your first opportunity playlist! Below you will find <span class="highlight"> 10 curated opportunities 
+  and tips</span> that we think will help you land a dope opportunity this summer. We are huge believers in the power of seeing to be it, so we are also
+  adding in <span class="highlight"> some motivation in the form of a spotlight on a powerful figure from black history </span> who we think embodies your work style . 
+  </p> 
+  
+  <p> 
+  If you love your recommendations, you can go ahead and <span class="highlight">fave any opportunities that you like </span> and they will save to your profile. 
+  If you don't, you can retake the quiz anytime in the side menu and can also drop us some feedback. </p>
+  
+  <p> Enjoy! </p>
+  
+  <p>Peace & love, Bloc Team</p>
+  
+  <p> PS.   If you are interested in more opportunities & tips, you can <span class="highlight">easily upgrade your friend by sharing your personal  <%= link_to "referral link", root_path+ @user.profileurl  %> with two friends  </span>.
 
+  </p>
+  
+  <div class="white-text btn waves-effect waves-light" id="hide_welcome"> Got it! </div>
+  
+</div>
+<%end %> 
+<!-- end welcome message on first login -->
 
 <!-- SIDE BAR --> 
 <div class="row"> 
-
-
-
-
-
 <!-- Personality Quiz Results --> 
       <div class="col l4 s9 push-s1 push-l1">
         <div class="card white" style="width:100%; margin-top:5%">
@@ -141,7 +160,7 @@
 
     
 <div>
-    <div class="col s12" style="padding: 5%">
+    <div class="feedback col s12" style="padding: 5%">
       <%= render "visions/partials/feedback" %>
     </div>
   </div>
@@ -163,14 +182,35 @@
   .side-nav {
     font-family: Work Sans;
   }
+  .welcome_message{
+    font-family: Montserrat;
+    background-color: white;
+    margin: 0% 10% 10% 10%;
+    padding: 5%;
+    box-shadow: 2px 2px 1px #888888;
+  }
 
+  .welcome_message p{
+    font-family: Montserrat;
+
+  }
   #show_view {
     display:none;
+  }
+  
+  .highlight{
+    color:teal;
+    font-weight: 800;
+  }
+  
+  .feedback{
+        box-shadow: 2px 2px 1px #888888;
   }
   
   @media only screen and (max-device-width: 480px){
     html{
         font-size: 2em;
+        
     }
     
     div {
@@ -178,13 +218,17 @@
     }
     p,span{
       font-size: 1.8em;
+      line-height: 1.1em;
+      font-family: Lato;
     }
 }
 
 </style>
 
 <script>
-          
+  $("#hide_welcome").click(function(){
+    $(".welcome_message").hide();
+  });
 </script>
 
 

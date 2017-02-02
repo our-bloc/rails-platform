@@ -25,6 +25,8 @@ Rails.application.routes.draw do
 
   get '/sharesasks', to: 'sharesasks#index', as: :sharesasks
   get '/dashboard', to: 'users#dashboard', as: :dashboard
+  get 'profiles' => 'profile#index', as: :profiles
+
   get '/myprofile', to: 'profile#myprofile', as: :myprofile
   get 'visions/indeed_show', to: 'visions#indeed_show', as: :indeed_show, format: false
 

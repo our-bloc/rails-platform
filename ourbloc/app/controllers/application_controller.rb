@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
   def configure_permitted_parameters  #form fields for devise user registration/account update
     
   
-    added_registration_attrs = [:name, :school, 
+    added_registration_attrs = [:name, :school, :firstname,
     :industry, :firstjob, :gradschool, :prep, :style, :office, :companies] #profilequiz
     
     
@@ -22,7 +22,7 @@ class ApplicationController < ActionController::Base
     :major, :experience, :bloc1, :bloc2, :bloc3, :skills, #resume
     :gradyear, :orgs, :resumelink, :geo ,:hometown ,:company, #context
     :industry, :firstjob, :gradschool, :prep, :style, :office, :companies, #profilequiz
-    :gender, :picture, :timezone, :hometown
+    :gender, :picture, :timezone, :hometown, :firstname
     ]
   
     devise_parameter_sanitizer.permit :sign_up, keys: added_registration_attrs

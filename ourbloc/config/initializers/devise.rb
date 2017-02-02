@@ -250,7 +250,8 @@ Devise.setup do |config|
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
   config.omniauth :facebook, '405857709752176', 'b805a071b088b2bda214f69dce33809b',
-  :scope => 'email,user_education_history,user_work_history,user_hometown,user_friends', :info_fields => 'email,name,education,work,hometown,friends,timezone,gender,picture'
+  :scope => 'email,user_education_history,user_work_history,user_hometown,user_friends', 
+  :info_fields => 'email,name,first_name,education,work,hometown,friends,timezone,gender,picture'
   
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

@@ -8,6 +8,8 @@ gem 'sidekiq'
 
 gem 'resque'
 
+gem 'figaro'
+
 gem 'recommendable'
 
 
