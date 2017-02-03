@@ -1,8 +1,9 @@
 class WelcomeController < ApplicationController
   def home
-    if user_signed_in? and current_user.sign_in_count == 1
+    @vision = Vision.where(:id => current_user.uid)
+    if user_signed_in? and @vision = nil
       redirect_to new_vision_path
-    elsif user_signed_in? and current_user.sign_in_count > 1
+    elsif user_signed_in?
       redirect_to myprofile_path
     else
       redirect_to new_user_registration_path

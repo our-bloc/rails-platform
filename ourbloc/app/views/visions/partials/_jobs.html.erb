@@ -6,7 +6,7 @@
                     <img src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/coverpic_orig.jpg">
                   </div> -->
             <div class="card-content teal-text">
-              <span class="indeed_show card-title" style="line-height: 1em"><%= job.title.downcase %></span>
+              <span class="indeed_show card-title" style="line-height: 1em"><%= job.title %></span>
               
               <p><%= job.description %></p>
                 <i id="save" class="unsaved fa fa-heart-o"></i>
@@ -25,7 +25,7 @@
      <% @indeed_results.each do |job| %>
             <div class="card horizontal white" style="width:100%">
             <div class="card-content teal-text">
-                <span  style="font-size: 2em"><%= job.job_title %></span>
+                <span  style="font-size: 2em"><%= job.job_title.downcase %></span>
                   <p><%= job.company %></p>
                   <p class="grey-text"><%= job.snippet%></p>
                    <p><%= job.city %>, <%= job.state %>| <%= job.date.to_s.split(" ")[0] %></p>
