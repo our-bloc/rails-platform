@@ -43,7 +43,7 @@ class User < ApplicationRecord
         user.name= auth.info.name
         user.firstname= auth.extra.raw_info.first_name
         user.uid = auth.uid
-        user.email = auth.info.email
+        user.email = auth.info.email || Devise.friendly_token[0,20]+"@facebook.com"
         user.role = "student"
         user.password = Devise.friendly_token[0,20]
         
@@ -55,10 +55,8 @@ class User < ApplicationRecord
         user.timezone = auth.extra.raw_info.timezone
         user.picture = auth.extra.raw_info.picture.data.url
 
-        #more details, needs FB approval
-        user.school = auth.extra.raw_info.education[-1].school.name
-        user.experience = auth.extra.raw_info.work[-1].employer.name
-        user.gradyear = auth.extra.raw_info.education[-1].year.name
+       
+
       end
   end
 end

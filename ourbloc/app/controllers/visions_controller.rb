@@ -10,20 +10,18 @@ class VisionsController < ApplicationController
   # GET /visions/1
   # GET /visions/1.json
   def show
+    #track visits with AHOY
+    ahoy.track "Viewed Vision", title: "Vision viewed"
+
     
-    if current_user && current_user.sign_in_count == 2
-      unless session[:display_welcome]
-        flash.now[:notice] = "Welcome!"
-        session[:display_welcome] = true
-      end
-    end
     
+  
+    #render modals
     
     @jobs= Job.order("created_at DESC").limit(0).where(:industry => @vision.industry)
     
-    @tips= Tip.order("created_at DESC").limit(3)
     
-    
+    @tips= Tip.order("created_at DESC").limit(5)
     @influencer_hangout= Event.order("created_at DESC").where(:org =>"Bloc Influencer Hangout").limit(1)
 
     #import jobs from indeed
@@ -31,6 +29,8 @@ class VisionsController < ApplicationController
           @indeed_search = IndeedAPI.search_jobs(:q => @vision.firstjob + " tech" , :limit => 10)
       elsif @vision.industry == "Advocates"
           @indeed_search = IndeedAPI.search_jobs(:q => "legal undergraduate " + @vision.firstjob , :limit => 10)
+      elsif @vision.industry == "Educators"
+          @indeed_search = IndeedAPI.search_jobs(:q => "teaching children  " + @vision.firstjob , :limit => 10)
       elsif @vision.industry == "Griots"
           @indeed_search = IndeedAPI.search_jobs(:q => "writing " + @vision.firstjob , :limit => 10)
       elsif @vision.industry == "Scientists"
@@ -88,8 +88,7 @@ class VisionsController < ApplicationController
       
 
     @user= current_user
-    current_user.update_attributes(:major => @vision.major)
-    
+
     #loads influencer text & image
     @influencers= Influencer.where(:industry => @vision.industry).where(:style => @vision.style).limit(1)
     
@@ -155,6 +154,10 @@ class VisionsController < ApplicationController
       if @vision.update(vision_params)
         format.html
         format.json { render :show, status: :ok, location: @vision }
+
+        #if can't pull user info from FB, update info from visions form
+        current_user.update_attributes(:school => @vision.school, :gradyear => @vision.gradyear , :major => @vision.major)
+        
         redirect_to @vision
       else
         format.html { render :edit }
@@ -181,6 +184,6 @@ class VisionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def vision_params
-      params.require(:vision).permit(:industry, :firstjob, :style, :prep, :gradschool, :companies, :username, :gradyear, :email, :image, :age, :gender, :timezone, :major)
+      params.require(:vision).permit(:industry, :firstjob, :style, :prep, :career_services, :linkedin, :gradschool, :school, :companies, :username, :gradyear, :email, :image, :age, :gender, :timezone, :major)
     end
 end

@@ -5,7 +5,7 @@
 <div id="background-filter"></div>
 
 <section> 
-<h5 id="industry_section"  style="color:white; margin-top: -5%"> WHO ARE YOU BUILDING YOUR LEGACY WITH? </h5>
+<h5 id="industry_section"  style="color:white; margin-top: -5%"> WHO ARE YOU BUILDING WITH? </h5>
   <div class="industry">
 
     <%= f.hidden_field :industry, :id => "field_industry" %>
@@ -40,8 +40,8 @@
 <section>
 <div id="dreamjob">
 <div id="dream_section">
-    <h5 style="color:white; opacity:1; z-index: 2; margin-top: -20%"> WHAT IS YOUR DREAM SUMMER OPPORTUNITY? </h5>  
-    <%= f.text_field :firstjob ,:id => "field_firstjob", :value => " " %>
+    <h5 style="color:white; opacity:1; z-index: 2; margin-top: -20%"> WHAT JOB ROLE ARE YOU LOOKING FOR? </h5>  
+    <%= f.text_field :firstjob ,:id => "field_firstjob", :placeholder => "summer intern? research fellow? entry level?" %>
    
     <div id="submit_firstjob" class="white-text btn waves-effect waves-light"> NEXT </div> 
 
@@ -77,6 +77,7 @@
 
     
     <div class="grad_button white-text btn waves-effect waves-light" id="None"> Nope </div>
+    <div class="grad_button white-text btn waves-effect waves-light" id="Maybe"> Maybe </div>
     <div class="grad_button white-text btn waves-effect waves-light" id="Master's Program"> Masters Program </div>
     <div class="grad_button white-text btn waves-effect waves-light" id="PhD Program"> PhD Program </div>
     <div class="grad_button white-text btn waves-effect waves-light" id="Law School"> Med School </div>
@@ -87,10 +88,19 @@
 <section>
 <div id="major_head">
 <div id="major_section">
-    <h5 style="color:white; opacity:1; z-index: 2; padding-top: 10%"> MAJOR? </h5>  
+    <h5 style="color:white; opacity:1; z-index: 2; padding-top: 10%"> SCHOOL INFO </h5>  
     <div class="row">
-        <div class="col l8 white-text">
-            <%= f.text_field :major ,:id => "field_major", :value => " " %>
+        <div class="col l12 white-text">
+            <%= f.text_field :school, :id => "field_school",  :placeholder => "college/university" %>
+        </div> 
+        <div class="col l6 white-text"> 
+            <%= f.text_field :major ,:id => "field_major",  :placeholder => "major" %>
+        </div> 
+        
+         <div class="col l4 white-text"> 
+            <%= f.text_field :gradyear ,:id => "field_gradyear" , :placeholder => "class year" %>
+           </div> 
+           
         </div>
         
         
@@ -101,10 +111,34 @@
 </div>
 </section>
 
+<section id="services_head">
+ <h5 style="margin-top: 4%;color:white"> HOW HELPFUL HAVE OTHER CAREER RESOURCES BEEN? </h5>
+    <div id="services_section" > 
+    
+    <%= f.hidden_field :career_services, :id => "field_career_services" %> 
+    
+    <h6> CAREER SERVICES ? </h6>
+    <div id="helpful" class="services_button white-text btn waves-effect waves-light"> Helpful! </div>
+    <div id="unhelpful" class="services_button white-text btn waves-effect waves-light"> Waste of time </div>
+    <div id="none" class="services_button white-text btn waves-effect waves-light"> Never been </div>
+    
+    
+    <%= f.hidden_field :linkedin, :id => "field_linkedin" %> 
+    
+    <h6> LINKEDIN? </h6>
+    <div id="helpful" class="linkedin_button white-text btn waves-effect waves-light"> Helpful! </div>
+    <div id="unhelpful" class="linkedin_button white-text btn waves-effect waves-light"> Wast of time </div>
+    <div id="none" class="linkedin_button white-text btn waves-effect waves-light"> Don't have one</div>
+
+
+
+   </div>
+   </section>
+
     
 <!-- prep section -->
 <section id="prep_head">
- <h5 style="margin-top: 4%;color:white"> WHAT ARE YOU STRUGGLING WITH? </h5>
+ <h5 style="margin-top: 4%;color:white"> WHAT IS YOUR LARGEST CAREER STRUGGLE RIGHT NOW? </h5>
     <div id="prep_section" > 
     
     <%= f.hidden_field :prep, :id => "field_prep" %> 
@@ -130,8 +164,14 @@
 
 
 <script>
-//on load, hide industry descriptions
-
+//don't submit form on enter
+$('form').on('keyup keypress', function(e) {
+  var keyCode = e.keyCode || e.which;
+  if (keyCode === 13) { 
+    e.preventDefault();
+    return false;
+  }
+});
   
 //on hover, show industry descriptions
  $('.form_pic').hover(function(){
@@ -175,7 +215,7 @@ $('.form_pic').mouseout(function(){
         }); 
         
         $(this).siblings().css({
-            'border': '4px solid white'
+            'border': 'none'
             }); 
             
         $('html,body').animate({
@@ -197,7 +237,7 @@ $('.form_pic').mouseout(function(){
         }); 
        
         $(this).siblings().css({
-            'border': '4px solid white'
+            'border': 'none'
             }); 
         $('html,body').animate({
             scrollTop: $("#grad_section").offset().top},
@@ -213,7 +253,7 @@ $('.form_pic').mouseout(function(){
             var idval = $(this).attr("id");
             console.log(idval);
             
-            $("#field_grad").val(idval + " School");
+            $("#field_grad").val(idval);
             
             $(this).css({
             'border': '4px solid yellow'
@@ -228,11 +268,39 @@ $('.form_pic').mouseout(function(){
 //Major & Class 
  $('#submit_major').click(function(){
         $('html,body').animate({
-            scrollTop: $("#prep_head").offset().top},
+            scrollTop: $("#services_head").offset().top},
             'slow');
         }); 
 
+// career services * linkedin
+ $('.services_button').click(function(){
+            var idval = $(this).attr("id");
+            console.log(idval);
+            
+            $("#field_career_services").val(idval);
+            
+            $(this).css({
+            'border': '4px solid yellow'
+            }); 
+        }); 
         
+ $('.linkedin_button').click(function(){
+            var idval = $(this).attr("id");
+            console.log(idval);
+            
+            $("#field_linkedin").val(idval);
+            
+            $(this).css({
+            'border': '4px solid yellow'
+            }); 
+            
+             $('html,body').animate({
+            scrollTop: $("#prep_head").offset().top},
+            'slow');
+        }); 
+        
+        
+       
         
 // SUBMIT FORM AFTER CHOOSING PREP 
      $('.prep_button').click(function(){

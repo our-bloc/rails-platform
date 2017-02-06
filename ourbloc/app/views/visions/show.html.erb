@@ -67,23 +67,25 @@
 
 <% if current_user.sign_in_count == 1 %> 
 <div class="welcome_message" > 
-  <h5> Hey, <%= @user.name.split(' ')[0] %>! </h5> 
+  <h5> Hey <%= @user.name.split(' ')[0] %>, </h5> 
   <p> 
-  Thanks for signing up for your first opportunity playlist! Below you will find <span class="highlight"> 10 curated opportunities 
-  and tips</span> that we think will help you land a dope opportunity this summer. We are huge believers in the power of seeing to be it, so we are also
-  adding in <span class="highlight"> some motivation in the form of a spotlight on a powerful figure from black history </span> who we think embodies your work style . 
-  </p> 
+  Thanks for signing up for your first opportunity playlist! </p>
   
-  <p> 
-  If you love your recommendations, you can go ahead and <span class="highlight">fave any opportunities that you like </span> and they will save to your profile. 
-  If you don't, you can retake the quiz anytime in the side menu and can also drop us some feedback. </p>
+  <p>
+  Below you'll find <span class="highlight"> 10 curated opportunities 
+  and 5 tips and some motivation</span> that we think will help you land a dope opportunity this summer. 
+  </p>
+
+  
+  <p> This is the pilot version of the app, but you gain free access to a PRO account when we officially launch (including the ability to save posts, filter jobs by location, 
+  message other users who can plug you AND apply directly to top employers) by bringing two friends to the community (more info at the bottom of your playlist).
+  
+  You can retake your quiz anytime by head over to the menu, and we will update with fresh opportunities every week. </p>
   
   <p> Enjoy! </p>
   
   <p>Peace & love, Bloc Team</p>
   
-  <p> PS.   If you are interested in more opportunities & tips, you can <span class="highlight">easily upgrade your friend by sharing your personal  <%= link_to "referral link", root_path+ @user.profileurl  %> with two friends  </span>.
-
   </p>
   
   <div class="white-text btn waves-effect waves-light" id="hide_welcome"> Got it! </div>
@@ -102,7 +104,7 @@
           <h6><%= @vision.firstjob.capitalize %></h6>
           <br> 
           <h5> building with ...</h5>
-          <h6>The <%= @vision.industry %></h6>
+          <h6>The <%= @vision.industry %> </h6>
           <br> 
           <h5> seeing it to be it... </h5>
           <%= render "visions/partials/influencers" %> 
@@ -111,7 +113,7 @@
       </div>
     <div class="col l6 s3 "> 
     <% if @vision.industry == "Griots" %> 
-      <img style="width: 100%" src="http://www.newyorker.com/wp-content/uploads/2014/08/Cole-James-Baldwin-Stranger-In-The-Village-690.jpg">
+      <img style="width: 100%" src="https://images.pexels.com/photos/176103/pexels-photo-176103.jpeg?w=940&h=650&auto=compress&cs=tinysrgb">
     <% elsif @vision.industry =="Artists" %> 
       <img style="width: 100%" src="https://images.pexels.com/photos/3104/black-and-white-music-headphones-life.jpg?h=350&auto=compress">
     <% elsif @vision.industry =="Artists" %> 
@@ -121,13 +123,13 @@
     <% elsif @vision.industry =="Entrepreneurs" %> 
       <img style="width: 100%" src="https://images.pexels.com/photos/35032/pexels-photo.jpg?w=940&h=650&auto=compress&cs=tinysrgb">
     <% elsif @vision.industry =="Scientists" %> 
-      <img style="width: 100%" src="http://thumbs.media.smithsonianmag.com//filer/bc/d3/bcd3d9a3-c321-485a-85b6-839b7fa10241/melbaroy.jpg__800x600_q85_crop_subject_location-1310,768.jpg">
+      <img style="width: 100%" src="https://images.pexels.com/photos/167682/pexels-photo-167682.jpeg?h=350&auto=compress&cs=tinysrgb">
      <% elsif @vision.industry =="Advocates" %> 
       <img style="width: 100%" src="http://www.radiodiaries.org/wp-content/uploads/Shirley-Chisholm_001_L.jpg">
     <% elsif @vision.industry =="Educators" %> 
-      <img style="width: 100%" src="https://images.pexels.com/photos/7098/space-desk-laptop-notebook.jpg?w=940&h=650&auto=compress&cs=tinysrgb">
+      <img style="width: 100%" src="https://images.pexels.com/photos/247839/pexels-photo-247839.jpeg?w=940&h=650&auto=compress&cs=tinysrgb">
     <% elsif @vision.industry =="Activists" %> 
-      <img style="width: 100%" src="http://msumun.org/wp-content/uploads/2016/12/freedom-to-vote.jpg">
+      <img style="width: 100%" src="https://action.aclu.org/sites/default/files/imce_images/aclu-action/act15-blmsurveillance-500x280-rel1.jpg">
     <% elsif @vision.industry =="Techies" %> 
       <img style="width: 100%" src="https://images.pexels.com/photos/30964/pexels-photo-30964.png?w=940&h=650&auto=compress&cs=tinysrgb">
     
@@ -156,20 +158,55 @@
     </div>
 </div>
   
- 
+<div class="open_referral_modal"> <h2 style="left:30%; position: absolute; width: 40%; font-family: Montserrat; padding: 1%; border: 2px solid black "> UPGRADE TO PRO </h2></div>
+
+<div class="referral_modal">
+   
+    <div class="modal_card card horizontal">
+      <div class=" card-image">
+        <img src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/blackwomen_orig.jpg">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <h4> Upgrade your account to PRO status by bringing 2 friends into the community.</h4>
+          
+          <h5 class="teal-text"> PRO Level Perks </h5>
+          <p></p>
+          <h6> Save Your Favorite Jobs & Tips </h6>
+          <h6> Submit your resume to Bloc partner employers </h6>
+          <h6> Connect with Bloc users who can plug you with their former employers</h6>
+      
+        </div>
+        <div class="card-content teal-text">
+          <h6><%= link_to "LINK TO YOUR SHARE PAGE jointhebloc.com/" + @user.profileurl , root_path + @user.profileurl , class: "teal-text" %> </h6>
+        </div>
+      </div>
+    </div>
+   
+</div>
 
     
-<div>
-    <div class="feedback col s12" style="padding: 5%">
-      <%= render "visions/partials/feedback" %>
-    </div>
-  </div>
+
 </body>
 <style>
   html, body{
     width: 100%;
     height: 100%;
     font-family: Work Sans;
+  }
+  .referral_modal {
+    position: absolute;
+    width: 100%;
+    height: 200%;
+    background-color: black;
+    opacity: .6;
+  }
+  
+  .modal_card {
+    position:absolute;
+    width: 86%;
+    margin: 15% 7%;
+    font-family: Montserrat;
   }
   a:hover{
     background-color: inherit;
@@ -203,6 +240,9 @@
     font-weight: 800;
   }
   
+  .open_referral_modal h2:hover {
+    background-color: grey;
+  }
   .feedback{
         box-shadow: 2px 2px 1px #888888;
   }
@@ -228,6 +268,20 @@
 <script>
   $("#hide_welcome").click(function(){
     $(".welcome_message").hide();
+  });
+  
+  $(".referral_modal").click(function(){
+    $(this).hide(1)
+  });
+  
+  $(document).ready(function(){
+    $(".referral_modal").hide();
+     $(".open_referral_modal").click(function(){
+           $(".referral_modal").show(100);
+            $('html,body').animate({
+            scrollTop: $(".referral_modal").offset().top},
+            'slow');
+     });
   });
 </script>
 

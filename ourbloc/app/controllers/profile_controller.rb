@@ -4,14 +4,11 @@ class ProfileController < ApplicationController
     def index
         @user = current_user
         @vision = Vision.find_by_user_id(@user.id)
-        @users_industry = User.where(:industry => @vision.industry)
-        @users_major = User.where(:industry => @user.major)
-        @users_school = User.where(:industry => @user.school)
-        @users_gradyear = User.where(:industry => @user.gradyear)
+        
+     
         @users_all = User.all
     
          #loads influencer text & image
-        @influencers= Influencer.where(:industry => @vision.industry).where(:style => @vision.style).limit(1)
     end
 
     def myprofile 

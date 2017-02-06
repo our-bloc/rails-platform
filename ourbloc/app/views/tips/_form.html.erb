@@ -19,8 +19,35 @@
     <%= f.label :link %>
     <%= f.text_field :link, class:"teal-text" %>
     </div>
-  <% end %>
 
+  
+<div class ="input-field"> 
+    <%= f.label "Grad School Related" %>
+    <%= f.hidden_field :grad , :id =>"field_tipgrad" %>
+
+  <div class="grad_button white-text btn waves-effect waves-light" id="None"> Nope </div>
+    <div class="tip_grad white-text btn waves-effect waves-light" id="Maybe"> Maybe </div>
+    <div class="tip_grad white-text btn waves-effect waves-light" id="Master's Program"> Masters Program </div>
+    <div class="tip_grad white-text btn waves-effect waves-light" id="PhD Program"> PhD Program </div>
+    <div class="tip_grad white-text btn waves-effect waves-light" id="Law School"> Med School </div>
+    <div class="tip_grad white-text btn waves-effect waves-light" id="Med School"> Law School </div>
+    <div class="tip_grad white-text btn waves-effect waves-light" id="Business School"> Business School </div>
+</div>
+
+<div class ="input-field"> 
+    <%= f.label "Tip Category" %>
+    <%= f.hidden_field :prep , :id =>"field_tipprep" %>
+
+ <div id="need_resume" class="tip_prep white-text btn waves-effect waves-light"> Starting a resume </div>
+    <div id="salary_negotiation" class="tip_prep white-text btn waves-effect waves-light"> Nailing my interviews </div>
+    <div id="revise_resume" class="tip_prep white-text btn waves-effect waves-light"> Getting my resume together </div>
+    <div id="need_connections" class="tip_prep white-text btn waves-effect waves-light"> Hearing back on applications</div>
+    <div id="need_jobs" class="tip_prep white-text btn waves-effect waves-light"> Finding jobs I care about</div>
+    <div id="cover_letters" class="tip_prep white-text btn waves-effect waves-light"> Cover letters...sigh </div>
+    <div id="personal_statements" class="tip_prep white-text btn waves-effect waves-light"> Writing personal statements </div>
+    <div id="salary_negotiation" class="tip_prep white-text btn waves-effect waves-light"> Negotiating my salary </div>
+  <% end %>
+  
   <%= f.actions do %>
     <%= f.action :submit, :as => :input %>
   <% end %>
@@ -36,3 +63,23 @@
   color: teal;
 }
 </style>
+
+<script>
+  $('.tip_grad').click(function(){
+      var idval = $(this).attr("id");
+      console.log(idval);
+          
+      $('#field_tipgrad').val(idval);
+            
+  });
+  
+    $('.tip_prep').click(function(){
+      var idval = $(this).attr("id");
+      console.log(idval);
+          
+      $('#field_tipprep').val(idval);
+            
+  });
+
+  
+</script>

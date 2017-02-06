@@ -29,14 +29,8 @@
                   <p><%= job.company %></p>
                   <p class="grey-text"><%= job.snippet%></p>
                    <p><%= job.city %>, <%= job.state %>| <%= job.date.to_s.split(" ")[0] %></p>
-                  <i id="save" class="unsaved fa fa-heart-o"></i> 
-    
-                  <!-- save button --> 
-                      <%= form_tag do %>
-                          <%= hidden_field_tag(:saved, true)  %>
-                      <% end %> 
-            
-            <%= link_to"more", job.url, :class => "white-text btn waves-effect waves-light" %> 
+
+            <%= link_to "MORE", job.url, :class => "indeed_more grey-text" %> 
 
                 
                </div>
@@ -54,18 +48,13 @@
                 <p class="grey-text"><%= job.snippet%></p>
                 <p><%= job.city %>, <%= job.state %>| <%= job.date.to_s.split(" ")[0] %></p>
 
-                <i id="save" class="unsaved fa fa-heart-o"></i>
-
-
-              
-                  <%= form_tag do %>
-                      <%= hidden_field_tag(:saved, true) %>
-                  <% end %> 
                </div>
               </div>
           <% end %>
         
         
+      <% if current_user.sign_in_count == 150 %> 
+
         <div id="second_indeed_search"> 
              <%= form_tag(vision_path , method: "get", remote: true ) do  %>  
              
@@ -76,7 +65,7 @@
                 </div>
                 <% end %> 
             </div> 
-        
+        <% end %>
         
         
         
@@ -85,7 +74,17 @@
         
           <style> 
           
-          
+          .indeed_more{
+              font-family: Montserrat;
+              border: 1px solid grey;
+              margin: 1% 1% 1% 80%;
+              padding: 1%;
+              
+          }
+          .indeed_more:hover{
+              background-color: grey;
+              color:black;
+          }
           a {
               line-height: 1em;
           }

@@ -1,34 +1,15 @@
 <h5> User Profiles </h5>
-<% if @user_industry != nil %> 
-<% @user_industry.each do |user| %>
-            <div class="card horizontal white" style="width:100%">
-                <!--
-                <div class="card-image">
-                    <img src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/coverpic_orig.jpg">
-                  </div> -->
-            <div class="card-content teal-text">
-            <%= image_tag user.picture %> 
-              <h5 class="indeed_show card-title" style="line-height: 1em"><%= user.name %></h5>
-              
-              <% if user.role == "company" %> 
-                  <h6><%= user.email %></h6>
-                <% end %> 
-                
-                <h6><%= user.major %> | <h6><%= user.gradyear %></h6></h6>
-             </div>
-          <% end %>
-<% end %> 
 
 
 <% @users_all.each do |user| %>     
     <div class="row">
-            <div class="card horizontal white" style="width:100%">
+            <div class="card horizontal white" style="width:50%">
                 <!--
                 <div class="card-image">
                     <img src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/coverpic_orig.jpg">
                   </div> -->
             <div class="card-content teal-text">
-           <h5 class="indeed_show card-title" style="line-height: 1em"><%= image_tag user.picture %> <%= user.name %> </h5> <h6><%= user.major %> |<%= user.gradyear %> |<%= user.school %> | <%= user.experience %></h6>
+           <h5 class="indeed_show card-title" style="line-height: 1em"><%= image_tag user.picture %> <%= link_to user.name, root_path + user.profileurl %> </h5> <h6><%= user.major %> <%= user.gradyear %> <%= user.school %>  <%= user.experience %></h6>
               
               
               <% if user.role == "company" %> 

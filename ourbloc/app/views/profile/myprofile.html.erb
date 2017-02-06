@@ -24,14 +24,15 @@
  </div> 
  
  <div class="share_bar">
-    <% if @referral_count == nil %> 
+    <% if @referral_count == nil || @referral_count == 0 %> 
     <p> You don't have any shares right now, but you can quickly upgrade to pro by sending your share link to 5 friends! </p>
     
-    <% elsif @referral_count < 5 %> 
-    <p> You're almost there! <%= 5 - @referral_count %>more shares and you'll have pro access</p>
+    <% elsif @referral_count < 2 %> 
+    <p> You're almost there! <%= 2 - @referral_count %>more shares and you'll have pro access</p>
     
     <%else %> 
-    <h6> You have <%= @referral_count %> shares and your account has been upgraded to pro! Check it out </h6>
+    <h6> You have <%= @referral_count %> shares and your account has been upgraded to pro!  </h6>
+    
     <% end %> 
 </div>
 </div>

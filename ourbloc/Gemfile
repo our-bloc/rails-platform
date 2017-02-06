@@ -8,16 +8,21 @@ gem 'sidekiq'
 
 gem 'resque'
 
+#storing in env variables
 gem 'figaro'
 
+#likes & recommender system
 gem 'recommendable'
+
+#tracking visits, analytics
+gem 'ahoy_matey'
 
 
 gem 'materialize-sass'
 
 gem 'formtastic', '~> 3.1', '>= 3.1.4'
 
-
+#indeed search wrapper
 gem 'indeed_api'
 
 

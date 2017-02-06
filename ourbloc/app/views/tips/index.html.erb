@@ -9,6 +9,8 @@
       <th>Body</th>
       <th>Industry</th>
       <th>Link</th>
+      <th>Prep</th>
+      <th>Grad</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,6 +22,8 @@
         <td><%= tip.body %></td>
         <td><%= tip.industry %></td>
         <td><%= tip.link %></td>
+        <td><%= tip.prep %></td>
+        <td><%= tip.grad %></td>
         <td><%= link_to 'Show', tip %></td>
         <td><%= link_to 'Edit', edit_tip_path(tip) %></td>
         <td><%= link_to 'Destroy', tip, method: :delete, data: { confirm: 'Are you sure?' } %></td>

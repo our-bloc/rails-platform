@@ -69,6 +69,6 @@ class TipsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def tip_params
-      params.require(:tip).permit(:title, :body, :industry, :link)
+      params.require(:tip).permit(:title, :body, :industry, :link, :prep)
     end
 end
