@@ -56,7 +56,7 @@
     <li id="menu_link"><a class="subheader">Recent Activity</a></li>
   </ul>
   <br> 
-   <a style="margin:2em 1em" href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="fa fa-bars fa-3x"></i></a>
+   <a style="" href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="fa fa-bars fa-5x"></i></a>
 
 
   
@@ -75,9 +75,11 @@
   </p>
 
   
-  <p> This is the pilot version of the app, but you gain free access to a PRO account when we officially launch (including the ability to save posts, filter jobs by location, 
-  message other users who can plug you AND apply directly to top employers) by bringing two friends to the community (more info at the bottom of your playlist).
-  
+  <p> This is the pilot version of the app, but you gain <span class="highlight"> free access to a PRO account when we officially launch</span> (including the ability to save posts, filter jobs by location, 
+  message other users who can plug you <span class="highlight">AND apply directly to top employers </span>) by bringing two friends to the community (more info at the bottom of your playlist).
+  </p> 
+
+  <p>
   You can retake your quiz anytime by head over to the menu, and we will update with fresh opportunities every week. </p>
   
   <p> Enjoy! </p>
@@ -119,7 +121,7 @@
     <% elsif @vision.industry =="CSuite" %> 
       <img style="width: 100%" src="https://images.pexels.com/photos/229/bow-tie-sunglasses-apple-iphone.jpg?w=940&h=650&auto=compress&cs=tinysrgb">
     <% elsif @vision.industry =="Entrepreneurs" %> 
-      <img style="width: 100%" src="https://images.pexels.com/photos/35032/pexels-photo.jpg?w=940&h=650&auto=compress&cs=tinysrgb">
+      <img style="width: 100%" src="https://images.pexels.com/photos/261577/pexels-photo-261577.jpeg?h=350&auto=compress&cs=tinysrgb">
     <% elsif @vision.industry =="Scientists" %> 
       <img style="width: 100%" src="https://images.pexels.com/photos/167682/pexels-photo-167682.jpeg?h=350&auto=compress&cs=tinysrgb">
      <% elsif @vision.industry =="Advocates" %> 
@@ -128,6 +130,8 @@
       <img style="width: 100%" src="https://images.pexels.com/photos/247839/pexels-photo-247839.jpeg?w=940&h=650&auto=compress&cs=tinysrgb">
     <% elsif @vision.industry =="Activists" %> 
       <img style="width: 100%" src="https://action.aclu.org/sites/default/files/imce_images/aclu-action/act15-blmsurveillance-500x280-rel1.jpg">
+    <% elsif @vision.industry =="Creatives" %> 
+      <img style="width: 100%" src="https://images.pexels.com/photos/3104/black-and-white-music-headphones-life.jpg?w=940&h=650&auto=compress&cs=tinysrgb">
     <% elsif @vision.industry =="Techies" %> 
       <img style="width: 100%" src="https://images.pexels.com/photos/30964/pexels-photo-30964.png?w=940&h=650&auto=compress&cs=tinysrgb">
     
@@ -192,7 +196,9 @@
     height: 100%;
     font-family: Work Sans;
   }
-
+  .button-collapse{
+    margin:2em 1em;
+  }
   .referral_modal {
     position: absolute;
     width: 100%;
@@ -291,6 +297,9 @@
       line-height: 1.1em;
       font-family: Lato;
     }
+    .highlight{
+      font-size: 1.1em;
+    }
     .playlist{
       padding: 10%;
     }
@@ -352,6 +361,7 @@
     font-size: 3em;
     line-height: 3em;
     margin: 5%;
+    height: 3.5em;
   }
   
   .circle{
@@ -368,7 +378,10 @@
   }
   
   .referral_modal{
-    width: 105%;
+    width: 115%;
+  }
+  .button-collapse{
+    padding: 2%;
   }
 }
 
@@ -395,7 +408,7 @@
   
    getPanelWidth = function() {
     var screenWidth = $(window).width();
-    panelSize = screenWidth > 500 ? Math.floor(screenWidth * 0.8) : Math.floor(screenWidth * 0.9);
+    panelSize = screenWidth > 400 ? Math.floor(screenWidth * 0.7) : Math.floor(screenWidth * 0.9);
     console.log(panelSize);
     return panelSize ;
 };
@@ -403,7 +416,8 @@
 $('.button-collapse').sideNav({
     menuWidth: getPanelWidth(), // Default is <240></240>
     edge: 'left', // Choose the horizontal origin
-    closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+    closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+    draggable: true,
 });
 
 $('.side-nav').click(function(){

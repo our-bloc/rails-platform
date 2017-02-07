@@ -48,7 +48,8 @@ class User < ApplicationRecord
         user.password = Devise.friendly_token[0,20]
         
         #creates users unique profile link
-        user.profileurl = auth.info.name.gsub(/\s+/, "")+rand(10..50).to_s
+        user.profileurl = auth.info.name.gsub(/\s+/, "").delete('.') + rand(10..50).to_s
+        
         
         #more details, user public profile
         user.gender = auth.extra.raw_info.gender

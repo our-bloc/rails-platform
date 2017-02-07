@@ -14,19 +14,24 @@
     <img class="form_pic" id="Activists" src ="http://www.ourbloc.co/uploads/2/4/0/1/24014742/3_orig.png" >
     <img class="form_pic" id="Advocates" src ="http://www.ourbloc.co/uploads/2/4/0/1/24014742/6_orig.png" >
     <img class="form_pic" id="Techies" src ="http://www.ourbloc.co/uploads/2/4/0/1/24014742/4_1_orig.png" >
+    <img class="form_pic" id="Entrepreneurs" src ="http://www.ourbloc.co/uploads/2/4/0/1/24014742/2_5_orig.png" >
+    <img class="form_pic" id="Creatives" src ="http://www.ourbloc.co/uploads/2/4/0/1/24014742/the-griots-1_1_orig.png" >
     <img class="form_pic" id="Scientists" src ="http://www.ourbloc.co/uploads/2/4/0/1/24014742/7_orig.png" >
     <img class="form_pic" id="CSuite" src ="http://www.ourbloc.co/uploads/2/4/0/1/24014742/5_orig.png">
     <img class="form_pic" id="Educators" src ="http://www.ourbloc.co/uploads/2/4/0/1/24014742/2_4_orig.png" >
     <img class="form_pic" id="Griots"  src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/1_7_orig.png" > 
     
      <div> 
-      <div id="Griots_description" class="industry_description"> authors, poets, journalists, thought influencers, playwrights </div>
+      <div id="Griots_description" class="industry_description"> authors, poets, journalists, thought influencers, playwrights, bloggers </div>
       <div id="Advocates_description" class="industry_description"> legal professionals, politicians, advocacy professionals </div>
       <div id="Techies_description" class="industry_description"> software & hardware engineers, IT, data scientists, product managers </div>
       <div id="Scientists_description" class="industry_description"> doctors, research scientists, mathmeticians, medical professionals </div>
-      <div id="CSuite_description" class="industry_description"> CEOs, business VPs, financial analysts, consultants  </div>
+      <div id="CSuite_description" class="industry_description"> CEOs, business VPs, financial analysts, consultants, marketing leaders  </div>
       <div id="Educators_description" class="industry_description"> teachers, professors, education reformers </div>
       <div id="Activists_description" class="industry_description"> community organizers, social entrepreneurs </div>
+      <div id="Creatives_description" class="industry_description"> artists, creatives, entertainers </div>
+
+
     
 
     </div>
@@ -41,7 +46,7 @@
 <div id="dreamjob">
 <div id="dream_section">
     <h5 style="color:white; opacity:1; z-index: 2; margin-top: -20%"> WHAT JOB ROLE ARE YOU LOOKING FOR? </h5>  
-    <%= f.text_field :firstjob ,:id => "field_firstjob", :placeholder => "summer intern? research fellow? entry level?" %>
+    <%= f.text_field :firstjob ,:id => "field_firstjob", :placeholder => "intern? fellow? entry level?" %>
    
     <div id="submit_firstjob" class="white-text btn waves-effect waves-light"> NEXT </div> 
 
@@ -354,7 +359,8 @@ form{
 }
 .form_pic{
     background-color: white;
-    width: 13%;
+    width: 15%;
+    margin: .2%;
     border: 4px solid white;
 }
 
@@ -389,8 +395,7 @@ form{
 }
 
 .industry{
-  padding-top: 5%;
-  padding-bottom: 10%;
+  padding: 0% 20% 0% 0%;
     width: 100%;
     left: 100%;
     
@@ -521,8 +526,9 @@ a:hover {
         margin: 2%;
     }
     .form_pic{
-        width: 39%;
+        width: 29%;
         margin: 1%;
+        border: 5px solid white;
     }
     #submit_firstjob{
         width: 100%;
