@@ -1,16 +1,14 @@
 
 <!-- THREE OPPORTUNITIES --> 
      <% @tips.each do |tip| %>
-    <% if tip.prep == @vision.prep || tip.grad == @vision.gradschool %> 
-        
-    <div class="card horizontal" style="width:100%">
+
+    <div class="card horizontal" style="">
             <div class="card-content teal-text">
               <h6 class=" teal-text" style="font-size: 1.8em"><%= tip.title %> </h6>
               <p style="color:grey" > <%= tip.body %></p>
               <p> <%= link_to tip.link %></p>
           </div>
           </div> 
-          <% end %>
       <% end %>
  
 

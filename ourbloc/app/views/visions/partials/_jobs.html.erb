@@ -1,6 +1,6 @@
 
      <% @jobs.each do |job| %>
-            <div class="card horizontal white" style="width:100%">
+            <div class="card horizontal white" style="">
                 <!--
                 <div class="card-image">
                     <img src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/coverpic_orig.jpg">
@@ -23,7 +23,7 @@
           
     
      <% @indeed_results.each do |job| %>
-            <div class="card horizontal white" style="width:100%">
+            <div class="card horizontal white" style="">
             <div class="card-content teal-text">
                 <span  style="font-size: 2em"><%= job.job_title.downcase %></span>
                   <p><%= job.company %></p>
@@ -40,7 +40,7 @@
          
         
         <% @second_indeed_results.each do |job| %>
-            <div class="card horizontal white" style="width:100%">
+            <div class="card horizontal white" style="">
              
             <div class="card-content teal-text">
               <span style="font-size: 2em"><%= job.job_title %></span>
@@ -85,6 +85,12 @@
               background-color: grey;
               color:black;
           }
+          .card  {
+              width: 100%;
+          }
+          .card-content{
+              width: 100%;
+          }
           a {
               line-height: 1em;
           }
@@ -100,6 +106,11 @@
                 height: 10%;
                 padding: 1%;
 
+              }
+              .card{
+                  width: 140%;
+                  margin-left: -10%;
+                  padding: 5%;
               }
           }
           

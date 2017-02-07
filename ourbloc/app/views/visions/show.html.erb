@@ -143,15 +143,15 @@
  
     
     
-<div class="row" style="padding-left: 10%">
-   <div class="col s12 l5 pull-s1" style="padding: 5%">
+<div class="playlist row" style="">
+   <div class="render_view col s12 l5 pull-s1" style="">
        <h5> opportunities </h5>
         <%= render "visions/partials/jobs" %>
     </div>
 
     
-    <div class="col s12 l6 pull-s1" style="padding: 5%">
-      <h5> pro tips </h5>
+    <div class="render_view col s12 l6 pull-s1" style="">
+      <h5 id="tips_header"> pro tips </h5>
       <%= render "visions/partials/resources" %>
     </div>
 </div>
@@ -192,10 +192,7 @@
     height: 100%;
     font-family: Work Sans;
   }
-  #profile_pic{
-    width:10%; 
-    padding:.2em;
-  }
+
   .referral_modal {
     position: absolute;
     width: 100%;
@@ -203,12 +200,18 @@
     background-color: black;
     opacity: .6;
   }
-  
+  .render_view{
+    padding: 5%;
+  }
   .modal_card {
     position:absolute;
     width: 86%;
     margin: 15% 7%;
     font-family: Montserrat;
+  }
+  
+  .playlist {
+    padding-left: 10%
   }
   a:hover{
     background-color: inherit;
@@ -255,6 +258,21 @@
     2px solid black;
   }
   
+   .userView span{
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 1.5em;
+    line-height: 3.5em;
+  }
+  
+    .circle{
+    margin: 20% 45% 2% 45%;
+    width: 30%;
+  }
+  
+  li a {
+    text-align: center;
+  }
   
   @media only screen and (max-device-width: 480px){
     html{
@@ -270,6 +288,13 @@
       line-height: 1.1em;
       font-family: Lato;
     }
+    .playlist{
+      padding: 10%;
+    }
+    .render_view{
+      padding: 0%;
+      margin: -5% ;
+;    }
     
     .open_referral_modal h2{
     border: 8px solid black;
@@ -315,6 +340,10 @@
   .circle{
     margin: 20% 5%;
   }
+  
+  #tips_header{
+    margin-top: 20%;
+  }
 }
 
 </style>
@@ -340,14 +369,14 @@
   
    getPanelWidth = function() {
     var screenWidth = $(window).width();
-    panelSize = screenWidth > '991' ? Math.floor(screenWidth * 0.5) : Math.floor(screenWidth * 0.9);
+    panelSize = screenWidth > 500 ? Math.floor(screenWidth * 0.8) : Math.floor(screenWidth * 0.9);
     console.log(panelSize);
-    return panelSize+100;
+    return panelSize ;
 };
 
 $('.button-collapse').sideNav({
-    menuWidth: getPanelWidth(), // Default is 240
-    edge: 'right', // Choose the horizontal origin
+    menuWidth: getPanelWidth(), // Default is <240></240>
+    edge: 'left', // Choose the horizontal origin
     closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
 });
 
