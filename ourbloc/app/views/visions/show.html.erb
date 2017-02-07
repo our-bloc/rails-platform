@@ -95,8 +95,8 @@
 <!-- SIDE BAR --> 
 <div class="row"> 
 <!-- Personality Quiz Results --> 
-      <div class="col l4 s9 push-s1 push-l1">
-        <div class="card white" style="width:100%; margin-top:5%">
+      <div class="col l4 s12 push-s1 push-l1">
+        <div class="banner_text card white" style="">
         <div class="card-content grey-text">
           <h5> achieving the dream... </h5>
           <h6><%= @vision.firstjob.capitalize %></h6>
@@ -109,7 +109,7 @@
         </div>
         </div> 
       </div>
-    <div class="col l6 s3 "> 
+    <div class="banner col l6 s5 push-s7 "> 
     <% if @vision.industry == "Griots" %> 
       <img style="width: 100%" src="https://images.pexels.com/photos/176103/pexels-photo-176103.jpeg?w=940&h=650&auto=compress&cs=tinysrgb">
     <% elsif @vision.industry =="Artists" %> 
@@ -149,7 +149,7 @@
         <%= render "visions/partials/jobs" %>
     </div>
 
-    
+
     <div class="render_view col s12 l6 pull-s1" style="">
       <h5 id="tips_header"> pro tips </h5>
       <%= render "visions/partials/resources" %>
@@ -202,6 +202,9 @@
   }
   .render_view{
     padding: 5%;
+  }
+  .divider{
+    display:none;
   }
   .modal_card {
     position:absolute;
@@ -295,6 +298,13 @@
       padding: 0%;
       margin: -5% ;
 ;    }
+
+    .divider{
+        display: block;
+        width: 80%;
+        border: 1px solid grey;
+        margin: 5% 0% 10% 10%;
+      }
     
     .open_referral_modal h2{
     border: 8px solid black;
@@ -326,6 +336,13 @@
     margin-left: 40%;
   }
   
+  .banner{
+    display: none;
+    margin: -50% 0% 0% 0%;
+    width: 50%;
+    
+  }
+  
   .card-image{
     display: none;
   }
@@ -343,6 +360,15 @@
   
   #tips_header{
     margin-top: 20%;
+  }
+  
+  .banner_text{
+    margin-left: -5%;
+    width:92%;
+  }
+  
+  .referral_modal{
+    width: 105%;
   }
 }
 

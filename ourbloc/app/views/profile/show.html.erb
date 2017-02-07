@@ -12,7 +12,7 @@
 
     <div class="col s12 l6"> 
         <% if @vision != nil %>
-            <h5 style="margin-top: 22%"> seeing it to be it... </h5>
+            <h5 style="margin-top: 10%"> seeing it to be it... </h5>
             <div style="height: 2em">
               <% @influencers.each do |influencer| %>
                 <h6><%= influencer.name %></h6>
@@ -23,7 +23,7 @@
             <div style="height: 2em"> </div>
             <% end %>
     
-        <h6 class="teal-text" id="share_code">share code: <%= link_to "https://blocview-aminabloc.c9users.io/"+ @user.profileurl, "https://blocview-aminabloc.c9users.io/"+ @user.profileurl  %> </h6>
+        <h6 class="teal-text" id="share_code">share code: <%= link_to "jointhebloc.com/"+ @user.profileurl, "https://blocview-aminabloc.c9users.io/"+ @user.profileurl  %> </h6>
      </div>
  </div> 
  
@@ -33,7 +33,7 @@
     <p> <%= link_to "back to my profile", myprofile_path, class: "white-text" %> </p>
 
     <% else%> 
-    <p> <%= link_to "Create your account and get your own custom career playlist!", user_facebook_omniauth_authorize_path(:referred_by => @user.profileurl), class:"white-text" %> </p>
+    <p> <%= link_to "Click to create your account and get your own custom career playlist!", user_facebook_omniauth_authorize_path, class:"white-text" %> </p>
     
     <% end %> 
 </div>
@@ -147,11 +147,12 @@
     
     .share_bar{
       background-color:teal;
+      text-align: center;
       font-family: Montserrat;
-      font-size: 3em;
+      font-size: 2em;
       line-height: 2em;
       color: white;
-      height: 30%;
+      height: 20%;
       font-weight: strong;
       width: 100%;
       position:absolute;
