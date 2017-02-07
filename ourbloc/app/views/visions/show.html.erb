@@ -37,28 +37,26 @@
     
     <li><div class="userView">
       <div class="background">
-        <img style="width:10%; padding:.2em;" src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/9544735.png?43">
+        <img  style="width:10%" src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/9544735.png?43">
       </div>
-       <img class="circle" src="<%= @user.picture %>" >
+       <img id="profile_pic" class="circle" src="<%= @user.picture %>" >
        <span class="username black-text name"> <%= @user.name %> </span>
       <span class="black-text email"><%= @user.email %></span>
-      <a href="#!email"><span class="black-text email"><%= @user.school %></span></a>
+      <span class="black-text email"><%= @user.school %></span>
       <span class="black-text email"><%= @user.gradyear %> | <%= @user.major %> </span></a>
 
     </div></li>
     
-    <li><a href="#!"><i class="fa fa-cloud"></i>Upload Resume</a></li>
-    <li><%=link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
-    <li><%=link_to 'Retake Quiz', edit_vision_path(@vision) %></li>
-    <li><%=link_to 'Edit My Profile ', edit_user_registration_path %></li>
-    <li><%=link_to 'View Public Profile ', root_path+ @user.profileurl %></li>
+    <li id="menu_link"><%=link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+    <li id="menu_link"><%=link_to 'Retake Quiz', edit_vision_path(@vision) %></li>
+    <li id="menu_link"><%=link_to 'View Public Profile ', root_path+ @user.profileurl %></li>
 
 
     <li><div class="divider"></div></li>
-    <li><a class="subheader">Recent Activity</a></li>
+    <li id="menu_link"><a class="subheader">Recent Activity</a></li>
   </ul>
   <br> 
-   <a style="margin:2em 1em" href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars fa-3x"></i></a>
+   <a style="margin:2em 1em" href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="fa fa-bars fa-3x"></i></a>
 
 
   
@@ -125,7 +123,7 @@
     <% elsif @vision.industry =="Scientists" %> 
       <img style="width: 100%" src="https://images.pexels.com/photos/167682/pexels-photo-167682.jpeg?h=350&auto=compress&cs=tinysrgb">
      <% elsif @vision.industry =="Advocates" %> 
-      <img style="width: 100%" src="http://www.radiodiaries.org/wp-content/uploads/Shirley-Chisholm_001_L.jpg">
+      <img style="width: 100%" src="https://images.pexels.com/photos/203218/pexels-photo-203218.jpeg?h=350&auto=compress&cs=tinysrgb">
     <% elsif @vision.industry =="Educators" %> 
       <img style="width: 100%" src="https://images.pexels.com/photos/247839/pexels-photo-247839.jpeg?w=940&h=650&auto=compress&cs=tinysrgb">
     <% elsif @vision.industry =="Activists" %> 
@@ -158,7 +156,7 @@
     </div>
 </div>
   
-<div class="open_referral_modal"> <h2 style="left:30%; position: absolute; width: 40%; font-family: Montserrat; padding: 1%; border: 2px solid black "> UPGRADE TO PRO </h2></div>
+<div class="open_referral_modal"> <h2 style=""> UPGRADE TO PRO </h2></div>
 
 <div class="referral_modal">
    
@@ -168,13 +166,13 @@
       </div>
       <div class="card-stacked">
         <div class="card-content">
-          <h4> Upgrade your account to PRO status by bringing 2 friends into the community.</h4>
+          <h4> Upgrade your account to PRO by bringing 2 friends into the community.</h4>
           
-          <h5 class="teal-text"> PRO Level Perks </h5>
+          <h5 class="teal-text"> PRO LEVEL PERKS </h5>
           <p></p>
           <h6> Save Your Favorite Jobs & Tips </h6>
-          <h6> Submit your resume to Bloc partner employers </h6>
-          <h6> Connect with Bloc users who can plug you with their former employers</h6>
+          <h6> Apply directly to Bloc partner employers </h6>
+          <h6> Message Bloc users who can plug you with their former employers</h6>
       
         </div>
         <div class="card-content teal-text">
@@ -193,6 +191,10 @@
     width: 100%;
     height: 100%;
     font-family: Work Sans;
+  }
+  #profile_pic{
+    width:10%; 
+    padding:.2em;
   }
   .referral_modal {
     position: absolute;
@@ -243,14 +245,21 @@
   .open_referral_modal h2:hover {
     background-color: grey;
   }
-  .feedback{
-        box-shadow: 2px 2px 1px #888888;
+  
+  .open_referral_modal h2 {
+    left:30%; 
+    position: relative; 
+    width: 40%; 
+    font-family: Montserrat; 
+    padding: 1%; border: 
+    2px solid black;
   }
+  
   
   @media only screen and (max-device-width: 480px){
     html{
         font-size: 2em;
-        
+        width:100%;
     }
     
     div {
@@ -261,6 +270,51 @@
       line-height: 1.1em;
       font-family: Lato;
     }
+    
+    .open_referral_modal h2{
+    border: 8px solid black;
+    position: relative;
+    width: 80%;
+    font-size: 5em;
+    margin-left: -20%;
+    padding: 3%;
+  }
+  
+  .open_referral_modal{
+    margin: 10% 10% 30% 10%;
+  }
+  
+  .userView span{
+    text-align:center;
+    font-family: Montserrat;
+    margin: 5%;
+    font-size: 3em;
+    line-height: 3.5em;
+  }
+  .modal_card{
+    margin-top: 30%;
+  }
+
+  #profile_pic {
+    width:20%; 
+    height: 20%;
+    margin-left: 40%;
+  }
+  
+  .card-image{
+    display: none;
+  }
+   #menu_link a{
+    text-align: center;
+    font-family: Lato;
+    font-size: 3em;
+    line-height: 3em;
+    margin: 5%;
+  }
+  
+  .circle{
+    margin: 20% 5%;
+  }
 }
 
 </style>
@@ -283,6 +337,24 @@
             'slow');
      });
   });
+  
+   getPanelWidth = function() {
+    var screenWidth = $(window).width();
+    panelSize = screenWidth > '991' ? Math.floor(screenWidth * 0.5) : Math.floor(screenWidth * 0.9);
+    console.log(panelSize);
+    return panelSize+100;
+};
+
+$('.button-collapse').sideNav({
+    menuWidth: getPanelWidth(), // Default is 240
+    edge: 'right', // Choose the horizontal origin
+    closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+});
+
+$('.side-nav').click(function(){
+  $('.button-collapse').sideNav('hide');
+})
+        
 </script>
 
 

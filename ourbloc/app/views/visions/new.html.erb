@@ -64,10 +64,10 @@
 
 
 
-    <%= f.hidden_field :industry , :value => "default" %>
-    <%= f.hidden_field :firstjob, :value => "default" %>
-    <%= f.hidden_field :style , :value => "default" %>
-    <%= f.hidden_field :prep , :value => "default" %> 
+    <%= f.hidden_field :industry , :value => "" %>
+    <%= f.hidden_field :firstjob, :value => "" %>
+    <%= f.hidden_field :style , :value => "" %>
+    <%= f.hidden_field :prep , :value => "" %> 
     
     
       <%= f.submit 'get your playlist', :class => "new_vision" %>
@@ -161,7 +161,31 @@ core-bloc ul {
 #start_button:hover{
     background-color:grey;
 }
-  
+
+ @media only screen and (max-device-width: 480px){
+   html,body{
+     width: 100%;
+     height: 100%;
+   }
+   #core_head{
+     position:fixed;
+     top: 20%;
+     width: 90%;
+     margin: 10% 2%;
+     padding: 0%;
+   }
+   .new_vision{
+       position: absolute;
+      left: 9%;
+      top: 45%;
+      width: 80%;
+      height: 35%;
+      font-size: 2em;
+      color: teal;
+   }
+ }
+ 
+ 
   
   
   
