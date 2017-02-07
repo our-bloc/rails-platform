@@ -6,6 +6,9 @@ class ApplicationController < ActionController::Base
   class Channel < ActionCable::Channel::Base
   end
 
+  #track all visits with ahoy
+  
+
   protected
   
   BLOCS = %w[TheArts Business STEM/Tech ]
