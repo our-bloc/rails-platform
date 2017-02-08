@@ -4,7 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, 
   :trackable, :validatable, :omniauthable, :omniauth_providers => [:facebook]
 
-  recommends :tips, :jobs , :influencers
 
   #associations
   has_many :jobs

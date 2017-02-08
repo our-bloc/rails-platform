@@ -2,17 +2,12 @@ source 'http://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
-
-gem 'sidekiq'
-
-gem 'resque'
+gem 'rails', '~> 4.2.5'
 
 #storing in env variables
 gem 'figaro'
 
-#likes & recommender system
-gem 'recommendable'
+
 
 #tracking visits, analytics
 gem 'ahoy_matey'

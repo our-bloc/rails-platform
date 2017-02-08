@@ -19,25 +19,6 @@
 //= require materialize-sprockets
 //= require_tree .
 
-$(document).on('turbolinks:load', function() {
-  $(".progress").hide();
-  $('ul.tabs').tabs('select_tab', 'tab_id');
-  $('.scrollspy').scrollSpy();
-  // $('.modal').modal();
-});
-
-  $(".section-tabs").on("click", function() {
-  	var id = $(this).find("a").attr("href");
-  	console.log(id);
-  });
   
   ahoy.trackAll();
   	
-  	
-
-  	//Step 2: Remove class of "active" from each of the ".section-tabs"
-  	//Step 3: Add the class of "active" to "this"
-  	//Step 4: Hide all content sections below
-  	//Step 5: Show the appropriate content section based on its ID from above
-  });
-})
