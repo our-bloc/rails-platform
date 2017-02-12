@@ -1538,3 +1538,159 @@ I, [2017-02-10T14:20:47.690361 #12826]  INFO -- : [49401ae0-508f-43d0-bc5f-1210e
 I, [2017-02-10T14:20:47.699870 #12826]  INFO -- : [49401ae0-508f-43d0-bc5f-1210e81b395c] Processing by WelcomeController#home as HTML
 I, [2017-02-10T14:20:47.707870 #12826]  INFO -- : [49401ae0-508f-43d0-bc5f-1210e81b395c] Redirected to http://localhost/users/sign_up
 I, [2017-02-10T14:20:47.708531 #12826]  INFO -- : [49401ae0-508f-43d0-bc5f-1210e81b395c] Completed 302 Found in 8ms (ActiveRecord: 0.0ms)
+I, [2017-02-10T14:47:40.068140 #12826]  INFO -- : [45038789-4aa8-44d3-8ce7-ca7e68c8ffa9] Started GET "/" for 108.219.110.211 at 2017-02-10 14:47:40 -0500
+I, [2017-02-10T14:47:40.074517 #12826]  INFO -- : [45038789-4aa8-44d3-8ce7-ca7e68c8ffa9] Processing by WelcomeController#home as HTML
+D, [2017-02-10T14:47:40.084681 #12826] DEBUG -- : [45038789-4aa8-44d3-8ce7-ca7e68c8ffa9]   [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+I, [2017-02-10T14:47:40.086542 #12826]  INFO -- : [45038789-4aa8-44d3-8ce7-ca7e68c8ffa9] Redirected to http://www.jointhebloc.com/myprofile
+I, [2017-02-10T14:47:40.086896 #12826]  INFO -- : [45038789-4aa8-44d3-8ce7-ca7e68c8ffa9] Completed 302 Found in 12ms (ActiveRecord: 1.3ms)
+I, [2017-02-10T14:47:40.158422 #12824]  INFO -- : [266a7d74-4bae-44ce-8ee2-bca771223bde] Started GET "/myprofile" for 108.219.110.211 at 2017-02-10 14:47:40 -0500
+I, [2017-02-10T14:47:40.163428 #12824]  INFO -- : [266a7d74-4bae-44ce-8ee2-bca771223bde] Processing by ProfileController#myprofile as HTML
+D, [2017-02-10T14:47:40.170176 #12824] DEBUG -- : [266a7d74-4bae-44ce-8ee2-bca771223bde]   [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+D, [2017-02-10T14:47:40.172135 #12824] DEBUG -- : [266a7d74-4bae-44ce-8ee2-bca771223bde]   [1m[36mVision Load (0.4ms)[0m  [1m[34mSELECT  "visions".* FROM "visions" WHERE "visions"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+D, [2017-02-10T14:47:40.174665 #12824] DEBUG -- : [266a7d74-4bae-44ce-8ee2-bca771223bde]   [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+I, [2017-02-10T14:47:40.182436 #12824]  INFO -- : [266a7d74-4bae-44ce-8ee2-bca771223bde]   Rendering profile/myprofile.html.erb within layouts/application
+I, [2017-02-10T14:47:40.185674 #12824]  INFO -- : [266a7d74-4bae-44ce-8ee2-bca771223bde]   Rendered profile/myprofile.html.erb within layouts/application (3.0ms)
+I, [2017-02-10T14:47:40.187590 #12824]  INFO -- : [266a7d74-4bae-44ce-8ee2-bca771223bde] Completed 200 OK in 24ms (Views: 7.1ms | ActiveRecord: 3.9ms)
+I, [2017-02-10T14:47:50.083562 #12833]  INFO -- : [ba626b6c-9afb-4fed-903d-5ea266da6692] Started GET "/visions/4" for 108.219.110.211 at 2017-02-10 14:47:50 -0500
+I, [2017-02-10T14:47:50.094748 #12833]  INFO -- : [ba626b6c-9afb-4fed-903d-5ea266da6692] Processing by VisionsController#show as HTML
+I, [2017-02-10T14:47:50.094893 #12833]  INFO -- : [ba626b6c-9afb-4fed-903d-5ea266da6692]   Parameters: {"id"=>"4"}
+D, [2017-02-10T14:47:50.099212 #12833] DEBUG -- : [ba626b6c-9afb-4fed-903d-5ea266da6692]   [1m[36mVision Load (0.4ms)[0m  [1m[34mSELECT  "visions".* FROM "visions" WHERE "visions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+D, [2017-02-10T14:47:50.104439 #12833] DEBUG -- : [ba626b6c-9afb-4fed-903d-5ea266da6692]   [1m[36mVisit Load (1.0ms)[0m  [1m[34mSELECT  "visits".* FROM "visits" WHERE "visits"."visit_token" = $1 ORDER BY "visits"."id" ASC LIMIT $2[0m  [["visit_token", "a6686a5c-fed6-4e5a-971f-8326aac2baf5"], ["LIMIT", 1]]
+D, [2017-02-10T14:47:50.107594 #12833] DEBUG -- : [ba626b6c-9afb-4fed-903d-5ea266da6692]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+D, [2017-02-10T14:47:50.109531 #12833] DEBUG -- : [ba626b6c-9afb-4fed-903d-5ea266da6692]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+D, [2017-02-10T14:47:50.112965 #12833] DEBUG -- : [ba626b6c-9afb-4fed-903d-5ea266da6692]   [1m[36mVisit Load (0.3ms)[0m  [1m[34mSELECT  "visits".* FROM "visits" WHERE "visits"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+D, [2017-02-10T14:47:50.115929 #12833] DEBUG -- : [ba626b6c-9afb-4fed-903d-5ea266da6692]   [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "ahoy_events" ("visit_id", "user_id", "name", "properties", "time") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["visit_id", 10], ["user_id", 1], ["name", "Viewed Vision"], ["properties", "{\"title\":\"Vision viewed\"}"], ["time", 2017-02-10 19:47:50 UTC]]
+D, [2017-02-10T14:47:50.129590 #12833] DEBUG -- : [ba626b6c-9afb-4fed-903d-5ea266da6692]   [1m[35m (13.2ms)[0m  [1m[35mCOMMIT[0m
+I, [2017-02-10T14:47:50.131275 #12833]  INFO -- : [ba626b6c-9afb-4fed-903d-5ea266da6692] Completed 500 Internal Server Error in 36ms (ActiveRecord: 16.2ms)
+F, [2017-02-10T14:47:50.132701 #12833] FATAL -- : [ba626b6c-9afb-4fed-903d-5ea266da6692]   
+F, [2017-02-10T14:47:50.132776 #12833] FATAL -- : [ba626b6c-9afb-4fed-903d-5ea266da6692] TypeError (String can't be coerced into Fixnum):
+F, [2017-02-10T14:47:50.132861 #12833] FATAL -- : [ba626b6c-9afb-4fed-903d-5ea266da6692]   
+F, [2017-02-10T14:47:50.132900 #12833] FATAL -- : [ba626b6c-9afb-4fed-903d-5ea266da6692] app/controllers/visions_controller.rb:43:in `+'
+[ba626b6c-9afb-4fed-903d-5ea266da6692] app/controllers/visions_controller.rb:43:in `show'
+I, [2017-02-10T15:59:58.318427 #12833]  INFO -- : [386c3b53-c96f-4a43-9c9a-8da7073dbb6a] Started GET "/" for 144.217.173.209 at 2017-02-10 15:59:58 -0500
+I, [2017-02-10T15:59:58.323816 #12833]  INFO -- : [386c3b53-c96f-4a43-9c9a-8da7073dbb6a] Processing by WelcomeController#home as HTML
+I, [2017-02-10T15:59:58.327679 #12833]  INFO -- : [386c3b53-c96f-4a43-9c9a-8da7073dbb6a] Redirected to http://localhost/users/sign_up
+I, [2017-02-10T15:59:58.327985 #12833]  INFO -- : [386c3b53-c96f-4a43-9c9a-8da7073dbb6a] Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+I, [2017-02-10T16:29:50.976868 #12824]  INFO -- : [7553bf46-5705-434d-b912-cd10f8833a26] Started GET "/" for 108.219.110.211 at 2017-02-10 16:29:50 -0500
+I, [2017-02-10T16:29:50.981862 #12824]  INFO -- : [7553bf46-5705-434d-b912-cd10f8833a26] Processing by WelcomeController#home as HTML
+D, [2017-02-10T16:29:50.989561 #12824] DEBUG -- : [7553bf46-5705-434d-b912-cd10f8833a26]   [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+I, [2017-02-10T16:29:50.991258 #12824]  INFO -- : [7553bf46-5705-434d-b912-cd10f8833a26] Redirected to http://www.jointhebloc.com/myprofile
+I, [2017-02-10T16:29:50.991554 #12824]  INFO -- : [7553bf46-5705-434d-b912-cd10f8833a26] Completed 302 Found in 9ms (ActiveRecord: 1.3ms)
+I, [2017-02-10T16:29:51.144277 #12829]  INFO -- : [172cf1b4-11b4-445b-ba75-70fe0f43805a] Started GET "/myprofile" for 108.219.110.211 at 2017-02-10 16:29:51 -0500
+I, [2017-02-10T16:29:51.149062 #12829]  INFO -- : [172cf1b4-11b4-445b-ba75-70fe0f43805a] Processing by ProfileController#myprofile as HTML
+D, [2017-02-10T16:29:51.155057 #12829] DEBUG -- : [172cf1b4-11b4-445b-ba75-70fe0f43805a]   [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+D, [2017-02-10T16:29:51.157019 #12829] DEBUG -- : [172cf1b4-11b4-445b-ba75-70fe0f43805a]   [1m[36mVision Load (0.4ms)[0m  [1m[34mSELECT  "visions".* FROM "visions" WHERE "visions"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+D, [2017-02-10T16:29:51.159202 #12829] DEBUG -- : [172cf1b4-11b4-445b-ba75-70fe0f43805a]   [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+I, [2017-02-10T16:29:51.166551 #12829]  INFO -- : [172cf1b4-11b4-445b-ba75-70fe0f43805a]   Rendering profile/myprofile.html.erb within layouts/application
+I, [2017-02-10T16:29:51.169532 #12829]  INFO -- : [172cf1b4-11b4-445b-ba75-70fe0f43805a]   Rendered profile/myprofile.html.erb within layouts/application (2.8ms)
+I, [2017-02-10T16:29:51.171194 #12829]  INFO -- : [172cf1b4-11b4-445b-ba75-70fe0f43805a] Completed 200 OK in 22ms (Views: 6.5ms | ActiveRecord: 3.8ms)
+I, [2017-02-10T18:16:37.112208 #12833]  INFO -- : [b8cf7bd4-533d-4ff0-94fd-10d7c168e19a] Started GET "/" for 162.216.152.51 at 2017-02-10 18:16:37 -0500
+I, [2017-02-10T18:16:37.117167 #12833]  INFO -- : [b8cf7bd4-533d-4ff0-94fd-10d7c168e19a] Processing by WelcomeController#home as HTML
+I, [2017-02-10T18:16:37.121223 #12833]  INFO -- : [b8cf7bd4-533d-4ff0-94fd-10d7c168e19a] Redirected to http://localhost/users/sign_up
+I, [2017-02-10T18:16:37.121615 #12833]  INFO -- : [b8cf7bd4-533d-4ff0-94fd-10d7c168e19a] Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+I, [2017-02-10T21:36:56.881094 #12826]  INFO -- : [670dd770-1463-4709-b76d-04619179e8a2] Started GET "/" for 139.162.119.197 at 2017-02-10 21:36:56 -0500
+I, [2017-02-10T21:36:56.887629 #12826]  INFO -- : [670dd770-1463-4709-b76d-04619179e8a2] Processing by WelcomeController#home as HTML
+I, [2017-02-10T21:36:56.892817 #12826]  INFO -- : [670dd770-1463-4709-b76d-04619179e8a2] Redirected to http://138.197.67.134/users/sign_up
+I, [2017-02-10T21:36:56.893266 #12826]  INFO -- : [670dd770-1463-4709-b76d-04619179e8a2] Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+I, [2017-02-10T21:36:57.198280 #12829]  INFO -- : [fd389285-b7da-4f12-be41-39641943117f] Started GET "/users/sign_up" for 139.162.119.197 at 2017-02-10 21:36:57 -0500
+I, [2017-02-10T21:36:57.203179 #12829]  INFO -- : [fd389285-b7da-4f12-be41-39641943117f] Processing by Devise::RegistrationsController#new as HTML
+I, [2017-02-10T21:36:57.208297 #12829]  INFO -- : [fd389285-b7da-4f12-be41-39641943117f]   Rendering users/registrations/new.html.erb within layouts/application
+I, [2017-02-10T21:36:57.208904 #12829]  INFO -- : [fd389285-b7da-4f12-be41-39641943117f]   Rendered users/registrations/new.html.erb within layouts/application (0.4ms)
+I, [2017-02-10T21:36:57.210417 #12829]  INFO -- : [fd389285-b7da-4f12-be41-39641943117f] Completed 200 OK in 7ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+I, [2017-02-10T23:24:55.821234 #12833]  INFO -- : [be586ffc-36d2-4841-9249-dd5a44a1af5a] Started GET "/" for 66.249.69.172 at 2017-02-10 23:24:55 -0500
+I, [2017-02-10T23:24:55.827040 #12833]  INFO -- : [be586ffc-36d2-4841-9249-dd5a44a1af5a] Processing by WelcomeController#home as HTML
+D, [2017-02-10T23:24:55.829760 #12833] DEBUG -- : [be586ffc-36d2-4841-9249-dd5a44a1af5a] [ahoy] Visit excluded
+I, [2017-02-10T23:24:55.831748 #12833]  INFO -- : [be586ffc-36d2-4841-9249-dd5a44a1af5a] Redirected to http://www.jointhebloc.com/users/sign_up
+I, [2017-02-10T23:24:55.832075 #12833]  INFO -- : [be586ffc-36d2-4841-9249-dd5a44a1af5a] Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+I, [2017-02-10T23:24:56.824282 #12826]  INFO -- : [58daf257-79d3-44ac-aa13-d3581d4e0f52] Started GET "/users/sign_up" for 66.249.69.169 at 2017-02-10 23:24:56 -0500
+I, [2017-02-10T23:24:56.836998 #12826]  INFO -- : [58daf257-79d3-44ac-aa13-d3581d4e0f52] Processing by Devise::RegistrationsController#new as HTML
+I, [2017-02-10T23:24:56.844616 #12826]  INFO -- : [58daf257-79d3-44ac-aa13-d3581d4e0f52]   Rendering users/registrations/new.html.erb within layouts/application
+I, [2017-02-10T23:24:56.845637 #12826]  INFO -- : [58daf257-79d3-44ac-aa13-d3581d4e0f52]   Rendered users/registrations/new.html.erb within layouts/application (0.8ms)
+I, [2017-02-10T23:24:56.847789 #12826]  INFO -- : [58daf257-79d3-44ac-aa13-d3581d4e0f52] Completed 200 OK in 10ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+I, [2017-02-10T23:28:44.685779 #12833]  INFO -- : [9a4db094-5e37-4e8a-acc1-402bfac43bff] Started GET "/users/auth/facebook" for 66.249.69.166 at 2017-02-10 23:28:44 -0500
+I, [2017-02-10T23:30:31.997471 #12829]  INFO -- : [95ee788e-8091-4e04-a4a2-61dd8b7d1f8d] Started GET "/" for 158.69.229.134 at 2017-02-10 23:30:31 -0500
+I, [2017-02-10T23:30:32.004533 #12829]  INFO -- : [95ee788e-8091-4e04-a4a2-61dd8b7d1f8d] Processing by WelcomeController#home as HTML
+I, [2017-02-10T23:30:32.009420 #12829]  INFO -- : [95ee788e-8091-4e04-a4a2-61dd8b7d1f8d] Redirected to http://www.jointhebloc.com/users/sign_up
+I, [2017-02-10T23:30:32.009849 #12829]  INFO -- : [95ee788e-8091-4e04-a4a2-61dd8b7d1f8d] Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+I, [2017-02-10T23:30:32.073619 #12824]  INFO -- : [1a34781f-e17f-4787-8032-d2e9bbc1deec] Started GET "/users/sign_up" for 158.69.229.134 at 2017-02-10 23:30:32 -0500
+I, [2017-02-10T23:30:32.079389 #12824]  INFO -- : [1a34781f-e17f-4787-8032-d2e9bbc1deec] Processing by Devise::RegistrationsController#new as HTML
+I, [2017-02-10T23:30:32.085735 #12824]  INFO -- : [1a34781f-e17f-4787-8032-d2e9bbc1deec]   Rendering users/registrations/new.html.erb within layouts/application
+I, [2017-02-10T23:30:32.086684 #12824]  INFO -- : [1a34781f-e17f-4787-8032-d2e9bbc1deec]   Rendered users/registrations/new.html.erb within layouts/application (0.7ms)
+I, [2017-02-10T23:30:32.088886 #12824]  INFO -- : [1a34781f-e17f-4787-8032-d2e9bbc1deec] Completed 200 OK in 9ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+I, [2017-02-11T03:14:22.740472 #12826]  INFO -- : [3992d790-566b-478b-8550-8cf9b2dc1ab9] Started GET "/" for 123.151.42.61 at 2017-02-11 03:14:22 -0500
+I, [2017-02-11T03:14:22.747292 #12826]  INFO -- : [3992d790-566b-478b-8550-8cf9b2dc1ab9] Processing by WelcomeController#home as */*
+I, [2017-02-11T03:14:22.753106 #12826]  INFO -- : [3992d790-566b-478b-8550-8cf9b2dc1ab9] Redirected to http://www.baidu.com/users/sign_up
+I, [2017-02-11T03:14:22.753534 #12826]  INFO -- : [3992d790-566b-478b-8550-8cf9b2dc1ab9] Completed 302 Found in 6ms (ActiveRecord: 0.0ms)
+I, [2017-02-11T09:38:13.642344 #12833]  INFO -- : [f561a098-9e7d-48f8-87de-5d936fbd8faa] Started GET "/" for 162.216.152.51 at 2017-02-11 09:38:13 -0500
+I, [2017-02-11T09:38:13.648314 #12833]  INFO -- : [f561a098-9e7d-48f8-87de-5d936fbd8faa] Processing by WelcomeController#home as HTML
+I, [2017-02-11T09:38:13.655494 #12833]  INFO -- : [f561a098-9e7d-48f8-87de-5d936fbd8faa] Redirected to http://localhost/users/sign_up
+I, [2017-02-11T09:38:13.656103 #12833]  INFO -- : [f561a098-9e7d-48f8-87de-5d936fbd8faa] Completed 302 Found in 7ms (ActiveRecord: 0.0ms)
+I, [2017-02-11T09:51:54.941727 #12824]  INFO -- : [cdbe8312-675c-44f5-8372-5c066c9b9e8f] Started HEAD "/" for 209.160.65.197 at 2017-02-11 09:51:54 -0500
+I, [2017-02-11T09:51:54.949325 #12824]  INFO -- : [cdbe8312-675c-44f5-8372-5c066c9b9e8f] Processing by WelcomeController#home as HTML
+I, [2017-02-11T09:51:54.954690 #12824]  INFO -- : [cdbe8312-675c-44f5-8372-5c066c9b9e8f] Redirected to http://localhost/users/sign_up
+I, [2017-02-11T09:51:54.955051 #12824]  INFO -- : [cdbe8312-675c-44f5-8372-5c066c9b9e8f] Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+I, [2017-02-11T11:20:00.618116 #12826]  INFO -- : [f9c66445-28e7-4714-b4d5-6d9327151d0e] Started GET "/" for 66.249.69.166 at 2017-02-11 11:20:00 -0500
+I, [2017-02-11T11:20:00.629478 #12826]  INFO -- : [f9c66445-28e7-4714-b4d5-6d9327151d0e] Processing by WelcomeController#home as HTML
+D, [2017-02-11T11:20:00.636161 #12826] DEBUG -- : [f9c66445-28e7-4714-b4d5-6d9327151d0e] [ahoy] Visit excluded
+I, [2017-02-11T11:20:00.638870 #12826]  INFO -- : [f9c66445-28e7-4714-b4d5-6d9327151d0e] Redirected to http://www.jointhebloc.com/users/sign_up
+I, [2017-02-11T11:20:00.639471 #12826]  INFO -- : [f9c66445-28e7-4714-b4d5-6d9327151d0e] Completed 302 Found in 9ms (ActiveRecord: 0.0ms)
+I, [2017-02-11T11:20:01.588055 #12833]  INFO -- : [2a60199a-496f-43cb-8eca-29ca0101eaf6] Started GET "/users/sign_up" for 66.249.69.166 at 2017-02-11 11:20:01 -0500
+I, [2017-02-11T11:20:01.597258 #12833]  INFO -- : [2a60199a-496f-43cb-8eca-29ca0101eaf6] Processing by Devise::RegistrationsController#new as HTML
+I, [2017-02-11T11:20:01.604641 #12833]  INFO -- : [2a60199a-496f-43cb-8eca-29ca0101eaf6]   Rendering users/registrations/new.html.erb within layouts/application
+I, [2017-02-11T11:20:01.606004 #12833]  INFO -- : [2a60199a-496f-43cb-8eca-29ca0101eaf6]   Rendered users/registrations/new.html.erb within layouts/application (1.0ms)
+I, [2017-02-11T11:20:01.609063 #12833]  INFO -- : [2a60199a-496f-43cb-8eca-29ca0101eaf6] Completed 200 OK in 11ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+I, [2017-02-11T12:50:32.847147 #12826]  INFO -- : [29c1681a-4e46-46a5-af59-0b4a05bf3d31] Started HEAD "/phpmyadmin/index.php" for 211.157.19.82 at 2017-02-11 12:50:32 -0500
+F, [2017-02-11T12:50:32.853038 #12826] FATAL -- : [29c1681a-4e46-46a5-af59-0b4a05bf3d31]   
+F, [2017-02-11T12:50:32.853148 #12826] FATAL -- : [29c1681a-4e46-46a5-af59-0b4a05bf3d31] ActionController::RoutingError (No route matches [HEAD] "/phpmyadmin/index.php"):
+F, [2017-02-11T12:50:32.853187 #12826] FATAL -- : [29c1681a-4e46-46a5-af59-0b4a05bf3d31]   
+F, [2017-02-11T12:50:32.853241 #12826] FATAL -- : [29c1681a-4e46-46a5-af59-0b4a05bf3d31] actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+[29c1681a-4e46-46a5-af59-0b4a05bf3d31] actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+[29c1681a-4e46-46a5-af59-0b4a05bf3d31] railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+[29c1681a-4e46-46a5-af59-0b4a05bf3d31] railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+[29c1681a-4e46-46a5-af59-0b4a05bf3d31] activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+[29c1681a-4e46-46a5-af59-0b4a05bf3d31] activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+[29c1681a-4e46-46a5-af59-0b4a05bf3d31] activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+[29c1681a-4e46-46a5-af59-0b4a05bf3d31] railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+[29c1681a-4e46-46a5-af59-0b4a05bf3d31] ahoy_matey (1.5.4) lib/ahoy/engine.rb:22:in `call_with_quiet_ahoy'
+[29c1681a-4e46-46a5-af59-0b4a05bf3d31] request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+[29c1681a-4e46-46a5-af59-0b4a05bf3d31] actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+[29c1681a-4e46-46a5-af59-0b4a05bf3d31] rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+[29c1681a-4e46-46a5-af59-0b4a05bf3d31] rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+[29c1681a-4e46-46a5-af59-0b4a05bf3d31] activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+[29c1681a-4e46-46a5-af59-0b4a05bf3d31] actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+[29c1681a-4e46-46a5-af59-0b4a05bf3d31] rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+[29c1681a-4e46-46a5-af59-0b4a05bf3d31] railties (5.0.1) lib/rails/engine.rb:522:in `call'
+[29c1681a-4e46-46a5-af59-0b4a05bf3d31] unicorn (5.2.0) lib/unicorn/http_server.rb:562:in `process_client'
+[29c1681a-4e46-46a5-af59-0b4a05bf3d31] unicorn (5.2.0) lib/unicorn/http_server.rb:658:in `worker_loop'
+[29c1681a-4e46-46a5-af59-0b4a05bf3d31] unicorn (5.2.0) lib/unicorn/http_server.rb:508:in `spawn_missing_workers'
+[29c1681a-4e46-46a5-af59-0b4a05bf3d31] unicorn (5.2.0) lib/unicorn/http_server.rb:132:in `start'
+[29c1681a-4e46-46a5-af59-0b4a05bf3d31] unicorn (5.2.0) bin/unicorn:126:in `<top (required)>'
+[29c1681a-4e46-46a5-af59-0b4a05bf3d31] /usr/local/rvm/gems/ruby-2.2.3/bin/unicorn:23:in `load'
+[29c1681a-4e46-46a5-af59-0b4a05bf3d31] /usr/local/rvm/gems/ruby-2.2.3/bin/unicorn:23:in `<main>'
+[29c1681a-4e46-46a5-af59-0b4a05bf3d31] /usr/local/rvm/gems/ruby-2.2.3@global/bin/ruby_executable_hooks:15:in `eval'
+[29c1681a-4e46-46a5-af59-0b4a05bf3d31] /usr/local/rvm/gems/ruby-2.2.3@global/bin/ruby_executable_hooks:15:in `<main>'
+I, [2017-02-11T15:38:13.498491 #12829]  INFO -- : [d12a90c5-0589-42cc-a8f2-eeb14a59a441] Started GET "/" for 66.249.73.150 at 2017-02-11 15:38:13 -0500
+I, [2017-02-11T15:38:13.504122 #12829]  INFO -- : [d12a90c5-0589-42cc-a8f2-eeb14a59a441] Processing by WelcomeController#home as HTML
+D, [2017-02-11T15:38:13.506821 #12829] DEBUG -- : [d12a90c5-0589-42cc-a8f2-eeb14a59a441] [ahoy] Visit excluded
+I, [2017-02-11T15:38:13.508537 #12829]  INFO -- : [d12a90c5-0589-42cc-a8f2-eeb14a59a441] Redirected to http://www.jointhebloc.com/users/sign_up
+I, [2017-02-11T15:38:13.508917 #12829]  INFO -- : [d12a90c5-0589-42cc-a8f2-eeb14a59a441] Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+I, [2017-02-11T15:38:14.498220 #12833]  INFO -- : [2ee23d74-0319-4d7b-91d7-1bdc62075195] Started GET "/users/sign_up" for 66.249.73.146 at 2017-02-11 15:38:14 -0500
+I, [2017-02-11T15:38:14.504189 #12833]  INFO -- : [2ee23d74-0319-4d7b-91d7-1bdc62075195] Processing by Devise::RegistrationsController#new as HTML
+I, [2017-02-11T15:38:14.508596 #12833]  INFO -- : [2ee23d74-0319-4d7b-91d7-1bdc62075195]   Rendering users/registrations/new.html.erb within layouts/application
+I, [2017-02-11T15:38:14.509422 #12833]  INFO -- : [2ee23d74-0319-4d7b-91d7-1bdc62075195]   Rendered users/registrations/new.html.erb within layouts/application (0.6ms)
+I, [2017-02-11T15:38:14.511384 #12833]  INFO -- : [2ee23d74-0319-4d7b-91d7-1bdc62075195] Completed 200 OK in 7ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+I, [2017-02-11T15:40:40.992676 #12826]  INFO -- : [cc4a9cd8-7e96-4353-aa1e-a4a62ca58954] Started GET "/users/auth/facebook" for 66.249.73.154 at 2017-02-11 15:40:40 -0500
+I, [2017-02-11T19:55:08.187918 #28487]  INFO -- : [1e8117ea-e238-43be-898d-8272e3d6f114] Started GET "/" for 108.219.110.211 at 2017-02-11 19:55:08 -0500
+I, [2017-02-11T19:55:08.207094 #28487]  INFO -- : [1e8117ea-e238-43be-898d-8272e3d6f114] Processing by WelcomeController#home as HTML
+I, [2017-02-11T19:55:08.229527 #28487]  INFO -- : [1e8117ea-e238-43be-898d-8272e3d6f114] Redirected to http://www.jointhebloc.com/users/sign_up
+I, [2017-02-11T19:55:08.229887 #28487]  INFO -- : [1e8117ea-e238-43be-898d-8272e3d6f114] Completed 302 Found in 22ms
+I, [2017-02-11T19:55:08.295571 #28487]  INFO -- : [c4819f1d-fc4b-4697-932f-66caed864ccb] Started GET "/users/sign_up" for 108.219.110.211 at 2017-02-11 19:55:08 -0500
+I, [2017-02-11T19:55:08.299924 #28487]  INFO -- : [c4819f1d-fc4b-4697-932f-66caed864ccb] Processing by Devise::RegistrationsController#new as HTML
+I, [2017-02-11T19:55:08.390842 #28487]  INFO -- : [c4819f1d-fc4b-4697-932f-66caed864ccb]   Rendering users/registrations/new.html.erb within layouts/application
+I, [2017-02-11T19:55:08.392385 #28487]  INFO -- : [c4819f1d-fc4b-4697-932f-66caed864ccb]   Rendered users/registrations/new.html.erb within layouts/application (1.3ms)
+I, [2017-02-11T19:55:08.394645 #28487]  INFO -- : [c4819f1d-fc4b-4697-932f-66caed864ccb] Completed 200 OK in 95ms (Views: 7.3ms | ActiveRecord: 14.6ms)
+I, [2017-02-11T19:55:12.829857 #28489]  INFO -- : [148a3330-b4d9-4aee-a381-52f6be7b5401] Started GET "/users/sign_up" for 108.219.110.211 at 2017-02-11 19:55:12 -0500
+I, [2017-02-11T19:55:12.851585 #28489]  INFO -- : [148a3330-b4d9-4aee-a381-52f6be7b5401] Processing by Devise::RegistrationsController#new as HTML
+I, [2017-02-11T19:55:12.950455 #28489]  INFO -- : [148a3330-b4d9-4aee-a381-52f6be7b5401]   Rendering users/registrations/new.html.erb within layouts/application
+I, [2017-02-11T19:55:12.955723 #28489]  INFO -- : [148a3330-b4d9-4aee-a381-52f6be7b5401]   Rendered users/registrations/new.html.erb within layouts/application (5.1ms)
+I, [2017-02-11T19:55:12.958023 #28489]  INFO -- : [148a3330-b4d9-4aee-a381-52f6be7b5401] Completed 200 OK in 106ms (Views: 10.7ms | ActiveRecord: 13.4ms)
