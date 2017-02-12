@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170206204334) do
+ActiveRecord::Schema.define(version: 20170212004911) do
 
   create_table "ahoy_events", force: :cascade do |t|
     t.integer  "visit_id"
@@ -67,17 +67,14 @@ ActiveRecord::Schema.define(version: 20170206204334) do
 
   create_table "jobs", force: :cascade do |t|
     t.integer  "user_id"
-    t.integer  "sector_id"
     t.text     "title"
     t.string   "description"
     t.string   "text"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.boolean  "saved"
-    t.integer  "prep"
     t.string   "industry"
     t.date     "deadline"
-    t.index ["sector_id"], name: "index_jobs_on_sector_id"
     t.index ["user_id"], name: "index_jobs_on_user_id"
   end
 
@@ -130,8 +127,8 @@ ActiveRecord::Schema.define(version: 20170206204334) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
+    t.string   "email",                  default: ""
+    t.string   "encrypted_password",     default: ""
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -185,9 +182,9 @@ ActiveRecord::Schema.define(version: 20170206204334) do
   end
 
   create_table "values", force: :cascade do |t|
-    t.text     "whoserve"
-    t.text     "howserve"
-    t.text     "legacy"
+    t.integer  "whoserve"
+    t.integer  "howserve"
+    t.string   "legacy"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "user_id"
@@ -201,7 +198,7 @@ ActiveRecord::Schema.define(version: 20170206204334) do
     t.string   "industry"
     t.string   "ten"
     t.string   "dreamjob"
-    t.text     "style"
+    t.string   "style"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.integer  "user_id"
@@ -253,20 +250,6 @@ ActiveRecord::Schema.define(version: 20170206204334) do
     t.datetime "started_at"
     t.index ["user_id"], name: "index_visits_on_user_id"
     t.index ["visit_token"], name: "index_visits_on_visit_token", unique: true
-  end
-
-  create_table "votes", force: :cascade do |t|
-    t.string   "votable_type"
-    t.integer  "votable_id"
-    t.string   "voter_type"
-    t.integer  "voter_id"
-    t.boolean  "vote_flag"
-    t.string   "vote_scope"
-    t.integer  "vote_weight"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.index ["votable_id", "votable_type", "vote_scope"], name: "index_votes_on_votable_id_and_votable_type_and_vote_scope"
-    t.index ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope"
   end
 
 end

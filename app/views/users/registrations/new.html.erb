@@ -5,9 +5,9 @@
 </script>
 
 <div class="row">
-
+    <div id="title"> BLOC </div>
   <div class="col m6 s12" id="background-filter">
-        <div style="position: absolute; font-weight: lighter; left: 5%; font-size: 2em; top: 5%; color:white"> BLOC </div>
+    
           <h6 id="beta" style=""> beta</h6>
           <p id="fubu" style=""> career advice for us, by us.</p>
           
@@ -18,8 +18,8 @@
   </div>
               
   <div class="loginform col s10  offset-s1 m4 push-m7" style="background-color:inherit; height: 100%" id="login_form">
-              <h5 id="third_p"> sign up for a weekly playlist of the hottest internships, career resources & connections curated by black millennials  </h5>
-              <h5 id="fourth-p"> who are committed to helping you get to the top.</h5>
+              <h5 id="third_p"> sign up for a weekly playlist of the hottest internships, career resources & connections curated by black millennials 
+         who are committed to helping you get to the top.</h5>
      </div>
      
       
@@ -31,7 +31,7 @@
 </div>
 
         <div>
-        <%= link_to "Sign Up With Facebook", user_facebook_omniauth_authorize_path, :id => "submitFB" %> 
+        <%= link_to "SIGN UP WITH FACEBOOK", user_facebook_omniauth_authorize_path, :id => "submitFB" %> 
        </div>
 </body>
 
@@ -61,6 +61,15 @@ h5{
 }
 #first_field{
   padding-top: 20%;
+}
+#title{
+  position: absolute; 
+  left: 5%; 
+  font-size: 2em; 
+  top: 5%; 
+  color:white;
+  opacity: 1;
+  z-index: 5;
 }
 
 #beta{
@@ -98,14 +107,16 @@ h5{
   height: 100%;
 }
 #submitFB{
-  position: absolute;
+  position: fixed;
   background: #3b5998;
   color:white;
   border: 4px solid grey;
-  padding: 7% 5% 5% 18%;
-  margin-top: -30%;
-  width: 15em;
-  height: 3em;
+  top: 60%;
+  font-size: 2em;
+  width: 30%;
+  height: 10%;
+  padding: 1.5% 2%;
+  left: 65%;
 }
 	
 #formhead {
@@ -120,9 +131,11 @@ h5{
 
 .loginform {
   position: absolute;
-  margin-top:10%;
+  margin-top:20%;
   margin-left: 20%;
   height: 100%;
+  font-family: Work Sans;
+  font-weight: strong;
 }
 
 
@@ -146,6 +159,7 @@ input.fieldtext{
   color:white;
   top: 20%;
   left: 5%;
+  font-family: Roboto;
 }
 
 #fubu{
