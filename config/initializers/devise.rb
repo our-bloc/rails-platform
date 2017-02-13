@@ -8,6 +8,7 @@ Devise.setup do |config|
   # by default. You can change it below and use your own secret key.
   # config.secret_key = 'bda3548198a4b26b347ebcf30bf3036470ce337cba9b0c5e91a721722c7bbc50821c4c48d7b86631f8cbd5293741ea77434b44c9edbba210602544496f045005'
 
+config.secret_key = '8dc58ff593e8fd2ece25822fc4493d88660a5167915eaade16e5cf733ce1e45a6d51e67e126b0178696bcdbbdf88502635c935e993f2402103e7b490dbd01670'
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
@@ -249,6 +250,7 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
+  
   config.omniauth :facebook, '405857709752176', 'b805a071b088b2bda214f69dce33809b',
   :scope => 'email,user_education_history,user_work_history,user_hometown,user_friends', 
   :info_fields => 'email,name,first_name,education,work,hometown,friends,timezone,gender,picture'
