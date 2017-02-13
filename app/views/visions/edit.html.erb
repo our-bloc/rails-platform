@@ -17,7 +17,7 @@
     <img class="form_pic" id="Entrepreneurs" src ="http://www.ourbloc.co/uploads/2/4/0/1/24014742/2_5_orig.png" >
     <img class="form_pic" id="Creatives" src ="http://www.ourbloc.co/uploads/2/4/0/1/24014742/the-griots-1_1_orig.png" >
     <img class="form_pic" id="Scientists" src ="http://www.ourbloc.co/uploads/2/4/0/1/24014742/7_orig.png" >
-    <img class="form_pic" id="CSuite" src ="http://www.ourbloc.co/uploads/2/4/0/1/24014742/5_orig.png">
+    <img class="form_pic" id="CSuite" src ="http://www.ourbloc.co/uploads/2/4/0/1/24014742/5_orig.png" >
     <img class="form_pic" id="Educators" src ="http://www.ourbloc.co/uploads/2/4/0/1/24014742/2_4_orig.png" >
     <img class="form_pic" id="Griots"  src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/1_7_orig.png" > 
     
@@ -181,8 +181,6 @@ $('form').on('keyup keypress', function(e) {
 //on hover, show industry descriptions
  $('.form_pic').hover(function(){
         var industry = "#"+ $(this).attr("id") + "_description";
-            console.log(industry);
-            
             $(industry).css({
                 'display': 'block'
         }); 
