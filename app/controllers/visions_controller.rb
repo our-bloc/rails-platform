@@ -11,7 +11,7 @@ class VisionsController < ApplicationController
   # GET /visions/1.json
   def show
     #track visits with AHOY
-    ahoy.track "Viewed Vision", title: "Vision viewed"
+   
 
     
     
