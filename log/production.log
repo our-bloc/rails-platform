@@ -1694,3 +1694,367 @@ I, [2017-02-11T19:55:12.851585 #28489]  INFO -- : [148a3330-b4d9-4aee-a381-52f6b
 I, [2017-02-11T19:55:12.950455 #28489]  INFO -- : [148a3330-b4d9-4aee-a381-52f6be7b5401]   Rendering users/registrations/new.html.erb within layouts/application
 I, [2017-02-11T19:55:12.955723 #28489]  INFO -- : [148a3330-b4d9-4aee-a381-52f6be7b5401]   Rendered users/registrations/new.html.erb within layouts/application (5.1ms)
 I, [2017-02-11T19:55:12.958023 #28489]  INFO -- : [148a3330-b4d9-4aee-a381-52f6be7b5401] Completed 200 OK in 106ms (Views: 10.7ms | ActiveRecord: 13.4ms)
+I, [2017-02-11T20:00:02.735754 #28487]  INFO -- : [844fec5c-4b04-470c-86d6-2c661a584426] Started GET "/users/sign_up" for 108.219.110.211 at 2017-02-11 20:00:02 -0500
+I, [2017-02-11T20:00:02.743958 #28487]  INFO -- : [844fec5c-4b04-470c-86d6-2c661a584426] Processing by Devise::RegistrationsController#new as HTML
+I, [2017-02-11T20:00:02.749620 #28487]  INFO -- : [844fec5c-4b04-470c-86d6-2c661a584426]   Rendering users/registrations/new.html.erb within layouts/application
+I, [2017-02-11T20:00:02.750402 #28487]  INFO -- : [844fec5c-4b04-470c-86d6-2c661a584426]   Rendered users/registrations/new.html.erb within layouts/application (0.5ms)
+I, [2017-02-11T20:00:02.752199 #28487]  INFO -- : [844fec5c-4b04-470c-86d6-2c661a584426] Completed 200 OK in 8ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+I, [2017-02-11T20:35:21.055038 #28485]  INFO -- : [3095b013-defa-4051-addb-d7f02d2c9e27] Started GET "/" for 185.169.229.60 at 2017-02-11 20:35:21 -0500
+I, [2017-02-11T20:35:21.065411 #28485]  INFO -- : [3095b013-defa-4051-addb-d7f02d2c9e27] Processing by WelcomeController#home as HTML
+I, [2017-02-11T20:35:21.079171 #28485]  INFO -- : [3095b013-defa-4051-addb-d7f02d2c9e27] Redirected to http://localhost/users/sign_up
+I, [2017-02-11T20:35:21.079667 #28485]  INFO -- : [3095b013-defa-4051-addb-d7f02d2c9e27] Completed 302 Found in 14ms (ActiveRecord: 0.0ms)
+I, [2017-02-11T23:05:20.861883 #28491]  INFO -- : [3e27f785-2bad-4837-be09-2a51f58c2512] Started GET "/" for 66.249.73.146 at 2017-02-11 23:05:20 -0500
+I, [2017-02-11T23:05:20.874039 #28491]  INFO -- : [3e27f785-2bad-4837-be09-2a51f58c2512] Processing by WelcomeController#home as HTML
+D, [2017-02-11T23:05:20.877961 #28491] DEBUG -- : [3e27f785-2bad-4837-be09-2a51f58c2512] [ahoy] Visit excluded
+I, [2017-02-11T23:05:20.890269 #28491]  INFO -- : [3e27f785-2bad-4837-be09-2a51f58c2512] Redirected to http://www.jointhebloc.com/users/sign_up
+I, [2017-02-11T23:05:20.891309 #28491]  INFO -- : [3e27f785-2bad-4837-be09-2a51f58c2512] Completed 302 Found in 16ms (ActiveRecord: 0.0ms)
+I, [2017-02-11T23:05:21.828774 #28485]  INFO -- : [4d2f97d8-1dd8-4a9c-a8ec-07b4e9c7cf38] Started GET "/users/sign_up" for 66.249.73.146 at 2017-02-11 23:05:21 -0500
+I, [2017-02-11T23:05:21.840263 #28485]  INFO -- : [4d2f97d8-1dd8-4a9c-a8ec-07b4e9c7cf38] Processing by Devise::RegistrationsController#new as HTML
+I, [2017-02-11T23:05:21.922368 #28485]  INFO -- : [4d2f97d8-1dd8-4a9c-a8ec-07b4e9c7cf38]   Rendering users/registrations/new.html.erb within layouts/application
+I, [2017-02-11T23:05:21.924205 #28485]  INFO -- : [4d2f97d8-1dd8-4a9c-a8ec-07b4e9c7cf38]   Rendered users/registrations/new.html.erb within layouts/application (1.6ms)
+I, [2017-02-11T23:05:21.926827 #28485]  INFO -- : [4d2f97d8-1dd8-4a9c-a8ec-07b4e9c7cf38] Completed 200 OK in 86ms (Views: 9.9ms | ActiveRecord: 6.1ms)
+I, [2017-02-12T01:29:32.867603 #28485]  INFO -- : [3e18232e-be50-4530-8927-090625a3f070] Started GET "/" for 94.102.48.195 at 2017-02-12 01:29:32 -0500
+I, [2017-02-12T01:29:32.874991 #28485]  INFO -- : [3e18232e-be50-4530-8927-090625a3f070] Processing by WelcomeController#home as */*
+I, [2017-02-12T01:29:32.881020 #28485]  INFO -- : [3e18232e-be50-4530-8927-090625a3f070] Redirected to http://localhost/users/sign_up
+I, [2017-02-12T01:29:32.881391 #28485]  INFO -- : [3e18232e-be50-4530-8927-090625a3f070] Completed 302 Found in 6ms (ActiveRecord: 0.0ms)
+I, [2017-02-12T03:37:23.198782 #28491]  INFO -- : [f9b5dac9-6cfa-493e-8ab6-3c007e3eb948] Started GET "/phpMyAdmin/scripts/setup.php" for 120.26.72.89 at 2017-02-12 03:37:23 -0500
+F, [2017-02-12T03:37:23.205047 #28491] FATAL -- : [f9b5dac9-6cfa-493e-8ab6-3c007e3eb948]   
+F, [2017-02-12T03:37:23.205157 #28491] FATAL -- : [f9b5dac9-6cfa-493e-8ab6-3c007e3eb948] ActionController::RoutingError (No route matches [GET] "/phpMyAdmin/scripts/setup.php"):
+F, [2017-02-12T03:37:23.205197 #28491] FATAL -- : [f9b5dac9-6cfa-493e-8ab6-3c007e3eb948]   
+F, [2017-02-12T03:37:23.205410 #28491] FATAL -- : [f9b5dac9-6cfa-493e-8ab6-3c007e3eb948] actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+[f9b5dac9-6cfa-493e-8ab6-3c007e3eb948] actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+[f9b5dac9-6cfa-493e-8ab6-3c007e3eb948] railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+[f9b5dac9-6cfa-493e-8ab6-3c007e3eb948] railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+[f9b5dac9-6cfa-493e-8ab6-3c007e3eb948] activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+[f9b5dac9-6cfa-493e-8ab6-3c007e3eb948] activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+[f9b5dac9-6cfa-493e-8ab6-3c007e3eb948] activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+[f9b5dac9-6cfa-493e-8ab6-3c007e3eb948] railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+[f9b5dac9-6cfa-493e-8ab6-3c007e3eb948] ahoy_matey (1.5.4) lib/ahoy/engine.rb:22:in `call_with_quiet_ahoy'
+[f9b5dac9-6cfa-493e-8ab6-3c007e3eb948] request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+[f9b5dac9-6cfa-493e-8ab6-3c007e3eb948] actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+[f9b5dac9-6cfa-493e-8ab6-3c007e3eb948] rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+[f9b5dac9-6cfa-493e-8ab6-3c007e3eb948] rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+[f9b5dac9-6cfa-493e-8ab6-3c007e3eb948] activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+[f9b5dac9-6cfa-493e-8ab6-3c007e3eb948] actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+[f9b5dac9-6cfa-493e-8ab6-3c007e3eb948] rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+[f9b5dac9-6cfa-493e-8ab6-3c007e3eb948] railties (5.0.1) lib/rails/engine.rb:522:in `call'
+[f9b5dac9-6cfa-493e-8ab6-3c007e3eb948] unicorn (5.2.0) lib/unicorn/http_server.rb:562:in `process_client'
+[f9b5dac9-6cfa-493e-8ab6-3c007e3eb948] unicorn (5.2.0) lib/unicorn/http_server.rb:658:in `worker_loop'
+[f9b5dac9-6cfa-493e-8ab6-3c007e3eb948] unicorn (5.2.0) lib/unicorn/http_server.rb:508:in `spawn_missing_workers'
+[f9b5dac9-6cfa-493e-8ab6-3c007e3eb948] unicorn (5.2.0) lib/unicorn/http_server.rb:132:in `start'
+[f9b5dac9-6cfa-493e-8ab6-3c007e3eb948] unicorn (5.2.0) bin/unicorn:126:in `<top (required)>'
+[f9b5dac9-6cfa-493e-8ab6-3c007e3eb948] /usr/local/rvm/gems/ruby-2.2.3/bin/unicorn:23:in `load'
+[f9b5dac9-6cfa-493e-8ab6-3c007e3eb948] /usr/local/rvm/gems/ruby-2.2.3/bin/unicorn:23:in `<main>'
+[f9b5dac9-6cfa-493e-8ab6-3c007e3eb948] /usr/local/rvm/gems/ruby-2.2.3@global/bin/ruby_executable_hooks:15:in `eval'
+[f9b5dac9-6cfa-493e-8ab6-3c007e3eb948] /usr/local/rvm/gems/ruby-2.2.3@global/bin/ruby_executable_hooks:15:in `<main>'
+I, [2017-02-12T03:37:23.653595 #28491]  INFO -- : [fcba5c04-bc03-45e1-a9f7-04fc4b30de75] Started GET "/pma/scripts/setup.php" for 120.26.72.89 at 2017-02-12 03:37:23 -0500
+F, [2017-02-12T03:37:23.656587 #28491] FATAL -- : [fcba5c04-bc03-45e1-a9f7-04fc4b30de75]   
+F, [2017-02-12T03:37:23.656653 #28491] FATAL -- : [fcba5c04-bc03-45e1-a9f7-04fc4b30de75] ActionController::RoutingError (No route matches [GET] "/pma/scripts/setup.php"):
+F, [2017-02-12T03:37:23.656686 #28491] FATAL -- : [fcba5c04-bc03-45e1-a9f7-04fc4b30de75]   
+F, [2017-02-12T03:37:23.656721 #28491] FATAL -- : [fcba5c04-bc03-45e1-a9f7-04fc4b30de75] actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+[fcba5c04-bc03-45e1-a9f7-04fc4b30de75] actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+[fcba5c04-bc03-45e1-a9f7-04fc4b30de75] railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+[fcba5c04-bc03-45e1-a9f7-04fc4b30de75] railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+[fcba5c04-bc03-45e1-a9f7-04fc4b30de75] activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+[fcba5c04-bc03-45e1-a9f7-04fc4b30de75] activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+[fcba5c04-bc03-45e1-a9f7-04fc4b30de75] activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+[fcba5c04-bc03-45e1-a9f7-04fc4b30de75] railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+[fcba5c04-bc03-45e1-a9f7-04fc4b30de75] ahoy_matey (1.5.4) lib/ahoy/engine.rb:22:in `call_with_quiet_ahoy'
+[fcba5c04-bc03-45e1-a9f7-04fc4b30de75] request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+[fcba5c04-bc03-45e1-a9f7-04fc4b30de75] actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+[fcba5c04-bc03-45e1-a9f7-04fc4b30de75] rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+[fcba5c04-bc03-45e1-a9f7-04fc4b30de75] rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+[fcba5c04-bc03-45e1-a9f7-04fc4b30de75] activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+[fcba5c04-bc03-45e1-a9f7-04fc4b30de75] actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+[fcba5c04-bc03-45e1-a9f7-04fc4b30de75] rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+[fcba5c04-bc03-45e1-a9f7-04fc4b30de75] railties (5.0.1) lib/rails/engine.rb:522:in `call'
+[fcba5c04-bc03-45e1-a9f7-04fc4b30de75] unicorn (5.2.0) lib/unicorn/http_server.rb:562:in `process_client'
+[fcba5c04-bc03-45e1-a9f7-04fc4b30de75] unicorn (5.2.0) lib/unicorn/http_server.rb:658:in `worker_loop'
+[fcba5c04-bc03-45e1-a9f7-04fc4b30de75] unicorn (5.2.0) lib/unicorn/http_server.rb:508:in `spawn_missing_workers'
+[fcba5c04-bc03-45e1-a9f7-04fc4b30de75] unicorn (5.2.0) lib/unicorn/http_server.rb:132:in `start'
+[fcba5c04-bc03-45e1-a9f7-04fc4b30de75] unicorn (5.2.0) bin/unicorn:126:in `<top (required)>'
+[fcba5c04-bc03-45e1-a9f7-04fc4b30de75] /usr/local/rvm/gems/ruby-2.2.3/bin/unicorn:23:in `load'
+[fcba5c04-bc03-45e1-a9f7-04fc4b30de75] /usr/local/rvm/gems/ruby-2.2.3/bin/unicorn:23:in `<main>'
+[fcba5c04-bc03-45e1-a9f7-04fc4b30de75] /usr/local/rvm/gems/ruby-2.2.3@global/bin/ruby_executable_hooks:15:in `eval'
+[fcba5c04-bc03-45e1-a9f7-04fc4b30de75] /usr/local/rvm/gems/ruby-2.2.3@global/bin/ruby_executable_hooks:15:in `<main>'
+I, [2017-02-12T03:37:24.087757 #28489]  INFO -- : [f200a0ef-5ce8-4522-96f1-7725fabd732a] Started GET "/myadmin/scripts/setup.php" for 120.26.72.89 at 2017-02-12 03:37:24 -0500
+F, [2017-02-12T03:37:24.092748 #28489] FATAL -- : [f200a0ef-5ce8-4522-96f1-7725fabd732a]   
+F, [2017-02-12T03:37:24.092842 #28489] FATAL -- : [f200a0ef-5ce8-4522-96f1-7725fabd732a] ActionController::RoutingError (No route matches [GET] "/myadmin/scripts/setup.php"):
+F, [2017-02-12T03:37:24.092878 #28489] FATAL -- : [f200a0ef-5ce8-4522-96f1-7725fabd732a]   
+F, [2017-02-12T03:37:24.092933 #28489] FATAL -- : [f200a0ef-5ce8-4522-96f1-7725fabd732a] actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+[f200a0ef-5ce8-4522-96f1-7725fabd732a] actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+[f200a0ef-5ce8-4522-96f1-7725fabd732a] railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+[f200a0ef-5ce8-4522-96f1-7725fabd732a] railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+[f200a0ef-5ce8-4522-96f1-7725fabd732a] activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+[f200a0ef-5ce8-4522-96f1-7725fabd732a] activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+[f200a0ef-5ce8-4522-96f1-7725fabd732a] activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+[f200a0ef-5ce8-4522-96f1-7725fabd732a] railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+[f200a0ef-5ce8-4522-96f1-7725fabd732a] ahoy_matey (1.5.4) lib/ahoy/engine.rb:22:in `call_with_quiet_ahoy'
+[f200a0ef-5ce8-4522-96f1-7725fabd732a] request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+[f200a0ef-5ce8-4522-96f1-7725fabd732a] actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+[f200a0ef-5ce8-4522-96f1-7725fabd732a] rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+[f200a0ef-5ce8-4522-96f1-7725fabd732a] rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+[f200a0ef-5ce8-4522-96f1-7725fabd732a] activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+[f200a0ef-5ce8-4522-96f1-7725fabd732a] actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+[f200a0ef-5ce8-4522-96f1-7725fabd732a] rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+[f200a0ef-5ce8-4522-96f1-7725fabd732a] railties (5.0.1) lib/rails/engine.rb:522:in `call'
+[f200a0ef-5ce8-4522-96f1-7725fabd732a] unicorn (5.2.0) lib/unicorn/http_server.rb:562:in `process_client'
+[f200a0ef-5ce8-4522-96f1-7725fabd732a] unicorn (5.2.0) lib/unicorn/http_server.rb:658:in `worker_loop'
+[f200a0ef-5ce8-4522-96f1-7725fabd732a] unicorn (5.2.0) lib/unicorn/http_server.rb:508:in `spawn_missing_workers'
+[f200a0ef-5ce8-4522-96f1-7725fabd732a] unicorn (5.2.0) lib/unicorn/http_server.rb:132:in `start'
+[f200a0ef-5ce8-4522-96f1-7725fabd732a] unicorn (5.2.0) bin/unicorn:126:in `<top (required)>'
+[f200a0ef-5ce8-4522-96f1-7725fabd732a] /usr/local/rvm/gems/ruby-2.2.3/bin/unicorn:23:in `load'
+[f200a0ef-5ce8-4522-96f1-7725fabd732a] /usr/local/rvm/gems/ruby-2.2.3/bin/unicorn:23:in `<main>'
+[f200a0ef-5ce8-4522-96f1-7725fabd732a] /usr/local/rvm/gems/ruby-2.2.3@global/bin/ruby_executable_hooks:15:in `eval'
+[f200a0ef-5ce8-4522-96f1-7725fabd732a] /usr/local/rvm/gems/ruby-2.2.3@global/bin/ruby_executable_hooks:15:in `<main>'
+I, [2017-02-12T03:47:54.494881 #28491]  INFO -- : [36965f57-92f9-437c-8b80-103442b19cbc] Started GET "/" for 54.212.211.53 at 2017-02-12 03:47:54 -0500
+I, [2017-02-12T03:47:54.503427 #28491]  INFO -- : [36965f57-92f9-437c-8b80-103442b19cbc] Processing by WelcomeController#home as HTML
+I, [2017-02-12T03:47:54.510704 #28491]  INFO -- : [36965f57-92f9-437c-8b80-103442b19cbc] Redirected to http://www.jointhebloc.com/users/sign_up
+I, [2017-02-12T03:47:54.511205 #28491]  INFO -- : [36965f57-92f9-437c-8b80-103442b19cbc] Completed 302 Found in 7ms (ActiveRecord: 0.0ms)
+I, [2017-02-12T03:47:56.345214 #28485]  INFO -- : [7ded31ec-aa61-4682-8a02-f9173225a628] Started GET "/users/sign_up" for 54.212.211.53 at 2017-02-12 03:47:56 -0500
+I, [2017-02-12T03:47:56.352567 #28485]  INFO -- : [7ded31ec-aa61-4682-8a02-f9173225a628] Processing by Devise::RegistrationsController#new as HTML
+I, [2017-02-12T03:47:56.359384 #28485]  INFO -- : [7ded31ec-aa61-4682-8a02-f9173225a628]   Rendering users/registrations/new.html.erb within layouts/application
+I, [2017-02-12T03:47:56.360456 #28485]  INFO -- : [7ded31ec-aa61-4682-8a02-f9173225a628]   Rendered users/registrations/new.html.erb within layouts/application (0.8ms)
+I, [2017-02-12T03:47:56.362429 #28485]  INFO -- : [7ded31ec-aa61-4682-8a02-f9173225a628] Completed 200 OK in 10ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+I, [2017-02-12T08:14:50.346232 #28491]  INFO -- : [d5ec7a9d-18b4-4ee8-9eb9-355caa9baa1e] Started GET "/" for 60.191.38.77 at 2017-02-12 08:14:50 -0500
+I, [2017-02-12T08:14:50.353980 #28491]  INFO -- : [d5ec7a9d-18b4-4ee8-9eb9-355caa9baa1e] Processing by WelcomeController#home as HTML
+I, [2017-02-12T08:14:50.360411 #28491]  INFO -- : [d5ec7a9d-18b4-4ee8-9eb9-355caa9baa1e] Redirected to http://138.197.67.134/users/sign_up
+I, [2017-02-12T08:14:50.360948 #28491]  INFO -- : [d5ec7a9d-18b4-4ee8-9eb9-355caa9baa1e] Completed 302 Found in 7ms (ActiveRecord: 0.0ms)
+I, [2017-02-12T16:29:59.867377 #28491]  INFO -- : [2a98aef7-4afe-4e4b-b62d-2695815be53f] Started GET "/" for 66.249.69.172 at 2017-02-12 16:29:59 -0500
+I, [2017-02-12T16:29:59.874336 #28491]  INFO -- : [2a98aef7-4afe-4e4b-b62d-2695815be53f] Processing by WelcomeController#home as HTML
+D, [2017-02-12T16:29:59.878315 #28491] DEBUG -- : [2a98aef7-4afe-4e4b-b62d-2695815be53f] [ahoy] Visit excluded
+I, [2017-02-12T16:29:59.880964 #28491]  INFO -- : [2a98aef7-4afe-4e4b-b62d-2695815be53f] Redirected to http://www.jointhebloc.com/users/sign_up
+I, [2017-02-12T16:29:59.881466 #28491]  INFO -- : [2a98aef7-4afe-4e4b-b62d-2695815be53f] Completed 302 Found in 7ms (ActiveRecord: 0.0ms)
+I, [2017-02-12T16:30:00.836533 #28487]  INFO -- : [958afcb0-375d-41d4-ac43-0d6914bedb13] Started GET "/users/sign_up" for 66.249.69.172 at 2017-02-12 16:30:00 -0500
+I, [2017-02-12T16:30:00.841414 #28487]  INFO -- : [958afcb0-375d-41d4-ac43-0d6914bedb13] Processing by Devise::RegistrationsController#new as HTML
+I, [2017-02-12T16:30:00.845965 #28487]  INFO -- : [958afcb0-375d-41d4-ac43-0d6914bedb13]   Rendering users/registrations/new.html.erb within layouts/application
+I, [2017-02-12T16:30:00.846835 #28487]  INFO -- : [958afcb0-375d-41d4-ac43-0d6914bedb13]   Rendered users/registrations/new.html.erb within layouts/application (0.7ms)
+I, [2017-02-12T16:30:00.848433 #28487]  INFO -- : [958afcb0-375d-41d4-ac43-0d6914bedb13] Completed 200 OK in 7ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+I, [2017-02-12T17:22:37.189689 #28491]  INFO -- : [6a9dbb10-0f1e-4970-978d-34abdabdd11e] Started GET "/recordings/" for 37.61.221.31 at 2017-02-12 17:22:37 -0500
+I, [2017-02-12T17:22:37.200714 #28491]  INFO -- : [6a9dbb10-0f1e-4970-978d-34abdabdd11e] Processing by ProfileController#show as */*
+I, [2017-02-12T17:22:37.200859 #28491]  INFO -- : [6a9dbb10-0f1e-4970-978d-34abdabdd11e]   Parameters: {"profileurl"=>"recordings"}
+D, [2017-02-12T17:22:37.204084 #28491] DEBUG -- : [6a9dbb10-0f1e-4970-978d-34abdabdd11e] [ahoy] Visit excluded
+D, [2017-02-12T17:22:37.224862 #28491] DEBUG -- : [6a9dbb10-0f1e-4970-978d-34abdabdd11e]   [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."profileurl" = $1 LIMIT $2[0m  [["profileurl", "recordings"], ["LIMIT", 1]]
+I, [2017-02-12T17:22:37.227285 #28491]  INFO -- : [6a9dbb10-0f1e-4970-978d-34abdabdd11e] Completed 500 Internal Server Error in 26ms (ActiveRecord: 5.4ms)
+F, [2017-02-12T17:22:37.228600 #28491] FATAL -- : [6a9dbb10-0f1e-4970-978d-34abdabdd11e]   
+F, [2017-02-12T17:22:37.228679 #28491] FATAL -- : [6a9dbb10-0f1e-4970-978d-34abdabdd11e] NoMethodError (undefined method `id' for nil:NilClass):
+F, [2017-02-12T17:22:37.228716 #28491] FATAL -- : [6a9dbb10-0f1e-4970-978d-34abdabdd11e]   
+F, [2017-02-12T17:22:37.228748 #28491] FATAL -- : [6a9dbb10-0f1e-4970-978d-34abdabdd11e] app/controllers/profile_controller.rb:30:in `show'
+I, [2017-02-12T18:21:44.458582 #28489]  INFO -- : [cce0f80f-04f8-4e84-9613-0f5c648e125f] Started GET "/" for 185.110.132.231 at 2017-02-12 18:21:44 -0500
+I, [2017-02-12T18:21:44.466366 #28489]  INFO -- : [cce0f80f-04f8-4e84-9613-0f5c648e125f] Processing by WelcomeController#home as HTML
+I, [2017-02-12T18:21:44.472830 #28489]  INFO -- : [cce0f80f-04f8-4e84-9613-0f5c648e125f] Redirected to http://138.197.67.134/users/sign_up
+I, [2017-02-12T18:21:44.473180 #28489]  INFO -- : [cce0f80f-04f8-4e84-9613-0f5c648e125f] Completed 302 Found in 7ms (ActiveRecord: 0.0ms)
+I, [2017-02-12T19:25:52.627738 #28485]  INFO -- : [1b5c41c9-db90-48a8-af26-7cd1cce330a0] Started GET "/" for 162.243.188.75 at 2017-02-12 19:25:52 -0500
+I, [2017-02-12T19:25:52.634143 #28485]  INFO -- : [1b5c41c9-db90-48a8-af26-7cd1cce330a0] Processing by WelcomeController#home as */*
+I, [2017-02-12T19:25:52.638812 #28485]  INFO -- : [1b5c41c9-db90-48a8-af26-7cd1cce330a0] Redirected to http://localhost/users/sign_up
+I, [2017-02-12T19:25:52.639165 #28485]  INFO -- : [1b5c41c9-db90-48a8-af26-7cd1cce330a0] Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+I, [2017-02-12T22:37:53.423810 #28489]  INFO -- : [2d0cbb8b-d105-4737-b730-5675dae64ee2] Started GET "/" for 162.216.152.51 at 2017-02-12 22:37:53 -0500
+I, [2017-02-12T22:37:53.431561 #28489]  INFO -- : [2d0cbb8b-d105-4737-b730-5675dae64ee2] Processing by WelcomeController#home as HTML
+I, [2017-02-12T22:37:53.438224 #28489]  INFO -- : [2d0cbb8b-d105-4737-b730-5675dae64ee2] Redirected to http://localhost/users/sign_up
+I, [2017-02-12T22:37:53.438774 #28489]  INFO -- : [2d0cbb8b-d105-4737-b730-5675dae64ee2] Completed 302 Found in 7ms (ActiveRecord: 0.0ms)
+I, [2017-02-12T22:43:00.666864 #28491]  INFO -- : [b191d044-1bec-4890-a00f-d9e744016428] Started GET "/" for 123.151.42.61 at 2017-02-12 22:43:00 -0500
+I, [2017-02-12T22:43:00.674719 #28491]  INFO -- : [b191d044-1bec-4890-a00f-d9e744016428] Processing by WelcomeController#home as */*
+I, [2017-02-12T22:43:00.680759 #28491]  INFO -- : [b191d044-1bec-4890-a00f-d9e744016428] Redirected to http://www.baidu.com/users/sign_up
+I, [2017-02-12T22:43:00.681208 #28491]  INFO -- : [b191d044-1bec-4890-a00f-d9e744016428] Completed 302 Found in 6ms (ActiveRecord: 0.0ms)
+I, [2017-02-13T00:29:56.694228 #28489]  INFO -- : [bec0cdc8-f742-4f34-a7dd-1302c44bffe0] Started GET "/" for 66.249.69.166 at 2017-02-13 00:29:56 -0500
+I, [2017-02-13T00:29:56.699190 #28489]  INFO -- : [bec0cdc8-f742-4f34-a7dd-1302c44bffe0] Processing by WelcomeController#home as HTML
+D, [2017-02-13T00:29:56.701861 #28489] DEBUG -- : [bec0cdc8-f742-4f34-a7dd-1302c44bffe0] [ahoy] Visit excluded
+I, [2017-02-13T00:29:56.703454 #28489]  INFO -- : [bec0cdc8-f742-4f34-a7dd-1302c44bffe0] Redirected to http://www.jointhebloc.com/users/sign_up
+I, [2017-02-13T00:29:56.703746 #28489]  INFO -- : [bec0cdc8-f742-4f34-a7dd-1302c44bffe0] Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+I, [2017-02-13T00:29:57.666180 #28485]  INFO -- : [2757b106-508e-4622-b69d-ae7e7fa7d60f] Started GET "/users/sign_up" for 66.249.69.166 at 2017-02-13 00:29:57 -0500
+I, [2017-02-13T00:29:57.672810 #28485]  INFO -- : [2757b106-508e-4622-b69d-ae7e7fa7d60f] Processing by Devise::RegistrationsController#new as HTML
+I, [2017-02-13T00:29:57.678265 #28485]  INFO -- : [2757b106-508e-4622-b69d-ae7e7fa7d60f]   Rendering users/registrations/new.html.erb within layouts/application
+I, [2017-02-13T00:29:57.679203 #28485]  INFO -- : [2757b106-508e-4622-b69d-ae7e7fa7d60f]   Rendered users/registrations/new.html.erb within layouts/application (0.7ms)
+I, [2017-02-13T00:29:57.681207 #28485]  INFO -- : [2757b106-508e-4622-b69d-ae7e7fa7d60f] Completed 200 OK in 8ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+I, [2017-02-13T02:46:55.675697 #28491]  INFO -- : [897bab95-86d5-465e-94d8-048968e9bc3b] Started GET "/phpTest/zologize/axa.php" for 84.1.176.57 at 2017-02-13 02:46:55 -0500
+F, [2017-02-13T02:46:55.681842 #28491] FATAL -- : [897bab95-86d5-465e-94d8-048968e9bc3b]   
+F, [2017-02-13T02:46:55.681972 #28491] FATAL -- : [897bab95-86d5-465e-94d8-048968e9bc3b] ActionController::RoutingError (No route matches [GET] "/phpTest/zologize/axa.php"):
+F, [2017-02-13T02:46:55.682055 #28491] FATAL -- : [897bab95-86d5-465e-94d8-048968e9bc3b]   
+F, [2017-02-13T02:46:55.682121 #28491] FATAL -- : [897bab95-86d5-465e-94d8-048968e9bc3b] actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+[897bab95-86d5-465e-94d8-048968e9bc3b] actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+[897bab95-86d5-465e-94d8-048968e9bc3b] railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+[897bab95-86d5-465e-94d8-048968e9bc3b] railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+[897bab95-86d5-465e-94d8-048968e9bc3b] activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+[897bab95-86d5-465e-94d8-048968e9bc3b] activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+[897bab95-86d5-465e-94d8-048968e9bc3b] activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+[897bab95-86d5-465e-94d8-048968e9bc3b] railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+[897bab95-86d5-465e-94d8-048968e9bc3b] ahoy_matey (1.5.4) lib/ahoy/engine.rb:22:in `call_with_quiet_ahoy'
+[897bab95-86d5-465e-94d8-048968e9bc3b] request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+[897bab95-86d5-465e-94d8-048968e9bc3b] actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+[897bab95-86d5-465e-94d8-048968e9bc3b] rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+[897bab95-86d5-465e-94d8-048968e9bc3b] rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+[897bab95-86d5-465e-94d8-048968e9bc3b] activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+[897bab95-86d5-465e-94d8-048968e9bc3b] actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+[897bab95-86d5-465e-94d8-048968e9bc3b] rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+[897bab95-86d5-465e-94d8-048968e9bc3b] railties (5.0.1) lib/rails/engine.rb:522:in `call'
+[897bab95-86d5-465e-94d8-048968e9bc3b] unicorn (5.2.0) lib/unicorn/http_server.rb:562:in `process_client'
+[897bab95-86d5-465e-94d8-048968e9bc3b] unicorn (5.2.0) lib/unicorn/http_server.rb:658:in `worker_loop'
+[897bab95-86d5-465e-94d8-048968e9bc3b] unicorn (5.2.0) lib/unicorn/http_server.rb:508:in `spawn_missing_workers'
+[897bab95-86d5-465e-94d8-048968e9bc3b] unicorn (5.2.0) lib/unicorn/http_server.rb:132:in `start'
+[897bab95-86d5-465e-94d8-048968e9bc3b] unicorn (5.2.0) bin/unicorn:126:in `<top (required)>'
+[897bab95-86d5-465e-94d8-048968e9bc3b] /usr/local/rvm/gems/ruby-2.2.3/bin/unicorn:23:in `load'
+[897bab95-86d5-465e-94d8-048968e9bc3b] /usr/local/rvm/gems/ruby-2.2.3/bin/unicorn:23:in `<main>'
+[897bab95-86d5-465e-94d8-048968e9bc3b] /usr/local/rvm/gems/ruby-2.2.3@global/bin/ruby_executable_hooks:15:in `eval'
+[897bab95-86d5-465e-94d8-048968e9bc3b] /usr/local/rvm/gems/ruby-2.2.3@global/bin/ruby_executable_hooks:15:in `<main>'
+I, [2017-02-13T02:46:56.047601 #28485]  INFO -- : [43258d6d-571e-4731-b53e-cfe4f31cb5a9] Started GET "/phpMyAdmin/scripts/setup.php" for 84.1.176.57 at 2017-02-13 02:46:56 -0500
+F, [2017-02-13T02:46:56.053537 #28485] FATAL -- : [43258d6d-571e-4731-b53e-cfe4f31cb5a9]   
+F, [2017-02-13T02:46:56.053687 #28485] FATAL -- : [43258d6d-571e-4731-b53e-cfe4f31cb5a9] ActionController::RoutingError (No route matches [GET] "/phpMyAdmin/scripts/setup.php"):
+F, [2017-02-13T02:46:56.053728 #28485] FATAL -- : [43258d6d-571e-4731-b53e-cfe4f31cb5a9]   
+F, [2017-02-13T02:46:56.053784 #28485] FATAL -- : [43258d6d-571e-4731-b53e-cfe4f31cb5a9] actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+[43258d6d-571e-4731-b53e-cfe4f31cb5a9] actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+[43258d6d-571e-4731-b53e-cfe4f31cb5a9] railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+[43258d6d-571e-4731-b53e-cfe4f31cb5a9] railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+[43258d6d-571e-4731-b53e-cfe4f31cb5a9] activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+[43258d6d-571e-4731-b53e-cfe4f31cb5a9] activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+[43258d6d-571e-4731-b53e-cfe4f31cb5a9] activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+[43258d6d-571e-4731-b53e-cfe4f31cb5a9] railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+[43258d6d-571e-4731-b53e-cfe4f31cb5a9] ahoy_matey (1.5.4) lib/ahoy/engine.rb:22:in `call_with_quiet_ahoy'
+[43258d6d-571e-4731-b53e-cfe4f31cb5a9] request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+[43258d6d-571e-4731-b53e-cfe4f31cb5a9] actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+[43258d6d-571e-4731-b53e-cfe4f31cb5a9] rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+[43258d6d-571e-4731-b53e-cfe4f31cb5a9] rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+[43258d6d-571e-4731-b53e-cfe4f31cb5a9] activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+[43258d6d-571e-4731-b53e-cfe4f31cb5a9] actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+[43258d6d-571e-4731-b53e-cfe4f31cb5a9] rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+[43258d6d-571e-4731-b53e-cfe4f31cb5a9] railties (5.0.1) lib/rails/engine.rb:522:in `call'
+[43258d6d-571e-4731-b53e-cfe4f31cb5a9] unicorn (5.2.0) lib/unicorn/http_server.rb:562:in `process_client'
+[43258d6d-571e-4731-b53e-cfe4f31cb5a9] unicorn (5.2.0) lib/unicorn/http_server.rb:658:in `worker_loop'
+[43258d6d-571e-4731-b53e-cfe4f31cb5a9] unicorn (5.2.0) lib/unicorn/http_server.rb:508:in `spawn_missing_workers'
+[43258d6d-571e-4731-b53e-cfe4f31cb5a9] unicorn (5.2.0) lib/unicorn/http_server.rb:132:in `start'
+[43258d6d-571e-4731-b53e-cfe4f31cb5a9] unicorn (5.2.0) bin/unicorn:126:in `<top (required)>'
+[43258d6d-571e-4731-b53e-cfe4f31cb5a9] /usr/local/rvm/gems/ruby-2.2.3/bin/unicorn:23:in `load'
+[43258d6d-571e-4731-b53e-cfe4f31cb5a9] /usr/local/rvm/gems/ruby-2.2.3/bin/unicorn:23:in `<main>'
+[43258d6d-571e-4731-b53e-cfe4f31cb5a9] /usr/local/rvm/gems/ruby-2.2.3@global/bin/ruby_executable_hooks:15:in `eval'
+[43258d6d-571e-4731-b53e-cfe4f31cb5a9] /usr/local/rvm/gems/ruby-2.2.3@global/bin/ruby_executable_hooks:15:in `<main>'
+I, [2017-02-13T02:46:56.382614 #28491]  INFO -- : [b9746997-b465-4c25-ae3e-5bc9d3215c5d] Started GET "/pma/scripts/setup.php" for 84.1.176.57 at 2017-02-13 02:46:56 -0500
+F, [2017-02-13T02:46:56.386056 #28491] FATAL -- : [b9746997-b465-4c25-ae3e-5bc9d3215c5d]   
+F, [2017-02-13T02:46:56.386142 #28491] FATAL -- : [b9746997-b465-4c25-ae3e-5bc9d3215c5d] ActionController::RoutingError (No route matches [GET] "/pma/scripts/setup.php"):
+F, [2017-02-13T02:46:56.386176 #28491] FATAL -- : [b9746997-b465-4c25-ae3e-5bc9d3215c5d]   
+F, [2017-02-13T02:46:56.386212 #28491] FATAL -- : [b9746997-b465-4c25-ae3e-5bc9d3215c5d] actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+[b9746997-b465-4c25-ae3e-5bc9d3215c5d] actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+[b9746997-b465-4c25-ae3e-5bc9d3215c5d] railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+[b9746997-b465-4c25-ae3e-5bc9d3215c5d] railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+[b9746997-b465-4c25-ae3e-5bc9d3215c5d] activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+[b9746997-b465-4c25-ae3e-5bc9d3215c5d] activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+[b9746997-b465-4c25-ae3e-5bc9d3215c5d] activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+[b9746997-b465-4c25-ae3e-5bc9d3215c5d] railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+[b9746997-b465-4c25-ae3e-5bc9d3215c5d] ahoy_matey (1.5.4) lib/ahoy/engine.rb:22:in `call_with_quiet_ahoy'
+[b9746997-b465-4c25-ae3e-5bc9d3215c5d] request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+[b9746997-b465-4c25-ae3e-5bc9d3215c5d] actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+[b9746997-b465-4c25-ae3e-5bc9d3215c5d] rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+[b9746997-b465-4c25-ae3e-5bc9d3215c5d] rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+[b9746997-b465-4c25-ae3e-5bc9d3215c5d] activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+[b9746997-b465-4c25-ae3e-5bc9d3215c5d] actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+[b9746997-b465-4c25-ae3e-5bc9d3215c5d] rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+[b9746997-b465-4c25-ae3e-5bc9d3215c5d] railties (5.0.1) lib/rails/engine.rb:522:in `call'
+[b9746997-b465-4c25-ae3e-5bc9d3215c5d] unicorn (5.2.0) lib/unicorn/http_server.rb:562:in `process_client'
+[b9746997-b465-4c25-ae3e-5bc9d3215c5d] unicorn (5.2.0) lib/unicorn/http_server.rb:658:in `worker_loop'
+[b9746997-b465-4c25-ae3e-5bc9d3215c5d] unicorn (5.2.0) lib/unicorn/http_server.rb:508:in `spawn_missing_workers'
+[b9746997-b465-4c25-ae3e-5bc9d3215c5d] unicorn (5.2.0) lib/unicorn/http_server.rb:132:in `start'
+[b9746997-b465-4c25-ae3e-5bc9d3215c5d] unicorn (5.2.0) bin/unicorn:126:in `<top (required)>'
+[b9746997-b465-4c25-ae3e-5bc9d3215c5d] /usr/local/rvm/gems/ruby-2.2.3/bin/unicorn:23:in `load'
+[b9746997-b465-4c25-ae3e-5bc9d3215c5d] /usr/local/rvm/gems/ruby-2.2.3/bin/unicorn:23:in `<main>'
+[b9746997-b465-4c25-ae3e-5bc9d3215c5d] /usr/local/rvm/gems/ruby-2.2.3@global/bin/ruby_executable_hooks:15:in `eval'
+[b9746997-b465-4c25-ae3e-5bc9d3215c5d] /usr/local/rvm/gems/ruby-2.2.3@global/bin/ruby_executable_hooks:15:in `<main>'
+I, [2017-02-13T02:46:56.744516 #28489]  INFO -- : [dff2e6cc-0af6-4ec8-b565-898dbf6b64fc] Started GET "/myadmin/scripts/setup.php" for 84.1.176.57 at 2017-02-13 02:46:56 -0500
+F, [2017-02-13T02:46:56.748896 #28489] FATAL -- : [dff2e6cc-0af6-4ec8-b565-898dbf6b64fc]   
+F, [2017-02-13T02:46:56.748979 #28489] FATAL -- : [dff2e6cc-0af6-4ec8-b565-898dbf6b64fc] ActionController::RoutingError (No route matches [GET] "/myadmin/scripts/setup.php"):
+F, [2017-02-13T02:46:56.749015 #28489] FATAL -- : [dff2e6cc-0af6-4ec8-b565-898dbf6b64fc]   
+F, [2017-02-13T02:46:56.749064 #28489] FATAL -- : [dff2e6cc-0af6-4ec8-b565-898dbf6b64fc] actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+[dff2e6cc-0af6-4ec8-b565-898dbf6b64fc] actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+[dff2e6cc-0af6-4ec8-b565-898dbf6b64fc] railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+[dff2e6cc-0af6-4ec8-b565-898dbf6b64fc] railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+[dff2e6cc-0af6-4ec8-b565-898dbf6b64fc] activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+[dff2e6cc-0af6-4ec8-b565-898dbf6b64fc] activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+[dff2e6cc-0af6-4ec8-b565-898dbf6b64fc] activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+[dff2e6cc-0af6-4ec8-b565-898dbf6b64fc] railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+[dff2e6cc-0af6-4ec8-b565-898dbf6b64fc] ahoy_matey (1.5.4) lib/ahoy/engine.rb:22:in `call_with_quiet_ahoy'
+[dff2e6cc-0af6-4ec8-b565-898dbf6b64fc] request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+[dff2e6cc-0af6-4ec8-b565-898dbf6b64fc] actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+[dff2e6cc-0af6-4ec8-b565-898dbf6b64fc] rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+[dff2e6cc-0af6-4ec8-b565-898dbf6b64fc] rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+[dff2e6cc-0af6-4ec8-b565-898dbf6b64fc] activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+[dff2e6cc-0af6-4ec8-b565-898dbf6b64fc] actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+[dff2e6cc-0af6-4ec8-b565-898dbf6b64fc] rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+[dff2e6cc-0af6-4ec8-b565-898dbf6b64fc] railties (5.0.1) lib/rails/engine.rb:522:in `call'
+[dff2e6cc-0af6-4ec8-b565-898dbf6b64fc] unicorn (5.2.0) lib/unicorn/http_server.rb:562:in `process_client'
+[dff2e6cc-0af6-4ec8-b565-898dbf6b64fc] unicorn (5.2.0) lib/unicorn/http_server.rb:658:in `worker_loop'
+[dff2e6cc-0af6-4ec8-b565-898dbf6b64fc] unicorn (5.2.0) lib/unicorn/http_server.rb:508:in `spawn_missing_workers'
+[dff2e6cc-0af6-4ec8-b565-898dbf6b64fc] unicorn (5.2.0) lib/unicorn/http_server.rb:132:in `start'
+[dff2e6cc-0af6-4ec8-b565-898dbf6b64fc] unicorn (5.2.0) bin/unicorn:126:in `<top (required)>'
+[dff2e6cc-0af6-4ec8-b565-898dbf6b64fc] /usr/local/rvm/gems/ruby-2.2.3/bin/unicorn:23:in `load'
+[dff2e6cc-0af6-4ec8-b565-898dbf6b64fc] /usr/local/rvm/gems/ruby-2.2.3/bin/unicorn:23:in `<main>'
+[dff2e6cc-0af6-4ec8-b565-898dbf6b64fc] /usr/local/rvm/gems/ruby-2.2.3@global/bin/ruby_executable_hooks:15:in `eval'
+[dff2e6cc-0af6-4ec8-b565-898dbf6b64fc] /usr/local/rvm/gems/ruby-2.2.3@global/bin/ruby_executable_hooks:15:in `<main>'
+I, [2017-02-13T04:09:57.744238 #28487]  INFO -- : [fc48aa21-548f-40fa-a422-08be9302eff9] Started GET "/" for 66.249.69.166 at 2017-02-13 04:09:57 -0500
+I, [2017-02-13T04:09:57.749445 #28487]  INFO -- : [fc48aa21-548f-40fa-a422-08be9302eff9] Processing by WelcomeController#home as HTML
+D, [2017-02-13T04:09:57.752597 #28487] DEBUG -- : [fc48aa21-548f-40fa-a422-08be9302eff9] [ahoy] Visit excluded
+I, [2017-02-13T04:09:57.754238 #28487]  INFO -- : [fc48aa21-548f-40fa-a422-08be9302eff9] Redirected to http://www.jointhebloc.com/users/sign_up
+I, [2017-02-13T04:09:57.754631 #28487]  INFO -- : [fc48aa21-548f-40fa-a422-08be9302eff9] Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+I, [2017-02-13T04:09:58.743618 #28491]  INFO -- : [a8edec9b-7c89-49ee-946b-5f35e6c11fcf] Started GET "/users/sign_up" for 66.249.69.169 at 2017-02-13 04:09:58 -0500
+I, [2017-02-13T04:09:58.754656 #28491]  INFO -- : [a8edec9b-7c89-49ee-946b-5f35e6c11fcf] Processing by Devise::RegistrationsController#new as HTML
+I, [2017-02-13T04:09:58.825386 #28491]  INFO -- : [a8edec9b-7c89-49ee-946b-5f35e6c11fcf]   Rendering users/registrations/new.html.erb within layouts/application
+I, [2017-02-13T04:09:58.827651 #28491]  INFO -- : [a8edec9b-7c89-49ee-946b-5f35e6c11fcf]   Rendered users/registrations/new.html.erb within layouts/application (2.1ms)
+I, [2017-02-13T04:09:58.831034 #28491]  INFO -- : [a8edec9b-7c89-49ee-946b-5f35e6c11fcf] Completed 200 OK in 76ms (Views: 10.3ms | ActiveRecord: 3.0ms)
+I, [2017-02-13T06:00:20.333029 #28489]  INFO -- : [be50849d-1772-4a53-a524-466833a54dd9] Started GET "/" for 89.248.172.90 at 2017-02-13 06:00:20 -0500
+I, [2017-02-13T06:00:20.338355 #28489]  INFO -- : [be50849d-1772-4a53-a524-466833a54dd9] Processing by WelcomeController#home as HTML
+I, [2017-02-13T06:00:20.342387 #28489]  INFO -- : [be50849d-1772-4a53-a524-466833a54dd9] Redirected to http://httpheader.net/users/sign_up
+I, [2017-02-13T06:00:20.342693 #28489]  INFO -- : [be50849d-1772-4a53-a524-466833a54dd9] Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+I, [2017-02-13T06:00:20.570981 #28491]  INFO -- : [6e026e47-98b0-4304-8d2e-61e1fc4d39bf] Started GET "/users/sign_up" for 89.248.172.90 at 2017-02-13 06:00:20 -0500
+I, [2017-02-13T06:00:20.583474 #28491]  INFO -- : [6e026e47-98b0-4304-8d2e-61e1fc4d39bf] Processing by Devise::RegistrationsController#new as HTML
+I, [2017-02-13T06:00:20.598470 #28491]  INFO -- : [6e026e47-98b0-4304-8d2e-61e1fc4d39bf]   Rendering users/registrations/new.html.erb within layouts/application
+I, [2017-02-13T06:00:20.599940 #28491]  INFO -- : [6e026e47-98b0-4304-8d2e-61e1fc4d39bf]   Rendered users/registrations/new.html.erb within layouts/application (1.1ms)
+I, [2017-02-13T06:00:20.603587 #28491]  INFO -- : [6e026e47-98b0-4304-8d2e-61e1fc4d39bf] Completed 200 OK in 20ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+I, [2017-02-13T07:35:50.828754 #28485]  INFO -- : [1748dce8-f0f2-4c95-9276-dac35100dfb4] Started GET "/" for 139.162.108.53 at 2017-02-13 07:35:50 -0500
+I, [2017-02-13T07:35:50.838494 #28485]  INFO -- : [1748dce8-f0f2-4c95-9276-dac35100dfb4] Processing by WelcomeController#home as HTML
+I, [2017-02-13T07:35:50.845628 #28485]  INFO -- : [1748dce8-f0f2-4c95-9276-dac35100dfb4] Redirected to http://138.197.67.134/users/sign_up
+I, [2017-02-13T07:35:50.846169 #28485]  INFO -- : [1748dce8-f0f2-4c95-9276-dac35100dfb4] Completed 302 Found in 7ms (ActiveRecord: 0.0ms)
+I, [2017-02-13T07:35:51.171011 #28489]  INFO -- : [317a0f39-b34a-4c87-aa11-49512d499ca6] Started GET "/users/sign_up" for 139.162.108.53 at 2017-02-13 07:35:51 -0500
+I, [2017-02-13T07:35:51.176724 #28489]  INFO -- : [317a0f39-b34a-4c87-aa11-49512d499ca6] Processing by Devise::RegistrationsController#new as HTML
+I, [2017-02-13T07:35:51.182979 #28489]  INFO -- : [317a0f39-b34a-4c87-aa11-49512d499ca6]   Rendering users/registrations/new.html.erb within layouts/application
+I, [2017-02-13T07:35:51.183725 #28489]  INFO -- : [317a0f39-b34a-4c87-aa11-49512d499ca6]   Rendered users/registrations/new.html.erb within layouts/application (0.5ms)
+I, [2017-02-13T07:35:51.185659 #28489]  INFO -- : [317a0f39-b34a-4c87-aa11-49512d499ca6] Completed 200 OK in 9ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+I, [2017-02-13T10:56:52.105077 #28485]  INFO -- : [98c466a5-cf64-46eb-8b0c-ce9b62c916a1] Started GET "/" for 162.216.152.51 at 2017-02-13 10:56:52 -0500
+I, [2017-02-13T10:56:52.111015 #28485]  INFO -- : [98c466a5-cf64-46eb-8b0c-ce9b62c916a1] Processing by WelcomeController#home as HTML
+I, [2017-02-13T10:56:52.115772 #28485]  INFO -- : [98c466a5-cf64-46eb-8b0c-ce9b62c916a1] Redirected to http://localhost/users/sign_up
+I, [2017-02-13T10:56:52.116105 #28485]  INFO -- : [98c466a5-cf64-46eb-8b0c-ce9b62c916a1] Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+I, [2017-02-13T11:50:12.096993 #28489]  INFO -- : [865aab03-8941-4c59-ac89-85dee90ea9b1] Started GET "//recordings/LICENSE.txt" for 146.0.229.51 at 2017-02-13 11:50:12 -0500
+F, [2017-02-13T11:50:12.105053 #28489] FATAL -- : [865aab03-8941-4c59-ac89-85dee90ea9b1]   
+F, [2017-02-13T11:50:12.105240 #28489] FATAL -- : [865aab03-8941-4c59-ac89-85dee90ea9b1] ActionController::RoutingError (No route matches [GET] "/recordings/LICENSE.txt"):
+F, [2017-02-13T11:50:12.105312 #28489] FATAL -- : [865aab03-8941-4c59-ac89-85dee90ea9b1]   
+F, [2017-02-13T11:50:12.105403 #28489] FATAL -- : [865aab03-8941-4c59-ac89-85dee90ea9b1] actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+[865aab03-8941-4c59-ac89-85dee90ea9b1] actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+[865aab03-8941-4c59-ac89-85dee90ea9b1] railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+[865aab03-8941-4c59-ac89-85dee90ea9b1] railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+[865aab03-8941-4c59-ac89-85dee90ea9b1] activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+[865aab03-8941-4c59-ac89-85dee90ea9b1] activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+[865aab03-8941-4c59-ac89-85dee90ea9b1] activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+[865aab03-8941-4c59-ac89-85dee90ea9b1] railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+[865aab03-8941-4c59-ac89-85dee90ea9b1] ahoy_matey (1.5.4) lib/ahoy/engine.rb:22:in `call_with_quiet_ahoy'
+[865aab03-8941-4c59-ac89-85dee90ea9b1] request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+[865aab03-8941-4c59-ac89-85dee90ea9b1] actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+[865aab03-8941-4c59-ac89-85dee90ea9b1] rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+[865aab03-8941-4c59-ac89-85dee90ea9b1] rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+[865aab03-8941-4c59-ac89-85dee90ea9b1] activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+[865aab03-8941-4c59-ac89-85dee90ea9b1] actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+[865aab03-8941-4c59-ac89-85dee90ea9b1] rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+[865aab03-8941-4c59-ac89-85dee90ea9b1] railties (5.0.1) lib/rails/engine.rb:522:in `call'
+[865aab03-8941-4c59-ac89-85dee90ea9b1] unicorn (5.2.0) lib/unicorn/http_server.rb:562:in `process_client'
+[865aab03-8941-4c59-ac89-85dee90ea9b1] unicorn (5.2.0) lib/unicorn/http_server.rb:658:in `worker_loop'
+[865aab03-8941-4c59-ac89-85dee90ea9b1] unicorn (5.2.0) lib/unicorn/http_server.rb:508:in `spawn_missing_workers'
+[865aab03-8941-4c59-ac89-85dee90ea9b1] unicorn (5.2.0) lib/unicorn/http_server.rb:132:in `start'
+[865aab03-8941-4c59-ac89-85dee90ea9b1] unicorn (5.2.0) bin/unicorn:126:in `<top (required)>'
+[865aab03-8941-4c59-ac89-85dee90ea9b1] /usr/local/rvm/gems/ruby-2.2.3/bin/unicorn:23:in `load'
+[865aab03-8941-4c59-ac89-85dee90ea9b1] /usr/local/rvm/gems/ruby-2.2.3/bin/unicorn:23:in `<main>'
+[865aab03-8941-4c59-ac89-85dee90ea9b1] /usr/local/rvm/gems/ruby-2.2.3@global/bin/ruby_executable_hooks:15:in `eval'
+[865aab03-8941-4c59-ac89-85dee90ea9b1] /usr/local/rvm/gems/ruby-2.2.3@global/bin/ruby_executable_hooks:15:in `<main>'
+I, [2017-02-13T12:24:58.381465 #28491]  INFO -- : [d4ef3b1a-0b70-48c0-b060-d366132647c0] Started GET "/" for 66.249.66.122 at 2017-02-13 12:24:58 -0500
+I, [2017-02-13T12:24:58.389636 #28491]  INFO -- : [d4ef3b1a-0b70-48c0-b060-d366132647c0] Processing by WelcomeController#home as HTML
+D, [2017-02-13T12:24:58.393529 #28491] DEBUG -- : [d4ef3b1a-0b70-48c0-b060-d366132647c0] [ahoy] Visit excluded
+I, [2017-02-13T12:24:58.396758 #28491]  INFO -- : [d4ef3b1a-0b70-48c0-b060-d366132647c0] Redirected to http://www.jointhebloc.com/users/sign_up
+I, [2017-02-13T12:24:58.397387 #28491]  INFO -- : [d4ef3b1a-0b70-48c0-b060-d366132647c0] Completed 302 Found in 7ms (ActiveRecord: 0.0ms)
+I, [2017-02-13T12:24:59.366092 #28487]  INFO -- : [d6aad0d2-7446-4693-81a8-edec0f47ff7a] Started GET "/users/sign_up" for 66.249.66.122 at 2017-02-13 12:24:59 -0500
+I, [2017-02-13T12:24:59.374635 #28487]  INFO -- : [d6aad0d2-7446-4693-81a8-edec0f47ff7a] Processing by Devise::RegistrationsController#new as HTML
+I, [2017-02-13T12:24:59.381575 #28487]  INFO -- : [d6aad0d2-7446-4693-81a8-edec0f47ff7a]   Rendering users/registrations/new.html.erb within layouts/application
+I, [2017-02-13T12:24:59.382652 #28487]  INFO -- : [d6aad0d2-7446-4693-81a8-edec0f47ff7a]   Rendered users/registrations/new.html.erb within layouts/application (0.9ms)
+I, [2017-02-13T12:24:59.385063 #28487]  INFO -- : [d6aad0d2-7446-4693-81a8-edec0f47ff7a] Completed 200 OK in 10ms (Views: 4.4ms | ActiveRecord: 0.0ms)

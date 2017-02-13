@@ -40,7 +40,7 @@ class VisionsController < ApplicationController
       elsif @vision.industry == "Activists"
           @indeed_search = IndeedAPI.search_jobs(:q => "racial justice "  + @vision.firstjob , :limit => 10)
       else
-          @indeed_search = IndeedAPI.search_jobs(:q => @vision.industry+ " "  + @vision.firstjob , :limit => 10)
+          @indeed_search = IndeedAPI.search_jobs(:q => @vision.industry.to_s + " "  + @vision.firstjob.to_s , :limit => 10)
       end
          @indeed_results = @indeed_search.results
     
