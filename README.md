@@ -23,7 +23,7 @@ We provide links into your community by informing users of
  - Sectors
  
 ## Schema
-![alt tag](https://github.com/our-bloc/rails-platform/blob/master/Screen%20Shot%202016-09-24%20at%2010.40.45%20AM.png)
+![alt tag](https://github.com/our-bloc/rails-platform/blob/master/public/images/schema.png)
 
 
 # README
