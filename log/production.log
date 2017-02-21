@@ -2058,3 +2058,124 @@ I, [2017-02-13T12:24:59.374635 #28487]  INFO -- : [d6aad0d2-7446-4693-81a8-edec0
 I, [2017-02-13T12:24:59.381575 #28487]  INFO -- : [d6aad0d2-7446-4693-81a8-edec0f47ff7a]   Rendering users/registrations/new.html.erb within layouts/application
 I, [2017-02-13T12:24:59.382652 #28487]  INFO -- : [d6aad0d2-7446-4693-81a8-edec0f47ff7a]   Rendered users/registrations/new.html.erb within layouts/application (0.9ms)
 I, [2017-02-13T12:24:59.385063 #28487]  INFO -- : [d6aad0d2-7446-4693-81a8-edec0f47ff7a] Completed 200 OK in 10ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+D, [2017-02-20T13:38:23.378040 #6417] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3291956229089353245);[0m
+D, [2017-02-20T13:38:23.391019 #6417] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2017-02-20T13:38:23.419858 #6417] DEBUG -- :   [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+D, [2017-02-20T13:38:23.424706 #6417] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+D, [2017-02-20T13:38:23.426352 #6417] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-02-20T13:38:23.426849 #6417] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3291956229089353245)[0m
+D, [2017-02-20T13:49:54.279612 #6699] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+D, [2017-02-20T13:49:54.306572 #6699] DEBUG -- :   [1m[35mSQL (2.7ms)[0m  [1m[31mDELETE FROM "shares"[0m
+D, [2017-02-20T13:49:54.311480 #6699] DEBUG -- :   [1m[35mSQL (1.7ms)[0m  [1m[31mDELETE FROM "asks"[0m
+D, [2017-02-20T13:49:54.314719 #6699] DEBUG -- :   [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "jobs"[0m
+D, [2017-02-20T13:49:54.318408 #6699] DEBUG -- :   [1m[35mSQL (1.1ms)[0m  [1m[31mDELETE FROM "resources"[0m
+D, [2017-02-20T13:49:54.320574 #6699] DEBUG -- :   [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "influencers"[0m
+D, [2017-02-20T13:49:54.322480 #6699] DEBUG -- :   [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "tips"[0m
+D, [2017-02-20T13:49:54.335514 #6699] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+D, [2017-02-20T13:49:54.339987 #6699] DEBUG -- :   [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "influencers" ("created_at", "updated_at", "name", "description", "industry", "style") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", 2017-02-20 18:49:54 UTC], ["updated_at", 2017-02-20 18:49:54 UTC], ["name", "Ryan Coogler"], ["description", " "], ["industry", "Griots"], ["style", "Earn"]]
+D, [2017-02-20T13:49:54.341508 #6699] DEBUG -- :   [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-02-20T13:49:54.342222 #6699] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+D, [2017-02-20T13:49:54.344036 #6699] DEBUG -- :   [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "influencers" ("created_at", "updated_at", "name", "description", "industry", "style") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", 2017-02-20 18:49:54 UTC], ["updated_at", 2017-02-20 18:49:54 UTC], ["name", "Yaa Ygasi"], ["description", " "], ["industry", "Griots"], ["style", "Olivia"]]
+D, [2017-02-20T13:49:54.345087 #6699] DEBUG -- :   [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-02-20T13:49:54.345606 #6699] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+D, [2017-02-20T13:49:54.346917 #6699] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "influencers" ("created_at", "updated_at", "name", "description", "industry", "style") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", 2017-02-20 18:49:54 UTC], ["updated_at", 2017-02-20 18:49:54 UTC], ["name", "Kimberley Foster"], ["description", " "], ["industry", "Griots"], ["style", "Issa"]]
+D, [2017-02-20T13:49:54.348149 #6699] DEBUG -- :   [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-02-20T13:49:54.348661 #6699] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+D, [2017-02-20T13:49:54.349840 #6699] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "influencers" ("created_at", "updated_at", "name", "description", "industry", "style") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", 2017-02-20 18:49:54 UTC], ["updated_at", 2017-02-20 18:49:54 UTC], ["name", "Tanehisi Coates"], ["description", " "], ["industry", "Griots"], ["style", "Jackson"]]
+D, [2017-02-20T13:49:54.351891 #6699] DEBUG -- :   [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-02-20T13:49:54.352432 #6699] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+D, [2017-02-20T13:49:54.353694 #6699] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "influencers" ("created_at", "updated_at", "name", "description", "industry", "style") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", 2017-02-20 18:49:54 UTC], ["updated_at", 2017-02-20 18:49:54 UTC], ["name", "Cory Booker"], ["description", " "], ["industry", "Advocates"], ["style", "Olivia"]]
+D, [2017-02-20T13:49:54.354697 #6699] DEBUG -- :   [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-02-20T13:49:54.355259 #6699] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+D, [2017-02-20T13:49:54.356486 #6699] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "influencers" ("created_at", "updated_at", "name", "description", "industry", "style") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", 2017-02-20 18:49:54 UTC], ["updated_at", 2017-02-20 18:49:54 UTC], ["name", "Laura Wiedman Powers"], ["description", " "], ["industry", "Advocates"], ["style", "Issa"]]
+D, [2017-02-20T13:49:54.357434 #6699] DEBUG -- :   [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-02-20T13:49:54.357876 #6699] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+D, [2017-02-20T13:49:54.359051 #6699] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "influencers" ("created_at", "updated_at", "name", "description", "industry", "style") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", 2017-02-20 18:49:54 UTC], ["updated_at", 2017-02-20 18:49:54 UTC], ["name", "Donte Mills and Lennon Edwards"], ["description", " "], ["industry", "Advocates"], ["style", "Jackson"]]
+D, [2017-02-20T13:49:54.359969 #6699] DEBUG -- :   [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-02-20T13:49:54.360483 #6699] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+D, [2017-02-20T13:49:54.361635 #6699] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "influencers" ("created_at", "updated_at", "name", "description", "industry", "style") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", 2017-02-20 18:49:54 UTC], ["updated_at", 2017-02-20 18:49:54 UTC], ["name", "Bakari Sellers"], ["description", " "], ["industry", "Advocates"], ["style", "Earn"]]
+D, [2017-02-20T13:49:54.362558 #6699] DEBUG -- :   [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-02-20T13:49:54.363026 #6699] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+D, [2017-02-20T13:49:54.364247 #6699] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "influencers" ("created_at", "updated_at", "name", "description", "industry", "style") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", 2017-02-20 18:49:54 UTC], ["updated_at", 2017-02-20 18:49:54 UTC], ["name", "B Cole"], ["description", " "], ["industry", "Activists"], ["style", "Issa"]]
+D, [2017-02-20T13:49:54.365224 #6699] DEBUG -- :   [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-02-20T13:49:54.365701 #6699] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+D, [2017-02-20T13:49:54.366920 #6699] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "influencers" ("created_at", "updated_at", "name", "description", "industry", "style") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", 2017-02-20 18:49:54 UTC], ["updated_at", 2017-02-20 18:49:54 UTC], ["name", "Kimberley Foster"], ["description", " "], ["industry", "Activists"], ["style", "Issa"]]
+D, [2017-02-20T13:49:54.367878 #6699] DEBUG -- :   [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-02-20T13:49:54.368368 #6699] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+D, [2017-02-20T13:49:54.369664 #6699] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "influencers" ("created_at", "updated_at", "name", "description", "industry", "style") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", 2017-02-20 18:49:54 UTC], ["updated_at", 2017-02-20 18:49:54 UTC], ["name", "Umi Selah"], ["description", " "], ["industry", "Activists"], ["style", "Earn"]]
+D, [2017-02-20T13:49:54.370650 #6699] DEBUG -- :   [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-02-20T13:49:54.371118 #6699] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+D, [2017-02-20T13:49:54.372451 #6699] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "influencers" ("created_at", "updated_at", "name", "description", "industry", "style") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", 2017-02-20 18:49:54 UTC], ["updated_at", 2017-02-20 18:49:54 UTC], ["name", "Will Jackson"], ["description", " "], ["industry", "Activists"], ["style", "Jackson"]]
+D, [2017-02-20T13:49:54.373348 #6699] DEBUG -- :   [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-02-20T13:49:54.373876 #6699] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+D, [2017-02-20T13:49:54.374994 #6699] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "influencers" ("created_at", "updated_at", "name", "description", "industry", "style") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", 2017-02-20 18:49:54 UTC], ["updated_at", 2017-02-20 18:49:54 UTC], ["name", "Ivory Toldson"], ["description", " "], ["industry", "Educators"], ["style", "Olivia"]]
+D, [2017-02-20T13:49:54.376071 #6699] DEBUG -- :   [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-02-20T13:49:54.376547 #6699] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+D, [2017-02-20T13:49:54.377768 #6699] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "influencers" ("created_at", "updated_at", "name", "description", "industry", "style") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", 2017-02-20 18:49:54 UTC], ["updated_at", 2017-02-20 18:49:54 UTC], ["name", "Alexandria Lee"], ["description", " "], ["industry", "Educators"], ["style", "Issa"]]
+D, [2017-02-20T13:49:54.378835 #6699] DEBUG -- :   [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-02-20T13:49:54.379273 #6699] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+D, [2017-02-20T13:49:54.380412 #6699] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "influencers" ("created_at", "updated_at", "name", "description", "industry", "style") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", 2017-02-20 18:49:54 UTC], ["updated_at", 2017-02-20 18:49:54 UTC], ["name", "Larry Irvin"], ["description", " "], ["industry", "Educators"], ["style", "Earn"]]
+D, [2017-02-20T13:49:54.381468 #6699] DEBUG -- :   [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-02-20T13:49:54.381979 #6699] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+D, [2017-02-20T13:49:54.383197 #6699] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "influencers" ("created_at", "updated_at", "name", "description", "industry", "style") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", 2017-02-20 18:49:54 UTC], ["updated_at", 2017-02-20 18:49:54 UTC], ["name", "Ron Porter Jr."], ["description", " "], ["industry", "Educators"], ["style", "Jackson"]]
+D, [2017-02-20T13:49:54.384199 #6699] DEBUG -- :   [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-02-20T13:49:54.384771 #6699] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+D, [2017-02-20T13:49:54.386057 #6699] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "influencers" ("created_at", "updated_at", "name", "description", "industry", "style") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", 2017-02-20 18:49:54 UTC], ["updated_at", 2017-02-20 18:49:54 UTC], ["name", "Ime Archibong"], ["description", " "], ["industry", "Techies"], ["style", "Olivia"]]
+D, [2017-02-20T13:49:54.387298 #6699] DEBUG -- :   [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-02-20T13:49:54.387858 #6699] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+D, [2017-02-20T13:49:54.389150 #6699] DEBUG -- :   [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "influencers" ("created_at", "updated_at", "name", "description", "industry", "style") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", 2017-02-20 18:49:54 UTC], ["updated_at", 2017-02-20 18:49:54 UTC], ["name", "Erica Baker"], ["description", " "], ["industry", "Techies"], ["style", "Issa"]]
+D, [2017-02-20T13:49:54.390191 #6699] DEBUG -- :   [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-02-20T13:49:54.390734 #6699] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+D, [2017-02-20T13:49:54.392125 #6699] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "influencers" ("created_at", "updated_at", "name", "description", "industry", "style") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", 2017-02-20 18:49:54 UTC], ["updated_at", 2017-02-20 18:49:54 UTC], ["name", "Leslie Miley"], ["description", " "], ["industry", "Techies"], ["style", "Earn"]]
+D, [2017-02-20T13:49:54.392987 #6699] DEBUG -- :   [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-02-20T13:49:54.393485 #6699] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+D, [2017-02-20T13:49:54.395340 #6699] DEBUG -- :   [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "influencers" ("created_at", "updated_at", "name", "description", "industry", "style") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", 2017-02-20 18:49:54 UTC], ["updated_at", 2017-02-20 18:49:54 UTC], ["name", "Nashlie Sephus"], ["description", " "], ["industry", "Techies"], ["style", "Jackson"]]
+D, [2017-02-20T13:49:54.396422 #6699] DEBUG -- :   [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-02-20T13:49:54.396962 #6699] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+D, [2017-02-20T13:49:54.398484 #6699] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "influencers" ("created_at", "updated_at", "name", "description", "industry", "style") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", 2017-02-20 18:49:54 UTC], ["updated_at", 2017-02-20 18:49:54 UTC], ["name", "Nashlie Sephus"], ["description", " "], ["industry", "Scientists"], ["style", "Olivia"]]
+D, [2017-02-20T13:49:54.399385 #6699] DEBUG -- :   [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-02-20T13:49:54.399928 #6699] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+D, [2017-02-20T13:49:54.401237 #6699] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "influencers" ("created_at", "updated_at", "name", "description", "industry", "style") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", 2017-02-20 18:49:54 UTC], ["updated_at", 2017-02-20 18:49:54 UTC], ["name", "Erica Baker"], ["description", " "], ["industry", "Scientists"], ["style", "Issa"]]
+D, [2017-02-20T13:49:54.402194 #6699] DEBUG -- :   [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-02-20T13:49:54.402814 #6699] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+D, [2017-02-20T13:49:54.404153 #6699] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "influencers" ("created_at", "updated_at", "name", "description", "industry", "style") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", 2017-02-20 18:49:54 UTC], ["updated_at", 2017-02-20 18:49:54 UTC], ["name", "Dr. Martez Prince"], ["description", " "], ["industry", "Scientists"], ["style", "Earn"]]
+D, [2017-02-20T13:49:54.405108 #6699] DEBUG -- :   [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-02-20T13:49:54.405614 #6699] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+D, [2017-02-20T13:49:54.406904 #6699] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "influencers" ("created_at", "updated_at", "name", "description", "industry", "style") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", 2017-02-20 18:49:54 UTC], ["updated_at", 2017-02-20 18:49:54 UTC], ["name", "Dr. Hadiyah-Nicole Green"], ["description", " "], ["industry", "Scientists"], ["style", "Jackson"]]
+D, [2017-02-20T13:49:54.407902 #6699] DEBUG -- :   [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-02-20T13:49:54.408460 #6699] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+D, [2017-02-20T13:49:54.409725 #6699] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "influencers" ("created_at", "updated_at", "name", "description", "industry", "style") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", 2017-02-20 18:49:54 UTC], ["updated_at", 2017-02-20 18:49:54 UTC], ["name", "Maya Watson"], ["description", " "], ["industry", "CSuite"], ["style", "Olivia"]]
+D, [2017-02-20T13:49:54.410776 #6699] DEBUG -- :   [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-02-20T13:49:54.411366 #6699] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+D, [2017-02-20T13:49:54.412585 #6699] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "influencers" ("created_at", "updated_at", "name", "description", "industry", "style") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", 2017-02-20 18:49:54 UTC], ["updated_at", 2017-02-20 18:49:54 UTC], ["name", "Erica Baker"], ["description", " "], ["industry", "Csuite"], ["style", "Issa"]]
+D, [2017-02-20T13:49:54.413444 #6699] DEBUG -- :   [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-02-20T13:49:54.413986 #6699] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+D, [2017-02-20T13:49:54.415247 #6699] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "influencers" ("created_at", "updated_at", "name", "description", "industry", "style") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", 2017-02-20 18:49:54 UTC], ["updated_at", 2017-02-20 18:49:54 UTC], ["name", "Nate Jones"], ["description", " "], ["industry", "Csuite"], ["style", "Earn"]]
+D, [2017-02-20T13:49:54.416145 #6699] DEBUG -- :   [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-02-20T13:49:54.416707 #6699] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+D, [2017-02-20T13:49:54.417865 #6699] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "influencers" ("created_at", "updated_at", "name", "description", "industry", "style") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", 2017-02-20 18:49:54 UTC], ["updated_at", 2017-02-20 18:49:54 UTC], ["name", "Chris Gray"], ["description", " "], ["industry", "Csuite"], ["style", "Jackson"]]
+D, [2017-02-20T13:49:54.418923 #6699] DEBUG -- :   [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-02-20T13:49:54.419421 #6699] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+D, [2017-02-20T13:49:54.420704 #6699] DEBUG -- :   [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "influencers" ("created_at", "updated_at", "name", "description", "industry", "style") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", 2017-02-20 18:49:54 UTC], ["updated_at", 2017-02-20 18:49:54 UTC], ["name", "Morgan Debaun"], ["description", " "], ["industry", "Entrepreneurs"], ["style", "Olivia"]]
+D, [2017-02-20T13:49:54.421712 #6699] DEBUG -- :   [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-02-20T13:49:54.422217 #6699] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+D, [2017-02-20T13:49:54.423328 #6699] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "influencers" ("created_at", "updated_at", "name", "description", "industry", "style") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", 2017-02-20 18:49:54 UTC], ["updated_at", 2017-02-20 18:49:54 UTC], ["name", "Alicia Garza"], ["description", " "], ["industry", "Entrepreneurs"], ["style", "Issa"]]
+D, [2017-02-20T13:49:54.424225 #6699] DEBUG -- :   [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-02-20T13:49:54.424756 #6699] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+D, [2017-02-20T13:49:54.425987 #6699] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "influencers" ("created_at", "updated_at", "name", "description", "industry", "style") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", 2017-02-20 18:49:54 UTC], ["updated_at", 2017-02-20 18:49:54 UTC], ["name", "Rodney Simpson"], ["description", " "], ["industry", "Entrepreneurs"], ["style", "Earn"]]
+D, [2017-02-20T13:49:54.426859 #6699] DEBUG -- :   [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-02-20T13:49:54.427328 #6699] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+D, [2017-02-20T13:49:54.428717 #6699] DEBUG -- :   [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "influencers" ("created_at", "updated_at", "name", "description", "industry", "style") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", 2017-02-20 18:49:54 UTC], ["updated_at", 2017-02-20 18:49:54 UTC], ["name", "Chris Gray"], ["description", " "], ["industry", "Entrepreneurs"], ["style", "Jackson"]]
+D, [2017-02-20T13:49:54.429611 #6699] DEBUG -- :   [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-02-20T13:49:54.430067 #6699] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+D, [2017-02-20T13:49:54.431356 #6699] DEBUG -- :   [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "influencers" ("created_at", "updated_at", "name", "description", "industry", "style") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", 2017-02-20 18:49:54 UTC], ["updated_at", 2017-02-20 18:49:54 UTC], ["name", "Wondaland"], ["description", " "], ["industry", "Creatives"], ["style", "Olivia"]]
+D, [2017-02-20T13:49:54.432368 #6699] DEBUG -- :   [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-02-20T13:49:54.432908 #6699] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+D, [2017-02-20T13:49:54.434155 #6699] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "influencers" ("created_at", "updated_at", "name", "description", "industry", "style") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", 2017-02-20 18:49:54 UTC], ["updated_at", 2017-02-20 18:49:54 UTC], ["name", "Solange"], ["description", " "], ["industry", "Creatives"], ["style", "Issa"]]
+D, [2017-02-20T13:49:54.435313 #6699] DEBUG -- :   [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-02-20T13:49:54.435841 #6699] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+D, [2017-02-20T13:49:54.437087 #6699] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "influencers" ("created_at", "updated_at", "name", "description", "industry", "style") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", 2017-02-20 18:49:54 UTC], ["updated_at", 2017-02-20 18:49:54 UTC], ["name", "Kevin Beasley"], ["description", " "], ["industry", "Creatives"], ["style", "Earn"]]
+D, [2017-02-20T13:49:54.438005 #6699] DEBUG -- :   [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-02-20T13:49:54.438514 #6699] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+D, [2017-02-20T13:49:54.439712 #6699] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "influencers" ("created_at", "updated_at", "name", "description", "industry", "style") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", 2017-02-20 18:49:54 UTC], ["updated_at", 2017-02-20 18:49:54 UTC], ["name", "Misty Copeland"], ["description", " "], ["industry", "Creatives"], ["style", "Jackson"]]
+D, [2017-02-20T13:49:54.440732 #6699] DEBUG -- :   [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
