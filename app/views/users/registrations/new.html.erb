@@ -5,7 +5,7 @@
 </script>
 
 <div class="row">
-    <div id="title"> BLOC </div>
+    <div id="title"> bloc. </div>
   <div class="col m6 s12" id="background-filter">
     
           <h6 id="beta" style=""> beta</h6>
@@ -179,7 +179,12 @@ input.fieldtext{
         height: 100%;
         width: 100%;
     }
-    
+    #title{
+      position:absolute;
+      top: 37%; 
+      left: 30%;
+      margin: 0 auto;
+    }
     #whatyouget{
       display:none;
       position:fixed;
@@ -190,11 +195,11 @@ input.fieldtext{
     }
     
     #background-filter{
-    position: absolute;
+    position: fixed;
     background-color:black;
     padding: 5%;
-    opacity: .6;
-    width: 200%;
+    opacity: .2;
+    width: 100%;
     height: 100%;
   }
   
@@ -202,11 +207,13 @@ input.fieldtext{
     position: fixed;
     background: #3b5998;
     font-family: Montserrat;
-    padding: 7% 4%;
-    width: 95%;
+    font-size: 1em;
+    border: 5px solid white;
+    padding: 7% 1%;
+    width: 90%;
     color:white;
-    top: 65%;
-    margin: 0 auto;
+    top: 55%;
+    left: 5%;
   }
   #submitFB:hover {
     background-color: grey;
@@ -229,7 +236,8 @@ input.fieldtext{
   #beta {
     position: absolute;
     margin-left: 10%;
-    top:8%;
+    top:36%;
+    left: 48% ;
   }
 }
 </style>
