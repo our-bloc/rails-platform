@@ -26,7 +26,7 @@ class VisionsController < ApplicationController
 
     #import jobs from indeed
     if @vision.industry == "Techies"
-          @indeed_search = IndeedAPI.search_jobs(:q => @vision.firstjob + " tech" , :limit => 10)
+          @indeed_search = IndeedAPI.search_jobs(:q => @vision.firstjob + " software" , :limit => 10)
       elsif @vision.industry == "Advocates"
           @indeed_search = IndeedAPI.search_jobs(:q => "legal undergraduate " + @vision.firstjob , :limit => 10)
       elsif @vision.industry == "Educators"

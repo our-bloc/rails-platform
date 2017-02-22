@@ -4,7 +4,7 @@
             <div class="card-content teal-text">
                 <span  style="font-size: 2em"><%= job.title.downcase %></span>
                   <p><%= job.company %></p>
-                  <p class="grey-text"><%= job.description%></p>
+                  <p class="grey-text"><%= job.description.first(200)%></p>
                    <%= job.deadline%></p>
 
             <%= link_to "MORE", job.link, :class => "indeed_more grey-text" %> 
