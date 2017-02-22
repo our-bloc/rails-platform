@@ -156,7 +156,10 @@ class VisionsController < ApplicationController
         format.json { render :show, status: :ok, location: @vision }
 
         #if can't pull user info from FB, update info from visions form
-        current_user.update_attributes(:school => @vision.school, :gradyear => @vision.gradyear , :major => @vision.major)
+        current_user.update_attribute(:major, @vision.major)
+        current_user.update_attribute(:school, @vision.school)
+        current_user.update_attribute(:gradyear, @vision.gradyear)
+
         
         redirect_to @vision
       else

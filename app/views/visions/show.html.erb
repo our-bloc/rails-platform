@@ -42,8 +42,8 @@
        <img id="profile_pic" class="circle" src="<%= @user.picture %>" >
        <span class="username black-text name"> <%= @user.name %> </span>
       <span class="black-text email"><%= @user.email %></span>
-      <span class="black-text email"><%= @user.school %></span>
-      <span class="black-text email"><%= @user.gradyear %> | <%= @user.major %> </span></a>
+      <span class="black-text email"><%= @user.school.capitalize %></span>
+      <span class="black-text email"><%= @user.gradyear %> | <%= @user.major.capitalize %> </span></a>
 
     </div></li>
     
