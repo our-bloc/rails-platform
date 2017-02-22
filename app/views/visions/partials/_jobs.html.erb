@@ -1,24 +1,17 @@
 
      <% @jobs.each do |job| %>
             <div class="card horizontal white" style="">
-                <!--
-                <div class="card-image">
-                    <img src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/coverpic_orig.jpg">
-                  </div> -->
             <div class="card-content teal-text">
-              <span class="indeed_show card-title" style="line-height: 1em"><%= job.title %></span>
-              
-              <p><%= job.description %></p>
-                <i id="save" class="unsaved fa fa-heart-o"></i>
+                <span  style="font-size: 2em"><%= job.title.downcase %></span>
+                  <p><%= job.company %></p>
+                  <p class="grey-text"><%= job.description%></p>
+                   <%= job.deadline%></p>
 
-              <td><%= job.created_at.strftime("%m/%d/%y") %></td>
+            <%= link_to "MORE", job.link, :class => "indeed_more grey-text" %> 
 
-              
-          <%= form_tag do %>
-              <%= hidden_field_tag(:saved, true) %>
-              <% end %> 
+                
                </div>
-          </div>
+              </div>
           <% end %>
           
     
