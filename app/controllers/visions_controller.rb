@@ -18,10 +18,10 @@ class VisionsController < ApplicationController
   
     #render modals
     
-    @jobs= Job.order("created_at DESC").limit(0).where(:industry => @vision.industry)
+    @jobs= Job.order("created_at DESC").limit(2).where(:industry => @vision.industry)
     
+    @tips_job= Tip.order("created_at DESC").where(:prep => @vision.prep).limit(5)
     
-    @tips= Tip.order("created_at DESC").limit(5)
     @influencer_hangout= Event.order("created_at DESC").where(:org =>"Bloc Influencer Hangout").limit(1)
 
     #import jobs from indeed
