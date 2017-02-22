@@ -10,16 +10,32 @@
     <%= f.text_area :body, class:"teal-text" %>
   </div> 
   
-  <div class="input-field"> 
-    <%= f.label :industry %>
-    <%= f.text_field :industry, class:"teal-text" %>
-    </div>
+  
     
 <div class="input-field"> 
     <%= f.label :link %>
     <%= f.text_field :link, class:"teal-text" %>
     </div>
+    
+<div class="field">
+    <%= f.label :industry %>
+    <%= f.hidden_field :industry , :id =>"field_tipindustry" %>
+    
+    <div class="tip_industry white-text btn waves-effect waves-light" id="Griots"> Griots </div>
+    <div class="tip_industry white-text btn waves-effect waves-light" id="Techies"> Techies </div>
+    <div class="tip_industry white-text btn waves-effect waves-light" id="Scientists"> Scientists </div>
+    <div class="tip_industry white-text btn waves-effect waves-light" id="CSuite"> CSuite </div>
+    <div class="tip_industry white-text btn waves-effect waves-light" id="Educators"> Educators </div>
+    <div class="tip_industry white-text btn waves-effect waves-light" id="Activists"> Activists </div>
+    <div class="tip_industry white-text btn waves-effect waves-light" id="Advocates"> Advocates </div>
+    <div class="tip_industry white-text btn waves-effect waves-light" id="Entrepreneurs"> Entrepreneurs </div>
+    <div class="tip_industry white-text btn waves-effect waves-light" id="Creatives"> Creatives </div>
+    <div class="tip_industry white-text btn waves-effect waves-light" id="All"> All </div>
 
+
+    
+  </div>
+    
   
 <div class ="input-field"> 
     <%= f.label "Grad School Related" %>
@@ -81,5 +97,12 @@
             
   });
 
+$('.tip_industry').click(function(){
+      var idval = $(this).attr("id");
+      console.log(idval);
+          
+      $('#field_tipindustry').val(idval);
+            
+  });
   
 </script>
