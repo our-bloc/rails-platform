@@ -1,37 +1,4 @@
   <body>
-  <script> 
-       $(document).ready(function() {
-
-      $.ajaxSetup({ cache: true }); 
-      //init facebook
-      $.getScript('//connect.facebook.net/en_US/sdk.js', function(){
-        FB.init({
-          appId: '405857709752176',
-          version: 'v2.7' // or v2.1, v2.2, v2.3, ...
-        });    
-        $(document).trigger('fbload');
-      });
-    }); 
-      
-      
-  $(document).on(
-    'fbload',  //  <---- HERE'S OUR CUSTOM EVENT BEING LISTENED FOR
-    function(){
-        //some code that requires the FB object
-        //such as...
-        FB.getLoginStatus(function(res){
-            if( res.status == "connected" ){
-                FB.api('/me?fields=email,picture,name,first_name', function(fbUser) {
-                    console.log(fbUser.first_name)
-                   
-                });
-            }
-        });
-
-    }
-);
-  </script> 
-
   <ul id="slide-out" class="side-nav">
   
     
@@ -63,41 +30,12 @@
 <p id="notice"><%= notice %></p>
 
 
-<% if current_user.sign_in_count == 1 %> 
-<div class="welcome_message" > 
-  <h5> Hey <%= @user.name.split(' ')[0] %>, </h5> 
-  <p> 
-  Thanks for signing up for your first opportunity playlist! </p>
-  
-  <p>
-  Below you'll find <span class="highlight"> 10 curated opportunities 
-  and 5 tips and some motivation</span> that we think will help you land a dope opportunity this summer. 
-  </p>
 
-  
-  <p> This is the pilot version of the app, but you gain <span class="highlight"> free access to a PRO account when we officially launch</span> (including the ability to save posts, filter jobs by location, 
-  message other users who can plug you <span class="highlight">AND apply directly to top employers </span>) by bringing two friends to the community (more info at the bottom of your playlist).
-  </p> 
-
-  <p>
-  You can retake your quiz anytime by head over to the menu, and we will update with fresh opportunities every week. </p>
-  
-  <p> Enjoy! </p>
-  
-  <p>Peace & love, Bloc Team</p>
-  
-  </p>
-  
-  <div class="white-text btn waves-effect waves-light" id="hide_welcome"> Got it! </div>
-  
-</div>
-<%end %> 
-<!-- end welcome message on first login -->
 
 <!-- SIDE BAR --> 
 <div class="row"> 
 <!-- Personality Quiz Results --> 
-      <div class="col l4 s12 push-s1 push-l1">
+      <div class="banner col l4 s12 push-s1 push-l1">
         <div class="banner_text card white" style="">
         <div class="card-content grey-text">
           <h5> achieving the dream... </h5>
@@ -144,21 +82,31 @@
   
 <!-- CONNECTIONS, OPPS RESOURCES --> 
   
- 
-    
-    
-<div class="playlist row" style="">
-   <div class="render_view col s12 l5 pull-s1" style="">
-       <h5> opportunities </h5>
-        <%= render "visions/partials/jobs" %>
-    </div>
+<div clas="row"> 
+  <div class="welcome col s12"> 
+    <h5 id="welcome-title"> YOUR CAREER PLAYLIST </h5>
+  </div>
 
-
-    <div class="render_view col s12 l6 pull-s1" style="">
-      <h5 id="tips_header"> pro tips </h5>
-      <%= render "visions/partials/resources" %>
-    </div>
 </div>
+
+    
+<div class="opp_playlist row">
+  <%= render "visions/partials/jobs" %>
+</div>
+
+<div class="tip_playlist" >
+      <%= render "visions/partials/tips" %>
+</div>
+
+<div class="opp_playlist row">
+  <%= render "visions/partials/jobs2" %>
+</div>
+
+<div class="tip_playlist" >
+      <%= render "visions/partials/tips2" %>
+</div>
+
+
   
 <div class="open_referral_modal"> <h2 style=""> UPGRADE TO PRO </h2></div>
 
@@ -284,6 +232,29 @@
   }
   
   @media only screen and (max-device-width: 480px){
+    .banner{
+      display: none;
+    }
+    .welcome {
+      margin-bottom: 50em;
+      height:50em;
+      width: 100%;
+      left:0%;
+    }
+    #welcome-title {
+      color: #44d9e6;
+      font-family: Raleway;
+      font-size: 10em;
+      padding: 50% 20%;
+      position: absolute;
+      top: 0%;
+      left: -5%;
+      width: 105%;
+      height: 10em;
+      background-color: white;
+      margin-bottom: 20%;
+    }
+    
     html{
         font-size: 2em;
         width:100%;
@@ -316,9 +287,12 @@
       }
     
     .open_referral_modal h2{
-    border: 8px solid black;
+    border: 8px solid #44d9e6;;
     position: relative;
-    width: 80%;
+    width: 90%;
+    font-family: Raleway;
+    color: #44d9e6;
+    border-radius: 25%;
     font-size: 5em;
     margin-left: -20%;
     padding: 3%;

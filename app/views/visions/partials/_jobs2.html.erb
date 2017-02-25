@@ -23,19 +23,22 @@
           <% end %>
           
     
-     <%  @indeed_results[0..3].each do |job| %>
-            <% if @color_count == 0 || @color_count ==3 %> 
+     <%  @indeed_results[4..7].each do |job| %>
+            <% if @color2_count == 0 || @color_count == 3 %> 
             <div class="card horizontal col s6" style="background-color: #2eb2ff" >
-        <% elsif @color_count == 1 %> 
+        <% elsif @color2_count == 1 %> 
             <div class="card horizontal col s6" style="background-color: #d9d9d9">
         <% else %> 
             <div class="card horizontal col s6" style="background-color: #5271ff">
         <% end %> 
         
+       
+        
             <div class="card-content white-text">
                 <div class="hide_card">
                     <h4 id="job_title"><%= job.job_title.upcase %></h4>
                     <h5 id="job_company"><%= job.company %></h5>
+                     
                  </div>
                  
                 <div class="show_card"> 
@@ -43,7 +46,7 @@
                    <p><%= job.city %>, <%= job.state %>| <%= job.date.to_s.split(" ")[0] %></p>
 
             <%= link_to "MORE", job.url, :class => "indeed_more grey-text" %> 
-            <% @color_count += 1 %> 
+            <% @color2_count += 1 %> 
 
                 </div>
                </div>
