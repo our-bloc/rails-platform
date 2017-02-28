@@ -20,7 +20,7 @@ class CallbacksController < Devise::OmniauthCallbacksController
         end
         
         #send email to admins
-        NewUserMailer.new_user(@user).deliver
+           
     end
     
 end
