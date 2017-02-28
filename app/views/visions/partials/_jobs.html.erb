@@ -1,5 +1,6 @@
 
      <% @jobs.each do |job| %>
+<<<<<<< HEAD
             <div class="card horizontal white" style="">
             <div class="card-content teal-text">
                 <span  style="font-size: 2em"><%= job.title.downcase %></span>
@@ -10,40 +11,62 @@
             <%= link_to "MORE", job.link, :class => "indeed_more grey-text" %> 
 
                 
+=======
+        <div class="card horizontal white col s12" >
+                <!--
+                <div class="card-image">
+                    <img src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/coverpic_orig.jpg">
+                  </div> -->
+            <div class="card-content teal-text">
+              <span class="indeed_show card-title" style="line-height: 1em"><%= job.title %></span>
+              
+              <div </div>> 
+                  <p ><%= job.description %></p>
+                    <i id="save" class="unsaved fa fa-heart-o"></i>
+    
+                  <td><%= job.created_at.strftime("%m/%d/%y") %></td>
+            </div>
+              
+          <%= form_tag do %>
+              <%= hidden_field_tag(:saved, true) %>
+              <% end %> 
+>>>>>>> origin/mobile
                </div>
               </div>
           <% end %>
           
     
-     <% @indeed_results.each do |job| %>
-            <div class="card horizontal white" style="">
-            <div class="card-content teal-text">
-                <span  style="font-size: 2em"><%= job.job_title.downcase %></span>
-                  <p><%= job.company %></p>
-                  <p class="grey-text"><%= job.snippet%></p>
-                   <p><%= job.city %>, <%= job.state %>| <%= job.date.to_s.split(" ")[0] %></p>
+     <%  @indeed_results[0..3].each do |job| %>
+            <% if @color_count == 0 || @color_count ==3 %> 
+            <div class="card horizontal col s6 l3" style="background-color: #2eb2ff" >
+        <% elsif @color_count == 1 %> 
+            <div class="card horizontal col s6 l3" style="background-color: #d9d9d9">
+        <% else %> 
+            <div class="card horizontal col s6 l3" style="background-color: #5271ff">
+        <% end %> 
+        
+            <div class="card-content white-text">
+                <div class="hide_card">
+                    <h4 id="job_title"><%= job.job_title.upcase %></h4>
+                    <h5 id="job_company"><%= job.company %></h5>
+                 </div>
+                 
+                <div class="show_card"> 
+                  <p><%= job.snippet%></p>
+                  <p><%= job.city %>, <%= job.state %>| <%= job.date.to_s.split(" ")[0] %></p>
 
-            <%= link_to "MORE", job.url, :class => "indeed_more grey-text" %> 
-
+        
+                    <%= link_to job.url , :class => "indeed_more" do %><i class="fa fa-arrow-right fa-4x"></i> <% end %>
                 
-               </div>
+                    
+                    <% @color_count += 1 %> 
+                </div>
+                
               </div>
+             </div>
           <% end %>
           
          
-        
-        <% @second_indeed_results.each do |job| %>
-            <div class="card horizontal white" style="">
-             
-            <div class="card-content teal-text">
-              <span style="font-size: 2em"><%= job.job_title %></span>
-                <p><%= job.company %></p>
-                <p class="grey-text"><%= job.snippet%></p>
-                <p><%= job.city %>, <%= job.state %>| <%= job.date.to_s.split(" ")[0] %></p>
-
-               </div>
-              </div>
-          <% end %>
         
         
       <% if current_user.sign_in_count == 150 %> 
@@ -68,9 +91,9 @@
           <style> 
           
           .indeed_more{
-              font-family: Montserrat;
+              font-family: Raleway Heavy;
               border: 1px solid grey;
-              margin: 1% 1% 1% 80%;
+              margin: 1% -5% 1% 90%;
               padding: 1%;
               
           }
@@ -80,6 +103,8 @@
           }
           .card  {
               width: 100%;
+              height: 20em;
+              font-family: Raleway;
           }
           .card-content{
               width: 100%;
@@ -92,25 +117,93 @@
               color: teal ;
           }
           
+          #job_title{
+              font-size: 1.5em;
+              width: 110%;
+              left: -10%;
+          }
+          
+          #job_company{
+                  position:absolute;
+                  color:white;
+                  bottom: 5%;
+                  font-family: Raleway;
+                  font-size: 1em;
+                  text-align: center;
+                  text-transform: uppercase;
+              }
+       
+          
           @media only screen and (max-device-width: 480px){
+              .show_card {
+                  background-color: inherit;
+                  position:relative;
+                  margin: -15% 0% 0% -20%;
+                  height: 30em;
+                  padding: 30% 10% 10% 20%;
+                  color: white;
+                  font-size: 1em;
+                  font-family: Raleway;
+                  text-transform: lowercase;
+              }
+              
+              .show_card p {
+                  width: 120%;
+                  height: 60%;
+              }
+              #job_title{
+                  font-family: Raleway;
+                  left:0%;
+                  font-size: 2.5em;
+                  position:absolute;
+                  top: 10%;
+                  margin: 2%;
+                  text-align: center;
+                  width: 100%;
+              }
+              #job_company{
+                  position:absolute;
+                  color:white;
+                  bottom: 5%;
+                  font-family: Raleway;
+                  font-size: 1.5em;
+                  text-align: center;
+                  text-transform: uppercase;
+              }
+            
               .indeed_more{
-                  width: 20%;
-                margin: 1% 1% 5% 85%;
-                height: 10%;
-                padding: 1%;
-
+                width: 5%;
+                position: absolute;
+                bottom: 10%;
+                left: 0%;
+                color: white;
               }
               .card{
-                  width: 150%;
-                  margin-left: -10%;
-                  padding: 5%;
+                  width: 100%;
+                  position:relative;
+                  margin-left: 0%;
+                  padding: 10% 0%;
+                  height: 30em;
+                  margin:0;
               }
           }
           
           </style>
           
           <script> 
-              $("#second_indeed_submit").click(function(){
+              $(document).ready(function(){
+                $('.show_card').hide()
+              });
+              
+              $('.hide_card').click(function(){
+                  $(this).hide(10);
+                $(this).next('.show_card').show(5);
+                $(this).parent('.card').css
+              });
+              
+              $('.show_card').click(function(){
+                  $(this).hide(10);
+                $(this).prev('.hide_card').show(5);
               });
               
             

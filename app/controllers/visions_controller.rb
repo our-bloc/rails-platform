@@ -23,7 +23,10 @@ class VisionsController < ApplicationController
     @tips_job= Tip.order("created_at DESC").where(:prep => @vision.prep).limit(5)
     
     @influencer_hangout= Event.order("created_at DESC").where(:org =>"Bloc Influencer Hangout").limit(1)
-
+    
+    @color_count= 0
+    @color2_count= 0
+    
     #import jobs from indeed
     if @vision.industry == "Techies"
           @indeed_search = IndeedAPI.search_jobs(:q => @vision.firstjob + " software" , :limit => 10)

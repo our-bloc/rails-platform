@@ -1,52 +1,9 @@
 <!-- landing page/copy --> 
 <body>
-<script> 
-       $(document).ready(function() {
-         
-      $.ajaxSetup({ cache: true });
-      //init facebook
-      $.getScript('//connect.facebook.net/en_US/sdk.js', function(){
-        FB.init({
-          appId: '405857709752176',
-          version: 'v2.7' // or v2.1, v2.2, v2.3, ...
-        });    
-        $(document).trigger('fbload');
-      });
-    }); 
-      
-      
-  $(document).on(
-    'fbload',  //  <---- HERE'S OUR CUSTOM EVENT BEING LISTENED FOR
-    function(){
-        //some code that requires the FB object
-        //such as...
-        FB.getLoginStatus(function(res){
-            if( res.status == "connected" ){
-                FB.api('/me?fields=email,picture,name,first_name,gender,locale,timezone,age_range,education', function(fbUser) {
-                    var profilepic= fbUser.picture.data.url;
-                    
-                    $('#field_username').val(fbUser.name); 
-                    console.log(fbUser.name)
-                    console.log(fbUser.education)
 
-                    $('#field_email').val(fbUser.email); 
-                    $('#field_image').val(profilepic); 
-                    $('#field_timezone').val(fbUser.timezone); 
-                    $('#field_gender').val(fbUser.gender); 
-                    $('#field_age').val(fbUser.age_range.min);
-
-                    
-
-                    
-                });
-            }
-        });
-
-    }
-);
-  </script> 
     <div id="background-filter">
-        <h2 id="core-head"> YOU HAVE THE DREAM, NOW IT'S TIME TO MAKE IT HAPPEN</h2>
+        <h2 id="core-head">You have a vision for your career and we're here to help you make it happen. </br> </br>
+        Take our 60 second quiz and get 10 career opportunities and career tips curated just for you.</h2>
 
     
     </div>
@@ -82,22 +39,35 @@
 
 <style>
   body {
-	background: url("http://www.ourbloc.co/uploads/2/4/0/1/24014742/ilike_orig.jpg") no-repeat center center fixed;
+	background: url("http://www.ourbloc.co/uploads/2/4/0/1/24014742/blackwomen_orig.jpg") no-repeat center center fixed;
 	margin: 0 auto;
 	background-size: cover;
 	width: 100%;
 	height: 100%;
-	font-family: Montserrat;
+	font-family: Lato;
 	}
 	
 .new_vision{
     position: absolute;
-    left: 9%;
-    top: 60%;
+    left: 16%;
+    top: 50%;
     width: 60%;
     height: 35%;
     font-size: 2em;
     color: teal;
+    text-transform: uppercase;
+}
+
+.new_vision input{
+    border: 5px solid white;
+    color:#44d9e6;
+    background-color: white;
+    font-family: Raleway;
+    width: 12em;
+}
+
+.new_vision input:hover {
+    background-color: grey;
 }
 
 .core-menu{
@@ -118,13 +88,18 @@
 }
 
 #core-head{
-    color: white;
+   position:fixed;
+    top: 20%;
+     width: 90%;
+     text-align: center;
+      color: white;
     line-height: 1.2;
-    top: 5%;
-    font-size: 5em;
-    padding: 8% 15% 0% 15%;
+    top: 15%;
+    font-size: 2em;
+    padding: 10% 20%;
     font-family: Montserrat;
-    width: 80%;
+    text-transform: lowercase;
+    width: 100%;
 }
 
 core-bloc ul {
@@ -147,7 +122,7 @@ core-bloc ul {
     height: 17%;
     font-size: 4em;
     line-height: 1.2;
-    border: .1em solid white;
+    border: 10px solid white;
   }
   
   #background-filter{
@@ -158,9 +133,6 @@ core-bloc ul {
   height: 100%;
 }
 
-#start_button:hover{
-    background-color:grey;
-}
 
  @media only screen and (max-device-width: 480px){
    html,body{
@@ -171,23 +143,39 @@ core-bloc ul {
      position:fixed;
      top: 20%;
      width: 90%;
-     margin: 10% 2%;
      padding: 0%;
+     text-align: center;
+      color: white;
+    line-height: 1.2;
+    top: 15%;
+    font-size: 4em;
+    padding: 10% 10%;
+    margin-top:30%;
+    font-family: Montserrat;
+    text-transform: lowercase;
+    width: 100%;
    }
    .new_vision{
       position: absolute;
       background-color: inherit;
       left: 9%;
-      top: 45%;
+      top: 60%;
       width: 80%;
       height: 35%;
       font-size: 2em;
       color: teal;
    }
    
-   .new_vision:hover{
+   .new_vision input:hover{
        background-color: grey;
    }
+   
+   .new_vision input{
+    border: 10px solid #44d9e6;
+    color:#44d9e6;
+    background-color: inherit;
+    font-family: Raleway;
+}
  }
  
  

@@ -1,0 +1,110 @@
+
+     <% @jobs.each do |job| %>
+        <div class="card horizontal white col s6" >
+                <!--
+                <div class="card-image">
+                    <img src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/coverpic_orig.jpg">
+                  </div> -->
+            <div class="card-content teal-text">
+              <span class="indeed_show card-title" style="line-height: 1em"><%= job.title %></span>
+              
+              <div </div>> 
+                  <p ><%= job.description %></p>
+                    <i id="save" class="unsaved fa fa-heart-o"></i>
+    
+                  <td><%= job.created_at.strftime("%m/%d/%y") %></td>
+            </div>
+              
+          <%= form_tag do %>
+              <%= hidden_field_tag(:saved, true) %>
+              <% end %> 
+               </div>
+          </div>
+          <% end %>
+          
+    
+     <%  @indeed_results[4..7].each do |job| %>
+            <% if @color2_count == 0 || @color2_count == 3 %> 
+            <div class="card horizontal col s6 l3" style="background-color: #2eb2ff" >
+        <% elsif @color2_count == 1 %> 
+            <div class="card horizontal col s6 l3" style="background-color: #d9d9d9">
+        <% else %> 
+            <div class="card horizontal col s6 l3" style="background-color: #5271ff">
+        <% end %> 
+        
+       
+        
+            <div class="card-content white-text">
+                <div class="hide_card">
+                    <h4 id="job_title"><%= job.job_title.upcase %></h4>
+                    <h5 id="job_company"><%= job.company %></h5>
+                     
+                 </div>
+                 
+                <div class="show_card"> 
+                  <p><%= job.snippet%></p>
+                   <p><%= job.city %>, <%= job.state %>| <%= job.date.to_s.split(" ")[0] %></p>
+
+            <%= link_to "MORE", job.url, :class => "indeed_more grey-text" %> 
+            <% @color2_count += 1 %> 
+
+                </div>
+               </div>
+              </div>
+          <% end %>
+          
+         
+        
+        <% @second_indeed_results.each do |job| %>
+            <div class="card horizontal teal" style="">
+             
+            <div class="card-content white-text">
+            
+              <span style="font-size: 2em"><%= job.job_title %></span>
+                <p><%= job.company %></p>
+                <p class="grey-text"><%= job.snippet%></p>
+                <p><%= job.city %>, <%= job.state %>| <%= job.date.to_s.split(" ")[0] %></p>
+            
+               </div>
+              </div>
+          <% end %>
+        
+        
+      <% if current_user.sign_in_count == 150 %> 
+
+        <div id="second_indeed_search"> 
+             <%= form_tag(vision_path , method: "get", remote: true ) do  %>  
+             
+               <div class="input-field" style="line-height: 1.1">
+                <%= label_tag :q, "Type in a new job description to refine your timeline"%> 
+                 <%= text_field_tag :q %> 
+                <%= submit_tag "Refine your search", :class => "white-text btn waves-effect waves-light", :id => "second_indeed_submit" %> 
+                </div>
+                <% end %> 
+            </div> 
+        <% end %>
+        
+        
+        
+        
+    
+          <script> 
+              $(document).ready(function(){
+                $('.show_card').hide()
+              });
+              
+              $('.hide_card').click(function(){
+                  $(this).hide(10);
+                $(this).next('.show_card').show(5);
+                $(this).parent('.card').css
+              });
+              
+              $('.show_card').click(function(){
+                  $(this).hide(10);
+                $(this).prev('.hide_card').show(5);
+              });
+              
+            
+             
+          </script>
+   

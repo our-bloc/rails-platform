@@ -1,0 +1,47 @@
+
+<!-- THREE OPPORTUNITIES --> 
+  
+    
+     <div class="row">
+        <div class="col s12">
+        <div class="tip_card"> 
+         <img id="tip_image" src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/new-playlist-design_orig.png"> 
+          <h6> <%= link_to @tips[0].title , @tips[0].link%> </h6>
+        </div>
+      </div>
+      
+    
+ 
+
+<style>
+    a{
+        color: grey;
+    }
+    a:hover{
+        color: grey;
+    }
+    
+    #tip_image {
+        margin-top: 0%;
+        width: 100%;
+    }
+    
+    .tip_card {
+        margin: 10em 0;
+        background-color: #44d9e6;
+        padding-bottom: 5%;
+    }
+    
+    .tip_card h6{
+        font-family: Raleway;
+        color: white;
+        font-size: 2em;
+        text-transform: uppercase;
+        margin: 5% 0%;
+        padding: 5%;
+    }
+    
+    .tip_card h6 a {
+        color:white;
+    }
+</style>
