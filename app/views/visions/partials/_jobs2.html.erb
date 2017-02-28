@@ -24,12 +24,12 @@
           
     
      <%  @indeed_results[4..7].each do |job| %>
-            <% if @color2_count == 0 || @color_count == 3 %> 
-            <div class="card horizontal col s6" style="background-color: #2eb2ff" >
+            <% if @color2_count == 0 || @color2_count == 3 %> 
+            <div class="card horizontal col s6 l3" style="background-color: #2eb2ff" >
         <% elsif @color2_count == 1 %> 
-            <div class="card horizontal col s6" style="background-color: #d9d9d9">
+            <div class="card horizontal col s6 l3" style="background-color: #d9d9d9">
         <% else %> 
-            <div class="card horizontal col s6" style="background-color: #5271ff">
+            <div class="card horizontal col s6 l3" style="background-color: #5271ff">
         <% end %> 
         
        
@@ -87,87 +87,7 @@
         
         
         
-        
-        
-          <style> 
-          
-          .indeed_more{
-              font-family: Raleway Heavy;
-              border: 1px solid grey;
-              margin: 1% 1% 1% 80%;
-              padding: 1%;
-              
-          }
-          .indeed_more:hover{
-              background-color: grey;
-              color:black;
-          }
-          .card  {
-              width: 100%;
-          }
-          .card-content{
-              width: 100%;
-          }
-          a {
-              line-height: 1em;
-          }
-          
-          a:hover{
-              color: teal ;
-          }
-          
-          @media only screen and (max-device-width: 480px){
-              .show_card{
-                  background-color: white;
-                  position:relative;
-                  margin: -5% 0% 0% -11%;
-                  width: 122%;
-                  height: 30em;
-                  padding: 20% 10% 10% 10%;
-                  color: #44d9e6;
-                  font-family: Lato;
-                  text-transform: lowercase;
-              }
-              #job_title{
-                  font-family: Raleway;
-                  font-size: 3em;
-                  position:absolute;
-                  top: 10%;
-                  margin: 10% -10%;
-                  text-align: center;
-                  width: 100%;
-              }
-              #job_company{
-                  position:absolute;
-                  color:white;
-                  bottom: 5%;
-                  font-family: Raleway;
-                  font-size: 1.5em;
-                  text-align: center;
-                  text-transform: uppercase;
-              }
-              .show_on_click{
-                  display: none;
-              }
-              .indeed_more{
-                width: 20%;
-                margin: 1% 1% 5% 85%;
-                height: 10%;
-                padding: 1%;
-
-              }
-              .card{
-                  width: 100%;
-                  position:relative;
-                  margin-left: 0%;
-                  padding: 10% 0%;
-                  height: 30em;
-                  margin:0;
-              }
-          }
-          
-          </style>
-          
+    
           <script> 
               $(document).ready(function(){
                 $('.show_card').hide()

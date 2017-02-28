@@ -1,4 +1,6 @@
-  <body>
+ <body>
+
+
   <ul id="slide-out" class="side-nav">
   
     
@@ -23,7 +25,6 @@
     <li id="menu_link"><a class="subheader">Recent Activity</a></li>
   </ul>
   <br> 
-   <a style="" href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="fa fa-bars fa-5x"></i></a>
 
 
   
@@ -33,52 +34,7 @@
 
 
 <!-- SIDE BAR --> 
-<div class="row"> 
-<!-- Personality Quiz Results --> 
-      <div class="banner col l4 s12 push-s1 push-l1">
-        <div class="banner_text card white" style="">
-        <div class="card-content grey-text">
-          <h5> achieving the dream... </h5>
-          <h6><%= @vision.firstjob.capitalize %></h6>
-          <br> 
-          <h5> building with ...</h5>
-          <h6>The <%= @vision.industry %> </h6>
-          <br> 
-          <h5> seeing it to be it... </h5>
-          <%= render "visions/partials/influencers" %> 
-        </div>
-        </div> 
-      </div>
-    <div class="banner col l6 s5 push-s7 "> 
-    <% if @vision.industry == "Griots" %> 
-      <img style="width: 100%" src="https://images.pexels.com/photos/176103/pexels-photo-176103.jpeg?w=940&h=650&auto=compress&cs=tinysrgb">
-    <% elsif @vision.industry =="Artists" %> 
-      <img style="width: 100%" src="https://images.pexels.com/photos/3104/black-and-white-music-headphones-life.jpg?h=350&auto=compress">
-    <% elsif @vision.industry =="Artists" %> 
-      <img style="width: 100%" src="https://images.pexels.com/photos/3104/black-and-white-music-headphones-life.jpg?h=350&auto=compress">
-    <% elsif @vision.industry =="CSuite" %> 
-      <img style="width: 100%" src="https://images.pexels.com/photos/229/bow-tie-sunglasses-apple-iphone.jpg?w=940&h=650&auto=compress&cs=tinysrgb">
-    <% elsif @vision.industry =="Entrepreneurs" %> 
-      <img style="width: 100%" src="https://images.pexels.com/photos/261577/pexels-photo-261577.jpeg?h=350&auto=compress&cs=tinysrgb">
-    <% elsif @vision.industry =="Scientists" %> 
-      <img style="width: 100%" src="https://images.pexels.com/photos/167682/pexels-photo-167682.jpeg?h=350&auto=compress&cs=tinysrgb">
-     <% elsif @vision.industry =="Advocates" %> 
-      <img style="width: 100%" src="https://images.pexels.com/photos/203218/pexels-photo-203218.jpeg?h=350&auto=compress&cs=tinysrgb">
-    <% elsif @vision.industry =="Educators" %> 
-      <img style="width: 100%" src="https://images.pexels.com/photos/247839/pexels-photo-247839.jpeg?w=940&h=650&auto=compress&cs=tinysrgb">
-    <% elsif @vision.industry =="Activists" %> 
-      <img style="width: 100%" src="https://action.aclu.org/sites/default/files/imce_images/aclu-action/act15-blmsurveillance-500x280-rel1.jpg">
-    <% elsif @vision.industry =="Creatives" %> 
-      <img style="width: 100%" src="https://images.pexels.com/photos/3104/black-and-white-music-headphones-life.jpg?w=940&h=650&auto=compress&cs=tinysrgb">
-    <% elsif @vision.industry =="Techies" %> 
-      <img style="width: 100%" src="https://images.pexels.com/photos/30964/pexels-photo-30964.png?w=940&h=650&auto=compress&cs=tinysrgb">
-    
-   
-    
-    <% end %> 
-    </div>
-</div>
-</div>
+
   
 <!-- CONNECTIONS, OPPS RESOURCES --> 
   
@@ -95,7 +51,7 @@
 </div>
 
 <div class="tip_playlist" >
-      <%= render "visions/partials/tips" %>
+  <%= render "visions/partials/tips" %>
 </div>
 
 <div class="opp_playlist row">
@@ -106,6 +62,12 @@
       <%= render "visions/partials/tips2" %>
 </div>
 
+<div class="bottom-nav">
+    <%= link_to myprofile_path do %><i class="fa fa-heart fa-3x" style="color: #44d9e6; margin-left: 25%; margin-top: 5%"></i><% end %>
+    <%= link_to myprofile_path do %><i class="fa fa-user fa-3x" style="color: #44d9e6; margin-left: 15%; margin-top: 5%"></i><% end %>
+    <%= link_to myprofile_path do %><i class="fa fa-cog fa-3x" style="color: #44d9e6; margin-left: 15%; margin-top: 5%"></i><% end %>
+
+</div>
 
   
 <div class="open_referral_modal"> <h2 style=""> UPGRADE TO PRO </h2></div>
@@ -127,7 +89,7 @@
           <h6> Message Bloc users who can plug you with their former employers</h6>
       
         </div>
-        <div class="card-content teal-text">
+        <div class="card-content teal-text" id="share-link">
           <h6><%= link_to "LINK TO YOUR SHARE PAGE jointhebloc.com/" + @user.profileurl , root_path + @user.profileurl , class: "teal-text" %> </h6>
         </div>
       </div>
@@ -143,16 +105,25 @@
     width: 100%;
     height: 100%;
     font-family: Work Sans;
+    padding: 10%;
+  }
+  #welcome-title{
+    display:none;
   }
   .button-collapse{
     margin:2em 1em;
   }
   .referral_modal {
     position: absolute;
-    width: 100%;
+    width: 110%;
     height: 200%;
     background-color: black;
     opacity: .6;
+    left:0%;
+  }
+  
+  #share-link{
+    margin-top: -10%;
   }
   .render_view{
     padding: 5%;
@@ -163,8 +134,9 @@
   .modal_card {
     position:absolute;
     width: 86%;
-    margin: 15% 7%;
-    font-family: Montserrat;
+    height: 40%;
+    margin: 5% 2%;
+    font-family: Raleway;
   }
   
   .playlist {
@@ -232,34 +204,43 @@
   }
   
   @media only screen and (max-device-width: 480px){
+    html,body{
+      padding: 0%;
+    }
     .banner{
       display: none;
     }
     .welcome {
-      margin-bottom: 50em;
-      height:50em;
+      margin-bottom: 15em;
+      margin-top:-10%;
+      height:80em;
       width: 100%;
       left:0%;
+      background-color: white;
     }
+    
     #welcome-title {
+      display: block;
       color: #44d9e6;
       font-family: Raleway;
       font-size: 10em;
       padding: 50% 20%;
       position: absolute;
-      top: 0%;
+      top: 0em;
       left: -5%;
-      width: 105%;
+      width: 100%;
       height: 10em;
-      background-color: white;
       margin-bottom: 20%;
     }
     
     html{
         font-size: 2em;
         width:100%;
+        padding: 0%;
     }
-    
+    .row{
+      width: 100%;
+    }
     div {
       font-size: 1.1em;
     }
@@ -289,13 +270,14 @@
     .open_referral_modal h2{
     border: 8px solid #44d9e6;;
     position: relative;
-    width: 90%;
+    width: 95%;
     font-family: Raleway;
     color: #44d9e6;
-    border-radius: 25%;
-    font-size: 5em;
-    margin-left: -20%;
+    font-size: 4em;
+    text-align:center;
+    margin-left: -25%;
     padding: 3%;
+    margin-bottom: 10em;
   }
   
   .open_referral_modal{
@@ -310,7 +292,9 @@
     line-height: 3.5em;
   }
   .modal_card{
-    margin-top: 30%;
+    margin-top: 15%;
+    height: 55em;
+    width: 95%;
   }
 
   #profile_pic {
@@ -352,10 +336,20 @@
   }
   
   .referral_modal{
-    width: 115%;
+    width: 100%;
   }
   .button-collapse{
     padding: 2%;
+  }
+  
+  .bottom-nav{
+    position: fixed;
+    height: 10%;
+    background-color: white;
+    width: 100%;
+    bottom: 0%;
+    border-top: 5px solid #44d9e6;
+    z-index: 10;
   }
 }
 

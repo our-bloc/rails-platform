@@ -5,16 +5,20 @@
 </script>
 
 <div class="row">
+  
     <div id="title"> bloc. </div>
-  <div class="col m6 s12" id="background-filter">
     
-          <h6 id="beta" style=""> beta</h6>
+      <h6 id="beta" style=""> beta</h6>
           <p id="fubu" style=""> career advice for us, by us.</p>
           
 
           <div id="whatyouget">
             <h1> get your seat at the table</h1>
               </div>
+              
+  <div class="col m6 s12" id="background-filter">
+    
+        
   </div>
               
   <div class="loginform col s10  offset-s1 m4 push-m7" style="background-color:inherit; height: 100%" id="login_form">
@@ -69,7 +73,7 @@ h5{
   top: 5%; 
   color:white;
   opacity: 1;
-  z-index: 5;
+  z-index: 10;
 }
 
 #beta{
@@ -100,6 +104,7 @@ h5{
   font-family: Montserrat;
 }
 #background-filter{
+  z-index: 0;
   position: absolute;
   background-color:black;
   opacity: .85;
@@ -179,11 +184,24 @@ input.fieldtext{
         height: 100%;
         width: 100%;
     }
+    
+    body {
+    	background: url("http://www.ourbloc.co/uploads/2/4/0/1/24014742/home-view_orig.png") no-repeat center center fixed;
+    	margin: 0 auto;
+    	background-size: cover;
+    	width: 100%;
+    	height:100%;
+    	font-family: Raleway;
+	}
+	
     #title{
       position:absolute;
       top: 37%; 
       left: 30%;
       margin: 0 auto;
+      font-family: Montserrat;
+      color: #44d9e6;
+      font-weight: 800;
     }
     #whatyouget{
       display:none;
@@ -195,6 +213,7 @@ input.fieldtext{
     }
     
     #background-filter{
+    display: none;
     position: fixed;
     background-color:black;
     padding: 5%;
@@ -236,6 +255,9 @@ input.fieldtext{
   #beta {
     position: absolute;
     margin-left: 10%;
+    color: white;
+    z-index: 10;
+    opacity: 1; 
     top:36%;
     left: 48% ;
   }
