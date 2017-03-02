@@ -5,9 +5,9 @@
         <h6><%= image_tag @user.picture, class:  "circle" %> </h6>
         <h5> <%= @user.name %> </h5>
         <h6> <%= @user.email %> </h6>
-        <h6> <%= @user.school %> </h6>
-        <h6> <%= @user.experience %> </h6>
-        <h6> <%= @user.major%> | <%= @user.gradyear%> </h6>
+        <h6> <%= @user.school.capitalize %> </h6>
+        <h6> <% if @user.experience != nil %> <%= @user.experience.capitalize %><% end %>  </h6>
+        <h6> <%= @user.major.capitalize %> | <%= @user.gradyear%> </h6>
     </div> 
 
     <div class="col s12 l6"> 
@@ -23,7 +23,7 @@
             <div style="height: 2em"> </div>
             <% end %>
     
-        <h6 class="teal-text" id="share_code">share code: <%= link_to "jointhebloc.co/"+ @user.profileurl, "https://blocview-aminabloc.c9users.io/"+ @user.profileurl  %> </h6>
+        <h6 class="teal-text" id="share_code">share code: <%= link_to "jointhebloc.com/"+ @user.profileurl, "https://blocview-aminabloc.c9users.io/"+ @user.profileurl  %> </h6>
      </div>
  </div> 
  

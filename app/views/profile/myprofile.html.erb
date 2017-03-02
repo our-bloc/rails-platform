@@ -5,15 +5,22 @@
         <h6><%= image_tag @user.picture, class:  "circle" %> </h6>
         <h5> <%= @user.name %> </h5>
         <h6> <%= @user.email %> </h6>
-        <h6> <%= @user.school %> </h6>
-        <h6> <%= @user.experience %> </h6>
-        <h6> <%= @user.major%> | <%= @user.gradyear%> </h6>
+        <h6> <%= @user.school.capitalize %> </h6>
+        <h6> <% if @user.experience != nil %> <%= @user.experience.capitalize %><% end %>  </h6>
+        <h6> <% if @user.major != nil %><%= @user.major.capitalize %><% end %>  | <% if @user.gradyear != nil %><%= @user.gradyear%><% end %>  </h6>
     </div> 
 
     <div class="col s12 l6"> 
         <% if @vision != nil %>
             <h5 style="margin-top: 10%"><%= link_to "See My Playlist", vision_path(@vision) %> </h5>
             <div style="height: 2em"> </div>
+            
+            <h5 style="margin-top: 5%"><%= link_to "Retake the Quiz", edit_vision_path(@vision) %> </h5>
+            <div style="height: 2em"> </div>
+            
+              <h5 style="margin-top: 5%"><%= link_to "Sign out", destroy_user_session_path, :method => :delete %> </h5>
+            <div style="height: 2em"> </div>
+            
             <% else %> 
             <h5><%= link_to "Get started by building your first playlist", new_vision_path %> </h5>
             <div style="height: 2em"> </div>
