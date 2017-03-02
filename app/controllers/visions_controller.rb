@@ -18,7 +18,7 @@ class VisionsController < ApplicationController
   
     #render modals
     
-    @jobs= Job.order("created_at DESC").limit(2).where(:industry => @vision.industry)
+    @jobs= Job.order("created_at DESC").limit(0).where(:industry => @vision.industry)
     
     @tips= Tip.order("created_at DESC").where(:prep => @vision.prep).limit(5)
     
