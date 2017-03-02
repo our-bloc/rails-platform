@@ -6,12 +6,20 @@
         <div class="col s12">
         <div class="tip_card"> 
          <img id="tip_image" src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/new-playlist-design_orig.png"> 
-          <h6> <%= link_to @tips[0].title , @tips[0].link%> </h6>
-        </div>
+         
+        <% if @tips == nil %> 
+          <h6> </h6>
+         <% else %> 
+           
+            <% if @tips[0].industry == @vision.industry || @tips[0].industry == "All" || @tips[0].industry == nil %>
+              <h6> <%= link_to @tips[0].title , @tips[0].link%> </h6>
+             <% end %> 
+          
+          <% end %> 
+         
+          
+    </div>
       </div>
-      
-    
- 
 
 <style>
     a{
