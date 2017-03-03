@@ -5,9 +5,10 @@
         <h6><%= image_tag @user.picture, class:  "circle" %> </h6>
         <h5> <%= @user.name %> </h5>
         <h6> <%= @user.email %> </h6>
-        <h6><%= @user.school.titleize %> </h6>
+        <h6> <% if @user.school != nil %> <%= @user.school.titleize %> <%end %> </h6>
         <h6> <% if @user.experience != nil %> <%= @user.experience.titleize %> <% end %>  </h6>
-        <h6> <%= @user.major.titleize %> | <%= @user.gradyear%> </h6>
+        <h6> <% if @user.major != nil %> <%= @user.major.titleize %><% end %> <</h6>
+        <h6> <% if @user.gradyear != nil %> <%= @user.gradyear%> <%end %>  </h6>
     </div> 
 
     <div class="col s12 l6"> 
