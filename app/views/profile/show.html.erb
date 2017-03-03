@@ -7,8 +7,8 @@
         <h6> <%= @user.email %> </h6>
         <h6> <% if @user.school != nil %> <%= @user.school.titleize %> <%end %> </h6>
         <h6> <% if @user.experience != nil %> <%= @user.experience.titleize %> <% end %>  </h6>
-        <h6> <% if @user.major != nil %> <%= @user.major.titleize %><% end %> <</h6>
-        <h6> <% if @user.gradyear != nil %> <%= @user.gradyear%> <%end %>  </h6>
+        <h6> <% if @user.major != nil %> <%= @user.major.titleize %><% end %> </h6>
+        <h6> <% if @user.gradyear != nil %> <%= @user.gradyear%> <% end %>  </h6>
     </div> 
 
     <div class="col s12 l6"> 
@@ -27,8 +27,13 @@
  
  <div class="share_bar">
    
-   
+   <% if user_signed_in? %> 		     
+     <p> <%= link_to "back to my profile", myprofile_path, class: "white-text" %> </p>		   
+     
+     <% else %> 
     <p id="profile-oauth"> <%= link_to "Click to create your account and get your own custom career playlist!", user_facebook_omniauth_authorize_path, class:"white-text" %> </p>
+     		     
+     <% end %> 
     
    
 </div>
