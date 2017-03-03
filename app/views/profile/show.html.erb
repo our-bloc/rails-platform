@@ -4,7 +4,9 @@
     <div class="col s12 l6"> 
         <h6><%= image_tag @user.picture, class:  "circle" %> </h6>
         <h5> <%= @user.name %> </h5>
+        <% if current_user.role != "student" %> 
         <h6> <%= @user.email %> </h6>
+        <% end %> 
         <h6> <% if @user.school != nil %> <%= @user.school.titleize %> <%end %> </h6>
         <h6> <% if @user.experience != nil %> <%= @user.experience.titleize %> <% end %>  </h6>
         <h6> <% if @user.major != nil %> <%= @user.major.titleize %><% end %> </h6>
@@ -16,7 +18,7 @@
             <h5 style="margin-top: 10%"> my career profile... </h5>
             
                 <h6><%= @vision.industry %></h6>
-               <h6><%= @vision.gradschool %></h6>
+                
             <% else %> 
            
             <% end %>
