@@ -5,22 +5,19 @@
         <h6><%= image_tag @user.picture, class:  "circle" %> </h6>
         <h5> <%= @user.name %> </h5>
         <h6> <%= @user.email %> </h6>
-        <h6> <%= @user.school.capitalize %> </h6>
-        <h6> <% if @user.experience != nil %> <%= @user.experience.capitalize %><% end %>  </h6>
-        <h6> <%= @user.major.capitalize %> | <%= @user.gradyear%> </h6>
+        <h6><%= @user.school.titleize %> </h6>
+        <h6> <% if @user.experience != nil %> <%= @user.experience.titleize %> <% end %>  </h6>
+        <h6> <%= @user.major.titleize %> | <%= @user.gradyear%> </h6>
     </div> 
 
     <div class="col s12 l6"> 
         <% if @vision != nil %>
-            <h5 style="margin-top: 10%"> seeing it to be it... </h5>
-            <div style="height: 2em">
-              <% @influencers.each do |influencer| %>
-                <h6><%= influencer.name %></h6>
-              <% end %>
-            </div>
+            <h5 style="margin-top: 10%"> my career profile... </h5>
+            
+                <h6><%= @vision.industry %></h6>
+               <h6><%= @vision.gradschool %></h6>
             <% else %> 
-            <h5><%= link_to "Get started by building your first playlist", new_vision_path %> </h5>
-            <div style="height: 2em"> </div>
+           
             <% end %>
     
         <h6 class="teal-text" id="share_code">share code: <%= link_to "jointhebloc.com/"+ @user.profileurl, "https://blocview-aminabloc.c9users.io/"+ @user.profileurl  %> </h6>
@@ -29,15 +26,18 @@
  
  <div class="share_bar">
    
-    <% if user_signed_in? %> 
-    <p> <%= link_to "back to my profile", myprofile_path, class: "white-text" %> </p>
-
-    <% else%> 
-    <p> <%= link_to "Click to create your account and get your own custom career playlist!", user_facebook_omniauth_authorize_path, class:"white-text" %> </p>
+   
+    <p id="profile-oauth"> <%= link_to "Click to create your account and get your own custom career playlist!", user_facebook_omniauth_authorize_path, class:"white-text" %> </p>
     
-    <% end %> 
+   
 </div>
 </div>
+
+<style>
+  #profile-oauth{
+    line-height: 1.2;
+  }
+</style>
 
 
      
