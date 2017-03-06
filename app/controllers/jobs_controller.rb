@@ -17,7 +17,7 @@ class JobsController < ApplicationController
   # GET /jobs/1.json
   def show
     @user = current_user
-    @user_jobs = @user.jobs
+
   end
 
   # GET /jobs/new

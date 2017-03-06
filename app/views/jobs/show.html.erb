@@ -1,21 +1,150 @@
 
-
 <p id="notice"><%= notice %></p>
 
 <div class="row">
   <div class="col s12 m6">
-    <div class="card grey darken-2">
-      <div class="card-content white-text">
-        <span class="card-title"><%= @job.title %>></span>
+    <div class="jobs_card card white">
+      <div class="card-content">
+        <h1 class="card-title"><%= @job.title %></h1>
         <p><%= @job.description %></p>
         <p><%= @job.industry %></p>
 
         <p class="right">Deadline: <%= @job.deadline %></p>
       </div>
       <div class="card-action">
+        <% if current_user == @job.user %> 
         <a href="#"><%= link_to 'Edit', edit_job_path(@job) %></a>
+        <% end %> 
         <a href="#"><%= link_to 'Back', jobs_path %></a>
       </div>
     </div>
   </div>
 </div>
+<style> 
+body {
+            	background: url("http://www.ourbloc.co/uploads/2/4/0/1/24014742/jobs-board-2_orig.png") no-repeat center center fixed;
+            	margin: 0 auto;
+            	background-size: cover;
+            	width: 100%;
+            	height:100%;
+            	font-family: Raleway;
+            	}
+    	
+          h1, h2, h6 {
+            font-family: Raleway ;
+          }
+          
+
+          
+          h1{
+            text-transform: uppercase;
+          }
+          
+          
+          .jobs_card{
+
+          }
+          
+         
+          .card  {
+              width: 100%;
+              height: 100%;
+              font-family: Raleway;
+          }
+          .card-content{
+              width: 100%;
+          }
+          a {
+              line-height: 1em;
+          }
+          
+          a:hover{
+              color: teal ;
+          }
+          
+          #job_title{
+              font-size: 1.5em;
+              width: 110%;
+              left: -10%;
+              color:white;
+          }
+          
+          #job_company{
+                  position:absolute;
+                  color: white;
+                  bottom: 5%;
+                  font-family: Raleway;
+                  font-size: 1em;
+                  text-align: center;
+                  text-transform: uppercase;
+              }
+       
+          
+          @media only screen and (max-device-width: 480px){
+           
+            	
+            	.jobs_board{
+            	  position: relative;
+            	  width: 100%;
+            	  margin-top: 200%;
+            	}
+            	
+              .show_card {
+                  background-color: inherit;
+                  position:relative;
+                  margin: -15% 0% 0% -20%;
+                  height: 30em;
+                  padding: 30% 10% 10% 20%;
+                  color: white;
+                  font-size: 1em;
+                  font-family: Raleway;
+                  text-transform: lowercase;
+              }
+              
+              .show_card p {
+                  width: 120%;
+                  height: 60%;
+              }
+              #job_title{
+                  font-family: Raleway;
+                  left:0%;
+                  font-size: 3em;
+                  position:absolute;
+                  top: 25%;
+                  margin: 2%;
+                  text-align: center;
+                  width: 100%;
+              }
+              
+              #job_title a{
+                color:white;
+              }
+              #job_company{
+                  position:absolute;
+                  color:white;
+                  bottom: 5%;
+                  font-family: Raleway;
+                  font-size: 2em;
+                  text-align: center;
+                  text-transform: uppercase;
+              }
+            
+              .indeed_more{
+                width: 5%;
+                position: absolute;
+                bottom: 10%;
+                left: 0%;
+                color: white;
+              }
+              .card{
+                  width: 100%;
+                  position:relative;
+                  margin-left: 0%;
+                  padding: 10% 0%;
+                  height: 30em;
+                  margin:0;
+              }
+          }
+          </style> 
+   
+
