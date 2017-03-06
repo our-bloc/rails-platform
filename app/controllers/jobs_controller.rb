@@ -5,7 +5,7 @@ class JobsController < ApplicationController
   # GET /jobs.json
   def index
     @jobs = Job.all
-
+    @color_count= 1
   end
   
   def indeed

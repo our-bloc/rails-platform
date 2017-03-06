@@ -1,0 +1,867 @@
+Started GET "/jobs" for 108.219.110.211 at 2017-03-06 15:16:33 +0000
+  
+PG::ConnectionBad (could not connect to server: Connection refused
+	Is the server running on host "localhost" (::1) and accepting
+	TCP/IP connections on port 5432?
+could not connect to server: Connection refused
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+):
+  
+activerecord (5.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `initialize'
+activerecord (5.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `new'
+activerecord (5.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `connect'
+activerecord (5.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:217:in `initialize'
+activerecord (5.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `new'
+activerecord (5.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (5.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:729:in `new_connection'
+activerecord (5.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:773:in `checkout_new_connection'
+activerecord (5.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:752:in `try_to_checkout_new_connection'
+activerecord (5.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:713:in `acquire_connection'
+activerecord (5.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:490:in `checkout'
+activerecord (5.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:364:in `connection'
+activerecord (5.0.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:883:in `retrieve_connection'
+activerecord (5.0.1) lib/active_record/connection_handling.rb:128:in `retrieve_connection'
+activerecord (5.0.1) lib/active_record/connection_handling.rb:91:in `connection'
+activerecord (5.0.1) lib/active_record/migration.rb:559:in `connection'
+activerecord (5.0.1) lib/active_record/migration.rb:546:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+ahoy_matey (1.5.4) lib/ahoy/engine.rb:22:in `call_with_quiet_ahoy'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.4ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (46.0ms)
+Started GET "/jobs" for 108.219.110.211 at 2017-03-06 15:17:54 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (24.4ms)
+Completed 200 OK in 1086ms (Views: 1073.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/jobs" for 108.219.110.211 at 2017-03-06 15:19:05 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 215ms (Views: 212.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/jobs" for 108.219.110.211 at 2017-03-06 15:20:19 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 304ms (Views: 301.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/jobs" for 108.219.110.211 at 2017-03-06 15:20:51 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 294ms (Views: 291.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/jobs" for 108.219.110.211 at 2017-03-06 15:21:18 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 403ms (Views: 400.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 108.219.110.211 at 2017-03-06 15:21:49 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 351ms (Views: 348.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 108.219.110.211 at 2017-03-06 15:22:33 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 206ms (Views: 204.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 108.219.110.211 at 2017-03-06 15:30:09 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 274ms (Views: 272.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 108.219.110.211 at 2017-03-06 15:30:58 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 277ms (Views: 275.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 108.219.110.211 at 2017-03-06 15:33:38 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 326ms (Views: 323.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 108.219.110.211 at 2017-03-06 15:37:14 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 232ms (Views: 229.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/jobs" for 108.219.110.211 at 2017-03-06 15:38:20 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 179ms (Views: 176.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/jobs" for 108.219.110.211 at 2017-03-06 15:39:00 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 254ms (Views: 251.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 22:09:49 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (5.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 760ms (Views: 677.1ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 22:11:19 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 248ms (Views: 245.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 22:15:59 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (5.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (31.9ms)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 6.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `%' for nil:NilClass):
+    12: 
+    13: <div class="row">
+    14:   <% @jobs.each do |job| %>
+    15:    <% if (@color_count % 2) != 0 %> 
+    16:             <div class="card horizontal col s6 l3" style="background-color: #2eb2ff" >
+    17:         <% else %> 
+    18:             <div class="card horizontal col s6 l3" style="background-color: inherit">
+  
+app/views/jobs/index.html.erb:15:in `block in _app_views_jobs_index_html_erb__1113785193542570723_70292651918160'
+app/views/jobs/index.html.erb:14:in `_app_views_jobs_index_html_erb__1113785193542570723_70292651918160'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (41.8ms)
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 22:18:26 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.9ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 269ms (Views: 258.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 22:18:58 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (176.8ms)
+Completed 200 OK in 407ms (Views: 404.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 22:22:23 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 208ms (Views: 205.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 22:24:06 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 852ms (Views: 849.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 22:41:07 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 192ms (Views: 190.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 22:41:47 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 319ms (Views: 317.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 22:42:30 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 210ms (Views: 207.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 22:42:39 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 249ms (Views: 247.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 22:43:06 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 309ms (Views: 306.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 22:43:16 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 169ms (Views: 167.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 22:43:56 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 223ms (Views: 221.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 22:44:07 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 198ms (Views: 195.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 22:44:29 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 183ms (Views: 179.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 22:45:01 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 298ms (Views: 296.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 22:45:09 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 347ms (Views: 344.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 22:46:03 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 361ms (Views: 358.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 22:46:26 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 227ms (Views: 224.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 22:47:24 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (139.0ms)
+Completed 200 OK in 509ms (Views: 506.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 22:47:49 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 451ms (Views: 448.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 22:48:20 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 281ms (Views: 279.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 22:55:11 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 452ms (Views: 449.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:01:57 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (5.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 416ms (Views: 405.0ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:02:54 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 396ms (Views: 254.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:03:10 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 418ms (Views: 415.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:03:18 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 212ms (Views: 209.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:03:54 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 403ms (Views: 392.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:04:19 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 261ms (Views: 257.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:05:21 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 300ms (Views: 297.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:06:40 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 235ms (Views: 233.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:07:23 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 230ms (Views: 228.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:07:36 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 224ms (Views: 221.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:08:07 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 282ms (Views: 279.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:08:20 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 245ms (Views: 243.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:08:49 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 247ms (Views: 240.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:09:28 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 390ms (Views: 387.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:09:44 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 335ms (Views: 332.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:10:15 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 445ms (Views: 443.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:10:55 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 571ms (Views: 566.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:11:26 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 199ms (Views: 196.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:11:51 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 244ms (Views: 242.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:12:01 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 468ms (Views: 465.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:12:21 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 243ms (Views: 239.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:12:54 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 240ms (Views: 236.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:13:10 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 426ms (Views: 414.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:13:28 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 260ms (Views: 256.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:13:50 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 285ms (Views: 277.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:14:04 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 234ms (Views: 231.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:14:16 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 254ms (Views: 251.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:15:05 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 216ms (Views: 214.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:15:22 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 366ms (Views: 363.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:15:41 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 329ms (Views: 326.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:16:18 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 225ms (Views: 223.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:16:31 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 354ms (Views: 352.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:16:56 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 320ms (Views: 313.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:17:12 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (166.6ms)
+Completed 200 OK in 421ms (Views: 419.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:17:22 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 255ms (Views: 252.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:17:47 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 254ms (Views: 251.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:18:31 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 320ms (Views: 318.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:18:49 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 324ms (Views: 321.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:18:58 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 202ms (Views: 199.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:19:26 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 228ms (Views: 225.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:19:54 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 215ms (Views: 212.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:20:11 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 312ms (Views: 309.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:22:21 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 315ms (Views: 312.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:23:01 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 221ms (Views: 218.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:23:14 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 313ms (Views: 310.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:24:51 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 286ms (Views: 284.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:25:29 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 352ms (Views: 349.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:26:35 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 228ms (Views: 226.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:27:22 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (1.0ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 350ms (Views: 345.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:28:17 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 326ms (Views: 324.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:28:47 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 185ms (Views: 183.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:29:14 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 247ms (Views: 245.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:29:42 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 310ms (Views: 308.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:30:09 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 269ms (Views: 266.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:30:42 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 283ms (Views: 280.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:31:15 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 352ms (Views: 349.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:31:28 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 207ms (Views: 205.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:31:40 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 280ms (Views: 277.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/jobs" for 71.56.113.212 at 2017-03-06 23:33:20 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs"[0m
+  Rendered jobs/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 451ms (Views: 299.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/jobs/new" for 71.56.113.212 at 2017-03-06 23:33:36 +0000
+Processing by JobsController#new as HTML
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/_form.html.erb (179.2ms)
+  Rendered jobs/new.html.erb within layouts/application (182.3ms)
+Completed 200 OK in 413ms (Views: 409.4ms | ActiveRecord: 0.0ms)
+
+
