@@ -1,6 +1,6 @@
 
 <p id="notice"><%= notice %></p>
-
+<h1 id="job_title"> <%= @job.company %> </h1>
 <div class="row">
   <div class="col s12 m6">
     <div class="jobs_card card white">
@@ -9,13 +9,14 @@
         <p><%= @job.description %></p>
         <p><%= @job.industry %></p>
 
-        <p class="right">Deadline: <%= @job.deadline %></p>
+      
       </div>
       <div class="card-action">
         <% if current_user == @job.user %> 
         <a href="#"><%= link_to 'Edit', edit_job_path(@job) %></a>
-        <% end %> 
+        
         <a href="#"><%= link_to 'Back', jobs_path %></a>
+        <% end %> 
       </div>
     </div>
   </div>
@@ -48,11 +49,11 @@ body {
          
           .card  {
               width: 100%;
-              height: 100%;
               font-family: Raleway;
           }
-          .card-content{
+          .card-content p{
               width: 100%;
+              font-family: Raleway ;
           }
           a {
               line-height: 1em;
@@ -71,78 +72,55 @@ body {
           
           #job_company{
                   position:absolute;
-                  color: white;
+                  color: teal;
                   bottom: 5%;
                   font-family: Raleway;
                   font-size: 1em;
                   text-align: center;
                   text-transform: uppercase;
+              }
+              a:hover {
+                background-color: inherit;
+              }
+              .card-title{
+                color: teal;
+                font-family: Raleway;
               }
        
           
           @media only screen and (max-device-width: 480px){
-           
+             body, html {
+               width:100%;
+             }
             	
-            	.jobs_board{
-            	  position: relative;
-            	  width: 100%;
-            	  margin-top: 200%;
-            	}
-            	
-              .show_card {
-                  background-color: inherit;
-                  position:relative;
-                  margin: -15% 0% 0% -20%;
-                  height: 30em;
-                  padding: 30% 10% 10% 20%;
-                  color: white;
-                  font-size: 1em;
-                  font-family: Raleway;
-                  text-transform: lowercase;
-              }
-              
-              .show_card p {
-                  width: 120%;
-                  height: 60%;
-              }
-              #job_title{
-                  font-family: Raleway;
-                  left:0%;
-                  font-size: 3em;
-                  position:absolute;
-                  top: 25%;
-                  margin: 2%;
-                  text-align: center;
-                  width: 100%;
-              }
-              
-              #job_title a{
-                color:white;
-              }
-              #job_company{
-                  position:absolute;
-                  color:white;
-                  bottom: 5%;
-                  font-family: Raleway;
-                  font-size: 2em;
-                  text-align: center;
-                  text-transform: uppercase;
-              }
             
-              .indeed_more{
-                width: 5%;
-                position: absolute;
-                bottom: 10%;
-                left: 0%;
-                color: white;
-              }
-              .card{
+              .jobs_card{
                   width: 100%;
-                  position:relative;
+                  left: 0;
+                  position:absolute;
                   margin-left: 0%;
                   padding: 10% 0%;
-                  height: 30em;
+                  top: 50%;
                   margin:0;
+                  font-size: 3em;
+              }
+            
+              .card-content p {
+                font-size: 1.5em;
+                line-height: 1;
+                height: 100%;
+                font-family: Montserrat;
+              }
+              
+              #job_title{
+                position: fixed;
+                color: white;
+                left: 0;
+                top: 30%;
+                font-size: 3em;
+                text-align:center;
+                width: 100%;
+                text-transform: uppercase;
               }
           }
           </style> 
