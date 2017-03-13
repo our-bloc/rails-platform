@@ -11,7 +11,8 @@
 
       
       </div>
-      <div class="card-action">
+      <div class="card-action teal-text">
+        <%= link_to 'Apply Now', @job.link , style: "color:#44d9e6" %>
         <% if current_user == @job.user %> 
         <a href="#"><%= link_to 'Edit', edit_job_path(@job) %></a>
         
@@ -30,7 +31,10 @@ body {
             	height:100%;
             	font-family: Raleway;
             	}
-    	
+        	.card-action a{
+        	  color:#44d9e6;
+        	}
+        	
           h1, h2, h6 {
             font-family: Raleway ;
           }
@@ -53,7 +57,10 @@ body {
           }
           .card-content p{
               width: 100%;
-              font-family: Raleway ;
+              font-family: Lato ;
+          }
+          .card-title{
+            color: #44d9e6;
           }
           a {
               line-height: 1em;
@@ -65,9 +72,12 @@ body {
           
           #job_title{
               font-size: 1.5em;
-              width: 110%;
+              width: 50%;
               left: -10%;
               color:white;
+              text-align: center;
+              padding: 5% 0% 5% 0%;
+              
           }
           
           #job_company{
