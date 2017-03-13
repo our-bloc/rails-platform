@@ -19,10 +19,10 @@
 
 <div class="jobs_board row">
   <% @jobs.each do |job| %>
-   <% if (@color_count/ 2 % 2) != 0 %> 
-            <div class="card horizontal col s6 l6" style="background-color: inherit" >
+   <% if (@color_count % 2) == 0 %> 
+            <div class="card horizontal col s12 " style="background-color: inherit" >
         <% else %> 
-            <div class="card horizontal col s6 l6" style="background-color: #2eb2ff" >
+            <div class="card horizontal col s12" style="background-color: #2eb2ff" >
         <% end %> 
           <div class="card-content white-text">
                 <div class="hide_card">
@@ -46,6 +46,7 @@
       
       $(window).scroll(function(){
         $(".jobs_header").hide(100); 
+            
       })
     </script> 
     
@@ -71,6 +72,7 @@
             position: absolute;
             top: 30%;
             width: 40%;
+            left: 10%;
           }
           
           #job_title a:hover {
@@ -144,18 +146,21 @@
           
           #job_title{
               font-size: 1.5em;
-              top: 30%;
-              width: 110%;
-              left: -10%;
+              padding-top: 10%;
+              width: 100%;
               color:white;
+              text-align: center;
+              font-size: 3em;
           }
           
           #job_company{
                   position:absolute;
+                  width: 100%;
                   color: white;
-                  bottom: 5%;
+                  bottom: 7%;
                   font-family: Raleway;
-                  font-size: 1em;
+                  left: 0;
+                  font-size: 1.2em;
                   text-align: center;
                   text-transform: uppercase;
               }
@@ -165,9 +170,9 @@
            body {
             	background: url("http://www.ourbloc.co/uploads/2/4/0/1/24014742/jobs-board-2_orig.png") no-repeat fixed;
             	margin: 0 auto;
-            	background-size: 110%;
+            	background-size: 110% 110%;
             	width: 100%;
-            	height: 100%;
+            	height: 110%;
             	font-family: Raleway;
             	}
             	
@@ -175,6 +180,7 @@
             .screen_width{
             position: fixed;
             width: 100%;
+
           }
           
           .jobs_header h1{
@@ -200,11 +206,12 @@
           
           }
             	.jobs_board{
-            	  position: relative;
-            	  width: 103%;
+            	  position: absolute;
+            	  width: 105%;
             	  margin: 120% 0% 0% 0%;
             	  padding-top: 80%;
             	}
+            
             	
               .show_card {
                   background-color: inherit;
@@ -225,7 +232,7 @@
               #job_title{
                   font-family: Raleway;
                   left:0%;
-                  font-size: 3em;
+                  font-size: 3.5em;
                   position:absolute;
                   top: 25%;
                   margin: 2%;
@@ -239,9 +246,10 @@
               #job_company{
                   position:absolute;
                   color:white;
-                  bottom: 5%;
+                  bottom: 7%;
                   font-family: Raleway;
                   font-size: 2em;
+                  width: 100%;
                   text-align: center;
                   text-transform: uppercase;
               }
