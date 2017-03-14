@@ -6,8 +6,8 @@
     <div class="jobs_card card white">
       <div class="card-content">
         <h1 class="card-title"><%= @job.title %></h1>
-        <p><%= @job.description %></p>
-        <p><%= @job.industry %></p>
+        <div><%= simple_format(@job.description) %></div>
+        <div><%= @job.industry %></div>
 
       
       </div>
@@ -101,7 +101,9 @@ body {
                 color: teal;
                 font-family: Raleway;
               }
-       
+         p {
+           margin-bottom: 5%;
+         }
           
           @media only screen and (max-device-width: 480px){
              body, html {
