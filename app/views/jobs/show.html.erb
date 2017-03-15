@@ -5,7 +5,7 @@
   <div class="col s12 m6">
     <div class="jobs_card card white">
       <div class="card-content">
-        <h1 class="card-title"><%= @job.title %></h1>
+        <h1><%= @job.title %></h1>
         <div><%= simple_format(@job.description) %></div>
         <div><%= @job.industry %></div>
 
@@ -33,6 +33,7 @@ body {
             	}
         	.card-action a{
         	  color:#44d9e6;
+        	  padding: 2%;
         	}
         	
         	.card-content h1{
@@ -51,8 +52,10 @@ body {
           }
           
           
-          .jobs_card{
-
+          .jobs_card h1{
+            font-size: 2em;
+            line-height: 1.1;
+            padding-bottom: 2%;
           }
           
          
@@ -129,12 +132,15 @@ body {
                   margin:0;
                   font-size: 3em;
               }
+              .jobs_card h1 a {
+                font-size: 2.5em;
+              }
             
               .card-content p {
                 font-size: 1em;
                 line-height: 1;
                 height: 100%;
-                font-family: Montserrat;
+                font-family: Lato;
               }
               
               #job_title{
