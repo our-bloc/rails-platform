@@ -10,6 +10,7 @@ class FeedbacksController < ApplicationController
   # GET /feedbacks/1
   # GET /feedbacks/1.json
   def show
+    @rating= 0
   end
 
   # GET /feedbacks/new
@@ -29,8 +30,7 @@ class FeedbacksController < ApplicationController
 
     respond_to do |format|
       if @feedback.save
-        format.html { redirect_to @feedback, notice: 'Feedback was successfully created.' }
-        format.json { render :show, status: :created, location: @feedback }
+        format.html { redirect_to myprofile_path, notice: 'Thank you for your feedback! ' }
       else
         format.html { render :new }
         format.json { render json: @feedback.errors, status: :unprocessable_entity }
@@ -43,8 +43,7 @@ class FeedbacksController < ApplicationController
   def update
     respond_to do |format|
       if @feedback.update(feedback_params)
-        format.html { redirect_to @feedback, notice: 'Feedback was successfully updated.' }
-        format.json { render :show, status: :ok, location: @feedback }
+        format.html { redirect_to myprofile_path, notice: 'Feedback was successfully updated.' }
       else
         format.html { render :edit }
         format.json { render json: @feedback.errors, status: :unprocessable_entity }
@@ -70,6 +69,6 @@ class FeedbacksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def feedback_params
-      params.require(:feedback).permit(:body, :user_id, :type)
+      params.require(:feedback).permit(:body, :user_id, :type, :design, :job_quality, :ease, :login)
     end
 end

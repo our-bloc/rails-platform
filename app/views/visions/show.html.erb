@@ -62,6 +62,8 @@
       <%= render "visions/partials/tips2" %>
 </div>
 
+
+
 <div class="bottom-nav">
     <i class="open_referral_modal fa fa-heart fa-3x" style="color: #44d9e6; margin-left: 25%; margin-top: 5%"></i>
     <%= link_to myprofile_path do %><i class="fa fa-user fa-3x" style="color: #44d9fe6; margin-left: 12%; margin-top: 5%"></i><% end %>
@@ -70,8 +72,13 @@
 </div>
 
   
-<div class="open_referral_modal"> <h2 style=""> UPGRADE TO PRO </h2></div>
+<div class="scroll_feedback"> <h2 style=""> GIVE FEEDBACK, WIN AFROPUNK TICKETS! </h2></div>
 
+<div class="show_feedback">
+      <%= render "visions/partials/feedback" %>
+</div>
+
+<div class="open_referral_modal"> <h2 style=""> UPGRADE TO PRO </h2></div>
 <div class="referral_modal">
    
     <div class="modal_card card horizontal">
@@ -208,6 +215,24 @@
     text-align: center;
   }
   
+  .scroll_feedback{
+    width: 100%;
+    text-align: center;
+    border: 5px solid black;
+    margin-bottom: 20em;
+  }
+  
+  .scroll_feedback:hover{
+    background-color: grey;
+  }
+  
+  .bottom-nav{
+    display:none;
+  }
+  
+  .show_feedback{
+    padding: 5%;
+  }
   @media only screen and (max-device-width: 480px){
     html,body{
       padding: 0%;
@@ -348,7 +373,7 @@
   }
   
   .bottom-nav{
-    display: inline;
+    display: none;
     position: fixed;
     height: 10%;
     background-color: white;
@@ -380,12 +405,22 @@
   
   $(document).ready(function(){
     $(".referral_modal").hide();
+    $(".show_feedback").hide();
+    $(".open_referral_modal").hide();
      $(".open_referral_modal").click(function(){
            $(".referral_modal").show(100);
             $('html,body').animate({
             scrollTop: $(".referral_modal").offset().top},
             'slow');
      });
+     
+      $(".scroll_feedback").click(function(){
+           $(".show_feedback").show(100);
+            $('html,body').animate({
+            scrollTop: $(".show_feedback").offset().top},
+            'slow');
+     });
+     
   });
   
    getPanelWidth = function() {

@@ -27,6 +27,12 @@ class VisionsController < ApplicationController
     @color_count= 0
     @color2_count= 0
     
+    #feedback rating
+    @design_rating= 0
+    @ease_rating= 0
+    @login_rating= 0
+    @job_quality_rating= 0
+    
     #import jobs from indeed
     if @vision.industry == "Techies"
           @indeed_search = IndeedAPI.search_jobs(:q => @vision.firstjob + " software" , :limit => 10)
