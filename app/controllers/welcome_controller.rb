@@ -4,7 +4,9 @@ class WelcomeController < ApplicationController
   def home
     
     @user = current_user
-    @vision = Vision.all.where(:user_id == @user.id)
+    if user_signed_in?
+      @vision = Vision.all.where(:user_id == @user.id)
+    end
   
     if user_signed_in? && @vision != nil 
         redirect_to myprofile_path
