@@ -157,6 +157,9 @@ class VisionsController < ApplicationController
         format.json { render json: @vision.errors, status: :unprocessable_entity }
       end
     end
+    
+    #send welcome email
+    WelcomeMailer.welcome_email(@user).deliver 
   end
 
   # PATCH/PUT /visions/1
