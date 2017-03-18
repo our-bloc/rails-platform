@@ -23,7 +23,7 @@
            
             <% end %>
     
-        <h6 class="teal-text" id="share_code">share code: <%= link_to "jointhebloc.com/"+ @user.profileurl, "https://blocview-aminabloc.c9users.io/"+ @user.profileurl  %> </h6>
+        <h6 id="share_code">share code: <%= link_to "jointhebloc.com/"+ @user.profileurl, "https://blocview-aminabloc.c9users.io/"+ @user.profileurl  %> </h6>
      </div>
  </div> 
  
@@ -87,18 +87,21 @@
   }
   
   .share_bar{
-      background-color:teal;
+      background-color:#44d9e6;
       color: white;
       font-weight: strong;
+      font-family: Raleway;
+      font-size: 2em;
       width: 100%;
       position:absolute;
       bottom: 0px;
-      padding: 0%;
+      padding: 2%;
+      text-align: center;
       margin-top: 10em;
   }
   
   .share_bar p,h5 {
-      font-family: Montserrat;
+      font-family: Raleway;
   }
   
   #submitFB{
@@ -155,7 +158,6 @@
     }
     
     .share_bar{
-      background-color:teal;
       text-align: center;
       font-family: Montserrat;
       font-size: 2em;
@@ -178,6 +180,7 @@
   #share_code {
       position: absolute;
       font-size: 2em;
+      color: black;
       font-weight: 800;
       margin-top: 10%;
       margin-left: -2%;
