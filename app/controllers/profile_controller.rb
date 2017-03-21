@@ -17,7 +17,7 @@ class ProfileController < ApplicationController
         @profile = current_user.profile
         
         if @referral_count != nil 
-        @referral_count = User.find_by_referral_code(params[:profileurl]).count 
+        @referral_count = User.find_by_referral_code(@user.profileurl).count 
          end
          #loads influencer text & image
         @influencers= Influencer.where(:industry => @vision.industry).where(:style => @vision.style).limit(1)
@@ -31,9 +31,14 @@ class ProfileController < ApplicationController
         
         #loads influencer text & image
         @influencers= Influencer.where(:industry => @vision.industry).where(:style => @vision.style).limit(1)
+        
+    @referral_count = User.find_by_referral_code(@user.profileurl).count 
+
     end
     
-   
+   def referrals
+       @referrals = User.all.order("referral_code DESC")
+    end
     
     
     def set_profile

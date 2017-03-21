@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   resources :values
   resources :visions 
     
+    
   resources :resources
   resources :jobs
   resources :sectors
@@ -28,6 +29,8 @@ Rails.application.routes.draw do
   get 'profiles' => 'profile#index', as: :profiles
 
   get '/myprofile', to: 'profile#myprofile', as: :myprofile
+  get '/referrals', to: 'profile#referrals', as: :referrals
+
   get 'visions/indeed_show', to: 'visions#indeed_show', as: :indeed_show, format: false
 
   get ':profileurl' => 'profile#show'
