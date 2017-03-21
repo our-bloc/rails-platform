@@ -4,7 +4,7 @@
     <div class="col s12 l6"> 
         <h6><%= image_tag @user.picture, class:  "circle" %> </h6>
         <h5> <%= @user.name %> </h5>
-        <% if current_user.role != "student" %> 
+        <% if user_signed_in? and current_user.role != "student" %> 
         <h6> <%= @user.email %> </h6>
         <% end %> 
         <h6> <% if @user.school != nil %> <%= @user.school.titleize %> <%end %> </h6>
