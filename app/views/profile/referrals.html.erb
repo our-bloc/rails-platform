@@ -9,8 +9,9 @@
                     <img src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/coverpic_orig.jpg">
                   </div> -->
             <div class="card-content teal-text">
-           <h5 class="indeed_show card-title" style="line-height: 1em"><%= image_tag user.picture %> <%= link_to user.name, root_path + user.profileurl %> </h5> <h6><%= user.referral_code %></h6>
-              
+           <h5 class="indeed_show card-title" style="line-height: 1em"><%= image_tag user.picture %> <%= link_to user.name, root_path + user.profileurl %> </h5> 
+           <h6 class="indeed_show card-title" style="line-height: 1em"> <%= link_to user.referral_code, root_path + user.profileurl %> </h6> 
+
               
               <% if user_signed_in? and user.role == "company" %> 
                   <h6><%= user.email %></h6>
