@@ -37,7 +37,7 @@ class ProfileController < ApplicationController
     end
     
    def referrals
-       @referrals = User.all.order("referral_code DESC")
+       @referrals = User.all
     end
     
     
