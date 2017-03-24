@@ -1,5 +1,5 @@
 class NewUserMailer < ApplicationMailer
-    default from: "info@jointhebloc.com"
+    default from: "amina@ourbloc.co"
     
     def new_user(user)
         @user = user
