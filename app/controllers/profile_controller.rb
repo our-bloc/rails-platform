@@ -32,8 +32,9 @@ class ProfileController < ApplicationController
         #loads influencer text & image
         @influencers= Influencer.where(:industry => @vision.industry).where(:style => @vision.style).limit(1)
         
+    if @referral_count != nil
     @referral_count = User.find_by_referral_code(@user.profileurl).count 
-
+end 
     end
     
    def referrals
