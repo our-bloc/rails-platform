@@ -159,7 +159,7 @@ class VisionsController < ApplicationController
     end
     
     #send welcome email
-   WelcomeMailer.welcome_email(@user).deliver
+   
   end
 
   # PATCH/PUT /visions/1
