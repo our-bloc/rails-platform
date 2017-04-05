@@ -152,6 +152,7 @@ class VisionsController < ApplicationController
         format.html
         format.json { render :show, status: :created, location: @vision }
         redirect_to edit_vision_path(@vision)
+        WelcomeMailer.welcome_email(current_user).deliver
       else
         format.html { render :new }
         format.json { render json: @vision.errors, status: :unprocessable_entity }
@@ -159,7 +160,7 @@ class VisionsController < ApplicationController
     end
     
     #send welcome email
-   WelcomeMailer.welcome_email(@user).deliver
+   
   end
 
   # PATCH/PUT /visions/1
