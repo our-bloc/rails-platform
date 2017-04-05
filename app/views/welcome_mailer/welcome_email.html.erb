@@ -9,62 +9,29 @@
      <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/aileron" type="text/css"/>
      
   </head>
-  <body>
-    <img src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/1_9_orig.png"> 
-    <h5>Hi <%= @user.firstname %>,</h5>
-    <p>
-      Thanks for signing up to test our our career playlist. We are working to connect a <span>national community of black millennials with each other & premium career resources</span>, and we are excited to have you in the community. 
-    </p>
-    
-    <p> 
-    Each week we'll send you a <span>new playlist, with new opportunities, grad school application advice and tips</span> we think can help you get & hold on to your dream career. The more feedback you send us, the better your results, so please make sure to fill out the feedback at the bottom of your playlists. 
-    </p>
-    
-    <p> 
-    As an extra incentive, we'll enter you to <span> free Spotify Premium for 6 months </span> when you send us your thoughts. We'll also be offering an annual subscription to the 3 people who refer the most friends to test our playlist, you can find your personal share code below.
-    </p>
-    
-
-    <div class="share"> 
+  <body style="width:90%;  font-family: Lato; ">
+    <div style="padding: 5%"> 
+      <img style="width: 100%" src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/1_9_orig.png"> 
+      <h5  style="font-family: Raleway;font-size: 2em;">Hi <%= @user.firstname %>,</h5>
+      <p>
+        Thanks for signing up to test our our career playlist. We are working to connect a <span style="color:#44d9e6">national community of black millennials with each other & premium career resources</span>, and we are excited to have you in the community. 
+      </p>
+      
+      <p> 
+      Each week we'll send you a <span style="color:#44d9e6">new playlist, with new opportunities, grad school application advice and tips</span> we think can help you get & hold on to your dream career. The more feedback you send us, the better your results, so please make sure to fill out the feedback at the bottom of your playlists. 
+      </p>
+      
+      <p> 
+      As an extra incentive, we'll enter you to <span style="color:#44d9e6"> free Spotify Premium for 6 months </span> when you send us your thoughts. We'll also be offering an annual subscription to the 3 people who refer the most friends to test our playlist, you can find your personal share code below.
+      </p>
+      
   
+      <div class="share" style="background-color: #44d9e6; padding: 2%; text-align: center; font-size: 2em;
+      color: white; font-family: Raleway; margin: 5% 0;" > 
+        <h6> My Share Code </h6> <h6> <%= link_to "jointhebloc.com/"+ @user.profileurl, "jointhebloc.com/"+ @user.profileurl , style: "color:white"  %></h6>
+      </div>
+      
+      <p> unsubscribe from email updates anytime by replying "Unsubscribe" to this email </p>
     </div>
-    
-    <p> unsubscribe from email updates anytime by replying "Unsubscribe" to this email </p>
   </body>
 </html>
-
-<style>
-  body{
-    position:absolute;
-    width: 50%;
-    left: 25%;
-  }
-  h5{
-    font-family: Raleway;
-    font-size: 2em;
-  }
- 
-  p {
-    font-family: Lato;
-  }
-  img{
-  width: 100%;
-  }
-  span{
-    color: #44d9e6;
-    font-weight: 800;
-  }
-  
-  .share{
-    background-color: #44d9e6;
-    padding: 2%;
-    text-align: center;
-    font-size: 2em;
-    color: white;
-    font-family: Raleway;
-    margin: 5% 0;
-  }
-  .share a{
-    color: white;
-  }
-</style>

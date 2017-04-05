@@ -2713,3 +2713,443 @@ test/mailers/previews/welcome_mailer_preview.rb:4:in `welcome_mail_preview'
   Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
   Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.2ms)
+Started GET "/rails/mailers/welcome_mailer/welcome_mail_preview" for 108.219.110.211 at 2017-04-05 02:51:21 +0000
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"internal"=>true, "path"=>"welcome_mailer/welcome_mail_preview"}
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<WelcomeMailerPreview:0x007fcf4ccb1d58>):
+  
+test/mailers/previews/welcome_mailer_preview.rb:4:in `welcome_mail_preview'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.2ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (33.3ms)
+Started GET "/rails/mailers/welcome_mailer/welcome_mail_preview" for 108.219.110.211 at 2017-04-05 02:51:47 +0000
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"internal"=>true, "path"=>"welcome_mailer/welcome_mail_preview"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering welcome_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.html.erb within layouts/mailer (0.7ms)
+  Rendering welcome_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.text.erb within layouts/mailer (0.3ms)
+WelcomeMailer#welcome_email: processed outbound mail in 12.7ms
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.0.1/lib/rails/templates/rails/mailers/email.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.0.1/lib/rails/templates/rails/mailers/email.html.erb (3.6ms)
+Completed 200 OK in 121ms (Views: 5.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/rails/mailers/welcome_mailer/welcome_mail_preview?part=text%2Fhtml" for 108.219.110.211 at 2017-04-05 02:51:50 +0000
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"part"=>"text/html", "internal"=>true, "path"=>"welcome_mailer/welcome_mail_preview"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering welcome_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.html.erb within layouts/mailer (0.6ms)
+  Rendering welcome_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.text.erb within layouts/mailer (0.3ms)
+WelcomeMailer#welcome_email: processed outbound mail in 10.5ms
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 16ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/mailers/welcome_mailer/welcome_mail_preview" for 108.219.110.211 at 2017-04-05 02:56:25 +0000
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"internal"=>true, "path"=>"welcome_mailer/welcome_mail_preview"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering welcome_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.html.erb within layouts/mailer (5.1ms)
+WelcomeMailer#welcome_email: processed outbound mail in 14.6ms
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (No route matches {}):
+    26:     
+    27: 
+    28:     <div class="share" style="background-color"> 
+    29:       <h6> My Share Code </h6> <h6> <%= link_to "jointhebloc.com/"+ @user.profileurl %></h6>
+    30:     </div>
+    31:     
+    32:     <p> unsubscribe from email updates anytime by replying "Unsubscribe" to this email </p>
+  
+app/views/welcome_mailer/welcome_email.html.erb:29:in `_app_views_welcome_mailer_welcome_email_html_erb___4391176603921504202_70264089067680'
+app/mailers/welcome_mailer.rb:6:in `welcome_email'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.8ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (34.6ms)
+Started GET "/rails/mailers/welcome_mailer/welcome_mail_preview" for 108.219.110.211 at 2017-04-05 02:57:16 +0000
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"internal"=>true, "path"=>"welcome_mailer/welcome_mail_preview"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering welcome_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.html.erb within layouts/mailer (0.7ms)
+  Rendering welcome_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.text.erb within layouts/mailer (0.3ms)
+WelcomeMailer#welcome_email: processed outbound mail in 11.1ms
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.0.1/lib/rails/templates/rails/mailers/email.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.0.1/lib/rails/templates/rails/mailers/email.html.erb (3.8ms)
+Completed 200 OK in 21ms (Views: 5.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/mailers/welcome_mailer/welcome_mail_preview?part=text%2Fhtml" for 108.219.110.211 at 2017-04-05 02:57:21 +0000
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"part"=>"text/html", "internal"=>true, "path"=>"welcome_mailer/welcome_mail_preview"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering welcome_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.html.erb within layouts/mailer (0.7ms)
+  Rendering welcome_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.text.erb within layouts/mailer (0.3ms)
+WelcomeMailer#welcome_email: processed outbound mail in 12.3ms
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 17ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/mailers/welcome_mailer/welcome_mail_preview" for 108.219.110.211 at 2017-04-05 02:59:07 +0000
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"internal"=>true, "path"=>"welcome_mailer/welcome_mail_preview"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering welcome_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.html.erb within layouts/mailer (0.7ms)
+  Rendering welcome_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.text.erb within layouts/mailer (0.3ms)
+WelcomeMailer#welcome_email: processed outbound mail in 11.3ms
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.0.1/lib/rails/templates/rails/mailers/email.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.0.1/lib/rails/templates/rails/mailers/email.html.erb (3.7ms)
+Completed 200 OK in 21ms (Views: 5.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/mailers/welcome_mailer/welcome_mail_preview?part=text%2Fhtml" for 108.219.110.211 at 2017-04-05 02:59:12 +0000
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"part"=>"text/html", "internal"=>true, "path"=>"welcome_mailer/welcome_mail_preview"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering welcome_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.html.erb within layouts/mailer (0.7ms)
+  Rendering welcome_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.text.erb within layouts/mailer (0.3ms)
+WelcomeMailer#welcome_email: processed outbound mail in 11.1ms
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 16ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/mailers/welcome_mailer/welcome_mail_preview" for 108.219.110.211 at 2017-04-05 03:01:18 +0000
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"internal"=>true, "path"=>"welcome_mailer/welcome_mail_preview"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering welcome_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.html.erb within layouts/mailer (0.7ms)
+  Rendering welcome_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.text.erb within layouts/mailer (0.3ms)
+WelcomeMailer#welcome_email: processed outbound mail in 10.6ms
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.0.1/lib/rails/templates/rails/mailers/email.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.0.1/lib/rails/templates/rails/mailers/email.html.erb (4.1ms)
+Completed 200 OK in 20ms (Views: 6.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/rails/mailers/welcome_mailer/welcome_mail_preview?part=text%2Fhtml" for 108.219.110.211 at 2017-04-05 03:01:22 +0000
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"part"=>"text/html", "internal"=>true, "path"=>"welcome_mailer/welcome_mail_preview"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering welcome_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.html.erb within layouts/mailer (0.7ms)
+  Rendering welcome_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.text.erb within layouts/mailer (0.3ms)
+WelcomeMailer#welcome_email: processed outbound mail in 10.8ms
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 16ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/rails/mailers/welcome_mailer/welcome_mail_preview" for 108.219.110.211 at 2017-04-05 03:01:45 +0000
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"internal"=>true, "path"=>"welcome_mailer/welcome_mail_preview"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering welcome_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.html.erb within layouts/mailer (0.8ms)
+  Rendering welcome_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.text.erb within layouts/mailer (0.3ms)
+WelcomeMailer#welcome_email: processed outbound mail in 11.8ms
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.0.1/lib/rails/templates/rails/mailers/email.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.0.1/lib/rails/templates/rails/mailers/email.html.erb (4.2ms)
+Completed 200 OK in 22ms (Views: 6.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/rails/mailers/welcome_mailer/welcome_mail_preview?part=text%2Fhtml" for 108.219.110.211 at 2017-04-05 03:01:48 +0000
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"part"=>"text/html", "internal"=>true, "path"=>"welcome_mailer/welcome_mail_preview"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering welcome_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.html.erb within layouts/mailer (1.2ms)
+  Rendering welcome_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.text.erb within layouts/mailer (0.6ms)
+WelcomeMailer#welcome_email: processed outbound mail in 15.5ms
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 22ms (Views: 0.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/rails/mailers/welcome_mailer/welcome_mail_preview" for 108.219.110.211 at 2017-04-05 03:03:17 +0000
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"internal"=>true, "path"=>"welcome_mailer/welcome_mail_preview"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering welcome_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.html.erb within layouts/mailer (0.8ms)
+  Rendering welcome_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.text.erb within layouts/mailer (0.4ms)
+WelcomeMailer#welcome_email: processed outbound mail in 13.1ms
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.0.1/lib/rails/templates/rails/mailers/email.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.0.1/lib/rails/templates/rails/mailers/email.html.erb (3.7ms)
+Completed 200 OK in 22ms (Views: 5.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/rails/mailers/welcome_mailer/welcome_mail_preview?part=text%2Fhtml" for 108.219.110.211 at 2017-04-05 03:03:23 +0000
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"part"=>"text/html", "internal"=>true, "path"=>"welcome_mailer/welcome_mail_preview"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering welcome_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.html.erb within layouts/mailer (0.7ms)
+  Rendering welcome_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.text.erb within layouts/mailer (0.4ms)
+WelcomeMailer#welcome_email: processed outbound mail in 10.8ms
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 15ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/mailers/welcome_mailer/welcome_mail_preview" for 108.219.110.211 at 2017-04-05 03:04:21 +0000
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"internal"=>true, "path"=>"welcome_mailer/welcome_mail_preview"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering welcome_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.html.erb within layouts/mailer (0.6ms)
+  Rendering welcome_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.text.erb within layouts/mailer (0.4ms)
+WelcomeMailer#welcome_email: processed outbound mail in 10.4ms
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.0.1/lib/rails/templates/rails/mailers/email.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.0.1/lib/rails/templates/rails/mailers/email.html.erb (3.5ms)
+Completed 200 OK in 20ms (Views: 5.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/rails/mailers/welcome_mailer/welcome_mail_preview?part=text%2Fhtml" for 108.219.110.211 at 2017-04-05 03:04:26 +0000
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"part"=>"text/html", "internal"=>true, "path"=>"welcome_mailer/welcome_mail_preview"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering welcome_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.html.erb within layouts/mailer (1.1ms)
+  Rendering welcome_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.text.erb within layouts/mailer (0.5ms)
+WelcomeMailer#welcome_email: processed outbound mail in 16.1ms
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 23ms (Views: 1.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/rails/mailers/welcome_mailer/welcome_mail_preview" for 108.219.110.211 at 2017-04-05 03:04:59 +0000
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"internal"=>true, "path"=>"welcome_mailer/welcome_mail_preview"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering welcome_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.html.erb within layouts/mailer (0.7ms)
+  Rendering welcome_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.text.erb within layouts/mailer (0.4ms)
+WelcomeMailer#welcome_email: processed outbound mail in 11.2ms
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.0.1/lib/rails/templates/rails/mailers/email.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.0.1/lib/rails/templates/rails/mailers/email.html.erb (4.2ms)
+Completed 200 OK in 22ms (Views: 6.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/mailers/welcome_mailer/welcome_mail_preview?part=text%2Fhtml" for 108.219.110.211 at 2017-04-05 03:05:02 +0000
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"part"=>"text/html", "internal"=>true, "path"=>"welcome_mailer/welcome_mail_preview"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering welcome_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.html.erb within layouts/mailer (0.6ms)
+  Rendering welcome_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.text.erb within layouts/mailer (0.3ms)
+WelcomeMailer#welcome_email: processed outbound mail in 10.0ms
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 14ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/rails/mailers/welcome_mailer/welcome_mail_preview" for 108.219.110.211 at 2017-04-05 03:05:16 +0000
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"internal"=>true, "path"=>"welcome_mailer/welcome_mail_preview"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering welcome_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.html.erb within layouts/mailer (0.7ms)
+  Rendering welcome_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.text.erb within layouts/mailer (0.5ms)
+WelcomeMailer#welcome_email: processed outbound mail in 13.7ms
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.0.1/lib/rails/templates/rails/mailers/email.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.0.1/lib/rails/templates/rails/mailers/email.html.erb (3.7ms)
+Completed 200 OK in 24ms (Views: 5.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/mailers/welcome_mailer/welcome_mail_preview?part=text%2Fhtml" for 108.219.110.211 at 2017-04-05 03:05:17 +0000
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"part"=>"text/html", "internal"=>true, "path"=>"welcome_mailer/welcome_mail_preview"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering welcome_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.html.erb within layouts/mailer (0.7ms)
+  Rendering welcome_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.text.erb within layouts/mailer (0.3ms)
+WelcomeMailer#welcome_email: processed outbound mail in 11.4ms
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 32ms (Views: 0.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/mailers/welcome_mailer/welcome_mail_preview" for 108.219.110.211 at 2017-04-05 03:05:41 +0000
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"internal"=>true, "path"=>"welcome_mailer/welcome_mail_preview"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering welcome_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.html.erb within layouts/mailer (0.9ms)
+  Rendering welcome_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.text.erb within layouts/mailer (0.4ms)
+WelcomeMailer#welcome_email: processed outbound mail in 12.5ms
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.0.1/lib/rails/templates/rails/mailers/email.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.0.1/lib/rails/templates/rails/mailers/email.html.erb (3.6ms)
+Completed 200 OK in 23ms (Views: 5.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/rails/mailers/welcome_mailer/welcome_mail_preview?part=text%2Fhtml" for 108.219.110.211 at 2017-04-05 03:05:41 +0000
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"part"=>"text/html", "internal"=>true, "path"=>"welcome_mailer/welcome_mail_preview"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering welcome_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.html.erb within layouts/mailer (0.8ms)
+  Rendering welcome_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.text.erb within layouts/mailer (0.3ms)
+WelcomeMailer#welcome_email: processed outbound mail in 11.6ms
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 17ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/mailers/welcome_mailer/welcome_mail_preview" for 108.219.110.211 at 2017-04-05 03:06:44 +0000
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"internal"=>true, "path"=>"welcome_mailer/welcome_mail_preview"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering welcome_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.html.erb within layouts/mailer (0.6ms)
+  Rendering welcome_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.text.erb within layouts/mailer (0.3ms)
+WelcomeMailer#welcome_email: processed outbound mail in 10.5ms
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.0.1/lib/rails/templates/rails/mailers/email.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.0.1/lib/rails/templates/rails/mailers/email.html.erb (4.8ms)
+Completed 200 OK in 22ms (Views: 6.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/rails/mailers/welcome_mailer/welcome_mail_preview?part=text%2Fhtml" for 108.219.110.211 at 2017-04-05 03:06:48 +0000
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"part"=>"text/html", "internal"=>true, "path"=>"welcome_mailer/welcome_mail_preview"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering welcome_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.html.erb within layouts/mailer (0.7ms)
+  Rendering welcome_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.text.erb within layouts/mailer (0.3ms)
+WelcomeMailer#welcome_email: processed outbound mail in 11.0ms
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 15ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/rails/mailers/welcome_mailer/welcome_mail_preview" for 108.219.110.211 at 2017-04-05 03:07:23 +0000
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"internal"=>true, "path"=>"welcome_mailer/welcome_mail_preview"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering welcome_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.html.erb within layouts/mailer (1.1ms)
+  Rendering welcome_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.text.erb within layouts/mailer (0.6ms)
+WelcomeMailer#welcome_email: processed outbound mail in 15.2ms
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.0.1/lib/rails/templates/rails/mailers/email.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.0.1/lib/rails/templates/rails/mailers/email.html.erb (4.4ms)
+Completed 200 OK in 28ms (Views: 6.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/rails/mailers/welcome_mailer/welcome_mail_preview?part=text%2Fhtml" for 108.219.110.211 at 2017-04-05 03:07:27 +0000
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"part"=>"text/html", "internal"=>true, "path"=>"welcome_mailer/welcome_mail_preview"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering welcome_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.html.erb within layouts/mailer (1.0ms)
+  Rendering welcome_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.text.erb within layouts/mailer (0.4ms)
+WelcomeMailer#welcome_email: processed outbound mail in 16.2ms
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 23ms (Views: 0.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/rails/mailers/welcome_mailer/welcome_mail_preview" for 108.219.110.211 at 2017-04-05 03:08:18 +0000
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"internal"=>true, "path"=>"welcome_mailer/welcome_mail_preview"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering welcome_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.html.erb within layouts/mailer (0.7ms)
+  Rendering welcome_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.text.erb within layouts/mailer (0.3ms)
+WelcomeMailer#welcome_email: processed outbound mail in 10.8ms
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.0.1/lib/rails/templates/rails/mailers/email.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.0.1/lib/rails/templates/rails/mailers/email.html.erb (3.6ms)
+Completed 200 OK in 20ms (Views: 5.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/mailers/welcome_mailer/welcome_mail_preview?part=text%2Fhtml" for 108.219.110.211 at 2017-04-05 03:08:23 +0000
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"part"=>"text/html", "internal"=>true, "path"=>"welcome_mailer/welcome_mail_preview"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering welcome_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.html.erb within layouts/mailer (0.7ms)
+  Rendering welcome_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.text.erb within layouts/mailer (0.3ms)
+WelcomeMailer#welcome_email: processed outbound mail in 10.5ms
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 15ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/mailers/welcome_mailer/welcome_mail_preview" for 108.219.110.211 at 2017-04-05 03:09:06 +0000
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"internal"=>true, "path"=>"welcome_mailer/welcome_mail_preview"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering welcome_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.html.erb within layouts/mailer (0.8ms)
+  Rendering welcome_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.text.erb within layouts/mailer (0.4ms)
+WelcomeMailer#welcome_email: processed outbound mail in 11.2ms
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.0.1/lib/rails/templates/rails/mailers/email.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.0.1/lib/rails/templates/rails/mailers/email.html.erb (3.5ms)
+Completed 200 OK in 21ms (Views: 5.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/rails/mailers/welcome_mailer/welcome_mail_preview?part=text%2Fhtml" for 108.219.110.211 at 2017-04-05 03:09:11 +0000
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"part"=>"text/html", "internal"=>true, "path"=>"welcome_mailer/welcome_mail_preview"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering welcome_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.html.erb within layouts/mailer (0.8ms)
+  Rendering welcome_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.text.erb within layouts/mailer (0.4ms)
+WelcomeMailer#welcome_email: processed outbound mail in 13.6ms
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 20ms (Views: 0.7ms | ActiveRecord: 0.6ms)
+
+
