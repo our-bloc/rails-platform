@@ -153,6 +153,7 @@ class VisionsController < ApplicationController
         format.json { render :show, status: :created, location: @vision }
         redirect_to edit_vision_path(@vision)
         WelcomeMailer.welcome_email(current_user).deliver
+        
       else
         format.html { render :new }
         format.json { render json: @vision.errors, status: :unprocessable_entity }

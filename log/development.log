@@ -2580,3 +2580,136 @@ Migrating to AddColumnsToFeedbacks (20170316172954)
             FROM sqlite_temp_master
             WHERE name='index_visits_on_visit_token' AND type='index'
 [0m
+Started GET "/visions/1" for 108.219.110.211 at 2017-04-05 02:33:53 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VisionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVision Load (0.2ms)[0m  [1m[34mSELECT  "visions".* FROM "visions" WHERE "visions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "feedbacks" ("user_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["user_id", 1], ["created_at", 2017-04-05 02:33:54 UTC], ["updated_at", 2017-04-05 02:33:54 UTC]]
+  [1m[35m (11.6ms)[0m  [1m[36mcommit transaction[0m
+  Rendering visions/show.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."industry" = ? ORDER BY created_at DESC LIMIT ?[0m  [["industry", "Activists"], ["LIMIT", 0]]
+  Rendered visions/partials/_jobs.html.erb (2.5ms)
+  [1m[36mTip Load (0.2ms)[0m  [1m[34mSELECT  "tips".* FROM "tips" WHERE "tips"."prep" = ? ORDER BY created_at DESC LIMIT ?[0m  [["prep", "revise_resume"], ["LIMIT", 5]]
+  Rendered visions/partials/_tips.html.erb (7.1ms)
+  Rendered visions/partials/_jobs2.html.erb (1.4ms)
+  Rendered visions/partials/_tips2.html.erb (0.6ms)
+  Rendered visions/partials/_feedback.html.erb (29.5ms)
+  Rendered visions/show.html.erb within layouts/application (55.2ms)
+Completed 200 OK in 1549ms (Views: 1305.7ms | ActiveRecord: 18.6ms)
+
+
+Started GET "/rails/mailers/welcome_mailer" for 108.219.110.211 at 2017-04-05 02:34:59 +0000
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"internal"=>true, "path"=>"welcome_mailer"}
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.0.1/lib/rails/templates/rails/mailers/mailer.html.erb within layouts/application
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.0.1/lib/rails/templates/rails/mailers/mailer.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 530ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/mailers/welcome_mailer/welcome_mail_preview" for 108.219.110.211 at 2017-04-05 02:35:05 +0000
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"internal"=>true, "path"=>"welcome_mailer/welcome_mail_preview"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+WelcomeMailer#welcome_email: processed outbound mail in 8.3ms
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.5ms)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<WelcomeMailer:0x007fcf509205c8>):
+  
+app/mailers/welcome_mailer.rb:5:in `welcome_email'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.7ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (39.5ms)
+Started GET "/rails/mailers/welcome_mailer/welcome_mail_preview" for 108.219.110.211 at 2017-04-05 02:36:28 +0000
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"internal"=>true, "path"=>"welcome_mailer/welcome_mail_preview"}
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<WelcomeMailerPreview:0x007fcf4dd59cf0>):
+  
+test/mailers/previews/welcome_mailer_preview.rb:4:in `welcome_mail_preview'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.6ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.2ms)
+Started GET "/rails/mailers/welcome_mailer/welcome_mail_preview" for 108.219.110.211 at 2017-04-05 02:38:27 +0000
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"internal"=>true, "path"=>"welcome_mailer/welcome_mail_preview"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+WelcomeMailer#welcome_email: processed outbound mail in 1.2ms
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 1.9ms)
+
+
+  
+NoMethodError (undefined method `email' for nil:NilClass):
+  
+app/mailers/welcome_mailer.rb:6:in `welcome_email'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.3ms)
+Started GET "/rails/mailers/welcome_mailer/welcome_mail_preview" for 108.219.110.211 at 2017-04-05 02:39:40 +0000
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"internal"=>true, "path"=>"welcome_mailer/welcome_mail_preview"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering welcome_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.html.erb within layouts/mailer (0.8ms)
+  Rendering welcome_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.text.erb within layouts/mailer (0.5ms)
+WelcomeMailer#welcome_email: processed outbound mail in 199.6ms
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.0.1/lib/rails/templates/rails/mailers/email.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.0.1/lib/rails/templates/rails/mailers/email.html.erb (9.6ms)
+Completed 200 OK in 261ms (Views: 12.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/rails/mailers/welcome_mailer/welcome_mail_preview?part=text%2Fhtml" for 108.219.110.211 at 2017-04-05 02:39:45 +0000
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"part"=>"text/html", "internal"=>true, "path"=>"welcome_mailer/welcome_mail_preview"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering welcome_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.html.erb within layouts/mailer (0.6ms)
+  Rendering welcome_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.text.erb within layouts/mailer (0.3ms)
+WelcomeMailer#welcome_email: processed outbound mail in 10.5ms
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 17ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/rails/mailers/welcome_mailer/welcome_mail_preview" for 108.219.110.211 at 2017-04-05 02:40:42 +0000
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"internal"=>true, "path"=>"welcome_mailer/welcome_mail_preview"}
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<WelcomeMailerPreview:0x007fcf50d85c08>):
+  
+test/mailers/previews/welcome_mailer_preview.rb:4:in `welcome_mail_preview'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.2ms)
