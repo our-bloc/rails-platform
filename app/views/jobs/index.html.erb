@@ -19,6 +19,7 @@
 
 <div class="jobs_board row">
   <% @jobs.each do |job| %>
+    <% if job.created_at >= 21.days.ago %> 
    <% if (@color_count % 2) == 0 %> 
             <div class="card horizontal col s12 " style="background-color: inherit" >
         <% else %> 
@@ -29,9 +30,11 @@
                     <h4 id="job_title"><%= link_to job.title.upcase, job_path(job) %></h4>
                     <h5 id="job_company"><%= job.company %></h5>
                  </div>
+                
         </div>
       </div>
   <% @color_count += 1 %> 
+  <% end %> 
   <% end %>
  
 </div>
