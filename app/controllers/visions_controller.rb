@@ -146,6 +146,8 @@ class VisionsController < ApplicationController
   # POST /visions.json
   def create
     @vision = current_user.visions.build(vision_params)
+    @username = current_user.name
+    current_user.update_attribute(:profileurl, @username.gsub(/\s+/, "").delete('.') + rand(10..50).to_s)
 
     respond_to do |format|
       if @vision.save

@@ -13,8 +13,13 @@ class WelcomeController < ApplicationController
     elsif user_signed_in? and current_user.sign_in_count >= 1
       redirect_to myprofile_path 
     else 
-      redirect_to new_user_registration_path
+      redirect_to landing_path
     end
     
   end
+  
+  def landing 
+   
+  end 
+  
 end

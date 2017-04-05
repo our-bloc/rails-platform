@@ -27,6 +27,7 @@ Rails.application.routes.draw do
   get '/sharesasks', to: 'sharesasks#index', as: :sharesasks
   get '/dashboard', to: 'users#dashboard', as: :dashboard
   get 'profiles' => 'profile#index', as: :profiles
+  get '/home', to: 'welcome#landing', as: :landing
 
   get '/myprofile', to: 'profile#myprofile', as: :myprofile
   get '/referrals', to: 'profile#referrals', as: :referrals
@@ -43,6 +44,7 @@ Rails.application.routes.draw do
    
     get 'user/sign_out', :to => 'devise/sessions#destroy', :as => :destroy_session  
     get 'users/auth/facebook' , :to =>"users_callback#passthru", :as => :facebook_login
+    get 'users/email_registration' , :to =>"devise/registrations#email", :as => :email_registration
 
     end
   

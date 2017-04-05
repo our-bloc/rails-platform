@@ -17,12 +17,11 @@ class ApplicationController < ActionController::Base
     
   
     added_registration_attrs = [:name, :school, :firstname,
-    :industry, :firstjob, :gradschool, :prep, :style, :office, :companies] #profilequiz
+    :industry, :firstjob, :gradschool, :prep, :style, :office, :companies, :referred_by_user_id, :referred_by, :profileurl] #profilequiz
     
     
     
-    added_profile_attrs = [:name, :school, #required on logins
-    :major, :experience, :bloc1, :bloc2, :bloc3, :skills, #resume
+    added_profile_attrs = [:name, :school, :profileurl, #resume
     :gradyear, :orgs, :resumelink, :geo ,:hometown ,:company, #context
     :industry, :firstjob, :gradschool, :prep, :style, :office, :companies, #profilequiz
     :gender, :picture, :timezone, :hometown, :firstname

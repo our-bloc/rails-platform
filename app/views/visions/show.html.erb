@@ -1,31 +1,6 @@
  <body>
 
 
-  <ul id="slide-out" class="side-nav">
-  
-    
-    <li><div class="userView">
-      <div class="background">
-        <img  style="width:10%" src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/9544735.png?43">
-      </div>
-       <img id="profile_pic" class="circle" src="<%= @user.picture %>" >
-       <span class="username black-text name"> <%= @user.name %> </span>
-      <span class="black-text email"><%= @user.email %></span>
-      <span class="black-text email"><%= @user.school.capitalize %></span>
-      <span class="black-text email"><%= @user.gradyear %> | <%= @user.major.capitalize %> </span></a>
-
-    </div></li>
-    
-    <li id="menu_link"><%=link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
-    <li id="menu_link"><%=link_to 'Retake Quiz', edit_vision_path(@vision) %></li>
-    <li id="menu_link"><%=link_to 'View Public Profile ', root_path+ @user.profileurl %></li>
-
-
-    <li><div class="divider"></div></li>
-    <li id="menu_link"><a class="subheader">Recent Activity</a></li>
-  </ul>
-  <br> 
-
 
   
 <p id="notice"><%= notice %></p>

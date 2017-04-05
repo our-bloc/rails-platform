@@ -22,8 +22,7 @@ class User < ApplicationRecord
   has_one :profile
   
   #REFERRALS
-  belongs_to :referred_by, :class_name => "User", :foreign_key => "referred_by_user_id"
-  has_many :referrals, :class_name => "User", :foreign_key => "referred_by_user_id"
+  
   
   
   

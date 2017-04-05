@@ -3153,3 +3153,2034 @@ WelcomeMailer#welcome_email: processed outbound mail in 13.6ms
 Completed 200 OK in 20ms (Views: 0.7ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/rails/mailers/welcome_mailer/welcome_mail_preview" for 108.219.110.211 at 2017-04-05 03:32:58 +0000
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"internal"=>true, "path"=>"welcome_mailer/welcome_mail_preview"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering welcome_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.html.erb within layouts/mailer (73.6ms)
+WelcomeMailer#welcome_email: processed outbound mail in 82.9ms
+Completed 500 Internal Server Error in 88ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `jobs_path' for #<#<Class:0x007fcf50a333c0>:0x007fcf4eea8588>
+Did you mean?  jobs_url):
+    30:       color: white; font-family: Raleway; margin: 5% 0;" > 
+    31:         <h6> My Share Code </h6> <h6> <%= link_to "jointhebloc.com/"+ @user.profileurl, "jointhebloc.com/"+ @user.profileurl , style: "color:white"  %></h6>
+    32:         <h6> Promoted Opps </h6>
+    33:         <h6> <%= link_to "Check out internships & entry level jobs at United Way, Spotify & VICE", jobs_path , style: "color:white" %>  </h6>
+    34:       </div>
+    35:       
+    36:       <p> unsubscribe from email updates anytime by replying "Unsubscribe" to this email </p>
+  
+app/views/welcome_mailer/welcome_email.html.erb:33:in `_app_views_welcome_mailer_welcome_email_html_erb___4391176603921504202_70264179477880'
+app/mailers/welcome_mailer.rb:6:in `welcome_email'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.8ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (41.5ms)
+Started GET "/rails/mailers/welcome_mailer/welcome_mail_preview" for 108.219.110.211 at 2017-04-05 03:33:41 +0000
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"internal"=>true, "path"=>"welcome_mailer/welcome_mail_preview"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering welcome_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.html.erb within layouts/mailer (1.1ms)
+  Rendering welcome_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.text.erb within layouts/mailer (0.4ms)
+WelcomeMailer#welcome_email: processed outbound mail in 15.8ms
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.0.1/lib/rails/templates/rails/mailers/email.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.0.1/lib/rails/templates/rails/mailers/email.html.erb (5.2ms)
+Completed 200 OK in 29ms (Views: 7.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/mailers/welcome_mailer/welcome_mail_preview?part=text%2Fhtml" for 108.219.110.211 at 2017-04-05 03:33:45 +0000
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"part"=>"text/html", "internal"=>true, "path"=>"welcome_mailer/welcome_mail_preview"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering welcome_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.html.erb within layouts/mailer (1.1ms)
+  Rendering welcome_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.text.erb within layouts/mailer (0.4ms)
+WelcomeMailer#welcome_email: processed outbound mail in 14.1ms
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 20ms (Views: 0.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/jobs" for 108.219.110.211 at 2017-04-05 03:41:31 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (2.6ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY created_at DESC[0m
+  Rendered jobs/index.html.erb within layouts/application (96.7ms)
+Completed 200 OK in 386ms (Views: 370.6ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/jobs" for 108.219.110.211 at 2017-04-05 03:42:29 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY created_at DESC[0m
+  Rendered jobs/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 145ms (Views: 143.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 108.219.110.211 at 2017-04-05 03:43:13 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY created_at DESC[0m
+  Rendered jobs/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 150ms (Views: 148.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 108.219.110.211 at 2017-04-05 03:44:49 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY created_at DESC[0m
+  Rendered jobs/index.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 175ms (Views: 173.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/jobs" for 108.219.110.211 at 2017-04-05 03:49:37 +0000
+Processing by JobsController#index as HTML
+  Rendering jobs/index.html.erb within layouts/application
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY created_at DESC[0m
+  Rendered jobs/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 154ms (Views: 152.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/email_registration" for 108.219.110.211 at 2017-04-05 14:06:34 +0000
+Processing by ProfileController#show as HTML
+  Parameters: {"profileurl"=>"email_registration"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."profileurl" = ? LIMIT ?[0m  [["profileurl", "email_registration"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 8.4ms)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/profile_controller.rb:30:in `show'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.7ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (72.9ms)
+Started GET "/email_registration" for 108.219.110.211 at 2017-04-05 14:25:31 +0000
+Processing by ProfileController#show as HTML
+  Parameters: {"profileurl"=>"email_registration"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."profileurl" = ? LIMIT ?[0m  [["profileurl", "email_registration"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 6.3ms)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/profile_controller.rb:30:in `show'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.3ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (36.0ms)
+Started GET "/users/email_registration" for 108.219.110.211 at 2017-04-05 14:26:03 +0000
+Processing by Devise::RegistrationsController#email as HTML
+  Rendering users/registrations/email.html.erb within layouts/application
+  Rendered users/registrations/email.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h2>Sign up</h2>
+    2: 
+    3: <%= form_for(resource, :as => resource_name, :url => email_registration_path(resource_name)) do |f| %>
+    4:   <%= devise_error_messages! %>
+    5: 
+    6:  <div><%= f.label :email %><br />
+  
+app/views/users/registrations/email.html.erb:3:in `_app_views_users_registrations_email_html_erb__3938584523165633395_70264175989700'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.8ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (44.8ms)
+Started GET "/users/email_registration" for 108.219.110.211 at 2017-04-05 14:28:35 +0000
+Processing by Devise::RegistrationsController#email as HTML
+  Rendering users/registrations/email.html.erb within layouts/application
+  Rendered users/registrations/email.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h2>Sign up</h2>
+    2: 
+    3: <%= form_for(resource, :as => resource_name, :url => email_registration_path(resource_name)) do |f| %>
+    4:   <%= devise_error_messages! %>
+    5: 
+    6:  <div><%= f.label :email %><br />
+  
+app/views/users/registrations/email.html.erb:3:in `_app_views_users_registrations_email_html_erb__3938584523165633395_70264179321860'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (27.4ms)
+Started GET "/users/email_registration" for 108.219.110.211 at 2017-04-05 14:29:41 +0000
+Processing by Devise::RegistrationsController#email as HTML
+  Rendering users/registrations/email.html.erb within layouts/application
+  Rendered users/registrations/email.html.erb within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h2>Sign up</h2>
+    2: 
+    3: <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+    4:   <%= devise_error_messages! %>
+    5: 
+    6:  <div><%= f.label :email %><br />
+  
+app/views/users/registrations/email.html.erb:3:in `_app_views_users_registrations_email_html_erb__3938584523165633395_70264193809440'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (77.0ms)
+Started GET "/users/email_registration" for 108.219.110.211 at 2017-04-05 14:31:52 +0000
+Processing by Devise::RegistrationsController#email as HTML
+  Rendering users/registrations/email.html.erb within layouts/application
+  Rendered users/registrations/email.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h2>Sign up</h2>
+    2: 
+    3: <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+    4:   <%= devise_error_messages! %>
+    5: 
+    6:  <div><%= f.label :email %><br />
+  
+app/views/users/registrations/email.html.erb:3:in `_app_views_users_registrations_email_html_erb__3938584523165633395_70264156060340'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.6ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.2ms)
+Started GET "/users/email_registration" for 108.219.110.211 at 2017-04-05 14:34:22 +0000
+Processing by Devise::RegistrationsController#email as HTML
+  Rendering users/registrations/email.html.erb within layouts/application
+  Rendered users/registrations/email.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h2>Sign up</h2>
+    2: 
+    3: <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+    4:   <%= devise_error_messages! %>
+    5: 
+    6:  <div><%= f.label :email %><br />
+  
+app/views/users/registrations/email.html.erb:3:in `_app_views_users_registrations_email_html_erb__3938584523165633395_70264179364280'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.5ms)
+Started GET "/users/email_registration" for 108.219.110.211 at 2017-04-05 14:34:54 +0000
+Processing by Devise::RegistrationsController#email as HTML
+  Rendering users/registrations/email.html.erb within layouts/application
+  Rendered users/registrations/email.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h2>Sign up</h2>
+    2: 
+    3: <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+    4:   <%= devise_error_messages! %>
+    5: 
+    6:  <div><%= f.label :email %><br />
+  
+app/views/users/registrations/email.html.erb:3:in `_app_views_users_registrations_email_html_erb__3938584523165633395_70264159925780'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.3ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.2ms)
+Started GET "/users/email_registration" for 108.219.110.211 at 2017-04-05 14:36:37 +0000
+Processing by Devise::RegistrationsController#email as HTML
+  Rendering users/registrations/email.html.erb within layouts/application
+  Rendered users/registrations/email.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h2>Sign up</h2>
+    2: 
+    3: <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+    4:   <%= devise_error_messages! %>
+    5: 
+    6:  <div><%= f.label :email %><br />
+  
+app/views/users/registrations/email.html.erb:3:in `_app_views_users_registrations_email_html_erb__3938584523165633395_70264180122660'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.2ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (39.4ms)
+Started GET "/users/email_registration" for 108.219.110.211 at 2017-04-05 14:37:18 +0000
+Processing by Devise::RegistrationsController#email as HTML
+  Rendering users/registrations/email.html.erb within layouts/application
+  Rendered users/registrations/email.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h2>Sign up</h2>
+    2: 
+    3: <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+    4:   <%= devise_error_messages! %>
+    5: 
+    6:  <div><%= f.label :email %><br />
+  
+app/views/users/registrations/email.html.erb:3:in `_app_views_users_registrations_email_html_erb__3938584523165633395_70264162604560'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.4ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (38.9ms)
+Started GET "/users/email_registration" for 108.219.110.211 at 2017-04-05 14:37:56 +0000
+Processing by Devise::RegistrationsController#email as HTML
+  Rendering users/registrations/email.html.erb within layouts/application
+  Rendered users/registrations/email.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h2>Sign up</h2>
+    2: 
+    3: <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+    4:   <%= devise_error_messages! %>
+    5: 
+    6:  <div><%= f.label :email %><br />
+  
+app/views/users/registrations/email.html.erb:3:in `_app_views_users_registrations_email_html_erb__3938584523165633395_70264178528500'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.4ms)
+Started GET "/users/email_registration" for 108.219.110.211 at 2017-04-05 14:45:51 +0000
+Processing by Devise::RegistrationsController#email as HTML
+  Rendering users/registrations/email.html.erb within layouts/application
+  Rendered users/registrations/email.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h2>Sign up</h2>
+    2: 
+    3: <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+    4:   <%= devise_error_messages! %>
+    5: 
+    6:  <div><%= f.label :email %><br />
+  
+app/views/users/registrations/email.html.erb:3:in `_app_views_users_registrations_email_html_erb__3938584523165633395_70264163008180'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.4ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (35.0ms)
+Started GET "/users/email_registration" for 108.219.110.211 at 2017-04-05 14:49:35 +0000
+Processing by Devise::RegistrationsController#email as HTML
+  Rendering users/registrations/email.html.erb within layouts/application
+  Rendered users/registrations/email.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h2>Sign up</h2>
+    2: 
+    3: <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+    4:   <%= devise_error_messages! %>
+    5: 
+    6:  <div><%= f.label :email %><br />
+  
+app/views/users/registrations/email.html.erb:3:in `_app_views_users_registrations_email_html_erb__3938584523165633395_70264178526840'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.2ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (34.5ms)
+Started GET "/users/email_registration" for 108.219.110.211 at 2017-04-05 14:52:55 +0000
+Processing by Devise::RegistrationsController#email as HTML
+  Rendering users/registrations/email.html.erb within layouts/application
+  Rendered users/registrations/email.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h2>Sign up</h2>
+    2: 
+    3: <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+    4:   <%= devise_error_messages! %>
+    5: 
+    6:  <div><%= f.label :email %><br />
+  
+app/views/users/registrations/email.html.erb:3:in `_app_views_users_registrations_email_html_erb__3938584523165633395_70264160150700'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (38.5ms)
+Started GET "/users/email_registration" for 108.219.110.211 at 2017-04-05 14:53:43 +0000
+Processing by Devise::RegistrationsController#email as HTML
+  Rendering users/registrations/email.html.erb within layouts/application
+  Rendered users/registrations/email.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h2>Sign up</h2>
+    2: 
+    3: <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+    4:   <%= devise_error_messages! %>
+    5: 
+    6:  <div><%= f.label :email %><br />
+  
+app/views/users/registrations/email.html.erb:3:in `_app_views_users_registrations_email_html_erb__3938584523165633395_70264180162780'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (38.8ms)
+Started GET "/users/email_registration" for 108.219.110.211 at 2017-04-05 14:54:10 +0000
+Processing by Devise::RegistrationsController#email as HTML
+  Rendering users/registrations/email.html.erb within layouts/application
+  Rendered users/registrations/email.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h2>Sign up</h2>
+    2: 
+    3: <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+    4:   <%= devise_error_messages! %>
+    5: 
+    6:  <div><%= f.label :email %><br />
+  
+app/views/users/registrations/email.html.erb:3:in `_app_views_users_registrations_email_html_erb__3938584523165633395_70264157384120'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.8ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (35.6ms)
+Started GET "/users/email_registration" for 108.219.110.211 at 2017-04-05 14:54:54 +0000
+Processing by Devise::RegistrationsController#email as HTML
+  Rendering users/registrations/email.html.erb within layouts/application
+  Rendered users/registrations/email.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <h2>Sign up</h2>
+    2: 
+    3: <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+    4:   <%= devise_error_messages! %>
+    5: 
+    6:  <div><%= f.label :email %><br />
+  
+app/views/users/registrations/email.html.erb:3:in `_app_views_users_registrations_email_html_erb__3938584523165633395_70264179399980'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.7ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (48.6ms)
+Started GET "/" for 108.219.110.211 at 2017-04-05 15:15:03 +0000
+Processing by WelcomeController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to https://bloc-prodcution-aminabloc.c9users.io/myprofile
+Completed 302 Found in 53ms (ActiveRecord: 9.0ms)
+
+
+Started GET "/myprofile" for 108.219.110.211 at 2017-04-05 15:15:04 +0000
+Processing by ProfileController#myprofile as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVision Load (0.4ms)[0m  [1m[34mSELECT  "visions".* FROM "visions" WHERE "visions"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  Rendering profile/myprofile.html.erb within layouts/application
+  Rendered profile/myprofile.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 281ms (Views: 233.5ms | ActiveRecord: 2.9ms)
+
+
+Started DELETE "/users/sign_out" for 108.219.110.211 at 2017-04-05 15:15:16 +0000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"XPArBtNtXMUJf9RzCXSam+BUZHXix7673A+6J4Nnpr5Uas94/IEyPstVUeHBJqWpC1k6gis7/PLVdLwXs6V4kQ=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://bloc-prodcution-aminabloc.c9users.io/
+Completed 302 Found in 10ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 108.219.110.211 at 2017-04-05 15:15:16 +0000
+Processing by WelcomeController#home as HTML
+Redirected to https://bloc-prodcution-aminabloc.c9users.io/home
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 108.219.110.211 at 2017-04-05 15:15:16 +0000
+  
+AbstractController::ActionNotFound (The action 'landing' could not be found for WelcomeController):
+  
+actionpack (5.0.1) lib/abstract_controller/base.rb:121:in `process'
+actionview (5.0.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.1) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.1) lib/action_dispatch/routing/route_set.rb:725:in `call'
+omniauth (1.4.1) lib/omniauth/strategy.rb:186:in `call!'
+omniauth (1.4.1) lib/omniauth/strategy.rb:164:in `call'
+rack-attack (5.0.1) lib/rack/attack.rb:147:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.1) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+ahoy_matey (1.5.4) lib/ahoy/engine.rb:22:in `call_with_quiet_ahoy'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.7ms)
+Started GET "/home" for 108.219.110.211 at 2017-04-05 15:15:41 +0000
+Processing by WelcomeController#landing as HTML
+Completed 500 Internal Server Error in 199ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `resource_class' for #<WelcomeController:0x007fcf58584240>
+Did you mean?  resource_url
+               resources_url
+               resource_path):
+  
+app/controllers/welcome_controller.rb:23:in `landing'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (114.3ms)
+Started GET "/home" for 108.219.110.211 at 2017-04-05 15:16:20 +0000
+Processing by WelcomeController#landing as HTML
+Completed 406 Not Acceptable in 41ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (WelcomeController#landing is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.0.1) lib/action_controller/metal/implicit_render.rb:56:in `default_render'
+actionpack (5.0.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.0.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.0.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.1) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.1) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.1) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.1) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.1) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.1) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.1) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.1) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.1) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.1) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.1) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.1) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.1) lib/action_dispatch/routing/route_set.rb:725:in `call'
+omniauth (1.4.1) lib/omniauth/strategy.rb:186:in `call!'
+omniauth (1.4.1) lib/omniauth/strategy.rb:164:in `call'
+rack-attack (5.0.1) lib/rack/attack.rb:147:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.1) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+ahoy_matey (1.5.4) lib/ahoy/engine.rb:22:in `call_with_quiet_ahoy'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.2ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (34.4ms)
+Started GET "/home" for 108.219.110.211 at 2017-04-05 15:17:33 +0000
+Processing by WelcomeController#landing as HTML
+  Rendering welcome/landing.html.erb within layouts/application
+  Rendered welcome/landing.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 190ms (Views: 184.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for 108.219.110.211 at 2017-04-05 15:17:46 +0000
+Started GET "/users/auth/facebook/callback?code=AQDaUE6kiJTyOBnSPgdnTR8YoawlpX8QA_3yVb4QbBJofTL13aeQFP4MopyjTXytklBuwsjmW03m5p16Das0DAGrFdm-l5FIoCSgTwU9eiMRUvMsyFPb3onxLgXvuoVesIlCnLX8wb3IsCBnEnMmlI1bUzIFPun59fKrHBKUkPZtYAnsMnnIkUllIzvQ2ydhmlyh-0uJpoaTe88DUd1zhoSdo6qz2wBkoJG7hFkebtVDznebugxr_xGkCpPcLiNCkVdJWOe2Ez0XhLi78O6VIwGt1NqUbrJVZK6IDTMBPllPoWYxwelLvQ3T5JSjsS6sPl5kQ-bavn6jmN0JU4IrBo5U&state=a7660b5593318363910e9c870ac226896ca95ed51b59a10a" for 108.219.110.211 at 2017-04-05 15:17:47 +0000
+Processing by CallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQDaUE6kiJTyOBnSPgdnTR8YoawlpX8QA_3yVb4QbBJofTL13aeQFP4MopyjTXytklBuwsjmW03m5p16Das0DAGrFdm-l5FIoCSgTwU9eiMRUvMsyFPb3onxLgXvuoVesIlCnLX8wb3IsCBnEnMmlI1bUzIFPun59fKrHBKUkPZtYAnsMnnIkUllIzvQ2ydhmlyh-0uJpoaTe88DUd1zhoSdo6qz2wBkoJG7hFkebtVDznebugxr_xGkCpPcLiNCkVdJWOe2Ez0XhLi78O6VIwGt1NqUbrJVZK6IDTMBPllPoWYxwelLvQ3T5JSjsS6sPl5kQ-bavn6jmN0JU4IrBo5U", "state"=>"a7660b5593318363910e9c870ac226896ca95ed51b59a10a"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "facebook"], ["uid", "10208871941659108"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-04-05 15:17:47 UTC], ["last_sign_in_at", 2017-03-24 17:37:03 UTC], ["current_sign_in_ip", "108.219.110.211"], ["sign_in_count", 11], ["updated_at", 2017-04-05 15:17:47 UTC], ["id", 1]]
+  [1m[35m (9.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://bloc-prodcution-aminabloc.c9users.io/
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering new_user_mailer/new_user.html.erb within layouts/mailer
+  Rendered new_user_mailer/new_user.html.erb within layouts/mailer (0.8ms)
+NewUserMailer#new_user: processed outbound mail in 9.7ms
+Sent mail to info@ourbloc.co (13.2ms)
+Date: Wed, 05 Apr 2017 15:17:47 +0000
+From: amina@ourbloc.co
+To: info@ourbloc.co
+Message-ID: <58e50a9bdc678_106329d9944199a3@aminabloc-bloc-prodcution-4407529.mail>
+Subject: New User:Amina Yamusah,1
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>New user: Amina Yamusah</h1>
+    <h2> email: ayamusah213@gmail.com </h2>
+    <h2> count: 1 </h2>
+    <h2> referred by: home </h2>
+
+  </body>
+</html>
+
+<style> 
+
+html{
+color:teal;
+font-family: Arial;
+}
+</style>
+  </body>
+</html>
+
+Completed 302 Found in 146ms (ActiveRecord: 12.4ms)
+
+
+Started GET "/" for 108.219.110.211 at 2017-04-05 15:17:48 +0000
+Processing by WelcomeController#home as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to https://bloc-prodcution-aminabloc.c9users.io/myprofile
+Completed 302 Found in 7ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/myprofile" for 108.219.110.211 at 2017-04-05 15:17:48 +0000
+Processing by ProfileController#myprofile as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVision Load (0.2ms)[0m  [1m[34mSELECT  "visions".* FROM "visions" WHERE "visions"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  Rendering profile/myprofile.html.erb within layouts/application
+  Rendered profile/myprofile.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 263ms (Views: 215.3ms | ActiveRecord: 2.5ms)
+
+
+Started DELETE "/users/sign_out" for 108.219.110.211 at 2017-04-05 15:17:53 +0000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"NNNrs2IGEMgwNL+jg/xMOkwQ49bi5hS+zR5RfP6R4ffMB+mZDgOS5mXFY4qvQGSYA8+SbtXiPFW2pGjInAXx8g=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://bloc-prodcution-aminabloc.c9users.io/
+Completed 302 Found in 7ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 108.219.110.211 at 2017-04-05 15:17:54 +0000
+Processing by WelcomeController#home as HTML
+Redirected to https://bloc-prodcution-aminabloc.c9users.io/home
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 108.219.110.211 at 2017-04-05 15:17:54 +0000
+Processing by WelcomeController#landing as HTML
+  Rendering welcome/landing.html.erb within layouts/application
+  Rendered welcome/landing.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 180ms (Views: 177.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_ip" for 108.219.110.211 at 2017-04-05 15:18:06 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_ip"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+ahoy_matey (1.5.4) lib/ahoy/engine.rb:22:in `call_with_quiet_ahoy'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered collection of /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [126 times] (74.1ms)
+  Rendered collection of /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [2 times] (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (216.8ms)
+Started GET "/users/sign_up" for 108.219.110.211 at 2017-04-05 15:18:11 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/registrations/new.html.erb within layouts/application (14.5ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial users/registrations/_links, devise/registrations/_links, devise/_links, application/_links with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/ubuntu/workspace/app/views"
+  * "/usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views"
+):
+    15:  <div><%= f.submit "Sign up" %></div>
+    16: <% end %>
+    17: 
+    18: <%= render "links" %>
+  
+app/views/users/registrations/new.html.erb:18:in `_app_views_users_registrations_new_html_erb___803374984267173851_70264189857600'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.3ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.0ms)
+Started GET "/users/sign_up" for 108.219.110.211 at 2017-04-05 15:19:05 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/registrations/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 182ms (Views: 180.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 108.219.110.211 at 2017-04-05 15:19:42 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.5ms)
+  Rendered users/registrations/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 163ms (Views: 161.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 108.219.110.211 at 2017-04-05 15:22:59 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.1ms)
+  Rendered users/registrations/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 151ms (Views: 149.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 108.219.110.211 at 2017-04-05 15:23:47 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SGEN0vjxB8G9YgJLEqz9xvEuW4TONs122GhxeaWvwfnLbHM+/Od7WqgXYbho+Yp/gULt3fEg5ZV5JFgiPmALNA==", "user"=>{"name"=>"Test User", "firstname"=>"Test", "email"=>"test@ourbloc.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@ourbloc.co"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.5ms)
+  Rendered users/registrations/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 439ms (Views: 201.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users" for 108.219.110.211 at 2017-04-05 15:27:09 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/t+b1k4skrIEUYq3S/pezStTev+4LHt6vi9sBk5iDC590uU6SjruKREk6UQxryl0Wz/Mpoc6U5kfY0Vd1a3G4w==", "user"=>{"name"=>"Test User", "firstname"=>"Test", "email"=>"test@ourbloc.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@ourbloc.co"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/registrations/new.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 170ms (ActiveRecord: 0.5ms)
+
+
+  
+SyntaxError (/home/ubuntu/workspace/app/views/users/registrations/new.html.erb:12: syntax error, unexpected tSTRING_BEG, expecting ')'
+...field :referral_code , :value "none" );@output_buffer.safe_a...
+...                               ^):
+  
+app/views/users/registrations/new.html.erb:12: syntax error, unexpected tSTRING_BEG, expecting ')'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.7ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (39.3ms)
+Started POST "/users" for 108.219.110.211 at 2017-04-05 15:28:54 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/t+b1k4skrIEUYq3S/pezStTev+4LHt6vi9sBk5iDC590uU6SjruKREk6UQxryl0Wz/Mpoc6U5kfY0Vd1a3G4w==", "user"=>{"name"=>"Test User", "firstname"=>"Test", "email"=>"test@ourbloc.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@ourbloc.co"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/registrations/new.html.erb within layouts/application (9.5ms)
+Completed 500 Internal Server Error in 166ms (ActiveRecord: 0.5ms)
+
+
+  
+SyntaxError (/home/ubuntu/workspace/app/views/users/registrations/new.html.erb:12: syntax error, unexpected =>
+...ield :referral_code , value: =>  "none" );@output_buffer.saf...
+...                               ^):
+  
+app/views/users/registrations/new.html.erb:12: syntax error, unexpected =>
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.8ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (29.9ms)
+Started GET "/users/sign_up" for 108.219.110.211 at 2017-04-05 15:31:44 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (2.0ms)
+  Rendered users/registrations/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 426ms (Views: 354.7ms | ActiveRecord: 11.1ms)
+
+
+Started POST "/users" for 108.219.110.211 at 2017-04-05 15:32:41 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kiwnwfAxPp7pkHs3jy1TFqTnzsA9BrBjR/KxFb4habsRIVkt9CdCBfzlGMT1eCSv1It4mQIQmIDmvphOJe6jdg==", "user"=>{"name"=>"Test User", "firstname"=>"Test", "email"=>"testing@ourbloc.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "testing@ourbloc.co"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.1ms)
+  Rendered users/registrations/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 327ms (Views: 171.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for 108.219.110.211 at 2017-04-05 15:36:15 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kiwnwfAxPp7pkHs3jy1TFqTnzsA9BrBjR/KxFb4habsRIVkt9CdCBfzlGMT1eCSv1It4mQIQmIDmvphOJe6jdg==", "user"=>{"name"=>"Test User", "firstname"=>"Test", "email"=>"testing@ourbloc.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "testing@ourbloc.co"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/registrations/new.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 194ms (ActiveRecord: 1.9ms)
+
+
+  
+SyntaxError (/home/ubuntu/workspace/app/views/users/registrations/new.html.erb:12: syntax error, unexpected =>
+..._field :referred_by , value: => "1" );@output_buffer.safe_ap...
+...                               ^):
+  
+app/views/users/registrations/new.html.erb:12: syntax error, unexpected =>
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.6ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (33.0ms)
+Started POST "/users" for 108.219.110.211 at 2017-04-05 15:36:52 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kiwnwfAxPp7pkHs3jy1TFqTnzsA9BrBjR/KxFb4habsRIVkt9CdCBfzlGMT1eCSv1It4mQIQmIDmvphOJe6jdg==", "user"=>{"name"=>"Test User", "firstname"=>"Test", "email"=>"testing@ourbloc.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "testing@ourbloc.co"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.8ms)
+  Rendered users/registrations/new.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 384ms (Views: 221.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for 108.219.110.211 at 2017-04-05 15:37:12 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XwbHuP68fSzAp4GTMUoFBS0pD74jLgwm6c+YmIFaARbcC7lU+qoBt9XS4mBLH3K8XUW55xw4JMVIg7HDGpXL2w==", "user"=>{"name"=>"Test User", "firstname"=>"Test", "referred_by"=>"1", "email"=>"testing@ourbloc.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameter: referred_by
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "testing@ourbloc.co"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.9ms)
+  Rendered users/registrations/new.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 424ms (Views: 258.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/sign_up" for 108.219.110.211 at 2017-04-05 15:37:39 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.2ms)
+  Rendered users/registrations/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 208ms (Views: 205.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 108.219.110.211 at 2017-04-05 15:38:06 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"agE6NelYzSuUncochfQfn2um1MzjzVl60ZTY9CSY6ffpDETZ7U6xsIHoqe//oWgmG8pildzbcZlw2PGvv1cjOg==", "user"=>{"name"=>"Test User", "firstname"=>"Test", "referred_by"=>"1", "email"=>"test@ourbloc.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameter: referred_by
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@ourbloc.co"], ["LIMIT", 1]]
+  
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+ActiveRecord::StatementInvalid (SQLite3::BusyException: database is locked: commit transaction):
+  
+  
+  Rendering users/registrations/new.html.erb within layouts/application
+sqlite3 (1.3.13) lib/sqlite3/statement.rb:108:in `step'
+sqlite3 (1.3.13) lib/sqlite3/statement.rb:108:in `block in each'
+sqlite3 (1.3.13) lib/sqlite3/statement.rb:107:in `loop'
+sqlite3 (1.3.13) lib/sqlite3/statement.rb:107:in `each'
+sqlite3 (1.3.13) lib/sqlite3/database.rb:152:in `map'
+sqlite3 (1.3.13) lib/sqlite3/database.rb:152:in `block in execute'
+sqlite3 (1.3.13) lib/sqlite3/database.rb:95:in `prepare'
+sqlite3 (1.3.13) lib/sqlite3/database.rb:137:in `execute'
+sqlite3 (1.3.13) lib/sqlite3/database.rb:518:in `commit'
+activerecord (5.0.1) lib/active_record/connection_adapters/sqlite3_adapter.rb:240:in `block in commit_db_transaction'
+activerecord (5.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:589:in `block in log'
+activesupport (5.0.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activerecord (5.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:583:in `log'
+activerecord (5.0.1) lib/active_record/connection_adapters/sqlite3_adapter.rb:240:in `commit_db_transaction'
+activerecord (5.0.1) lib/active_record/connection_adapters/abstract/transaction.rb:143:in `commit'
+activerecord (5.0.1) lib/active_record/connection_adapters/abstract/transaction.rb:177:in `commit_transaction'
+activerecord (5.0.1) lib/active_record/connection_adapters/abstract/transaction.rb:202:in `within_new_transaction'
+activerecord (5.0.1) lib/active_record/connection_adapters/abstract/database_statements.rb:232:in `transaction'
+activerecord (5.0.1) lib/active_record/transactions.rb:211:in `transaction'
+activerecord (5.0.1) lib/active_record/transactions.rb:392:in `with_transaction_returning_status'
+activerecord (5.0.1) lib/active_record/transactions.rb:324:in `save!'
+activerecord (5.0.1) lib/active_record/suppressor.rb:45:in `save!'
+ahoy_matey (1.5.4) lib/ahoy/stores/active_record_token_store.rb:54:in `track_event'
+ahoy_matey (1.5.4) lib/ahoy/tracker.rb:23:in `track'
+ahoy_matey (1.5.4) app/controllers/ahoy/events_controller.rb:29:in `block in create'
+ahoy_matey (1.5.4) app/controllers/ahoy/events_controller.rb:19:in `each'
+ahoy_matey (1.5.4) app/controllers/ahoy/events_controller.rb:19:in `create'
+actionpack (5.0.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.1) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.1) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.1) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.1) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.1) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.1) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.1) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.1) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.1) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.1) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.1) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.1) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.1) lib/action_dispatch/routing/route_set.rb:725:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+railties (5.0.1) lib/rails/railtie.rb:193:in `public_send'
+railties (5.0.1) lib/rails/railtie.rb:193:in `method_missing'
+actionpack (5.0.1) lib/action_dispatch/routing/mapper.rb:17:in `block in <class:Constraints>'
+actionpack (5.0.1) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.0.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.1) lib/action_dispatch/routing/route_set.rb:725:in `call'
+omniauth (1.4.1) lib/omniauth/strategy.rb:186:in `call!'
+omniauth (1.4.1) lib/omniauth/strategy.rb:164:in `call'
+rack-attack (5.0.1) lib/rack/attack.rb:147:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.1) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+ahoy_matey (1.5.4) lib/ahoy/engine.rb:19:in `block in call_with_quiet_ahoy'
+ahoy_matey (1.5.4) lib/ahoy/logger_silencer.rb:46:in `silence_logger'
+ahoy_matey (1.5.4) lib/ahoy/engine.rb:18:in `call_with_quiet_ahoy'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+ActiveRecord::StatementInvalid (SQLite3::BusyException: database is locked: commit transaction):
+  Rendered users/shared/_links.html.erb (2.6ms)
+  Rendered users/registrations/new.html.erb within layouts/application (164.6ms)
+  
+sqlite3 (1.3.13) lib/sqlite3/statement.rb:108:in `step'
+sqlite3 (1.3.13) lib/sqlite3/statement.rb:108:in `block in each'
+sqlite3 (1.3.13) lib/sqlite3/statement.rb:107:in `loop'
+sqlite3 (1.3.13) lib/sqlite3/statement.rb:107:in `each'
+sqlite3 (1.3.13) lib/sqlite3/database.rb:152:in `map'
+sqlite3 (1.3.13) lib/sqlite3/database.rb:152:in `block in execute'
+sqlite3 (1.3.13) lib/sqlite3/database.rb:95:in `prepare'
+sqlite3 (1.3.13) lib/sqlite3/database.rb:137:in `execute'
+sqlite3 (1.3.13) lib/sqlite3/database.rb:518:in `commit'
+activerecord (5.0.1) lib/active_record/connection_adapters/sqlite3_adapter.rb:240:in `block in commit_db_transaction'
+activerecord (5.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:589:in `block in log'
+activesupport (5.0.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activerecord (5.0.1) lib/active_record/connection_adapters/abstract_adapter.rb:583:in `log'
+activerecord (5.0.1) lib/active_record/connection_adapters/sqlite3_adapter.rb:240:in `commit_db_transaction'
+activerecord (5.0.1) lib/active_record/connection_adapters/abstract/transaction.rb:143:in `commit'
+activerecord (5.0.1) lib/active_record/connection_adapters/abstract/transaction.rb:177:in `commit_transaction'
+activerecord (5.0.1) lib/active_record/connection_adapters/abstract/transaction.rb:202:in `within_new_transaction'
+activerecord (5.0.1) lib/active_record/connection_adapters/abstract/database_statements.rb:232:in `transaction'
+activerecord (5.0.1) lib/active_record/transactions.rb:211:in `transaction'
+activerecord (5.0.1) lib/active_record/transactions.rb:392:in `with_transaction_returning_status'
+activerecord (5.0.1) lib/active_record/transactions.rb:324:in `save!'
+activerecord (5.0.1) lib/active_record/suppressor.rb:45:in `save!'
+ahoy_matey (1.5.4) lib/ahoy/stores/active_record_token_store.rb:54:in `track_event'
+ahoy_matey (1.5.4) lib/ahoy/tracker.rb:23:in `track'
+ahoy_matey (1.5.4) app/controllers/ahoy/events_controller.rb:29:in `block in create'
+ahoy_matey (1.5.4) app/controllers/ahoy/events_controller.rb:19:in `each'
+ahoy_matey (1.5.4) app/controllers/ahoy/events_controller.rb:19:in `create'
+actionpack (5.0.1) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.1) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.1) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.1) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.1) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.1) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.1) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.1) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.1) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.1) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.1) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.1) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.1) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.1) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.1) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.1) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.1) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.1) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.1) lib/action_dispatch/routing/route_set.rb:725:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+railties (5.0.1) lib/rails/railtie.rb:193:in `public_send'
+railties (5.0.1) lib/rails/railtie.rb:193:in `method_missing'
+actionpack (5.0.1) lib/action_dispatch/routing/mapper.rb:17:in `block in <class:Constraints>'
+actionpack (5.0.1) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.0.1) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.1) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.1) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.1) lib/action_dispatch/routing/route_set.rb:725:in `call'
+omniauth (1.4.1) lib/omniauth/strategy.rb:186:in `call!'
+omniauth (1.4.1) lib/omniauth/strategy.rb:164:in `call'
+rack-attack (5.0.1) lib/rack/attack.rb:147:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.1) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+ahoy_matey (1.5.4) lib/ahoy/engine.rb:19:in `block in call_with_quiet_ahoy'
+ahoy_matey (1.5.4) lib/ahoy/logger_silencer.rb:46:in `silence_logger'
+ahoy_matey (1.5.4) lib/ahoy/engine.rb:18:in `call_with_quiet_ahoy'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Completed 200 OK in 11458ms (Views: 835.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/sign_up" for 108.219.110.211 at 2017-04-05 15:40:11 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.4ms)
+  Rendered users/registrations/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 178ms (Views: 176.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 108.219.110.211 at 2017-04-05 15:40:44 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W8b3Tsx0u4Yo/Uef1jPDydrCLU0LO+6s2iZvIQ/t0wPYy4miyGLHHT2IJGysZrRwqq6bFDQtxk97akZ6lCIZzg==", "user"=>{"name"=>"Test User", "firstname"=>"Test", "refererred_by_user_id"=>"1", "email"=>"test@ourbloc.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameter: refererred_by_user_id
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@ourbloc.co"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.3ms)
+  Rendered users/registrations/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 342ms (Views: 186.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/sign_up" for 108.219.110.211 at 2017-04-05 15:45:56 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.4ms)
+  Rendered users/registrations/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 212ms (Views: 174.0ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/users" for 108.219.110.211 at 2017-04-05 15:46:43 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NPpVhHTwVVvXn8o9sKZX++pUyHczedojO12y9w5y/X239ytocOYpwMLqqc7K8yBCmjh+Lgxv8sCaEZuslb03sA==", "user"=>{"name"=>"Test User", "firstname"=>"Test", "refererred_by_user_id"=>"1", "refererred_by"=>"1", "email"=>"test@testing.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameters: refererred_by_user_id, refererred_by
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@testing.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.1ms)
+  Rendered users/registrations/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 312ms (Views: 155.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for 108.219.110.211 at 2017-04-05 15:49:27 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vE2SfJjvf1Nre0wlCJSCcfT+ldE6YFvKE7JbTwf/FeU/QOyQnPkDyH4OL9ZywfXIhJIjiAV2cymy/nIUnDDfKA==", "user"=>{"name"=>"Test User", "firstname"=>"Test", "refererred_by_user_id"=>"1", "refererred_by"=>"1", "email"=>"test@testing.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameters: refererred_by_user_id, refererred_by
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@testing.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "firstname") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "test@testing.com"], ["encrypted_password", "$2a$11$gxIfGh3dBmjCaLfQfjuCVOWWh/Qv5oh73KtC2fvbVoVu1DGil1Uxm"], ["created_at", 2017-04-05 15:49:28 UTC], ["updated_at", 2017-04-05 15:49:28 UTC], ["name", "Test User"], ["firstname", "Test"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "profiles" ("created_at", "updated_at", "user_id") VALUES (?, ?, ?)[0m  [["created_at", 2017-04-05 15:49:28 UTC], ["updated_at", 2017-04-05 15:49:28 UTC], ["user_id", 2]]
+  [1m[35m (20.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", 2017-04-05 15:49:28 UTC], ["last_sign_in_at", 2017-04-05 15:49:28 UTC], ["current_sign_in_ip", "108.219.110.211"], ["last_sign_in_ip", "108.219.110.211"], ["updated_at", 2017-04-05 15:49:28 UTC], ["id", 2]]
+  [1m[35m (7.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://bloc-prodcution-aminabloc.c9users.io/
+Completed 302 Found in 268ms (ActiveRecord: 32.7ms)
+
+
+Started GET "/" for 108.219.110.211 at 2017-04-05 15:49:28 +0000
+Processing by WelcomeController#home as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to https://bloc-prodcution-aminabloc.c9users.io/visions/new
+Completed 302 Found in 9ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/visions/new" for 108.219.110.211 at 2017-04-05 15:49:28 +0000
+Processing by VisionsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering visions/new.html.erb within layouts/application
+  Rendered visions/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 209ms (Views: 172.5ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/visions" for 108.219.110.211 at 2017-04-05 15:50:23 +0000
+Processing by VisionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zIfQNlAPHM6SGkyIdK0/b95b3hKGdTl/qiqhh4NoaBZPiq7aVBlgVYdvL3sO+EjWrjdoS7ljEZwLZojcGKei2w==", "vision"=>{"username"=>"", "image"=>"", "email"=>"", "gender"=>"", "age"=>"", "timezone"=>"", "industry"=>"", "firstjob"=>"", "style"=>"", "prep"=>""}, "commit"=>"get your playlist"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "visions" ("industry", "style", "created_at", "updated_at", "user_id", "prep", "firstjob", "username", "email", "image", "gender", "timezone", "age") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["industry", ""], ["style", ""], ["created_at", 2017-04-05 15:50:23 UTC], ["updated_at", 2017-04-05 15:50:23 UTC], ["user_id", 2], ["prep", ""], ["firstjob", ""], ["username", ""], ["email", ""], ["image", ""], ["gender", ""], ["timezone", ""], ["age", ""]]
+  [1m[35m (16.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://bloc-prodcution-aminabloc.c9users.io/visions/5/edit
+  Rendering welcome_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.html.erb within layouts/mailer (2.6ms)
+WelcomeMailer#welcome_email: processed outbound mail in 52.3ms
+Completed 500 Internal Server Error in 204ms (ActiveRecord: 18.2ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of nil into String):
+    28:   
+    29:       <div class="share" style="background-color: #44d9e6; padding: 2%; text-align: center; font-size: 2em;
+    30:       color: white; font-family: Raleway; margin: 5% 0;" > 
+    31:         <h6> My Share Code </h6> <h6> <%= link_to "jointhebloc.com/"+ @user.profileurl, "jointhebloc.com/"+ @user.profileurl , style: "color:white"  %></h6>
+    32:         <h6> Promoted Opps </h6>
+    33:         <h6> <%= link_to "Check out internships & entry level jobs at United Way, Spotify & VICE", "jointhebloc.com/jobs" , style: "color:white" %>  </h6>
+    34:       </div>
+  
+app/views/welcome_mailer/welcome_email.html.erb:31:in `+'
+app/views/welcome_mailer/welcome_email.html.erb:31:in `_app_views_welcome_mailer_welcome_email_html_erb___4391176603921504202_70264256166180'
+app/mailers/welcome_mailer.rb:6:in `welcome_email'
+app/controllers/visions_controller.rb:155:in `block in create'
+app/controllers/visions_controller.rb:150:in `create'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (49.9ms)
+Started GET "/users/sign_out" for 108.219.110.211 at 2017-04-05 15:53:52 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+ahoy_matey (1.5.4) lib/ahoy/engine.rb:22:in `call_with_quiet_ahoy'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered collection of /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [126 times] (61.0ms)
+  Rendered collection of /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [2 times] (4.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.3ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (139.1ms)
+Started GET "/rails/info/routes?path=sign" for 108.219.110.211 at 2017-04-05 15:54:03 +0000
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"sign", "internal"=>true}
+Completed 200 OK in 10ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=sign" for 108.219.110.211 at 2017-04-05 15:54:04 +0000
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"sign", "internal"=>true}
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user/sign_out" for 108.219.110.211 at 2017-04-05 15:54:44 +0000
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://bloc-prodcution-aminabloc.c9users.io/
+Completed 302 Found in 48ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/" for 108.219.110.211 at 2017-04-05 15:54:45 +0000
+Processing by WelcomeController#home as HTML
+Redirected to https://bloc-prodcution-aminabloc.c9users.io/home
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 108.219.110.211 at 2017-04-05 15:54:45 +0000
+Processing by WelcomeController#landing as HTML
+  Rendering welcome/landing.html.erb within layouts/application
+  Rendered welcome/landing.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 212ms (Views: 208.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 108.219.110.211 at 2017-04-05 15:55:08 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (2.0ms)
+  Rendered users/registrations/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 265ms (Views: 262.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 108.219.110.211 at 2017-04-05 15:55:35 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WcOunzIRwnSvy+iSPQg8ONzcWMHi4fj8szGjiPWqW4zN0vBxrDFdRNvOmOJYCumpP73e5O9+lzKED6ubH0/Mpw==", "user"=>{"name"=>"Testing User ", "firstname"=>"Testing", "refererred_by_user_id"=>"1", "refererred_by"=>"1", "email"=>"testing@ourbloc.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Unpermitted parameters: refererred_by_user_id, refererred_by
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "testing@ourbloc.co"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "firstname") VALUES (?, ?, ?, ?, ?, ?)[0m  [["email", "testing@ourbloc.co"], ["encrypted_password", "$2a$11$f0iDM1Zx.CIuNLZ3v8W0ZeJwTvC8AOEpgOPWs2TzKTNfaWxAteTla"], ["created_at", 2017-04-05 15:55:35 UTC], ["updated_at", 2017-04-05 15:55:35 UTC], ["name", "Testing User "], ["firstname", "Testing"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "profiles" ("created_at", "updated_at", "user_id") VALUES (?, ?, ?)[0m  [["created_at", 2017-04-05 15:55:35 UTC], ["updated_at", 2017-04-05 15:55:35 UTC], ["user_id", 3]]
+  [1m[35m (11.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", 2017-04-05 15:55:35 UTC], ["last_sign_in_at", 2017-04-05 15:55:35 UTC], ["current_sign_in_ip", "108.219.110.211"], ["last_sign_in_ip", "108.219.110.211"], ["updated_at", 2017-04-05 15:55:35 UTC], ["id", 3]]
+  [1m[35m (9.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://bloc-prodcution-aminabloc.c9users.io/
+Completed 302 Found in 237ms (ActiveRecord: 23.8ms)
+
+
+Started GET "/" for 108.219.110.211 at 2017-04-05 15:55:35 +0000
+Processing by WelcomeController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Redirected to https://bloc-prodcution-aminabloc.c9users.io/visions/new
+Completed 302 Found in 7ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/visions/new" for 108.219.110.211 at 2017-04-05 15:55:35 +0000
+Processing by VisionsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering visions/new.html.erb within layouts/application
+  Rendered visions/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 300ms (Views: 271.0ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/visions" for 108.219.110.211 at 2017-04-05 15:55:49 +0000
+Processing by VisionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EzP/8qCUuMNyPsV+L9nFYrJRDSi/9WlW40MSzd7bJ0GHIqEcPrQn8wY7tQ5K2xDzUTCLDbJqBpjUfRreND6wag==", "vision"=>{"username"=>"", "image"=>"", "email"=>"", "gender"=>"", "age"=>"", "timezone"=>"", "industry"=>"", "firstjob"=>"", "style"=>"", "prep"=>""}, "commit"=>"get your playlist"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "visions" ("industry", "style", "created_at", "updated_at", "user_id", "prep", "firstjob", "username", "email", "image", "gender", "timezone", "age") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["industry", ""], ["style", ""], ["created_at", 2017-04-05 15:55:49 UTC], ["updated_at", 2017-04-05 15:55:49 UTC], ["user_id", 3], ["prep", ""], ["firstjob", ""], ["username", ""], ["email", ""], ["image", ""], ["gender", ""], ["timezone", ""], ["age", ""]]
+  [1m[35m (104.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://bloc-prodcution-aminabloc.c9users.io/visions/6/edit
+  Rendering welcome_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.html.erb within layouts/mailer (2.3ms)
+WelcomeMailer#welcome_email: processed outbound mail in 10.1ms
+Completed 500 Internal Server Error in 139ms (ActiveRecord: 105.8ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of nil into String):
+    28:   
+    29:       <div class="share" style="background-color: #44d9e6; padding: 2%; text-align: center; font-size: 2em;
+    30:       color: white; font-family: Raleway; margin: 5% 0;" > 
+    31:         <h6> My Share Code </h6> <h6> <%= link_to "jointhebloc.com/"+ @user.profileurl, "jointhebloc.com/"+ @user.profileurl , style: "color:white"  %></h6>
+    32:         <h6> Promoted Opps </h6>
+    33:         <h6> <%= link_to "Check out internships & entry level jobs at United Way, Spotify & VICE", "jointhebloc.com/jobs" , style: "color:white" %>  </h6>
+    34:       </div>
+  
+app/views/welcome_mailer/welcome_email.html.erb:31:in `+'
+app/views/welcome_mailer/welcome_email.html.erb:31:in `_app_views_welcome_mailer_welcome_email_html_erb___4391176603921504202_70264024144180'
+app/mailers/welcome_mailer.rb:6:in `welcome_email'
+app/controllers/visions_controller.rb:155:in `block in create'
+app/controllers/visions_controller.rb:150:in `create'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (39.0ms)
+Started GET "/visions/new" for 108.219.110.211 at 2017-04-05 18:30:59 +0000
+Processing by VisionsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering visions/new.html.erb within layouts/application
+  Rendered visions/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 574ms (Views: 464.3ms | ActiveRecord: 14.1ms)
+
+
+Started POST "/visions" for 108.219.110.211 at 2017-04-05 18:31:17 +0000
+Processing by VisionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IjLKxFeYcMMPhGH4YqZdSCgsZaUtsvGuIV0ErobQ5YG2I5Qqybjv83uBEYgHpIjZy03jgCAtnmAWYwy9bDVyqg==", "vision"=>{"username"=>"", "image"=>"", "email"=>"", "gender"=>"", "age"=>"", "timezone"=>"", "industry"=>"", "firstjob"=>"", "style"=>"", "prep"=>""}, "commit"=>"get your playlist"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `profile_url=' for #<User:0x007fcf4c4046d8>
+Did you mean?  profileurl=
+               profileurl
+               profileurl?):
+  
+app/controllers/visions_controller.rb:151:in `create'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (42.0ms)
+Started GET "/visions/new" for 108.219.110.211 at 2017-04-05 18:31:56 +0000
+Processing by VisionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering visions/new.html.erb within layouts/application
+  Rendered visions/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 248ms (Views: 178.9ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/visions" for 108.219.110.211 at 2017-04-05 18:32:07 +0000
+Processing by VisionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NLfEJY/SfSCBu/sSaMdXmELOzykpvRkIuNKuzgzWyoSgpprLEfLiEPW+i2INxYIJoa9JDCQidsaP7Kbd5jNdrw==", "vision"=>{"username"=>"", "image"=>"", "email"=>"", "gender"=>"", "age"=>"", "timezone"=>"", "industry"=>"", "firstjob"=>"", "style"=>"", "prep"=>""}, "commit"=>"get your playlist"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.6ms)
+
+
+  
+NoMethodError (undefined method `profile_url=' for #<User:0x007fcf4423d320>
+Did you mean?  profileurl=
+               profileurl
+               profileurl?):
+  
+app/controllers/visions_controller.rb:151:in `create'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.6ms)
+Started GET "/visions/new" for 108.219.110.211 at 2017-04-05 18:34:52 +0000
+  
+SyntaxError (/home/ubuntu/workspace/app/controllers/visions_controller.rb:150: syntax error, unexpected ')', expecting keyword_end):
+  
+app/controllers/visions_controller.rb:150: syntax error, unexpected ')', expecting keyword_end
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (41.4ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (80.5ms)
+Started GET "/visions/new" for 108.219.110.211 at 2017-04-05 18:35:40 +0000
+Processing by VisionsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering visions/new.html.erb within layouts/application
+  Rendered visions/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 475ms (Views: 377.1ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/visions" for 108.219.110.211 at 2017-04-05 18:35:51 +0000
+Processing by VisionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QNZo1iSfkSzMGmR/s1XeBYnGMoEEQh7UVwtMkseIxW3UxzY4ur8OHLgfFA/WVwuUaqe0pAndcRpgNUSBLW1SRg==", "vision"=>{"username"=>"", "image"=>"", "email"=>"", "gender"=>"", "age"=>"", "timezone"=>"", "industry"=>"", "firstjob"=>"", "style"=>"", "prep"=>""}, "commit"=>"get your playlist"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.6ms)
+
+
+  
+NoMethodError (undefined method `profile_url=' for #<User:0x007fcf58473428>
+Did you mean?  profileurl=
+               profileurl
+               profileurl?):
+  
+app/controllers/visions_controller.rb:150:in `create'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.6ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (42.8ms)
+Started POST "/visions" for 108.219.110.211 at 2017-04-05 18:38:01 +0000
+Processing by VisionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QNZo1iSfkSzMGmR/s1XeBYnGMoEEQh7UVwtMkseIxW3UxzY4ur8OHLgfFA/WVwuUaqe0pAndcRpgNUSBLW1SRg==", "vision"=>{"username"=>"", "image"=>"", "email"=>"", "gender"=>"", "age"=>"", "timezone"=>"", "industry"=>"", "firstjob"=>"", "style"=>"", "prep"=>""}, "commit"=>"get your playlist"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "profileurl" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["profileurl", "TestingUser30"], ["updated_at", 2017-04-05 18:38:02 UTC], ["id", 3]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "visions" ("industry", "style", "created_at", "updated_at", "user_id", "prep", "firstjob", "username", "email", "image", "gender", "timezone", "age") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["industry", ""], ["style", ""], ["created_at", 2017-04-05 18:38:02 UTC], ["updated_at", 2017-04-05 18:38:02 UTC], ["user_id", 3], ["prep", ""], ["firstjob", ""], ["username", ""], ["email", ""], ["image", ""], ["gender", ""], ["timezone", ""], ["age", ""]]
+  [1m[35m (10.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://bloc-prodcution-aminabloc.c9users.io/visions/7/edit
+  Rendering welcome_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.html.erb within layouts/mailer (1.2ms)
+  Rendering welcome_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.text.erb within layouts/mailer (0.6ms)
+WelcomeMailer#welcome_email: processed outbound mail in 19.6ms
+Sent mail to testing@ourbloc.co (6.5ms)
+Date: Wed, 05 Apr 2017 18:38:02 +0000
+From: amina@ourbloc.co
+To: testing@ourbloc.co
+Message-ID: <58e5398a12f5c_106329d99442012b@aminabloc-bloc-prodcution-4407529.mail>
+Subject: Hey Testing, Welcome to Bloc!
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_58e5398a11fb3_106329d9944200f0";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_58e5398a11fb3_106329d9944200f0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi Testing
+
+
+----==_mimepart_58e5398a11fb3_106329d9944200f0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+     <link href='https://fonts.googleapis.com/css?family=Raleway:800' rel='stylesheet' type='text/css'>
+     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/aileron" type="text/css"/>
+     
+  </head>
+  <body style="width:100%;  font-family: Lato; ">
+    <div style="padding: 5%"> 
+      <img style="width: 100%" src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/1_9_orig.png"> 
+      <h5  style="font-family: Raleway;font-size: 2em;">Hi Testing,</h5>
+      <p>
+        Thanks for signing up to test our our career playlist. We are working to connect a <span style="color:#44d9e6">national community of black millennials with each other & premium career resources</span>, and we are excited to have you in the community. 
+      </p>
+      
+      <p> 
+      Each week we'll send you a <span style="color:#44d9e6">new playlist, with new opportunities, grad school application advice and tips</span> we think can help you get & hold on to your dream career. The more feedback you send us, the better your results, so please make sure to fill out the feedback at the bottom of your playlists. 
+      </p>
+      
+      <p> 
+      As an extra incentive, we'll enter you to <span style="color:#44d9e6"> free Spotify Premium for 6 months </span> when you send us your thoughts. We'll also be offering an annual subscription to the 3 people who refer the most friends to test our playlist, you can find your personal share code below.
+      </p>
+      
+  
+      <div class="share" style="background-color: #44d9e6; padding: 2%; text-align: center; font-size: 2em;
+      color: white; font-family: Raleway; margin: 5% 0;" > 
+        <h6> My Share Code </h6> <h6> <a style="color:white" href="jointhebloc.com/TestingUser30">jointhebloc.com/TestingUser30</a></h6>
+        <h6> Promoted Opps </h6>
+        <h6> <a style="color:white" href="jointhebloc.com/jobs">Check out internships &amp; entry level jobs at United Way, Spotify &amp; VICE</a>  </h6>
+      </div>
+      
+      <p> unsubscribe from email updates anytime by replying "Unsubscribe" to this email </p>
+    </div>
+  </body>
+</html>
+
+  </body>
+</html>
+
+----==_mimepart_58e5398a11fb3_106329d9944200f0--
+
+Completed 302 Found in 144ms (ActiveRecord: 15.1ms)
+
+
+Started GET "/visions/7/edit" for 108.219.110.211 at 2017-04-05 18:38:02 +0000
+Processing by VisionsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mVision Load (0.4ms)[0m  [1m[34mSELECT  "visions".* FROM "visions" WHERE "visions"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering visions/edit.html.erb within layouts/application
+  Rendered visions/edit.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 227ms (Views: 219.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/visions/7" for 108.219.110.211 at 2017-04-05 18:39:31 +0000
+Processing by VisionsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mVision Load (0.2ms)[0m  [1m[34mSELECT  "visions".* FROM "visions" WHERE "visions"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "feedbacks" ("user_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["user_id", 3], ["created_at", 2017-04-05 18:39:32 UTC], ["updated_at", 2017-04-05 18:39:32 UTC]]
+  [1m[35m (88.4ms)[0m  [1m[36mcommit transaction[0m
+  Rendering visions/show.html.erb within layouts/application
+  Rendered visions/show.html.erb within layouts/application (4.4ms)
+Completed 500 Internal Server Error in 212ms (ActiveRecord: 93.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `capitalize' for nil:NilClass):
+    11:        <img id="profile_pic" class="circle" src="<%= @user.picture %>" >
+    12:        <span class="username black-text name"> <%= @user.name %> </span>
+    13:       <span class="black-text email"><%= @user.email %></span>
+    14:       <span class="black-text email"><%= @user.school.capitalize %></span>
+    15:       <span class="black-text email"><%= @user.gradyear %> | <%= @user.major.capitalize %> </span></a>
+    16: 
+    17:     </div></li>
+  
+app/views/visions/show.html.erb:14:in `_app_views_visions_show_html_erb__2439717029872072864_70264090487100'
+app/controllers/visions_controller.rb:114:in `block (2 levels) in show'
+app/controllers/visions_controller.rb:112:in `show'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.7ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (32.0ms)
+Started GET "/visions/7" for 108.219.110.211 at 2017-04-05 18:41:44 +0000
+Processing by VisionsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mVision Load (0.2ms)[0m  [1m[34mSELECT  "visions".* FROM "visions" WHERE "visions"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "feedbacks" ("user_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["user_id", 3], ["created_at", 2017-04-05 18:41:44 UTC], ["updated_at", 2017-04-05 18:41:44 UTC]]
+  [1m[35m (13.2ms)[0m  [1m[36mcommit transaction[0m
+  Rendering visions/show.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."industry" = ? ORDER BY created_at DESC LIMIT ?[0m  [["industry", ""], ["LIMIT", 0]]
+  Rendered visions/partials/_jobs.html.erb (4.0ms)
+  [1m[36mTip Load (0.4ms)[0m  [1m[34mSELECT  "tips".* FROM "tips" WHERE "tips"."prep" = ? ORDER BY created_at DESC LIMIT ?[0m  [["prep", ""], ["LIMIT", 5]]
+  Rendered visions/partials/_tips.html.erb (5.5ms)
+  Rendered visions/show.html.erb within layouts/application (14.9ms)
+Completed 500 Internal Server Error in 86ms (ActiveRecord: 16.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `industry' for nil:NilClass):
+    11:           <h6> </h6>
+    12:          <% else %> 
+    13:            
+    14:             <% if @tips[0].industry == @vision.industry || @tips[0].industry == "All" || @tips[0].industry == nil %>
+    15:               <h6> <%= link_to @tips[0].title , @tips[0].link%> </h6>
+    16:              <% end %> 
+    17:           
+  
+app/views/visions/partials/_tips.html.erb:14:in `_app_views_visions_partials__tips_html_erb__1175307165465150279_70264174920560'
+app/views/visions/show.html.erb:29:in `_app_views_visions_show_html_erb__2439717029872072864_70264175097880'
+app/controllers/visions_controller.rb:114:in `block (2 levels) in show'
+app/controllers/visions_controller.rb:112:in `show'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.4ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (44.2ms)
+Started GET "/visions/7/edit" for 108.219.110.211 at 2017-04-05 18:42:14 +0000
+Processing by VisionsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mVision Load (0.3ms)[0m  [1m[34mSELECT  "visions".* FROM "visions" WHERE "visions"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering visions/edit.html.erb within layouts/application
+  Rendered visions/edit.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 247ms (Views: 243.4ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/visions/7" for 108.219.110.211 at 2017-04-05 18:43:15 +0000
+Processing by VisionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"luWQifqI/Qx/3gM2ReD4U+fKL3+RmvZEfQDHiv7N7PAC9M5nZKhiPAvbc0Yg4i3CBKupWpwFmYpKPs+ZFCh72w==", "vision"=>{"industry"=>"Advocates", "firstjob"=>"intern", "style"=>"Olivia", "gradschool"=>"PhD Program", "school"=>"School", "major"=>"Major", "gradyear"=>"2018", "career_services"=>"unhelpful", "linkedin"=>"unhelpful", "prep"=>"salary_negotiation"}, "id"=>"7"}
+  [1m[36mVision Load (0.2ms)[0m  [1m[34mSELECT  "visions".* FROM "visions" WHERE "visions"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (1.3ms)[0m  [1m[33mUPDATE "visions" SET "industry" = ?, "firstjob" = ?, "style" = ?, "prep" = ?, "career_services" = ?, "linkedin" = ?, "gradschool" = ?, "school" = ?, "gradyear" = ?, "major" = ?, "updated_at" = ? WHERE "visions"."id" = ?[0m  [["industry", "Advocates"], ["firstjob", "intern"], ["style", "Olivia"], ["prep", "salary_negotiation"], ["career_services", "unhelpful"], ["linkedin", "unhelpful"], ["gradschool", "PhD Program"], ["school", "School"], ["gradyear", 2018], ["major", "Major"], ["updated_at", 2017-04-05 18:43:15 UTC], ["id", 7]]
+  [1m[35m (10.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (8.5ms)[0m  [1m[33mUPDATE "users" SET "major" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["major", "Major"], ["updated_at", 2017-04-05 18:43:15 UTC], ["id", 3]]
+  [1m[35m (10.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "school" = ? WHERE "users"."id" = ?[0m  [["updated_at", 2017-04-05 18:43:15 UTC], ["school", "School"], ["id", 3]]
+  [1m[35m (10.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "gradyear" = ? WHERE "users"."id" = ?[0m  [["updated_at", 2017-04-05 18:43:15 UTC], ["gradyear", 2018], ["id", 3]]
+  [1m[35m (11.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://bloc-prodcution-aminabloc.c9users.io/visions/7
+Completed 302 Found in 80ms (ActiveRecord: 55.4ms)
+
+
+Started GET "/visions/7" for 108.219.110.211 at 2017-04-05 18:43:15 +0000
+Processing by VisionsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mVision Load (0.2ms)[0m  [1m[34mSELECT  "visions".* FROM "visions" WHERE "visions"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "feedbacks" ("user_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["user_id", 3], ["created_at", 2017-04-05 18:43:15 UTC], ["updated_at", 2017-04-05 18:43:15 UTC]]
+  [1m[35m (9.4ms)[0m  [1m[36mcommit transaction[0m
+  Rendering visions/show.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."industry" = ? ORDER BY created_at DESC LIMIT ?[0m  [["industry", "Advocates"], ["LIMIT", 0]]
+  Rendered visions/partials/_jobs.html.erb (2.4ms)
+  [1m[36mTip Load (0.2ms)[0m  [1m[34mSELECT  "tips".* FROM "tips" WHERE "tips"."prep" = ? ORDER BY created_at DESC LIMIT ?[0m  [["prep", "salary_negotiation"], ["LIMIT", 5]]
+  Rendered visions/partials/_tips.html.erb (3.4ms)
+  Rendered visions/show.html.erb within layouts/application (8.3ms)
+Completed 500 Internal Server Error in 144ms (ActiveRecord: 11.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `industry' for nil:NilClass):
+    11:           <h6> </h6>
+    12:          <% else %> 
+    13:            
+    14:             <% if @tips[0].industry == @vision.industry || @tips[0].industry == "All" || @tips[0].industry == nil %>
+    15:               <h6> <%= link_to @tips[0].title , @tips[0].link%> </h6>
+    16:              <% end %> 
+    17:           
+  
+app/views/visions/partials/_tips.html.erb:14:in `_app_views_visions_partials__tips_html_erb__1175307165465150279_70264190671600'
+app/views/visions/show.html.erb:29:in `_app_views_visions_show_html_erb__2439717029872072864_70264190786140'
+app/controllers/visions_controller.rb:114:in `block (2 levels) in show'
+app/controllers/visions_controller.rb:112:in `show'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (32.3ms)
+Started GET "/visions/7/edit" for 108.219.110.211 at 2017-04-05 18:43:58 +0000
+Processing by VisionsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mVision Load (0.4ms)[0m  [1m[34mSELECT  "visions".* FROM "visions" WHERE "visions"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering visions/edit.html.erb within layouts/application
+  Rendered visions/edit.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 182ms (Views: 176.5ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/visions/7" for 108.219.110.211 at 2017-04-05 18:44:32 +0000
+Processing by VisionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OlMMAkiT8/HSFsedtr2nFCkAOh+aY3ibmba5lq2UW9muQlLs1rNswaYTt+3Tv3KFymG8Opf8F1WuiLGFR3HM8g==", "vision"=>{"industry"=>"Advocates", "firstjob"=>"intern", "style"=>"Olivia", "gradschool"=>"PhD Program", "school"=>"School", "major"=>"Major", "gradyear"=>"2018", "career_services"=>"unhelpful", "linkedin"=>"unhelpful", "prep"=>"need_resume"}, "id"=>"7"}
+  [1m[36mVision Load (0.1ms)[0m  [1m[34mSELECT  "visions".* FROM "visions" WHERE "visions"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "visions" SET "prep" = ?, "updated_at" = ? WHERE "visions"."id" = ?[0m  [["prep", "need_resume"], ["updated_at", 2017-04-05 18:44:32 UTC], ["id", 7]]
+  [1m[35m (13.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://bloc-prodcution-aminabloc.c9users.io/visions/7
+Completed 302 Found in 23ms (ActiveRecord: 15.0ms)
+
+
+Started GET "/visions/7" for 108.219.110.211 at 2017-04-05 18:44:32 +0000
+Processing by VisionsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mVision Load (0.1ms)[0m  [1m[34mSELECT  "visions".* FROM "visions" WHERE "visions"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "feedbacks" ("user_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["user_id", 3], ["created_at", 2017-04-05 18:44:32 UTC], ["updated_at", 2017-04-05 18:44:32 UTC]]
+  [1m[35m (9.7ms)[0m  [1m[36mcommit transaction[0m
+  Rendering visions/show.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."industry" = ? ORDER BY created_at DESC LIMIT ?[0m  [["industry", "Advocates"], ["LIMIT", 0]]
+  Rendered visions/partials/_jobs.html.erb (2.6ms)
+  [1m[36mTip Load (0.3ms)[0m  [1m[34mSELECT  "tips".* FROM "tips" WHERE "tips"."prep" = ? ORDER BY created_at DESC LIMIT ?[0m  [["prep", "need_resume"], ["LIMIT", 5]]
+  Rendered visions/partials/_tips.html.erb (4.2ms)
+  Rendered visions/show.html.erb within layouts/application (27.6ms)
+Completed 500 Internal Server Error in 153ms (ActiveRecord: 11.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `industry' for nil:NilClass):
+    11:           <h6> </h6>
+    12:          <% else %> 
+    13:            
+    14:             <% if @tips[0].industry == @vision.industry || @tips[0].industry == "All" || @tips[0].industry == nil %>
+    15:               <h6> <%= link_to @tips[0].title , @tips[0].link%> </h6>
+    16:              <% end %> 
+    17:           
+  
+app/views/visions/partials/_tips.html.erb:14:in `_app_views_visions_partials__tips_html_erb__1175307165465150279_70264161686040'
+app/views/visions/show.html.erb:29:in `_app_views_visions_show_html_erb__2439717029872072864_9701540'
+app/controllers/visions_controller.rb:114:in `block (2 levels) in show'
+app/controllers/visions_controller.rb:112:in `show'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.6ms)
+Started PATCH "/visions/7" for 108.219.110.211 at 2017-04-05 18:44:55 +0000
+Processing by VisionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OlMMAkiT8/HSFsedtr2nFCkAOh+aY3ibmba5lq2UW9muQlLs1rNswaYTt+3Tv3KFymG8Opf8F1WuiLGFR3HM8g==", "vision"=>{"industry"=>"Advocates", "firstjob"=>"intern", "style"=>"Olivia", "gradschool"=>"PhD Program", "school"=>"School", "major"=>"Major", "gradyear"=>"2018", "career_services"=>"unhelpful", "linkedin"=>"unhelpful", "prep"=>"revise_resume"}, "id"=>"7"}
+  [1m[36mVision Load (0.2ms)[0m  [1m[34mSELECT  "visions".* FROM "visions" WHERE "visions"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "visions" SET "prep" = ?, "updated_at" = ? WHERE "visions"."id" = ?[0m  [["prep", "revise_resume"], ["updated_at", 2017-04-05 18:44:55 UTC], ["id", 7]]
+  [1m[35m (10.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://bloc-prodcution-aminabloc.c9users.io/visions/7
+Completed 302 Found in 24ms (ActiveRecord: 12.3ms)
+
+
+Started GET "/visions/7" for 108.219.110.211 at 2017-04-05 18:44:55 +0000
+Processing by VisionsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mVision Load (0.2ms)[0m  [1m[34mSELECT  "visions".* FROM "visions" WHERE "visions"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.1ms)[0m  [1m[32mINSERT INTO "feedbacks" ("user_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["user_id", 3], ["created_at", 2017-04-05 18:44:56 UTC], ["updated_at", 2017-04-05 18:44:56 UTC]]
+  [1m[35m (17.7ms)[0m  [1m[36mcommit transaction[0m
+  Rendering visions/show.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" WHERE "jobs"."industry" = ? ORDER BY created_at DESC LIMIT ?[0m  [["industry", "Advocates"], ["LIMIT", 0]]
+  Rendered visions/partials/_jobs.html.erb (3.1ms)
+  [1m[36mTip Load (0.4ms)[0m  [1m[34mSELECT  "tips".* FROM "tips" WHERE "tips"."prep" = ? ORDER BY created_at DESC LIMIT ?[0m  [["prep", "revise_resume"], ["LIMIT", 5]]
+  Rendered visions/partials/_tips.html.erb (9.1ms)
+  Rendered visions/partials/_jobs2.html.erb (1.9ms)
+  Rendered visions/partials/_tips2.html.erb (1.1ms)
+  Rendered visions/partials/_feedback.html.erb (7.4ms)
+  Rendered visions/show.html.erb within layouts/application (34.2ms)
+Completed 200 OK in 581ms (Views: 251.3ms | ActiveRecord: 21.8ms)
+
+

@@ -3,14 +3,30 @@ class Users::RegistrationsController < Devise::RegistrationsController
 # before_action :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
-  # def new
-  #   super
-  # end
+   def new
+     super
+   end
 
   # POST /resource
-  # def create
-  #   super
-  # end
+   def create
+     super
+     
+     if request.referer == nil
+            code = "none"
+            current_user.update_attributes(:referral_code => code)
+        else
+            code= request.referer.split('/')[-1]
+            current_user.update_attributes(:referral_code => code)
+        end
+        
+        
+    end
+    
+  
+   
+   def email 
+     self.resource = resource_class.new(sign_in_params)
+   end
 
   # GET /resource/edit
   # def edit
@@ -57,4 +73,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
   # end
+  protected 
+    
+    
 end
