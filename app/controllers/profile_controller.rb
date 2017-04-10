@@ -3,7 +3,9 @@ class ProfileController < ApplicationController
      
     def index
         @user = current_user
-        @vision = Vision.find_by_user_id(@user.id)
+        if @vision != nil
+          @vision = Vision.find_by_user_id(@user.id)
+        end
         
      
         @users_all = User.all
