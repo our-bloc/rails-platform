@@ -5488,3 +5488,203 @@ app/views/profile/index.html.erb:4:in `_app_views_profile_index_html_erb___15965
   Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
   Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (48.5ms)
+Started GET "/visions/1/edit" for 50.20.12.49 at 2017-04-10 23:09:32 +0000
+Processing by VisionsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVision Load (0.2ms)[0m  [1m[34mSELECT  "visions".* FROM "visions" WHERE "visions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to https://bloc-prodcution-aminabloc.c9users.io/users/sign_up
+Filter chain halted as :welcome_path rendered or redirected
+Completed 302 Found in 35ms (ActiveRecord: 7.7ms)
+
+
+Started GET "/users/sign_up" for 50.20.12.49 at 2017-04-10 23:09:32 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (0.9ms)
+  Rendered users/registrations/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 201ms (Views: 171.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/sign_up" for 50.20.12.49 at 2017-04-10 23:09:43 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.2ms)
+  Rendered users/registrations/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 177ms (Views: 175.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/visions/1" for 24.30.51.130 at 2017-04-11 01:17:48 +0000
+Processing by VisionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVision Load (10.8ms)[0m  [1m[34mSELECT  "visions".* FROM "visions" WHERE "visions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to https://bloc-prodcution-aminabloc.c9users.io/users/sign_up
+Filter chain halted as :welcome_path rendered or redirected
+Completed 302 Found in 13ms (ActiveRecord: 10.8ms)
+
+
+Started GET "/users/sign_up" for 24.30.51.130 at 2017-04-11 01:17:48 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.0ms)
+  Rendered users/registrations/new.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 199ms (Views: 197.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 24.30.51.130 at 2017-04-11 01:18:03 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.3ms)
+  Rendered users/registrations/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 153ms (Views: 151.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 24.30.51.130 at 2017-04-11 01:19:41 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.7ms)
+  Rendered users/registrations/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 247ms (Views: 186.9ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/visions/1" for 24.30.51.130 at 2017-04-11 01:19:51 +0000
+Processing by VisionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVision Load (0.3ms)[0m  [1m[34mSELECT  "visions".* FROM "visions" WHERE "visions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to https://bloc-prodcution-aminabloc.c9users.io/home
+Filter chain halted as :welcome_path rendered or redirected
+Completed 302 Found in 34ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/home" for 24.30.51.130 at 2017-04-11 01:19:51 +0000
+Processing by WelcomeController#landing as HTML
+  Rendering welcome/landing.html.erb within layouts/application
+  Rendered welcome/landing.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 228ms (Views: 225.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/visions/1/edit" for 24.30.51.130 at 2017-04-11 01:19:52 +0000
+Processing by VisionsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVision Load (0.2ms)[0m  [1m[34mSELECT  "visions".* FROM "visions" WHERE "visions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to https://bloc-prodcution-aminabloc.c9users.io/home
+Filter chain halted as :welcome_path rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 24.30.51.130 at 2017-04-11 01:19:52 +0000
+Processing by WelcomeController#landing as HTML
+  Rendering welcome/landing.html.erb within layouts/application
+  Rendered welcome/landing.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 215ms (Views: 213.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for 24.30.51.130 at 2017-04-11 01:20:00 +0000
+Started GET "/users/auth/facebook/callback?code=AQBRvLJHoblnsUDpgndI7lEn6iKJ-heKKLpMHovNVerpuFHM5HZYZTDyBcB6jo6yI3DH4Hh8oHWKokWSWDXO6qVikGpJBRBLKkFC6x--9CbJ2O8ZQPqFuFG0RQXO-8TBn_CuVq0u5oZigWNSTnNNTW0cQjkLQaE7jQAdlui31sTtZAgv-SkNKu8j_d19hTSREF4WgLieuc5AziYWzAdoiSEjaasALQBTrWESzTxk9R6YISq_14e3zvIU8SzM1skcB-McM_73Wd1KkESu3bJt8sN18yVcmEGNuMOVlCV2u3Qmir_-9-dFHMm8NVCF-9uIIsk&state=89e7a03520b694c59b3298864b9312736b350d42d3f7b63c" for 24.30.51.130 at 2017-04-11 01:20:01 +0000
+Processing by CallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQBRvLJHoblnsUDpgndI7lEn6iKJ-heKKLpMHovNVerpuFHM5HZYZTDyBcB6jo6yI3DH4Hh8oHWKokWSWDXO6qVikGpJBRBLKkFC6x--9CbJ2O8ZQPqFuFG0RQXO-8TBn_CuVq0u5oZigWNSTnNNTW0cQjkLQaE7jQAdlui31sTtZAgv-SkNKu8j_d19hTSREF4WgLieuc5AziYWzAdoiSEjaasALQBTrWESzTxk9R6YISq_14e3zvIU8SzM1skcB-McM_73Wd1KkESu3bJt8sN18yVcmEGNuMOVlCV2u3Qmir_-9-dFHMm8NVCF-9uIIsk", "state"=>"89e7a03520b694c59b3298864b9312736b350d42d3f7b63c"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "facebook"], ["uid", "10208871941659108"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-04-11 01:20:01 UTC], ["last_sign_in_at", 2017-04-05 15:17:47 UTC], ["current_sign_in_ip", "24.30.51.130"], ["last_sign_in_ip", "108.219.110.211"], ["sign_in_count", 12], ["updated_at", 2017-04-11 01:20:01 UTC], ["id", 1]]
+  [1m[35m (11.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to https://bloc-prodcution-aminabloc.c9users.io/
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "referral_code" = ? WHERE "users"."id" = ?[0m  [["updated_at", 2017-04-11 01:20:01 UTC], ["referral_code", "home"], ["id", 1]]
+  [1m[35m (16.2ms)[0m  [1m[36mcommit transaction[0m
+  Rendering new_user_mailer/new_user.html.erb within layouts/mailer
+  Rendered new_user_mailer/new_user.html.erb within layouts/mailer (0.8ms)
+NewUserMailer#new_user: processed outbound mail in 227.4ms
+Sent mail to info@ourbloc.co (15.1ms)
+Date: Tue, 11 Apr 2017 01:20:02 +0000
+From: amina@ourbloc.co
+To: info@ourbloc.co
+Message-ID: <58ec2f42ae680_44d72b6a1142521e@aminabloc-bloc-prodcution-4407529.mail>
+Subject: New User:Amina Yamusah,1
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>New user: Amina Yamusah</h1>
+    <h2> email: ayamusah213@gmail.com </h2>
+    <h2> count: 1 </h2>
+    <h2> referred by: home </h2>
+
+  </body>
+</html>
+
+<style> 
+
+html{
+color:teal;
+font-family: Arial;
+}
+</style>
+  </body>
+</html>
+
+Completed 302 Found in 907ms (ActiveRecord: 30.6ms)
+
+
+Started GET "/" for 24.30.51.130 at 2017-04-11 01:20:02 +0000
+Processing by WelcomeController#home as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to https://bloc-prodcution-aminabloc.c9users.io/myprofile
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/myprofile" for 24.30.51.130 at 2017-04-11 01:20:02 +0000
+Processing by ProfileController#myprofile as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVision Load (0.4ms)[0m  [1m[34mSELECT  "visions".* FROM "visions" WHERE "visions"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  Rendering profile/myprofile.html.erb within layouts/application
+  Rendered profile/myprofile.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 177ms (Views: 150.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/visions/1/edit" for 24.30.51.130 at 2017-04-11 01:20:07 +0000
+Processing by VisionsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVision Load (0.2ms)[0m  [1m[34mSELECT  "visions".* FROM "visions" WHERE "visions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering visions/edit.html.erb within layouts/application
+  Rendered visions/edit.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 223ms (Views: 218.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/visions/1/edit" for 24.30.51.130 at 2017-04-11 01:21:56 +0000
+Processing by VisionsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVision Load (0.5ms)[0m  [1m[34mSELECT  "visions".* FROM "visions" WHERE "visions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering visions/edit.html.erb within layouts/application
+  Rendered visions/edit.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 204ms (Views: 198.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/visions/1/edit" for 24.30.51.130 at 2017-04-11 01:24:35 +0000
+Processing by VisionsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVision Load (0.2ms)[0m  [1m[34mSELECT  "visions".* FROM "visions" WHERE "visions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering visions/edit.html.erb within layouts/application
+  Rendered visions/edit.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 186ms (Views: 180.6ms | ActiveRecord: 0.8ms)
+
+

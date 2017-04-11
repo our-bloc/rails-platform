@@ -203,7 +203,7 @@ class VisionsController < ApplicationController
     def welcome_path
     
       if user_signed_in? != true
-        redirect_to new_user_registration_path
+        redirect_to landing_path
       end
     end
   
