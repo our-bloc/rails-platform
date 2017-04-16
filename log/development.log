@@ -5688,3 +5688,32 @@ Processing by VisionsController#edit as HTML
 Completed 200 OK in 186ms (Views: 180.6ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/" for 108.219.110.211 at 2017-04-13 21:39:15 +0000
+Processing by WelcomeController#home as HTML
+Redirected to https://bloc-prodcution-aminabloc.c9users.io/home
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 108.219.110.211 at 2017-04-13 21:39:15 +0000
+Processing by WelcomeController#landing as HTML
+  Rendering welcome/landing.html.erb within layouts/application
+  Rendered welcome/landing.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 449ms (Views: 445.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/visions/1" for 108.219.110.211 at 2017-04-13 22:09:41 +0000
+Processing by VisionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mVision Load (19.6ms)[0m  [1m[34mSELECT  "visions".* FROM "visions" WHERE "visions"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to https://bloc-prodcution-aminabloc.c9users.io/home
+Filter chain halted as :welcome_path rendered or redirected
+Completed 302 Found in 25ms (ActiveRecord: 19.6ms)
+
+
+Started GET "/home" for 108.219.110.211 at 2017-04-13 22:09:41 +0000
+Processing by WelcomeController#landing as HTML
+  Rendering welcome/landing.html.erb within layouts/application
+  Rendered welcome/landing.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 348ms (Views: 344.8ms | ActiveRecord: 0.0ms)
+
+
