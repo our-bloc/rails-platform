@@ -50,9 +50,9 @@ class ProfileController < ApplicationController
         end 
         
         
-        if @tips != nil
+       
             @tips= Tip.order("created_at DESC").where(:prep => @user.prep).limit(5)
-        end 
+      
         
         #BLOC color scheme
             @color_count= 0
