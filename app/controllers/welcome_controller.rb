@@ -8,7 +8,7 @@ class WelcomeController < ApplicationController
       @vision = Vision.all.where(:user_id == @user.id)
     end
   
-    if user_signed_in? 
+    if user_signed_in? and user.industry != nil
       redirect_to playlist_path
     else 
       redirect_to new_user_registration_path
