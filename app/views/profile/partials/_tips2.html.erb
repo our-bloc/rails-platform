@@ -11,7 +11,7 @@
           <h6> </h6>
          <% else %> 
            
-            <% if @tips[1].industry == @vision.industry || @tips[1].industry == "All" || @tips[1].industry == nil %>
+            <% if @tips[1].industry == @user.industry || @tips[1].industry == "All" || @tips[1].industry == nil %>
               <h6> <%= link_to @tips[1].title , @tips[1].link%> </h6>
              <% end %> 
           
