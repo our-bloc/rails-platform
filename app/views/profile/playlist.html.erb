@@ -1,0 +1,416 @@
+ <body>
+
+
+
+  
+<p id="notice"><%= notice %></p>
+
+
+
+
+<!-- SIDE BAR --> 
+
+  
+<!-- CONNECTIONS, OPPS RESOURCES --> 
+  
+
+    
+<div class="opp_playlist row">
+  <%= render "profile/partials/jobs" %>
+</div>
+
+<div class="tip_playlist" >
+  <%= render "profile/partials/tips" %>
+</div>
+
+<div class="opp_playlist row">
+  <%= render "profile/partials/jobs2" %>
+</div>
+
+<div class="tip_playlist" >
+      <%= render "profile/partials/tips2" %>
+</div>
+
+
+
+<div class="bottom-nav">
+    <i class="open_referral_modal fa fa-heart fa-3x" style="color: #44d9e6; margin-left: 25%; margin-top: 5%"></i>
+    <%= link_to myprofile_path do %><i class="fa fa-user fa-3x" style="color: #44d9fe6; margin-left: 12%; margin-top: 5%"></i><% end %>
+    <i class="open_referral_modal fa fa-cog fa-3x" style="color: #44d9e6; margin-left: 12%; margin-top: 5%"></i>
+
+</div>
+
+  
+<div class="scroll_feedback"> <h2 style=""> GIVE FEEDBACK, WIN SPOTIFY PREMIUM! </h2></div>
+
+<div class="show_feedback">
+      <%= render "profile/partials/feedback" %>
+</div>
+
+<div class="open_referral_modal"> <h2 style=""> UPGRADE TO PRO </h2></div>
+<div class="referral_modal">
+   
+    <div class="modal_card card horizontal">
+      <div class=" card-image">
+        <img src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/blackwomen_orig.jpg">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <h4> Upgrade your account to PRO by bringing 2 friends into the community.</h4>
+          
+          <h5 class="teal-text"> PRO LEVEL PERKS </h5>
+          <p></p>
+          <h6> Save Your Favorite Jobs & Tips </h6>
+          <h6> Apply directly to Bloc partner employers </h6>
+          <h6> Message Bloc users who can plug you with their former employers</h6>
+      
+        </div>
+        <div class="card-content teal-text" id="share-link">
+          <h6><%= link_to "LINK TO YOUR SHARE PAGE jointhebloc.com/" + @user.profileurl , root_path + @user.profileurl , class: "teal-text" %> </h6>
+        </div>
+      </div>
+    </div>
+   
+</div>
+
+    
+
+</body>
+<style>
+  html, body{
+    width: 100%;
+    height: 100%;
+    font-family: Work Sans;
+    padding: 10%;
+  }
+  #welcome-title{
+    display:none;
+  }
+  .button-collapse{
+    margin:2em 1em;
+  }
+  .referral_modal {
+    position: absolute;
+    width: 110%;
+    height: 200%;
+    background-color: black;
+    opacity: .6;
+    left:0%;
+  }
+  
+  #share-link{
+    margin-top: -10%;
+  }
+  .render_view{
+    padding: 5%;
+  }
+  .divider{
+    display:none;
+  }
+  .modal_card {
+    position:absolute;
+    width: 86%;
+    height: 40%;
+    margin: 5% 2%;
+    font-family: Raleway;
+  }
+  
+  .playlist {
+    padding-left: 10%
+  }
+  a:hover{
+    background-color: inherit;
+  }
+  
+  h5{
+    color: black;
+  }
+  
+  .side-nav {
+    font-family: Work Sans;
+  }
+  .welcome_message{
+    font-family: Montserrat;
+    background-color: white;
+    margin: 0% 10% 10% 10%;
+    padding: 5%;
+    box-shadow: 2px 2px 1px #888888;
+  }
+
+  .welcome_message p{
+    font-family: Montserrat;
+
+  }
+  #show_view {
+    display:none;
+  }
+  
+  .highlight{
+    color:teal;
+    font-weight: 800;
+  }
+  .bottom-nav{
+    display: none;
+  }
+  
+  .open_referral_modal h2:hover {
+    background-color: grey;
+  }
+  
+  .open_referral_modal h2 {
+    left:30%; 
+    position: relative; 
+    width: 40%; 
+    font-family: Montserrat; 
+    font-size: 4em;
+    padding: 1%; 
+    border: 10px solid #44d9e6;
+    color: #44d9e6;
+  }
+  
+   .userView span{
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 1.5em;
+    line-height: 3.5em;
+  }
+  
+    .circle{
+    margin: 20% 45% 2% 45%;
+    width: 30%;
+  }
+  
+  li a {
+    text-align: center;
+  }
+  
+  .scroll_feedback{
+    width: 100%;
+    text-align: center;
+    border: 5px solid black;
+    margin-bottom: 20em;
+    font-family: Montserrat;
+  }
+  
+  .scroll_feedback:hover{
+    background-color: grey;
+  }
+  
+  .bottom-nav{
+    display:none;
+  }
+  
+  .show_feedback{
+    padding: 5%;
+  }
+  @media only screen and (max-device-width: 480px){
+    html,body{
+      padding: 0%;
+    }
+    .banner{
+      display: none;
+    }
+    .welcome {
+      margin-bottom: 15em;
+      margin-top:-10%;
+      height:80em;
+      width: 100%;
+      left:0%;
+      background-color: white;
+    }
+    
+    #welcome-title {
+      display: block;
+      color: #44d9e6;
+      font-family: Raleway;
+      font-size: 10em;
+      padding: 50% 20%;
+      position: absolute;
+      top: 0em;
+      left: -5%;
+      width: 100%;
+      height: 10em;
+      margin-bottom: 20%;
+    }
+    
+    html{
+        font-size: 2em;
+        width:100%;
+        padding: 0%;
+    }
+    .row{
+      width: 100%;
+    }
+    div {
+      font-size: 1.1em;
+    }
+    p,span{
+      font-size: 1.8em;
+      line-height: 1.1em;
+      font-family: Lato;
+    }
+    .highlight{
+      font-size: 1.1em;
+    }
+    .playlist{
+      padding: 10%;
+    }
+    .render_view{
+      padding: 0%;
+      margin: -5% ;
+;    }
+
+    .divider{
+        display: block;
+        width: 80%;
+        border: 1px solid grey;
+        margin: 5% 0% 10% 10%;
+      }
+    
+    .open_referral_modal h2{
+    border: 8px solid #44d9e6;;
+    position: relative;
+    width: 95%;
+    font-family: Raleway;
+    color: #44d9e6;
+    font-size: 4em;
+    text-align:center;
+    margin-left: -25%;
+    padding: 3%;
+    margin-bottom: 10em;
+  }
+  
+  .open_referral_modal{
+    margin: 10% 10% 30% 10%;
+  }
+  
+  .userView span{
+    text-align:center;
+    font-family: Montserrat;
+    margin: 5%;
+    font-size: 3em;
+    line-height: 3.5em;
+  }
+  .modal_card{
+    margin-top: 15%;
+    height: 55em;
+    width: 95%;
+  }
+
+  #profile_pic {
+    width:20%; 
+    height: 20%;
+    margin-left: 40%;
+  }
+  
+  .banner{
+    display: none;
+    margin: -50% 0% 0% 0%;
+    width: 50%;
+    
+  }
+  
+  .card-image{
+    display: none;
+  }
+   #menu_link a{
+    text-align: center;
+    font-family: Lato;
+    font-size: 3em;
+    line-height: 3em;
+    margin: 5%;
+    height: 3.5em;
+  }
+  
+  .circle{
+    margin: 20% 5%;
+  }
+  
+  #tips_header{
+    margin-top: 20%;
+  }
+  
+  .banner_text{
+    margin-left: -5%;
+    width:92%;
+  }
+  
+  .referral_modal{
+    width: 110%;
+  }
+  .button-collapse{
+    padding: 2%;
+  }
+  
+  .bottom-nav{
+    display: none;
+    position: fixed;
+    height: 10%;
+    background-color: white;
+    width: 100%;
+    bottom: 0%;
+    border-top: 5px solid #44d9e6;
+    z-index: 10;
+  }
+  
+  .bottom-nav a{
+    color: #44d9e6;
+  }
+  
+  .bottom-nav i:hover {
+    color: grey;
+  }
+}
+
+</style>
+
+<script>
+  $("#hide_welcome").click(function(){
+    $(".welcome_message").hide();
+  });
+  
+  $(".referral_modal").click(function(){
+    $(this).hide(1)
+  });
+  
+  $(document).ready(function(){
+    $(".referral_modal").hide();
+    $(".show_feedback").hide();
+    $(".open_referral_modal").hide();
+     $(".open_referral_modal").click(function(){
+           $(".referral_modal").show(100);
+            $('html,body').animate({
+            scrollTop: $(".referral_modal").offset().top},
+            'slow');
+     });
+     
+      $(".scroll_feedback").click(function(){
+           $(".show_feedback").show(100);
+            $('html,body').animate({
+            scrollTop: $(".show_feedback").offset().top},
+            'slow');
+     });
+     
+  });
+  
+   getPanelWidth = function() {
+    var screenWidth = $(window).width();
+    panelSize = screenWidth > 400 ? Math.floor(screenWidth * 0.7) : Math.floor(screenWidth * 0.9);
+    console.log(panelSize);
+    return panelSize ;
+};
+
+$('.button-collapse').sideNav({
+    menuWidth: getPanelWidth(), // Default is <240></240>
+    edge: 'left', // Choose the horizontal origin
+    closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+    draggable: true,
+});
+
+$('.side-nav').click(function(){
+  $('.button-collapse').sideNav('hide');
+})
+        
+</script>
+
+

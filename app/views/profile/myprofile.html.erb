@@ -2,10 +2,9 @@
 <div class="profile"> 
 <div class ="profile_info row">
     <div class="col s12 l6"> 
-        <h6><%= image_tag @user.picture, class:  "circle" %> </h6>
         <h5> <%= @user.name %> </h5>
         <h6> <%= @user.email %> </h6>
-        <h6> <%= @user.school.capitalize %> </h6>
+        <h6> <%if @user.school != nil %> <%= @user.school.capitalize %> <% end %> </h6>
         <h6> <% if @user.experience != nil %> <%= @user.experience.capitalize %><% end %>  </h6>
         <h6> <% if @user.major != nil %><%= @user.major.capitalize %><% end %>  | <% if @user.gradyear != nil %><%= @user.gradyear%><% end %>  </h6>
     </div> 
@@ -15,16 +14,13 @@
             <h5 style="margin-top: 10%"><%= link_to "See My Playlist", vision_path(@vision) %> </h5>
             <div style="height: 2em"> </div>
             
-            <h5 style="margin-top: 5%"><%= link_to "Retake the Quiz", edit_vision_path(@vision) %> </h5>
-            <div style="height: 2em"> </div>
+          <% else %> 
+          <% end %>
             
               <h5 style="margin-top: 5%"><%= link_to "Sign out", destroy_user_session_path, :method => :delete %> </h5>
             <div style="height: 2em"> </div>
             
-            <% else %> 
-            <h5><%= link_to "Get started by building your first playlist", new_vision_path %> </h5>
-            <div style="height: 2em"> </div>
-            <% end %>
+          
     
         <h6 class="teal-text" id="share_code">share code: <%= link_to "jointhebloc.com/"+ @user.profileurl, root_path + @user.profileurl  %> </h6>
      </div>
@@ -131,7 +127,7 @@
       }
       
     .profile_info{ 
-      margin: 10% 5%;
+      margin: 35% 5% 7% 5%;
       text-align: center;
     }
     

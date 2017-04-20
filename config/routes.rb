@@ -30,6 +30,8 @@ Rails.application.routes.draw do
   get '/home', to: 'welcome#landing', as: :landing
 
   get '/myprofile', to: 'profile#myprofile', as: :myprofile
+  get '/myplaylist', to: 'profile#playlist', as: :playlist
+
   get '/referrals', to: 'profile#referrals', as: :referrals
 
   get 'visions/indeed_show', to: 'visions#indeed_show', as: :indeed_show, format: false
@@ -49,7 +51,6 @@ Rails.application.routes.draw do
     end
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-
   # resources :users do
   # end
 end

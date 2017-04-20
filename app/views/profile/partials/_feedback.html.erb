@@ -1,0 +1,109 @@
+<%= form_for(@feedback) do |f| %>
+
+<div class="feedback_header">
+    <h5> Thank you for your testing the pilot version of our playlist! </h5>
+    <h6> In exchange for your quick feedback (only 4 questions!) we will enter you to win Spotify premium for 6 months. </h6>
+</div>
+<div> 
+<%= f.label "On a scale of 1-5, how would you rate the DESIGN of your playlist?" %> 
+<%= f.hidden_field :design, :id => "field_design" %>
+
+
+<% 5.times do %> 
+    <div class ="feedback row">
+        <% @design_rating += 1 %>
+        <div class ="design col s2 l1"   >
+            <img src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/plug_orig.png" id=" <%= @design_rating %>">
+        </div>
+        <% end %> 
+    </div>
+</div>
+
+<div> 
+<%= f.label "How would you rate the QUALITY OF JOBS in your playlist?" %> 
+<%= f.hidden_field :job_quality, :id => "field_job_quality" %>
+   
+    <% 5.times do %> 
+    <div class ="feedback row">
+        <% @job_quality_rating += 1 %>
+        <div class ="job_quality col s2 l1" >
+            <img src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/plug_orig.png" id=" <%= @job_quality_rating %>  ">
+        </div>
+        <% end %> 
+    </div>
+</div>
+
+<div> 
+<%= f.label "How would you rate the overall USEFULLNESS of your playlist?" %> 
+<%= f.hidden_field :ease, :id => "field_ease" %>
+
+    <% 5.times do %> 
+    <div class ="feedback row">
+        <% @ease_rating += 1 %>
+        <div class ="ease col s2 l1">
+            <img src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/plug_orig.png" id=" <%= @ease_rating %>  ">
+        </div>
+        <% end %> 
+    </div>
+</div>
+
+<div> 
+<%= f.label "How would you rate the EAST OF LOGGING IN to get your playlist?" %> 
+<%= f.hidden_field :login, :id => "field_login" %>
+
+    <% 5.times do %> 
+    <div class ="feedback row">
+        <% @login_rating += 1 %>
+        <div class ="login col s2 l1" >
+            <img src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/plug_orig.png" id ="<%= @login_rating%> ">
+        </div>
+        <% end %> 
+    </div>
+</div>
+
+<div> 
+<%= f.label "any other thoughts? bugs, questions? let us know!" %>     
+<%= f.text_area :body , :class => "materialize-textarea" , :id => "feedback_input" %> 
+
+<%= f.submit "send feedback" , class: "white-text btn waves-effect waves-light",  style: "height: 2em; padding:5%, font-family: Raleway" %> 
+</div>
+<% end %> 
+
+<script> 
+ $(".feedback img").click(function(){
+     var idval = $(this).attr("id");
+            console.log(idval);
+     var classval = "#field_" + $(this).attr("class");
+            console.log(idval);
+             $('classval').val(idval);
+    $(this).css({
+                'border': '5px solid teal' });
+ }); 
+</script>
+
+<style> 
+.input_field{
+    width: 100%;
+}
+#feedback_input{
+    background: white;
+    width: 100%;
+}
+
+.feedback img {
+    padding: 5%;
+    margin-top: 5%;
+    width: 80%;
+}
+
+.feedback_header h5{
+    width: 100%;
+}
+
+.feedback img:hover {
+   border: 3px solid teal;
+}
+
+}
+
+</style>

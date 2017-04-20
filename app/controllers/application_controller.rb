@@ -11,13 +11,22 @@ class ApplicationController < ActionController::Base
 
   protected
   
-  BLOCS = %w[TheArts Business STEM/Tech ]
+  job = Job.last
+  
+  def landing_filter
+      if request.referer == nil 
+        session[:referer] = "none"
+      else
+          session[:referer] = request.referrer #you don't want to delete first entrance 
+      end
+  end
+
   
   def configure_permitted_parameters  #form fields for devise user registration/account update
     
   
     added_registration_attrs = [:name, :school, :firstname,
-    :industry, :firstjob, :gradschool, :prep, :style, :office, :companies, :referred_by_user_id, :referred_by, :profileurl] #profilequiz
+    :industry, :firstjob, :gradschool, :prep, :style, :major, :gradyear, :office, :companies, :referred_by_user_id, :referred_by, :profileurl ,:career_services , :linkedin ]
     
     
     

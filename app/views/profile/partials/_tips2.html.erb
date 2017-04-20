@@ -1,0 +1,53 @@
+
+<!-- THREE OPPORTUNITIES --> 
+    
+    
+      <div class="row">
+        <div class="col s12">
+        <div class="tip_card"> 
+         <img id="tip_image" src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/2_6_orig.png"> 
+         
+        <% if @tips == nil %> 
+          <h6> </h6>
+         <% else %> 
+           
+            <% if @tips[1].industry == @vision.industry || @tips[1].industry == "All" || @tips[1].industry == nil %>
+              <h6> <%= link_to @tips[1].title , @tips[1].link%> </h6>
+             <% end %> 
+          
+          <% end %> 
+         
+          
+    </div>
+      </div>
+     
+ 
+
+<style>
+    a{
+        color: grey;
+    }
+    a:hover{
+        color: grey;
+    }
+    
+    #tip_image {
+        margin-top: 0%;
+        width: 100%;
+    }
+    
+    .tip_card {
+        margin: 10em 0;
+        background-color: #44d9e6;
+        padding-bottom: 5%;
+    }
+    
+    .tip_card h6{
+        font-family: Raleway;
+        color: white;
+        font-size: 2em;
+        text-transform: uppercase;
+        margin: 5% 0%;
+        padding: 5%;
+    }
+</style>

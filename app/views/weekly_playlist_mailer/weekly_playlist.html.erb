@@ -2,208 +2,32 @@
 <html>
   <head>
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
-      <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
-
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
-          
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+     <link href='https://fonts.googleapis.com/css?family=Raleway:800' rel='stylesheet' type='text/css'>
+     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/aileron" type="text/css"/>
+     
   </head>
-  <body>
-   
-
-<div class="profile"> 
-<div class ="profile_info row">
-    <div class="col s12 l6"> 
-        <h6><%= image_tag @user.picture %> </h6>
-        <h5> <%= @user.name %> </h5>
-        <h6> <%= @user.email %> </h6>
-        <h6> <%= @user.school %> </h6>
-        <h6> <%= @user.experience %> </h6>
-        <h6> <%= @user.major%> | <%= @user.gradyear%> </h6>
-    </div> 
-
-    <div class="col s12 l6"> 
-        <% if @vision != nil %>
-            <h5 style="margin-top: 22%"><%= link_to "See My Playlist", vision_path(@vision) %> </h5>
-            <div style="height: 2em"> </div>
-            <% else %> 
-            <h5><%= link_to "Get started by building your first playlist", new_vision_url %> </h5>
-            <div style="height: 2em"> </div>
-            <% end %>
-    
-        <h6 class="teal-text">share code: <%= link_to "https://blocview-aminabloc.c9users.io/"+ @user.profileurl.to_s, "https://blocview-aminabloc.c9users.io/"+ @user.profileurl  %> </h6>
-     </div>
- </div> 
+  <body style="width:100%;  font-family: Lato; ">
+    <div style="padding: 5%"> 
+      <img style="width: 100%" src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/1_9_orig.png"> 
+      <h5  style="font-family: Raleway;font-size: 2em;">Hi <%= @user.name %>,</h5>
+      <p> 
+      <%= @job.title %> 
+      </p>
+      
  
- <div class="share_bar">
-    <% if @referral_count == nil %> 
-    <p> You don't have any shares right now, but you can quickly upgrade to pro by sending your share link to 5 friends! </p>
-    
-    <% elsif @referral_count < 5 %> 
-    <p> You're almost there! <%= 5 - @referral_count %>more shares and you'll have pro access</p>
-    
-    <%else %> 
-    <h6> You have <%= @referral_count %> shares and your account has been upgraded to pro! Check it out </h6>
-    <% end %> 
-</div>
-</div>
-
-
-<style> 
- html, body{
-    width: 100%;
-    height: 100%;
-    font-family: Work Sans;
-  }
-  a:hover{
-    background-color: inherit;
-    color:teal;
-  }
+      
   
-  .profile {
-      position: absolute;
-      margin: 5% 20% ;
-      background-color:white;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      padding: 0%;
-  }
-  
-  .profile_info{
-      margin: 7% 7% 20% 7%;
-  }
-  
-  .share_bar{
-      background-color:teal;
-      color: white;
-      font-weight: strong;
-      width: 100%;
-      position:absolute;
-      bottom: 0px;
-      padding: 0%;
-      margin-top: 10em;
-  }
-  
-  .share_bar p,h5 {
-      font-family: Montserrat;
-  }
-  
-  #submitFB{
-  position: absolute;
-  background: #3b5998;
-  color:white;
-  border: 4px solid grey;
-  padding: 7% 5% 5% 18%;
-  margin-top: -30%;
-  width: 15em;
-  height: 3em;
-}
-  h5{
-    color: black;
-  }
-  
-  .side-nav {
-    font-family: Work Sans;
-  }
-
-  #show_view {
-    display:none;
-  }
-  
-  @media only screen and (max-device-width: 480px){
-    html{
-        font-size: 2em;
-    }
-    
-    div {
-      font-size: 1.1em;
-    }
-    p,span{
-      font-size: 1.8em;
-    }
-}
-
-</style>
-
-
-
-
-
- 
-</body> 
-</html>
-
-<style> 
- html, body{
-    width: 100%;
-    height: 100%;
-    font-family: Work Sans;
-  }
-  a:hover{
-    background-color: inherit;
-    color:teal;
-  }
-  
- 
-  
-  .profile_info{
-      margin: 7% 7% 20% 7%;
-  }
-  
-  .share_bar{
-      background-color:teal;
-      color: white;
-      font-weight: strong;
-      width: 100%;
-      position:absolute;
-      bottom: 0px;
-      padding: 0%;
-      margin-top: 10em;
-  }
-  
-  .share_bar p,h5 {
-      font-family: Montserrat;
-  }
-  
-  #submitFB{
-  position: absolute;
-  background: #3b5998;
-  color:white;
-  border: 4px solid grey;
-  padding: 7% 5% 5% 18%;
-  margin-top: -30%;
-  width: 15em;
-  height: 3em;
-}
-  h5{
-    color: black;
-  }
-  
-  .side-nav {
-    font-family: Work Sans;
-  }
-
-  #show_view {
-    display:none;
-  }
-  
-  @media only screen and (max-device-width: 480px){
-    html{
-        font-size: 2em;
-    }
-    
-    div {
-      font-size: 1.1em;
-    }
-    p,span{
-      font-size: 1.8em;
-    }
-}
-
-</style>
-
-
-
-
-
+      <div class="share" style="background-color: #44d9e6; padding: 2%; text-align: center; font-size: 2em;
+      color: white; font-family: Raleway; margin: 5% 0;" > 
+        <h6> My Share Code </h6> <h6> <%= link_to "jointhebloc.com/"+ @user.profileurl, "jointhebloc.com/"+ @user.profileurl , style: "color:white"  %></h6>
+        <h6> Promoted Opps </h6>
+        <h6> <%= link_to "Check out internships & entry level jobs at United Way, Spotify & VICE", "jointhebloc.com/jobs" , style: "color:white" %>  </h6>
+      </div>
+      
+      <p> unsubscribe from email updates anytime by replying "Unsubscribe" to this email </p>
+    </div>
+  </body>
 </html>

@@ -4,25 +4,15 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # GET /resource/sign_up
    def new
-     super
+     
    end
 
   # POST /resource
    def create
-     super
-     
-     if request.referer == nil
-            code = "none"
-            current_user.update_attributes(:referral_code => code)
-        else
-            code= request.referer.split('/')[-1]
-            current_user.update_attributes(:referral_code => code)
-        end
-        
-        
+
     end
     
-  
+    
    
    def email 
      self.resource = resource_class.new(sign_in_params)

@@ -2,7 +2,6 @@
 <div class="profile"> 
 <div class ="profile_info row">
     <div class="col s12 l6"> 
-        <h6><%= image_tag @user.picture, class:  "circle" %> </h6>
         <h5> <%= @user.name %> </h5>
         <h5> <%= @user.referral_code %> </h5>
         <% if user_signed_in? and current_user.role != "student" %> 
@@ -34,7 +33,7 @@
      <p> <%= link_to "back to my profile", myprofile_path, class: "white-text" %> </p>		   
      
      <% else %> 
-    <p id="profile-oauth"> <%= link_to "Click to create your account and get your own custom career playlist!", user_facebook_omniauth_authorize_path, class:"white-text" %> </p>
+    <p id="profile-oauth"> <%= link_to "Click to create your account and get your own custom career playlist!", new_user_registration_path, class:"white-text" %> </p>
      		     
      <% end %> 
     
@@ -77,7 +76,7 @@
   .profile {
       position: absolute;
       width:60%;
-      margin: 5% 20% ;
+      margin: 5% 20%;
       background-color:white;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
       padding: 0%;
@@ -174,7 +173,7 @@
     }
     
    .profile_info{ 
-      margin: 10% 5%;
+      margin: 35% 5% 7% 5%;
       text-align: center;
     }
       

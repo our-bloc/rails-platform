@@ -34,6 +34,31 @@ class User < ApplicationRecord
   end
   
   
+  def password_required?
+    new_record? ? false : super
+  end
+
+  after_create :add_password_and_firstname
+  
+  def add_password_and_firstname
+      password = self.name.gsub(/\s+/, "").delete('.') + rand(10..50).to_s
+      profileurl = password
+      self.update_attribute(:password, password )
+      self.update_attribute(:profileurl, profileurl )
+      
+      firstname = self.name.split.first
+      self.update_attribute(:firstname, firstname)
+      
+      #send welcome email
+      WelcomeMailer.welcome_email(self).deliver
+      
+      #update admin
+      NewUserMailer.new_user(self).deliver
+      
+
+      
+  end 
+  
   #CREATE USER THROUGH OMNIAUTH
   def self.from_omniauth(auth)
       where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
