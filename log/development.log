@@ -13644,3 +13644,181 @@ Processing by ProfileController#show as HTML
 Completed 200 OK in 228ms (Views: 225.7ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/" for 108.219.110.211 at 2017-04-20 17:44:33 +0000
+Processing by WelcomeController#home as HTML
+Redirected to https://bloc-prodcution-aminabloc.c9users.io/users/sign_up
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 108.219.110.211 at 2017-04-20 17:44:33 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/registrations/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 191ms (Views: 189.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_u" for 108.219.110.211 at 2017-04-20 17:44:41 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_u"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+ahoy_matey (1.5.4) lib/ahoy/engine.rb:22:in `call_with_quiet_ahoy'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered collection of /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [127 times] (89.5ms)
+  Rendered collection of /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [2 times] (0.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.2ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (151.4ms)
+Started GET "/" for 108.219.110.211 at 2017-04-20 17:44:53 +0000
+Processing by WelcomeController#home as HTML
+Redirected to https://bloc-prodcution-aminabloc.c9users.io/users/sign_up
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 108.219.110.211 at 2017-04-20 17:44:53 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/registrations/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 197ms (Views: 195.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 108.219.110.211 at 2017-04-20 17:46:56 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/registrations/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 400ms (Views: 398.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 108.219.110.211 at 2017-04-20 17:47:14 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/registrations/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 193ms (Views: 191.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 108.219.110.211 at 2017-04-20 17:47:26 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/registrations/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 264ms (Views: 262.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 108.219.110.211 at 2017-04-20 17:47:30 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/registrations/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 216ms (Views: 214.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 108.219.110.211 at 2017-04-20 17:47:39 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/registrations/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 188ms (Views: 185.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 108.219.110.211 at 2017-04-20 17:47:49 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/registrations/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 196ms (Views: 194.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 108.219.110.211 at 2017-04-20 17:48:00 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/registrations/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 265ms (Views: 263.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 108.219.110.211 at 2017-04-20 17:48:14 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/registrations/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 324ms (Views: 321.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 108.219.110.211 at 2017-04-20 17:48:34 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/registrations/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 369ms (Views: 366.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 108.219.110.211 at 2017-04-20 17:48:50 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/registrations/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 207ms (Views: 205.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 108.219.110.211 at 2017-04-20 17:49:01 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/registrations/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 274ms (Views: 272.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 108.219.110.211 at 2017-04-20 17:49:30 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/registrations/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 335ms (Views: 332.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 108.219.110.211 at 2017-04-20 17:51:10 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/registrations/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 159ms (Views: 157.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 108.219.110.211 at 2017-04-20 17:51:26 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/registrations/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 190ms (Views: 188.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 108.219.110.211 at 2017-04-20 17:51:53 +0000
+Processing by WelcomeController#home as HTML
+Redirected to https://bloc-prodcution-aminabloc.c9users.io/users/sign_up
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 108.219.110.211 at 2017-04-20 17:51:53 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/registrations/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 180ms (Views: 178.8ms | ActiveRecord: 0.0ms)
+
+
