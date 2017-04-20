@@ -13822,3 +13822,11 @@ Processing by Devise::RegistrationsController#new as HTML
 Completed 200 OK in 180ms (Views: 178.8ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/users/sign_up" for 108.219.110.211 at 2017-04-20 18:09:04 +0000
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" ORDER BY "jobs"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/registrations/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 298ms (Views: 262.0ms | ActiveRecord: 1.0ms)
+
+
