@@ -12,10 +12,30 @@
   <body style="width:100%;  font-family: Lato; ">
     <div style="padding: 5%"> 
       <img style="width: 100%" src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/1_9_orig.png"> 
-      <h5  style="font-family: Raleway;font-size: 2em;">Hi <%= @user.name %>,</h5>
-      <p> 
-      <%= @job.title %> 
-      </p>
+      <h5  style="font-family: Raleway;font-size: 2em;"> Hey <%= @user.firstname %>,</h5>
+      <div style="text-align: center"> 
+         <h2> This Week's Jobs </h2>
+             <% @jobs.each do |job| %>
+                 <h4> <%= link_to job.title, job.link %><br> </h4>
+              <% end %> 
+    
+              <% @all_job.each do |job| %> 
+                    <h4> <%= link_to job.title, job.link %> </h4> <br> 
+                <% end %> 
+        
+        <!-- TIPS -->
+        
+        <h2>This Week's Tips </h2>
+
+         <% @tips.each do |tip| %>
+                  <h5> <%= tip.title %><br> </h5>
+                  <h4> <%= tip.body %><br> </h4>
+                  <h4> <%= link_to "Read More", tip.link %><br> </h4>
+              <% end %> 
+
+          
+         
+      </div >
       
  
       
@@ -24,7 +44,7 @@
       color: white; font-family: Raleway; margin: 5% 0;" > 
         <h6> My Share Code </h6> <h6> <%= link_to "jointhebloc.com/"+ @user.profileurl, "jointhebloc.com/"+ @user.profileurl , style: "color:white"  %></h6>
         <h6> Promoted Opps </h6>
-        <h6> <%= link_to "Check out internships & entry level jobs at United Way, Spotify & VICE", "jointhebloc.com/jobs" , style: "color:white" %>  </h6>
+        <h6> <%= link_to "Check out internships & entry level jobs at Cox, Atlanta Black Star & YMCA ", "jointhebloc.com/jobs" , style: "color:white" %>  </h6>
       </div>
       
       <p> unsubscribe from email updates anytime by replying "Unsubscribe" to this email </p>

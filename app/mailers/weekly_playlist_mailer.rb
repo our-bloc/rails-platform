@@ -1,9 +1,26 @@
 class WeeklyPlaylistMailer < ApplicationMailer
     default from: "amina@ourbloc.co"
 
-      def weekly_playlist(user, job)
+      def weekly_playlist(user, jobs , vision,tips )
         
         @user = user
+        @vision= vision
+        @all_job = jobs.where(:industry == "All").limit(1)
+
+
+        if @vision = "none"
+          @tips = tips.where(:prep == @user.prep ).limit(2)
+          @jobs = jobs.where(:industry == @user.industry).limit(2)
+          @grad_tips = tips.where((:grad == @user.gradschool and :gradyear == @user.gradyear)).limit(1)
+        else
+          @tips = tips.where(:prep == @vision.prep).limit(2)
+          @jobs = jobs.where(:industry == @vision.industry).limit(2)
+          @grad_tips = tips.where((:grad == @vision.gradschool and :gradyear == @vision.gradyear)).limit(1)
+
+        end
+        
+      
+  
         mail(to: @user.email , subject: 'Your weekly playlist!')
         
      end 

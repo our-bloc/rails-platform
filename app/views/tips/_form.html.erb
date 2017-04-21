@@ -37,7 +37,7 @@
   </div>
     
   
-<div class ="input-field"> 
+<div class="field"> 
     <%= f.label "Grad School Related" %>
     <%= f.hidden_field :grad , :id =>"field_tipgrad" %>
 
@@ -50,11 +50,35 @@
     <div class="tip_grad white-text btn waves-effect waves-light" id="Business School"> Business School </div>
 </div>
 
-<div class ="input-field"> 
+<div class ="field"> 
+    <%= f.label "Class Year " %>
+    <%= f.hidden_field :gradyear , :id =>"field_tipgradyear" %>
+
+  <div class="grad_button white-text btn waves-effect waves-light" id="2020"> 2020 </div>
+    <div class="tip_gradyear white-text btn waves-effect waves-light" id="2019"> 2019 </div>
+    <div class="tip_gradyear white-text btn waves-effect waves-light" id="2018"> 2018</div>
+    <div class="tip_gradyear white-text btn waves-effect waves-light" id="2017"> 2017 </div>
+    <div class="tip_gradyear white-text btn waves-effect waves-light" id="Alum"> Alum </div>
+   
+</div>
+
+<div class ="field"> 
+    <%= f.label "Going in email? " %>
+    <%= f.hidden_field :for_email , :id =>"field_tipforemail" %>
+
+    <div class="tip_for_email white-text btn waves-effect waves-light" id="true"> Yep </div>
+    <div class="tip_for_email white-text btn waves-effect waves-light" id="false"> Nah</div>
+   
+   
+</div>
+
+
+
+<div class ="field"> 
     <%= f.label "Tip Category" %>
     <%= f.hidden_field :prep , :id =>"field_tipprep" %>
 
- <div id="need_resume" class="tip_prep white-text btn waves-effect waves-light"> Starting a resume </div>
+   <div id="need_resume" class="tip_prep white-text btn waves-effect waves-light"> Starting a resume </div>
     <div id="salary_negotiation" class="tip_prep white-text btn waves-effect waves-light"> Nailing my interviews </div>
     <div id="revise_resume" class="tip_prep white-text btn waves-effect waves-light"> Getting my resume together </div>
     <div id="need_connections" class="tip_prep white-text btn waves-effect waves-light"> Hearing back on applications</div>
@@ -62,6 +86,7 @@
     <div id="cover_letters" class="tip_prep white-text btn waves-effect waves-light"> Cover letters...sigh </div>
     <div id="personal_statements" class="tip_prep white-text btn waves-effect waves-light"> Writing personal statements </div>
     <div id="salary_negotiation" class="tip_prep white-text btn waves-effect waves-light"> Negotiating my salary </div>
+  </diV>
   <% end %>
   
   <%= f.actions do %>
@@ -75,6 +100,9 @@
   margin: 5%;
 }
 
+.field{
+  margin: 1% 5%;
+}
 .input-field input {
   color: teal;
 }
@@ -87,6 +115,21 @@
           
       $('#field_tipgrad').val(idval);
             
+  });
+  
+   $('.tip_gradyear').click(function(){
+      var idval = $(this).attr("id");
+      console.log(idval);
+          
+      $('#field_tipgradyear').val(idval);
+  });
+  
+  
+   $('.tip_for_email').click(function(){
+      var idval = $(this).attr("id");
+      console.log(idval);
+          
+      $('#field_tipforemail').val(idval);
   });
   
     $('.tip_prep').click(function(){
@@ -104,5 +147,11 @@ $('.tip_industry').click(function(){
       $('#field_tipindustry').val(idval);
             
   });
+  
+  $(".field div").click(function(){
+    $(this).css ({
+      'border' : "5px solid yellow" });
+    });
+
   
 </script>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170416203448) do
+ActiveRecord::Schema.define(version: 20170421030714) do
 
   create_table "ahoy_events", force: :cascade do |t|
     t.integer  "visit_id"
@@ -130,6 +130,8 @@ ActiveRecord::Schema.define(version: 20170416203448) do
     t.datetime "updated_at", null: false
     t.string   "prep"
     t.string   "grad"
+    t.boolean  "for_email"
+    t.string   "gradyear"
   end
 
   create_table "users", force: :cascade do |t|
