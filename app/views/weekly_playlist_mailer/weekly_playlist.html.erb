@@ -36,8 +36,11 @@
                   <h4> <%= tip.body %><br> </h4>
                   <h4> <%= link_to "Read More", tip.link %><br> </h4>
               <% end %> 
-
-          <%= link_to 'View your full career playlist', playlist_url(:login_bypass_token => @login_bypass_token) %> 
+          <% if @vision == "none" %> 
+            <%= link_to 'View your full career playlist', playlist_url(:profileurl => @user.profileurl) %> 
+          <% else %> 
+            <%= link_to 'View your full career playlist', vision_url(:id => @user.id) %>
+          <% end %> 
 
       </div >
       

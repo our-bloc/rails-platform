@@ -47,7 +47,7 @@ class ApplicationController < ActionController::Base
       private
         def bypass_login
             if params[:login_bypass_token]
-                user = User.by_profileurl(params[:login_bypass_token])
+                user = User.find_by_profileurl(params[:login_bypass_token])
                 sign_in(user, :bypass => true) if user
                 redirect_to request.path
             end

@@ -13,8 +13,8 @@ class WelcomeController < ApplicationController
       redirect_to new_user_registration_path
       
     elsif (user_signed_in? and current_user.industry != nil)
-      redirect_to playlist_path
-    
+      redirect_to playlist_path(@user.profileurl) 
+      
     elsif (user_signed_in? and current_user.sign_in_count == 1 and current_user.industry == nil)
       redirect_to new_vision_path
       
