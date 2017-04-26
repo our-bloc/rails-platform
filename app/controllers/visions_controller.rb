@@ -105,6 +105,7 @@ class VisionsController < ApplicationController
     
     
     #feedback comment box
+    if user_signed_in?
     @feedback = current_user.feedbacks.build
     @feedback.user_id = current_user.id
 
@@ -117,7 +118,7 @@ class VisionsController < ApplicationController
               format.json { render json: @feedback.errors, status: :unprocessable_entity }
             end
           end
-    
+    end
   end
 
 
@@ -201,7 +202,7 @@ class VisionsController < ApplicationController
 
   
     def set_vision
-      @vision = Vision.find(params[:id])
+      @vision = Vision.order("created_at DESC").where(:user_id == params[:id]).last
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

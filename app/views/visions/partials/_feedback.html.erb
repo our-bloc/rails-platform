@@ -1,3 +1,4 @@
+<% if user_signed_in? %> 
 <%= form_for(@feedback) do |f| %>
 
 <div class="feedback_header">
@@ -68,7 +69,7 @@
 <%= f.submit "send feedback" , class: "white-text btn waves-effect waves-light",  style: "height: 2em; padding:5%, font-family: Raleway" %> 
 </div>
 <% end %> 
-
+<% end %> 
 <script> 
  $(".feedback img").click(function(){
      var idval = $(this).attr("id");

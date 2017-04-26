@@ -66,19 +66,7 @@
          
         
         
-      <% if current_user.sign_in_count == 150 %> 
-
-        <div id="second_indeed_search"> 
-             <%= form_tag(vision_path , method: "get", remote: true ) do  %>  
-             
-               <div class="input-field" style="line-height: 1.1">
-                <%= label_tag :q, "Type in a new job description to refine your timeline"%> 
-                 <%= text_field_tag :q %> 
-                <%= submit_tag "Refine your search", :class => "white-text btn waves-effect waves-light", :id => "second_indeed_submit" %> 
-                </div>
-                <% end %> 
-            </div> 
-        <% end %>
+     
         
         
         
