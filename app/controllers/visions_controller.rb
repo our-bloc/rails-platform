@@ -201,9 +201,6 @@ class VisionsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def welcome_path
     
-      if user_signed_in? != true
-        redirect_to landing_path
-      end
     end
   
     def set_vision
