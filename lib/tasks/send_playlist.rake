@@ -31,25 +31,26 @@ task :send_playlist => :environment do
           @vision = Vision.where(:user_id == @user.id).last
           @job = Job.order("created_at DESC")
           @tip = Tip.order("created_at DESC").where(:for_email == true )
-          
-          if @vision.industry == "Techies"
-          @indeed_search = IndeedAPI.search_jobs(:q => @vision.firstjob + " software" , :limit => 7)
-      elsif @vision.industry == "Advocates"
-          @indeed_search = IndeedAPI.search_jobs(:q => "legal undergraduate " + @vision.firstjob , :limit => 7)
-      elsif @vision.industry == "Educators"
-          @indeed_search = IndeedAPI.search_jobs(:q => "teaching children  " + @vision.firstjob , :limit => 7)
-      elsif @vision.industry == "Griots"
-          @indeed_search = IndeedAPI.search_jobs(:q => "writing " + @vision.firstjob , :limit => 7)
-      elsif @vision.industry == "Scientists"
-          @indeed_search = IndeedAPI.search_jobs(:q => "science " + @vision.firstjob , :limit => 7)
-      elsif @vision.industry == "CSuite"
-          @indeed_search = IndeedAPI.search_jobs(:q => "business "  + @vision.firstjob , :limit => 7)
-      elsif @vision.industry == "Activists"
-          @indeed_search = IndeedAPI.search_jobs(:q => "racial justice "  + @vision.firstjob , :limit => 7)
-      else
-          @indeed_search = IndeedAPI.search_jobs(:q => @vision.industry.to_s + " "  + @vision.firstjob.to_s , :limit => 7)
-      end
-         @indeed = @indeed_search.results
+                  
+                  if @vision.industry == "Techies"
+                  @indeed_search = IndeedAPI.search_jobs(:q => @vision.firstjob + " software" , :limit => 7)
+              elsif @vision.industry == "Advocates"
+                  @indeed_search = IndeedAPI.search_jobs(:q => "legal undergraduate " + @vision.firstjob , :limit => 7)
+              elsif @vision.industry == "Educators"
+                  @indeed_search = IndeedAPI.search_jobs(:q => "teaching children  " + @vision.firstjob , :limit => 7)
+              elsif @vision.industry == "Griots"
+                  @indeed_search = IndeedAPI.search_jobs(:q => "writing " + @vision.firstjob , :limit => 7)
+              elsif @vision.industry == "Scientists"
+                  @indeed_search = IndeedAPI.search_jobs(:q => "science " + @vision.firstjob , :limit => 7)
+              elsif @vision.industry == "CSuite"
+                  @indeed_search = IndeedAPI.search_jobs(:q => "business "  + @vision.firstjob , :limit => 7)
+              elsif @vision.industry == "Activists"
+                  @indeed_search = IndeedAPI.search_jobs(:q => "racial justice "  + @vision.firstjob , :limit => 7)
+              else
+                  @indeed_search = IndeedAPI.search_jobs(:q => @vision.industry.to_s + " "  + @vision.firstjob.to_s , :limit => 7)
+              end
+                
+          @indeed = @indeed_search.results
 
           WeeklyPlaylistMailer.weekly_playlist(@user, @job, @vision, @tip, @indeed).deliver
         end

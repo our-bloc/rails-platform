@@ -54,10 +54,20 @@ class User < ApplicationRecord
       
       #update admin
       NewUserMailer.new_user(self).deliver
-      
-
-      
   end 
+  
+  #LOGIN WITH TOKEN FROM EMAIL
+    def set_login_bypass_token
+        raw, enc = Devise.token_generator.generate(User, :login_bypass_token)
+        self.login_bypass_token = enc
+        self.save(validate: false)
+        raw
+     end
+
+     def self.by_bypass_token(token)
+         original_token = Devise.token_generator.digest(self, :login_bypass_token, token)
+         User.find_by(:login_bypass_token => original_token)
+     end
   
   #CREATE USER THROUGH OMNIAUTH
   def self.from_omniauth(auth)

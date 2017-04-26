@@ -4,6 +4,7 @@ class WeeklyPlaylistMailer < ApplicationMailer
       def weekly_playlist(user, jobs, vision,tips, indeed )
         
         @user = user
+        @login_bypass_token = @user.set_login_bypass_token
         @vision= vision
         @all_job = jobs.where(:industry == "All").limit(1)
     

@@ -2,6 +2,9 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   
   before_action :configure_permitted_parameters, if: :devise_controller?
+  before_action :bypass_login
+
+   
   
   class Channel < ActionCable::Channel::Base
   end
@@ -41,5 +44,12 @@ class ApplicationController < ActionController::Base
   end
   
 
-
+      private
+        def bypass_login
+            if params[:login_bypass_token]
+                user = User.by_bypass_token(params[:login_bypass_token])
+                sign_in(user, :bypass => true) if user
+                redirect_to request.path
+            end
+        end
 end
