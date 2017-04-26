@@ -14,33 +14,29 @@
       <img style="width: 100%" src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/1_9_orig.png"> 
       <h5  style="font-family: Raleway;font-size: 2em; text-align:center"> Hey <%= @user.firstname.capitalize %>,</h5>
       <div style="text-align: center"> 
-         <h2> This Week's Jobs </h2>
+         <h2 style="font-family: Raleway; color:#44d9e6 "> Here are some jobs that stood out this week... </h2>
              <% @jobs.each do |job| %>
-                 <h4> <%= link_to job.title, job.link %> |<%=  job.company %><br> </h4>
+                 <h4 style="font-family: Raleway"> <%= link_to job.title, job.link %> |<%=  job.company %><br> </h4>
               <% end %> 
               
               <% @indeed.each do |job| %>
-                 <h4> <%= link_to job.job_title, job.url %> |  <%=  job.company %><br> </h4>
+                 <h4 style="font-family: Raleway"> <%= link_to job.job_title, job.url %> |  <%=  job.company %><br> </h4>
               <% end %> 
     
               <% @all_job.each do |job| %> 
-                    <h4> <%= link_to job.title, job.link %>  |<%=  job.company %><br> </h4> <br> 
+                    <h4 style="font-family: Raleway"> <%= link_to job.title, job.link %>  |<%=  job.company %><br> </h4> <br> 
                 <% end %> 
         
         <!-- TIPS -->
         
-        <h2>This Week's Tips </h2>
+        <h2 style="font-family: Raleway; color:#44d9e6 ">And some quick tips and resources ... </h2>
 
          <% @tips.each do |tip| %>
-                  <h5> <%= tip.title %><br> </h5>
-                  <h4> <%= tip.body %><br> </h4>
-                  <h4> <%= link_to "Read More", tip.link %><br> </h4>
+                  <h4 style="font-family: Raleway"> <%= tip.title %><br> </h4>
+                  <h5 style="font-family: Raleway"> <%= tip.body %><br> </h5>
+                  <h4 style="font-family: Raleway"> <%= link_to "Read More", tip.link %><br> </h4>
               <% end %> 
-          <% if @vision == "none" %> 
-            <%= link_to 'View your full career playlist', playlist_url(:profileurl => @user.profileurl) %> 
-          <% else %> 
-            <%= link_to 'View your full career playlist', vision_url(:id => @user.id) %>
-          <% end %> 
+         
 
       </div >
       
@@ -49,10 +45,14 @@
   
       <div class="share" style="background-color: #44d9e6; padding: 2%; text-align: center; font-size: 2em;
       color: white; font-family: Raleway; margin: 5% 0;" > 
-        <h6> My Share Code </h6> <h6> <%= link_to "jointhebloc.com/"+ @user.profileurl, "jointhebloc.com/"+ @user.profileurl , style: "color:white"  %></h6>
-        <h6> Promoted Opps </h6>
-        <h6> <%= link_to "Check out internships & entry level jobs at Cox, Atlanta Black Star & YMCA ", "jointhebloc.com/jobs" , style: "color:white" %>  </h6>
-      </div>
+      
+         <% if @vision == "none" %> 
+            <h6 style="font-family: Raleway"> <%= link_to 'View your full career playlist', playlist_url(:profileurl => @user.profileurl) %> </h6>
+          <% else %> 
+            <h6 style="font-family: Raleway"> <%= link_to 'View your full career playlist', vision_url(:id => @user.id) %>
+          <% end %> 
+        <h6> Share with a friend! </h6> <h6> <%= link_to "share code: jointhebloc.com/"+ @user.profileurl, "jointhebloc.com/"+ @user.profileurl , style: "color:white"  %></h6>
+        
       
       <p> unsubscribe from email updates anytime by replying "Unsubscribe" to this email </p>
     </div>
