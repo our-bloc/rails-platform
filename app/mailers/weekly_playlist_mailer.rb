@@ -17,6 +17,8 @@ class WeeklyPlaylistMailer < ApplicationMailer
            @grad_tips = tips.where((:grad == @user.gradschool and :gradyear == @user.gradyear)).limit(1)
           end 
           @indeed = indeed
+          
+          
         else
           @tips = tips.where(:prep == @vision.prep).limit(2)
           @jobs = jobs.where(:industry == @vision.industry).limit(2)

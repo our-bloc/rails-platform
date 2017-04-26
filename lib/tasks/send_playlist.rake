@@ -25,7 +25,7 @@ task :send_playlist => :environment do
             @indeed = IndeedAPI.search_jobs(:q => "internship" , :limit => 7)
 
           
-          WeeklyPlaylistMailer.weekly_playlist( @user, @job , @vision, @tip, @indeed)
+          WeeklyPlaylistMailer.weekly_playlist( @user, @job , @vision, @tip, @indeed).deliver
           
         elsif @user.industry == nil
           @vision = Vision.where(:user_id == @user.id).last
@@ -51,6 +51,6 @@ task :send_playlist => :environment do
       end
          @indeed = @indeed_search.results
 
-          WeeklyPlaylistMailer.weekly_playlist(@user, @job, @vision, @tip, @indeed)
+          WeeklyPlaylistMailer.weekly_playlist(@user, @job, @vision, @tip, @indeed).deliver
         end
 end

@@ -27,7 +27,7 @@ class WeeklyPlaylistMailerPreview < ActionMailer::Preview
             @indeed = IndeedAPI.search_jobs(:q => "internship" , :limit => 7)
 
           
-          WeeklyPlaylistMailer.weekly_playlist( @user, @job , @vision, @tip, @indeed).deliver
+          WeeklyPlaylistMailer.weekly_playlist( @user, @job , @vision, @tip, @indeed)
           
         elsif @user.industry == nil
           @vision = Vision.where(:user_id == @user.id).last
@@ -53,7 +53,7 @@ class WeeklyPlaylistMailerPreview < ActionMailer::Preview
       end
          @indeed = @indeed_search.results
 
-          WeeklyPlaylistMailer.weekly_playlist(@user, @job, @vision, @tip, @indeed).deliver
+          WeeklyPlaylistMailer.weekly_playlist(@user, @job, @vision, @tip, @indeed)
         end
       end
 
