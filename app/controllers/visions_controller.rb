@@ -1,7 +1,6 @@
 class VisionsController < ApplicationController
   before_action :set_vision, only: [:show, :edit, :update, :destroy]
-  before_action  :welcome_path
-  
+
 
   # GET /visions
   # GET /visions.json
@@ -199,9 +198,7 @@ class VisionsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def welcome_path
-    
-    end
+
   
     def set_vision
       @vision = Vision.find(params[:id])
