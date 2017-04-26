@@ -1,5 +1,4 @@
 task :send_playlist => :environment do
-    def weekly_playlist_preview
         @user = User.first  
         
         if @user.industry != nil
@@ -54,6 +53,4 @@ task :send_playlist => :environment do
 
           WeeklyPlaylistMailer.weekly_playlist(@user, @job, @vision, @tip, @indeed)
         end
-      end
-
 end
