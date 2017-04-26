@@ -9,7 +9,7 @@ class WeeklyPlaylistMailer < ApplicationMailer
     
 
 
-        if @vision = "none"
+        if @vision == "none"
          
           @tips = tips.where(:prep == @user.prep ).limit(2)
           @jobs = jobs.where(:industry == @user.industry).limit(2)
