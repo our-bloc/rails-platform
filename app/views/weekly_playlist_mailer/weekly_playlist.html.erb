@@ -13,29 +13,29 @@
   <body style="width:100%;  font-family: Lato; ">
     <div style="padding: 5%"> 
       <img style="width: 100%" src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/1_9_orig.png"> 
-      <h5  style="font-family: Sans SerifSans Serif;font-size: 2em; text-align:center"> Hey <%= @user.firstname.capitalize %>,</h5>
+      <h5  style="font-family: , Sans Serif, Sans Serif;font-size: 2em; text-align:center"> Hey <%= @user.firstname.capitalize %>,</h5>
       <div style="text-align: center"> 
-         <h2 style="font-family: Sans Serif; color:#44d9e6 "> Here are some jobs that stood out this week... </h2>
+         <h2 style="font-family: , Sans Serif; color:#44d9e6 "> Here are some jobs that stood out this week... </h2>
              <% @jobs.each do |job| %>
-                 <h4 style="font-family: Sans Serif"> <%= link_to job.title, job.link %> |<%=  job.company %><br> </h4>
+                 <h4 style="font-family: , Sans Serif"> <%= link_to job.title, job.link %> |<%=  job.company %><br> </h4>
               <% end %> 
               
               <% @indeed.each do |job| %>
-                 <h4 style="font-family: Sans Serif"> <%= link_to job.job_title, job.url %> |  <%=  job.company %><br> </h4>
+                 <h4 style="font-family: , Sans Serif"> <%= link_to job.job_title, job.url %> |  <%=  job.company %><br> </h4>
               <% end %> 
     
               <% @all_job.each do |job| %> 
-                    <h4 style="font-family: Sans Serif"> <%= link_to job.title, job.link %>  |<%=  job.company %><br> </h4> <br> 
+                    <h4 style="font-family: , Sans Serif"> <%= link_to job.title, job.link %>  |<%=  job.company %><br> </h4> <br> 
                 <% end %> 
         
         <!-- TIPS -->
         
-        <h2 style="font-family: Sans Serif; color:#44d9e6 ">And some quick tips and resources ... </h2>
+        <h2 style="font-family: , Sans Serif; color:#44d9e6 ">And some quick tips and resources ... </h2>
 
          <% @tips.each do |tip| %>
-                  <h4 style="font-family: Sans Serif"> <%= tip.title %><br> </h4>
-                  <h5 style="font-family: Sans Serif"> <%= tip.body %><br> </h5>
-                  <h4 style="font-family: Sans Serif"> <%= link_to "Read More", tip.link %><br> </h4>
+                  <h4 style="font-family: , Sans Serif"> <%= tip.title %><br> </h4>
+                  <h5 style="font-family: , Sans Serif"> <%= tip.body %><br> </h5>
+                  <h4 style="font-family: , Sans Serif"> <%= link_to "Read More", tip.link %><br> </h4>
               <% end %> 
          
 
@@ -45,14 +45,14 @@
       
   
       <div class="share" style="background-color: #44d9e6; padding: 2%; text-align: center; font-size: 2em;
-      color: white; font-family: Sans Serif; margin: 5% 0;" > 
+      color: white; font-family: , Sans Serif; margin: 5% 0;" > 
       
          <% if @vision == "none" %> 
-            <h6 style="font-family: Sans Serif"> <%= link_to 'View your full career playlist', playlist_url(:profileurl => @user.profileurl) %> </h6>
+            <h6 style="font-family: , Sans Serif"> <%= link_to 'View your full career playlist', playlist_url(:profileurl => @user.profileurl) %> </h6>
           <% else %> 
-            <h6 style="font-family: Sans Serif"> <%= link_to 'View your full career playlist', vision_url(:id => @user.id) %>
+            <h6 style="font-family: , Sans Serif"> <%= link_to 'View your full career playlist', vision_url(:id => @user.id) %>
           <% end %> 
-        <h6> Share with a friend! </h6> <h6> <%= link_to "share code: jointhebloc.com/"+ @user.profileurl, "jointhebloc.com/"+ @user.profileurl Style: "color:white"  %></h6>
+        <h6> Share with a friend! </h6> <h6> <%= link_to "share code: jointhebloc.com/"+ @user.profileurl, "jointhebloc.com/"+ @user.profileurl , style: "color:white"  %></h6>
         
       
       <p style="font-size: 8px"> unsubscribe from email updates anytime by replying "Unsubscribe" to this email </p>
