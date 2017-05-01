@@ -15,17 +15,17 @@
       <img style="width: 100%" src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/1_9_orig.png"> 
       <h5  style="font-size: 2em; text-align:center"> Hey <%= @user.firstname.capitalize %>,</h5>
       <div style="text-align: center"> 
-         <h2 style=" color:#44d9e6 "> Here are some jobs that stood out this week... </h2>
+         <h2 style=" color:#44d9e6 ; font-family: Arial "> Here are some jobs that stood out this week... </h2>
              <% @jobs.each do |job| %>
                  <h4 style="font-family: Arial"> <%= link_to job.title, job.link %> |<%=  job.company %><br> </h4>
               <% end %> 
               
               <% @indeed.each do |job| %>
-                 <h4 style=""> <%= link_to job.job_title, job.url %> |  <%=  job.company %><br> </h4>
+                 <h4 style="font-family: Arial"> <%= link_to job.job_title, job.url %> |  <%=  job.company %><br> </h4>
               <% end %> 
     
               <% @all_job.each do |job| %> 
-                    <h4 style=""> <%= link_to job.title, job.link %>  |<%=  job.company %><br> </h4> <br> 
+                    <h4 style="font-family: Arial"> <%= link_to job.title, job.link %>  |<%=  job.company %><br> </h4> <br> 
                 <% end %> 
         
         <!-- TIPS -->
@@ -33,9 +33,9 @@
         <h2 style="font-family: Arial; color:#44d9e6 ">And some quick tips and resources ... </h2>
 
          <% @tips.each do |tip| %>
-                  <h4 > <%= tip.title %><br> </h4>
-                  <h5 > <%= tip.body %><br> </h5>
-                  <h4 > <%= link_to "Read More", tip.link %><br> </h4>
+                  <h4 style="font-family: Arial"> <%= tip.title %><br> </h4>
+                  <h5 style="font-family: Arial"> <%= tip.body %><br> </h5>
+                  <h4> <%= link_to "Read More", tip.link, style: "font-family: Arial" %><br> </h4>
               <% end %> 
          
 
