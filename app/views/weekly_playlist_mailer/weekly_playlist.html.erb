@@ -10,7 +10,7 @@
      
   </head>
   
-  <body style="width:100%;  font-family: Lato; ">
+  <body style="width:100%;  font-family: Arial; ">
     <div style="padding: 5%"> 
       <img style="width: 100%" src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/1_9_orig.png"> 
       <h5  style="font-size: 2em; text-align:center"> Hey <%= @user.firstname.capitalize %>,</h5>
@@ -24,9 +24,7 @@
                  <h4 style="font-family: Arial"> <%= link_to job.job_title, job.url %> |  <%=  job.company %><br> </h4>
               <% end %> 
     
-              <% @all_job.each do |job| %> 
-                    <h4 style="font-family: Arial"> <%= link_to job.title, job.link %>  |<%=  job.company %><br> </h4> <br> 
-                <% end %> 
+              
         
         <!-- TIPS -->
         
