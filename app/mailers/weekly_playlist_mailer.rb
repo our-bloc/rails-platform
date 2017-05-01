@@ -13,7 +13,7 @@ class WeeklyPlaylistMailer < ApplicationMailer
         if @vision == "none"
          
           @tips = tips.where(:prep == @user.prep ).limit(2)
-          @jobs = jobs.where(:industry == @user.industry).limit(2)
+          @jobs = jobs.where(:industry == @user.industry).limit(5)
           if @grad_tips != nil
            @grad_tips = tips.where((:grad == @user.gradschool and :gradyear == @user.gradyear)).limit(1)
           end 
@@ -22,7 +22,7 @@ class WeeklyPlaylistMailer < ApplicationMailer
           
         else
           @tips = tips.where(:prep == @vision.prep).limit(2)
-          @jobs = jobs.where(:industry == @vision.industry).limit(2)
+          @jobs = jobs.where(:industry == @vision.industry).limit(5)
           @grad_tips = tips.where((:grad == @vision.gradschool and :gradyear == @vision.gradyear)).limit(1)
           @indeed = indeed
       
