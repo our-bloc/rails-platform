@@ -1,5 +1,6 @@
 class WelcomeController < ApplicationController
-  
+  def hello
+  end
   
   def home
     
@@ -10,7 +11,7 @@ class WelcomeController < ApplicationController
   
     
     if !user_signed_in?
-      redirect_to new_user_registration_path
+      redirect_to hello_path
       
     elsif (user_signed_in? and current_user.industry != nil)
       redirect_to playlist_path(@user.profileurl) 
@@ -27,5 +28,6 @@ class WelcomeController < ApplicationController
   def landing 
    
   end 
+  
   
 end

@@ -4,23 +4,11 @@
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-<div id="lander"> 
 
-    <div class="row"> 
-    <div class="col s12 l8"> 
-    <h5 id="header"> career advice for us, by us </h5>
-        <p> answer 8 quick questions and we'll send you personalized opportunities & career advice every week.</p>
-        
-        <h6 class="show_quiz"> level up </h6>
-    </div>
-    <div class="col l6 s12 offset-l6"> 
-    </div>
-    </div>
-</div>
 
 <div id="quiz"> 
     <section class="section_industry"> 
-    <h5 id="industry_section"  style="color:white; margin-top: -5%"> WHAT IS YOUR TOP INDUSTRY? </h5>
+    <h5 id="industry_section"  style="color:white; margin-top: -5%"> CHOOSE YOUR INDUSTRY </h5>
       <div class="industry">
     
         <%= f.hidden_field :industry, :id => "field_industry" %>
@@ -59,10 +47,10 @@
         <h5 style="color:white; opacity:1; z-index: 2; margin-top: -15%"> WHAT TYPE OF OPPORTUNITIES ARE YOU LOOKING FOR? </h5>  
         <%= f.hidden_field :firstjob ,:id => "field_firstjob", :placeholder => "intern? fellow? entry level?" %>
        
-        <div class="dream_job_button white-text btn waves-effect waves-light" id="Internship"> Internship </div>
-        <div class="dream_job_button white-text btn waves-effect waves-light" id="Fellowship"> Fellowship </div>
-        <div class="dream_job_button white-text btn waves-effect waves-light" id="Entry Level Position"> Entry Level Position </div>
-        <div class="dream_job_button white-text btn waves-effect waves-light" id="Graduate Program"> Graduate Program </div>
+        <div class="dream_job_button white-text btn waves-effect waves-light" id="Internship"> Internships </div>
+        <div class="dream_job_button white-text btn waves-effect waves-light" id="Fellowship"> Fellowships </div>
+        <div class="dream_job_button white-text btn waves-effect waves-light" id="Entry Level Position"> Entry Level Positions </div>
+        <div class="dream_job_button white-text btn waves-effect waves-light" id="Graduate Program"> Grad Programs </div>
     
     </div>
     </div>
@@ -71,7 +59,7 @@
     
     
     
-    
+    o
     <!-- STYLE PORTION OF QUIZ --> 
     <section> 
     <div class="style" id="style">
@@ -153,7 +141,7 @@
        <section>
     <div id="major_head">
     <div id="major_section">
-        <h5 style="color:white; opacity:1; z-index: 2; padding-top: 10%"> SCHOOL INFO TO HELP US NARROW DOWN TOP MATCHES</h5>  
+        <h5 style="color:white; opacity:1; z-index: 2; padding-top: 10%"> LETU US KNOW YOUR SCHOOL INFO SO WE CAN NARROW DOWN MATCHES</h5>  
         <div class="row">
             
             <div class="col l6 white-text"> 
@@ -178,7 +166,7 @@
     
      
      <section id="info_section"> 
-     <h5> ALL SET! WHERE SHOULD WE SEND YOUR OPPORTUNITIES? </h5>
+     <h5> ALL SET! WHERE SHOULD WE SEND YOUR PLAYLIST? </h5>
      <div class=row> 
          <div class="col s12 l5">
              <h4 class="white-text"> FIRST & LAST NAME </h4>
@@ -215,7 +203,7 @@ $(document).ready(function(){
      $('html,body').animate({
             scrollTop: $("html").offset().top},
             'slow');
-    $('#quiz').hide();
+    
 });
 
  $('.show_quiz').click(function(){

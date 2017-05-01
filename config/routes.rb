@@ -28,6 +28,7 @@ Rails.application.routes.draw do
   get '/dashboard', to: 'users#dashboard', as: :dashboard
   get 'profiles' => 'profile#index', as: :profiles
   get '/home', to: 'welcome#landing', as: :landing
+  get '/hello', to: 'welcome#hello', as: :hello
 
   get '/myprofile', to: 'profile#myprofile', as: :myprofile
   get '/myplaylist', to: 'profile#playlist', as: :playlist
