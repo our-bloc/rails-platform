@@ -1,5 +1,5 @@
 task :send_playlist => :environment do
-        @user = User.first  
+        @user = User.find_by_name("Amina Yamusah")  
         
         if @user.industry != nil
           @vision = "none"
