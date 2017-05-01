@@ -40,9 +40,9 @@
 
 </div>
 
-  
-<div class="scroll_feedback"> <h2 style=""> GIVE FEEDBACK, WIN SPOTIFY PREMIUM! </h2></div>
-
+<% if user_signed_in? %> 
+  <div class="scroll_feedback"> <h2 style=""> GIVE FEEDBACK, WIN SPOTIFY PREMIUM! </h2></div>
+<% end %> 
 <div class="show_feedback">
       <%= render "profile/partials/feedback" %>
 </div>
