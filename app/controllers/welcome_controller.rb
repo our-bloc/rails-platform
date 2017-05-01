@@ -1,6 +1,5 @@
 class WelcomeController < ApplicationController
-  def hello
-  end
+
   
   def home
     
@@ -23,6 +22,9 @@ class WelcomeController < ApplicationController
       redirect_to myprofile_path 
 
     end
+  end
+  
+  def hello
   end
   
   def landing 
