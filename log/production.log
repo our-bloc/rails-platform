@@ -2223,3 +2223,875 @@ D, [2017-04-20T13:59:17.807773 #26800] DEBUG -- :   [1m[36mActiveRecord::Inter
 D, [2017-04-20T13:59:17.812235 #26800] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
 D, [2017-04-20T13:59:17.813256 #26800] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
 D, [2017-04-20T13:59:17.813772 #26800] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3291956229089353245)[0m
+D, [2017-04-21T16:17:05.830952 #14256] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3291956229089353245);[0m
+D, [2017-04-21T16:17:05.844541 #14256] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2017-04-21T16:17:05.864974 #14256]  INFO -- : Migrating to AddForEmailToTips (20170421030448)
+D, [2017-04-21T16:17:05.867174 #14256] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+D, [2017-04-21T16:17:05.871619 #14256] DEBUG -- :   [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "tips" ADD "for_email" boolean[0m
+D, [2017-04-21T16:17:05.877958 #14256] DEBUG -- :   [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170421030448"]]
+D, [2017-04-21T16:17:05.880757 #14256] DEBUG -- :   [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+I, [2017-04-21T16:17:05.880891 #14256]  INFO -- : Migrating to AddGradYearToTips (20170421030714)
+D, [2017-04-21T16:17:05.881537 #14256] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+D, [2017-04-21T16:17:05.882426 #14256] DEBUG -- :   [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "tips" ADD "gradyear" character varying[0m
+D, [2017-04-21T16:17:05.883846 #14256] DEBUG -- :   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170421030714"]]
+D, [2017-04-21T16:17:05.885146 #14256] DEBUG -- :   [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-04-21T16:17:05.890830 #14256] DEBUG -- :   [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+D, [2017-04-21T16:17:05.895622 #14256] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+D, [2017-04-21T16:17:05.897033 #14256] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-04-21T16:17:05.897547 #14256] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3291956229089353245)[0m
+D, [2017-04-26T08:51:29.619866 #5862] DEBUG -- :   [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+D, [2017-04-26T08:51:29.691412 #5862] DEBUG -- :   [1m[36mVision Load (0.6ms)[0m  [1m[34mSELECT  "visions".* FROM "visions" ORDER BY "visions"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+D, [2017-04-26T08:55:44.100350 #5937] DEBUG -- :   [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+D, [2017-04-26T08:55:44.173223 #5937] DEBUG -- :   [1m[36mVision Load (0.8ms)[0m  [1m[34mSELECT  "visions".* FROM "visions" ORDER BY "visions"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+D, [2017-04-26T09:08:02.467626 #6130] DEBUG -- :   [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+D, [2017-04-26T09:08:02.543783 #6130] DEBUG -- :   [1m[36mVision Load (0.8ms)[0m  [1m[34mSELECT  "visions".* FROM "visions" ORDER BY "visions"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+D, [2017-04-26T09:08:03.065406 #6130] DEBUG -- : WeeklyPlaylistMailer#weekly_playlist: processed outbound mail in 0.6ms
+D, [2017-04-26T09:10:04.477367 #6204] DEBUG -- :   [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+D, [2017-04-26T09:10:04.551431 #6204] DEBUG -- :   [1m[36mVision Load (0.8ms)[0m  [1m[34mSELECT  "visions".* FROM "visions" ORDER BY "visions"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+I, [2017-04-26T09:10:05.145139 #6204]  INFO -- :   Rendering weekly_playlist_mailer/weekly_playlist.html.erb within layouts/mailer
+D, [2017-04-26T09:10:05.152266 #6204] DEBUG -- :   [1m[36mJob Load (1.9ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" ORDER BY created_at DESC LIMIT $1[0m  [["LIMIT", 2]]
+D, [2017-04-26T09:10:05.180687 #6204] DEBUG -- :   [1m[36mJob Load (0.8ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" ORDER BY created_at DESC LIMIT $1[0m  [["LIMIT", 1]]
+D, [2017-04-26T09:10:05.183405 #6204] DEBUG -- :   [1m[36mTip Load (1.0ms)[0m  [1m[34mSELECT  "tips".* FROM "tips" ORDER BY created_at DESC LIMIT $1[0m  [["LIMIT", 2]]
+I, [2017-04-26T09:10:05.198332 #6204]  INFO -- :   Rendered weekly_playlist_mailer/weekly_playlist.html.erb within layouts/mailer (52.9ms)
+I, [2017-04-26T09:10:05.200389 #6204]  INFO -- :   Rendering weekly_playlist_mailer/weekly_playlist.text.erb within layouts/mailer
+I, [2017-04-26T09:10:05.200965 #6204]  INFO -- :   Rendered weekly_playlist_mailer/weekly_playlist.text.erb within layouts/mailer (0.4ms)
+D, [2017-04-26T09:10:05.392544 #6204] DEBUG -- : WeeklyPlaylistMailer#weekly_playlist: processed outbound mail in 265.4ms
+I, [2017-04-26T09:10:08.330164 #6204]  INFO -- : Sent mail to ayamusah213@gmail.com (2937.3ms)
+D, [2017-04-26T09:10:08.330335 #6204] DEBUG -- : Date: Wed, 26 Apr 2017 09:10:05 -0400
+From: amina@ourbloc.co
+To: ayamusah213@gmail.com
+Message-ID: <59009c2d611ce_183c3bd9683432f@bloc.mail>
+Subject: Hey Amina, here are some opportunities we think you'll love!
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_59009c2d5f6e8_183c3bd9683425b";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_59009c2d5f6e8_183c3bd9683425b
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_59009c2d5f6e8_183c3bd9683425b
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+     <link href='https://fonts.googleapis.com/css?family=Raleway:800' rel='stylesheet' type='text/css'>
+     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/aileron" type="text/css"/>
+     
+  </head>
+  <body style="width:100%;  font-family: Lato; ">
+    <div style="padding: 5%"> 
+      <img style="width: 100%" src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/1_9_orig.png"> 
+      <h5  style="font-family: Raleway;font-size: 2em; text-align:center"> Hey Amina,</h5>
+      <div style="text-align: center"> 
+         <h2> This Week's Jobs </h2>
+                 <h4> <a href="https://ag.ny.gov/sites/default/files/job-postings/intergovernmental_and_community_affairs_nyc_internship_2016-17_int.pdf">Fall and Spring Intern</a> |Bureau of Intergovernmental and Community Affairs, City of New York<br> </h4>
+                 <h4> <a href="https://www.indeed.com/viewjob?jk=8eaa2578a7a54a20&amp;q=political+campaign+intern&amp;tk=1bedts6ue18585ej&amp;from=web">Public Policy Intern (DC)</a> |American Association of University Women <br> </h4>
+              
+    
+                    <h4> <a href="https://ag.ny.gov/sites/default/files/job-postings/intergovernmental_and_community_affairs_nyc_internship_2016-17_int.pdf">Fall and Spring Intern</a>  |Bureau of Intergovernmental and Community Affairs, City of New York<br> </h4> <br> 
+        
+        <!-- TIPS -->
+        
+        <h2>This Week's Tips </h2>
+
+                  <h5> Law School Statement Do&#39;s and Don&#39;ts <br> </h5>
+                  <h4> Checks out tips from Berkeley&#39;s Career Center on how to write the perfect statement<br> </h4>
+                  <h4> <a href="https://career.berkeley.edu/Law/LawStatement">Read More</a><br> </h4>
+                  <h5> Writing the Personal Statement | Berkeley Graduate Division<br> </h5>
+                  <h4> Helpful tips and advice for drafting a compelling personal statement when applying for graduate admission<br> </h4>
+                  <h4> <a href="http://grad.berkeley.edu/admissions/apply/personal-statement/">Read More</a><br> </h4>
+
+          
+         
+      </div >
+      
+ 
+      
+  
+      <div class="share" style="background-color: #44d9e6; padding: 2%; text-align: center; font-size: 2em;
+      color: white; font-family: Raleway; margin: 5% 0;" > 
+        <h6> My Share Code </h6> <h6> <a style="color:white" href="jointhebloc.com/AminaYamusah32">jointhebloc.com/AminaYamusah32</a></h6>
+        <h6> Promoted Opps </h6>
+        <h6> <a style="color:white" href="jointhebloc.com/jobs">Check out internships &amp; entry level jobs at Cox, Atlanta Black Star &amp; YMCA </a>  </h6>
+      </div>
+      
+      <p> unsubscribe from email updates anytime by replying "Unsubscribe" to this email </p>
+    </div>
+  </body>
+</html>
+
+  </body>
+</html>
+
+----==_mimepart_59009c2d5f6e8_183c3bd9683425b--
+
+D, [2017-04-26T11:11:59.830349 #8025] DEBUG -- :   [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+D, [2017-04-26T11:11:59.894023 #8025] DEBUG -- :   [1m[36mVision Load (0.5ms)[0m  [1m[34mSELECT  "visions".* FROM "visions" ORDER BY "visions"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+D, [2017-04-26T11:12:00.925699 #8025] DEBUG -- : WeeklyPlaylistMailer#weekly_playlist: processed outbound mail in 255.2ms
+D, [2017-04-26T11:12:28.501532 #8034] DEBUG -- :   [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3291956229089353245);[0m
+D, [2017-04-26T11:12:28.522161 #8034] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2017-04-26T11:12:28.532062 #8034]  INFO -- : Migrating to AddLoginTokenToUsers (20170426132743)
+D, [2017-04-26T11:12:28.534433 #8034] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+D, [2017-04-26T11:12:28.536267 #8034] DEBUG -- :   [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "users" ADD "login_bypass_token" character varying[0m
+D, [2017-04-26T11:12:28.540106 #8034] DEBUG -- :   [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170426132743"]]
+D, [2017-04-26T11:12:28.541781 #8034] DEBUG -- :   [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-04-26T11:12:28.547687 #8034] DEBUG -- :   [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+D, [2017-04-26T11:12:28.552446 #8034] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+D, [2017-04-26T11:12:28.553727 #8034] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-04-26T11:12:28.554230 #8034] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(3291956229089353245)[0m
+D, [2017-04-26T11:12:35.645486 #8038] DEBUG -- :   [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+D, [2017-04-26T11:12:35.716151 #8038] DEBUG -- :   [1m[36mVision Load (0.6ms)[0m  [1m[34mSELECT  "visions".* FROM "visions" ORDER BY "visions"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+D, [2017-04-26T11:12:36.469748 #8038] DEBUG -- :   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."login_bypass_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["login_bypass_token", "8de4c40427c8fb37807f859ca4d3589f58b9ee6bb0e5ebd2a6d7847bd54cc5d7"], ["LIMIT", 1]]
+D, [2017-04-26T11:12:36.471027 #8038] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+D, [2017-04-26T11:12:36.475266 #8038] DEBUG -- :   [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "users" SET "login_bypass_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["login_bypass_token", "8de4c40427c8fb37807f859ca4d3589f58b9ee6bb0e5ebd2a6d7847bd54cc5d7"], ["updated_at", 2017-04-26 15:12:36 UTC], ["id", 1]]
+D, [2017-04-26T11:12:36.476911 #8038] DEBUG -- :   [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+I, [2017-04-26T11:12:36.485305 #8038]  INFO -- :   Rendering weekly_playlist_mailer/weekly_playlist.html.erb within layouts/mailer
+D, [2017-04-26T11:12:36.488822 #8038] DEBUG -- :   [1m[36mJob Load (1.0ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" ORDER BY created_at DESC LIMIT $1[0m  [["LIMIT", 2]]
+D, [2017-04-26T11:12:36.504837 #8038] DEBUG -- :   [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" ORDER BY created_at DESC LIMIT $1[0m  [["LIMIT", 1]]
+D, [2017-04-26T11:12:36.505886 #8038] DEBUG -- :   [1m[36mTip Load (0.4ms)[0m  [1m[34mSELECT  "tips".* FROM "tips" ORDER BY created_at DESC LIMIT $1[0m  [["LIMIT", 2]]
+I, [2017-04-26T11:12:36.518317 #8038]  INFO -- :   Rendered weekly_playlist_mailer/weekly_playlist.html.erb within layouts/mailer (32.9ms)
+D, [2017-04-26T11:12:36.518469 #8038] DEBUG -- : WeeklyPlaylistMailer#weekly_playlist: processed outbound mail in 306.1ms
+D, [2017-04-26T11:19:35.548949 #8145] DEBUG -- :   [1m[36mJob Load (0.8ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" ORDER BY "jobs"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+D, [2017-04-26T11:19:39.875926 #8157] DEBUG -- :   [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+D, [2017-04-26T11:19:39.949244 #8157] DEBUG -- :   [1m[36mVision Load (0.6ms)[0m  [1m[34mSELECT  "visions".* FROM "visions" ORDER BY "visions"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+D, [2017-04-26T11:19:40.645707 #8157] DEBUG -- :   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."login_bypass_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["login_bypass_token", "9d7206b9c47ec6b21fc3f113e029c2421749128a35230c37f6065e28f4733132"], ["LIMIT", 1]]
+D, [2017-04-26T11:19:40.646830 #8157] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+D, [2017-04-26T11:19:40.650546 #8157] DEBUG -- :   [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "users" SET "login_bypass_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["login_bypass_token", "9d7206b9c47ec6b21fc3f113e029c2421749128a35230c37f6065e28f4733132"], ["updated_at", 2017-04-26 15:19:40 UTC], ["id", 1]]
+D, [2017-04-26T11:19:40.652154 #8157] DEBUG -- :   [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+I, [2017-04-26T11:19:40.662841 #8157]  INFO -- :   Rendering weekly_playlist_mailer/weekly_playlist.html.erb within layouts/mailer
+D, [2017-04-26T11:19:40.667650 #8157] DEBUG -- :   [1m[36mJob Load (1.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" ORDER BY created_at DESC LIMIT $1[0m  [["LIMIT", 2]]
+D, [2017-04-26T11:19:40.683620 #8157] DEBUG -- :   [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" ORDER BY created_at DESC LIMIT $1[0m  [["LIMIT", 1]]
+D, [2017-04-26T11:19:40.684773 #8157] DEBUG -- :   [1m[36mTip Load (0.4ms)[0m  [1m[34mSELECT  "tips".* FROM "tips" ORDER BY created_at DESC LIMIT $1[0m  [["LIMIT", 2]]
+I, [2017-04-26T11:19:40.695838 #8157]  INFO -- :   Rendered weekly_playlist_mailer/weekly_playlist.html.erb within layouts/mailer (32.8ms)
+I, [2017-04-26T11:19:40.697087 #8157]  INFO -- :   Rendering weekly_playlist_mailer/weekly_playlist.text.erb within layouts/mailer
+I, [2017-04-26T11:19:40.697409 #8157]  INFO -- :   Rendered weekly_playlist_mailer/weekly_playlist.text.erb within layouts/mailer (0.2ms)
+D, [2017-04-26T11:19:40.872684 #8157] DEBUG -- : WeeklyPlaylistMailer#weekly_playlist: processed outbound mail in 473.2ms
+I, [2017-04-26T11:19:42.664703 #8157]  INFO -- : Sent mail to ayamusah213@gmail.com (1791.7ms)
+D, [2017-04-26T11:19:42.664832 #8157] DEBUG -- : Date: Wed, 26 Apr 2017 11:19:40 -0400
+From: amina@ourbloc.co
+To: ayamusah213@gmail.com
+Message-ID: <5900ba8cd6527_1fdd10df970887b6@bloc.mail>
+Subject: Hey Amina, here are some opportunities we think you'll love!
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5900ba8cd49f4_1fdd10df9708866f";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5900ba8cd49f4_1fdd10df9708866f
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5900ba8cd49f4_1fdd10df9708866f
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+     <link href='https://fonts.googleapis.com/css?family=Raleway:800' rel='stylesheet' type='text/css'>
+     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/aileron" type="text/css"/>
+     
+  </head>
+  <body style="width:100%;  font-family: Lato; ">
+    <div style="padding: 5%"> 
+      <img style="width: 100%" src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/1_9_orig.png"> 
+      <h5  style="font-family: Raleway;font-size: 2em; text-align:center"> Hey Amina,</h5>
+      <div style="text-align: center"> 
+         <h2> This Week's Jobs </h2>
+                 <h4> <a href="https://ag.ny.gov/sites/default/files/job-postings/intergovernmental_and_community_affairs_nyc_internship_2016-17_int.pdf">Fall and Spring Intern</a> |Bureau of Intergovernmental and Community Affairs, City of New York<br> </h4>
+                 <h4> <a href="https://www.indeed.com/viewjob?jk=8eaa2578a7a54a20&amp;q=political+campaign+intern&amp;tk=1bedts6ue18585ej&amp;from=web">Public Policy Intern (DC)</a> |American Association of University Women <br> </h4>
+              
+    
+                    <h4> <a href="https://ag.ny.gov/sites/default/files/job-postings/intergovernmental_and_community_affairs_nyc_internship_2016-17_int.pdf">Fall and Spring Intern</a>  |Bureau of Intergovernmental and Community Affairs, City of New York<br> </h4> <br> 
+        
+        <!-- TIPS -->
+        
+        <h2>This Week's Tips </h2>
+
+                  <h5> Law School Statement Do&#39;s and Don&#39;ts <br> </h5>
+                  <h4> Checks out tips from Berkeley&#39;s Career Center on how to write the perfect statement<br> </h4>
+                  <h4> <a href="https://career.berkeley.edu/Law/LawStatement">Read More</a><br> </h4>
+                  <h5> Writing the Personal Statement | Berkeley Graduate Division<br> </h5>
+                  <h4> Helpful tips and advice for drafting a compelling personal statement when applying for graduate admission<br> </h4>
+                  <h4> <a href="http://grad.berkeley.edu/admissions/apply/personal-statement/">Read More</a><br> </h4>
+
+          <a href="http://www.jointhebloc.com/myplaylist?login_bypass_token=SmtxfSs8CQrMRwFFM_Mj">View your full career playlist</a> 
+
+      </div >
+      
+ 
+      
+  
+      <div class="share" style="background-color: #44d9e6; padding: 2%; text-align: center; font-size: 2em;
+      color: white; font-family: Raleway; margin: 5% 0;" > 
+        <h6> My Share Code </h6> <h6> <a style="color:white" href="jointhebloc.com/AminaYamusah32">jointhebloc.com/AminaYamusah32</a></h6>
+        <h6> Promoted Opps </h6>
+        <h6> <a style="color:white" href="jointhebloc.com/jobs">Check out internships &amp; entry level jobs at Cox, Atlanta Black Star &amp; YMCA </a>  </h6>
+      </div>
+      
+      <p> unsubscribe from email updates anytime by replying "Unsubscribe" to this email </p>
+    </div>
+  </body>
+</html>
+
+  </body>
+</html>
+
+----==_mimepart_5900ba8cd49f4_1fdd10df9708866f--
+
+D, [2017-04-26T11:25:58.754493 #8331] DEBUG -- :   [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+D, [2017-04-26T11:25:58.827330 #8331] DEBUG -- :   [1m[36mVision Load (0.5ms)[0m  [1m[34mSELECT  "visions".* FROM "visions" ORDER BY "visions"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+I, [2017-04-26T11:25:59.344423 #8331]  INFO -- :   Rendering weekly_playlist_mailer/weekly_playlist.html.erb within layouts/mailer
+D, [2017-04-26T11:25:59.349265 #8331] DEBUG -- :   [1m[36mJob Load (1.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" ORDER BY created_at DESC LIMIT $1[0m  [["LIMIT", 2]]
+D, [2017-04-26T11:25:59.369301 #8331] DEBUG -- :   [1m[36mJob Load (0.8ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" ORDER BY created_at DESC LIMIT $1[0m  [["LIMIT", 1]]
+D, [2017-04-26T11:25:59.371330 #8331] DEBUG -- :   [1m[36mTip Load (0.7ms)[0m  [1m[34mSELECT  "tips".* FROM "tips" ORDER BY created_at DESC LIMIT $1[0m  [["LIMIT", 2]]
+I, [2017-04-26T11:25:59.385362 #8331]  INFO -- :   Rendered weekly_playlist_mailer/weekly_playlist.html.erb within layouts/mailer (40.7ms)
+I, [2017-04-26T11:25:59.387046 #8331]  INFO -- :   Rendering weekly_playlist_mailer/weekly_playlist.text.erb within layouts/mailer
+I, [2017-04-26T11:25:59.387560 #8331]  INFO -- :   Rendered weekly_playlist_mailer/weekly_playlist.text.erb within layouts/mailer (0.4ms)
+D, [2017-04-26T11:25:59.560895 #8331] DEBUG -- : WeeklyPlaylistMailer#weekly_playlist: processed outbound mail in 226.0ms
+I, [2017-04-26T11:26:01.259556 #8331]  INFO -- : Sent mail to ayamusah213@gmail.com (1698.3ms)
+D, [2017-04-26T11:26:01.259685 #8331] DEBUG -- : Date: Wed, 26 Apr 2017 11:25:59 -0400
+From: amina@ourbloc.co
+To: ayamusah213@gmail.com
+Message-ID: <5900bc078a47c_208beb596016686@bloc.mail>
+Subject: Hey Amina, here are some opportunities we think you'll love!
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5900bc0788792_208beb596016522";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5900bc0788792_208beb596016522
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5900bc0788792_208beb596016522
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+     <link href='https://fonts.googleapis.com/css?family=Raleway:800' rel='stylesheet' type='text/css'>
+     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/aileron" type="text/css"/>
+     
+  </head>
+  <body style="width:100%;  font-family: Lato; ">
+    <div style="padding: 5%"> 
+      <img style="width: 100%" src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/1_9_orig.png"> 
+      <h5  style="font-family: Raleway;font-size: 2em; text-align:center"> Hey Amina,</h5>
+      <div style="text-align: center"> 
+         <h2> This Week's Jobs </h2>
+                 <h4> <a href="https://ag.ny.gov/sites/default/files/job-postings/intergovernmental_and_community_affairs_nyc_internship_2016-17_int.pdf">Fall and Spring Intern</a> |Bureau of Intergovernmental and Community Affairs, City of New York<br> </h4>
+                 <h4> <a href="https://www.indeed.com/viewjob?jk=8eaa2578a7a54a20&amp;q=political+campaign+intern&amp;tk=1bedts6ue18585ej&amp;from=web">Public Policy Intern (DC)</a> |American Association of University Women <br> </h4>
+              
+    
+                    <h4> <a href="https://ag.ny.gov/sites/default/files/job-postings/intergovernmental_and_community_affairs_nyc_internship_2016-17_int.pdf">Fall and Spring Intern</a>  |Bureau of Intergovernmental and Community Affairs, City of New York<br> </h4> <br> 
+        
+        <!-- TIPS -->
+        
+        <h2>This Week's Tips </h2>
+
+                  <h5> Law School Statement Do&#39;s and Don&#39;ts <br> </h5>
+                  <h4> Checks out tips from Berkeley&#39;s Career Center on how to write the perfect statement<br> </h4>
+                  <h4> <a href="https://career.berkeley.edu/Law/LawStatement">Read More</a><br> </h4>
+                  <h5> Writing the Personal Statement | Berkeley Graduate Division<br> </h5>
+                  <h4> Helpful tips and advice for drafting a compelling personal statement when applying for graduate admission<br> </h4>
+                  <h4> <a href="http://grad.berkeley.edu/admissions/apply/personal-statement/">Read More</a><br> </h4>
+
+          <a href="http://www.jointhebloc.com/myplaylist?login_bypass_token=AminaYamusah32">View your full career playlist</a> 
+
+      </div >
+      
+ 
+      
+  
+      <div class="share" style="background-color: #44d9e6; padding: 2%; text-align: center; font-size: 2em;
+      color: white; font-family: Raleway; margin: 5% 0;" > 
+        <h6> My Share Code </h6> <h6> <a style="color:white" href="jointhebloc.com/AminaYamusah32">jointhebloc.com/AminaYamusah32</a></h6>
+        <h6> Promoted Opps </h6>
+        <h6> <a style="color:white" href="jointhebloc.com/jobs">Check out internships &amp; entry level jobs at Cox, Atlanta Black Star &amp; YMCA </a>  </h6>
+      </div>
+      
+      <p> unsubscribe from email updates anytime by replying "Unsubscribe" to this email </p>
+    </div>
+  </body>
+</html>
+
+  </body>
+</html>
+
+----==_mimepart_5900bc0788792_208beb596016522--
+
+D, [2017-04-26T11:50:18.851655 #8622] DEBUG -- :   [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+D, [2017-04-26T11:50:18.925482 #8622] DEBUG -- :   [1m[36mVision Load (0.6ms)[0m  [1m[34mSELECT  "visions".* FROM "visions" ORDER BY "visions"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+I, [2017-04-26T11:50:19.453656 #8622]  INFO -- :   Rendering weekly_playlist_mailer/weekly_playlist.html.erb within layouts/mailer
+D, [2017-04-26T11:50:19.458956 #8622] DEBUG -- :   [1m[36mJob Load (1.5ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" ORDER BY created_at DESC LIMIT $1[0m  [["LIMIT", 2]]
+D, [2017-04-26T11:50:19.479103 #8622] DEBUG -- :   [1m[36mJob Load (0.7ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" ORDER BY created_at DESC LIMIT $1[0m  [["LIMIT", 1]]
+D, [2017-04-26T11:50:19.480676 #8622] DEBUG -- :   [1m[36mTip Load (0.6ms)[0m  [1m[34mSELECT  "tips".* FROM "tips" ORDER BY created_at DESC LIMIT $1[0m  [["LIMIT", 2]]
+I, [2017-04-26T11:50:19.494780 #8622]  INFO -- :   Rendered weekly_playlist_mailer/weekly_playlist.html.erb within layouts/mailer (40.9ms)
+I, [2017-04-26T11:50:19.496427 #8622]  INFO -- :   Rendering weekly_playlist_mailer/weekly_playlist.text.erb within layouts/mailer
+I, [2017-04-26T11:50:19.496860 #8622]  INFO -- :   Rendered weekly_playlist_mailer/weekly_playlist.text.erb within layouts/mailer (0.3ms)
+D, [2017-04-26T11:50:19.656278 #8622] DEBUG -- : WeeklyPlaylistMailer#weekly_playlist: processed outbound mail in 218.3ms
+I, [2017-04-26T11:50:21.411214 #8622]  INFO -- : Sent mail to ayamusah213@gmail.com (1754.6ms)
+D, [2017-04-26T11:50:21.411422 #8622] DEBUG -- : Date: Wed, 26 Apr 2017 11:50:19 -0400
+From: amina@ourbloc.co
+To: ayamusah213@gmail.com
+Message-ID: <5900c1bba1844_21ae5239607538a@bloc.mail>
+Subject: Hey Amina, here are some opportunities we think you'll love!
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5900c1bb9fd17_21ae52396075298";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5900c1bb9fd17_21ae52396075298
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5900c1bb9fd17_21ae52396075298
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+     <link href='https://fonts.googleapis.com/css?family=Raleway:800' rel='stylesheet' type='text/css'>
+     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/aileron" type="text/css"/>
+     
+  </head>
+  <body style="width:100%;  font-family: Lato; ">
+    <div style="padding: 5%"> 
+      <img style="width: 100%" src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/1_9_orig.png"> 
+      <h5  style="font-family: Raleway;font-size: 2em; text-align:center"> Hey Amina,</h5>
+      <div style="text-align: center"> 
+         <h2> This Week's Jobs </h2>
+                 <h4> <a href="https://ag.ny.gov/sites/default/files/job-postings/intergovernmental_and_community_affairs_nyc_internship_2016-17_int.pdf">Fall and Spring Intern</a> |Bureau of Intergovernmental and Community Affairs, City of New York<br> </h4>
+                 <h4> <a href="https://www.indeed.com/viewjob?jk=8eaa2578a7a54a20&amp;q=political+campaign+intern&amp;tk=1bedts6ue18585ej&amp;from=web">Public Policy Intern (DC)</a> |American Association of University Women <br> </h4>
+              
+    
+                    <h4> <a href="https://ag.ny.gov/sites/default/files/job-postings/intergovernmental_and_community_affairs_nyc_internship_2016-17_int.pdf">Fall and Spring Intern</a>  |Bureau of Intergovernmental and Community Affairs, City of New York<br> </h4> <br> 
+        
+        <!-- TIPS -->
+        
+        <h2>This Week's Tips </h2>
+
+                  <h5> Law School Statement Do&#39;s and Don&#39;ts <br> </h5>
+                  <h4> Checks out tips from Berkeley&#39;s Career Center on how to write the perfect statement<br> </h4>
+                  <h4> <a href="https://career.berkeley.edu/Law/LawStatement">Read More</a><br> </h4>
+                  <h5> Writing the Personal Statement | Berkeley Graduate Division<br> </h5>
+                  <h4> Helpful tips and advice for drafting a compelling personal statement when applying for graduate admission<br> </h4>
+                  <h4> <a href="http://grad.berkeley.edu/admissions/apply/personal-statement/">Read More</a><br> </h4>
+            <a href="http://www.jointhebloc.com/visions/1">View your full career playlist</a>
+
+      </div >
+      
+ 
+      
+  
+      <div class="share" style="background-color: #44d9e6; padding: 2%; text-align: center; font-size: 2em;
+      color: white; font-family: Raleway; margin: 5% 0;" > 
+        <h6> My Share Code </h6> <h6> <a style="color:white" href="jointhebloc.com/AminaYamusah32">jointhebloc.com/AminaYamusah32</a></h6>
+        <h6> Promoted Opps </h6>
+        <h6> <a style="color:white" href="jointhebloc.com/jobs">Check out internships &amp; entry level jobs at Cox, Atlanta Black Star &amp; YMCA </a>  </h6>
+      </div>
+      
+      <p> unsubscribe from email updates anytime by replying "Unsubscribe" to this email </p>
+    </div>
+  </body>
+</html>
+
+  </body>
+</html>
+
+----==_mimepart_5900c1bb9fd17_21ae52396075298--
+
+D, [2017-04-26T12:52:45.793525 #9797] DEBUG -- :   [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+D, [2017-04-26T12:52:45.870038 #9797] DEBUG -- :   [1m[36mVision Load (0.6ms)[0m  [1m[34mSELECT  "visions".* FROM "visions" ORDER BY "visions"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+I, [2017-04-26T12:52:46.440049 #9797]  INFO -- :   Rendering weekly_playlist_mailer/weekly_playlist.html.erb within layouts/mailer
+D, [2017-04-26T12:52:46.446214 #9797] DEBUG -- :   [1m[36mJob Load (2.1ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" ORDER BY created_at DESC LIMIT $1[0m  [["LIMIT", 2]]
+D, [2017-04-26T12:52:46.467672 #9797] DEBUG -- :   [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" ORDER BY created_at DESC LIMIT $1[0m  [["LIMIT", 1]]
+D, [2017-04-26T12:52:46.469033 #9797] DEBUG -- :   [1m[36mTip Load (0.6ms)[0m  [1m[34mSELECT  "tips".* FROM "tips" ORDER BY created_at DESC LIMIT $1[0m  [["LIMIT", 2]]
+I, [2017-04-26T12:52:46.484198 #9797]  INFO -- :   Rendered weekly_playlist_mailer/weekly_playlist.html.erb within layouts/mailer (43.9ms)
+I, [2017-04-26T12:52:46.485956 #9797]  INFO -- :   Rendering weekly_playlist_mailer/weekly_playlist.text.erb within layouts/mailer
+I, [2017-04-26T12:52:46.486380 #9797]  INFO -- :   Rendered weekly_playlist_mailer/weekly_playlist.text.erb within layouts/mailer (0.3ms)
+D, [2017-04-26T12:52:46.662999 #9797] DEBUG -- : WeeklyPlaylistMailer#weekly_playlist: processed outbound mail in 233.3ms
+I, [2017-04-26T12:52:48.098131 #9797]  INFO -- : Sent mail to ayamusah213@gmail.com (1434.8ms)
+D, [2017-04-26T12:52:48.098262 #9797] DEBUG -- : Date: Wed, 26 Apr 2017 12:52:46 -0400
+From: amina@ourbloc.co
+To: ayamusah213@gmail.com
+Message-ID: <5900d05ea31de_2645e7d970414cb@bloc.mail>
+Subject: Hey Amina, here are some opportunities we think you'll love!
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5900d05ea17b8_2645e7d97041323";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5900d05ea17b8_2645e7d97041323
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5900d05ea17b8_2645e7d97041323
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+     <link href='https://fonts.googleapis.com/css?family=Raleway:800' rel='stylesheet' type='text/css'>
+     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/aileron" type="text/css"/>
+     
+  </head>
+  <body style="width:100%;  font-family: Lato; ">
+    <div style="padding: 5%"> 
+      <img style="width: 100%" src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/1_9_orig.png"> 
+      <h5  style="font-family: Raleway;font-size: 2em; text-align:center"> Hey Amina,</h5>
+      <div style="text-align: center"> 
+         <h2 style="font-family: Raleway; color:#44d9e6 "> Here are some jobs that stood out this week... </h2>
+                 <h4 style="font-family: Raleway"> <a href="https://ag.ny.gov/sites/default/files/job-postings/intergovernmental_and_community_affairs_nyc_internship_2016-17_int.pdf">Fall and Spring Intern</a> |Bureau of Intergovernmental and Community Affairs, City of New York<br> </h4>
+                 <h4 style="font-family: Raleway"> <a href="https://www.indeed.com/viewjob?jk=8eaa2578a7a54a20&amp;q=political+campaign+intern&amp;tk=1bedts6ue18585ej&amp;from=web">Public Policy Intern (DC)</a> |American Association of University Women <br> </h4>
+              
+    
+                    <h4 style="font-family: Raleway"> <a href="https://ag.ny.gov/sites/default/files/job-postings/intergovernmental_and_community_affairs_nyc_internship_2016-17_int.pdf">Fall and Spring Intern</a>  |Bureau of Intergovernmental and Community Affairs, City of New York<br> </h4> <br> 
+        
+        <!-- TIPS -->
+        
+        <h2 style="font-family: Raleway; color:#44d9e6 ">And some quick tips and resources ... </h2>
+
+                  <h4 style="font-family: Raleway"> Law School Statement Do&#39;s and Don&#39;ts <br> </h4>
+                  <h5 style="font-family: Raleway"> Checks out tips from Berkeley&#39;s Career Center on how to write the perfect statement<br> </h5>
+                  <h4 style="font-family: Raleway"> <a href="https://career.berkeley.edu/Law/LawStatement">Read More</a><br> </h4>
+                  <h4 style="font-family: Raleway"> Writing the Personal Statement | Berkeley Graduate Division<br> </h4>
+                  <h5 style="font-family: Raleway"> Helpful tips and advice for drafting a compelling personal statement when applying for graduate admission<br> </h5>
+                  <h4 style="font-family: Raleway"> <a href="http://grad.berkeley.edu/admissions/apply/personal-statement/">Read More</a><br> </h4>
+         
+
+      </div >
+      
+ 
+      
+  
+      <div class="share" style="background-color: #44d9e6; padding: 2%; text-align: center; font-size: 2em;
+      color: white; font-family: Raleway; margin: 5% 0;" > 
+      
+            <h6 style="font-family: Raleway"> <a href="http://www.jointhebloc.com/visions/1">View your full career playlist</a>
+        <h6> Share with a friend! </h6> <h6> <a style="color:white" href="jointhebloc.com/AminaYamusah32">share code: jointhebloc.com/AminaYamusah32</a></h6>
+        
+      
+      <p> unsubscribe from email updates anytime by replying "Unsubscribe" to this email </p>
+    </div>
+  </body>
+</html>
+
+  </body>
+</html>
+
+----==_mimepart_5900d05ea17b8_2645e7d97041323--
+
+D, [2017-04-26T12:55:31.776738 #9894] DEBUG -- :   [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+D, [2017-04-26T12:55:31.850238 #9894] DEBUG -- :   [1m[36mVision Load (0.6ms)[0m  [1m[34mSELECT  "visions".* FROM "visions" ORDER BY "visions"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+I, [2017-04-26T12:55:32.376970 #9894]  INFO -- :   Rendering weekly_playlist_mailer/weekly_playlist.html.erb within layouts/mailer
+D, [2017-04-26T12:55:32.382079 #9894] DEBUG -- :   [1m[36mJob Load (1.7ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" ORDER BY created_at DESC LIMIT $1[0m  [["LIMIT", 2]]
+D, [2017-04-26T12:55:32.401849 #9894] DEBUG -- :   [1m[36mJob Load (0.6ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" ORDER BY created_at DESC LIMIT $1[0m  [["LIMIT", 1]]
+D, [2017-04-26T12:55:32.403181 #9894] DEBUG -- :   [1m[36mTip Load (0.5ms)[0m  [1m[34mSELECT  "tips".* FROM "tips" ORDER BY created_at DESC LIMIT $1[0m  [["LIMIT", 2]]
+I, [2017-04-26T12:55:32.416253 #9894]  INFO -- :   Rendered weekly_playlist_mailer/weekly_playlist.html.erb within layouts/mailer (39.1ms)
+I, [2017-04-26T12:55:32.417839 #9894]  INFO -- :   Rendering weekly_playlist_mailer/weekly_playlist.text.erb within layouts/mailer
+I, [2017-04-26T12:55:32.418229 #9894]  INFO -- :   Rendered weekly_playlist_mailer/weekly_playlist.text.erb within layouts/mailer (0.3ms)
+D, [2017-04-26T12:55:32.581043 #9894] DEBUG -- : WeeklyPlaylistMailer#weekly_playlist: processed outbound mail in 213.2ms
+I, [2017-04-26T12:55:33.650029 #9894]  INFO -- : Sent mail to ayamusah213@gmail.com (1068.7ms)
+D, [2017-04-26T12:55:33.650178 #9894] DEBUG -- : Date: Wed, 26 Apr 2017 12:55:32 -0400
+From: amina@ourbloc.co
+To: ayamusah213@gmail.com
+Message-ID: <5900d1048f2e8_26a611ad960346f9@bloc.mail>
+Subject: Hey Amina, here are some opportunities we think you'll love!
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5900d1048d640_26a611ad960345ad";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5900d1048d640_26a611ad960345ad
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5900d1048d640_26a611ad960345ad
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+     <link href='https://fonts.googleapis.com/css?family=Raleway:800' rel='stylesheet' type='text/css'>
+     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/aileron" type="text/css"/>
+     
+  </head>
+  <body style="width:100%;  font-family: Lato; ">
+    <div style="padding: 5%"> 
+      <img style="width: 100%" src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/1_9_orig.png"> 
+      <h5  style="font-family: Raleway;font-size: 2em; text-align:center"> Hey Amina,</h5>
+      <div style="text-align: center"> 
+         <h2 style="font-family: Raleway; color:#44d9e6 "> Here are some jobs that stood out this week... </h2>
+                 <h4 style="font-family: Raleway"> <a href="https://ag.ny.gov/sites/default/files/job-postings/intergovernmental_and_community_affairs_nyc_internship_2016-17_int.pdf">Fall and Spring Intern</a> |Bureau of Intergovernmental and Community Affairs, City of New York<br> </h4>
+                 <h4 style="font-family: Raleway"> <a href="https://www.indeed.com/viewjob?jk=8eaa2578a7a54a20&amp;q=political+campaign+intern&amp;tk=1bedts6ue18585ej&amp;from=web">Public Policy Intern (DC)</a> |American Association of University Women <br> </h4>
+              
+    
+                    <h4 style="font-family: Raleway"> <a href="https://ag.ny.gov/sites/default/files/job-postings/intergovernmental_and_community_affairs_nyc_internship_2016-17_int.pdf">Fall and Spring Intern</a>  |Bureau of Intergovernmental and Community Affairs, City of New York<br> </h4> <br> 
+        
+        <!-- TIPS -->
+        
+        <h2 style="font-family: Raleway; color:#44d9e6 ">And some quick tips and resources ... </h2>
+
+                  <h4 style="font-family: Raleway"> Law School Statement Do&#39;s and Don&#39;ts <br> </h4>
+                  <h5 style="font-family: Raleway"> Checks out tips from Berkeley&#39;s Career Center on how to write the perfect statement<br> </h5>
+                  <h4 style="font-family: Raleway"> <a href="https://career.berkeley.edu/Law/LawStatement">Read More</a><br> </h4>
+                  <h4 style="font-family: Raleway"> Writing the Personal Statement | Berkeley Graduate Division<br> </h4>
+                  <h5 style="font-family: Raleway"> Helpful tips and advice for drafting a compelling personal statement when applying for graduate admission<br> </h5>
+                  <h4 style="font-family: Raleway"> <a href="http://grad.berkeley.edu/admissions/apply/personal-statement/">Read More</a><br> </h4>
+         
+
+      </div >
+      
+ 
+      
+  
+      <div class="share" style="background-color: #44d9e6; padding: 2%; text-align: center; font-size: 2em;
+      color: white; font-family: Raleway; margin: 5% 0;" > 
+      
+            <h6 style="font-family: Raleway"> <a href="http://www.jointhebloc.com/visions/1">View your full career playlist</a>
+        <h6> Share with a friend! </h6> <h6> <a style="color:white" href="jointhebloc.com/AminaYamusah32">share code: jointhebloc.com/AminaYamusah32</a></h6>
+        
+      
+      <p> unsubscribe from email updates anytime by replying "Unsubscribe" to this email </p>
+    </div>
+  </body>
+</html>
+
+  </body>
+</html>
+
+----==_mimepart_5900d1048d640_26a611ad960345ad--
+
+D, [2017-04-26T13:02:13.165056 #10065] DEBUG -- :   [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+D, [2017-04-26T13:02:13.237310 #10065] DEBUG -- :   [1m[36mVision Load (0.7ms)[0m  [1m[34mSELECT  "visions".* FROM "visions" ORDER BY "visions"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+I, [2017-04-26T13:02:13.774625 #10065]  INFO -- :   Rendering weekly_playlist_mailer/weekly_playlist.html.erb within layouts/mailer
+D, [2017-04-26T13:02:13.780698 #10065] DEBUG -- :   [1m[36mJob Load (1.7ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" ORDER BY created_at DESC LIMIT $1[0m  [["LIMIT", 2]]
+D, [2017-04-26T13:02:13.799589 #10065] DEBUG -- :   [1m[36mJob Load (0.5ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" ORDER BY created_at DESC LIMIT $1[0m  [["LIMIT", 1]]
+D, [2017-04-26T13:02:13.800881 #10065] DEBUG -- :   [1m[36mTip Load (0.6ms)[0m  [1m[34mSELECT  "tips".* FROM "tips" ORDER BY created_at DESC LIMIT $1[0m  [["LIMIT", 2]]
+I, [2017-04-26T13:02:13.813520 #10065]  INFO -- :   Rendered weekly_playlist_mailer/weekly_playlist.html.erb within layouts/mailer (38.6ms)
+I, [2017-04-26T13:02:13.815069 #10065]  INFO -- :   Rendering weekly_playlist_mailer/weekly_playlist.text.erb within layouts/mailer
+I, [2017-04-26T13:02:13.815589 #10065]  INFO -- :   Rendered weekly_playlist_mailer/weekly_playlist.text.erb within layouts/mailer (0.3ms)
+D, [2017-04-26T13:02:13.972928 #10065] DEBUG -- : WeeklyPlaylistMailer#weekly_playlist: processed outbound mail in 207.7ms
+I, [2017-04-26T13:02:15.366181 #10065]  INFO -- : Sent mail to ayamusah213@gmail.com (1392.9ms)
+D, [2017-04-26T13:02:15.366392 #10065] DEBUG -- : Date: Wed, 26 Apr 2017 13:02:13 -0400
+From: amina@ourbloc.co
+To: ayamusah213@gmail.com
+Message-ID: <5900d295eed67_27513e196c86052@bloc.mail>
+Subject: Hey Amina, here are some opportunities we think you'll love!
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5900d295ed1ba_27513e196c859f3";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5900d295ed1ba_27513e196c859f3
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5900d295ed1ba_27513e196c859f3
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+ <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+     <link href='https://fonts.googleapis.com/css?family=Raleway:800' rel='stylesheet' type='text/css'>
+     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/aileron" type="text/css"/>
+     
+  </head>
+  
+  <body style="width:100%;  font-family: Lato; ">
+    <div style="padding: 5%"> 
+      <img style="width: 100%" src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/1_9_orig.png"> 
+      <h5  style="font-family: Raleway, Sans Serif, Sans Serif;font-size: 2em; text-align:center"> Hey Amina,</h5>
+      <div style="text-align: center"> 
+         <h2 style="font-family: Raleway, Sans Serif; color:#44d9e6 "> Here are some jobs that stood out this week... </h2>
+                 <h4 style="font-family: Raleway, Sans Serif"> <a href="https://ag.ny.gov/sites/default/files/job-postings/intergovernmental_and_community_affairs_nyc_internship_2016-17_int.pdf">Fall and Spring Intern</a> |Bureau of Intergovernmental and Community Affairs, City of New York<br> </h4>
+                 <h4 style="font-family: Raleway, Sans Serif"> <a href="https://www.indeed.com/viewjob?jk=8eaa2578a7a54a20&amp;q=political+campaign+intern&amp;tk=1bedts6ue18585ej&amp;from=web">Public Policy Intern (DC)</a> |American Association of University Women <br> </h4>
+              
+    
+                    <h4 style="font-family: Raleway, Sans Serif"> <a href="https://ag.ny.gov/sites/default/files/job-postings/intergovernmental_and_community_affairs_nyc_internship_2016-17_int.pdf">Fall and Spring Intern</a>  |Bureau of Intergovernmental and Community Affairs, City of New York<br> </h4> <br> 
+        
+        <!-- TIPS -->
+        
+        <h2 style="font-family: Raleway, Sans Serif; color:#44d9e6 ">And some quick tips and resources ... </h2>
+
+                  <h4 style="font-family: Raleway, Sans Serif"> Law School Statement Do&#39;s and Don&#39;ts <br> </h4>
+                  <h5 style="font-family: Raleway, Sans Serif"> Checks out tips from Berkeley&#39;s Career Center on how to write the perfect statement<br> </h5>
+                  <h4 style="font-family: Raleway, Sans Serif"> <a href="https://career.berkeley.edu/Law/LawStatement">Read More</a><br> </h4>
+                  <h4 style="font-family: Raleway, Sans Serif"> Writing the Personal Statement | Berkeley Graduate Division<br> </h4>
+                  <h5 style="font-family: Raleway, Sans Serif"> Helpful tips and advice for drafting a compelling personal statement when applying for graduate admission<br> </h5>
+                  <h4 style="font-family: Raleway, Sans Serif"> <a href="http://grad.berkeley.edu/admissions/apply/personal-statement/">Read More</a><br> </h4>
+         
+
+      </div >
+      
+ 
+      
+  
+      <div class="share" style="background-color: #44d9e6; padding: 2%; text-align: center; font-size: 2em;
+      color: white; font-family: Raleway, Sans Serif; margin: 5% 0;" > 
+      
+            <h6 style="font-family: Raleway, Sans Serif"> <a href="http://www.jointhebloc.com/visions/1">View your full career playlist</a>
+        <h6> Share with a friend! </h6> <h6> <a style="color:white" href="jointhebloc.com/AminaYamusah32">share code: jointhebloc.com/AminaYamusah32</a></h6>
+        
+      
+      <p> unsubscribe from email updates anytime by replying "Unsubscribe" to this email </p>
+    </div>
+  </body>
+</html>
+
+  </body>
+</html>
+
+----==_mimepart_5900d295ed1ba_27513e196c859f3--
+
+D, [2017-04-26T13:09:23.675121 #10240] DEBUG -- :   [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+D, [2017-04-26T13:09:23.752461 #10240] DEBUG -- :   [1m[36mVision Load (0.5ms)[0m  [1m[34mSELECT  "visions".* FROM "visions" ORDER BY "visions"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+I, [2017-04-26T13:09:24.298970 #10240]  INFO -- :   Rendering weekly_playlist_mailer/weekly_playlist.html.erb within layouts/mailer
+I, [2017-04-26T13:09:24.300668 #10240]  INFO -- :   Rendered weekly_playlist_mailer/weekly_playlist.html.erb within layouts/mailer (1.5ms)
+D, [2017-04-26T13:09:24.300792 #10240] DEBUG -- : WeeklyPlaylistMailer#weekly_playlist: processed outbound mail in 11.0ms
+D, [2017-04-26T13:13:51.809868 #10319] DEBUG -- :   [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+D, [2017-04-26T13:13:51.889398 #10319] DEBUG -- :   [1m[36mVision Load (0.6ms)[0m  [1m[34mSELECT  "visions".* FROM "visions" ORDER BY "visions"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+I, [2017-04-26T13:13:52.415660 #10319]  INFO -- :   Rendering weekly_playlist_mailer/weekly_playlist.html.erb within layouts/mailer
+D, [2017-04-26T13:13:52.420668 #10319] DEBUG -- :   [1m[36mJob Load (1.8ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" ORDER BY created_at DESC LIMIT $1[0m  [["LIMIT", 2]]
+D, [2017-04-26T13:13:52.441229 #10319] DEBUG -- :   [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" ORDER BY created_at DESC LIMIT $1[0m  [["LIMIT", 1]]
+D, [2017-04-26T13:13:52.442439 #10319] DEBUG -- :   [1m[36mTip Load (0.5ms)[0m  [1m[34mSELECT  "tips".* FROM "tips" ORDER BY created_at DESC LIMIT $1[0m  [["LIMIT", 2]]
+I, [2017-04-26T13:13:52.455753 #10319]  INFO -- :   Rendered weekly_playlist_mailer/weekly_playlist.html.erb within layouts/mailer (39.9ms)
+I, [2017-04-26T13:13:52.457716 #10319]  INFO -- :   Rendering weekly_playlist_mailer/weekly_playlist.text.erb within layouts/mailer
+I, [2017-04-26T13:13:52.458251 #10319]  INFO -- :   Rendered weekly_playlist_mailer/weekly_playlist.text.erb within layouts/mailer (0.4ms)
+D, [2017-04-26T13:13:52.623477 #10319] DEBUG -- : WeeklyPlaylistMailer#weekly_playlist: processed outbound mail in 216.8ms
+I, [2017-04-26T13:13:53.774287 #10319]  INFO -- : Sent mail to ayamusah213@gmail.com (1150.5ms)
+D, [2017-04-26T13:13:53.774436 #10319] DEBUG -- : Date: Wed, 26 Apr 2017 13:13:52 -0400
+From: amina@ourbloc.co
+To: ayamusah213@gmail.com
+Message-ID: <5900d550999ff_284fd0396456869@bloc.mail>
+Subject: Hey Amina, here are some opportunities we think you'll love!
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5900d55097bf4_284fd03964567f2";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5900d55097bf4_284fd03964567f2
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5900d55097bf4_284fd03964567f2
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+ <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+     <link href='https://fonts.googleapis.com/css?family=:800' rel='stylesheet' type='text/css'>
+     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/aileron" type="text/css"/>
+     
+  </head>
+  
+  <body style="width:100%;  font-family: Lato; ">
+    <div style="padding: 5%"> 
+      <img style="width: 100%" src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/1_9_orig.png"> 
+      <h5  style="font-family: Sans SerifSans Serif;font-size: 2em; text-align:center"> Hey Amina,</h5>
+      <div style="text-align: center"> 
+         <h2 style="font-family: Sans Serif; color:#44d9e6 "> Here are some jobs that stood out this week... </h2>
+                 <h4 style="font-family: Sans Serif"> <a href="https://ag.ny.gov/sites/default/files/job-postings/intergovernmental_and_community_affairs_nyc_internship_2016-17_int.pdf">Fall and Spring Intern</a> |Bureau of Intergovernmental and Community Affairs, City of New York<br> </h4>
+                 <h4 style="font-family: Sans Serif"> <a href="https://www.indeed.com/viewjob?jk=8eaa2578a7a54a20&amp;q=political+campaign+intern&amp;tk=1bedts6ue18585ej&amp;from=web">Public Policy Intern (DC)</a> |American Association of University Women <br> </h4>
+              
+    
+                    <h4 style="font-family: Sans Serif"> <a href="https://ag.ny.gov/sites/default/files/job-postings/intergovernmental_and_community_affairs_nyc_internship_2016-17_int.pdf">Fall and Spring Intern</a>  |Bureau of Intergovernmental and Community Affairs, City of New York<br> </h4> <br> 
+        
+        <!-- TIPS -->
+        
+        <h2 style="font-family: Sans Serif; color:#44d9e6 ">And some quick tips and resources ... </h2>
+
+                  <h4 style="font-family: Sans Serif"> Law School Statement Do&#39;s and Don&#39;ts <br> </h4>
+                  <h5 style="font-family: Sans Serif"> Checks out tips from Berkeley&#39;s Career Center on how to write the perfect statement<br> </h5>
+                  <h4 style="font-family: Sans Serif"> <a href="https://career.berkeley.edu/Law/LawStatement">Read More</a><br> </h4>
+                  <h4 style="font-family: Sans Serif"> Writing the Personal Statement | Berkeley Graduate Division<br> </h4>
+                  <h5 style="font-family: Sans Serif"> Helpful tips and advice for drafting a compelling personal statement when applying for graduate admission<br> </h5>
+                  <h4 style="font-family: Sans Serif"> <a href="http://grad.berkeley.edu/admissions/apply/personal-statement/">Read More</a><br> </h4>
+         
+
+      </div >
+      
+ 
+      
+  
+      <div class="share" style="background-color: #44d9e6; padding: 2%; text-align: center; font-size: 2em;
+      color: white; font-family: Sans Serif; margin: 5% 0;" > 
+      
+            <h6 style="font-family: Sans Serif"> <a href="http://www.jointhebloc.com/visions/1">View your full career playlist</a>
+        <h6> Share with a friend! </h6> <h6> <a style="color:white" href="jointhebloc.com/AminaYamusah32">share code: jointhebloc.com/AminaYamusah32</a></h6>
+        
+      
+      <p style="font-size: 8px"> unsubscribe from email updates anytime by replying "Unsubscribe" to this email </p>
+    </div>
+  </body>
+</html>
+
+  </body>
+</html>
+
+----==_mimepart_5900d55097bf4_284fd03964567f2--
+
