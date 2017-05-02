@@ -3,8 +3,9 @@ task :send_playlist => :environment do
         
      @users.each do |user|
         if user.id >= 20
+            @user = user
+            
             if @user.industry != nil and @vision.industry == nil
-                @user = user
               @vision = "none"
               @job = Job.order("created_at DESC")
               @tip = Tip.order("created_at DESC").where(:for_email == true )
@@ -31,7 +32,6 @@ task :send_playlist => :environment do
               WeeklyPlaylistMailer.weekly_playlist( @user, @job , @vision, @tip, @indeed).deliver
               
             elsif @user.industry == nil and @vision.industry != nil
-                @user = user
               @vision = Vision.where(:user_id == @user.id).last
               @job = Job.order("created_at DESC")
               @tip = Tip.order("created_at DESC").where(:for_email == true )
