@@ -84,7 +84,7 @@ class ProfileController < ApplicationController
               elsif @user.industry == "CSuite"
                   @indeed_search = IndeedAPI.search_jobs(:q => "business "  + @user.firstjob , :limit => 10)
             else @user.industry == "Activists"
-                  @indeed_search = IndeedAPI.search_jobs(:q => "racial justice "  + @user.firstjob.to_s , :limit => 10)
+                  @indeed_search = IndeedAPI.search_jobs(:q => "social justice "  + @user.firstjob.to_s , :limit => 10)
             end 
         else
               @indeed_search = IndeedAPI.search_jobs(:q => "internship" , :limit => 10)
