@@ -12,18 +12,13 @@
   
   <body style="width:100%;  font-family: Arial; ">
     <div style="padding: 5%"> 
-      <img style="width: 100%" src="/img/emailhead.png"> 
+      <img style="width: 100%" src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/1_9_orig.png"> 
       <h5  style="font-size: 2em; text-align:center"> Hey <%= @user.firstname.capitalize %>,</h5>
       <div style="text-align: center"> 
          <h2 style=" color:#44d9e6 ; font-family: Arial "> Here are a few jobs that stood out this week... </h2>
              <% @jobs.each do |job| %>
-                 <% if @vision.industry !=nil and @vision.industry == job.industry %>
                      <h4 style="font-family: Arial"> <%= link_to job.title, job.link %> |<%=  job.company %><br> </h4>
-                 <% elsif @user.industry != nil and @user.industry == job.industry %> 
-                    <h4 style="font-family: Arial"> <%= link_to job.title, job.link %> |<%=  job.company %><br> </h4>
-                <% elsif job.industry =="All" %> 
 
-                <% end %> 
              <% end %> 
               
               <% @indeed.each do |job| %>
@@ -37,16 +32,10 @@
         <h2 style="font-family: Arial; color:#44d9e6 ">And some quick tips and resources ... </h2>
 
          <% @tips.each do |tip| %>
-            <% if @vision.prep !=nil and @vision.prep == tip.prep %>
                 <h4 style="font-family: Arial"> <%= tip.title %><br> </h4>
                 <h5 style="font-family: Arial"> <%= tip.body %><br> </h5>
                 <h4> <%= link_to "Read More", tip.link, style: "font-family: Arial" %><br> </h4>
-            <% elsif @user.prep != nil and @user.prep == tip.prep %> 
-                <h4 style="font-family: Arial"> <%= tip.title %><br> </h4>
-                <h5 style="font-family: Arial"> <%= tip.body %><br> </h5>
-                <h4> <%= link_to "Read More", tip.link, style: "font-family: Arial" %><br> </h4>
-            <% elsif tip.prep == "All" %> 
-
+             
             <% end %> 
           <% end %> 
          
@@ -60,9 +49,9 @@
       color: white; font-family: Arial; margin: 5% 0;" > 
       
          <% if @vision == "none" %> 
-            <h6 style="text-decoration: none"> <%= link_to 'View your full career playlist', playlist_url(:profileurl => @user.profileurl) %> </h6>
+            <h6 style="text-decoration: none"> <%= link_to 'View your career playlist', playlist_url(:profileurl => @user.profileurl) %> </h6>
           <% else %> 
-            <h6 style="text-decoration: none"> <%= link_to 'View your full career playlist', vision_url(:id => @user.id) %>
+            <h6 style="text-decoration: none"> <%= link_to 'View your career playlist', vision_url(:id => @user.id) %>
           <% end %> 
         <h6> Share with a friend! </h6> <h6> <%= link_to "share code: jointhebloc.com/"+ @user.profileurl, "jointhebloc.com/"+ @user.profileurl, style: "color:white"  %></h6>
         
