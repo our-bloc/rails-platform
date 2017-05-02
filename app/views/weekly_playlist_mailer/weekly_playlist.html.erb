@@ -21,7 +21,7 @@
                      <h4 style="font-family: Arial"> <%= link_to job.title, job.link %> |<%=  job.company %><br> </h4>
                  <% elsif @user.industry != nil and @user.industry == job.industry %> 
                     <h4 style="font-family: Arial"> <%= link_to job.title, job.link %> |<%=  job.company %><br> </h4>
-                
+                <% end %> 
              <% end %> 
               
               <% @indeed.each do |job| %>
@@ -44,7 +44,7 @@
                 <h5 style="font-family: Arial"> <%= tip.body %><br> </h5>
                 <h4> <%= link_to "Read More", tip.link, style: "font-family: Arial" %><br> </h4>
             <% end %> 
-              <% end %> 
+          <% end %> 
          
 
       </div >

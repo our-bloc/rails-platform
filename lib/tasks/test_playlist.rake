@@ -55,5 +55,4 @@ task :test_playlist => :environment do
     
               WeeklyPlaylistMailer.weekly_playlist(@user, @job, @vision, @tip, @indeed).deliver
             end
-
 end
