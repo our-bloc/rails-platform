@@ -1,5 +1,5 @@
 class WeeklyPlaylistMailer < ApplicationMailer
-    default from: "amina@ourbloc.co"
+    default from: "Bloc Team <amina@ourbloc.co>"
 
       def weekly_playlist(user, jobs, vision,tips, indeed )
         
