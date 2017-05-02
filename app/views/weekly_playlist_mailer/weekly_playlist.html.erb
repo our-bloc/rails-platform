@@ -18,7 +18,6 @@
          <h2 style=" color:#44d9e6 ; font-family: Arial "> Here are a few jobs that stood out this week... </h2>
              <% @jobs.each do |job| %>
                      <h4 style="font-family: Arial"> <%= link_to job.title, job.link %> |<%=  job.company %><br> </h4>
-
              <% end %> 
               
               <% @indeed.each do |job| %>
@@ -36,7 +35,6 @@
                 <h5 style="font-family: Arial"> <%= tip.body %><br> </h5>
                 <h4> <%= link_to "Read More", tip.link, style: "font-family: Arial" %><br> </h4>
              
-            <% end %> 
           <% end %> 
          
 
