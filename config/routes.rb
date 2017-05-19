@@ -29,6 +29,8 @@ Rails.application.routes.draw do
   get 'profiles' => 'profile#index', as: :profiles
   get '/home', to: 'welcome#landing', as: :landing
   get '/hello', to: 'welcome#hello', as: :hello
+  get '/morehouse', to: 'university#morehouse', as: :morehouse_path
+
 
   get '/myprofile', to: 'profile#myprofile', as: :myprofile
   get '/myplaylist', to: 'profile#playlist', as: :playlist
