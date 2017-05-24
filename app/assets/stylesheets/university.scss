@@ -1,3 +1,64 @@
 // Place all the styles related to the University controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+body,html{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+   
+    
+}
+
+.menu{
+    background-color: white;
+    margin-top: 20%;
+}
+
+.logo{
+    margin-bottom: 10%;
+}
+.menu_button{
+    background-color: white;
+    border: 3px solid #88132b;
+    margin: 2% 5% 2% 7%;
+    position: relative;
+    height: 3em;
+    text-align: center;
+    text-transform:uppercase;
+    color: #88132b;
+}
+
+a:hover{
+   background-color: inherit;
+   color: grey;
+   
+}
+
+.morehousebg {
+   background-color:#88132b ;
+   position:absolute;
+   height: 80%;
+   width: 75%;
+   z-index: 1;
+   opacity: .7;
+
+}
+
+#register{
+    color: white;
+    position:absolute;
+    top: 40%;
+    z-index: 1;
+    left: 40%;
+    width: 50%;
+    line-height: .8;
+}
+
+.auth_buttons {
+    position:absolute;
+    top: 70%;
+    width: 100%;
+    left: 55%;
+}

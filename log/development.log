@@ -16879,3 +16879,1756 @@ Content-Transfer-Encoding: 7bit
   [1m[36mUser Load (8.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
   [1m[36mUser Load (11.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
   [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/morehouse" for 50.224.217.201 at 2017-05-19 13:39:14 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mJob Load (1.0ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" ORDER BY "jobs"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 3100ms (Views: 3073.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 50.224.217.201 at 2017-05-19 13:39:59 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 197ms (Views: 195.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 50.224.217.201 at 2017-05-19 13:40:14 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 264ms (Views: 262.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 50.224.217.201 at 2017-05-19 13:41:58 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 180ms (Views: 177.7ms | ActiveRecord: 0.0ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/morehouse.jpg"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+ahoy_matey (1.5.4) lib/ahoy/engine.rb:22:in `call_with_quiet_ahoy'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.1) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.1) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.1) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.1) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/morehouse" for 50.224.217.201 at 2017-05-19 13:42:31 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 188ms (Views: 185.0ms | ActiveRecord: 0.0ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/morehouselogo.jpg"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+ahoy_matey (1.5.4) lib/ahoy/engine.rb:22:in `call_with_quiet_ahoy'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.1) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.1) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.1) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.1) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/morehouse" for 50.224.217.201 at 2017-05-19 13:42:42 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 256ms (Views: 254.4ms | ActiveRecord: 0.0ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/morehouselogo.jpg"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+ahoy_matey (1.5.4) lib/ahoy/engine.rb:22:in `call_with_quiet_ahoy'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.1) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.1) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.1) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.1) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/morehouse" for 50.224.217.201 at 2017-05-19 13:43:32 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 164ms (Views: 162.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 50.224.217.201 at 2017-05-19 13:44:07 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 225ms (Views: 222.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 50.224.217.201 at 2017-05-19 13:44:24 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 175ms (Views: 172.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 50.224.217.201 at 2017-05-19 13:46:07 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 243ms (Views: 239.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 50.224.217.201 at 2017-05-19 13:56:34 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 736ms (Views: 733.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 50.224.217.201 at 2017-05-19 13:56:50 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 215ms (Views: 212.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 50.224.217.201 at 2017-05-19 13:58:26 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1771ms (Views: 1769.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 50.224.217.201 at 2017-05-19 13:58:52 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1640ms (Views: 1638.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 50.224.217.201 at 2017-05-19 13:59:14 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 265ms (Views: 262.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 50.224.217.201 at 2017-05-19 14:00:36 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2160ms (Views: 2157.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 50.224.217.201 at 2017-05-19 14:01:01 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1569ms (Views: 1566.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 50.224.217.201 at 2017-05-19 14:01:12 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 352ms (Views: 348.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 50.224.217.201 at 2017-05-19 14:01:54 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 1763ms (Views: 1760.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 50.224.217.201 at 2017-05-19 14:02:14 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1836ms (Views: 1833.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 50.224.217.201 at 2017-05-19 14:02:28 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1741ms (Views: 1738.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 50.224.217.201 at 2017-05-19 14:02:43 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1713ms (Views: 1711.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 50.224.217.201 at 2017-05-19 14:03:04 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1917ms (Views: 1914.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 50.224.217.201 at 2017-05-19 14:03:18 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1857ms (Views: 1854.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 50.224.217.201 at 2017-05-19 14:03:33 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1548ms (Views: 1545.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 50.224.217.201 at 2017-05-19 14:03:48 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 1698ms (Views: 1695.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 50.224.217.201 at 2017-05-19 14:04:21 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 1694ms (Views: 1691.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 50.224.217.201 at 2017-05-19 14:04:44 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1617ms (Views: 1615.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 50.224.217.201 at 2017-05-19 14:05:22 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 1683ms (Views: 1680.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 50.224.217.201 at 2017-05-19 14:05:39 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1556ms (Views: 1553.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 50.224.217.201 at 2017-05-19 14:05:57 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 1618ms (Views: 1616.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 50.224.217.201 at 2017-05-19 14:06:28 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 1708ms (Views: 1705.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 50.224.217.201 at 2017-05-19 14:06:46 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1651ms (Views: 1648.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 50.224.217.201 at 2017-05-19 14:08:36 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 1634ms (Views: 1631.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 50.224.217.201 at 2017-05-19 14:09:14 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 1716ms (Views: 1713.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 50.224.217.201 at 2017-05-19 14:09:37 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 1687ms (Views: 1684.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 50.224.217.201 at 2017-05-19 14:10:02 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 340ms (Views: 336.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 50.224.217.201 at 2017-05-19 14:10:25 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 1830ms (Views: 1827.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 50.224.217.201 at 2017-05-19 14:10:41 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 1600ms (Views: 1598.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 50.224.217.201 at 2017-05-19 14:11:17 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2181ms (Views: 2178.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 50.224.217.201 at 2017-05-19 14:11:47 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1922ms (Views: 1918.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 50.224.217.201 at 2017-05-19 14:12:09 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1866ms (Views: 1863.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 17:30:16 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 5676ms (Views: 5534.2ms | ActiveRecord: 0.0ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/morehousebg.png"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+ahoy_matey (1.5.4) lib/ahoy/engine.rb:22:in `call_with_quiet_ahoy'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.1) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.1) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.1) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.1) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 17:32:21 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1738ms (Views: 1736.0ms | ActiveRecord: 0.0ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/morehousebg.png"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+ahoy_matey (1.5.4) lib/ahoy/engine.rb:22:in `call_with_quiet_ahoy'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.1) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.1) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.1) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.1) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 17:33:07 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2012ms (Views: 2009.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 17:34:16 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 197ms (Views: 195.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 17:36:17 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 2397ms (Views: 2393.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 17:36:53 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1763ms (Views: 1761.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 17:37:44 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 2222ms (Views: 2220.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 17:37:53 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 260ms (Views: 257.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 17:38:12 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 531ms (Views: 528.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 17:38:27 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1724ms (Views: 1721.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 17:39:18 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1932ms (Views: 1929.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 17:39:48 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2327ms (Views: 2324.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 17:40:14 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 2648ms (Views: 2645.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 17:40:54 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1914ms (Views: 1912.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 17:53:32 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 229ms (Views: 226.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 17:53:38 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 264ms (Views: 262.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 17:54:16 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 259ms (Views: 256.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 17:54:40 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 249ms (Views: 247.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 17:55:07 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 186ms (Views: 184.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 17:55:40 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 186ms (Views: 183.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 17:56:40 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1916ms (Views: 1913.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 17:57:04 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2317ms (Views: 2314.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 17:57:57 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1739ms (Views: 1737.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 17:58:27 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2767ms (Views: 2764.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:00:21 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2615ms (Views: 2610.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:00:52 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2026ms (Views: 2023.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:01:08 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 2054ms (Views: 2052.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:01:28 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 2348ms (Views: 2345.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:02:09 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 2187ms (Views: 2184.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:02:30 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 1838ms (Views: 1836.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:04:16 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 2423ms (Views: 2421.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:04:39 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1518ms (Views: 1506.3ms | ActiveRecord: 0.0ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/morehousebg.png"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+ahoy_matey (1.5.4) lib/ahoy/engine.rb:22:in `call_with_quiet_ahoy'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.1) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.1) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.1) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.1) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:05:09 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2037ms (Views: 2035.6ms | ActiveRecord: 0.0ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/morehouselogo.png"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+ahoy_matey (1.5.4) lib/ahoy/engine.rb:22:in `call_with_quiet_ahoy'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.1) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.1) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.1) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.1) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:05:39 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1510ms (Views: 1508.3ms | ActiveRecord: 0.0ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/img/morehousebg.png"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+ahoy_matey (1.5.4) lib/ahoy/engine.rb:22:in `call_with_quiet_ahoy'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.1) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.1) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.1) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.1) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:08:52 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1843ms (Views: 1841.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:09:33 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2094ms (Views: 2091.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:10:01 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 2553ms (Views: 2549.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:10:24 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1580ms (Views: 1577.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:12:39 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 346ms (Views: 343.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:13:32 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2482ms (Views: 2480.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:14:43 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1728ms (Views: 1725.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:15:07 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 176ms (Views: 173.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:15:12 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 276ms (Views: 274.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:15:21 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 219ms (Views: 217.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:16:06 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 230ms (Views: 227.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:16:36 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 2034ms (Views: 2031.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:16:49 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1546ms (Views: 1544.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:17:04 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1781ms (Views: 1778.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:17:47 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1559ms (Views: 1557.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:18:12 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1927ms (Views: 1925.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:19:08 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 255ms (Views: 253.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:19:48 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 161ms (Views: 159.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:20:08 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1550ms (Views: 1548.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:20:22 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 2050ms (Views: 2048.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:20:33 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1638ms (Views: 1636.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:21:37 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1958ms (Views: 1956.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:21:48 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1634ms (Views: 1632.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:22:16 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1883ms (Views: 1881.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:23:31 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 2278ms (Views: 2276.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:23:51 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2472ms (Views: 2469.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:24:05 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 2049ms (Views: 2046.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:24:17 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 319ms (Views: 316.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:24:31 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2432ms (Views: 2429.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:24:45 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 2098ms (Views: 2095.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:26:55 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 160ms (Views: 149.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:27:16 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 342ms (Views: 339.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:31:11 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1887ms (Views: 1885.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:31:25 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 157ms (Views: 155.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:32:43 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 188ms (Views: 186.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:34:18 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2199ms (Views: 2197.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:34:39 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2218ms (Views: 2216.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:34:53 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1859ms (Views: 1856.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:35:00 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 251ms (Views: 248.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:35:14 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1804ms (Views: 1802.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:35:29 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 205ms (Views: 202.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:35:48 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 219ms (Views: 217.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:36:12 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 2262ms (Views: 2260.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:36:27 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 2231ms (Views: 2229.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:36:38 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 2152ms (Views: 2148.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:36:47 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 2518ms (Views: 2515.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:37:20 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2033ms (Views: 2030.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:37:35 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2741ms (Views: 2737.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:37:57 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2604ms (Views: 2601.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:38:11 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1953ms (Views: 1951.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:38:26 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2486ms (Views: 2482.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:38:41 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 2872ms (Views: 2869.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:39:01 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 1756ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "    line-height: ": expected expression (e.g. 1px, bold), was ":.8;"):
+    4:     <title>Bloc </title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9: 
+   10:       <!-- FONTS -->
+  
+app/assets/stylesheets/university.scss:55
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__2331683963403629829_69961062483040'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.3ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (51.8ms)
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:39:13 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 2796ms (Views: 2793.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:49:05 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 468ms (Views: 464.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:49:13 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 223ms (Views: 220.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:49:43 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 331ms (Views: 329.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 18:49:58 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 248ms (Views: 245.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-22 21:05:25 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 408ms (Views: 396.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-23 01:21:08 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 541ms (Views: 440.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-23 01:23:45 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 337ms (Views: 335.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-23 01:27:07 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 247ms (Views: 244.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-23 01:27:35 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 295ms (Views: 292.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-23 01:28:32 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 500 Internal Server Error in 1915ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "    left": expected ";", was ": 40%;"):
+    4:     <title>Bloc </title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9: 
+   10:       <!-- FONTS -->
+  
+app/assets/stylesheets/university.scss:60
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__2331683963403629829_69961330335280'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (46.5ms)
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-23 01:28:44 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 2368ms (Views: 2365.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-23 01:28:59 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1690ms (Views: 1677.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-23 01:29:09 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1873ms (Views: 1870.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-23 01:29:27 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1685ms (Views: 1682.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-23 01:29:38 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 2042ms (Views: 2040.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-23 01:29:53 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1632ms (Views: 1629.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-23 01:30:02 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 2730ms (Views: 2725.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-23 01:30:13 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2111ms (Views: 2108.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-23 01:30:22 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2592ms (Views: 2589.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-23 01:30:30 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 1862ms (Views: 1859.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-23 01:30:38 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 1913ms (Views: 1911.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-23 01:30:50 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2194ms (Views: 2192.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-23 01:54:44 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 166ms (Views: 163.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-23 01:54:55 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 170ms (Views: 168.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-23 01:55:20 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 322ms (Views: 319.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-23 01:57:48 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 222ms (Views: 220.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-23 01:58:19 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 194ms (Views: 192.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-23 01:58:37 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 227ms (Views: 225.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-23 02:04:23 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 259ms (Views: 257.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-23 02:04:41 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 202ms (Views: 200.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-23 02:05:03 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 269ms (Views: 267.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-23 02:05:14 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 233ms (Views: 230.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-23 02:05:34 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 284ms (Views: 282.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-23 02:05:48 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 166ms (Views: 163.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-23 02:06:17 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 177ms (Views: 174.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-23 02:06:27 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 268ms (Views: 265.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-23 02:06:33 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 221ms (Views: 218.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-23 02:07:43 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 167ms (Views: 165.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-23 02:09:17 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 219ms (Views: 217.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-23 02:10:09 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 281ms (Views: 278.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-23 02:11:04 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 184ms (Views: 181.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-23 02:12:20 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 2880ms (Views: 2876.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-23 02:13:03 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 177ms (Views: 175.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 71.185.214.82 at 2017-05-23 02:13:40 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 162ms (Views: 159.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 63.143.202.71 at 2017-05-24 14:37:38 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (38.2ms)
+Completed 200 OK in 1367ms (Views: 1211.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 63.143.202.71 at 2017-05-24 14:51:50 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 764ms (Views: 762.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 63.143.202.71 at 2017-05-24 14:57:38 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (35.1ms)
+Completed 200 OK in 394ms (Views: 391.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_up" for 63.143.202.71 at 2017-05-24 14:57:45 +0000
+  
+ActionController::RoutingError (No route matches [POST] "/users/sign_up"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+ahoy_matey (1.5.4) lib/ahoy/engine.rb:22:in `call_with_quiet_ahoy'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.0ms)
+  Rendered collection of /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [129 times] (230.2ms)
+  Rendered collection of /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [2 times] (4.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (10.2ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (54.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (424.1ms)
+Started GET "/rails/info/routes?path=user%20regist" for 63.143.202.71 at 2017-05-24 14:57:56 +0000
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"user regist", "internal"=>true}
+Completed 200 OK in 40ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes?path=registration" for 63.143.202.71 at 2017-05-24 14:57:59 +0000
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"registration", "internal"=>true}
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_up" for 63.143.202.71 at 2017-05-24 14:58:28 +0000
+  
+ActionController::RoutingError (No route matches [POST] "/users/sign_up"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+ahoy_matey (1.5.4) lib/ahoy/engine.rb:22:in `call_with_quiet_ahoy'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.9ms)
+  Rendered collection of /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [129 times] (202.5ms)
+  Rendered collection of /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [2 times] (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.0ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (281.6ms)
+Started POST "/users/sign_up" for 63.143.202.71 at 2017-05-24 14:58:36 +0000
+  
+ActionController::RoutingError (No route matches [POST] "/users/sign_up"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+ahoy_matey (1.5.4) lib/ahoy/engine.rb:22:in `call_with_quiet_ahoy'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.0ms)
+  Rendered collection of /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [129 times] (237.1ms)
+  Rendered collection of /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [2 times] (4.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (20.5ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (424.2ms)
+Started GET "/morehouse" for 63.143.202.71 at 2017-05-24 14:59:44 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 374ms (Views: 372.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 63.143.202.71 at 2017-05-24 14:59:50 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/registrations/new.html.erb within layouts/application (56.3ms)
+Completed 200 OK in 878ms (Views: 341.3ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/users/sign_up" for 63.143.202.71 at 2017-05-24 15:00:18 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/registrations/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 298ms (Views: 296.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 63.143.202.71 at 2017-05-24 15:01:17 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/registrations/new.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 207ms (Views: 205.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 63.143.202.71 at 2017-05-24 15:02:25 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/registrations/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 285ms (Views: 283.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/morehouse" for 63.143.202.71 at 2017-05-24 15:07:09 +0000
+Processing by UniversityController#morehouse as HTML
+  Rendering university/morehouse.html.erb within layouts/application
+  Rendered university/morehouse.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 304ms (Views: 301.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 63.143.202.71 at 2017-05-24 15:07:33 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/registrations/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 260ms (Views: 258.9ms | ActiveRecord: 0.0ms)
+
+
