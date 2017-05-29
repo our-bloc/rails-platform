@@ -1,0 +1,22 @@
+
+         
+         <% @indeed_results.each do |job| %>
+            <div class="card horizontal white" style="width:100%">
+             
+            <div class="card-content teal-text">
+              <span style="font-size: 2em"> <%= job.job_title %></span>
+              <p><%= job.company %></p>
+              <p><%= job.snippet %></p>
+=             <p><%= job.city %> ,<%= job.state %></p>
+              <p><%= link_to job.url, job.url %></p>
+              <td><%= job.date %></td>
+
+              <div style="height:100em"></div>
+                  <%= form_tag do %>
+                      <%= hidden_field_tag(:saved, true) %>
+                  <% end %> 
+               </div>
+              </div>
+          <% end %>
+        
+        

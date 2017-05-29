@@ -141,11 +141,15 @@
        <section>
     <div id="major_head">
     <div id="major_section">
-        <h5 style="color:white; opacity:1; z-index: 2; padding-top: 10%"> LETU US KNOW YOUR SCHOOL INFO SO WE CAN NARROW DOWN MATCHES</h5>  
+        <h5 style="color:white; opacity:1; z-index: 2; padding-top: 10%"> LET US KNOW YOUR SCHOOL INFO SO WE CAN NARROW DOWN MATCHES</h5>  
         <div class="row">
             
             <div class="col l6 white-text"> 
-                <%= f.text_field :school ,:id => "field_school",  :required => true, :placeholder => "school" %>
+                <% if params[:university] == nil %> 
+                    <%= f.text_field :school ,:id => "field_school",  :required => true, :placeholder => "school" %>
+                <% else %>
+                    <%= f.text_field :school ,:id => "field_school",  :value => params[:university]  %>
+                <% end %> 
             </div> 
             <div class="col l6 white-text"> 
                 <%= f.text_field :major ,:id => "field_major",  :required => true, :placeholder => "major" %>
@@ -166,7 +170,7 @@
     
      
      <section id="info_section"> 
-     <h5> ALL SET! WHERE SHOULD WE SEND YOUR PLAYLIST? </h5>
+     <h5> ALL SET! WHERE SHOULD WE SEND YOUR ADVICE? </h5>
      <div class=row> 
          <div class="col s12 l5">
              <h4 class="white-text"> FIRST & LAST NAME </h4>

@@ -1,47 +1,74 @@
 <nav class="white">
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo white-text">Bloc</a>
+      <a href="#" class="brand-logo grey-text">Bloc</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">JavaScript</a></li>
+       
+        <% if user_signed_in? %> 
+            <li> <%= link_to "LOGOUT", destroy_user_session_path, class: "teal-text nav_buttons" %> </li>
+        <% else %> 
+            <li class="grey-text"> <%= link_to "LOGIN" , new_user_session_path, class: "teal-text nav_buttons"  %> </li>
+        <% end %> 
+        
       </ul>
     </div>
 </nav>
 
 <div class="row"> 
-    <div class="col s12 l3"> 
+    <div class="col s12 l3 sidemenu"> 
         <div class="menu"> 
             <div class="col s12 logo"> 
                 <br>
-                <img src="/img/morehouselogo.jpg">     
+                <img id= "logo" src="http://cdn.herosports.com/upload/morehouse-logo.png">     
             </div>
             
             <div> 
-                <a class="menu_button col s12" style="padding: .5em"> Career Advice  </a>
-                <a class="menu_button col s12" style="padding: .5em"> Grad School Advice </a>
-                <a class="menu_button col s12" style="padding: .5em"> Success Stories </a>
-                <a class="menu_button col s12" style="padding: .5em"> Opportunities </a>
+                <a class="menu_button col s12" href="#tips" style= "padding: .5em"> Career Advice</a>
+                <a class="menu_button col s12" href="#tips" style= "padding: .5em"> Grad School Advice</a>
+                <a class="menu_button col s12" href="#stories" style= "padding: .5em"> Success Stories</a>
+                <a class="menu_button col s12" href="#jobs" style= "padding: .5em"> Opportunities</a>
+
+            
             </div>
         </div>
     </div>
     
     <div class="col s12 l9 "> 
-        <div class="morehousebg"></div> 
-        <div class=""> 
-            <img class="carousel-item" src="http://www.morehouse.edu/media/morehouse2015/styleassets/images/commencement-2015.jpg"> 
-        </div>
-        <div>
-            <h1 id="register"> get personalized career advice in your inbox </h1> 
-            <div class="auth_buttons"> 
-                <%= link_to  "SIGN ME UP", new_user_registration_path , class: "waves-effect white btn-large grey-text" %>
-                <button class="waves-effect white btn-large grey-text"> sign up </button> 
-            </div>
-        <div> 
-    </div>
+        <!---- SCREEN FOR USERS WHEN NOT LOGGED IN --> 
+        <% if !user_signed_in? %> 
+            <div class="morehousebg"></div> 
+
+            <div class="call_to_action"> 
+                <img id="background-img" class="carousel-item" src="http://www.morehouse.edu/media/morehouse2015/styleassets/images/commencement-2015.jpg"> 
+          
+            <div class ="call_to_action">
+                <h1 id="register"> get personalized career advice in your inbox </h1> 
+                
+                <div class="auth_buttons"> 
+                    <%= link_to  "SIGN ME UP", new_user_registration_path(:university => "Morehouse College") , class: "waves-effect teal btn-large white-text" %>
+                </div>
+             </div>
+        <% else %> 
+         <!-- LOAD CAREER RESOURCE PARTIAL --> 
+        
+            
+            <%= render "university/partials/tips" %>
+
+            <section>
+            <%= render "university/partials/influencers" %>
+             </section>
+        
+            <section>
+            
+            <%= render "university/partials/jobs" %>
+            </section>
+        <% end %> 
+            
+           
+
+        
     
-   
-  </div>
+       
+    </div>
   
   <script>
         $('.carousel.carousel-slider').carousel({fullWidth: true});

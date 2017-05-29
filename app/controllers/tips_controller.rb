@@ -4,7 +4,11 @@ class TipsController < ApplicationController
   # GET /tips
   # GET /tips.json
   def index
-    @tips = Tip.all
+    if params[:search]
+      @tips = Tip.search(params[:search])
+    else
+      @tips = Tip.all
+    end
   end
 
   # GET /tips/1

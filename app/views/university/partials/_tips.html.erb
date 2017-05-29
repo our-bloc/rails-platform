@@ -1,0 +1,28 @@
+
+<!-- TEN TIPS --> 
+  <div id="tips"></div>
+  <%= render 'university/partials/search' %> 
+
+    <% if @tips != nil %> 
+        <%  @tips.each do |tip| %>
+        <% if current_user.prep == tip.prep or (current_user.prep == tip.prep and current_user.gradyear == tip.gradyear)%> 
+            <div class="card horizontal col s12 l4" >
+              <div class="card-content grey-text">
+                      <h4 id="tip_title"><%= link_to tip.title.upcase , tip.link , class: "grey-text" %></h4>
+                      <p id="tip_company"><%= tip.body %></p>
+                      
+                      <br> 
+                      
+                      
+                      <% if tip.industry != nil %> <div class="btn"> <%= tip.industry %>  </div> <% end %> 
+                      <% if tip.prep != nil %><div class="btn"> <%= tip.prep %> </div> <% end %> 
+                      <% if tip.grad != nil %><div class="btn"> <%= tip.grad %> </div> <% end %> 
+                      <% if tip.gradyear != nil %><div class="btn"> <%= tip.gradyear %> </div> <% end %> 
+
+              </div>
+            </div>
+            
+        <% end %> 
+        <% end %>
+    <% end %> 
+ 

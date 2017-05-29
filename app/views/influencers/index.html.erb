@@ -12,9 +12,19 @@
   <tbody>
     <% @influencers.each do |influencer| %>
       <tr>
+        <td> <%= influencer.name %> </td>
+        <td> <%= influencer.industry %></td>
+        <td> <%= influencer.description %> </td>
         <td><%= link_to 'Show', influencer %></td>
         <td><%= link_to 'Edit', edit_influencer_path(influencer) %></td>
-        <td><%= link_to 'Destroy', influencer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', influencer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+      
+      <tr>
+      
+
+        
+
       </tr>
     <% end %>
   </tbody>

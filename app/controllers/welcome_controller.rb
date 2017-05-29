@@ -11,6 +11,9 @@ class WelcomeController < ApplicationController
     
     if !user_signed_in?
       redirect_to hello_path
+    
+    elsif (user_signed_in? and current_user.school != nil and current_user.school == "Morehouse College")
+      redirect_to morehouse_path
       
     elsif (user_signed_in? and current_user.industry != nil)
       redirect_to playlist_path(@user.profileurl) 

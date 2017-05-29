@@ -2,32 +2,47 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-body,html{
-    background-color: white;
-    width: 100%;
+html, body{
+    width: 100%; 
     height: 100%;
-   
-    
+
+}
+
+nav {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    left: 0%;
 }
 
 .menu{
-    background-color: white;
-    margin-top: 20%;
+    position:fixed;
+    top: 15%;
+    width: 20%;
+    height: 100%;
+    left: 2%;
 }
 
 .logo{
     margin-bottom: 10%;
+    left: -5%;
+}
+.sidemenu{
+    background-color: white;
 }
 .menu_button{
     background-color: white;
     border: 3px solid #88132b;
-    margin: 2% 5% 2% 7%;
+    margin: 2% 5% 2% 10%;
     position: relative;
     height: 3em;
     text-align: center;
     text-transform:uppercase;
     color: #88132b;
+}
+
+.menu_botton a:visited{
+    color:#88132b;
 }
 
 a:hover{
@@ -62,3 +77,82 @@ a:hover{
     width: 100%;
     left: 55%;
 }
+
+.nav_buttons{
+    padding-top: 15%;
+    font-family: Lato;
+}
+
+#logo{
+    position: relative;
+    width: 50%;
+    left: 5em;
+    margin-bottom: 5em;
+}
+
+.brand-logo {
+    position: absolute;
+    font-family: Montserrat;
+    font-weight: 100;
+    text-transform: lowercase;
+    padding-top: -5%;
+}
+
+.btn {
+    padding: 2%;
+}
+
+// tip section
+
+ a{
+    color: grey;
+    }
+    
+    a:hover{
+        color: grey;
+    }
+    
+    #tip_image {
+        margin-top: 0%;
+        width: 100%;
+    }
+    
+    .tip_card {
+        margin: 10% 0;
+        background-color: inherit;
+        padding-bottom: 5%;
+        z-index: 1;
+    }
+    
+    .tip_card h6{
+        font-family: Raleway;
+        color: white;
+        font-size: 2em;
+        text-transform: uppercase;
+        margin: 5% 0%;
+        padding: 5%;
+    }
+    #tip_title {
+        color: grey;
+    }
+    
+    .tip_card h6 a {
+        color:white;
+    }
+//
+    
+    #job_card{
+        height: 20em;
+    }
+    section{
+        padding: 100% 0;
+    }
+    
+    .search_field {
+        width: 70%;
+        z-index: 1;
+      
+    }
+    .card{
+        height: 40em;
+    }

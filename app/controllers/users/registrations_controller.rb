@@ -4,13 +4,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # GET /resource/sign_up
    def new
-     
+     @university = params[:university]
    end
 
   # POST /resource
    def create
 
-    end
+   end
     
     
    

@@ -29,7 +29,7 @@ Rails.application.routes.draw do
   get 'profiles' => 'profile#index', as: :profiles
   get '/home', to: 'welcome#landing', as: :landing
   get '/hello', to: 'welcome#hello', as: :hello
-  get '/morehouse', to: 'university#morehouse', as: :morehouse_path
+  get '/morehouse', to: 'university#morehouse', as: :morehouse
 
 
   get '/myprofile', to: 'profile#myprofile', as: :myprofile
@@ -50,6 +50,8 @@ Rails.application.routes.draw do
     get 'user/sign_out', :to => 'devise/sessions#destroy', :as => :destroy_session  
     get 'users/auth/facebook' , :to =>"users_callback#passthru", :as => :facebook_login
     get 'users/email_registration' , :to =>"devise/registrations#email", :as => :email_registration
+
+
 
     end
   
