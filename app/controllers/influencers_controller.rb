@@ -62,13 +62,14 @@ class InfluencersController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_influencer
       @influencer = Influencer.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
+    # allowed parameters
     def influencer_params
-      params.require(:influencer).permit(:name, :description, :industry, :style)
+      params.require(:influencer).permit(:name, :description, :industry, :style, 
+      :school, :image, :major,
+      :experience, :grad, :gradyeear, :grad_gradyear, :advice1, :advice2, :advice3, :advice4, :resources)
     end
 end

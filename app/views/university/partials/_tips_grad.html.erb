@@ -1,11 +1,11 @@
 
 <!-- TEN TIPS --> 
-  <div id="tips"></div>
+  <div id="tips_grad"></div>
   <%= render 'university/partials/search' %> 
+
     <% if @tips != nil %> 
         <%  @tips.each do |tip| %>
-        <% if (tip.grad == "" and tip.prep == current_user.prep) or (tip.grad == "" and tip.industry == "All") or (tip.grad == "" and tip.industry == current_user.industry)   %> 
-    
+        <% if current_user.prep == tip.prep or (current_user.prep == tip.prep and current_user.gradyear == tip.gradyear)%> 
             <div class=" col s12 l4" style="padding: .5%" >
               <div class="card horizontal" style="width: 100%"> 
               <div class="card-content grey-text">
@@ -23,6 +23,7 @@
               </div>
             </div>
             </div> 
+            
         <% end %> 
         <% end %>
     <% end %> 

@@ -7,7 +7,9 @@ html, body{
     height: 100%;
 
 }
-
+.tip_title {
+    font-size: 3em;
+}
 nav {
     position: absolute;
     top: 0%;
@@ -20,7 +22,7 @@ nav {
     top: 15%;
     width: 20%;
     height: 100%;
-    left: 2%;
+    left: 4%;
 }
 
 .logo{
@@ -29,6 +31,12 @@ nav {
 }
 .sidemenu{
     background-color: white;
+}
+
+#background_img {
+    position:absolute;
+    height: 90%;
+    left: 0%;
 }
 .menu_button{
     background-color: white;
@@ -54,30 +62,43 @@ a:hover{
 .morehousebg {
    background-color:#88132b ;
    position:absolute;
-   height: 80%;
-   width: 75%;
+   height: 90%;
+   width: 100%;
    z-index: 1;
-   opacity: .7;
+   opacity: .8;
+   left: 0%;
 
 }
+
 
 #register{
     color: white;
     position:absolute;
     top: 40%;
+    text-align: center;
     z-index: 1;
-    left: 40%;
+    left: 27%;
     width: 50%;
     line-height: .8;
 }
 
 .auth_buttons {
     position:absolute;
-    top: 70%;
+    top: 77%;
     width: 100%;
-    left: 55%;
+    left: 45%;
 }
-
+#value_prop {
+    position:fixed;
+    left: 25%;
+    width: 50%;
+    text-align: center;
+    top: 60%;
+    z-index: 10;
+    font-weight: 400;
+    color: white;
+    font-size: 1.2em;
+}
 .nav_buttons{
     padding-top: 15%;
     font-family: Lato;
@@ -154,5 +175,16 @@ a:hover{
       
     }
     .card{
-        height: 40em;
+        position:absolute;
+        height: 35em;
+        margin-right: 2em;
+    }
+// INFLUENCER PARTIAL STYLING
+    .influencer_image {
+       width: 60%;
+       padding: 10% 0%;
+    }
+    
+    .influencer_content {
+        text-align: center ;
     }

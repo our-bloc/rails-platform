@@ -4,7 +4,7 @@
       <ul id="nav-mobile" class="right hide-on-med-and-down">
        
         <% if user_signed_in? %> 
-            <li> <%= link_to "LOGOUT", destroy_user_session_path, class: "teal-text nav_buttons" %> </li>
+            <li> <%= link_to "LOGOUT", destroy_session_path, class: "teal-text nav_buttons" %> </li>
         <% else %> 
             <li class="grey-text"> <%= link_to "LOGIN" , new_user_session_path, class: "teal-text nav_buttons"  %> </li>
         <% end %> 
@@ -23,7 +23,7 @@
             
             <div> 
                 <a class="menu_button col s12" href="#tips" style= "padding: .5em"> Career Advice</a>
-                <a class="menu_button col s12" href="#tips" style= "padding: .5em"> Grad School Advice</a>
+                <a class="menu_button col s12" href="#tips_grad" style= "padding: .5em"> Grad School Advice</a>
                 <a class="menu_button col s12" href="#stories" style= "padding: .5em"> Success Stories</a>
                 <a class="menu_button col s12" href="#jobs" style= "padding: .5em"> Opportunities</a>
 
@@ -38,13 +38,14 @@
             <div class="morehousebg"></div> 
 
             <div class="call_to_action"> 
-                <img id="background-img" class="carousel-item" src="http://www.morehouse.edu/media/morehouse2015/styleassets/images/commencement-2015.jpg"> 
+                <img id="background_img" class="carousel-item" src="http://www.morehouse.edu/media/morehouse2015/styleassets/images/commencement-2015.jpg"> 
           
             <div class ="call_to_action">
                 <h1 id="register"> get personalized career advice in your inbox </h1> 
                 
                 <div class="auth_buttons"> 
-                    <%= link_to  "SIGN ME UP", new_user_registration_path(:university => "Morehouse College") , class: "waves-effect teal btn-large white-text" %>
+                    <div><%= link_to  "SIGN ME UP", new_user_registration_path(:university => "Morehouse College") , class: "waves-effect teal btn-large white-text" %></div>
+                    <p id="value_prop"> answer 8 quick questions & we will send you career resources, grad school tips, alum success stories & opportunities that are tailored to your Morehouse experience</p>
                 </div>
              </div>
         <% else %> 
@@ -53,6 +54,10 @@
             
             <%= render "university/partials/tips" %>
 
+            <section>
+            <%= render "university/partials/tips_grad" %>
+             </section>
+             
             <section>
             <%= render "university/partials/influencers" %>
              </section>

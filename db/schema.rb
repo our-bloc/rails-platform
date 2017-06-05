@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170426132743) do
+ActiveRecord::Schema.define(version: 20170529155938) do
 
   create_table "ahoy_events", force: :cascade do |t|
     t.integer  "visit_id"
@@ -61,12 +61,25 @@ ActiveRecord::Schema.define(version: 20170426132743) do
   end
 
   create_table "influencers", force: :cascade do |t|
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
     t.string   "name"
     t.text     "description"
     t.string   "industry"
     t.string   "style"
+    t.string   "image"
+    t.string   "school"
+    t.string   "major"
+    t.         "experience"
+    t.         "extra"
+    t.string   "grad"
+    t.string   "grad_gradyear"
+    t.string   "gradyear"
+    t.string   "advice1"
+    t.string   "advice2"
+    t.string   "advice3"
+    t.string   "advice4"
+    t.         "resources"
   end
 
   create_table "jobs", force: :cascade do |t|

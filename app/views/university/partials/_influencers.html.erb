@@ -7,17 +7,21 @@
   <%= render 'university/partials/search_success' %> 
     <% if @influencers != nil %> 
         <%  @influencers.each do |influencer| %>
-            <% if current_user.industry == influencer.industry or (current_user.industry == tip.industry and current_user.style == tip.style)%> 
-
-            <div class="card horizontal col s12 l4" >
-            <div class="card-content grey-text">
-                    <h4 id="tip_title"><%= link_to influencer.name.upcase , influencer_path(influencer.id) , class: "grey-text" %></h4>
-                    <h5 id="tip_company"><%= influencer.description %></h5>
-                    <h5 id="tip_company"><%= influencer.industry %></h5>
+            <% if current_user.industry == influencer.industry or (current_user.industry == influencer.industry and current_user.style == influencer.style)%> 
+            <div class=" col s12 l4" style="padding: .5%" >
+            <div class="card horizontal" style="width: 100%">
+                <div class="card-content grey-text influencer_content">
+                        <img src="<%= influencer.image%>" class="circle influencer_image" >
+                        <h4 id="influencer_title"><%= link_to influencer.name.upcase , influencer_path(influencer.id) , class: "grey-text influencer_title" %></h4>
+                        <p id="influencer_company"><%= influencer.description %></p>
+                        
+                        
+                          <% if influencer.industry != nil %> <div class="teal-text"> <%= influencer.industry.upcase %>  </div> <% end %> 
+                          <% if influencer.grad != nil %><div class="teal-text"> <%= influencer.grad.upcase%> </div> <% end %> 
+                          <% if influencer.gradyear != nil %><div class="teal-text"> <%= influencer.gradyear.upcase %> </div> <% end %> 
+                </div>
+              </div>
             </div>
-                
-            </div>
-            </div>
-        <% end %>
-    <% end %> 
+            <% end %>
+      <% end %> 
     <% end %> 

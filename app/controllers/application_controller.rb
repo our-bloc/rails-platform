@@ -24,7 +24,21 @@ class ApplicationController < ActionController::Base
       end
   end
 
-  
+
+#TEXT FORMATTING HELPERS
+  def self.newline
+    self.gsub(/\n/, '<br>')
+  end
+
+
+
+
+
+
+
+
+
+  # DEVISE PARAMETERS
   def configure_permitted_parameters  #form fields for devise user registration/account update
     
   
