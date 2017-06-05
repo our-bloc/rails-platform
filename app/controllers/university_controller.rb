@@ -3,6 +3,7 @@ class UniversityController < ApplicationController
 
     
     def morehouse
+        redirect_to "https://bloc-prodcution-aminabloc.c9users.io/morehouse"
         @user = current_user
         
     end 
