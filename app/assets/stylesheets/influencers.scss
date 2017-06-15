@@ -1,0 +1,47 @@
+// Place all the styles related to the influencers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body{
+    padding:5%;
+}
+
+
+
+
+.influencer_index_card {
+    position: relative;
+    text-align: center;
+    border-bottom: 1px solid grey;
+    padding: 5%;
+    margin: 0%;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    width: 50%;
+    left: 25%;
+}
+
+.menu{
+    position:fixed;
+    top: 15%;
+    width: 20%;
+    height: 100%;
+    left: 4%;
+    margin-right: 10%;
+}
+
+.menu_button{
+    background-color: white;
+    display: block;
+    border: 3px solid #88132b;
+    margin: 2% 5% 2% 10%;
+    position: relative;
+    height: 3em;
+    text-align: center;
+    text-transform:uppercase;
+    color: #88132b;
+}
+
+.menu_botton a:visited{
+    color:#88132b;
+}
