@@ -1,5 +1,6 @@
 class TipsController < ApplicationController
-  before_action :set_tip, only: [:show, :edit, :update, :destroy]
+  before_action :set_tip, only: [:show, :edit, :update, :destroy, :like, :unlike]
+  respond_to :html, :js
 
   # GET /tips
   # GET /tips.json
@@ -23,6 +24,22 @@ class TipsController < ApplicationController
 
   # GET /tips/1/edit
   def edit
+  end
+  
+  def like
+    current_user.like(@tip) == true
+    
+    if request.xhr?
+      head :ok
+    else
+      redirect_to :back
+    end
+  
+  end
+  
+  def unlike
+    current_user.unlike(@tip) == true
+    
   end
 
   # POST /tips

@@ -4,7 +4,13 @@
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-
+<div class ="demo_message teal_text" style="font-size: .5em; margin-left: 10em"> 
+    <h5> Hello, thank you for taking a look at our university demo! Below, you will be taken through a short quiz
+    to demonstrate our student onboarding experience.</h5>
+    
+    <h5> To make the most of your demo experience, please select <span class="white-text">Advocates</span> as your "Choose Your Industry Choice" and  
+    <span class="white-text">"Law School"</span> as your "Grad School Dreams" selection" </h5>
+</div>
 
 <div id="quiz"> 
     <section class="section_industry"> 

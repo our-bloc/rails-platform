@@ -9,17 +9,28 @@
             <div class=" col s12 l4" style="padding: .5%" >
               <div class="card horizontal" style="width: 100%"> 
               <div class="card-content grey-text">
-                      <h4 id="tip_title"><a class="grey-text" href="<%= tip.link %>"> <%=truncate(tip.title.upcase, :length => 50) %> </a> </h4>
-                      <p id="tip_company"><%= truncate(tip.body, :length => 140) %></p>
+                      <h4 id="tip_title"><a class="grey-text" href="<%= tip_path(tip.id)%>"> <%=truncate(tip.title.upcase, :length => 50) %> </a> </h4>
+                      <p id="tip_company"><%= truncate(tip.body, :length => 180) %></p>
                       
                       <br> 
+                      <br>
                       
-                      
+                      <div class="tags">
                       <% if tip.industry != nil %> <div class="teal-text"> <%= tip.industry.upcase %>  </div> <% end %> 
                       <% if tip.prep != nil %><div class="teal-text"> <%= tip.prep.upcase.gsub("_", "  ") %> </div> <% end %> 
                       <% if tip.grad != nil %><div class="teal-text"> <%= tip.grad.upcase%> </div> <% end %> 
                       <% if tip.gradyear != nil %><div class="teal-text"> <%= tip.gradyear.upcase %> </div> <% end %> 
-
+                      </div>
+                     
+                     
+                     <div class="tip_like teal-text" > 
+                      <% if current_user.likes?(tip) == false %> 
+                          <%= link_to '<i class="fa fa-heart-o fa-2x"></i>' .html_safe, like_tip_path(tip.id , :format => "js") , :method => :put , :remote => true %> 
+                      <% else %> 
+                          <%= link_to '<i class="fa fa-heart fa-2x"></i>' .html_safe, unlike_tip_path(tip.id, :format => "js") , :method => :put , :remote => true %>
+                      <% end %> 
+                    </div>
+                  
               </div>
             </div>
             </div> 

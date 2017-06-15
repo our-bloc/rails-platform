@@ -20,5 +20,4 @@
 //= require_tree .
 
   
-  ahoy.trackAll();
   	

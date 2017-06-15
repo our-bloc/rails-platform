@@ -1,35 +1,28 @@
-<p id="notice"><%= notice %></p>
+<% if current_user.school == "Morehouse College" %> 
+    <%= render "university/partials/menu" %> 
+<% end %> 
 
-<h1>Influencers</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+  <div>
     <% @influencers.each do |influencer| %>
-      <tr>
-        <td> <%= influencer.name %> </td>
-        <td> <%= influencer.industry %></td>
-        <td> <%= influencer.description %> </td>
-        <td><%= link_to 'Show', influencer %></td>
-        <td><%= link_to 'Edit', edit_influencer_path(influencer) %></td>
-        <td><%= link_to 'Delete', influencer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-      
-      <tr>
-      
+      <div class="influencer_index_card">
+        <td> <%= link_to influencer.name, influencer_path(influencer) %></td>
 
-        
-
-      </tr>
+        <% if !user_signed_in?  %>
+          <td><%= influencer.industry %></td>
+          <td><%= influencer.link %></td>
+          <td><%= influencer.prep %></td>
+          <td><%= influencer.grad %></td>
+          <td><%= link_to 'Show', influencer %></td>
+          <td><%= link_to 'Edit', edit_influencer_path(influencer) %></td>
+          <td><%= link_to 'Delete', influencer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %> 
+    
+      </div>
     <% end %>
-  </tbody>
-</table>
+  </div>
 
 <br>
 
-<%= link_to 'New Influencer', new_influencer_path %>
+<% if !user_signed_in?  %> 
+<%= link_to 'New influencer', new_influencer_path %>
+<% end %> 

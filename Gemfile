@@ -5,7 +5,7 @@ source 'http://rubygems.org'
 gem 'rails', '~> 5.0.0'
 
 
-#storing in env variables
+#storing ENV variables
 gem 'figaro'
 
 
@@ -13,15 +13,24 @@ gem 'figaro'
 #tracking visits, analytics
 gem 'ahoy_matey'
 
-
+#styling 
 gem 'materialize-sass'
 
 gem 'formtastic', '~> 3.1', '>= 3.1.4'
 
+
 #indeed search wrapper
 gem 'indeed_api'
 
+#recommendation engine
+gem 'redis'
+gem 'redis-namespace'
+gem 'sidekiq'
+gem 'sidekiq-middleware'
+gem 'recommendable'
 
+
+#authentication gems
 gem 'omniauth-facebook'
 
 

@@ -14,23 +14,11 @@
 </nav>
 
 <div class="row"> 
-    <div class="col s12 l3 sidemenu"> 
-        <div class="menu"> 
-            <div class="col s12 logo"> 
-                <br>
-                <img id= "logo" src="http://cdn.herosports.com/upload/morehouse-logo.png">     
-            </div>
-            
-            <div> 
-                <a class="menu_button col s12" href="#tips" style= "padding: .5em"> Career Advice</a>
-                <a class="menu_button col s12" href="#tips_grad" style= "padding: .5em"> Grad School Advice</a>
-                <a class="menu_button col s12" href="#stories" style= "padding: .5em"> Success Stories</a>
-                <a class="menu_button col s12" href="#jobs" style= "padding: .5em"> Opportunities</a>
-
-            
-            </div>
-        </div>
+    <% if user_signed_in?  %> 
+    <div class="col s12 l3 sidemenu">
+        <%= render "university/partials/menu" %> 
     </div>
+    <% end %> 
     
     <div class="col s12 l9 "> 
         <!---- SCREEN FOR USERS WHEN NOT LOGGED IN --> 

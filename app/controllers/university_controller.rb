@@ -5,6 +5,12 @@ class UniversityController < ApplicationController
     def morehouse
         @user = current_user
         
+        
+        if @tips_liked != nil
+            @tips_liked = current_user.liked_tips
+        end 
+        
+
     end 
     
   
@@ -20,6 +26,8 @@ class UniversityController < ApplicationController
             if @jobs != nil
                 @jobs= Job.order("created_at DESC").limit(0).where
             end 
+            
+            #render most recent favorities on side bar 
             
             
            #render resources 
