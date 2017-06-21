@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :bypass_login
-
+  after_action :track_action
    
   
   class Channel < ActionCable::Channel::Base
@@ -15,6 +15,13 @@ class ApplicationController < ActionController::Base
   protected
   
   job = Job.last
+  
+  #TRACK AHOY
+  def track_action
+    ahoy.track "Viewed #{controller_name}##{action_name}"
+  end
+  
+  
   
   def landing_filter
       if request.referer == nil 

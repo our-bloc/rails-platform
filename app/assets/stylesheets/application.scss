@@ -21,25 +21,8 @@
 @import "materialize/components/color";
 @import "materialize";
 
-
-body{
-    font-family: Montserrat;
-    background-color: #F9F9FF ;
-}
-.nav-wrapper{
-    font-weight: bold;
-    padding: .5%;
-}
-
-
-.nav-wrapper li{
-    font-family: Montserrat;
-    position:relative;
-    padding: 1% 2%;
-}
-
-.card {
-    position: relative;
-    width: 150%;
-    font: Montserrat;
+body,html{
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
 }

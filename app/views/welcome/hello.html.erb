@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Bloc</title>
+    <title class="grey-text"> bloc. </title>
 
     <!-- Bootstrap Core CSS -->
     <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="lib/device-mockups/device-mockups.min.css">
 
     <!-- Theme CSS -->
-    <link href="css/new-age.min.css" rel="stylesheet">
+    <link href="css/new-age.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -38,48 +38,44 @@
 
 <body id="page-top">
 
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Bloc</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a class="page-scroll grey-text" href="#download">Get Coached</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll grey-text" href="#features">About</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll grey-text" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
+    <%= render 'welcome/navbar' %> 
 
     <header>
         <div class="container">
-            <div class="row">
+            <div class="row" >
                 <div class="col-sm-7">
                     <div class="header-content">
                         <div class="header-content-inner">
                             <br> 
-                            <h1 class="grey-text">Bloc is your unapologetically black, digital career coach ... here to help you land & keep your dream job. </h1><br>
-                            <a href="#download" class="waves-effect waves-light btn-large page-scroll">Start Now for Free!</a>
+                            <h1 class="grey-text">Bloc is your unapologetically black, digital career coach ... here to help you <span class="cyan_highlight" id="highlight_1">land</span>
+                            & <span class="cyan_highlight" id="highlight_2">keep</span>  your <span class="cyan_highlight" id="highlight_3">dream job</span>. </h1><br>
+                             
+                             
+                        <!-- FORM FOR REGISTRATION --> 
+                             <%= form_tag(new_user_registration_path, :method => "get") do %>
+                            <div class="row" style="position:relative; margin-top:2%; width: 100%; padding: 2% 1%; height: 6em ">
+                                <div class="col l4 s12" style="padding: 2%">
+                                    <%= text_field_tag(:name , "", placeholder: "NAME",style: "font-size: 2em; 
+                                    border: 3px solid #4dd0e1; padding: .2em 1em; width: 70% ", class:"cyan-text lighten-1" ) %>
+                                </div>
+                                
+                                <div class="col l4 s12" style="padding: 2%">
+                                    <%= text_field_tag(:email , "", placeholder: "EMAIL" ,style: "font-size: 2em; 
+                                    border: 3px solid #4dd0e1; padding: .2em 1em; width: 70% ", class:"cyan-text lighten-1" ) %>
+                                </div>
+                              
+                                
+                                <div class="col l3 s12" style="padding: 2%">
+                                    <%= submit_tag("Send me weekly tips!", class: "waves-effect cyan btn whit-text lighten-1",
+                                    style:"margin-top: .5em, margin-bottom: 2em" ) %>
+                                </div>
+                            </div>
+                            <% end %>   
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-5">
+                
+                <div class="col s12 l5">
                     <div class="device-container">
                         <div class="device-mockup iphone6_plus portrait white">
                             <div class="device">
@@ -98,19 +94,54 @@
         </div>
     </header>
 
-    <section id="download" class="download bg-primary text-center" style="background-color: #fdcc52">
+    <section id="download" class="download bg-primary text-center">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
-                    <h2 class="section-heading">Get opportunities in your inbox.</h2>
-                    <p>Try out our first feature, a weekly opportunity playlist.<br> 
-                    Answer 8 quick questions and we'll plug you with job/internship openings, networking events and pro-tips.</p> <br> 
-                    
-                    <div class="badges">
-                        <%= link_to  "SIGN ME UP", new_user_registration_path , class: "waves-effect waves-light btn-large white-text" %> <br><br> 
+                    <h2 class="section-heading">Get opportunities & advice in your inbox.</h2>
+                <br> 
+                
+                   <%= form_tag(new_user_registration_path, :method => "get") do %>
+                            <div class="row" style="position:relative; margin-top:2%; width: 100%; padding: 2% 1%; height: 6em ">
+                                <div class="col l4 s12" style="padding: 2%">
+                                    <%= text_field_tag(:name , "", placeholder: "NAME",style: "font-size: 2em; 
+                                    border: 3px solid #4dd0e1; padding: .2em 1em; width: 70% ", class:"cyan-text lighten-1" ) %>
+                                </div>
+                                
+                                <div class="col l4 s12" style="padding: 2%">
+                                    <%= text_field_tag(:email , "", placeholder: "EMAIL" ,style: "font-size: 2em; 
+                                    border: 3px solid #4dd0e1; padding: .2em 1em; width: 70% ", class:"cyan-text lighten-1" ) %>
+                                </div>
+                              
+                                
+                                <div class="col l3 s12" style="padding: 2%">
+                                    <%= submit_tag("Make money!", class: "waves-effect cyan btn whit-text lighten-1",
+                                    style:"margin-top: .5em" ) %>
+                                </div>
+                            </div>
+                            <% end %>   
+                            
+                         <div class="col l4 s12">
+                            <h5> New job and internship openings at relevant & growing companies (all paid) </h5>
+                            <img style="width: 70%;  max-height: 8em; overflow:hidden" src="https://media.giphy.com/media/h19XT0qdBgJj2/giphy.gif" > 
+                        </div> 
+                        
+                        <div class="col l4 s12" >
+                            <h5> Advice from black millennials who want to see you win </h5>
+                            <img style="width: 70%; max-height: 6em; overflow:hidden" src="https://media.giphy.com/media/10HJ1jmwQKczio/giphy.gif" > 
+                        </div>
+                        
+                        <div class="col l4 s12"> 
+                            <h5> Kanye-Jay level digital mentor love (...pre 2014) </h5>
+                            <img style="width: 70%; max-height: 8em; overflow:hidden" src="https://media4.giphy.com/media/10PQN1dM2kfr2g/200.webp#7-grid1" > 
+                        </div>
+                
+                                                
+                            
+                        
                         <a class="white-text" href="#features"> NEED A LIL MORE CONVINCING... </a>
                         
-                    </div>
+                   
                 </div>
             </div>
         </div>
@@ -121,38 +152,45 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <div class="section-heading">
-                        <h2>Career Advice For Us, By Us </h2>
+                        <h2 class="cyan-text lighten-1">Career Advice <br>
+                        For Us, By Us </h2>
+                        
                         <h5 class="text-muted"> You know that upperclassmen who somehow has a 3.9 and top internship, but finds time to bless you with advice? <br> 
-                        Or that older cousin who shows up at the holidays with their bougie car and outfit, but who you can't hate on because they truly are the plug? <br><br>
-                        Well, Bloc is your newest, always accessible, mentor - <br>
+                        Or that older cousin who shows up at the holidays with theeveir bougie car and outfit, but who you can't hate on because they truly are the plug? <br><br>
+                        
+                        <span class=" cyan-text lighten-1" >Well, Bloc is your newest, always accessible, mentor - </span><br>
                         leveraging insights from thousands of successful black millennials to help you play the game. <br><br>
     
                         So, think of Bloc an an extremely committed (if occassionaly corny) coach that is always in your corner... and that is powered by tech that blends the functionality of LinkedIn with the heart & soul of Black Twitter to guide you on your professional way. </h5>
-                        <hr><br> 
+                     
+                       <%= form_tag(new_user_registration_path, :method => "get") do %>
+                            <div class="row" style="position:relative; margin-top:2%; width: 100%; padding: 2% 1%; height: 6em ">
+                                <div class="col l4 s12" style="padding: 2%">
+                                    <%= text_field_tag(:name , "", placeholder: "NAME",style: "font-size: 2em; 
+                                    border: 3px solid #4dd0e1; padding: .2em 1em; width: 70% ", class:"cyan-text lighten-1" ) %>
+                                </div>
+                                
+                                <div class="col l4 s12" style="padding: 2%">
+                                    <%= text_field_tag(:email , "", placeholder: "EMAIL" ,style: "font-size: 2em; 
+                                    border: 3px solid #4dd0e1; padding: .2em 1em; width: 70% ", class:"cyan-text lighten-1" ) %>
+                                </div>
+                              
+                                
+                                <div class="col l3 s12" style="padding: 2%">
+                                    <%= submit_tag("Sign me up!", class: "waves-effect cyan btn whit-text lighten-1",
+                                    style:"margin-top: .5em" ) %>
+                                </div>
+                            </div>
+                            <% end %>   
+                     
+                      
                    
-                        <h4>What you can expect</h4><br> 
                         
-                        <div class="col l4 s12" >
-                            <h5> A community to share your wins with </h5>
-                            <img style="width: 70%; max-height: 10em; overflow:hidden" src="https://media.giphy.com/media/10HJ1jmwQKczio/giphy.gif" > 
-                        </div>
-                        
-                        <div class="col l4 s12">
-                            <h5> Help when you don't  know what to do next </h5>
-                            <img style="width: 70%;  max-height: 10em; overflow:hidden" src="https://media.giphy.com/media/Qn3MVehDYvlLy/giphy.gif" > 
-                        </div> 
-                        
-                        <div class="col l4 s12"> 
-                            <h5> Kanye-Jay mentor love (...pre 2014) </h5>
-                            <img style="width: 70%; max-height: 10em; overflow:hidden" src="https://media4.giphy.com/media/10PQN1dM2kfr2g/200.webp#7-grid1" > 
-                        </div>
-<br> <br> 
-
-                    </div> 
-                    <br> <br> 
-                        <%= link_to  "SIGN ME UP", new_user_registration_path , class: "waves-effect waves-light btn-large white-text", style:"margin:5%" %> <br><br> 
-                </div>
+                  
             </div>
+            
+            <%= render "welcome/events" %> 
+            
             <div class="row">
                 <div class="col-md-4">
 
@@ -164,7 +202,7 @@
 
 
 
-    <section id="contact" class="contact bg-primary" style="background-color: #fdcc52">
+    <section id="contact" class="contact bg-primary" >
         <div class="container">
             <h2> Reach out!</h2>
             <ul class="list-inline list-social">
@@ -174,8 +212,8 @@
                 <li class="social-facebook">
                     <a href="instagram.com/our_bloc"><i class="fa fa-facebook"></i></a>
                 </li>
-                <li class="social-google-plus">
-                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                <li class="social-twitter">
+                    <a href="#"><i class="fa fa-instagram"></i></a>
                 </li>
             </ul>
         </div>

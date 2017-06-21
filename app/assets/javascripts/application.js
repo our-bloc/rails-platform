@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require ahoy
+//= require welcome
 //= require jquery_ujs 
 //= require app.js
 //= require init.js
@@ -19,6 +20,6 @@
 //= require materialize-sprockets
 //= require_tree .
 
+
   
-  ahoy.trackAll();
   	

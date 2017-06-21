@@ -12,26 +12,26 @@
   <body style="width:100%;  font-family: Lato; ">
     <div style="padding: 5%"> 
       <img style="width: 100%" src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/1_9_orig.png"> 
-      <h5  style="font-family: Raleway;font-size: 2em;">Hey <%= @user.firstname.capitalize %>,</h5>
+      <i class="fa fa-plug fa-5x cyan-text lighten-1"> </i>
+
+      <h5  style="font-family: Raleway;font-size: 2em;">Hey hey<%= @user.firstname.capitalize %>,</h5>
       <p>
-        Thanks for signing up to test our career playlist! We are working to connect a <span style="color:#44d9e6">national community of black millennials with each other & premium career resources</span>, and we are excited to have you in the community. 
+        Thanks for signing up!
       </p>
       
       <p> 
-      Each week we'll send you a <span style="color:#44d9e6">new playlist, with opportunities, grad school application advice and tips</span> we think can help you get & hold on to your dream career. The more feedback you send us, the better your results, so please make sure to fill out the feedback at the bottom of your playlists. 
+        We'll be sending you personalized career playlists <span style="color:#44d9e6">, 
+        with relevant opportunities and career tips</span> we think can help you get and/or hold on to your dream career. 
+        We want to see you win, so don't hesistate to reach out with any questions, feedback, concerns!
       </p>
       
-      <p> 
-      As an extra incentive, we'll enter you to win <span style="color:#44d9e6"> free Spotify Premium for 6 months </span> when you send us your thoughts. We'll also be offering an annual subscription to the person who refers the most friends to test the playlist by the end of the semester. You can find your personal share code below.
-      </p>
+      <p> Be confident, be great </p>
+      
+      <p>Bloc , your digital career coach </p>
+      <img src="http://gph.is/2ecLAcu" > 
       
   
-      <div class="share" style="background-color: #44d9e6; padding: 2%; text-align: center; font-size: 2em;
-      color: white; font-family: Raleway; margin: 5% 0;" > 
-        <h6> My Share Code </h6> <h6> <%= link_to "jointhebloc.com/"+ @user.profileurl, "jointhebloc.com/"+ @user.profileurl , style: "color:white"  %></h6>
-        <h6> Promoted Opps </h6>
-        <h6> <%= link_to "Check out internships & entry level jobs at United Way, Spotify & VICE", "jointhebloc.com/jobs" , style: "color:white" %>  </h6>
-      </div>
+    
       
       <p> unsubscribe from email updates anytime by replying "Unsubscribe" to this email </p>
     </div>

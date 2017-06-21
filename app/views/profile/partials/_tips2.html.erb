@@ -7,9 +7,8 @@
         <div class="tip_card"> 
          <img id="tip_image" src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/2_6_orig.png"> 
          
-        <% if @tips == nil %> 
-          <h6> </h6>
-         <% else %> 
+        <% if @tips[1] == nil %> 
+        <% else %> 
            
             <% if @tips[1].industry == @user.industry || @tips[1].industry == "All" || @tips[1].industry == nil %>
               <h6> <%= link_to @tips[1].title , @tips[1].link%> </h6>
