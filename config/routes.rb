@@ -5,7 +5,15 @@ Rails.application.routes.draw do
   
   resources :events
   resources :feedbacks
-  resources :tips
+  
+  resources :tips do
+    member do
+      put "like", to: "tips#like"
+      put "unlike", to: "tips#unlike"
+      put "dislike", to: "tips#dislike"
+    end
+  end
+  
   resources :profile
   
 
@@ -30,6 +38,7 @@ Rails.application.routes.draw do
   get '/home', to: 'welcome#landing', as: :landing
   get '/hello', to: 'welcome#hello', as: :hello
   get '/morehouse', to: 'university#morehouse', as: :morehouse
+  get '/conference', to: 'welcome#conference', as: :conference
 
 
   get '/myprofile', to: 'profile#myprofile', as: :myprofile

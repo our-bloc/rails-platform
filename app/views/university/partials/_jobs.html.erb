@@ -6,13 +6,14 @@
      <%  @indeed_results.each do |job| %>
             <div class="card horizontal col s12 l10" id="job_card">
                 <div class="card-content grey-text" >
-                    <h4 id="tip_title"><%= job.job_title.upcase %></h4>
-                    <h5 id="tip_company"><%= job.company %></h5>
+                    <h4 id="job_title"><%= job.job_title.upcase %></h4>
+                    <h5 id="job_company"><%= job.company %></h5>
                      
                      
                      <p><%= job.snippet%></p>
                      <h5><%= job.city %>, <%= job.state %>| <%= job.date.to_s.split(" ")[0] %></h5>
                     
+
              
                   </div>
              </div>

@@ -9,7 +9,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # POST /resource
    def create
-
+    if params[:email] != nil 
+      User.email == params[:email]
+     end
+     
    end
     
     

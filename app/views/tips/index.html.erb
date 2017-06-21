@@ -1,38 +1,28 @@
-<p id="notice"><%= notice %></p>
+<% if current_user.school == "Morehouse College" %> 
+    <%= render "university/partials/menu" %> 
+<% end %> 
 
-<h1>Tips</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Body</th>
-      <th>Industry</th>
-      <th>Link</th>
-      <th>Prep</th>
-      <th>Grad</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+  <div>
     <% @tips.each do |tip| %>
-      <tr>
-        <td><%= tip.title %></td>
-        <td><%= tip.body %></td>
-        <td><%= tip.industry %></td>
-        <td><%= tip.link %></td>
-        <td><%= tip.prep %></td>
-        <td><%= tip.grad %></td>
+      <div class="tip_index_card">
+        <td> <%= link_to tip.title, tip.link %></td>
+
+        <% if !user_signed_in?  %>
+          <td><%= tip.industry %></td>
+          <td><%= tip.link %></td>
+          <td><%= tip.prep %></td>
+          <td><%= tip.grad %></td>
           <td><%= link_to 'Show', tip %></td>
           <td><%= link_to 'Edit', edit_tip_path(tip) %></td>
           <td><%= link_to 'Delete', tip, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %> 
     
-      </tr>
+      </div>
     <% end %>
-  </tbody>
-</table>
+  </div>
 
 <br>
 
+<% if !user_signed_in?  %> 
 <%= link_to 'New Tip', new_tip_path %>
+<% end %> 
