@@ -24,7 +24,6 @@ gem 'indeed_api'
 
 #recommendation engine
 
-gem 'recommendable'
 
 
 #authentication gems

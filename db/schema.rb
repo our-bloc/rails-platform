@@ -70,8 +70,8 @@ ActiveRecord::Schema.define(version: 20170606233707) do
     t.string   "image"
     t.string   "school"
     t.string   "major"
-    t.         "experience"
-    t.         "extra"
+    t.string   "experience"
+    t.string   "extra"
     t.string   "grad"
     t.string   "grad_gradyear"
     t.string   "gradyear"
@@ -79,7 +79,7 @@ ActiveRecord::Schema.define(version: 20170606233707) do
     t.string   "advice2"
     t.string   "advice3"
     t.string   "advice4"
-    t.         "resources"
+    t.string   "resources"
     t.integer  "visit_id"
   end
 
