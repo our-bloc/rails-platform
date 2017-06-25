@@ -1147,5 +1147,8 @@
 {"id":"5bd34d5a-181e-43de-ae0b-f5dea3bb67c5","name":"Viewed welcome#hello","properties":{},"visit_id":"6a46095d-ad0c-4487-89aa-b299dd988236","visitor_id":"f681057a-a8a9-42ea-8c6d-3ee0d41e966c","time":"2017-06-20T23:02:25.244Z"}
 {"id":"f13cd01c-b924-468e-a858-d2549cfcb8fe","name":"Viewed welcome#hello","properties":{},"visit_id":"6a46095d-ad0c-4487-89aa-b299dd988236","visitor_id":"f681057a-a8a9-42ea-8c6d-3ee0d41e966c","time":"2017-06-20T23:40:17.664Z"}
 {"id":"fa5b120b-6f61-4f81-a85e-a18e9ed3cf55","name":"Viewed university#morehouse","properties":{},"visit_id":"6a46095d-ad0c-4487-89aa-b299dd988236","visitor_id":"f681057a-a8a9-42ea-8c6d-3ee0d41e966c","time":"2017-06-20T23:40:26.902Z"}
+<<<<<<< HEAD
 {"id":"6e7c4989-af3a-4a47-97db-080a135ac49b","name":"Viewed welcome#home","properties":{},"visit_id":"2c8299bb-5582-4a0a-8a4b-746e2a2f2149","visitor_id":"f681057a-a8a9-42ea-8c6d-3ee0d41e966c","time":"2017-06-25T02:25:32.758Z"}
 {"id":"9e1eaa02-f5da-450d-bffe-da5567c5c5c0","name":"Viewed welcome#hello","properties":{},"visit_id":"2c8299bb-5582-4a0a-8a4b-746e2a2f2149","visitor_id":"f681057a-a8a9-42ea-8c6d-3ee0d41e966c","time":"2017-06-25T02:25:33.905Z"}
+=======
+>>>>>>> c488f15
