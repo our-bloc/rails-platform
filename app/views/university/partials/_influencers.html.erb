@@ -15,10 +15,11 @@
                         <h4 id="influencer_title"><%= link_to influencer.name.upcase , influencer_path(influencer.id) , class: "grey-text influencer_title" %></h4>
                         <p id="influencer_company"><%= influencer.description %></p>
                         
-                        
+                        <div class="tags"> 
                           <% if influencer.industry != nil %> <div class="teal-text"> <%= influencer.industry.upcase %>  </div> <% end %> 
                           <% if influencer.grad != nil %><div class="teal-text"> <%= influencer.grad.upcase%> </div> <% end %> 
                           <% if influencer.gradyear != nil %><div class="teal-text"> <%= influencer.gradyear.upcase %> </div> <% end %> 
+                        </div>
                 </div>
               </div>
             </div>

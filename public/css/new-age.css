@@ -22,7 +22,7 @@ body {
   width: 100%;
 }
 body {
-  font-family: 'Muli', 'Helvetica', 'Arial', 'sans-serif';
+  font-family: 'Montserrat', 'Helvetica', 'Arial', 'sans-serif';
 }
 a {
   -webkit-transition: all 0.35s;
@@ -42,6 +42,11 @@ hr {
   border-width: 1px;
   border-color: rgba(34, 34, 34, 0.1);
 }
+
+.cyan_highlight{
+  border-bottom: 2px solid #4dd0e1;
+}
+
 hr.light {
   border-color: white;
 }
@@ -51,28 +56,33 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
+  font-family: 'Montserrat', 'Helvetica', 'Arial', 'sans-serif';
   font-weight: 200;
   letter-spacing: 1px;
 }
+
 p {
   font-family: 'Catamaran;', 'Helvetica', 'Arial', 'sans-serif';
   font-size: 18px;
   line-height: 1.5;
   margin-bottom: 20px;
 }
+
+title{
+  color: grey;
+}
 .navbar-default {
-  background-color: white;
+  height: 20px;
   border-color: rgba(34, 34, 34, 0.05);
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s;
-  font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
+  font-family: 'Montserrat', 'Helvetica', 'Arial', 'sans-serif';
   font-weight: 200;
   letter-spacing: 1px;
 }
 .navbar-default .navbar-header .navbar-brand {
-  font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
+  font-family: 'Montserrat', 'Helvetica', 'Arial', 'sans-serif';
   font-weight: 200;
   letter-spacing: 1px;
   color: #fdcc52;
@@ -84,10 +94,10 @@ p {
 .navbar-default .navbar-header .navbar-toggle {
   font-size: 12px;
   color: #222222;
-  padding: 8px 10px;
+  padding: 3px 10px;
 }
 .navbar-default .nav > li > a {
-  font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
+  font-family: 'Montserrat', 'Helvetica', 'Arial', 'sans-serif';
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 11px;
@@ -109,6 +119,25 @@ p {
 .navbar-default .nav > li.active > a:focus:hover {
   background-color: transparent;
 }
+
+#events {
+  background-size: 100%;
+  width: 111%;
+  height:100%;
+  margin: 0% -6%;
+  color: white;
+}
+
+#events h2{
+  font-size: 60px;
+  margin-bottom: 5%;
+}
+
+#events h5{
+  color: grey;
+  
+}
+
 @media (min-width: 768px) {
   .navbar-default {
     background-color: transparent;
@@ -217,18 +246,19 @@ header .device-container .screen img {
   }
 }
 section {
-  padding: 100px 0;
+  padding: 100px 0; 
 }
 section h2 {
-  font-size: 50px;
+  font-size: 40px;
+  line-height: 1;
 }
 section.download {
-  padding: 150px 0;
+  padding: 75px 0;
   position: relative;
 }
 section.download h2 {
   margin-top: 0;
-  font-size: 50px;
+  font-size: 40px;
 }
 section.download .badges .badge-link {
   display: block;
@@ -253,13 +283,22 @@ section.download .badges .badge-link img {
 }
 section.features .section-heading {
   margin-bottom: 100px;
+  height: 100%;
 }
 section.features .section-heading h2 {
+  font-size: 70px;
+  line-height: 1;
   margin-top: 0;
 }
+
+section.features .section-heading h5 {
+  margin: 5% 10%; 
+}
+
 section.features .section-heading p {
   font-family: 'Catamaran;', 'Helvetica', 'Arial', 'sans-serif';
-  margin-bottom: 0;
+  margin: 50px;
+
 }
 section.features .device-container,
 section.features .feature-item {
@@ -339,7 +378,9 @@ section.cta .overlay {
   left: 0;
 }
 section.contact {
+  padding-top: 20%;
   text-align: center;
+  height: 100%;
 }
 section.contact h2 {
   margin-top: 0;
@@ -402,10 +443,8 @@ footer ul li a.active {
   text-decoration: none;
 }
 .bg-primary {
-  background: #fdcc52;
-  background: -webkit-linear-gradient(#fdcc52, #fdc539);
-  background: linear-gradient(#fdcc52, #fdc539);
-  
+  background-color: white;
+  color: #4dd0e1;
 }
   
 .text-primary {
@@ -429,7 +468,7 @@ footer ul li a.active {
   border-color: #fdcc52;
 }
 .btn {
-  font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
+  font-family: 'Montserrat', 'Helvetica', 'Arial', 'sans-serif';
   text-transform: uppercase;
   letter-spacing: 2px;
   border-radius: 300px;

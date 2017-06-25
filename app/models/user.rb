@@ -6,20 +6,23 @@ class User < ApplicationRecord
 
 
   #associations
-  has_many :jobs
-  has_many :asks
-  has_many :shares
-  has_many :resources
-  has_many :influencers
+    has_many :jobs
+    has_many :asks
+    has_many :shares
+    has_many :resources
+    has_many :influencers
+    
+    has_many :visions
   
-  has_many :visions
-
+    
+    has_many :value
+    has_many :feedbacks
+    has_many :events
+    
+    has_one :profile
   
-  has_many :value
-  has_many :feedbacks
-  has_many :events
-  
-  has_one :profile
+  #RECOMMENDATION ENGINE
+    recommends :tips , :jobs, :influencers
   
   #REFERRALS
   
@@ -55,6 +58,11 @@ class User < ApplicationRecord
       #update admin
       NewUserMailer.new_user(self).deliver
   end 
+  
+
+  
+  
+  
   
   #LOGIN WITH TOKEN FROM EMAIL
     def set_login_bypass_token

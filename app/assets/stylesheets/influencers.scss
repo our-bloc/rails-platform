@@ -1,4 +1,4 @@
-// Place all the styles related to the Tips controller here.
+// Place all the styles related to the influencers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
@@ -6,22 +6,10 @@ body{
     padding:5%;
 }
 
-.tip_show{
-    position: fixed;
-    width: 100%;
-   text-align: center ;
-   font-family: Montserrat;
-}
 
-h4{
-    font-size: 3em;
-}
-.tip_title {
-    padding-top: 5%;
-    font-size: 2em;
-}
 
-.tip_index_card {
+
+.influencer_index_card {
     position: relative;
     text-align: center;
     border-bottom: 1px solid grey;

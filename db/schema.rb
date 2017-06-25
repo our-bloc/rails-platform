@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170529155938) do
+ActiveRecord::Schema.define(version: 20170606233707) do
 
   create_table "ahoy_events", force: :cascade do |t|
     t.integer  "visit_id"
@@ -80,6 +80,7 @@ ActiveRecord::Schema.define(version: 20170529155938) do
     t.string   "advice3"
     t.string   "advice4"
     t.         "resources"
+    t.integer  "visit_id"
   end
 
   create_table "jobs", force: :cascade do |t|
@@ -145,6 +146,7 @@ ActiveRecord::Schema.define(version: 20170529155938) do
     t.string   "grad"
     t.boolean  "for_email"
     t.string   "gradyear"
+    t.integer  "visit_id"
   end
 
   create_table "users", force: :cascade do |t|

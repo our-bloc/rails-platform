@@ -6,12 +6,12 @@
         <div class="col s12">
         <div class="tip_card"> 
          <img id="tip_image" src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/new-playlist-design_orig.png"> 
-         
-        <% if @tips == nil %> 
-          <h6> </h6>
-         <% else %> 
+       
+           <% if @tips[0] == nil or @user.industry == nil %> 
+           <h6></h6>
+           <% else %> 
            
-            <% if @tips[0].industry == @user.industry || @tips[0].industry == "All" || @tips[0].industry == nil %>
+            <% if @tips[0].industry = @user.industry and @tips[0].industry == @user.industry || @tips[0].industry == "All"  %>
               <h6> <%= link_to @tips[0].title , @tips[0].link%> </h6>
              <% end %> 
           
