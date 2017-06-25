@@ -79,7 +79,11 @@ ActiveRecord::Schema.define(version: 20170606233707) do
     t.string   "advice2"
     t.string   "advice3"
     t.string   "advice4"
+<<<<<<< HEAD
     t.string   "resources"
+=======
+    t.         "resources"
+>>>>>>> c488f1514077b88910b004b8b420aefca052acd9
     t.integer  "visit_id"
   end
 

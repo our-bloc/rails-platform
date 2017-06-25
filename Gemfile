@@ -24,6 +24,10 @@ gem 'indeed_api'
 
 #recommendation engine
 
+<<<<<<< HEAD
+=======
+gem 'recommendable'
+>>>>>>> c488f1514077b88910b004b8b420aefca052acd9
 
 
 #authentication gems
