@@ -17,7 +17,6 @@
 //= require app.js
 //= require init.js
 //= require materialize/extras/nouislider
-//= require scrollLock
 
 //= require materialize-sprockets
 //= require_tree .

@@ -14,7 +14,6 @@ class ApplicationController < ActionController::Base
 
   protected
   
-  job = Job.last
   
   #TRACK AHOY
   def track_action
