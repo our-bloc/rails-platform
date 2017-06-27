@@ -94,47 +94,56 @@
         </div>
     </header>
 
-    <section id="download" class="download bg-primary text-center">
-        <div class="container">
-            <div class="row">
+    <section id="download" class="download bg-primary text-center" style="margin-bottom: 20%">
+        <div class="container ">
+            
                 <div class="col-md-8 col-md-offset-2">
                     <h2 class="section-heading">Get opportunities & advice in your inbox.</h2>
                 <br> 
+                </div>
                 
                    <%= form_tag(new_user_registration_path, :method => "get") do %>
-                            <div class="row" style="position:relative; margin-top:2%; width: 100%; padding: 2% 1%; height: 6em ">
-                                <div class="col l4 s12" style="padding: 2%">
+                            <div class="row" style="position:relative; margin-top:5%; width: 100%; padding: 2% 12% 2% 10%; height: 6em ">
+                                <div class="col l4 s12 offset-l1" >
                                     <%= text_field_tag(:name , "", placeholder: "NAME",style: "font-size: 2em; 
-                                    border: 3px solid #4dd0e1; padding: .2em 1em; width: 70% ", class:"cyan-text lighten-1" ) %>
+                                    border-bottom: 3px solid #4dd0e1; padding: .2em 1em; width: 70% ", class:"cyan-text lighten-1" ) %>
                                 </div>
                                 
-                                <div class="col l4 s12" style="padding: 2%">
+                                <div class="col l4 s12" >
                                     <%= text_field_tag(:email , "", placeholder: "EMAIL" ,style: "font-size: 2em; 
-                                    border: 3px solid #4dd0e1; padding: .2em 1em; width: 70% ", class:"cyan-text lighten-1" ) %>
+                                    border-bottom: 3px solid #4dd0e1; padding: .2em 1em; width: 70% ", class:"cyan-text lighten-1" ) %>
                                 </div>
                               
                                 
-                                <div class="col l3 s12" style="padding: 2%">
+                                <div class="col l3 s12" >
                                     <%= submit_tag("Make money!", class: "waves-effect cyan btn whit-text lighten-1",
                                     style:"margin-top: .5em" ) %>
                                 </div>
                             </div>
+                            
+                            </br>
                             <% end %>   
                             
-                         <div class="col l4 s12">
+                            
+                            
+                    <!--ABOUT US GIFS --> 
+                    <div class="row" style="position:absolute ; margin-top: 8% ; ">
+                         <div class="col l3 s12 offset-l1">
                             <h5> New job and internship openings at relevant & growing companies (all paid) </h5>
-                            <img style="width: 70%;  max-height: 8em; overflow:hidden" src="https://media.giphy.com/media/h19XT0qdBgJj2/giphy.gif" > 
+                            <img style=" max-height: 8em; overflow:hidden" src="https://media.giphy.com/media/h19XT0qdBgJj2/giphy.gif" > 
                         </div> 
+
                         
-                        <div class="col l4 s12" >
+                        <div class="col l3 s12" >
                             <h5> Advice from black millennials who want to see you win </h5>
-                            <img style="width: 70%; max-height: 6em; overflow:hidden" src="https://media.giphy.com/media/10HJ1jmwQKczio/giphy.gif" > 
+                            <img style="max-height: 6em; overflow:hidden" src="https://media.giphy.com/media/10HJ1jmwQKczio/giphy.gif" > 
                         </div>
                         
-                        <div class="col l4 s12"> 
+                        <div class="col l3 s12"> 
                             <h5> Kanye-Jay level digital mentor love (...pre 2014) </h5>
-                            <img style="width: 70%; max-height: 8em; overflow:hidden" src="https://media4.giphy.com/media/10PQN1dM2kfr2g/200.webp#7-grid1" > 
+                            <img style=" max-height: 8em; overflow:hidden" src="https://media4.giphy.com/media/10PQN1dM2kfr2g/200.webp#7-grid1" > 
                         </div>
+                    </div>
                 
                                                 
                             
@@ -156,7 +165,7 @@
                         For Us, By Us </h2>
                         
                         <h5 class="text-muted"> You know that upperclassmen who somehow has a 3.9 and top internship, but finds time to bless you with advice? <br> 
-                        Or that older cousin who shows up at the holidays with theeveir bougie car and outfit, but who you can't hate on because they truly are the plug? <br><br>
+                        Or that older cousin who shows up at the holidays and does the most, but who you can't hate on because they also plug you with opportunities? <br><br>
                         
                         <span class=" cyan-text lighten-1" >Well, Bloc is your newest, always accessible, mentor - </span><br>
                         leveraging insights from thousands of successful black millennials to help you play the game. <br><br>
@@ -164,15 +173,15 @@
                         So, think of Bloc an an extremely committed (if occassionaly corny) coach that is always in your corner... and that is powered by tech that blends the functionality of LinkedIn with the heart & soul of Black Twitter to guide you on your professional way. </h5>
                      
                        <%= form_tag(new_user_registration_path, :method => "get") do %>
-                            <div class="row" style="position:relative; margin-top:2%; width: 100%; padding: 2% 1%; height: 6em ">
+                            <div class="row" style="position:relative; margin-top:-6%; width: 100%; padding: 1% 5% 1% 15%; height: 6em ">
                                 <div class="col l4 s12" style="padding: 2%">
                                     <%= text_field_tag(:name , "", placeholder: "NAME",style: "font-size: 2em; 
-                                    border: 3px solid #4dd0e1; padding: .2em 1em; width: 70% ", class:"cyan-text lighten-1" ) %>
+                                    border-bottom: 3px solid #4dd0e1; padding: .2em 1em; width: 70% ", class:"cyan-text lighten-1" ) %>
                                 </div>
                                 
                                 <div class="col l4 s12" style="padding: 2%">
                                     <%= text_field_tag(:email , "", placeholder: "EMAIL" ,style: "font-size: 2em; 
-                                    border: 3px solid #4dd0e1; padding: .2em 1em; width: 70% ", class:"cyan-text lighten-1" ) %>
+                                    border-bottom: 3px solid #4dd0e1; padding: .2em 1em; width: 70% ", class:"cyan-text lighten-1" ) %>
                                 </div>
                               
                                 
@@ -206,15 +215,11 @@
         <div class="container">
             <h2> Reach out!</h2>
             <ul class="list-inline list-social">
-                <li class="social-twitter">
-                    <a href="twitter.com/our_bloc"><i class="fa fa-twitter"></i></a>
-                </li>
-                <li class="social-facebook">
-                    <a href="instagram.com/our_bloc"><i class="fa fa-facebook"></i></a>
-                </li>
-                <li class="social-twitter">
-                    <a href="#"><i class="fa fa-instagram"></i></a>
-                </li>
+                
+                    <a href="mailto:info@jointhebloc.com"><h2 class="grey-text"> info@jointhebloc.com </a> </h2>
+        
+                
+               
             </ul>
         </div>
     </section>
@@ -222,7 +227,7 @@
     <footer>
         <div class="container">
             <p>&copy; 2017 Our Bloc. All Rights Reserved.</p>
-            <ul class="list-inline">
+         
                 <!--
                 <li>
                     <a href="#">Privacy</a>
