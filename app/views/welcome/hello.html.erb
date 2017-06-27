@@ -26,6 +26,11 @@
 
     <!-- Theme CSS -->
     <link href="css/new-age.css" rel="stylesheet">
+    
+    <!-- Scroll Lock --> 
+    <% content_for :javascript_includes do %>
+  <%= javascript_include_tag "scrollLock.js" %>
+<% end %>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -258,3 +263,12 @@
 </body>
 
 </html>
+
+<script> 
+
+$( document ).ready(function() {
+    $('body').css('overflow','hidden');
+    $('body').attr('scroll','no');
+});
+   
+</script>
