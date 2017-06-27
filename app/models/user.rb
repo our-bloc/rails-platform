@@ -22,8 +22,7 @@ class User < ApplicationRecord
     has_one :profile
   
   #RECOMMENDATION ENGINE
-    recommends :tips , :jobs, :influencers
-  
+
   #REFERRALS
   
   
