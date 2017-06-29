@@ -43470,3 +43470,1217 @@ Processing by JobsController#new as HTML
 Completed 200 OK in 254ms (Views: 251.4ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/profiles" for 67.87.59.199 at 2017-06-29 22:46:27 +0000
+Processing by ProfileController#index as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (Unsupported argument type: true (TrueClass)):
+  
+app/controllers/profile_controller.rb:11:in `index'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.4ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (34.7ms)
+Started GET "/profiles" for 67.87.59.199 at 2017-06-29 22:46:39 +0000
+Processing by ProfileController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (Unsupported argument type: true (TrueClass)):
+  
+app/controllers/profile_controller.rb:11:in `index'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.4ms)
+Started GET "/profiles" for 67.87.59.199 at 2017-06-29 22:47:45 +0000
+Processing by ProfileController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (Unsupported argument type: true (TrueClass)):
+  
+app/controllers/profile_controller.rb:11:in `index'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.8ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.1ms)
+Started GET "/profiles" for 67.87.59.199 at 2017-06-29 22:48:04 +0000
+Processing by ProfileController#index as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::StatementInvalid (Could not find table 'users'):
+  
+app/controllers/profile_controller.rb:11:in `index'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.7ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (27.2ms)
+Started GET "/profiles" for 67.87.59.199 at 2017-06-29 22:48:25 +0000
+Processing by ProfileController#index as HTML
+  Rendering profile/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered profile/index.html.erb within layouts/application (177.6ms)
+Completed 500 Internal Server Error in 186ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x007f02fc31a488>:0x007f02fc318b88>
+Did you mean?  @user):
+    1: <h5> User Profiles </h5>
+    2: 
+    3: <% if user.prep != nil %> 
+    4:     <% @users_all.each do |user| %>     
+    5:             <div class="card horizontal white" style="width:50%; height: 30%">
+    6:                 <div class="card-content teal-text">
+  
+app/views/profile/index.html.erb:3:in `_app_views_profile_index_html_erb__1142116760956157708_69825398888260'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.3ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.4ms)
+Started GET "/profiles" for 67.87.59.199 at 2017-06-29 22:48:46 +0000
+Processing by ProfileController#index as HTML
+  Rendering profile/index.html.erb within layouts/application
+  Rendered profile/index.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `prep' for nil:NilClass):
+    1: <h5> User Profiles </h5>
+    2: 
+    3: <% if @user.prep == nil %> 
+    4:     <% @users_all.each do |user| %>     
+    5:             <div class="card horizontal white" style="width:50%; height: 30%">
+    6:                 <div class="card-content teal-text">
+  
+app/views/profile/index.html.erb:3:in `_app_views_profile_index_html_erb__1142116760956157708_69825332021480'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.2ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (33.0ms)
+Started GET "/profiles" for 67.87.59.199 at 2017-06-29 22:49:26 +0000
+Processing by ProfileController#index as HTML
+  Rendering profile/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered profile/index.html.erb within layouts/application (9.4ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `prep' for #<User::ActiveRecord_Relation:0x007f02fc160250>):
+    1: <h5> User Profiles </h5>
+    2: 
+    3: <% if @users_all.prep == nil %> 
+    4:     <% @users_all.each do |user| %>     
+    5:             <div class="card horizontal white" style="width:50%; height: 30%">
+    6:                 <div class="card-content teal-text">
+  
+app/views/profile/index.html.erb:3:in `_app_views_profile_index_html_erb__1142116760956157708_69825498706560'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.6ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (49.9ms)
+Started GET "/profiles" for 67.87.59.199 at 2017-06-29 22:53:00 +0000
+Processing by ProfileController#index as HTML
+  Rendering profile/index.html.erb within layouts/application
+  Rendered profile/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/ubuntu/workspace/app/views/profile/index.html.erb:27: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/profile/index.html.erb:27: syntax error, unexpected keyword_ensure, expecting end-of-input
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.2ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (34.5ms)
+Started GET "/profiles" for 67.87.59.199 at 2017-06-29 22:56:55 +0000
+Processing by ProfileController#index as HTML
+  Rendering profile/index.html.erb within layouts/application
+  Rendered profile/index.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/ubuntu/workspace/app/views/profile/index.html.erb:27: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/profile/index.html.erb:27: syntax error, unexpected keyword_ensure, expecting end-of-input
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.3ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (36.4ms)
+Started GET "/jobs/new" for 67.87.59.199 at 2017-06-29 22:58:40 +0000
+Processing by JobsController#new as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::StatementInvalid (Could not find table 'jobs'):
+  
+app/controllers/jobs_controller.rb:25:in `new'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (54.7ms)
+Started GET "/profiles" for 67.87.59.199 at 2017-06-29 22:58:42 +0000
+Processing by ProfileController#index as HTML
+  Rendering profile/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered profile/index.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such table: users: SELECT "users".* FROM "users"):
+    1: <h5> User Profiles </h5>
+    2: 
+    3: 
+    4:     <% @users_all.each do |user| %>   
+    5:         <div class="card horizontal white" style="width:50%; height: 30%">
+    6:             <div class="card-content teal-text">
+    7:                 <h5><%= user.name.split.first%> </h5> 
+  
+app/views/profile/index.html.erb:4:in `_app_views_profile_index_html_erb__1142116760956157708_69825331096180'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (32.7ms)
+  [1m[35m (12.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (13.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20160924235724)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '', "encrypted_password" varchar DEFAULT '', "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160924235724"]]
+  [1m[35m (35.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateInfluencers (20160924235809)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "influencers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160924235809"]]
+  [1m[35m (10.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddDetailsToUsers (20160925170244)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" ADD "name" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "school" varchar[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "major" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "gradyear" integer[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "experience" text[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "bloc1" text[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "bloc2" text[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "bloc3" text[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "skills" text[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "orgs" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "links" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "threeskills" integer[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "phone" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "geo" text[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "hometown" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "company" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "mission" text[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "industry" text[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "statement" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "title" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "resumelink" varchar[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160925170244"]]
+  [1m[35m (13.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddRolesToUsers (20160926031248)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "role" varchar[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160926031248"]]
+  [1m[35m (10.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateSectors (20161020193259)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "sectors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161020193259"]]
+  [1m[35m (11.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateAsks (20161020193404)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "asks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "sector_id" integer, "title" text, "description" varchar, "text" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_asks_on_user_id" ON "asks" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_asks_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_asks_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_asks_on_sector_id" ON "asks" ("sector_id")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161020193404"]]
+  [1m[35m (10.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateShares (20161020193417)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "shares" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "sector_id" integer, "title" text, "description" varchar, "text" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_shares_on_user_id" ON "shares" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_shares_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_shares_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_shares_on_sector_id" ON "shares" ("sector_id")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161020193417"]]
+  [1m[35m (9.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateResources (20161020193443)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "resources" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "sector_id" integer, "title" text, "description" varchar, "text" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_resources_on_user_id" ON "resources" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_resources_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_resources_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_resources_on_sector_id" ON "resources" ("sector_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161020193443"]]
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateJobs (20161020193549)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "jobs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "title" text, "description" varchar, "text" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_jobs_on_user_id" ON "jobs" ("user_id")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161020193549"]]
+  [1m[35m (11.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateVisions (20161104150854)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "visions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "industry" integer, "ten" varchar, "dreamjob" varchar, "style" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161104150854"]]
+  [1m[35m (10.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateValues (20161104152146)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "values" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "whoserve" integer, "howserve" integer, "legacy" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161104152146"]]
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddUserIdToVisionValue (20161104195351)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "values" ADD "user_id" integer[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_values_on_user_id" ON "values" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "visions" ADD "user_id" integer[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_visions_on_user_id" ON "visions" ("user_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161104195351"]]
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddDetailsToVision (20161210164617)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "visions" ADD "mentor" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "visions" ADD "gradschool" integer[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "values" ADD "moves" integer[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "values" ADD "drama" integer[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "values" ADD "office" integer[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161210164617"]]
+  [1m[35m (13.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddSaveToJobs (20161214192847)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "jobs" ADD "saved" boolean[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161214192847"]]
+  [1m[35m (9.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddPrepToVisions (20161220194854)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "visions" ADD "prep" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161220194854"]]
+  [1m[35m (11.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddFirstjobToVisions (20161220230723)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "visions" ADD "firstjob" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161220230723"]]
+  [1m[35m (10.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddCompaniesToVisions (20161227163549)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "visions" ADD "companies" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161227163549"]]
+  [1m[35m (10.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddMoreDetailsToUsers (20161227190325)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" ADD "firstjob" varchar[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "prep" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "style" varchar[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "gradschool" varchar[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "office" varchar[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "companies" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161227190325"]]
+  [1m[35m (11.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to ChangeVisionsColumnTypes (20161227224743)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TEMPORARY TABLE "avisions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "industry" integer, "ten" varchar, "dreamjob" varchar, "style" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" integer, "mentor" varchar, "gradschool" integer, "prep" varchar, "firstjob" varchar, "companies" varchar)[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_visions_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_visions_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "tindex_avisions_on_user_id" ON "avisions" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "avisions" ("id","industry","ten","dreamjob","style","created_at","updated_at","user_id","mentor","gradschool","prep","firstjob","companies")
+                     SELECT "id","industry","ten","dreamjob","style","created_at","updated_at","user_id","mentor","gradschool","prep","firstjob","companies" FROM "visions"[0m
+  [1m[35m (1.7ms)[0m  [1m[35mDROP TABLE "visions"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "visions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "industry" integer, "ten" varchar, "dreamjob" varchar, "style" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" integer, "mentor" varchar, "gradschool" varchar, "prep" varchar, "firstjob" varchar, "companies" varchar)[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_avisions_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_avisions_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_visions_on_user_id" ON "visions" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "visions" ("id","industry","ten","dreamjob","style","created_at","updated_at","user_id","mentor","gradschool","prep","firstjob","companies")
+                     SELECT "id","industry","ten","dreamjob","style","created_at","updated_at","user_id","mentor","gradschool","prep","firstjob","companies" FROM "avisions"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "avisions"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "avisions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "industry" integer, "ten" varchar, "dreamjob" varchar, "style" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" integer, "mentor" varchar, "gradschool" varchar, "prep" varchar, "firstjob" varchar, "companies" varchar)[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_visions_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_visions_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "tindex_avisions_on_user_id" ON "avisions" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "avisions" ("id","industry","ten","dreamjob","style","created_at","updated_at","user_id","mentor","gradschool","prep","firstjob","companies")
+                     SELECT "id","industry","ten","dreamjob","style","created_at","updated_at","user_id","mentor","gradschool","prep","firstjob","companies" FROM "visions"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "visions"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "visions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "industry" integer, "ten" varchar, "dreamjob" varchar, "style" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" integer, "mentor" varchar, "gradschool" varchar, "prep" varchar, "firstjob" varchar, "companies" varchar)[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_avisions_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_avisions_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX "index_visions_on_user_id" ON "visions" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "visions" ("id","industry","ten","dreamjob","style","created_at","updated_at","user_id","mentor","gradschool","prep","firstjob","companies")
+                     SELECT "id","industry","ten","dreamjob","style","created_at","updated_at","user_id","mentor","gradschool","prep","firstjob","companies" FROM "avisions"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "avisions"[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161227224743"]]
+  [1m[35m (11.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddIndustryToJobs (20161229202644)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "jobs" ADD "industry" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161229202644"]]
+  [1m[35m (10.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to RemoveSectorFromJobs (20161229211958)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "jobs" ADD "deadline" date[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20161229211958"]]
+  [1m[35m (15.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddDetailsToInfluencers (20170103023515)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "influencers" ADD "name" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "influencers" ADD "description" text[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "influencers" ADD "industry" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "influencers" ADD "style" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170103023515"]]
+  [1m[35m (12.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddOmniauthToUsers (20170103222755)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" ADD "provider" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "uid" varchar[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170103222755"]]
+  [1m[35m (21.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddColumnsToVisions (20170111040423)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "visions" ADD "username" varchar[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "visions" ADD "email" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170111040423"]]
+  [1m[35m (19.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateTips (20170113061122)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "tips" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "industry" varchar, "link" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170113061122"]]
+  [1m[35m (11.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddProfilePicToVisions (20170117174149)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "visions" ADD "image" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170117174149"]]
+  [1m[35m (10.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddDetailsToVisions (20170117180808)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "visions" ADD "gender" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "visions" ADD "timezone" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "visions" ADD "age" varchar[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170117180808"]]
+  [1m[35m (13.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateFeedbacks (20170117231914)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "feedbacks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "body" text, "user_id" integer, "type" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170117231914"]]
+  [1m[35m (13.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateEvents (20170117235924)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "org" varchar, "date" date, "user_id" varchar, "contact" varchar, "industry" varchar, "body" text, "social" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170117235924"]]
+  [1m[35m (15.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddImageToEvents (20170118000148)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "events" ADD "image" varchar[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170118000148"]]
+  [1m[35m (11.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddMajorToVisions (20170120173156)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "visions" ADD "major" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170120173156"]]
+  [1m[35m (10.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddGradyearToVisions (20170121035755)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "visions" ADD "gradyear" integer[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170121035755"]]
+  [1m[35m (10.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateProfiles (20170129231211)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "profiles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170129231211"]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddUserIdToProfile (20170129233724)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "profiles" ADD "user_id" integer[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_profiles_on_user_id" ON "profiles" ("user_id")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170129233724"]]
+  [1m[35m (12.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddReferralCodeToUsers (20170129234854)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" ADD "refererred_by_user_id" integer[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170129234854"]]
+  [1m[35m (9.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddProfileUrlToUsers (20170130011745)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "users" ADD "profileurl" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170130011745"]]
+  [1m[35m (10.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddShareCodeToUsers (20170130020253)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "users" ADD "referral_code" varchar[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170130020253"]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddColumnsToUsers (20170131181629)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" ADD "gender" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "picture" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "timezone" varchar[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170131181629"]]
+  [1m[35m (9.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddFirstNameToUsers (20170202015359)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" ADD "firstname" varchar[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170202015359"]]
+  [1m[35m (7.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateVisits (20170203171918)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class CreateVisits < ActiveRecord::Migration[4.2] (called from load at /usr/local/rvm/gems/ruby-2.3.0/bin/rake:23)
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "visits" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "visit_token" varchar, "visitor_token" varchar, "ip" varchar, "user_agent" text, "referrer" text, "landing_page" text, "user_id" integer, "referring_domain" varchar, "search_keyword" varchar, "browser" varchar, "os" varchar, "device_type" varchar, "screen_height" integer, "screen_width" integer, "country" varchar, "region" varchar, "city" varchar, "postal_code" varchar, "latitude" decimal, "longitude" decimal, "utm_source" varchar, "utm_medium" varchar, "utm_term" varchar, "utm_content" varchar, "utm_campaign" varchar, "started_at" datetime)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_visits_on_visit_token" ON "visits" ("visit_token")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_visits_on_visit_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_visits_on_visit_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_visits_on_user_id" ON "visits" ("user_id")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170203171918"]]
+  [1m[35m (11.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateAhoyEvents (20170203171919)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is deprecated. Please specify the Rails release the migration was written for:
+
+  class CreateAhoyEvents < ActiveRecord::Migration[4.2] (called from load at /usr/local/rvm/gems/ruby-2.3.0/bin/rake:23)
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "ahoy_events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "visit_id" integer, "user_id" integer, "name" varchar, "properties" text, "time" datetime)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_ahoy_events_on_visit_id_and_name" ON "ahoy_events" ("visit_id", "name")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ahoy_events_on_visit_id_and_name' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ahoy_events_on_visit_id_and_name' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_ahoy_events_on_user_id_and_name" ON "ahoy_events" ("user_id", "name")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ahoy_events_on_user_id_and_name' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ahoy_events_on_user_id_and_name' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ahoy_events_on_visit_id_and_name' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ahoy_events_on_visit_id_and_name' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_ahoy_events_on_name_and_time" ON "ahoy_events" ("name", "time")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170203171919"]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddSchoolToVisions (20170206125227)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "visions" ADD "school" varchar[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170206125227"]]
+  [1m[35m (12.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddPollToQuizes (20170206130146)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "visions" ADD "career_services" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "visions" ADD "linkedin" varchar[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170206130146"]]
+  [1m[35m (11.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddPrepToTips (20170206192947)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "tips" ADD "prep" varchar[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170206192947"]]
+  [1m[35m (8.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddGradToTips (20170206193745)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "tips" ADD "grad" varchar[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170206193745"]]
+  [1m[35m (10.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddPremiumToUsers (20170206204334)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "users" ADD "premium" boolean[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170206204334"]]
+  [1m[35m (13.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to ChangeDataTypesVisionsIndustryAndStyle (20170212004911)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "avisions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "industry" integer, "ten" varchar, "dreamjob" varchar, "style" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" integer, "mentor" varchar, "gradschool" varchar, "prep" varchar, "firstjob" varchar, "companies" varchar, "username" varchar, "email" varchar, "image" varchar, "gender" varchar, "timezone" varchar, "age" varchar, "major" varchar, "gradyear" integer, "school" varchar, "career_services" varchar, "linkedin" varchar)[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_visions_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_visions_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_avisions_on_user_id" ON "avisions" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "avisions" ("id","industry","ten","dreamjob","style","created_at","updated_at","user_id","mentor","gradschool","prep","firstjob","companies","username","email","image","gender","timezone","age","major","gradyear","school","career_services","linkedin")
+                     SELECT "id","industry","ten","dreamjob","style","created_at","updated_at","user_id","mentor","gradschool","prep","firstjob","companies","username","email","image","gender","timezone","age","major","gradyear","school","career_services","linkedin" FROM "visions"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "visions"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "visions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "industry" varchar, "ten" varchar, "dreamjob" varchar, "style" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" integer, "mentor" varchar, "gradschool" varchar, "prep" varchar, "firstjob" varchar, "companies" varchar, "username" varchar, "email" varchar, "image" varchar, "gender" varchar, "timezone" varchar, "age" varchar, "major" varchar, "gradyear" integer, "school" varchar, "career_services" varchar, "linkedin" varchar)[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_avisions_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_avisions_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_visions_on_user_id" ON "visions" ("user_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "visions" ("id","industry","ten","dreamjob","style","created_at","updated_at","user_id","mentor","gradschool","prep","firstjob","companies","username","email","image","gender","timezone","age","major","gradyear","school","career_services","linkedin")
+                     SELECT "id","industry","ten","dreamjob","style","created_at","updated_at","user_id","mentor","gradschool","prep","firstjob","companies","username","email","image","gender","timezone","age","major","gradyear","school","career_services","linkedin" FROM "avisions"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "avisions"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TEMPORARY TABLE "avisions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "industry" varchar, "ten" varchar, "dreamjob" varchar, "style" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" integer, "mentor" varchar, "gradschool" varchar, "prep" varchar, "firstjob" varchar, "companies" varchar, "username" varchar, "email" varchar, "image" varchar, "gender" varchar, "timezone" varchar, "age" varchar, "major" varchar, "gradyear" integer, "school" varchar, "career_services" varchar, "linkedin" varchar)[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_visions_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_visions_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "tindex_avisions_on_user_id" ON "avisions" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "avisions" ("id","industry","ten","dreamjob","style","created_at","updated_at","user_id","mentor","gradschool","prep","firstjob","companies","username","email","image","gender","timezone","age","major","gradyear","school","career_services","linkedin")
+                     SELECT "id","industry","ten","dreamjob","style","created_at","updated_at","user_id","mentor","gradschool","prep","firstjob","companies","username","email","image","gender","timezone","age","major","gradyear","school","career_services","linkedin" FROM "visions"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "visions"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "visions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "industry" varchar, "ten" varchar, "dreamjob" varchar, "style" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" integer, "mentor" varchar, "gradschool" varchar, "prep" varchar, "firstjob" varchar, "companies" varchar, "username" varchar, "email" varchar, "image" varchar, "gender" varchar, "timezone" varchar, "age" varchar, "major" varchar, "gradyear" integer, "school" varchar, "career_services" varchar, "linkedin" varchar)[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_avisions_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_avisions_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_visions_on_user_id" ON "visions" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "visions" ("id","industry","ten","dreamjob","style","created_at","updated_at","user_id","mentor","gradschool","prep","firstjob","companies","username","email","image","gender","timezone","age","major","gradyear","school","career_services","linkedin")
+                     SELECT "id","industry","ten","dreamjob","style","created_at","updated_at","user_id","mentor","gradschool","prep","firstjob","companies","username","email","image","gender","timezone","age","major","gradyear","school","career_services","linkedin" FROM "avisions"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "avisions"[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170212004911"]]
+  [1m[35m (14.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddCompanyToJobs (20170222192735)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "jobs" ADD "company" varchar[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170222192735"]]
+  [1m[35m (10.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddLinkToJobs (20170222202335)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "jobs" ADD "link" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170222202335"]]
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddColumnsToFeedbacks (20170316172954)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "feedbacks" ADD "design" integer[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "feedbacks" ADD "job_quality" integer[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "feedbacks" ADD "ease" integer[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "feedbacks" ADD "login" integer[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170316172954"]]
+  [1m[35m (11.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddSurveyDetailsToUsers (20170416203448)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "users" ADD "career_services" varchar[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "linkedin" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170416203448"]]
+  [1m[35m (10.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddForEmailToTips (20170421030448)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "tips" ADD "for_email" boolean[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170421030448"]]
+  [1m[35m (10.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddGradYearToTips (20170421030714)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "tips" ADD "gradyear" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170421030714"]]
+  [1m[35m (10.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddLoginTokenToUsers (20170426132743)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "users" ADD "login_bypass_token" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170426132743"]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddMoreDetailsToInfluencers (20170529155938)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "influencers" ADD "image" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "influencers" ADD "school" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "influencers" ADD "major" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "influencers" ADD "experience" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "influencers" ADD "extra" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "influencers" ADD "grad" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "influencers" ADD "grad_gradyear" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "influencers" ADD "gradyear" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "influencers" ADD "advice1" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "influencers" ADD "advice2" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "influencers" ADD "advice3" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "influencers" ADD "advice4" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "influencers" ADD "resources" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170529155938"]]
+  [1m[35m (11.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddVisitIdToTips (20170606230843)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "tips" ADD "visit_id" integer[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170606230843"]]
+  [1m[35m (10.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddVisitIdToInfluencers (20170606233707)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "influencers" ADD "visit_id" integer[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170606233707"]]
+  [1m[35m (13.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-06-29 22:59:29 UTC], ["updated_at", 2017-06-29 22:59:29 UTC]]
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ahoy_events_on_name_and_time' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ahoy_events_on_name_and_time' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ahoy_events_on_user_id_and_name' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ahoy_events_on_user_id_and_name' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ahoy_events_on_visit_id_and_name' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ahoy_events_on_visit_id_and_name' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_asks_on_sector_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_asks_on_sector_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_asks_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_asks_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_jobs_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_jobs_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_profiles_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_profiles_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_resources_on_sector_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_resources_on_sector_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_resources_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_resources_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_shares_on_sector_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_shares_on_sector_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_shares_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_shares_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_values_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_values_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_visions_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_visions_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_visits_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_visits_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_visits_on_visit_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_visits_on_visit_token' AND type='index'
+[0m
+Started GET "/profiles" for 67.87.59.199 at 2017-06-29 22:59:32 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProfileController#index as HTML
+  Rendering profile/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered profile/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 914ms (Views: 884.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/home" for 67.87.59.199 at 2017-06-29 23:00:27 +0000
+Processing by WelcomeController#landing as HTML
+  Rendering welcome/landing.html.erb within layouts/application
+  Rendered welcome/landing.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 222ms (Views: 216.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/facebook" for 67.87.59.199 at 2017-06-29 23:00:30 +0000
+Started GET "/users/auth/facebook/callback?code=AQDxuTPbQcjQmXjrCPjJI6pxe370eD4Q9Q2P3urtjZrUTt-CkbETMoLUX4SWF8MmE2QCIjBuSV94DiXGuoE2jI0L3RjT2GoQOoYyNAARlFuKMZslEVIfhT6Vj0r8kWjQS96oMj60LzTqVVZWqZ_swhQmu8LPgtNFSptXL9BwCfodRXg1Um0gfqW0Go7rFikz1S6MVAtY58cpjIjWfJ29vq7vp6wv3NCM0iIhsOEl3GIZ0OVgX3dffxLd-L6W8eA9awnS_qaU-84wnit35ti3N-0ti0qsg4OOTVhP39sVw5STqpJ8TO-xyAW7ZAU1X1F02Ok&state=87147654989c2c2fbcf0929a285f29cd330536d35493dc92" for 67.87.59.199 at 2017-06-29 23:00:32 +0000
+Processing by CallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQDxuTPbQcjQmXjrCPjJI6pxe370eD4Q9Q2P3urtjZrUTt-CkbETMoLUX4SWF8MmE2QCIjBuSV94DiXGuoE2jI0L3RjT2GoQOoYyNAARlFuKMZslEVIfhT6Vj0r8kWjQS96oMj60LzTqVVZWqZ_swhQmu8LPgtNFSptXL9BwCfodRXg1Um0gfqW0Go7rFikz1S6MVAtY58cpjIjWfJ29vq7vp6wv3NCM0iIhsOEl3GIZ0OVgX3dffxLd-L6W8eA9awnS_qaU-84wnit35ti3N-0ti0qsg4OOTVhP39sVw5STqpJ8TO-xyAW7ZAU1X1F02Ok", "state"=>"87147654989c2c2fbcf0929a285f29cd330536d35493dc92"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "facebook"], ["uid", "10208871941659108"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ayamusah213@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (2.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name", "role", "provider", "uid", "profileurl", "gender", "picture", "timezone", "firstname") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "ayamusah213@gmail.com"], ["encrypted_password", "$2a$11$FDLeqjYn/pzUoP4zPplgXeOCAAzZwm4YVWEgNkodZ8rKCFtCKTsqy"], ["created_at", 2017-06-29 23:00:32 UTC], ["updated_at", 2017-06-29 23:00:32 UTC], ["name", "Amina Yamusah"], ["role", "student"], ["provider", "facebook"], ["uid", "10208871941659108"], ["profileurl", "AminaYamusah23"], ["gender", "female"], ["picture", "https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/11707850_10205050957576894_4945268167017395827_n.jpg?oh=f709b12584d84985a41fb4f64519b660&oe=59D2CF43"], ["timezone", "-4"], ["firstname", "Amina"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "profiles" ("created_at", "updated_at", "user_id") VALUES (?, ?, ?)[0m  [["created_at", 2017-06-29 23:00:33 UTC], ["updated_at", 2017-06-29 23:00:33 UTC], ["user_id", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "id" = ?, "email" = ?, "encrypted_password" = ?, "created_at" = ?, "updated_at" = ?, "name" = ?, "role" = ?, "provider" = ?, "uid" = ?, "profileurl" = ?, "gender" = ?, "picture" = ?, "timezone" = ?, "firstname" = ? WHERE "users"."id" = ?[0m  [["id", 1], ["email", "ayamusah213@gmail.com"], ["encrypted_password", "$2a$11$Un1NHYaJFVQ.UU0ZfI5P8.m7pps2ovn6w0j4ZSI7wCIGL8028uEV6"], ["created_at", 2017-06-29 23:00:32 UTC], ["updated_at", 2017-06-29 23:00:32 UTC], ["name", "Amina Yamusah"], ["role", "student"], ["provider", "facebook"], ["uid", "10208871941659108"], ["profileurl", "AminaYamusah23"], ["gender", "female"], ["picture", "https://scontent.xx.fbcdn.net/v/t1.0-1/p50x50/11707850_10205050957576894_4945268167017395827_n.jpg?oh=f709b12584d84985a41fb4f64519b660&oe=59D2CF43"], ["timezone", "-4"], ["firstname", "Amina"], ["id", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "profileurl" = ? WHERE "users"."id" = ?[0m  [["updated_at", 2017-06-29 23:00:33 UTC], ["profileurl", "AminaYamusah44"], ["id", 1]]
+  Rendering welcome_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.html.erb within layouts/mailer (0.6ms)
+  Rendering welcome_mailer/welcome_email.text.erb within layouts/mailer
+  Rendered welcome_mailer/welcome_email.text.erb within layouts/mailer (0.4ms)
+WelcomeMailer#welcome_email: processed outbound mail in 206.1ms
+Sent mail to ayamusah213@gmail.com (16.7ms)
+Date: Thu, 29 Jun 2017 23:00:33 +0000
+From: amina@ourbloc.co
+To: ayamusah213@gmail.com
+Message-ID: <59558691d06e6_e0902e08e208356@aminabloc-bloc-prodcution-4407529.mail>
+Subject: Hey Amina, Welcome to Bloc!
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_59558691cd9fa_e0902e08e20834b4";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_59558691cd9fa_e0902e08e20834b4
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Hi Amina
+
+
+----==_mimepart_59558691cd9fa_e0902e08e20834b4
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+     <link href='https://fonts.googleapis.com/css?family=Raleway:800' rel='stylesheet' type='text/css'>
+     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/aileron" type="text/css"/>
+     
+  </head>
+  <body style="width:100%;  font-family: Lato; ">
+    <div style="padding: 5%"> 
+      <img style="width: 100%" src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/1_9_orig.png"> 
+      <i class="fa fa-plug fa-5x cyan-text lighten-1"> </i>
+
+      <h5  style="font-family: Raleway;font-size: 2em;">Hey heyAmina,</h5>
+      <p>
+        Thanks for signing up!
+      </p>
+      
+      <p> 
+        We'll be sending you personalized career playlists <span style="color:#44d9e6">, 
+        with relevant opportunities and career tips</span> we think can help you get and/or hold on to your dream career. 
+        We want to see you win, so don't hesistate to reach out with any questions, feedback, concerns!
+      </p>
+      
+      <p> Be confident, be great </p>
+      
+      <p>Bloc , your digital career coach </p>
+      <img src="http://gph.is/2ecLAcu" > 
+      
+  
+    
+      
+      <p> unsubscribe from email updates anytime by replying "Unsubscribe" to this email </p>
+    </div>
+  </body>
+</html>
+
+  </body>
+</html>
+
+----==_mimepart_59558691cd9fa_e0902e08e20834b4--
+
+  Rendering new_user_mailer/new_user.html.erb within layouts/mailer
+  Rendered new_user_mailer/new_user.html.erb within layouts/mailer (0.6ms)
+NewUserMailer#new_user: processed outbound mail in 8.1ms
+Sent mail to info@ourbloc.co (2.7ms)
+Date: Thu, 29 Jun 2017 23:00:33 +0000
+From: amina@ourbloc.co
+To: info@ourbloc.co
+Message-ID: <59558691d62f5_e0902e08e208368c@aminabloc-bloc-prodcution-4407529.mail>
+Subject: New User:Amina Yamusah,1
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>New user: Amina Yamusah</h1>
+    <h2> email: ayamusah213@gmail.com </h2>
+    <h2> count: 1 </h2>
+    <h2> referred by:  </h2>
+
+  </body>
+</html>
+
+<style> 
+
+html{
+color:teal;
+font-family: Arial;
+}
+</style>
+  </body>
+</html>
+
+  [1m[35m (14.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", 2017-06-29 23:00:33 UTC], ["last_sign_in_at", 2017-06-29 23:00:33 UTC], ["current_sign_in_ip", "67.87.59.199"], ["last_sign_in_ip", "67.87.59.199"], ["updated_at", 2017-06-29 23:00:33 UTC], ["id", 1]]
+  [1m[35m (10.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://bloc-prodcution-aminabloc.c9users.io/
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "referral_code" = ? WHERE "users"."id" = ?[0m  [["updated_at", 2017-06-29 23:00:33 UTC], ["referral_code", "home"], ["id", 1]]
+  [1m[35m (8.8ms)[0m  [1m[36mcommit transaction[0m
+  Rendering new_user_mailer/new_user.html.erb within layouts/mailer
+  Rendered new_user_mailer/new_user.html.erb within layouts/mailer (0.1ms)
+NewUserMailer#new_user: processed outbound mail in 6.0ms
+Sent mail to info@ourbloc.co (2.6ms)
+Date: Thu, 29 Jun 2017 23:00:33 +0000
+From: amina@ourbloc.co
+To: info@ourbloc.co
+Message-ID: <59558691e8637_e0902e08e20837a9@aminabloc-bloc-prodcution-4407529.mail>
+Subject: New User:Amina Yamusah,1
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>New user: Amina Yamusah</h1>
+    <h2> email: ayamusah213@gmail.com </h2>
+    <h2> count: 1 </h2>
+    <h2> referred by: home </h2>
+
+  </body>
+</html>
+
+<style> 
+
+html{
+color:teal;
+font-family: Arial;
+}
+</style>
+  </body>
+</html>
+
+Completed 302 Found in 1190ms (ActiveRecord: 41.0ms)
+
+
+Started GET "/" for 67.87.59.199 at 2017-06-29 23:00:34 +0000
+Processing by WelcomeController#home as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://bloc-prodcution-aminabloc.c9users.io/visions/new
+Completed 302 Found in 9ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/visions/new" for 67.87.59.199 at 2017-06-29 23:00:34 +0000
+Processing by VisionsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering visions/new.html.erb within layouts/application
+  Rendered visions/new.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 194ms (Views: 156.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/profiles" for 67.87.59.199 at 2017-06-29 23:00:39 +0000
+Processing by ProfileController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 188ms (ActiveRecord: 0.4ms)
+
+
+  
+NameError (undefined local variable or method `user' for #<ProfileController:0x007f99d8229858>
+Did you mean?  @user):
+  
+app/controllers/profile_controller.rb:7:in `index'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (108.5ms)
+Started GET "/profiles" for 67.87.59.199 at 2017-06-29 23:01:08 +0000
+Processing by ProfileController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 105ms (ActiveRecord: 2.4ms)
+
+
+  
+NoMethodError (undefined method `find_by_user_id' for #<Class:0x007f99e2742fb0>
+Did you mean?  find_by_sql):
+  
+app/controllers/profile_controller.rb:7:in `index'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (34.2ms)
+Started GET "/profiles" for 67.87.59.199 at 2017-06-29 23:01:33 +0000
+Processing by ProfileController#index as HTML
+  Rendering profile/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered profile/index.html.erb within layouts/application (42.0ms)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 1.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `exists?' for nil:NilClass):
+     6:             <div class="card-content teal-text">
+     7:                 <h5><%= user.name.split.first%> </h5> 
+     8:         
+     9:                    <% if user.prep.exists? %> 
+    10:                        <h6><%= user.prep %> </h6>
+    11:                         <h6><%= user.firstjob %> </h6>
+    12:                         <h6><%= user.style %> </h6>
+  
+app/views/profile/index.html.erb:9:in `block in _app_views_profile_index_html_erb___1559585919236932656_70149450075020'
+app/views/profile/index.html.erb:4:in `_app_views_profile_index_html_erb___1559585919236932656_70149450075020'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.4ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (31.6ms)
+Started GET "/profiles" for 67.87.59.199 at 2017-06-29 23:02:50 +0000
+Processing by ProfileController#index as HTML
+  Rendering profile/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered profile/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 247ms (Views: 244.0ms | ActiveRecord: 0.7ms)
+
+

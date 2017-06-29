@@ -1,23 +1,24 @@
 <h5> User Profiles </h5>
 
-<% if user.prep != nil %> 
-    <% @users_all.each do |user| %>     
-            <div class="card horizontal white" style="width:50%; height: 30%">
-                <div class="card-content teal-text">
-                    <h5><%= user.name.split.first%> </h5> 
+
+    <% @users_all.each do |user| %>   
+        <div class="card horizontal white" style="width:50%; height: 30%">
+            <div class="card-content teal-text">
+                <h5><%= user.name.split.first%> </h5> 
         
-                   
+                   <% if user.prep != nil%> 
                        <h6><%= user.prep %> </h6>
                         <h6><%= user.firstjob %> </h6>
                         <h6><%= user.style %> </h6>
                         <h6><%= user.gradschool %> </h6>
-                  
+                   <% end %> 
                     
-                      <% if user_signed_in? and user.role == "company" %> 
+                    <% if user_signed_in? and user.role == "company" %> 
                           <h6><%= user.email %></h6>
-                        <% end %> 
-                </div>
-            </div> 
-     <% end %>
- <% end %> 
+                    <% end %> 
+                    
+                    
+            </div>
+        </div> 
+    <% end %> 
  

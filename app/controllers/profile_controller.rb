@@ -2,10 +2,6 @@ class ProfileController < ApplicationController
      before_action :set_profile, only: [:edit, :update, :destroy]
      
     def index
-        @user = current_user
-        if @user != nil
-          @user = user.find_by_user_id(@user.id)
-        end
         
      
         @users_all = User.all
