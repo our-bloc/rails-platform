@@ -9,7 +9,14 @@
                     <img src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/coverpic_orig.jpg">
                   </div> -->
             <div class="card-content teal-text">
-           <h5 class="indeed_show card-title" style="line-height: 1em"><%= image_tag user.picture %> <%= link_to user.name, root_path + user.profileurl %> </h5> <h6><%= user.major %> <%= user.gradyear %> <%= user.school %>  <%= user.experience %></h6>
+            <h5><%= user.name %> </h5> 
+           <h6><%= user.email %> </h6>
+           <h6><%= user.prep %> </h6>
+            <h6><%= user.firstjob %> </h6>
+            <h6><%= user.style %> </h6>
+            <h6><%= user.grad %> </h6>
+
+
               
               
               <% if user_signed_in? and user.role == "company" %> 
