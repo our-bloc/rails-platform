@@ -43397,3 +43397,76 @@ Processing by ProfileController#index as HTML
 Completed 200 OK in 279ms (Views: 275.0ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/jobs/new" for 67.87.59.199 at 2017-06-29 21:25:28 +0000
+Processing by JobsController#new as HTML
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/new.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 1.0ms)
+
+
+  
+SyntaxError (/home/ubuntu/workspace/app/views/jobs/new.html.erb:5: syntax error, unexpected ')', expecting =>
+...job: @job , style="margin: 5%");@output_buffer.safe_append='
+...                               ^
+/home/ubuntu/workspace/app/views/jobs/new.html.erb:9: syntax error, unexpected keyword_ensure, expecting ')'
+/home/ubuntu/workspace/app/views/jobs/new.html.erb:11: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/jobs/new.html.erb:5: syntax error, unexpected ')', expecting =>
+app/views/jobs/new.html.erb:9: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/jobs/new.html.erb:11: syntax error, unexpected keyword_end, expecting ')'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.6ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (42.0ms)
+Started GET "/jobs/new" for 67.87.59.199 at 2017-06-29 21:25:46 +0000
+Processing by JobsController#new as HTML
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/_form.html.erb (27.7ms)
+  Rendered jobs/new.html.erb within layouts/application (30.3ms)
+Completed 200 OK in 229ms (Views: 225.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jobs/new" for 67.87.59.199 at 2017-06-29 21:26:04 +0000
+Processing by JobsController#new as HTML
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/_form.html.erb (3.6ms)
+  Rendered jobs/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 151ms (Views: 148.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jobs/new" for 67.87.59.199 at 2017-06-29 21:26:12 +0000
+Processing by JobsController#new as HTML
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/_form.html.erb (3.6ms)
+  Rendered jobs/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 301ms (Views: 298.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jobs/new" for 67.87.59.199 at 2017-06-29 21:26:22 +0000
+Processing by JobsController#new as HTML
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/_form.html.erb (3.7ms)
+  Rendered jobs/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 152ms (Views: 148.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jobs/new" for 67.87.59.199 at 2017-06-29 21:26:41 +0000
+Processing by JobsController#new as HTML
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/_form.html.erb (3.7ms)
+  Rendered jobs/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 258ms (Views: 255.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jobs/new" for 67.87.59.199 at 2017-06-29 21:27:13 +0000
+Processing by JobsController#new as HTML
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/_form.html.erb (3.5ms)
+  Rendered jobs/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 254ms (Views: 251.4ms | ActiveRecord: 0.0ms)
+
+
