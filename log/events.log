@@ -1214,3 +1214,4 @@
 {"id":"fe06e5ae-18fc-410b-a775-37ee5283f471","name":"Viewed welcome#hello","properties":{},"visit_id":"43c26fa8-5291-4659-8b96-dabc4d747951","visitor_id":"f681057a-a8a9-42ea-8c6d-3ee0d41e966c","time":"2017-06-27T20:55:49.785Z"}
 {"id":"920bb1a3-f7c2-4183-81ab-46c507a54b5a","name":"Viewed welcome#hello","properties":{},"visit_id":"43c26fa8-5291-4659-8b96-dabc4d747951","visitor_id":"f681057a-a8a9-42ea-8c6d-3ee0d41e966c","time":"2017-06-27T20:56:00.429Z"}
 {"id":"ca9a7797-c82f-4079-8427-19e64944e3ba","name":"Viewed welcome#hello","properties":{},"visit_id":"43c26fa8-5291-4659-8b96-dabc4d747951","visitor_id":"f681057a-a8a9-42ea-8c6d-3ee0d41e966c","time":"2017-06-27T20:58:15.470Z"}
+{"id":"007f4bcd-b655-4a4b-a5ec-96de99d6b328","name":"Viewed profile#index","properties":{},"visit_id":"9ebb1369-bd9a-4004-aa54-94f304aafb88","visitor_id":"f681057a-a8a9-42ea-8c6d-3ee0d41e966c","time":"2017-06-29T18:29:49.998Z"}
