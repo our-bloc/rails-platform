@@ -7,6 +7,7 @@ class User < ApplicationRecord
 
   #associations
     has_many :jobs
+    has_many :visits
     has_many :asks
     has_many :shares
     has_many :resources

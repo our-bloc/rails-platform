@@ -6,9 +6,6 @@ class ApplicationController < ActionController::Base
   after_action :track_action
    
   
-  class Channel < ActionCable::Channel::Base
-  end
-
   #track all visits with ahoy
   
 
