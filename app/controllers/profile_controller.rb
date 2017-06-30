@@ -5,7 +5,7 @@ class ProfileController < ApplicationController
         
      
         @users_all = User.all
-    
+        @user_count= User.all.count
          #loads influencer text & image
     end
 
