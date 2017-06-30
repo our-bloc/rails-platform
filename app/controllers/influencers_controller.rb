@@ -24,7 +24,7 @@ class InfluencersController < ApplicationController
   # POST /influencers
   # POST /influencers.json
   def create
-    @influencer = Influencer.new(influencer_params)
+    @influencer = curren_user.influencers.build(influencer_params)
 
     respond_to do |format|
       if @influencer.save

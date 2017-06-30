@@ -26,26 +26,13 @@ class TipsController < ApplicationController
   def edit
   end
   
-  def like
-    current_user.like(@tip) == true
-    
-    if request.xhr?
-      head :ok
-    else
-      redirect_to :back
-    end
-  
-  end
-  
-  def unlike
-    current_user.unlike(@tip) == true
-    
-  end
+
 
   # POST /tips
   # POST /tips.json
   def create
-    @tip = Tip.new(tip_params)
+    @tip = current_user.tips.build(tip_params)
+    @tip.user_id = current_user.id
 
     respond_to do |format|
       if @tip.save

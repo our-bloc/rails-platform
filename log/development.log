@@ -46211,3 +46211,811 @@ Processing by Devise::RegistrationsController#new as HTML
 Completed 200 OK in 175ms (Views: 172.2ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 67.87.59.199 at 2017-06-30 17:01:13 +0000
+Processing by WelcomeController#home as HTML
+Redirected to https://bloc-prodcution-aminabloc.c9users.io/hello
+Completed 302 Found in 10ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/hello" for 67.87.59.199 at 2017-06-30 17:01:14 +0000
+Processing by WelcomeController#hello as HTML
+  Rendering welcome/hello.html.erb within layouts/application
+  Rendered welcome/_navbar.html.erb (0.4ms)
+  Rendered welcome/_events.html.erb (0.4ms)
+  Rendered welcome/hello.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 337ms (Views: 332.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/profiles" for 67.87.59.199 at 2017-06-30 17:01:21 +0000
+Processing by ProfileController#index as HTML
+  [1m[35m (8.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  Rendering profile/index.html.erb within layouts/application
+  Rendered profile/index.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 8.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <h5> User Profiles </h5>
+    2:     <% if current_user.name == "Amina Yamusah" or current_user.name == "Amina" %> 
+    3:     <h4> Data</h4>
+    4:     
+    5:     <% @users_all.each do |user| %>   
+  
+app/views/profile/index.html.erb:2:in `_app_views_profile_index_html_erb___1559585919236932656_70149103076760'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.6ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (40.6ms)
+Started GET "/profiles" for 67.87.59.199 at 2017-06-30 17:01:57 +0000
+Processing by ProfileController#index as HTML
+  [1m[35m (9.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  Rendering profile/index.html.erb within layouts/application
+  Rendered profile/index.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 9.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <h5> User Profiles </h5>
+    2:     <% if user_signed_in? and current_user.name == "Amina Yamusah" or current_user.name == "Amina" %> 
+    3:     <h4> Data</h4>
+    4:     
+    5:     <% @users_all.each do |user| %>   
+  
+app/views/profile/index.html.erb:2:in `_app_views_profile_index_html_erb___1559585919236932656_70149130797780'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.6ms)
+Started GET "/profiles" for 67.87.59.199 at 2017-06-30 17:02:29 +0000
+Processing by ProfileController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  Rendering profile/index.html.erb within layouts/application
+  Rendered profile/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 284ms (Views: 278.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tips" for 67.87.59.199 at 2017-06-30 17:28:47 +0000
+Processing by TipsController#index as HTML
+  Rendering tips/index.html.erb within layouts/application
+  Rendered tips/index.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `school' for nil:NilClass):
+    1: <% if current_user.school == "Morehouse College" %> 
+    2:     <%= render "university/partials/menu" %> 
+    3: <% end %> 
+    4: 
+  
+app/views/tips/index.html.erb:1:in `_app_views_tips_index_html_erb___2583438821941646701_70149103861820'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.4ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (34.7ms)
+Started GET "/tips/new" for 67.87.59.199 at 2017-06-30 17:29:04 +0000
+Processing by TipsController#new as HTML
+  Rendering tips/new.html.erb within layouts/application
+  Rendered tips/_form.html.erb (50.0ms)
+  Rendered tips/new.html.erb within layouts/application (137.6ms)
+Completed 200 OK in 427ms (Views: 408.9ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/tips" for 67.87.59.199 at 2017-06-30 17:29:32 +0000
+Processing by TipsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K8+QN6kb4Scb6RSmhWBNYfL3smbHwwpPd0qIqn9QZGnGOFCFjS+rM/IXz5ImjVifHEAC5D+F431PBZUGNCz7UQ==", "tip"=>{"title"=>"Test Tip", "body"=>"test", "link"=>"test", "industry"=>"All", "grad"=>"Law School", "gradyear"=>"2017", "for_email"=>"false", "prep"=>"need_resume"}, "commit"=>"Create Tip"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering tips/new.html.erb within layouts/application
+  Rendered tips/_form.html.erb (6.5ms)
+  Rendered tips/new.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 232ms (Views: 219.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/tips" for 67.87.59.199 at 2017-06-30 17:31:13 +0000
+Processing by TipsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"K8+QN6kb4Scb6RSmhWBNYfL3smbHwwpPd0qIqn9QZGnGOFCFjS+rM/IXz5ImjVifHEAC5D+F431PBZUGNCz7UQ==", "tip"=>{"title"=>"Test Tip", "body"=>"test", "link"=>"test", "industry"=>"All", "grad"=>"Law School", "gradyear"=>"2017", "for_email"=>"false", "prep"=>"need_resume"}, "commit"=>"Create Tip"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering tips/new.html.erb within layouts/application
+  Rendered tips/_form.html.erb (7.8ms)
+  Rendered tips/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 313ms (Views: 307.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/tips" for 67.87.59.199 at 2017-06-30 17:31:26 +0000
+Processing by TipsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dc9utlSkkydtWW7wABvz+cvg/Pr5qcv62k7R0+VS3RyYOK4EcJDZM4SntcSj9uYHJVdMeAHvIsjiAcx/ri5CJA==", "tip"=>{"title"=>"Test Tip", "body"=>"test", "link"=>"test", "industry"=>"All", "grad"=>"Law School", "gradyear"=>"2017", "for_email"=>"false", "prep"=>"need_resume"}, "commit"=>"Create Tip"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering tips/new.html.erb within layouts/application
+  Rendered tips/_form.html.erb (9.0ms)
+  Rendered tips/new.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 354ms (Views: 348.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tips/new" for 67.87.59.199 at 2017-06-30 17:31:33 +0000
+Processing by TipsController#new as HTML
+  Rendering tips/new.html.erb within layouts/application
+  Rendered tips/_form.html.erb (7.1ms)
+  Rendered tips/new.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 182ms (Views: 179.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tips" for 67.87.59.199 at 2017-06-30 17:31:45 +0000
+Processing by TipsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nBNEj8XPQcUGErQO6ZMMZ3C3E/9OWHhqE5cUc8rT/+Fx5IQ94fsL0e/sbzpKfhmZngCjfbYekVgr2Anfga9g2Q==", "tip"=>{"title"=>"Testing", "body"=>"Test", "link"=>"Test", "industry"=>"Entrepreneurs", "grad"=>"Business School", "gradyear"=>"", "for_email"=>"", "prep"=>"need_connections"}, "commit"=>"Create Tip"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering tips/new.html.erb within layouts/application
+  Rendered tips/_form.html.erb (6.7ms)
+  Rendered tips/new.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 218ms (Views: 211.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/tips" for 67.87.59.199 at 2017-06-30 17:32:41 +0000
+Processing by TipsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nBNEj8XPQcUGErQO6ZMMZ3C3E/9OWHhqE5cUc8rT/+Fx5IQ94fsL0e/sbzpKfhmZngCjfbYekVgr2Anfga9g2Q==", "tip"=>{"title"=>"Testing", "body"=>"Test", "link"=>"Test", "industry"=>"Entrepreneurs", "grad"=>"Business School", "gradyear"=>"", "for_email"=>"", "prep"=>"need_connections"}, "commit"=>"Create Tip"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering tips/new.html.erb within layouts/application
+  Rendered tips/_form.html.erb (6.0ms)
+  Rendered tips/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 167ms (Views: 162.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tips/new" for 67.87.59.199 at 2017-06-30 17:32:49 +0000
+Processing by TipsController#new as HTML
+  Rendering tips/new.html.erb within layouts/application
+  Rendered tips/_form.html.erb (9.9ms)
+  Rendered tips/new.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 229ms (Views: 220.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tips" for 67.87.59.199 at 2017-06-30 17:33:05 +0000
+Processing by TipsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P5pgsz/eMiwwCGfz+mIFEPuDSyE6jrYgdEmqa7b3QXzSbaABG+p4ONn2vMdZjxDuFTT7o8LIXxJMBrfH/YveRA==", "tip"=>{"title"=>"Test", "body"=>"Test", "link"=>"Test", "industry"=>"Scientists", "grad"=>"PhD Program", "gradyear"=>"Alum", "for_email"=>"false", "prep"=>"personal_statements"}, "commit"=>"Create Tip"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering tips/new.html.erb within layouts/application
+  Rendered tips/_form.html.erb (7.7ms)
+  Rendered tips/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 316ms (Views: 310.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tips/new" for 67.87.59.199 at 2017-06-30 17:35:05 +0000
+Processing by TipsController#new as HTML
+  Rendering tips/new.html.erb within layouts/application
+  Rendered tips/_form.html.erb (9.3ms)
+  Rendered tips/new.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 211ms (Views: 181.9ms | ActiveRecord: 8.2ms)
+
+
+Started POST "/tips" for 67.87.59.199 at 2017-06-30 17:35:24 +0000
+Processing by TipsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JzqtYrOMdS+lFVPiwDv+szBU7qcqFb3MTbrnur1kUwbKzW3Ql7g/O0zriNZj1utN3uNeJdJTVP519foW9hjMPg==", "tip"=>{"title"=>"Attend LSAC Law School Forums to Build Strong Relationships", "body"=>"te", "link"=>"", "industry"=>"Techies", "grad"=>"Maybe", "gradyear"=>"2018", "for_email"=>"false", "prep"=>"personal_statements"}, "commit"=>"Create Tip"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering tips/new.html.erb within layouts/application
+  Rendered tips/_form.html.erb (8.5ms)
+  Rendered tips/new.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 241ms (Views: 228.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/tips" for 67.87.59.199 at 2017-06-30 17:36:23 +0000
+Processing by TipsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"66mdZ6kcR4krX+/awf/puK+MCrXd3/Wi5a0BR1WlSr4GXl3VjSgNncKhNO5iEvxGQTu6NyWZHJDd4hzrHtnVhg==", "tip"=>{"title"=>"Attend LSAC Law School Forums to Build Strong Relationships", "body"=>"te", "link"=>"", "industry"=>"Techies", "grad"=>"Maybe", "gradyear"=>"2018", "for_email"=>"false", "prep"=>"personal_statements"}, "commit"=>"Create Tip"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering tips/new.html.erb within layouts/application
+  Rendered tips/_form.html.erb (9.9ms)
+  Rendered tips/new.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 291ms (Views: 254.2ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/tips" for 67.87.59.199 at 2017-06-30 17:37:12 +0000
+Processing by TipsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VOMGkqft+c5hpQBTECig5uU9nIwMRugY+CGKWnYPx5i5FMYgg9mz2ohb22ezxbUYC4osDvQAASrAbpf2PXNYoA==", "tip"=>{"title"=>"Attend LSAC Law School Forums to Build Strong Relationships", "body"=>"te", "link"=>"", "industry"=>"Techies", "grad"=>"Maybe", "gradyear"=>"2018", "for_email"=>"false", "prep"=>"personal_statements"}, "commit"=>"Create Tip"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering tips/new.html.erb within layouts/application
+  Rendered tips/_form.html.erb (7.5ms)
+  Rendered tips/new.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 195ms (Views: 170.4ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/tips" for 67.87.59.199 at 2017-06-30 17:40:51 +0000
+Processing by TipsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h55duDHMt4rPYUyTaObv54wwcWcY75c5j4SdxUTfdI1qaZ0KFfj9niafl6fLC/oZYofB5eCpfgu3y4BpD6PrtQ==", "tip"=>{"title"=>"Attend LSAC Law School Forums to Build Strong Relationships", "body"=>"te", "link"=>"", "industry"=>"Techies", "grad"=>"Maybe", "gradyear"=>"2018", "for_email"=>"false", "prep"=>"personal_statements"}, "commit"=>"Create Tip"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 227ms (ActiveRecord: 1.9ms)
+
+
+  
+NameError (undefined local variable or method `tip' for #<TipsController:0x007f99dc459700>
+Did you mean?  @tip
+               tip_url
+               tips_url
+               tip_path
+               tips_path
+               tip_params
+               tap):
+  
+app/controllers/tips_controller.rb:39:in `block in create'
+app/controllers/tips_controller.rb:34:in `create'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.6ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (96.4ms)
+Started POST "/tips" for 67.87.59.199 at 2017-06-30 17:41:09 +0000
+Processing by TipsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h55duDHMt4rPYUyTaObv54wwcWcY75c5j4SdxUTfdI1qaZ0KFfj9niafl6fLC/oZYofB5eCpfgu3y4BpD6PrtQ==", "tip"=>{"title"=>"Attend LSAC Law School Forums to Build Strong Relationships", "body"=>"te", "link"=>"", "industry"=>"Techies", "grad"=>"Maybe", "gradyear"=>"2018", "for_email"=>"false", "prep"=>"personal_statements"}, "commit"=>"Create Tip"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 2.4ms)
+
+
+  
+NoMethodError (undefined method `errors' for #<Class:0x007f99b8cb2448>):
+  
+app/controllers/tips_controller.rb:39:in `block in create'
+app/controllers/tips_controller.rb:34:in `create'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.4ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (45.5ms)
+Started POST "/tips" for 67.87.59.199 at 2017-06-30 17:44:08 +0000
+Processing by TipsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h55duDHMt4rPYUyTaObv54wwcWcY75c5j4SdxUTfdI1qaZ0KFfj9niafl6fLC/oZYofB5eCpfgu3y4BpD6PrtQ==", "tip"=>{"title"=>"Attend LSAC Law School Forums to Build Strong Relationships", "body"=>"te", "link"=>"", "industry"=>"Techies", "grad"=>"Maybe", "gradyear"=>"2018", "for_email"=>"false", "prep"=>"personal_statements"}, "commit"=>"Create Tip"}
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 1.5ms)
+
+
+  
+NameError (undefined local variable or method `tip' for #<Class:0x007f99e02a6da0>
+Did you mean?  tap):
+  
+app/models/tip.rb:4:in `<class:Tip>'
+app/models/tip.rb:1:in `<top (required)>'
+app/controllers/tips_controller.rb:32:in `create'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.4ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.3ms)
+Started POST "/tips" for 67.87.59.199 at 2017-06-30 17:44:25 +0000
+Processing by TipsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h55duDHMt4rPYUyTaObv54wwcWcY75c5j4SdxUTfdI1qaZ0KFfj9niafl6fLC/oZYofB5eCpfgu3y4BpD6PrtQ==", "tip"=>{"title"=>"Attend LSAC Law School Forums to Build Strong Relationships", "body"=>"te", "link"=>"", "industry"=>"Techies", "grad"=>"Maybe", "gradyear"=>"2018", "for_email"=>"false", "prep"=>"personal_statements"}, "commit"=>"Create Tip"}
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 1.7ms)
+
+
+  
+NoMethodError (undefined method `errors' for #<Class:0x007f99ded511f8>):
+  
+app/models/tip.rb:4:in `<class:Tip>'
+app/models/tip.rb:1:in `<top (required)>'
+app/controllers/tips_controller.rb:32:in `create'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.6ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.1ms)
+Started POST "/tips" for 67.87.59.199 at 2017-06-30 17:46:10 +0000
+Processing by TipsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h55duDHMt4rPYUyTaObv54wwcWcY75c5j4SdxUTfdI1qaZ0KFfj9niafl6fLC/oZYofB5eCpfgu3y4BpD6PrtQ==", "tip"=>{"title"=>"Attend LSAC Law School Forums to Build Strong Relationships", "body"=>"te", "link"=>"", "industry"=>"Techies", "grad"=>"Maybe", "gradyear"=>"2018", "for_email"=>"false", "prep"=>"personal_statements"}, "commit"=>"Create Tip"}
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 1.3ms)
+
+
+  
+NoMethodError (undefined method `errors' for #<Class:0x007f99f0782cb0>):
+  
+app/models/tip.rb:4:in `<class:Tip>'
+app/models/tip.rb:1:in `<top (required)>'
+app/controllers/tips_controller.rb:32:in `create'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.6ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (29.7ms)
+Started POST "/tips" for 67.87.59.199 at 2017-06-30 17:46:27 +0000
+Processing by TipsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h55duDHMt4rPYUyTaObv54wwcWcY75c5j4SdxUTfdI1qaZ0KFfj9niafl6fLC/oZYofB5eCpfgu3y4BpD6PrtQ==", "tip"=>{"title"=>"Attend LSAC Law School Forums to Build Strong Relationships", "body"=>"te", "link"=>"", "industry"=>"Techies", "grad"=>"Maybe", "gradyear"=>"2018", "for_email"=>"false", "prep"=>"personal_statements"}, "commit"=>"Create Tip"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 1.5ms)
+
+
+  
+NoMethodError (undefined method `error' for #<Tip:0x007f99d94825e0>
+Did you mean?  errors):
+  
+app/controllers/tips_controller.rb:39:in `block in create'
+app/controllers/tips_controller.rb:34:in `create'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.3ms)
+Started POST "/tips" for 67.87.59.199 at 2017-06-30 17:46:50 +0000
+Processing by TipsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h55duDHMt4rPYUyTaObv54wwcWcY75c5j4SdxUTfdI1qaZ0KFfj9niafl6fLC/oZYofB5eCpfgu3y4BpD6PrtQ==", "tip"=>{"title"=>"Attend LSAC Law School Forums to Build Strong Relationships", "body"=>"te", "link"=>"", "industry"=>"Techies", "grad"=>"Maybe", "gradyear"=>"2018", "for_email"=>"false", "prep"=>"personal_statements"}, "commit"=>"Create Tip"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering tips/new.html.erb within layouts/application
+  Rendered tips/_form.html.erb (10.7ms)
+  Rendered tips/new.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 277ms (Views: 241.7ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/tips" for 67.87.59.199 at 2017-06-30 17:47:13 +0000
+Processing by TipsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4Q/hNPgqi1yXzQJrM39/H1TNePYfY67ULdFplvuahscM+CGG3B7BSH4z2V+QkmrhunrIdOclR+YVnnQ6sOYZ/w==", "tip"=>{"title"=>"Attend LSAC Law School Forums to Build Strong Relationships", "body"=>"te", "link"=>"", "industry"=>"Techies", "grad"=>"Maybe", "gradyear"=>"2018", "for_email"=>"false", "prep"=>"personal_statements"}, "commit"=>"Create Tip"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering tips/new.html.erb within layouts/application
+  Rendered tips/_form.html.erb (9.7ms)
+  Rendered tips/new.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 241ms (Views: 233.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/tips" for 67.87.59.199 at 2017-06-30 17:51:06 +0000
+Processing by TipsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JJ/j+Gj3JwpZRbyRwoKBTb0bdZPfqimasJzEvZhEieDJaCNKTMNtHrC7Z6Vhb5SzU6zFESfswKiI09kR0zgW2A==", "tip"=>{"title"=>"Attend LSAC Law School Forums to Build Strong Relationships", "body"=>"te", "link"=>"", "industry"=>"Techies", "grad"=>"Maybe", "gradyear"=>"2018", "for_email"=>"false", "prep"=>"personal_statements"}, "commit"=>"Create Tip"}
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `build' for #<Class:0x007f99f068ec78>):
+  
+app/controllers/tips_controller.rb:32:in `create'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.9ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (33.2ms)
+Started POST "/tips" for 67.87.59.199 at 2017-06-30 17:51:42 +0000
+Processing by TipsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JJ/j+Gj3JwpZRbyRwoKBTb0bdZPfqimasJzEvZhEieDJaCNKTMNtHrC7Z6Vhb5SzU6zFESfswKiI09kR0zgW2A==", "tip"=>{"title"=>"Attend LSAC Law School Forums to Build Strong Relationships", "body"=>"te", "link"=>"", "industry"=>"Techies", "grad"=>"Maybe", "gradyear"=>"2018", "for_email"=>"false", "prep"=>"personal_statements"}, "commit"=>"Create Tip"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering tips/new.html.erb within layouts/application
+  Rendered tips/_form.html.erb (6.7ms)
+  Rendered tips/new.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 240ms (Views: 210.9ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/tips" for 67.87.59.199 at 2017-06-30 17:51:49 +0000
+Processing by TipsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dBuhfU/Sk+us14KPHbBLwAV2mGOKcoeO5/uj0JBJlfGZ7GHPa+bZ/0UpWbu+XV4+68Eo4XI0brzftL582zUKyQ==", "tip"=>{"title"=>"Attend LSAC Law School Forums to Build Strong Relationships", "body"=>"te", "link"=>"", "industry"=>"Techies", "grad"=>"Maybe", "gradyear"=>"2018", "for_email"=>"false", "prep"=>"personal_statements"}, "commit"=>"Create Tip"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering tips/new.html.erb within layouts/application
+  Rendered tips/_form.html.erb (8.3ms)
+  Rendered tips/new.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 333ms (Views: 326.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/tips" for 67.87.59.199 at 2017-06-30 17:52:21 +0000
+Processing by TipsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dBuhfU/Sk+us14KPHbBLwAV2mGOKcoeO5/uj0JBJlfGZ7GHPa+bZ/0UpWbu+XV4+68Eo4XI0brzftL582zUKyQ==", "tip"=>{"title"=>"Attend LSAC Law School Forums to Build Strong Relationships", "body"=>"te", "link"=>"", "industry"=>"Techies", "grad"=>"Maybe", "gradyear"=>"2018", "for_email"=>"false", "prep"=>"personal_statements"}, "commit"=>"Create Tip"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering tips/new.html.erb within layouts/application
+  Rendered tips/_form.html.erb (6.5ms)
+  Rendered tips/new.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 198ms (Views: 173.7ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/tips" for 67.87.59.199 at 2017-06-30 17:52:28 +0000
+Processing by TipsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VQb3tGMSg3NBa7bXW+0xKJ0QvDwC3144RVW9QdEE1Oy48TcGRybJZ6iVbeP4ACTWc6cMvvqZtwp9GqDtmnhL1A==", "tip"=>{"title"=>"Attend LSAC Law School Forums to Build Strong Relationships", "body"=>"te", "link"=>"", "industry"=>"Techies", "grad"=>"Maybe", "gradyear"=>"2018", "for_email"=>"false", "prep"=>"personal_statements"}, "commit"=>"Create Tip"}
+  [1m[35m (0.8ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering tips/new.html.erb within layouts/application
+  Rendered tips/_form.html.erb (5.7ms)
+  Rendered tips/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 155ms (Views: 148.0ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/tips" for 67.87.59.199 at 2017-06-30 21:09:54 +0000
+Processing by TipsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fej6QgNKgis9qKlsupDSttYtpLHfDkRUAWITR4+hoJKQHzrwJ37IP9RWclgZfcdIOJoUMydIrWY5LQ7rxN0/qg==", "tip"=>{"title"=>"Attend LSAC Law School Forums to Build Strong Relationships", "body"=>"te", "link"=>"", "industry"=>"Techies", "grad"=>"Maybe", "gradyear"=>"2018", "for_email"=>"false", "prep"=>"personal_statements"}, "commit"=>"Create Tip"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "tips" ("title", "body", "industry", "link", "created_at", "updated_at", "prep", "grad", "for_email", "gradyear") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Attend LSAC Law School Forums to Build Strong Relationships"], ["body", "te"], ["industry", "Techies"], ["link", ""], ["created_at", 2017-06-30 21:09:54 UTC], ["updated_at", 2017-06-30 21:09:54 UTC], ["prep", "personal_statements"], ["grad", "Maybe"], ["for_email", false], ["gradyear", "2018"]]
+  [1m[35m (11.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://bloc-prodcution-aminabloc.c9users.io/tips/1
+Completed 302 Found in 43ms (ActiveRecord: 21.6ms)
+
+
+Started GET "/tips/1" for 67.87.59.199 at 2017-06-30 21:09:55 +0000
+Processing by TipsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTip Load (4.4ms)[0m  [1m[34mSELECT  "tips".* FROM "tips" WHERE "tips"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tips/show.html.erb within layouts/application
+  Rendered tips/show.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 251ms (Views: 236.2ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/tips" for 67.87.59.199 at 2017-06-30 21:17:02 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.1) lib/active_record/migration.rb:573:in `check_pending!'
+activerecord (5.0.1) lib/active_record/migration.rb:549:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.1) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.1) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.1) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.1) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+ahoy_matey (1.5.4) lib/ahoy/engine.rb:22:in `call_with_quiet_ahoy'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+request_store (1.3.2) lib/request_store/middleware.rb:9:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.1ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (35.3ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddUsersToTipsAndInfluencers (20170630211147)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "tips" ADD "user_id" integer[0m
+  [1m[35m (0.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_influencers_on_user_id" ON "influencers" ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddUsersToTipsAndInfluencers (20170630211147)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "tips" ADD "user_id" integer[0m
+  [1m[35m (0.1ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_tips_on_user_id" ON "tips" ("user_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "influencers" ADD "user_id" integer[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_influencers_on_user_id" ON "influencers" ("user_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170630211147"]]
+  [1m[35m (7.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ahoy_events_on_name_and_time' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ahoy_events_on_name_and_time' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ahoy_events_on_user_id_and_name' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ahoy_events_on_user_id_and_name' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ahoy_events_on_visit_id_and_name' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ahoy_events_on_visit_id_and_name' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_asks_on_sector_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_asks_on_sector_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_asks_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_asks_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_influencers_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_influencers_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_jobs_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_jobs_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_profiles_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_profiles_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_resources_on_sector_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_resources_on_sector_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_resources_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_resources_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_shares_on_sector_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_shares_on_sector_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_shares_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_shares_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_tips_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_tips_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_values_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_values_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_visions_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_visions_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_visits_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_visits_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_visits_on_visit_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_visits_on_visit_token' AND type='index'
+[0m
+Started GET "/tips" for 67.87.59.199 at 2017-06-30 21:19:22 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TipsController#index as HTML
+  Rendering tips/index.html.erb within layouts/application
+  [1m[36mTip Load (0.5ms)[0m  [1m[34mSELECT "tips".* FROM "tips"[0m
+  Rendered tips/index.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 351ms (Views: 338.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/tips" for 67.87.59.199 at 2017-06-30 21:22:25 +0000
+Processing by TipsController#index as HTML
+  Rendering tips/index.html.erb within layouts/application
+  Rendered tips/index.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/ubuntu/workspace/app/views/tips/index.html.erb:11: syntax error, unexpected ')', expecting '='
+...uffer.append=( tip.industry , );@output_buffer.safe_append='...
+...                               ^
+/home/ubuntu/workspace/app/views/tips/index.html.erb:17: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;           end  
+                       ^
+/home/ubuntu/workspace/app/views/tips/index.html.erb:20: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+                 ^
+/home/ubuntu/workspace/app/views/tips/index.html.erb:29: syntax error, unexpected keyword_ensure, expecting ')'
+/home/ubuntu/workspace/app/views/tips/index.html.erb:31: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/tips/index.html.erb:11: syntax error, unexpected ')', expecting '='
+app/views/tips/index.html.erb:17: syntax error, unexpected keyword_end, expecting ')'
+app/views/tips/index.html.erb:20: syntax error, unexpected keyword_end, expecting ')'
+app/views/tips/index.html.erb:29: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/tips/index.html.erb:31: syntax error, unexpected keyword_end, expecting ')'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.7ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (40.2ms)
+Started GET "/tips" for 67.87.59.199 at 2017-06-30 21:26:12 +0000
+Processing by TipsController#index as HTML
+  Rendering tips/index.html.erb within layouts/application
+  Rendered tips/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/ubuntu/workspace/app/views/tips/index.html.erb:11: syntax error, unexpected ')', expecting '='
+...uffer.append=( tip.industry , );@output_buffer.safe_append='...
+...                               ^
+/home/ubuntu/workspace/app/views/tips/index.html.erb:17: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;           end  
+                       ^
+/home/ubuntu/workspace/app/views/tips/index.html.erb:20: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;     end 
+                 ^
+/home/ubuntu/workspace/app/views/tips/index.html.erb:29: syntax error, unexpected keyword_ensure, expecting ')'
+/home/ubuntu/workspace/app/views/tips/index.html.erb:31: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/tips/index.html.erb:11: syntax error, unexpected ')', expecting '='
+app/views/tips/index.html.erb:17: syntax error, unexpected keyword_end, expecting ')'
+app/views/tips/index.html.erb:20: syntax error, unexpected keyword_end, expecting ')'
+app/views/tips/index.html.erb:29: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/tips/index.html.erb:31: syntax error, unexpected keyword_end, expecting ')'
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.6ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.9ms)
+Started GET "/tips" for 67.87.59.199 at 2017-06-30 21:26:32 +0000
+Processing by TipsController#index as HTML
+  Rendering tips/index.html.erb within layouts/application
+  [1m[36mTip Load (0.9ms)[0m  [1m[34mSELECT "tips".* FROM "tips"[0m
+  Rendered tips/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 178ms (Views: 174.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/tips" for 67.87.59.199 at 2017-06-30 21:26:36 +0000
+Processing by TipsController#index as HTML
+  Rendering tips/index.html.erb within layouts/application
+  [1m[36mTip Load (1.2ms)[0m  [1m[34mSELECT "tips".* FROM "tips"[0m
+  Rendered tips/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 318ms (Views: 313.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/tips" for 67.87.59.199 at 2017-06-30 21:26:41 +0000
+Processing by TipsController#index as HTML
+  Rendering tips/index.html.erb within layouts/application
+  [1m[36mTip Load (0.2ms)[0m  [1m[34mSELECT "tips".* FROM "tips"[0m
+  Rendered tips/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 203ms (Views: 199.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tips" for 67.87.59.199 at 2017-06-30 21:27:52 +0000
+Processing by TipsController#index as HTML
+  Rendering tips/index.html.erb within layouts/application
+  [1m[36mTip Load (0.7ms)[0m  [1m[34mSELECT "tips".* FROM "tips"[0m
+  Rendered tips/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 230ms (Views: 226.4ms | ActiveRecord: 0.7ms)
+
+

@@ -1,5 +1,5 @@
 class Influencer < ApplicationRecord
-     visitable
+     belongs_to :user
      
      def self.search(search)
         # where(:title, query) -> This would return an exact match of the query

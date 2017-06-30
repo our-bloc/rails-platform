@@ -1,11 +1,9 @@
 class Tip < ApplicationRecord
-    visitable 
+    belongs_to :user
     
     def self.search(search)
         Tip.where('title LIKE :search OR body LIKE :search', search: "%#{search}%")
     end
     
-    def self.newline
-        self.gsub(/\n/, '<br>')
-    end
+
 end

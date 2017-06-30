@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170606233707) do
+ActiveRecord::Schema.define(version: 20170630211147) do
 
   create_table "ahoy_events", force: :cascade do |t|
     t.integer  "visit_id"
@@ -81,6 +81,8 @@ ActiveRecord::Schema.define(version: 20170606233707) do
     t.string   "advice4"
     t.string   "resources"
     t.integer  "visit_id"
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_influencers_on_user_id"
   end
 
   create_table "jobs", force: :cascade do |t|
@@ -147,6 +149,8 @@ ActiveRecord::Schema.define(version: 20170606233707) do
     t.boolean  "for_email"
     t.string   "gradyear"
     t.integer  "visit_id"
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_tips_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

@@ -1,4 +1,4 @@
-<% if current_user.school == "Morehouse College" %> 
+<% if user_signed_in? and current_user.school.exists? and current_user.school == "Morehouse College" %> 
     <%= render "university/partials/menu" %> 
 <% end %> 
 
@@ -7,15 +7,15 @@
       <div class="tip_index_card">
         <td> <%= link_to tip.title, tip.link %></td>
 
-        <% if !user_signed_in?  %>
+        <% if user_signed_in? and current_user.name =="Amina Yamusah" %>
           <td><%= tip.industry %></td>
-          <td><%= tip.link %></td>
           <td><%= tip.prep %></td>
-          <td><%= tip.grad %></td>
+          <td><%= tip.link %></td>
+         
           <td><%= link_to 'Show', tip %></td>
           <td><%= link_to 'Edit', edit_tip_path(tip) %></td>
           <td><%= link_to 'Delete', tip, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          <% end %> 
+        <% end %> 
     
       </div>
     <% end %>
