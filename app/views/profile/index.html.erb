@@ -1,6 +1,7 @@
 <h5> User Profiles </h5>
-
-
+    <% if current_user.name == "Amina Yamusah" or current_user.name == "Amina" %> 
+    <h4> Data</h4>
+    
     <% @users_all.each do |user| %>   
         <div class="card horizontal white" style="width:50%; height: 30%">
             <div class="card-content teal-text">
@@ -11,14 +12,13 @@
                         <h6><%= user.firstjob %> </h6>
                         <h6><%= user.style %> </h6>
                         <h6><%= user.gradschool %> </h6>
-                   <% end %> 
-                    
-                    <% if user_signed_in? and user.role == "company" %> 
-                          <h6><%= user.email %></h6>
+                        <h6><%= user.profileurl %> </h6>
+                        <h6><%= user.email %></h6>
                     <% end %> 
                     
                     
             </div>
         </div> 
+    <% end %> 
     <% end %> 
  
