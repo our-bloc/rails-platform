@@ -1,5 +1,5 @@
 <h5> User Profiles </h5>
-    <% if current_user.name == "Amina Yamusah" or current_user.name == "Amina" %> 
+    <% if user_signed_in?  %> 
     <h4> Data</h4>
     
     <% @users_all.each do |user| %>   
