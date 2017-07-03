@@ -47019,3 +47019,77 @@ Processing by TipsController#index as HTML
 Completed 200 OK in 230ms (Views: 226.4ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/tips" for 67.87.59.199 at 2017-06-30 21:46:14 +0000
+Processing by TipsController#index as HTML
+  Rendering tips/index.html.erb within layouts/application
+  [1m[36mTip Load (4.2ms)[0m  [1m[34mSELECT "tips".* FROM "tips"[0m
+  Rendered tips/index.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 2135ms (Views: 2119.3ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/tips/1" for 67.87.59.199 at 2017-06-30 21:46:21 +0000
+Processing by TipsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTip Load (1.0ms)[0m  [1m[34mSELECT  "tips".* FROM "tips" WHERE "tips"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tips/show.html.erb within layouts/application
+  Rendered tips/show.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 212ms (Views: 206.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tips/new" for 67.87.59.199 at 2017-06-30 21:46:22 +0000
+Processing by TipsController#new as HTML
+  Rendering tips/new.html.erb within layouts/application
+  Rendered tips/_form.html.erb (8.6ms)
+  Rendered tips/new.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 306ms (Views: 301.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tips/1/edit" for 67.87.59.199 at 2017-06-30 21:46:24 +0000
+Processing by TipsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTip Load (0.3ms)[0m  [1m[34mSELECT  "tips".* FROM "tips" WHERE "tips"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering tips/edit.html.erb within layouts/application
+  Rendered tips/_form.html.erb (8.7ms)
+  Rendered tips/edit.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 299ms (Views: 292.6ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tips/1" for 67.87.59.199 at 2017-06-30 21:46:34 +0000
+Processing by TipsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Xk/frRTseWhSWbRmZXpCutoAa05bxvqn0NfZjHSyjyazuB8fMNgzfLunb1LGl1dENLfbzKOAE5XomMQgP84QHg==", "tip"=>{"title"=>"Attend LSAC Law School Forums to Build Strong Relationships", "body"=>"LSAC Forums are the perfect opportunity to build your network and to learn insider information on submitting a strong application. Even if you don't get new information from panels, you have the opportunity to connect with panelists and admissions officers who can be a resource later. \r\nAlso, be intentional about connecting with LSAC, many of whom are past lawyers and have serious connections throughout the space. They also can hook you up with free past exams for practice. \r\nCheck the link below for more information on upcoming Forums in DC, Miami, Chicago, Atlanta, NYC, Houston, SF, LA and Boston.\r\n\r\n\r\nWhat you get from attending: \r\n-Become more familiar with the LSAT and the testing process from the test developers;\r\n-Get advice about ways to finance your legal education;\r\n-Ask law school admission representatives questions about the application process;\r\n-Meet practicing attorneys and learn their strategies for professional success; and\r\n-Learn more from the diversity information panel about the unique challenges that may face students from diverse backgrounds.\r\n", "link"=>"", "industry"=>"Techies", "grad"=>"Maybe", "gradyear"=>"2018", "for_email"=>"false", "prep"=>"personal_statements"}, "commit"=>"Update Tip", "id"=>"1"}
+  [1m[36mTip Load (0.8ms)[0m  [1m[34mSELECT  "tips".* FROM "tips" WHERE "tips"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering tips/edit.html.erb within layouts/application
+  Rendered tips/_form.html.erb (8.5ms)
+  Rendered tips/edit.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 268ms (Views: 259.1ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/tips/1" for 67.87.59.199 at 2017-06-30 21:46:44 +0000
+Processing by TipsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nrDPpR6ymVZU57rZjS5d5P0/hZ8DYR+XXyz9RNBmDf9zRw8XOobTQr0ZYe0uw0gaE4g1Hfsn9qVnY+DomxqSxw==", "tip"=>{"title"=>"Attend LSAC Law School Forums to Build Strong Relationships", "body"=>"LSAC Forums are the perfect opportunity to build your network and to learn insider information on submitting a strong application. Even if you don't get new information from panels, you have the opportunity to connect with panelists and admissions officers who can be a resource later. \r\nAlso, be intentional about connecting with LSAC, many of whom are past lawyers and have serious connections throughout the space. They also can hook you up with free past exams for practice. \r\nCheck the link below for more information on upcoming Forums in DC, Miami, Chicago, Atlanta, NYC, Houston, SF, LA and Boston.\r\n\r\n\r\nWhat you get from attending: \r\n-Become more familiar with the LSAT and the testing process from the test developers;\r\n-Get advice about ways to finance your legal education;\r\n-Ask law school admission representatives questions about the application process;\r\n-Meet practicing attorneys and learn their strategies for professional success; and\r\n-Learn more from the diversity information panel about the unique challenges that may face students from diverse backgrounds.\r\n", "link"=>"", "industry"=>"Techies", "grad"=>"Maybe", "gradyear"=>"2018", "for_email"=>"false", "prep"=>"personal_statements"}, "commit"=>"Update Tip", "id"=>"1"}
+  [1m[36mTip Load (0.1ms)[0m  [1m[34mSELECT  "tips".* FROM "tips" WHERE "tips"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering tips/edit.html.erb within layouts/application
+  Rendered tips/_form.html.erb (6.3ms)
+  Rendered tips/edit.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 192ms (Views: 185.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 67.87.59.199 at 2017-07-03 23:26:48 +0000
+Processing by WelcomeController#home as HTML
+Redirected to https://bloc-prodcution-aminabloc.c9users.io/hello
+Completed 302 Found in 14ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/hello" for 67.87.59.199 at 2017-07-03 23:26:48 +0000
+Processing by WelcomeController#hello as HTML
+  Rendering welcome/hello.html.erb within layouts/application
+  Rendered welcome/_navbar.html.erb (0.5ms)
+  Rendered welcome/_events.html.erb (0.3ms)
+  Rendered welcome/hello.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 623ms (Views: 618.5ms | ActiveRecord: 0.0ms)
+
+
