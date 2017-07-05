@@ -47533,3 +47533,293 @@ Completed 200 OK in 192ms (Views: 0.4ms | ActiveRecord: 1.0ms)
 
   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ?[0m  [["name", "Amina Yamusah"]]
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ?[0m  [["id", 6]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering weekly_playlist_mailer/weekly_playlist.html.erb within layouts/mailer
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mTip Load (0.2ms)[0m  [1m[34mSELECT  "tips".* FROM "tips" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 2]]
+  Rendered weekly_playlist_mailer/weekly_playlist.html.erb within layouts/mailer (17.0ms)
+  Rendering weekly_playlist_mailer/weekly_playlist.text.erb within layouts/mailer
+  Rendered weekly_playlist_mailer/weekly_playlist.text.erb within layouts/mailer (0.2ms)
+WeeklyPlaylistMailer#weekly_playlist: processed outbound mail in 206.4ms
+Sent mail to testing@jointhebloc.com (17.7ms)
+Date: Wed, 05 Jul 2017 16:35:04 +0000
+From: Bloc Team <amina@ourbloc.co>
+To: testing@jointhebloc.com
+Message-ID: <595d1538b782c_112f4111b0ec16626@aminabloc-bloc-prodcution-4407529.mail>
+Subject: Hey New, here are some opportunities we think you'll love!
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_595d1538b501b_112f4111b0ec1657d";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_595d1538b501b_112f4111b0ec1657d
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_595d1538b501b_112f4111b0ec1657d
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+ <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+     <link href='https://fonts.googleapis.com/css?family=:800' rel='stylesheet' type='text/css'>
+     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/aileron" type="text/css"/>
+     
+  </head>
+  
+  <body style="width:100%;  font-family: Arial; ">
+    <div style="padding: 5%"> 
+      <img style="width: 100%" src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/1_9_orig.png"> 
+      <h5  style="font-size: 2em; text-align:center"> Hey hey New,</h5>
+      <div style="text-align: center"> 
+         <h2 style=" color:#44d9e6 ; font-family: Arial "> Here are a few jobs that stood out this week... </h2>
+              
+    
+              
+        
+        <!-- TIPS -->
+        
+        <h2 style="font-family: Arial; color:#44d9e6 ">And some quick tips and resources ... </h2>
+
+                <h4 style="font-family: Arial"> Attend LSAC Law School Forums to Build Strong Relationships<br> </h4>
+                <h5 style="font-family: Arial"> te<br> </h5>
+                <h4> <a style="font-family: Arial" href="">Read More</a><br> </h4>
+             
+         
+
+      </div >
+      
+ 
+      
+  
+      <div class="share" style="background-color: #44d9e6; padding: 2%; text-align: center; font-size: 2em;
+      color: white; font-family: Arial; margin: 5% 0;" > 
+      
+            <h6 style="text-decoration: none"> <a href="http://localhost:3000/myplaylist?profileurl=NewUser33">View your full career playlist</a> </h6>
+        <h6> Share with a friend! </h6> <h6> <a style="color:white" href="jointhebloc.com/NewUser33">share code: jointhebloc.com/NewUser33</a></h6>
+        
+      
+      <p style="font-size: 8px"> unsubscribe from email updates anytime by replying "Unsubscribe" to this email </p>
+    </div>
+  </body>
+</html>
+
+  </body>
+</html>
+
+----==_mimepart_595d1538b501b_112f4111b0ec1657d--
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Amina Yamusah"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "New User"], ["LIMIT", 1]]
+  Rendering weekly_playlist_mailer/weekly_playlist.html.erb within layouts/mailer
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mTip Load (0.2ms)[0m  [1m[34mSELECT  "tips".* FROM "tips" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 2]]
+  Rendered weekly_playlist_mailer/weekly_playlist.html.erb within layouts/mailer (19.5ms)
+  Rendering weekly_playlist_mailer/weekly_playlist.text.erb within layouts/mailer
+  Rendered weekly_playlist_mailer/weekly_playlist.text.erb within layouts/mailer (0.2ms)
+WeeklyPlaylistMailer#weekly_playlist: processed outbound mail in 197.7ms
+Sent mail to testing@jointhebloc.com (17.4ms)
+Date: Wed, 05 Jul 2017 16:36:40 +0000
+From: Bloc Team <amina@ourbloc.co>
+To: testing@jointhebloc.com
+Message-ID: <595d1598de80d_1132c68b0f0359c9@aminabloc-bloc-prodcution-4407529.mail>
+Subject: Hey New, here are some opportunities we think you'll love!
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_595d1598dbc88_1132c68b0f03583c";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_595d1598dbc88_1132c68b0f03583c
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_595d1598dbc88_1132c68b0f03583c
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+ <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+     <link href='https://fonts.googleapis.com/css?family=:800' rel='stylesheet' type='text/css'>
+     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/aileron" type="text/css"/>
+     
+  </head>
+  
+  <body style="width:100%;  font-family: Arial; ">
+    <div style="padding: 5%"> 
+      <img style="width: 100%" src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/1_9_orig.png"> 
+      <h5  style="font-size: 2em; text-align:center"> Hey hey New,</h5>
+      <div style="text-align: center"> 
+         <h2 style=" color:#44d9e6 ; font-family: Arial "> Here are a few jobs that stood out this week... </h2>
+              
+    
+              
+        
+        <!-- TIPS -->
+        
+        <h2 style="font-family: Arial; color:#44d9e6 ">And some quick tips and resources ... </h2>
+
+                <h4 style="font-family: Arial"> Attend LSAC Law School Forums to Build Strong Relationships<br> </h4>
+                <h5 style="font-family: Arial"> te<br> </h5>
+                <h4> <a style="font-family: Arial" href="">Read More</a><br> </h4>
+             
+         
+
+      </div >
+      
+ 
+      
+  
+      <div class="share" style="background-color: #44d9e6; padding: 2%; text-align: center; font-size: 2em;
+      color: white; font-family: Arial; margin: 5% 0;" > 
+      
+            <h6 style="text-decoration: none"> <a href="http://localhost:3000/myplaylist?profileurl=NewUser33">View your full career playlist</a> </h6>
+        <h6> Share with a friend! </h6> <h6> <a style="color:white" href="jointhebloc.com/NewUser33">share code: jointhebloc.com/NewUser33</a></h6>
+        
+      
+      <p style="font-size: 8px"> unsubscribe from email updates anytime by replying "Unsubscribe" to this email </p>
+    </div>
+  </body>
+</html>
+
+  </body>
+</html>
+
+----==_mimepart_595d1598dbc88_1132c68b0f03583c--
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering weekly_playlist_mailer/weekly_playlist.html.erb within layouts/mailer
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mTip Load (0.2ms)[0m  [1m[34mSELECT  "tips".* FROM "tips" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 2]]
+  Rendered weekly_playlist_mailer/weekly_playlist.html.erb within layouts/mailer (18.4ms)
+  Rendering weekly_playlist_mailer/weekly_playlist.text.erb within layouts/mailer
+  Rendered weekly_playlist_mailer/weekly_playlist.text.erb within layouts/mailer (0.2ms)
+WeeklyPlaylistMailer#weekly_playlist: processed outbound mail in 165.5ms
+Sent mail to testing@jointhebloc.com (11.5ms)
+Date: Wed, 05 Jul 2017 16:40:29 +0000
+From: Bloc Team <amina@ourbloc.co>
+To: testing@jointhebloc.com
+Message-ID: <595d167da497a_11371cef0e0217a9@aminabloc-bloc-prodcution-4407529.mail>
+Subject: Hey New, here are some opportunities we think you'll love!
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_595d167da2c78_11371cef0e0216f7";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_595d167da2c78_11371cef0e0216f7
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_595d167da2c78_11371cef0e0216f7
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+ <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+     <link href='https://fonts.googleapis.com/css?family=:800' rel='stylesheet' type='text/css'>
+     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/aileron" type="text/css"/>
+     
+  </head>
+  
+  <body style="width:100%;  font-family: Arial; ">
+    <div style="padding: 5%"> 
+      <img style="width: 100%" src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/1_9_orig.png"> 
+      <h5  style="font-size: 2em; text-align:center"> Hey hey New,</h5>
+      <div style="text-align: center"> 
+         <h2 style=" color:#44d9e6 ; font-family: Arial "> Here are a few jobs that stood out this week... </h2>
+              
+    
+              
+        
+        <!-- TIPS -->
+        
+        <h2 style="font-family: Arial; color:#44d9e6 ">And some quick tips and resources ... </h2>
+
+                <h4 style="font-family: Arial"> Attend LSAC Law School Forums to Build Strong Relationships<br> </h4>
+                <h5 style="font-family: Arial"> te<br> </h5>
+                <h4> <a style="font-family: Arial" href="">Read More</a><br> </h4>
+             
+         
+
+      </div >
+      
+ 
+      
+  
+      <div class="share" style="background-color: #44d9e6; padding: 2%; text-align: center; font-size: 2em;
+      color: white; font-family: Arial; margin: 5% 0;" > 
+      
+            <h6 style="text-decoration: none"> <a href="http://localhost:3000/myplaylist?profileurl=NewUser33">View your full career playlist</a> </h6>
+        <h6> Share with a friend! </h6> <h6> <a style="color:white" href="jointhebloc.com/NewUser33">share code: jointhebloc.com/NewUser33</a></h6>
+        
+      
+      <p style="font-size: 8px"> unsubscribe from email updates anytime by replying "Unsubscribe" to this email </p>
+    </div>
+  </body>
+</html>
+
+  </body>
+</html>
+
+----==_mimepart_595d167da2c78_11371cef0e0216f7--
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]

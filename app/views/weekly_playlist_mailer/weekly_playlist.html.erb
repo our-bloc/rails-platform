@@ -35,6 +35,13 @@
                 <h4> <%= link_to "Read More", tip.link, style: "font-family: Arial" %><br> </h4>
              
           <% end %> 
+          
+          <% @grad_tips.each do |tip| %>
+                <h4 style="font-family: Arial"> <%= tip.title %><br> </h4>
+                <h5 style="font-family: Arial"> <%= tip.body %><br> </h5>
+                <h4> <%= link_to "Read More", tip.link, style: "font-family: Arial" %><br> </h4>
+             
+          <% end %> 
          
 
       </div >
