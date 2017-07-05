@@ -1,5 +1,5 @@
 task :test_playlist => :environment do
-        @user = User.find_by_name("Amina Yamusah")
+        @user = User.find_by_id("6")
         
     
             if @user.industry != nil
