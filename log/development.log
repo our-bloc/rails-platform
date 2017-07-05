@@ -47427,3 +47427,109 @@ Processing by ProfileController#playlist as
 Completed 200 OK in 380ms (Views: 168.1ms | ActiveRecord: 14.1ms)
 
 
+Started GET "/rails/mailers/weekly_playlist_mailer" for 67.87.59.199 at 2017-07-05 16:13:26 +0000
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"internal"=>true, "path"=>"weekly_playlist_mailer"}
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.0.1/lib/rails/templates/rails/mailers/mailer.html.erb within layouts/application
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.0.1/lib/rails/templates/rails/mailers/mailer.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 489ms (Views: 12.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/mailers/weekly_playlist_mailer/weekly_playlist_preview" for 67.87.59.199 at 2017-07-05 16:13:30 +0000
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"internal"=>true, "path"=>"weekly_playlist_mailer/weekly_playlist_preview"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering weekly_playlist_mailer/weekly_playlist.html.erb within layouts/mailer
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mTip Load (0.3ms)[0m  [1m[34mSELECT  "tips".* FROM "tips" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 2]]
+  Rendered weekly_playlist_mailer/weekly_playlist.html.erb within layouts/mailer (19.4ms)
+  Rendering weekly_playlist_mailer/weekly_playlist.text.erb within layouts/mailer
+  Rendered weekly_playlist_mailer/weekly_playlist.text.erb within layouts/mailer (0.5ms)
+WeeklyPlaylistMailer#weekly_playlist: processed outbound mail in 233.3ms
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.0.1/lib/rails/templates/rails/mailers/email.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.0.1/lib/rails/templates/rails/mailers/email.html.erb (12.9ms)
+Completed 200 OK in 536ms (Views: 16.5ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/rails/mailers/weekly_playlist_mailer/weekly_playlist_preview?part=text%2Fhtml" for 67.87.59.199 at 2017-07-05 16:13:31 +0000
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"part"=>"text/html", "internal"=>true, "path"=>"weekly_playlist_mailer/weekly_playlist_preview"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering weekly_playlist_mailer/weekly_playlist.html.erb within layouts/mailer
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mTip Load (0.2ms)[0m  [1m[34mSELECT  "tips".* FROM "tips" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 2]]
+  Rendered weekly_playlist_mailer/weekly_playlist.html.erb within layouts/mailer (2.8ms)
+  Rendering weekly_playlist_mailer/weekly_playlist.text.erb within layouts/mailer
+  Rendered weekly_playlist_mailer/weekly_playlist.text.erb within layouts/mailer (0.3ms)
+WeeklyPlaylistMailer#weekly_playlist: processed outbound mail in 13.3ms
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 183ms (Views: 3.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/rails/mailers/weekly_playlist_mailer/weekly_playlist_preview" for 67.87.59.199 at 2017-07-05 16:13:57 +0000
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"internal"=>true, "path"=>"weekly_playlist_mailer/weekly_playlist_preview"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering weekly_playlist_mailer/weekly_playlist.html.erb within layouts/mailer
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mTip Load (0.2ms)[0m  [1m[34mSELECT  "tips".* FROM "tips" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 2]]
+  Rendered weekly_playlist_mailer/weekly_playlist.html.erb within layouts/mailer (2.8ms)
+  Rendering weekly_playlist_mailer/weekly_playlist.text.erb within layouts/mailer
+  Rendered weekly_playlist_mailer/weekly_playlist.text.erb within layouts/mailer (0.2ms)
+WeeklyPlaylistMailer#weekly_playlist: processed outbound mail in 14.3ms
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.0.1/lib/rails/templates/rails/mailers/email.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.0.1/lib/rails/templates/rails/mailers/email.html.erb (4.0ms)
+Completed 200 OK in 264ms (Views: 5.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/rails/mailers/weekly_playlist_mailer/weekly_playlist_preview?part=text%2Fhtml" for 67.87.59.199 at 2017-07-05 16:13:57 +0000
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"part"=>"text/html", "internal"=>true, "path"=>"weekly_playlist_mailer/weekly_playlist_preview"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering weekly_playlist_mailer/weekly_playlist.html.erb within layouts/mailer
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mTip Load (0.2ms)[0m  [1m[34mSELECT  "tips".* FROM "tips" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 2]]
+  Rendered weekly_playlist_mailer/weekly_playlist.html.erb within layouts/mailer (3.2ms)
+  Rendering weekly_playlist_mailer/weekly_playlist.text.erb within layouts/mailer
+  Rendered weekly_playlist_mailer/weekly_playlist.text.erb within layouts/mailer (0.3ms)
+WeeklyPlaylistMailer#weekly_playlist: processed outbound mail in 14.2ms
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 191ms (Views: 0.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/rails/mailers/weekly_playlist_mailer/weekly_playlist_preview" for 67.87.59.199 at 2017-07-05 16:15:17 +0000
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"internal"=>true, "path"=>"weekly_playlist_mailer/weekly_playlist_preview"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering weekly_playlist_mailer/weekly_playlist.html.erb within layouts/mailer
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mTip Load (0.2ms)[0m  [1m[34mSELECT  "tips".* FROM "tips" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 2]]
+  Rendered weekly_playlist_mailer/weekly_playlist.html.erb within layouts/mailer (3.1ms)
+  Rendering weekly_playlist_mailer/weekly_playlist.text.erb within layouts/mailer
+  Rendered weekly_playlist_mailer/weekly_playlist.text.erb within layouts/mailer (0.2ms)
+WeeklyPlaylistMailer#weekly_playlist: processed outbound mail in 14.2ms
+  Rendering /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.0.1/lib/rails/templates/rails/mailers/email.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/railties-5.0.1/lib/rails/templates/rails/mailers/email.html.erb (3.7ms)
+Completed 200 OK in 223ms (Views: 6.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/rails/mailers/weekly_playlist_mailer/weekly_playlist_preview?part=text%2Fhtml" for 67.87.59.199 at 2017-07-05 16:15:17 +0000
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"part"=>"text/html", "internal"=>true, "path"=>"weekly_playlist_mailer/weekly_playlist_preview"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering weekly_playlist_mailer/weekly_playlist.html.erb within layouts/mailer
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT  "jobs".* FROM "jobs" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 5]]
+  [1m[36mTip Load (0.2ms)[0m  [1m[34mSELECT  "tips".* FROM "tips" ORDER BY created_at DESC LIMIT ?[0m  [["LIMIT", 2]]
+  Rendered weekly_playlist_mailer/weekly_playlist.html.erb within layouts/mailer (3.1ms)
+  Rendering weekly_playlist_mailer/weekly_playlist.text.erb within layouts/mailer
+  Rendered weekly_playlist_mailer/weekly_playlist.text.erb within layouts/mailer (0.3ms)
+WeeklyPlaylistMailer#weekly_playlist: processed outbound mail in 15.7ms
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 192ms (Views: 0.4ms | ActiveRecord: 1.0ms)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ?[0m  [["name", "Amina Yamusah"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ?[0m  [["id", 6]]

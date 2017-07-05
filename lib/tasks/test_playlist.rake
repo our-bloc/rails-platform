@@ -1,5 +1,5 @@
 task :test_playlist => :environment do
-        @user = User.first
+        @user = User.where(:id => 6 )
         
     
             if @user.industry != nil

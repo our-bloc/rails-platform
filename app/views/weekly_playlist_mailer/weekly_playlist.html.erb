@@ -13,16 +13,15 @@
   <body style="width:100%;  font-family: Arial; ">
     <div style="padding: 5%"> 
       <img style="width: 100%" src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/1_9_orig.png"> 
-      <h5  style="font-size: 2em; text-align:center"> Hey <%= @user.firstname.capitalize %>,</h5>
+      <h5  style="font-size: 2em; text-align:center"> Hey hey <%= @user.name.split.first.capitalize %>,</h5>
       <div style="text-align: center"> 
          <h2 style=" color:#44d9e6 ; font-family: Arial "> Here are a few jobs that stood out this week... </h2>
              <% @jobs.each do |job| %>
                      <h4 style="font-family: Arial"> <%= link_to job.title, job.link %> |<%=  job.company %><br> </h4>
+                    <p style="font-family: Arial"> <%= link_to job.description %><br> </h4>
+
              <% end %> 
               
-              <% @indeed.each do |job| %>
-                 <h4 style="font-family: Arial"> <%= link_to job.job_title, job.url %> |  <%=  job.company %><br> </h4>
-              <% end %> 
     
               
         
