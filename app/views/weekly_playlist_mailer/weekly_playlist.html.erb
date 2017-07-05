@@ -46,9 +46,8 @@
       color: white; font-family: Arial; margin: 5% 0;" > 
       
          <% if @vision == "none" %> 
-            <h6 style="text-decoration: none"> <%= link_to 'View your career playlist', playlist_url(:profileurl => @user.profileurl) %> </h6>
+            <h6 style="text-decoration: none"> <%= link_to 'View your full career playlist', playlist_url(:profileurl => @user.profileurl) %> </h6>
           <% else %> 
-            <h6 style="text-decoration: none"> <%= link_to 'View your career playlist', vision_url(:id => @user.id) %>
           <% end %> 
         <h6> Share with a friend! </h6> <h6> <%= link_to "share code: jointhebloc.com/"+ @user.profileurl, "jointhebloc.com/"+ @user.profileurl, style: "color:white"  %></h6>
         
