@@ -23,7 +23,7 @@ gem 'formtastic', '~> 3.1', '>= 3.1.4'
 gem 'indeed_api'
 
 #recommendation engine
-
+gem 'geocoder'
 
 
 #authentication gems

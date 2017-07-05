@@ -41,6 +41,7 @@ class ProfileController < ApplicationController
             @user = current_user
         else
             @user = User.find_by_profileurl(params[:profileurl])
+
         end 
         
         #render modals
@@ -64,24 +65,35 @@ class ProfileController < ApplicationController
             @job_quality_rating= 0
         
         #import jobs from indeed
+        
+        #localize search results 
+        if request.location.city == nil 
+            @city == "Atlanta"
+        else
+            @city = request.location.city 
+            current_user.update_attribute(:hometown, @city)
+
+        end
+        
+        
         if @user != nil
             if @user.industry == "Techies"
-                  @indeed_search = IndeedAPI.search_jobs(:q => @user.firstjob + " software" , :limit => 10)
+                  @indeed_search = IndeedAPI.search_jobs(:q => @user.firstjob + " software" , :limit => 10 , :l => @city )
               elsif @user.industry == "Advocates"
-                  @indeed_search = IndeedAPI.search_jobs(:q => "legal undergraduate " + @user.firstjob , :limit => 10)
+                  @indeed_search = IndeedAPI.search_jobs(:q => "legal undergraduate " + @user.firstjob , :limit => 10, :l => @city )
               elsif @user.industry == "Educators"
-                  @indeed_search = IndeedAPI.search_jobs(:q => "teaching children  " + @user.firstjob , :limit => 10)
+                  @indeed_search = IndeedAPI.search_jobs(:q => "teaching children  " + @user.firstjob , :limit => 10, :l => @city )
               elsif @user.industry == "Griots"
-                  @indeed_search = IndeedAPI.search_jobs(:q => "writing " + @user.firstjob , :limit => 10)
+                  @indeed_search = IndeedAPI.search_jobs(:q => "writing " + @user.firstjob , :limit => 10, :l => @city )
               elsif @user.industry == "Scientists"
-                  @indeed_search = IndeedAPI.search_jobs(:q => "science " + @user.firstjob , :limit => 10)
+                  @indeed_search = IndeedAPI.search_jobs(:q => "science " + @user.firstjob , :limit => 10, :l => @city )
               elsif @user.industry == "CSuite"
-                  @indeed_search = IndeedAPI.search_jobs(:q => "business "  + @user.firstjob , :limit => 10)
+                  @indeed_search = IndeedAPI.search_jobs(:q => "business "  + @user.firstjob , :limit => 10, :l => @city )
             else @user.industry == "Activists"
-                  @indeed_search = IndeedAPI.search_jobs(:q => "social justice "  + @user.firstjob.to_s , :limit => 10)
+                  @indeed_search = IndeedAPI.search_jobs(:q => "social justice "  + @user.firstjob.to_s , :limit => 10, :l => @city )
             end 
         else
-              @indeed_search = IndeedAPI.search_jobs(:q => "internship" , :limit => 10)
+              @indeed_search = IndeedAPI.search_jobs(:q => "internship" , :limit => 10, :l => @city )
         end
          
              @indeed_results = @indeed_search.results
