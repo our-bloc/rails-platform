@@ -60,9 +60,12 @@
           <h6> Message Bloc users who can plug you with their former employers</h6>
       
         </div>
+        <% if @user == nil %> 
+        <% else %> 
         <div class="card-content teal-text" id="share-link">
           <h6><%= link_to "LINK TO YOUR SHARE PAGE jointhebloc.com/" + @user.profileurl , root_path + @user.profileurl , class: "teal-text" %> </h6>
         </div>
+        <% end %> 
       </div>
     </div>
    

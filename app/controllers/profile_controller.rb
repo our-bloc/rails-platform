@@ -37,12 +37,7 @@ class ProfileController < ApplicationController
     
     
     def playlist
-        if user_signed_in?
-            @user = current_user
-        else
             @user = User.find_by_profileurl(params[:profileurl])
-
-        end 
         
         #render modals
         if @jobs != nil
@@ -50,9 +45,9 @@ class ProfileController < ApplicationController
         end 
         
         
-       
+       if @tips != nil
             @tips= Tip.order("created_at DESC").where(:prep => @user.prep).limit(5)
-      
+      end
         
         #BLOC color scheme
             @color_count= 0
@@ -78,7 +73,7 @@ class ProfileController < ApplicationController
         
         if @user != nil
             if @user.industry == "Techies"
-                  @indeed_search = IndeedAPI.search_jobs(:q => @user.firstjob + " software" , :limit => 10 , :l => @city )
+                  @indeed_search= IndeedAPI.search_jobs(:q => @user.firstjob + " software" , :limit => 10 , :l => @city )
               elsif @user.industry == "Advocates"
                   @indeed_search = IndeedAPI.search_jobs(:q => "legal undergraduate " + @user.firstjob , :limit => 10, :l => @city )
               elsif @user.industry == "Educators"
@@ -86,11 +81,18 @@ class ProfileController < ApplicationController
               elsif @user.industry == "Griots"
                   @indeed_search = IndeedAPI.search_jobs(:q => "writing " + @user.firstjob , :limit => 10, :l => @city )
               elsif @user.industry == "Scientists"
-                  @indeed_search = IndeedAPI.search_jobs(:q => "science " + @user.firstjob , :limit => 10, :l => @city )
+                  @indeed_search = IndeedAPI.search_jobs(:q => "researchU " + @user.firstjob, :limit => 10 )
               elsif @user.industry == "CSuite"
                   @indeed_search = IndeedAPI.search_jobs(:q => "business "  + @user.firstjob , :limit => 10, :l => @city )
-            else @user.industry == "Activists"
+            elsif @user.industry == "Activists"
                   @indeed_search = IndeedAPI.search_jobs(:q => "social justice "  + @user.firstjob.to_s , :limit => 10, :l => @city )
+            elsif @user.industry == "Creatives"
+                  @indeed_search = IndeedAPI.search_jobs(:q => "marketing "  + @user.firstjob , :limit => 10, :l => @city )
+            elsif @user.industry == "Creatives"
+                  @indeed_search = IndeedAPI.search_jobs(:q => "entrepreneur "  + @user.firstjob , :limit => 10, :l => @city )
+            else
+                @indeed_search = IndeedAPI.search_jobs(:q => "internship" , :limit => 10, :l => @city )
+
             end 
         else
               @indeed_search = IndeedAPI.search_jobs(:q => "internship" , :limit => 10, :l => @city )
@@ -100,8 +102,9 @@ class ProfileController < ApplicationController
     
     
         #loads influencer text & image
+        if @influencers != nil
         @influencers= Influencer.where(:industry => @user.industry).where(:style => @user.style).limit(1)
-    
+        end
         
         #feedback comment box
         @feedback = current_user.feedbacks.build

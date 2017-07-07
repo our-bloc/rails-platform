@@ -1,65 +1,219 @@
-<!DOCTYPE html>
-<html>
- <head>
-    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-     <link href='https://fonts.googleapis.com/css?family=:800' rel='stylesheet' type='text/css'>
-     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/aileron" type="text/css"/>
-     
-  </head>
-  
-  <body style="width:100%;  font-family: Arial; ">
-    <div style="padding: 5%"> 
-      <img style="width: 100%" src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/1_9_orig.png"> 
-      <h5  style="font-size: 2em; text-align:center"> Hey hey <%= @user.name.split.first.capitalize %>,</h5>
-      <div style="text-align: center"> 
-         <h2 style=" color:#44d9e6 ; font-family: Arial "> Here are a few jobs that stood out this week... </h2>
-             <% @jobs.each do |job| %>
-                     <h4 style="font-family: Arial"> <%= link_to job.title, job.link %> |<%=  job.company %><br> </h4>
-                    <p style="font-family: Arial"> <%= link_to job.description %><br> </h4>
 
-             <% end %> 
-              
-    
-              
-        
-        <!-- TIPS -->
-        
-        <h2 style="font-family: Arial; color:#44d9e6 ">And some quick tips and resources ... </h2>
-
-         <% @tips.each do |tip| %>
-                <h4 style="font-family: Arial"> <%= tip.title %><br> </h4>
-                <h5 style="font-family: Arial"> <%= tip.body %><br> </h5>
-                <h4> <%= link_to "Read More", tip.link, style: "font-family: Arial" %><br> </h4>
-             
-          <% end %> 
-          
-          <% @grad_tips.each do |tip| %>
-                <h4 style="font-family: Arial"> <%= tip.title %><br> </h4>
-                <h5 style="font-family: Arial"> <%= tip.body %><br> </h5>
-                <h4> <%= link_to "Read More", tip.link, style: "font-family: Arial" %><br> </h4>
-             
-          <% end %> 
-         
-
-      </div >
-      
- 
-      
-  
-      <div class="share" style="background-color: #44d9e6; padding: 2%; text-align: center; font-size: 2em;
-      color: white; font-family: Arial; margin: 5% 0;" > 
-      
-         <% if @vision == "none" %> 
-            <h6 style="text-decoration: none"> <%= link_to 'View your full career playlist', playlist_url(:profileurl => @user.profileurl) %> </h6>
-          <% else %> 
-          <% end %> 
-        <h6> Share with a friend! </h6> <h6> <%= link_to "share code: jointhebloc.com/"+ @user.profileurl, "jointhebloc.com/"+ @user.profileurl, style: "color:white"  %></h6>
-        
-      
-      <p style="font-size: 8px"> unsubscribe from email updates anytime by replying "Unsubscribe" to this email </p>
-    </div>
-  </body>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Internal_email-29</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<style type="text/css">
+			* {
+				-ms-text-size-adjust:100%;
+				-webkit-text-size-adjust:none;
+				-webkit-text-resize:100%;
+				text-resize:100%;
+			}
+			a{
+				outline:none;
+				color:#40aceb;
+				text-decoration:underline;
+			}
+			a:hover{text-decoration:none !important;}
+			.nav a:hover{text-decoration:underline !important;}
+			.title a:hover{text-decoration:underline !important;}
+			.title-2 a:hover{text-decoration:underline !important;}
+			.btn:hover{opacity:0.8;}
+			.btn a:hover{text-decoration:none !important;}
+			.btn{
+				-webkit-transition:all 0.3s ease;
+				-moz-transition:all 0.3s ease;
+				-ms-transition:all 0.3s ease;
+				transition:all 0.3s ease;
+			}
+			table td {border-collapse: collapse !important;}
+			.ExternalClass, .ExternalClass a, .ExternalClass span, .ExternalClass b, .ExternalClass br, .ExternalClass p, .ExternalClass div{line-height:inherit;}
+			@media only screen and (max-width:500px) {
+				table[class="flexible"]{width:100% !important;}
+				table[class="center"]{
+					float:none !important;
+					margin:0 auto !important;
+				}
+				*[class="hide"]{
+					display:none !important;
+					width:0 !important;
+					height:0 !important;
+					padding:0 !important;
+					font-size:0 !important;
+					line-height:0 !important;
+				}
+				td[class="img-flex"] img{
+					width:100% !important;
+					height:auto !important;
+				}
+				td[class="aligncenter"]{text-align:center !important;}
+				th[class="flex"]{
+					display:block !important;
+					width:100% !important;
+				}
+				td[class="wrapper"]{padding:0 !important;}
+				td[class="holder"]{padding:30px 15px 20px !important;}
+				td[class="nav"]{
+					padding:20px 0 0 !important;
+					text-align:center !important;
+				}
+				td[class="h-auto"]{height:auto !important;}
+				td[class="description"]{padding:30px 20px !important;}
+				td[class="i-120"] img{
+					width:120px !important;
+					height:auto !important;
+				}
+				td[class="footer"]{padding:5px 20px 20px !important;}
+				td[class="footer"] td[class="aligncenter"]{
+					line-height:25px !important;
+					padding:20px 0 0 !important;
+				}
+				tr[class="table-holder"]{
+					display:table !important;
+					width:100% !important;
+				}
+				th[class="thead"]{display:table-header-group !important; width:100% !important;}
+				th[class="tfoot"]{display:table-footer-group !important; width:100% !important;}
+			}
+		</style>
+	</head>
+	<body style="margin:0; padding:0;" bgcolor="#eaeced">
+		<table style="min-width:320px;" width="100%" cellspacing="0" cellpadding="0" bgcolor="#eaeced">
+			<!-- fix for gmail -->
+			<tr>
+				<td class="hide">
+					<table width="600" cellpadding="0" cellspacing="0" style="width:600px !important;">
+						<tr>
+							<td style="min-width:600px; font-size:0; line-height:0;">&nbsp;</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td class="wrapper" style="padding:0 10px;">
+					<!-- module 1 -->
+					<table data-module="module-1" data-thumb="thumbnails/01.png" width="100%" cellpadding="0" cellspacing="0">
+						<tr>
+							<td data-bgcolor="bg-module" bgcolor="#eaeced">
+								<table class="flexible" width="600" align="center" style="margin:0 auto;" cellpadding="0" cellspacing="0">
+									<tr>
+										<td style="padding:29px 0 30px;">
+											<table width="100%" cellpadding="0" cellspacing="0">
+												<tr>
+													<th class="flex" width="113" align="left" style="padding:0;">
+														<table class="center" cellpadding="0" cellspacing="0">
+															<tr>
+																<td data-color="text" data-size="size navigation" data-min="10" data-max="22" data-link-style="text-decoration:none; color:#888;" class="nav" align="right" style="font:bold 13px/15px Arial, Helvetica, sans-serif; color:#888;">
+																	<a target="_blank" style="text-decoration:none; color:#888;" href="jointhebloc.com"> bloc. </a> 
+															</tr>
+														</table>
+													</th>
+													<th class="flex" align="left" style="padding:0;">
+														<table width="100%" cellpadding="0" cellspacing="0">
+															<tr>
+																<td data-color="text" data-size="size navigation" data-min="10" data-max="22" data-link-style="text-decoration:none; color:#888;" class="nav" align="right" style="font:bold 13px/15px Arial, Helvetica, sans-serif; color:#888;">
+																	<a target="_blank" style="text-decoration:none; color:#888;" href="jointhebloc.com">Home</a> &nbsp; &nbsp; <a target="_blank" style="text-decoration:none; color:#888;" href="jointhebloc.com/jobs">Featured Jobs</a> &nbsp; &nbsp; 
+																</td>
+															</tr>
+														</table>
+													</th>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+					<!-- module 2 -->
+					<table data-module="module-2" data-thumb="thumbnails/02.png" width="100%" cellpadding="0" cellspacing="0">
+						<tr>
+							<td data-bgcolor="bg-module" bgcolor="#eaeced">
+								<table class="flexible" width="600" align="center" style="margin:0 auto;" cellpadding="0" cellspacing="0">
+									<tr>
+										<td class="img-flex"><img src="https://elzoda.dm2304.livefilestore.com/y4mPp-41O9dOx_ZA1ztg-cigVhHjm4MrBZ_2jBbx6HPm1BavY8ATRMjUHan_oXgzj2kLXPeX88O-PnX5YWFYohKLLoeUn3YHcmOw0yk9QcXxI3eTFQl_-2qgoT_Op5FaxNSwRoiG3DEkC0Mn9atxdXs2VMDqtCEw--Jcpc1zsxAe53UGDsCb3lGnx9dqyQr2l5T1lplOAa18ibJka4Ec5eQMg?width=660" style="vertical-align:top;" width="600" height="306" alt="" /></td>
+									</tr>
+									<tr>
+										<td data-bgcolor="bg-block" class="holder" style="padding:58px 60px 52px;" bgcolor="#f9f9f9">
+											<table width="100%" cellpadding="0" cellspacing="0">
+												<tr>
+													<td data-color="title" data-size="size title" data-min="25" data-max="45" data-link-color="link title color" data-link-style="text-decoration:none; color:#292c34;" class="title" align="center" style="font:35px/38px Arial, Helvetica, sans-serif; color:#292c34; padding:0 0 24px;">
+														Your Career Playlist
+													</td>
+												</tr>
+												<tr>
+													<td data-color="text" data-size="size text" data-min="10" data-max="26" data-link-color="link text color" data-link-style="font-weight:bold; text-decoration:underline; color:#40aceb;" align="center" style="font:bold 16px/25px Arial, Helvetica, sans-serif; color:#888; padding:0 0 23px;">
+														Hey hey <%= @user.name.split.first %>, hope you had a great week after the 4th! Check out some new tips and opportunities that we think will help you win. 
+														
+														PS. Also feel free to us back with any feedback or questions...be great! </br> 
+														</br> 
+														
+														<iframe src="https://giphy.com/embed/3oz8xIbbFutBokoGS4" width="200" height="200" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/election2016-dance-dancing-3oz8xIbbFutBokoGS4"></a></p>
+													</td>
+												</tr>
+												<tr>
+													<td style="padding:0 0 20px;">
+														<table width="134" align="center" style="margin:0 auto;" cellpadding="0" cellspacing="0">
+															<tr>
+																<td data-bgcolor="bg-button" data-size="size button" data-min="10" data-max="16" class="btn" align="center" style="font:12px/14px Arial, Helvetica, sans-serif; color:#f8f9fb; text-transform:uppercase; mso-padding-alt:12px 10px 10px; border-radius:2px;" bgcolor="#4dd0e1">
+				
+																	<a target="_blank" style="text-decoration:none; color:#f8f9fb; display:block; padding:12px 10px 10px;" href="jointhebloc.com/<%= @user.profileurl%>">Your Opportunities! </a>
+																</td>
+															</tr>
+														</table>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+									<tr><td height="28"></td></tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+			
+					<!-- module 7 -->
+					<table data-module="module-7" data-thumb="thumbnails/07.png" width="100%" cellpadding="0" cellspacing="0">
+						<tr>
+							<td data-bgcolor="bg-module" bgcolor="#eaeced">
+								<table class="flexible" width="600" align="center" style="margin:0 auto;" cellpadding="0" cellspacing="0">
+									<tr>
+										<td class="footer" style="padding:0 0 10px;">
+											<table width="100%" cellpadding="0" cellspacing="0">
+												<tr class="table-holder">
+													<th class="tfoot" width="400" align="left" style="vertical-align:top; padding:0;">
+														<table width="100%" cellpadding="0" cellspacing="0">
+															<tr>
+																<td data-color="text" data-link-color="link text color" data-link-style="text-decoration:underline; color:#797c82;" class="aligncenter" style="font:12px/16px Arial, Helvetica, sans-serif; color:#797c82; padding:0 0 10px;">
+																	Our Bloc, 2017. &nbsp; All Rights Reserved. <a target="_blank" style="text-decoration:underline; color:#797c82;" href="sr_unsubscribe">Unsubscribe.</a>
+																</td>
+															</tr>
+														</table>
+													</th>
+													<th class="thead" width="200" align="left" style="vertical-align:top; padding:0;">
+														<table class="center" align="right" cellpadding="0" cellspacing="0">
+															<tr>
+															
+															</tr>
+														</table>
+													</th>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<!-- fix for gmail -->
+			<tr>
+				<td style="line-height:0;"><div style="display:none; white-space:nowrap; font:15px/1px courier;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div></td>
+			</tr>
+		</table>
+	</body>
 </html>

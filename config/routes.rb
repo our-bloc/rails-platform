@@ -48,7 +48,7 @@ Rails.application.routes.draw do
 
   get 'visions/indeed_show', to: 'visions#indeed_show', as: :indeed_show, format: false
 
-  get ':profileurl' => 'profile#show'
+  get ':profileurl' => 'profile#playlist'
 
 
   devise_for :users ,:controllers => { :omniauth_callbacks => "callbacks" },
