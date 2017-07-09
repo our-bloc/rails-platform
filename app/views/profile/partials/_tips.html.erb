@@ -1,25 +1,25 @@
 
 <!-- THREE OPPORTUNITIES --> 
-  
+<%if @tips != nil %>
+    <% @tips.each do |tip| %>
+           <div>
+                <h4 id="job_title" class=""><%= link_to tip.title.upcase , tip.link  , :class => "cyan-text lighten-1" %></h4>
+                <p id="" class="grey-text"><%= tip.body %></h5>
+                <br>
+            </div>
+    <% end %> 
+<% else %> 
+    <% @grad_tips.each do |tip| %>
+           <div>
+                <h4 id="job_title" class=""><%= link_to tip.title.upcase , tip.link  , :class => "cyan-text lighten-1" %></h4>
+                <p id="" class="grey-text"><%= tip.body %></h5>
+                <br>
+            </div>
+    <% end %> 
     
-     <div class="row">
-        <div class="col s12">
-        <div class="tip_card"> 
-         <img id="tip_image" src="http://www.ourbloc.co/uploads/2/4/0/1/24014742/new-playlist-design_orig.png"> 
-       
-           <% if @tips[0] == nil or @user.industry == nil %> 
-           <h6></h6>
-           <% else %> 
-           
-            <% if @tips[0].industry = @user.industry and @tips[0].industry == @user.industry || @tips[0].industry == "All"  %>
-              <h6> <%= link_to @tips[0].title , @tips[0].link%> </h6>
-             <% end %> 
-          
-          <% end %> 
-         
-          
-    </div>
-      </div>
+    
+<% end %>
+    
 
 <style>
     a{
@@ -28,7 +28,9 @@
     a:hover{
         color: grey;
     }
-    
+    p {
+        font-size: 1.5em;
+    }
     #tip_image {
         margin-top: 0%;
         width: 100%;
@@ -41,7 +43,7 @@
     }
     
     .tip_card h6{
-        font-family: Raleway;
+        font-family: Montserrat;
         color: white;
         font-size: 2em;
         text-transform: uppercase;

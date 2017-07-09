@@ -1,89 +1,49 @@
 
     
-     <%  @indeed_results[0..3].each do |job| %>
-            <% if @color_count == 0 || @color_count ==3 %> 
-            <div class="card horizontal col s6 l3" style="background-color: #2eb2ff" >
-        <% elsif @color_count == 1 %> 
-            <div class="card horizontal col s6 l3" style="background-color: #d9d9d9">
-        <% else %> 
-            <div class="card horizontal col s6 l3" style="background-color: #5271ff">
-        <% end %> 
-        
-            <div class="card-content white-text">
-                <div class="hide_card">
-                    <h4 id="job_title"><%= job.job_title.upcase %></h4>
-                    <h5 id="job_company"><%= job.company %></h5>
-                 </div>
-                 
-                <div class="show_card"> 
-                  <p><%= job.snippet%></p>
-                  <p><%= job.city %>, <%= job.state %>| <%= job.date.to_s.split(" ")[0] %></p>
-
-        
-                    <%= link_to job.url , :class => "indeed_more" do %><i class="fa fa-arrow-right fa-4x"></i> <% end %>
+     <%  @indeed_results.each do |job| %>
+           <div>
+                    <h4 id="job_title" class=""><%= link_to job.job_title.upcase , job.url  , :class => "cyan-text lighten-1" %></h4>
+                    <h5 id="job_company" class="grey-text"><%= job.company %></h5>
+                    <br>
+        </div>
+              
+         
+    <% end %> 
                 
                     
-                    <% @color_count += 1 %> 
-                </div>
-                
-              </div>
-             </div>
-          <% end %>
-          
+               
+    
          
         
         
 
-        
-        
-        
-        
-        
+    
         
           <style> 
           
-          .indeed_more{
-              font-family: Raleway Heavy;
-              border: 1px solid grey;
-              margin: 1% -5% 1% 90%;
-              padding: 1%;
-              
-          }
-          .indeed_more:hover{
-              background-color: grey;
-              color:black;
-          }
-          .card  {
-              width: 100%;
-              height: 20em;
-              font-family: Raleway;
-          }
-          .card-content{
-              width: 100%;
-          }
-          a {
-              line-height: 1em;
-          }
-          
-          a:hover{
-              color: teal ;
-          }
+      
           
           #job_title{
-              font-size: 1.2em;
+              font-size: 2em;
               width: 105%;
               left: -10%;
+              text-align: center;
           }
           
           #job_company{
-                  position:absolute;
-                  color:white;
+                  color: grey;
                   bottom: 5%;
                   font-family: Raleway;
                   font-size: 1em;
                   text-align: center;
                   text-transform: uppercase;
-                  width: 80%;
+                  width: 100%;
+              }
+              
+              p{
+                  text-align: center;
+                  color: grey;
+                  font-size: .8em;
               }
        
           
@@ -107,30 +67,22 @@
               #job_title{
                   font-family: Raleway;
                   left:0%;
-                  font-size: 2.5em;
-                  position:absolute;
+                  font-size: 1.5em;
                   top: 15%;
                   margin: 2%;
                   text-align: center;
                   width: 95%;
               }
               #job_company{
-                  position:absolute;
                   color:white;
                   bottom: 5%;
                   font-family: Raleway;
-                  font-size: 1.5em;
+                  font-size: .7em;
                   text-align: center;
                   text-transform: uppercase;
               }
             
-              .indeed_more{
-                width: 5%;
-                position: absolute;
-                bottom: 10%;
-                left: 0%;
-                color: white;
-              }
+              
               .card{
                   width: 100%;
                   position:relative;

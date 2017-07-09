@@ -40,14 +40,11 @@ class ProfileController < ApplicationController
             @user = User.find_by_profileurl(params[:profileurl])
         
         #render modals
-        if @jobs != nil
-            @jobs= Job.order("created_at DESC").limit(0).where
-        end 
         
-        
-       if @tips != nil
-            @tips= Tip.order("created_at DESC").where(:prep => @user.prep).limit(5)
-      end
+            @jobs= Job.where(:industry => @user.industry).order("created_at DESC").limit(1)
+            @tips= Tip.where(:industry => @user.industry).order("created_at DESC").limit(1)
+            @grad_tips = Tip.where(:grad => @user.gradschool).order("created_at DESC").limit(1)
+  
         
         #BLOC color scheme
             @color_count= 0

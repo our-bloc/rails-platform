@@ -1,29 +1,28 @@
  <body>
 
+<div class="row">
+  <div class="col s12 l6">
+    <img id="playlist_img" src="https://gvzoda.dm2304.livefilestore.com/y4minkuBEy2cG1qs_0DqIewhtMSwf2oB7-GGUNcfDsc-2BtL4QrK-MnGZgsybR9QowrjUWcXCmu_QsPOWFhofzxGmZr5z4Kh0p07gGbwM61UF62AROIH8dvZLgegSvBnKWu11ND-UGeXic11g34P3Zej8uKzwqJbfVR1s2s8nPy7kUtQrLjPfs8PHgwnyfa5pKgq-LRidbSn0BZxX863DkfSQ?width=1024&height=768&cropmode=none">
+  </div> 
 
-
-  
-
-
-
-
-
-<!-- SIDE BAR --> 
-
-  
-<!-- CONNECTIONS, OPPS RESOURCES --> 
-  
-
+  <div class="col s12 l6" id="tips_col">
+    <div class="opp_playlist">
+      <div style="height: 10em"> 
+      </div>
+      
+      <%= render "profile/partials/tips"%>
+      
+    </div>
+  </div>
+</div>
     
-<div class="opp_playlist row">
+<div class="row" id="jobs_col">
+  <%= render "profile/partials/feat_jobs" %>
   <%= render "profile/partials/jobs" %>
 </div>
 
 
 
-<div class="opp_playlist row">
-  <%= render "profile/partials/jobs2" %>
-</div>
 
 
 
@@ -79,11 +78,29 @@
     width: 100%;
     height: 100%;
     font-family: Work Sans;
-    padding: 10%;
+    left: 0%;
+
   }
-  #welcome-title{
-    display:none;
+  .col,.row{
+    padding: 0%;
+    margin: 0%;
   }
+  #playlist_img{
+    position: relative;
+    width: 100%;
+    margin: 0%;
+    top:0%;
+   
+  }
+  #jobs_col {
+    border-top: 5px solid grey;
+    padding-top: 10%;
+  }
+  
+  #tips_col{
+    padding-bottom: 10%;
+  }
+
   .button-collapse{
     margin:2em 1em;
   }
@@ -143,12 +160,9 @@
     display:none;
   }
   
-  .highlight{
-    color:teal;
-    font-weight: 800;
-  }
-  .bottom-nav{
-    display: none;
+  .opp_playlist{
+    width: 90%;
+    left: 0%;
   }
   
   .open_referral_modal h2:hover {
@@ -173,11 +187,7 @@
     line-height: 3.5em;
   }
   
-    .circle{
-    margin: 20% 45% 2% 45%;
-    width: 30%;
-  }
-  
+ 
   li a {
     text-align: center;
   }
@@ -217,19 +227,7 @@
       background-color: white;
     }
     
-    #welcome-title {
-      display: block;
-      color: #44d9e6;
-      font-family: Raleway;
-      font-size: 10em;
-      padding: 50% 20%;
-      position: absolute;
-      top: 0em;
-      left: -5%;
-      width: 100%;
-      height: 10em;
-      margin-bottom: 20%;
-    }
+
     
     html{
         font-size: 2em;
@@ -238,7 +236,11 @@
     }
     .row{
       width: 100%;
+      padding: 0%;
+      margin: 0%;
     }
+    
+   
     div {
       font-size: 1.1em;
     }
@@ -250,20 +252,13 @@
     .highlight{
       font-size: 1.1em;
     }
-    .playlist{
-      padding: 10%;
-    }
+   
     .render_view{
       padding: 0%;
       margin: -5% ;
-;    }
+    }
 
-    .divider{
-        display: block;
-        width: 80%;
-        border: 1px solid grey;
-        margin: 5% 0% 10% 10%;
-      }
+  
     
     .open_referral_modal h2{
     border: 8px solid #44d9e6;;
@@ -295,43 +290,6 @@
     width: 95%;
   }
 
-  #profile_pic {
-    width:20%; 
-    height: 20%;
-    margin-left: 40%;
-  }
-  
-  .banner{
-    display: none;
-    margin: -50% 0% 0% 0%;
-    width: 50%;
-    
-  }
-  
-  .card-image{
-    display: none;
-  }
-   #menu_link a{
-    text-align: center;
-    font-family: Lato;
-    font-size: 3em;
-    line-height: 3em;
-    margin: 5%;
-    height: 3.5em;
-  }
-  
-  .circle{
-    margin: 20% 5%;
-  }
-  
-  #tips_header{
-    margin-top: 20%;
-  }
-  
-  .banner_text{
-    margin-left: -5%;
-    width:92%;
-  }
   
   .referral_modal{
     width: 110%;
@@ -340,24 +298,7 @@
     padding: 2%;
   }
   
-  .bottom-nav{
-    display: none;
-    position: fixed;
-    height: 10%;
-    background-color: white;
-    width: 100%;
-    bottom: 0%;
-    border-top: 5px solid #44d9e6;
-    z-index: 10;
-  }
-  
-  .bottom-nav a{
-    color: #44d9e6;
-  }
-  
-  .bottom-nav i:hover {
-    color: grey;
-  }
+
 }
 
 </style>
