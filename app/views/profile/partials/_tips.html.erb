@@ -6,7 +6,7 @@
                 <h4 id="job_title" class=""><%= link_to tip.title.upcase , tip.link  , :class => "cyan-text lighten-1" %></h4>
                 <p id="tip_p" class="grey-text"><%= truncate(simple_format(tip.body), :length => 600, escape: false) %></p>
                 <p id="tip_p" class="yellow-text"><%= link_to "Read More", tip_path(tip.id) , class:"cyan-text lighten-1"%></p>
-                <br>
+           
             </div>
     <% end %> 
 <% else %> 
@@ -15,7 +15,7 @@
                 <h4 id="job_title" class=""><%= link_to tip.title.upcase , tip.link  , :class => "cyan-text lighten-1" %></h4>
                 <p id="tip_p" class="grey-text"> <%= truncate(simple_format(tip.body), :length => 600 , escape: false, :id => "tip_p") %></p>
                 <p id="tip_p" class="yellow-text"><%= link_to "Read More", tip_path(tip.id) , class:"cyan-text lighten-1" %></p>
-                <br>
+              
             </div>
     <% end %> 
     
