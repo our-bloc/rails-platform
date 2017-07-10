@@ -2,7 +2,6 @@ task :send_playlist => :environment do
         @users = User.all
         
      @users.each do |user|
-        if user.id >= 20
             @user = user
             
             if user.industry != nil 
