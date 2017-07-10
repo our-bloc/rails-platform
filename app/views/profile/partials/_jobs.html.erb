@@ -2,7 +2,7 @@
     
      <%  @indeed_results.each do |job| %>
            <div>
-                    <h4 id="job_title" class=""><%= link_to job.job_title.upcase , job.url  , :class => "cyan-text lighten-1" %></h4>
+                    <h4 id="job_title" class=""><%= link_to job.job_title.upcase , job.url  , :class => "cyan-text lighten-1" ,:id => "job_title"%></h4>
                     <h5 id="job_company" class="grey-text"><%= job.company %></h5>
                     <br>
         </div>
@@ -24,9 +24,9 @@
       
           
           #job_title{
-              font-size: 2em;
-              width: 105%;
-              left: -10%;
+              font-size: 1.7em;
+              width: 90%;
+              left: -5%;
               text-align: center;
           }
           
@@ -48,21 +48,10 @@
        
           
           @media only screen and (max-device-width: 480px){
-              .show_card {
-                  background-color: inherit;
-                  position:relative;
-                  margin: -15% 0% 0% -20%;
-                  height: 30em;
-                  padding: 30% 10% 10% 20%;
-                  color: white;
-                  font-size: 1em;
-                  font-family: Raleway;
-                  text-transform: lowercase;
-              }
+             
               
-              .show_card p {
-                  width: 120%;
-                  height: 60%;
+              #tip_p {
+                  font-size: .5em;
               }
               #job_title{
                   font-family: Raleway;
@@ -71,7 +60,7 @@
                   top: 15%;
                   margin: 2%;
                   text-align: center;
-                  width: 95%;
+                  width: 100%;
               }
               #job_company{
                   color:white;
@@ -81,37 +70,13 @@
                   text-align: center;
                   text-transform: uppercase;
               }
+              
             
               
-              .card{
-                  width: 100%;
-                  position:relative;
-                  margin-left: 0%;
-                  padding: 10% 0%;
-                  height: 30em;
-                  margin:0;
-              }
+        
+              
           }
           
           </style>
           
-          <script> 
-              $(document).ready(function(){
-                $('.show_card').hide()
-              });
-              
-              $('.hide_card').click(function(){
-                  $(this).hide(10);
-                $(this).next('.show_card').show(5);
-                $(this).parent('.card').css
-              });
-              
-              $('.show_card').click(function(){
-                  $(this).hide(10);
-                $(this).prev('.hide_card').show(5);
-              });
-              
-            
-             
-          </script>
-   
+         

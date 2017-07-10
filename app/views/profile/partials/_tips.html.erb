@@ -4,15 +4,17 @@
     <% @tips.each do |tip| %>
            <div>
                 <h4 id="job_title" class=""><%= link_to tip.title.upcase , tip.link  , :class => "cyan-text lighten-1" %></h4>
-                <p id="" class="grey-text"><%= tip.body %></h5>
+                <p id="tip_p" class="grey-text"><%= truncate(simple_format(tip.body), :length => 300) %></p>
+                <p id="tip_p" class="yellow-text"><%= link_to "Read More", tip_path(tip.id) , class:"cyan-text lighten-1"%></p>
                 <br>
             </div>
     <% end %> 
 <% else %> 
     <% @grad_tips.each do |tip| %>
-           <div>
+           <div class="tip_div">
                 <h4 id="job_title" class=""><%= link_to tip.title.upcase , tip.link  , :class => "cyan-text lighten-1" %></h4>
-                <p id="" class="grey-text"><%= tip.body %></h5>
+                <p id="tip_p" class="grey-text"> <%= truncate(simple_format(tip.body), :length => 300 , :id => "tip_p") %></p>
+                <p id="tip_p" class="yellow-text"><%= link_to "Read More", tip_path(tip.id) , class:"cyan-text lighten-1" %></p>
                 <br>
             </div>
     <% end %> 
@@ -22,6 +24,7 @@
     
 
 <style>
+   
     a{
         color: grey;
     }
@@ -36,22 +39,11 @@
         width: 100%;
     }
     
-    .tip_card {
-        margin: 10em 0;
-        background-color: #44d9e6;
-        padding-bottom: 5%;
+    .tip_div {
+        width: 120%;
+        padding: 0%;
     }
+}
     
-    .tip_card h6{
-        font-family: Montserrat;
-        color: white;
-        font-size: 2em;
-        text-transform: uppercase;
-        margin: 5% 0%;
-        padding: 5%;
-    }
-    
-    .tip_card h6 a {
-        color:white;
-    }
+ 
 </style>

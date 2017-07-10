@@ -1,19 +1,21 @@
  <body>
 
-<div class="row">
+<div class="row" style="">
   <div class="col s12 l6">
     <img id="playlist_img" src="https://gvzoda.dm2304.livefilestore.com/y4minkuBEy2cG1qs_0DqIewhtMSwf2oB7-GGUNcfDsc-2BtL4QrK-MnGZgsybR9QowrjUWcXCmu_QsPOWFhofzxGmZr5z4Kh0p07gGbwM61UF62AROIH8dvZLgegSvBnKWu11ND-UGeXic11g34P3Zej8uKzwqJbfVR1s2s8nPy7kUtQrLjPfs8PHgwnyfa5pKgq-LRidbSn0BZxX863DkfSQ?width=1024&height=768&cropmode=none">
   </div> 
 
   <div class="col s12 l6" id="tips_col">
-    <div class="opp_playlist">
-      <div style="height: 10em"> 
+    
+      <div style="height: 5em"> 
       </div>
       
+      <div "tip_col"> 
       <%= render "profile/partials/tips"%>
+      </div>
       
     </div>
-  </div>
+
 </div>
     
 <div class="row" id="jobs_col">
@@ -81,19 +83,21 @@
     left: 0%;
 
   }
-  .col,.row{
+  .col{
+    width: 105%;
     padding: 0%;
     margin: 0%;
   }
+  
   #playlist_img{
     position: relative;
-    width: 100%;
-    margin: 0%;
+    width: 110%;
+    margin-left: -2em;
     top:0%;
    
   }
   #jobs_col {
-    border-top: 5px solid grey;
+    border-top: 1px solid grey;
     padding-top: 10%;
   }
   

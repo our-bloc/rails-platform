@@ -2,7 +2,7 @@
     <% @jobs.each do |job| %> 
         <div>
             <p class="yellow-text"> featured</p>
-            <h4 id="job_title" class=""><%= link_to job.title.upcase , job_path(job)  , :class => "cyan-text lighten-1" %></h4>
+            <h4 id="job_title" class=""><%= link_to job.title.upcase , job_path(job)  , :class => "cyan-text lighten-1" ,:id => "job_title"%></h4>
             <h5 id="job_company" class="grey-text"><%= job.company %></h5>
             <p id="job_description"> <%=job.description%></p>
             <p id="job_description" class="yellow-text"> <%=link_to "Apply Now", job.link%></p>

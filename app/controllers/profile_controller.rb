@@ -41,9 +41,16 @@ class ProfileController < ApplicationController
         
         #render modals
         
+        if @jobs != nil
             @jobs= Job.where(:industry => @user.industry).order("created_at DESC").limit(2)
+        end
+        
+       
             @tips= Tip.where(:industry => @user.industry).order("created_at DESC").limit(1)
+        
+    
             @grad_tips = Tip.where(:grad => @user.gradschool).order("created_at DESC").limit(1)
+    
   
         
         #BLOC color scheme
