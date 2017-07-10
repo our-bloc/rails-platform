@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 <div class="row">
-<div class="card tip_show col s12  l8 offset-l2"> 
+<div class=" tip_show col s12  l8 offset-l2"> 
 <h4 class="grey-text tip_title"> <%= @tip.title.upcase %>
   
 </h4>
@@ -16,15 +16,18 @@
 
 <p>
   <strong>  </strong>
-  <%= link_to "Read More Here",  @tip.link %>
+  <%= link_to "Checkout More Resources",  @tip.link %>
 </p>
 
 
-<p class="teal-text">
+<p class="cyan-text">
   <%= @tip.prep.upcase.gsub("_", "  ") %> 
   <%= @tip.industry.upcase  %>
 </p>
-<%= link_to 'Edit', edit_tip_path(@tip) %> |
-<%= link_to 'Back', tips_path %>
+
+<% if current_user.id == @tip.user_id %> 
+  <%= link_to 'Edit', edit_tip_path(@tip) %> |
+  <%= link_to 'Back', tips_path %>
+<% end %> 
 </div>
 </div>
