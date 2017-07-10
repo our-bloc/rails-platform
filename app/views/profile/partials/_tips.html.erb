@@ -9,7 +9,7 @@
            
             </div>
     <% end %> 
-<% else %> 
+<% elsif @grad_tips != nil %> 
     <% @grad_tips.each do |tip| %>
            <div class="tip_div">
                 <h4 id="job_title" class=""><%= link_to tip.title.upcase , tip.link  , :class => "cyan-text lighten-1" %></h4>
@@ -17,7 +17,8 @@
                 <p id="tip_p" class="yellow-text"><%= link_to "Read More", tip_path(tip.id) , class:"cyan-text lighten-1" %></p>
               
             </div>
-    <% end %> 
+
+<% end %> 
     
     
 <% end %>
