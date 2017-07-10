@@ -67,7 +67,7 @@ class ProfileController < ApplicationController
         
         #localize search results 
         if request.location.city == nil 
-            @city == "Atlanta"
+            @city = "Atlanta"
         else
             @city = request.location.city 
             current_user.update_attribute(:hometown, @city)
