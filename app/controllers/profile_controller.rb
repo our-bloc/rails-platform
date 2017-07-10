@@ -67,10 +67,12 @@ class ProfileController < ApplicationController
         
         #localize search results 
         if request.location.city == nil 
-            @city = "Atlanta"
+            @city = nil
         else
             @city = request.location.city 
-            current_user.update_attribute(:hometown, @city)
+            if user_signed_in?
+                current_user.update_attribute(:hometown, @city)
+            end
 
         end
         
@@ -111,9 +113,11 @@ class ProfileController < ApplicationController
         end
         
         #feedback comment box
+        
+        if user_signed_in?
         @feedback = current_user.feedbacks.build
         @feedback.user_id = current_user.id
-    
+        end
         
   
     end

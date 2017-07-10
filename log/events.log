@@ -1235,3 +1235,5 @@
 {"id":"492b38da-e996-44aa-9132-90de97b973a0","name":"Viewed tips#update","properties":{},"visit_id":"9ebb1369-bd9a-4004-aa54-94f304aafb88","visitor_id":"f681057a-a8a9-42ea-8c6d-3ee0d41e966c","time":"2017-06-30T21:46:44.831Z"}
 {"id":"dfc67aac-4886-419a-a2ef-7f48f6fdfe7e","name":"Viewed welcome#home","properties":{},"visit_id":"d37c785f-d820-4969-9f30-6466ed041b6a","visitor_id":"f681057a-a8a9-42ea-8c6d-3ee0d41e966c","time":"2017-07-03T23:26:48.144Z"}
 {"id":"05b532ff-56ae-4f3d-a2d1-4962866213ee","name":"Viewed welcome#hello","properties":{},"visit_id":"d37c785f-d820-4969-9f30-6466ed041b6a","visitor_id":"f681057a-a8a9-42ea-8c6d-3ee0d41e966c","time":"2017-07-03T23:26:48.887Z"}
+{"id":"d74ffaaf-3035-4f16-81da-9ab294125405","name":"Viewed profile#playlist","properties":{},"visit_id":"63b8c2dd-89b3-41b7-9ec3-f766de0ba041","visitor_id":"f681057a-a8a9-42ea-8c6d-3ee0d41e966c","user_id":2,"time":"2017-07-10T18:04:47.720Z"}
+{"id":"7ae481fe-d26a-41f2-b34c-0adac48eafe0","name":"Viewed profile#playlist","properties":{},"visit_id":"6df1f272-d29b-433b-a98c-e85224424fcd","visitor_id":"22ccf4b3-bb1c-4600-a9cb-59c10c873fb3","time":"2017-07-10T18:29:38.524Z"}
