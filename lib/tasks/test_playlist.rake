@@ -1,9 +1,6 @@
 task :test_playlist => :environment do
-        @users = User.find_by_name("Amina Yamusah")
-        
-        @users.each do |user|
-            @user = user
-            
+        @user = User.find_by_name("Amina Yamusah")
+ 
            
     
               
