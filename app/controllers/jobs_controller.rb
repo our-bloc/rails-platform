@@ -4,7 +4,11 @@ class JobsController < ApplicationController
   # GET /jobs
   # GET /jobs.json
   def index
-    @jobs = Job.all.order("created_at DESC")
+    if params[:search]
+      @jobs = Job.search(params[:search])
+    else
+      @jobs = Job.all.order("created_at DESC")
+    end
     @color_count= 1
   end
   

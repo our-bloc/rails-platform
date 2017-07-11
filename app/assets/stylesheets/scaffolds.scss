@@ -87,3 +87,47 @@ div {
 label {
   display: block;
 }
+
+.job_index_card {
+    position: relative;
+    text-align: center;
+    border-bottom: 1px solid #4dd0e1;
+    padding: 2%;
+    margin: 0%;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    width: 50%;
+    left: 25%;
+}
+
+.job_title {
+  margin-bottom: 0%;
+  padding-bottom: 0%;
+}
+
+.job_company {
+  margin-top: 0%;
+  padding-top: 0%;
+   margin-bottom: 0%;
+  padding-bottom: 0%;
+}
+
+.job_menu_button{
+  display: block;
+    background-color: white;
+    border: 3px solid #4dd0e1;
+    margin: 2% 5% 2% 10%;
+    position: relative;
+    height: 3em;
+    text-align: center;
+    text-transform:uppercase;
+    color: #4dd0e1;
+
+}
+
+.job_search{
+  position: relative;
+  left:0%;
+  width: 100%;
+  padding: 3% 10%;
+}
