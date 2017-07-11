@@ -1,5 +1,9 @@
-<div style="height: 10%">
-  <h2 class="cyan-text lighten-1" style="font-family: Montserrat; text-align:center; margin-top: 10%; margin-bottom: 5%"> Bloc Opportunities Board </h2>
+<div>
+  <h2 class="cyan-text lighten-1" style="font-family: Montserrat; text-align:center; margin-top: 10%"> Bloc Opportunities Board </h2>
+  
+  <% if user_signed_in? %> 
+    <p class="grey-text center-align"> Thank you for registering, <%= current_user.name.split.first.capitalize%>! Check out some opportunities below and be on the look out for your weekly career playlist Monday morning. <p>
+  <% end %> 
 </div>
   
   <div>
