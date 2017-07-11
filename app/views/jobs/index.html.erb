@@ -6,7 +6,7 @@
     <% @jobs.each do |job| %>
       <div class="job_index_card">
         <td> 
-        <h5> <%= link_to job.title, job_path(job.id) ,class:"cyan-text lighten-1 job_title" %></h5>
+        <h5> <%= link_to job.title, job.link ,class:"cyan-text lighten-1 job_title" %></h5>
           <p class="grey-text job_company"> <%= job.company  %></p>
         </td>
 
