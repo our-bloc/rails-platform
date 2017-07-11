@@ -24,7 +24,7 @@ class WelcomeController < ApplicationController
     elsif (user_signed_in? and  current_user.industry == nil and current_user.sign_in_count > 1 )
       redirect_to myprofile_path 
 
-  
+    end
   end
   
   def hello
