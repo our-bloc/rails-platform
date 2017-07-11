@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: MyString
+  referer: MyString
+  session: MyString
+  ip_address: MyString
+  user_agent: MyString
+  created_at: MyString
+
+two:
+  user_id: MyString
+  referer: MyString
+  session: MyString
+  ip_address: MyString
+  user_agent: MyString
+  created_at: MyString
