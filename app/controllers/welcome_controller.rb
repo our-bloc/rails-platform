@@ -16,7 +16,7 @@ class WelcomeController < ApplicationController
       redirect_to morehouse_path
       
     elsif (user_signed_in? and current_user.industry != nil)
-      redirect_to playlist_path(@user.profileurl) 
+      redirect_to jobs_path
       
     elsif (user_signed_in? and current_user.sign_in_count == 1 and current_user.industry == nil)
       redirect_to new_vision_path
@@ -24,7 +24,7 @@ class WelcomeController < ApplicationController
     elsif (user_signed_in? and  current_user.industry == nil and current_user.sign_in_count > 1 )
       redirect_to myprofile_path 
 
-    end
+  
   end
   
   def hello

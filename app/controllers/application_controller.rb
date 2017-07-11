@@ -3,7 +3,8 @@ class ApplicationController < ActionController::Base
   
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :bypass_login
-  after_action :track_action
+  after_action :pageview
+  
    
   
   #track all visits with ahoy
@@ -12,9 +13,19 @@ class ApplicationController < ActionController::Base
   protected
   
   
-  #TRACK AHOY
-  def track_action
-    ahoy.track "Viewed #{controller_name}##{action_name}"
+  #TRACK PAGE VIEWS
+ def pageview
+   if user_signed_in? 
+     @id = current_user.id 
+   else
+     @id = nil 
+    end 
+    PageView.create :user_id              => @id, 
+                    :referer              => request.referrer,
+                    :session              => request.session_options[:id],
+                    :ip_address           => request.remote_ip,
+                    :user_agent           => request.env["HTTP_USER_AGENT"],
+                    :created_at           => Time.current
   end
   
   
@@ -27,6 +38,14 @@ class ApplicationController < ActionController::Base
       end
   end
 
+
+    def bypass_login
+        if params[:login_bypass_token]
+                user = User.find_by_profileurl(params[:login_bypass_token])
+                sign_in(user, :bypass => true) if user
+                redirect_to request.path
+        end
+      end
 
 #TEXT FORMATTING HELPERS
   def self.newline
@@ -61,12 +80,5 @@ class ApplicationController < ActionController::Base
   end
   
 
-      private
-        def bypass_login
-            if params[:login_bypass_token]
-                user = User.find_by_profileurl(params[:login_bypass_token])
-                sign_in(user, :bypass => true) if user
-                redirect_to request.path
-            end
-        end
+     
 end
