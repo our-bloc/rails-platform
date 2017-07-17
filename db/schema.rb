@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170711155752) do
+ActiveRecord::Schema.define(version: 20170714203801) do
 
   create_table "ahoy_events", force: :cascade do |t|
     t.integer  "visit_id"
@@ -127,6 +127,28 @@ ActiveRecord::Schema.define(version: 20170711155752) do
     t.datetime "updated_at",  null: false
     t.index ["sector_id"], name: "index_resources_on_sector_id"
     t.index ["user_id"], name: "index_resources_on_user_id"
+  end
+
+  create_table "rsvps", force: :cascade do |t|
+    t.string   "school"
+    t.string   "gradyear"
+    t.string   "gradschool"
+    t.string   "major"
+    t.string   "style"
+    t.string   "prep"
+    t.string   "dreamjob"
+    t.string   "breakout"
+    t.string   "breakout2"
+    t.string   "resume"
+    t.string   "promo_code"
+    t.string   "group"
+    t.string   "access"
+    t.string   "food"
+    t.string   "pronouns"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "email"
+    t.string   "name"
   end
 
   create_table "sectors", force: :cascade do |t|

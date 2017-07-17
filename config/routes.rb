@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   root to: "welcome#home"
 
   
-  resources :events
+  resources :events 
+  resources :rsvps
+  
   resources :feedbacks
   
   resources :tips do
@@ -13,6 +15,7 @@ Rails.application.routes.draw do
       put "dislike", to: "tips#dislike"
     end
   end
+  
   
   resources :profile
   

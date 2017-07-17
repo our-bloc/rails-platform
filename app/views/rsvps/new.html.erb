@@ -1,0 +1,167 @@
+<%= semantic_form_for @rsvp do |f| %>
+  <%= f.inputs do %>
+  <div class="input-field"> 
+    <%= f.label :name  %>
+    <%= f.text_field :name, class:"cyan-text" %>
+    </div>
+  
+  <div class="input-field"> 
+    <%= f.label :email %>
+    <%= f.text_field :email, class:"cyan-text lighten-1" %>
+  </div> 
+  
+    <div class="input-field"> 
+    <%= f.label "Any accessibility needs we should be aware of?" %>
+    <%= f.text_area :access, class:"cyan-text lighten-1" %>
+  </div> 
+  
+  
+    
+<div class="input-field"> 
+    <%= f.label :school %>
+    <%= f.text_field :school, class:"cyan-text lighten-1" %>
+    </div>
+    
+<div class="input-field"> 
+    <%= f.label :major %>
+    <%= f.text_field :major, class:"cyan-text lighten-1" %>
+    </div>
+    
+<div class="field">
+    <%= f.label :breakout %>
+    <%= f.hidden_field :breakout , :id =>"field_tipindustry" %>
+    
+    <div class="tip_industry white-text btn waves-effect cyan lighten-1" id="Griots"> Griots </div>
+    <div class="tip_industry white-text btn waves-effect cyan lighten-1" id="Techies"> Techies </div>
+    <div class="tip_industry white-text btn waves-effect cyan lighten-1" id="Scientists"> Scientists </div>
+    <div class="tip_industry white-text btn waves-effect cyan lighten-1" id="CSuite"> CSuite </div>
+    <div class="tip_industry white-text btn waves-effect cyan lighten-1" id="Educators"> Educators </div>
+    <div class="tip_industry white-text btn waves-effect cyan lighten-1" id="Activists"> Activists </div>
+    <div class="tip_industry white-text btn waves-effect cyan lighten-1" id="Advocates"> Advocates </div>
+    <div class="tip_industry white-text btn waves-effect cyan lighten-1" id="Entrepreneurs"> Entrepreneurs </div>
+    <div class="tip_industry white-text btn waves-effect cyan lighten-1" id="Creatives"> Creatives </div>
+    <div class="tip_industry white-text btn waves-effect cyan lighten-1" id="All"> All </div>
+
+
+    
+  </div>
+    
+  
+<div class="field"> 
+    <%= f.label "Grad School Related" %>
+    <%= f.hidden_field :gradschool , :id =>"field_tipgrad" %>
+
+  <div class="grad_button white-text btn waves-effect cyan lighten-1" id="None"> Nope </div>
+    <div class="tip_grad white-text btn waves-effect cyan lighten-1" id="Maybe"> Maybe </div>
+    <div class="tip_grad white-text btn waves-effect cyan lighten-1" id="Master's Program"> Masters Program </div>
+    <div class="tip_grad white-text btn waves-effect cyan lighten-1" id="PhD Program"> PhD Program </div>
+    <div class="tip_grad white-text btn waves-effect cyan lighten-1" id="Law School"> Law School </div>
+    <div class="tip_grad white-text btn waves-effect cyan lighten-1" id="Med School"> Med School </div>
+    <div class="tip_grad white-text btn waves-effect cyan lighten-1" id="Business School"> Business School </div>
+</div>
+
+<div class ="field"> 
+    <%= f.label "Personal Pronouns" %>
+    <%= f.hidden_field :gradyear , :id =>"field_tipgradyear" %>
+
+  <div class="grad_button white-text btn waves-effect cyan lighten-1" id="2020"> 2020 </div>
+    <div class="tip_gradyear white-text btn waves-effect cyan lighten-1" id="2019"> 2019 </div>
+    <div class="tip_gradyear white-text btn waves-effect cyan lighten-1" id="2018"> 2018</div>
+    <div class="tip_gradyear white-text btn waves-effect cyan lighten-1" id="2017"> 2017 </div>
+    <div class="tip_gradyear white-text btn waves-effect cyan lighten-1" id="Alum"> Alum </div>
+   
+</div>
+
+<div class ="field"> 
+    <%= f.label "Personal Pronouns? " %>
+    <%= f.hidden_field :pronouns , :id =>"field_tipforemail" %>
+
+    <div class="tip_for_email white-text btn waves-effect cyan lighten-1" id="true"> They, Their, Theirs </div>
+    <div class="tip_for_email white-text btn waves-effect cyan lighten-1" id="false"> She, Her, Hers </div>
+    <div class="tip_for_email white-text btn waves-effect cyan lighten-1" id="false"> He, Him, His </div>
+   
+</div>
+
+
+
+<div class ="field"> 
+    <%= f.label "Tip Category" %>
+    <%= f.hidden_field :prep , :id =>"field_tipprep" %>
+
+   <div id="need_resume" class="tip_prep white-text btn waves-effect cyan lighten-1"> Starting a resume </div>
+    <div id="salary_negotiation" class="tip_prep white-text btn waves-effect cyan lighten-1"> Nailing my interviews </div>
+    <div id="revise_resume" class="tip_prep white-text btn waves-effect cyan lighten-1"> Getting my resume together </div>
+    <div id="need_connections" class="tip_prep white-text btn waves-effect cyan lighten-1"> Hearing back on applications</div>
+    <div id="need_jobs" class="tip_prep white-text btn waves-effect cyan lighten-1"> Finding jobs I care about</div>
+    <div id="cover_letters" class="tip_prep white-text btn waves-effect cyan lighten-1"> Cover letters...sigh </div>
+    <div id="personal_statements" class="tip_prep white-text btn waves-effect cyan lighten-1"> Writing personal statements </div>
+    <div id="salary_negotiation" class="tip_prep white-text btn waves-effect cyan lighten-1"> Negotiating my salary </div>
+  </diV>
+  <% end %>
+  
+  <%= f.actions do %>
+    <%= f.action :submit, :as => :input %>
+  <% end %>
+<% end %>
+
+
+<style> 
+.input-field{
+  margin: 5%;
+}
+
+.field{
+  margin: 1% 5%;
+}
+.input-field input {
+  color: teal;
+}
+</style>
+
+<script>
+  $('.tip_grad').click(function(){
+      var idval = $(this).attr("id");
+      console.log(idval);
+          
+      $('#field_tipgrad').val(idval);
+            
+  });
+  
+   $('.tip_gradyear').click(function(){
+      var idval = $(this).attr("id");
+      console.log(idval);
+          
+      $('#field_tipgradyear').val(idval);
+  });
+  
+  
+   $('.tip_for_email').click(function(){
+      var idval = $(this).attr("id");
+      console.log(idval);
+          
+      $('#field_tipforemail').val(idval);
+  });
+  
+    $('.tip_prep').click(function(){
+      var idval = $(this).attr("id");
+      console.log(idval);
+          
+      $('#field_tipprep').val(idval);
+            
+  });
+
+$('.tip_industry').click(function(){
+      var idval = $(this).attr("id");
+      console.log(idval);
+          
+      $('#field_tipindustry').val(idval);
+            
+  });
+  
+  $(".field div").click(function(){
+    $(this).css ({
+      'border' : "5px solid yellow" });
+    });
+
+  
+</script>
