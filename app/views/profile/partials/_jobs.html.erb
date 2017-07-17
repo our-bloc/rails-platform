@@ -1,7 +1,7 @@
 
     
      <%  @indeed_results.each do |job| %>
-           <div>
+           <div class="job_timeline">
                     <h4 id="job_title" class=""><%= link_to job.job_title.upcase , job.url  , :class => "cyan-text lighten-1" ,:id => "job_title"%></h4>
                     <h5 id="job_company" class="grey-text"><%= job.company %></h5>
                     <br>
@@ -21,18 +21,27 @@
         
           <style> 
           
-      
+          .job_timeline{
+              width: 100%;
+              padding: 1% 15%;
+          }
+          #job_description{
+              font-family: Montserrat;
+          }
           
+          p {
+              font-family: Montserrat;
+          }
           #job_title{
-              width: 80%;
-              margin-left: 10%;
+              width: 100%;
+              margin-left: 0%;
               text-align: center;
           }
           
           #job_company{
                   color: grey;
                   bottom: 5%;
-                  font-family: Raleway;
+                  font-family: Montserrat;
                   font-size: 1em;
                   text-align: center;
                   text-transform: uppercase;
@@ -58,17 +67,18 @@
                   text-align: center;
                   font-family: Montserrat;
                   left:0%;
-                  font-size: 1.5em;
+                  font-size: 1.8em;
                   top: 15%;
                   margin: 2%;
                   text-align: center;
                   width: 100%;
+                  line-height: 1;
               }
               #job_company{
                   color:white;
                   bottom: 5%;
-                  font-family: Raleway;
-                  font-size: .7em;
+                  font-family: Montserrat;
+                  font-size: 1.6em;
                   text-align: center;
                   text-transform: uppercase;
               }
