@@ -1,6 +1,6 @@
 <% if @jobs != nil %> 
     <% @jobs.each do |job| %> 
-        <div>
+        <div class="job_timeline">
            
             <h4 id="job_title" class=""><%= link_to job.title.upcase , job_path(job)  , :class => "cyan-text lighten-1" ,:id => "job_title"%></h4>
             <h5 id="job_company" class="grey-text"><%= job.company %></h5>
