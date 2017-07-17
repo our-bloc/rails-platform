@@ -3,12 +3,12 @@
   <div>
     <% @tips.each do |tip| %>
       <div class="tip_index_card">
-        <td> <%= link_to tip.title, tip.link %></td>
+        <td> <%= link_to tip.title, tip_path(tip.id) %></td>
 
         <% if user_signed_in? and current_user.name =="Amina Yamusah" %>
-          <td><%= tip.industry %></td>
-          <td><%= tip.prep %></td>
-          <td><%= tip.link %></td>
+          <td><% if tip.prep != nil %><%= tip.industry %><% end %> </td>
+          <td><% if tip.prep != nil %> <%= tip.prep %> <% end %> </td>
+          <td><% if tip.prep != nil %><%= tip.link %><% end%>  </td>
          
           <td><%= link_to 'Show', tip %></td>
           <td><%= link_to 'Edit', edit_tip_path(tip) %></td>

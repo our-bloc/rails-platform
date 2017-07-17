@@ -7,7 +7,7 @@
 
 <p>
 
-  <%=h auto_link(simple_format(@tip.body)) %>
+  <%=simple_format(@tip.body)%>
 </p>
 
 <p>
@@ -25,7 +25,7 @@
   <%= @tip.industry.upcase  %>
 </p>
 
-<% if current_user.id == @tip.user_id %> 
+<% if user_signed_in? and current_user.id == @tip.user_id %> 
   <%= link_to 'Edit', edit_tip_path(@tip) %> |
   <%= link_to 'Back', tips_path %>
 <% end %> 

@@ -15,8 +15,7 @@
         </td>
 
         <% if user_signed_in? and current_user.name =="Amina Yamusah" %>
-          <td><%= job.industry %></td>
-          <td><%= job.prep %></td>
+          <td><% if job.industry != nil %> <%= job.industry %> <% end %> </td>
           <td><%= job.link %></td>
          
           <td><%= link_to 'Show', job %></td>
