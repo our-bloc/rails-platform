@@ -43,7 +43,7 @@ class ProfileController < ApplicationController
         if @user.industry == nil
             @jobs = Job.where(:industry => "All").order("created_at DESC").limit(2)
             
-            if @user.gradschol != nil
+            if @user.gradschool != nil
             @tips= Tip.where(:industry => @user.gradschool).order("created_at DESC").limit(1)
             end
        
