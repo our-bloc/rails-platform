@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170714203801) do
+ActiveRecord::Schema.define(version: 20170721150747) do
 
   create_table "ahoy_events", force: :cascade do |t|
     t.integer  "visit_id"
@@ -145,10 +145,24 @@ ActiveRecord::Schema.define(version: 20170714203801) do
     t.string   "access"
     t.string   "food"
     t.string   "pronouns"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
     t.string   "email"
     t.string   "name"
+    t.integer  "event_id"
+    t.integer  "user_id"
+    t.string   "card_token"
+    t.string   "role"
+    t.string   "current_job"
+    t.string   "company"
+    t.string   "promotion"
+    t.string   "promotion_link"
+    t.string   "tip"
+    t.string   "tip_link"
+    t.string   "image"
+    t.string   "linkedin"
+    t.index ["event_id"], name: "index_rsvps_on_event_id"
+    t.index ["user_id"], name: "index_rsvps_on_user_id"
   end
 
   create_table "sectors", force: :cascade do |t|

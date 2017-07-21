@@ -1,2 +1,5 @@
 gmail_username: 'amina@ourbloc.co'
 gmail_password: 'minabina'
+
+STRIPE_PUBLISHABLE_KEY: 'pk_test_kjvtxnuj683KeXH4PgQzMrpy'
+STRIPE_SECRET_KEY: 'sk_test_kEsuf6l54NH4v10TjRZmZtXS'

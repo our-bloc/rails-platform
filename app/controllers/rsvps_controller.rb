@@ -25,6 +25,7 @@ class RsvpsController < ApplicationController
   # POST /rsvps.json
   def create
    
+   if !user_signed_in? 
         @user = User.create :name              => params[:rsvp][:name], 
                     :email              => params[:rsvp][:email],
                     :prep               => params[:rsvp][:prep],
@@ -33,15 +34,29 @@ class RsvpsController < ApplicationController
                     :gradschool          => params[:rsvp][:gradschool]
 
         sign_in @user
-                
-    @rsvp = @user.rsvps.build(rsvp_params)
-    @rsvp.user_id = @user.id
+    else
+        @user = current_user
+    end 
+    
+    #change this to find event from params[:event]
+    
+    event = Event.find_by_name(params[:event_name])
+    
+    
+    #create rsvp on events
+    @rsvp = event.rsvps.build(rsvp_params) 
+    @rsvp.user = current_user  #add user to RSVP
+    
+
+    #store required stripe data
+    @rsvp.email= stripe_params["stripeEmail"]
+    @rsvp.card_token = stripe_params["stripeToken"]
+    @rsvp.process_payment
+    @rsvp.save
+
     
     respond_to do |format|
-      if @rsvp.save
-        format.html { redirect_to @rsvp, notice: 'Rsvp was successfully created.' }
-        format.json { render :show, status: :created, location: @rsvp }
-      else
+      if !@rsvp.save
         format.html { render :new }
         format.json { render json: @rsvp.errors, status: :unprocessable_entity }
       end
@@ -81,7 +96,11 @@ class RsvpsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def rsvp_params
       params.require(:rsvp).permit(:name, :email, :breakout, :breakout2, :food, :access, :pronouns, 
-      :school, :major, :prep,:dreamjob, :resume, :promo_code)
+      :school, :major, :prep,:dreamjob, :resume, :promo_code, :gradschool , :gradyear, :card_token)
 
+    end
+    
+    def stripe_params
+      params.permit :stripeEmail, :stripeToken
     end
 end
