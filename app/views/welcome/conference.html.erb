@@ -57,24 +57,23 @@
                             <h1 class="white-text" style="z-index: 1">Join 500+ black millennials for a weekend of community building & networking </h1
                              
                         <!-- FORM FOR REGISTRATION --> 
-                             <%= form_tag(new_user_registration_path, :method => "get") do %>
+                             
                                 
                                 <div class="col l4 s12" style="padding: 2%">
-                                    <%= submit_tag("REGISTER TO ATTEND", class: "waves-effect cyan btn whit-text lighten-1",
-                                    style:"margin-top: .5em, margin-bottom: 2em" ) %>
+                                    <%= link_to "REGISTER TO ATTEND", new_rsvp_path(:event_name => "Bloc Conference", :role => "Student"), class: "waves-effect cyan btn whit-text lighten-1",
+                                    style:"margin-top: .5em, margin-bottom: 2em" %>
                                 </div>
                                 
                                 <div class="col l4 s12" style="padding: 2%">
-                                    <%= submit_tag("REGISTER TO SPEAK", class: "waves-effect cyan btn whit-text lighten-1",
-                                    style:"margin-top: .5em, margin-bottom: 2em" ) %>
+                                    <%= link_to "REGISTER AS PANELIST", new_rsvp_path(:event_name => "Bloc Conference", :role => "Panelist"), class: "waves-effect cyan btn whit-text lighten-1",
+                                    style:"margin-top: .5em, margin-bottom: 2em" %>
                                 </div>
                                 
                                 <div class="col l4 s12" style="padding: 2%">
                                     <%= submit_tag("GET AN IDEA FUNDED", class: "waves-effect cyan btn whit-text lighten-1",
                                     style:"margin-top: .5em, margin-bottom: 2em" ) %>
                                 </div>
-                            </div>
-                            <% end %>   
+                           
                         </div>
                     </div>
                 </div>
