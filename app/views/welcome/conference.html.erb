@@ -50,30 +50,17 @@
         <div class="container">
             
             <div class="row" >
-                <div class="col s12 m7">
+                <div class="col s12 m8">
                     <div class="header-content">
                         <div class="header-content-inner">
                             <br> 
-                            <h1 class="white-text" style="z-index: 1">Join 500+ black millennials for a weekend of community building & networking </h1
+                            <h1 class="white-text" style="z-index: 1">Join 500+ black millennials for a weekend of community building & networking </h1>
                              
                         <!-- FORM FOR REGISTRATION --> 
                              
-                                
-                                <div class="col l4 s12" style="padding: 2%">
-                                    <%= link_to "REGISTER TO ATTEND", new_rsvp_path(:event_name => "Bloc Conference", :role => "Student"), class: "waves-effect cyan btn whit-text lighten-1",
-                                    style:"margin-top: .5em, margin-bottom: 2em" %>
-                                </div>
-                                
-                                <div class="col l4 s12" style="padding: 2%">
-                                    <%= link_to "REGISTER AS PANELIST", new_rsvp_path(:event_name => "Bloc Conference", :role => "Panelist"), class: "waves-effect cyan btn whit-text lighten-1",
-                                    style:"margin-top: .5em, margin-bottom: 2em" %>
-                                </div>
-                                
-                                <div class="col l4 s12" style="padding: 2%">
-                                    <%= submit_tag("GET AN IDEA FUNDED", class: "waves-effect cyan btn whit-text lighten-1",
-                                    style:"margin-top: .5em, margin-bottom: 2em" ) %>
-                                </div>
-                           
+                            
+                                <%= render "welcome/conference_registration" %>
+                          
                         </div>
                     </div>
                 </div>
@@ -87,57 +74,37 @@
         <div class="container ">
             
                 <div class="col-md-8 col-md-offset-2">
-                    <h2 class="section-heading">Get opportunities & advice in your inbox.</h2>
+                    <h2 class="section-heading"> Build the Bloc </h2>
+                    <h5> Join us for our third conference, celebrating black millennials excelling personally, professionally & politically </h5> 
+                    <br> 
+                    <br> 
+
                 <br> 
                 </div>
+                <div class="row">
+                    <div class="col l4 s12"> 
+                        <h4> Where? </h4> 
+                        <h5 class="grey-text"> On the campuses of Georgia State & Morehouse College. </h5>
+                    </div> 
+                    <div class="col l4">
+                        <h4> When? </h4> 
+                        <h5 class="grey-text"> November 3rd and 4th<br> Right in time for great weather and hiring season. </h5>
+                     </div> 
+                    <div class="col l4 s12"> 
+                        <h4> What? </h4> 
+                        <h5 class="grey-text"> Programming for us, by us. <br> Including a full day of panels with industry leaders, a pitch competition for local black businesses and a community bloc party</h5>
+                    </div> 
+                </div>
                 
-                   <%= form_tag(new_user_registration_path, :method => "get") do %>
-                            <div class="row" style="position:relative; margin-top:5%; width: 100%; padding: 2% 12% 2% 10%; height: 6em ">
-                                <div class="col l4 s12 offset-l1" >
-                                    <%= text_field_tag(:name , "", placeholder: "NAME",style: "font-size: 2em; 
-                                    border-bottom: 3px solid #4dd0e1; padding: .2em 1em; width: 70% ", class:"cyan-text lighten-1" ) %>
-                                </div>
-                                
-                                <div class="col l4 s12" >
-                                    <%= text_field_tag(:email , "", placeholder: "EMAIL" ,style: "font-size: 2em; 
-                                    border-bottom: 3px solid #4dd0e1; padding: .2em 1em; width: 70% ", class:"cyan-text lighten-1" ) %>
-                                </div>
-                              
-                                
-                                <div class="col l3 s12" >
-                                    <%= submit_tag("Make money!", class: "waves-effect cyan btn whit-text lighten-1",
-                                    style:"margin-top: .5em" ) %>
-                                </div>
-                            </div>
-                            
-                            </br>
-                            <% end %>   
-                            
-                            
-                            
-                    <!--ABOUT US GIFS --> 
-                    <div class="row" style="position:absolute ; margin-top: 8% ; ">
-                         <div class="col l3 s12 offset-l1">
-                            <h5> New job and internship openings at relevant & growing companies (all paid) </h5>
-                            <img style=" max-height: 60%; width: 100%; overflow:hidden" src="https://media.giphy.com/media/h19XT0qdBgJj2/giphy.gif" > 
-                        </div> 
-
-                        
-                        <div class="col l3 s12" >
-                            <h5> Advice from black millennials who want to see you win </h5>
-                            <img style="max-height: 60%; width: 100%; overflow:hidden" src="https://media.giphy.com/media/10HJ1jmwQKczio/giphy.gif" > 
-                        </div>
-                        
-                        <div class="col l3 s12"> 
-                            <h5> Kanye-Jay level digital mentor love (...pre 2014) </h5>
-                            <img style=" max-height: 60%; width: 100%; overflow:hidden" src="https://media4.giphy.com/media/10PQN1dM2kfr2g/200.webp#7-grid1" > 
-                        </div>
-                    </div>
+                <div class="row">
+                    <%= render "welcome/conference_registration" %>             
+                </div>
+                  
                 
                                                 
                             
                         
-                        <a class="white-text" href="#features"> NEED A LIL MORE CONVINCING... </a>
+                        
                         
                    
                 </div>
@@ -148,16 +115,31 @@
     <section id="features" class="features">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="section-heading">
-                        
-                      
-                   
+                <div class="col-lg-12 text-center grey-text" >
+                    <div >
+                    
+                    <h4 class="cyan-text lighten-1"> Friday, November 3rd , Unity Plaza @ Georgia State</h4>
+                    <h4> Bloc Freedom Party </h4>
+                    <h5> Black Owned Startup Competition </h5>
+                    <h5> Stroll Off </h5>
+                    <h5> Black Restaurant Showcase </h5>
+                    <br> 
+                    
+                    <h4 class="cyan-text lighten-1"> Saturday, November 4th , Sale Chapel @ Morehouse College</p>
+                    <h4> Build the Bloc  </h5>
+                    <h5> Soul Food Brunch & Welcome </p>
+                    <h5> Welcome Conversation: Building a Professional & Political Bloc </p>
+                    <h5> Keynote Conversation : Further a Black Freedom Agenda </p>
+                    <h5> Influencer Breakouts </p>
+                    <h5> Happy Hour  </p>
+
+
+
                         
                   
             </div>
             
-            <%= render "welcome/events" %> 
+            
             
             <div class="row">
                 <div class="col-md-4">

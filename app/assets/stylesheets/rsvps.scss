@@ -2,6 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.conference_button {
+    width: 100%;
+}
 .new_rsvp_side {
     background-color: #4dd0e1;
     height: 140em;
@@ -11,7 +14,6 @@
 }
 .student_header{
     color: white;
-    padding-right: 50%;
     margin: 5% 5% 0% 5%;
     position: fixed;
     width: 90%;
@@ -33,4 +35,22 @@
 .new_rsvp .field {
     width: 110%;
     margin: 5% 5%;
+}
+
+@media only screen and (max-device-width: 480px){
+    .student_header{
+    font-size: 2.1em;
+    
+    }
+    
+    .student_header h4{
+        font-size: 2.5em;
+    }
+    
+    .student_header h5 {
+        margin-top: 1em;
+        font-size: 2.2em;
+    }
+    
+
 }

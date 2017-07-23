@@ -26,12 +26,13 @@ class RsvpsController < ApplicationController
   def create
    
    if !user_signed_in? 
-        @user = User.create :name              => params[:rsvp][:name], 
+        @user = User.create :name       => params[:rsvp][:name], 
                     :email              => params[:rsvp][:email],
                     :prep               => params[:rsvp][:prep],
                     :school             => params[:rsvp][:school],
                     :industry           => params[:rsvp][:breakout],
-                    :gradschool          => params[:rsvp][:gradschool]
+                    :gradschool         => params[:rsvp][:gradschool],
+                    :role               =>  params[:role]
 
         sign_in @user
     else
@@ -40,23 +41,27 @@ class RsvpsController < ApplicationController
     
     #change this to find event from params[:event]
     
-    event = Event.find_by_name(params[:event_name])
+    event = Event.find_by(params[:event_name])
     
     
     #create rsvp on events
     @rsvp = event.rsvps.build(rsvp_params) 
     @rsvp.user = current_user  #add user to RSVP
     
-
+    
     #store required stripe data
-    @rsvp.email= stripe_params["stripeEmail"]
-    @rsvp.card_token = stripe_params["stripeToken"]
-    @rsvp.process_payment
-    @rsvp.save
+    if params[:role] == "Student"
+      @rsvp.email= stripe_params["stripeEmail"]
+      @rsvp.card_token = stripe_params["stripeToken"]
+      @rsvp.process_payment
+      @rsvp.save
+    end
 
     
     respond_to do |format|
-      if !@rsvp.save
+      if @rsvp.save
+         format.html { render :show }
+      else
         format.html { render :new }
         format.json { render json: @rsvp.errors, status: :unprocessable_entity }
       end
@@ -96,7 +101,8 @@ class RsvpsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def rsvp_params
       params.require(:rsvp).permit(:name, :email, :breakout, :breakout2, :food, :access, :pronouns, 
-      :school, :major, :prep,:dreamjob, :resume, :promo_code, :gradschool , :gradyear, :card_token)
+      :school, :major, :prep,:dreamjob, :resume, :promo_code, :gradschool , :gradyear, :card_token,
+      :company, :current_job, :tip, :tip_link)
 
     end
     

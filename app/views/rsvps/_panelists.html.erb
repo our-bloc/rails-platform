@@ -72,20 +72,26 @@
           <%= f.text_area :access, class:"cyan-text lighten-1" %>
         </div> 
       
-      <div class ="field"> 
-          <%= f.label "What is your largest career struggle right now?" %>
-          <%= f.hidden_field :prep , :id =>"field_tipprep" %>
-      
-         <div id="need_resume" class="tip_prep white btn waves-effect cyan-text lighten-1"> Starting a resume </div>
-          <div id="salary_negotiation" class="tip_prep white btn waves-effect cyan-text lighten-1"> Nailing my interviews </div>
-          <div id="revise_resume" class="tip_prep white btn waves-effect cyan-text lighten-1"> Getting my resume together </div>
-          <div id="need_connections" class="tip_prep white btn waves-effect cyan-text lighten-1"> Hearing back on applications</div>
-          <div id="need_jobs" class="tip_prep white btn waves-effect cyan-text lighten-1"> Finding jobs I care about</div>
-          <div id="cover_letters" class="tip_prep white btn waves-effect cyan-text lighten-1"> Cover letters...sigh </div>
-          <div id="personal_statements" class="tip_prep white btn waves-effect cyan-text lighten-1"> Writing personal statements </div>
-          <div id="salary_negotiation" class="tip_prep white btn waves-effect cyan-text lighten-1"> Negotiating my salary </div>
-        </div>
-    </div> 
+      <div class="input-field"> 
+          <%= f.label "Do you have any food allergies or restrictions we should be aware of?" %>
+          <%= f.text_area :food, class:"cyan-text lighten-1" %>
+        </div> 
+  
+      <div class="input-field"> 
+          <%= f.label "What is one piece of advice you wish you'd known when you were 20 and/or during your last job search?" %>
+          <%= f.text_area :tip, class:"cyan-text lighten-1" %>
+        </div> 
+        
+        <div class="input-field"> 
+          <%= f.label "What is one resource that has been helpful to you throughout your career (a network, meetup, e-course, book?) Please include a link if you have one!" %>
+          <%= f.text_area :tip_link, class:"cyan-text lighten-1" %>
+        </div> 
+        
+        <div class="input-field"> 
+          <%= f.label "What is one resource that has been helpful to you throughout your career (a network, meetup, e-course, book?) Please include a link if you have one!" %>
+          <%= f.text_area :tip_link, class:"cyan-text lighten-1" %>
+        </div> 
+  
   
 
 
