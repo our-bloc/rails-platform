@@ -6,7 +6,7 @@ class WeeklyPlaylistMailer < ApplicationMailer
         @user = user
      
         
-        mail(to: @user.email , subject: "Hey "+ @user.name.split.first + ", here are some career resources we hope will get your week off to the right start.")
+        mail(to: @user.email , subject: "Hey "+ @user.name.split.first + ", we've got you with some Monday morning career inspiration!")
         
      end 
 
