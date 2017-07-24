@@ -10,10 +10,11 @@
                    <% if user.prep != nil%> 
                        <h6><%= user.prep %> </h6>
                        <h6><%= user.industry %> </h6>
+                       <h6><% if user.hometown != nil %> <%= user.hometown %> <% end %>  </h6>
                         <h6><%= user.firstjob %> </h6>
                         <h6><%= user.style %> </h6>
                         <h6><%= user.gradschool %> </h6>
-                        <h6><%= user.profileurl %> </h6>
+                        <h6><%= link_to user.profileurl, root_path + user.profileurl %> </h6>
                         <h6><%= user.email %></h6>
                     <% end %> 
                     
