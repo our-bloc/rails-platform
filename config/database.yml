@@ -25,6 +25,6 @@ test:
 
 production:
   <<: *default
-  database: ourbloc_production
+  database: bloc_production
   username: rails
   password: <%= ENV['APP_DATABASE_PASSWORD'] %>

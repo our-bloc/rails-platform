@@ -25,7 +25,8 @@ gem 'indeed_api'
 #recommendation engine
 gem 'geocoder'
 
-
+# payments
+gem 'stripe'
 #authentication gems
 gem 'omniauth-facebook'
 

@@ -1,0 +1,43 @@
+<div class="row"> 
+  <div class="col l6 s12 new_rsvp_side">
+    <div class="student_header">
+        <h4 class="white-text">Building the Bloc 2017</h4>
+          <h5> Georgia State University & Morehouse College</h5>
+          <h5> November 3rd <% if params[:role] != "Community Org" %> & 4th <% end %> </h5>
+          
+          <% if params[:role] == "Student" %> 
+          <h5 class="yellow-text"> $65 early registration</h5>
+          <% end %> 
+          
+          
+            <p> Connections with brilliant, beautiful black students, professionals and community members from across the South</p>
+            <% if params[:role]=="Student" or params[:role]=="Panelist" %> 
+              <p> A full weekend of meals from the best black owned restarurants & food trucks in Atlanta</p>
+              <p> Full Acccess to online digital resources including e-courses, resume templates and interview guides </p>
+              <p> In person guidance through panels, workshops & one on one resume reviews </p>
+            <% elsif params[:role]=="Community Org"  %> 
+              <p> A table at our Bloc Freedom Party and the opportunity to connect with 300+ students & community members</p>
+              <p> A digital profile to promote your organization, mission and upcoming iniatives</p>
+              <p> Free admission for one representative to attend Saturday's professional programming </p>
+            <% end %> 
+
+
+    </div>
+  </div>
+  
+  <div class="col l6 s12">
+      
+      <div class="grey-text center-align" style="margin-top: 20em"> 
+        
+            <h4> Thanks for registering <% if user_signed_in? %> <%= current_user.name.split.first.capitalize %> <%end%>  , see you in November! </h4>
+            <h5> Please be on the look out for additional information and reminders in your inbox. </h5>
+        </div>
+     
+ </div> 
+</div>
+
+
+
+
+
+

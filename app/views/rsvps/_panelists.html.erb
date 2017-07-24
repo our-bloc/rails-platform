@@ -1,0 +1,178 @@
+
+<%= semantic_form_for @rsvp do |f| %>
+<div class="new_rsvp"> 
+  <%= f.inputs do %>
+  <div class="rsvp_contact"> 
+      <div class="input-field"> 
+        <%= f.label :name  %>
+        <%= f.text_field :name, class:"cyan-text" %>
+        </div>
+      
+      <div class="input-field"> 
+        <%= f.label :email %>
+        <%= f.text_field :email, class:"cyan-text lighten-1" %>
+      </div> 
+      
+        
+      <div class="input-field"> 
+        <%= f.label "What is your undergraduate alma mater?" %>
+        <%= f.text_field :school, class:"cyan-text lighten-1" %>
+        </div>
+      
+      <div class="input-field"> 
+          <%= f.label :major %>
+          <%= f.text_field :major, class:"cyan-text lighten-1" %>
+      </div>
+  </div>
+  
+  <div class="rsvp_choices"> 
+      <div class="field">
+          <%= f.label "Which industry roundtable would you want to speak on?" %>
+          <%= f.hidden_field :breakout , :id =>"field_tipindustry" %>
+          
+          <div class="tip_industry white btn waves-effect cyan-text lighten-1" id="Griots"> Griots </div>
+          <div class="tip_industry white btn waves-effect cyan-text lighten-1" id="Techies"> Techies </div>
+          <div class="tip_industry white btn waves-effect cyan-text lighten-1" id="Scientists"> Scientists </div>
+          <div class="tip_industry white btn waves-effect cyan-text lighten-1" id="CSuite"> CSuite </div>
+          <div class="tip_industry white btn waves-effect cyan-text lighten-1" id="Educators"> Educators </div>
+          <div class="tip_industry white btn waves-effect cyan-text lighten-1" id="Activists"> Activists </div>
+          <div class="tip_industry white btn waves-effect cyan-text lighten-1" id="Advocates"> Advocates </div>
+          <div class="tip_industry white btn waves-effect cyan-text lighten-1" id="Entrepreneurs"> Entrepreneurs </div>
+          <div class="tip_industry white btn waves-effect cyan-text lighten-1" id="Creatives"> Creatives </div>
+        </div>
+          
+        
+      
+      <div class="field"> 
+          <%= f.label "Are you or have you attended a grad or professional program?" %>
+          <%= f.hidden_field :gradschool , :id =>"field_tipgrad" %>
+      
+        <div class="grad_button white btn waves-effect cyan-text lighten-1" id="None"> Nope </div>
+          <div class="tip_grad white btn waves-effect cyan-text lighten-1" id="Master's Program"> Masters Program </div>
+          <div class="tip_grad white btn waves-effect cyan-text lighten-1" id="PhD Program"> PhD Program </div>
+          <div class="tip_grad white btn waves-effect cyan-text lighten-1" id="Law School"> Law School </div>
+          <div class="tip_grad white btn waves-effect cyan-text lighten-1" id="Med School"> Med School </div>
+          <div class="tip_grad white btn waves-effect cyan-text lighten-1" id="Business School"> Business School </div>
+      </div>
+      
+   
+      
+      <div class ="field"> 
+          <%= f.label "What are your preferred personal pronouns? " %>
+          <%= f.hidden_field :pronouns , :id =>"field_tipforemail" %>
+      
+          <div class="tip_for_email white btn waves-effect cyan-text lighten-1" id="true"> They, Their, Theirs </div>
+          <div class="tip_for_email white btn waves-effect cyan-text lighten-1" id="false"> She, Her, Hers </div>
+          <div class="tip_for_email white btn waves-effect cyan-text lighten-1" id="false"> He, Him, His </div>
+         
+      </div>
+      
+       <div class="input-field"> 
+          <%= f.label "Any accessibility needs we should be aware of?" %>
+          <%= f.text_area :access, class:"cyan-text lighten-1" %>
+        </div> 
+      
+      <div class="input-field"> 
+          <%= f.label "Do you have any food allergies or restrictions we should be aware of?" %>
+          <%= f.text_area :food, class:"cyan-text lighten-1" %>
+        </div> 
+  
+      <div class="input-field"> 
+          <%= f.label "What is one piece of advice you wish you'd known when you were 20 and/or during your last job search?" %>
+          <%= f.text_area :tip, class:"cyan-text lighten-1" %>
+        </div> 
+        
+        <div class="input-field"> 
+          <%= f.label "What is one resource that has been helpful to you throughout your career (a network, meetup, e-course, book?) Please include a link if you have one!" %>
+          <%= f.text_area :tip_link, class:"cyan-text lighten-1" %>
+        </div> 
+        
+        <div class="input-field"> 
+          <%= f.label "What is one resource that has been helpful to you throughout your career (a network, meetup, e-course, book?) Please include a link if you have one!" %>
+          <%= f.text_area :tip_link, class:"cyan-text lighten-1" %>
+        </div> 
+  
+  
+
+
+ 
+</div>
+
+  <% end %>
+  
+<% end %>
+
+
+<style> 
+.input-field{
+  margin: 5%;
+}
+
+.field{
+  margin: 1% 5%;
+}
+.input-field input {
+  color: teal;
+}
+</style>
+
+<script>
+  $('.tip_grad').click(function(){
+      var idval = $(this).attr("id");
+      console.log(idval);
+          
+      $('#field_tipgrad').val(idval);
+            
+  });
+  
+   $('.tip_gradyear').click(function(){
+      var idval = $(this).attr("id");
+      console.log(idval);
+          
+      $('#field_tipgradyear').val(idval);
+  });
+  
+  
+   $('.tip_for_email').click(function(){
+      var idval = $(this).attr("id");
+      console.log(idval);
+          
+      $('#field_tipforemail').val(idval);
+  });
+  
+    $('.tip_prep').click(function(){
+      var idval = $(this).attr("id");
+      console.log(idval);
+          
+      $('#field_tipprep').val(idval);
+            
+  });
+
+$('.tip_industry').click(function(){
+      var idval = $(this).attr("id");
+      console.log(idval);
+          
+      $('#field_tipindustry').val(idval);
+            
+  });
+  
+  $(".field div").click(function(){
+    $(this).css ({
+      'border' : "5px solid yellow" });
+    });
+    
+$('.tip_industry2').click(function(){
+      var idval = $(this).attr("id");
+      console.log(idval);
+          
+      $('#field_tipindustry2').val(idval);
+            
+  });
+  
+  $(".field div").click(function(){
+    $(this).css ({
+      'border' : "5px solid yellow" });
+    });
+
+  
+</script>

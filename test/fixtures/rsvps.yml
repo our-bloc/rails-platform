@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  school: MyString
+  gradyear: MyString
+  gradschool: MyString
+  major: MyString
+  style: MyString
+  prep: MyString
+  dreamjob: MyString
+  breakout: MyString
+  breakout2: MyString
+  resume: MyString
+  promo_code: MyString
+  group: MyString
+  access: MyString
+  food: MyString
+  pronouns: MyString
+
+two:
+  school: MyString
+  gradyear: MyString
+  gradschool: MyString
+  major: MyString
+  style: MyString
+  prep: MyString
+  dreamjob: MyString
+  breakout: MyString
+  breakout2: MyString
+  resume: MyString
+  promo_code: MyString
+  group: MyString
+  access: MyString
+  food: MyString
+  pronouns: MyString

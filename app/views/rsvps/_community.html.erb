@@ -1,0 +1,122 @@
+
+<%= semantic_form_for @rsvp do |f| %>
+<div class="new_rsvp"> 
+  <%= f.inputs do %>
+  <div class="rsvp_contact"> 
+      <div class="input-field"> 
+        <%= f.label :name  %>
+        <%= f.text_field :name, class:"cyan-text" %>
+        </div>
+      
+      <div class="input-field"> 
+        <%= f.label :email %>
+        <%= f.text_field :email, class:"cyan-text lighten-1" %>
+      </div> 
+      
+        
+      <div class="input-field"> 
+        <%= f.label "What is the name of your organization?" %>
+        <%= f.text_field :company, class:"cyan-text lighten-1" %>
+        </div>
+      
+      <div class="input-field"> 
+          <%= f.label "What is your role in your org? (Optional)" %>
+          <%= f.text_field :current_job, class:"cyan-text lighten-1" %>
+      </div>
+
+  
+ 
+      <div class="input-field"> 
+          <%= f.label "Are there any initiatives your org is working on that you would like us to know about??" %>
+          <%= f.text_area :tip, class:"cyan-text lighten-1" %>
+        </div> 
+        
+        <div class="input-field"> 
+          <%= f.label "Organization Website" %>
+          <%= f.text_area :tip_link, class:"cyan-text lighten-1" %>
+        </div> 
+</div>
+        <div class="center-align">
+        <%= f.submit "Register", :class => "btn waves cyan white-text lighen-1 center-align"%> 
+        </div>
+
+  <% end %>
+  
+ 
+  
+<% end %>
+
+
+<style> 
+.input-field{
+  margin: 5%;
+}
+
+.field{
+  margin: 1% 5%;
+}
+.input-field input {
+  color: teal;
+}
+</style>
+
+<script>
+  $('.tip_grad').click(function(){
+      var idval = $(this).attr("id");
+      console.log(idval);
+          
+      $('#field_tipgrad').val(idval);
+            
+  });
+  
+   $('.tip_gradyear').click(function(){
+      var idval = $(this).attr("id");
+      console.log(idval);
+          
+      $('#field_tipgradyear').val(idval);
+  });
+  
+  
+   $('.tip_for_email').click(function(){
+      var idval = $(this).attr("id");
+      console.log(idval);
+          
+      $('#field_tipforemail').val(idval);
+  });
+  
+    $('.tip_prep').click(function(){
+      var idval = $(this).attr("id");
+      console.log(idval);
+          
+      $('#field_tipprep').val(idval);
+            
+  });
+
+$('.tip_industry').click(function(){
+      var idval = $(this).attr("id");
+      console.log(idval);
+          
+      $('#field_tipindustry').val(idval);
+            
+  });
+  
+  $(".field div").click(function(){
+    $(this).css ({
+      'border' : "5px solid yellow" });
+    });
+    
+$('.tip_industry2').click(function(){
+      var idval = $(this).attr("id");
+      console.log(idval);
+          
+      $('#field_tipindustry2').val(idval);
+            
+  });
+  
+  $(".field div").click(function(){
+    $(this).css ({
+      'border' : "5px solid yellow" });
+    });
+
+  
+</script>

@@ -14,6 +14,9 @@ class User < ApplicationRecord
     has_many :influencers
     has_many :tips 
     has_many :visions
+    #EVENT RSVPS
+    has_many :rsvps
+    has_many :events, through: :rsvps
   
     
     has_many :value
@@ -21,7 +24,7 @@ class User < ApplicationRecord
     has_many :events
     
     has_one :profile
-  
+
   #RECOMMENDATION ENGINE
 
   #REFERRALS
@@ -30,34 +33,34 @@ class User < ApplicationRecord
   
   
   #BUILD USER PROFILE AFTER SIGN UP
-  after_create :build_profile
+    after_create :build_profile
+  
+    def build_profile
+      Profile.create(user: self) 
+    end
+    
+  #create user without password
+    def password_required?
+      new_record? ? false : super
+    end
 
-  def build_profile
-    Profile.create(user: self) 
-  end
+     after_create :add_password_and_firstname
   
-  
-  def password_required?
-    new_record? ? false : super
-  end
-
-  after_create :add_password_and_firstname
-  
-  def add_password_and_firstname
-      password = self.name.gsub(/\s+/, "").delete('.') + rand(10..50).to_s
-      profileurl = password
-      self.update_attribute(:password, password )
-      self.update_attribute(:profileurl, profileurl )
-      
-      firstname = self.name.split.first
-      self.update_attribute(:firstname, firstname)
-      
-      #send welcome email
-      WelcomeMailer.welcome_email(self).deliver
-      
-      #update admin
-      NewUserMailer.new_user(self).deliver
-  end 
+    def add_password_and_firstname
+        password = self.name.gsub(/\s+/, "").delete('.') + rand(10..50).to_s
+        profileurl = password
+        self.update_attribute(:password, password )
+        self.update_attribute(:profileurl, profileurl )
+        
+        firstname = self.name.split.first
+        self.update_attribute(:firstname, firstname)
+        
+        #send welcome email
+        WelcomeMailer.welcome_email(self).deliver
+        
+        #update admin
+        NewUserMailer.new_user(self).deliver
+    end 
   
 
   
