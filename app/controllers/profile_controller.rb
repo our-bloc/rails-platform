@@ -77,7 +77,7 @@ class ProfileController < ApplicationController
             @city = nil
         else
             @city = request.location.city 
-            if user_signed_in?
+            if user_signed_in? and current_user.hometown == "nil"
                 current_user.update_attribute(:hometown, @city)
             end
 
