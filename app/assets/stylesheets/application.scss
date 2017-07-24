@@ -26,3 +26,17 @@ body,html{
     margin: 0%;
     padding: 0%;
 }
+
+.about_us {
+    position:absolute;
+}
+
+@media only screen and (max-device-width: 480px){
+    .about_us {
+        position:relative;
+    }
+    
+    #careed_advice_header{
+        font-size: 2.5em;
+    }
+}
