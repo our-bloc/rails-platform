@@ -40,7 +40,7 @@ Rails.application.routes.draw do
   get 'profiles' => 'profile#index', as: :profiles
   get '/home', to: 'welcome#landing', as: :landing
   get '/hello', to: 'welcome#hello', as: :hello
-  get '/morehouse', to: 'university#morehouse', as: :morehouse
+  get '/morehouse', to: 'welcome#hello', as: :morehouse
   get '/conference', to: 'welcome#conference', as: :conference
 
 
