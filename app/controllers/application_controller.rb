@@ -4,7 +4,6 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :bypass_login
   before_action :add_user_location
-  
   after_action :pageview
   
    
@@ -36,7 +35,7 @@ class ApplicationController < ActionController::Base
             @city = nil
         else
             @city = request.location.city 
-            if user_signed_in? and current_user.hometown == "nil"
+            if user_signed_in? and current_user.hometown == nil
                 current_user.update_attribute(:hometown, @city)
             end
 
