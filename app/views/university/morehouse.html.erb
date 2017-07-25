@@ -1,16 +1,106 @@
-<nav class="white">
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo grey-text">Bloc</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-       
-        <% if user_signed_in? %> 
-            <li> <%= link_to "LOGOUT", destroy_session_path, class: "teal-text nav_buttons" %> </li>
-        <% else %> 
-            <li class="grey-text"> <%= link_to "LOGIN" , new_user_session_path, class: "teal-text nav_buttons"  %> </li>
-        <% end %> 
-        
-      </ul>
-    </div>
+<% if !user_signed_in? %> 
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title class="grey-text"> bloc. </title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="lib/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="lib/device-mockups/device-mockups.min.css">
+
+    <!-- Theme CSS -->
+    <link href="css/new-age.css" rel="stylesheet">
+    
+    <!-- Scroll Lock --> 
+    <% content_for :javascript_includes do %>
+  <%= javascript_include_tag "scrollLock.js" %>
+<% end %>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top">
+
+    <%= render 'university/partials/university_nav' %> 
+
+    <header>
+        <div class="container">
+            <div class="row" >
+                <div class="col s12 m7">
+                    <div class="header-content">
+                        <div class="header-content-inner">
+                            <br> 
+                            <h1 class="grey-text">Access personalized resources that will help you <span class="cyan_highlight" id="highlight_1">land</span>
+                            & <span class="cyan_highlight" id="highlight_2">keep</span>  your <span class="cyan_highlight" id="highlight_3">dream job</span>. </h1><br>
+                             
+                             
+                        <!-- FORM FOR REGISTRATION --> 
+                             <%= form_tag(new_user_registration_path, :method => "get") do %>
+                            <div class="row" style="position:relative; margin-top:2%; width: 100%; padding: 2% 1%; height: 6em ">
+                                <div class="col l4 s12" style="padding: 2%">
+                                    <%= text_field_tag(:name , "", placeholder: "NAME",style: "font-size: 2em; 
+                                    border: 3px solid #4dd0e1; padding: .2em 1em; width: 70% ", class:"cyan-text lighten-1" ) %>
+                                </div>
+                                
+                                <div class="col l4 s12" style="padding: 2%">
+                                    <%= text_field_tag(:email , "", placeholder: "EMAIL" ,style: "font-size: 2em; 
+                                    border: 3px solid #4dd0e1; padding: .2em 1em; width: 70% ", class:"cyan-text lighten-1" ) %>
+                                    
+                                    <%= hidden_field_tag(:university , :value => "Morehouse College" ) %> 
+                                </div>
+                                 
+                                
+                                <div class="col l3 s12" style="padding: 2%">
+                                    <%= submit_tag("Send me weekly tips!", class: "waves-effect cyan btn whit-text lighten-1",
+                                    style:"margin-top: .5em, margin-bottom: 2em" ) %>
+                                </div>
+                            </div>
+                            <% end %>   
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col s12 m5 l5">
+                    <div class="device-container">
+                        <div class="device-mockup iphone6_plus portrait white">
+                            <div class="device">
+                                <div class="screen">
+                                    <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
+                                    <img src="img/demophone.png" style="width: 100%" class="img-responsive" alt="">
+                                </div>
+                                <div class="button">
+                                    <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+<% end %> 
 </nav>
 
 <div class="row"> 
@@ -23,34 +113,23 @@
     <div class="col s12 l9 "> 
         <!---- SCREEN FOR USERS WHEN NOT LOGGED IN --> 
         <% if !user_signed_in? %> 
-            <div class="morehousebg"></div> 
-
-            <div class="call_to_action"> 
-                <img id="background_img" class="carousel-item" src="http://www.morehouse.edu/media/morehouse2015/styleassets/images/commencement-2015.jpg"> 
           
-            <div class ="call_to_action">
-                <h1 id="register"> get personalized career advice in your inbox </h1> 
-                
-                <div class="auth_buttons"> 
-                    <div><%= link_to  "SIGN ME UP", new_user_registration_path(:university => "Morehouse College") , class: "waves-effect teal btn-large white-text" %></div>
-                    <p id="value_prop"> answer 8 quick questions & we will send you career resources, grad school tips, alum success stories & opportunities that are tailored to your Morehouse experience</p>
-                </div>
-             </div>
         <% else %> 
          <!-- LOAD CAREER RESOURCE PARTIAL --> 
         
-            
+            <section style="height: 70em" id="tips_section">
             <%= render "university/partials/tips" %>
+            </section>
 
-            <section>
+            <section style="height: 70em" id="tips_grad_section">
             <%= render "university/partials/tips_grad" %>
              </section>
              
-            <section>
+            <section style="height: 70em" id="influencer_section">
             <%= render "university/partials/influencers" %>
              </section>
         
-            <section>
+            <section style="" >
             
             <%= render "university/partials/jobs" %>
             </section>
@@ -64,6 +143,28 @@
     </div>
   
   <script>
-        $('.carousel.carousel-slider').carousel({fullWidth: true});
+        
+        $( document ).ready(function() {
+            $('body').css('overflow','hidden');
+            $('body').attr('scroll','no');
+        });
+        
+        
+      
+   $('#opportunities_button').click(function(){
+         $('body').css('overflow','visible');
+        $('body').attr('scroll','yes');
+        $("#influencer_section").hide();
+        $("#tips_grad_section").hide();
+        $("#tips_section").hide();
+        }); 
+        
+    $(".menu_button").click(function(){
+         $("#influencer_section").show();
+        $("#tips_grad_section").show();
+        $("#tips_section").show();
+        $('body').css('overflow','hidden');
+        $('body').attr('scroll','no');
+    })
   </script>
 </div>

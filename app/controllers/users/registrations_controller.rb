@@ -12,7 +12,17 @@ class Users::RegistrationsController < Devise::RegistrationsController
     if params[:email] != nil 
       User.email == params[:email]
      end
-     
+    
+    
+    if request.location.city == nil 
+            @city = nil
+    else
+        @city = request.location.city 
+        if user_signed_in? and current_user.hometown == "nil"
+            current_user.update_attribute(:hometown, @city)
+        end
+
+        end 
    end
     
     
