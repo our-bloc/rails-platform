@@ -1,0 +1,5 @@
+class AddBioToRsvps < ActiveRecord::Migration[5.0]
+  def change
+    add_column :rsvps, :bio, :text
+  end
+end
