@@ -3,35 +3,35 @@
 <div class="new_rsvp"> 
   <%= f.inputs do %>
   <div class="rsvp_contact"> 
-      <div class="input-field"> 
+      <div class="rsvp-input"> 
         <%= f.label :name  %>
         <%= f.text_field :name, class:"cyan-text" %>
         </div>
       
-      <div class="input-field"> 
+      <div class="rsvp-input"> 
         <%= f.label :email %>
         <%= f.text_field :email, class:"cyan-text lighten-1" %>
       </div> 
       
         
-      <div class="input-field"> 
+      <div class="rsvp-input"> 
         <%= f.label "What is the name of your organization?" %>
         <%= f.text_field :company, class:"cyan-text lighten-1" %>
         </div>
       
-      <div class="input-field"> 
+      <div class="rsvp-input"> 
           <%= f.label "What is your role in your org? (Optional)" %>
           <%= f.text_field :current_job, class:"cyan-text lighten-1" %>
       </div>
 
   
  
-      <div class="input-field"> 
+      <div class="rsvp-input"> 
           <%= f.label "Are there any initiatives your org is working on that you would like us to know about??" %>
           <%= f.text_area :tip, class:"cyan-text lighten-1" %>
         </div> 
         
-        <div class="input-field"> 
+        <div class="rsvp-input"> 
           <%= f.label "Organization Website" %>
           <%= f.text_area :tip_link, class:"cyan-text lighten-1" %>
         </div> 
@@ -48,14 +48,14 @@
 
 
 <style> 
-.input-field{
+.rsvp-input{
   margin: 5%;
 }
 
 .field{
   margin: 1% 5%;
 }
-.input-field input {
+.rsvp-input input {
   color: teal;
 }
 </style>

@@ -3,31 +3,55 @@
 <div class="new_rsvp"> 
   <%= f.inputs do %>
   <div class="rsvp_contact"> 
-      <div class="input-field"> 
+      <div class="rsvp-input"> 
         <%= f.label :name  %>
         <%= f.text_field :name, class:"cyan-text" %>
         </div>
       
-      <div class="input-field"> 
+      <div class="rsvp-input"> 
         <%= f.label :email %>
         <%= f.text_field :email, class:"cyan-text lighten-1" %>
       </div> 
       
+       <div class="rsvp-input"> 
+        <%= f.label "Where do you currently work" %>
+        <%= f.text_field :company, class:"cyan-text lighten-1" %>
+      </div>
+      
+      <div class="rsvp-input"> 
+        <%= f.label "What is your current position/title?" %>
+        <%= f.text_field :company, class:"cyan-text lighten-1" %>
+      </div>
+      
+      <div class="rsvp-input"> 
+          <%= f.label "What is one piece of advice you wish you'd known when you were 20 and/or during your last job search?" %>
+          <%= f.text_area :tip, class:"cyan-text lighten-1" %>
+        </div> 
         
-      <div class="input-field"> 
+        <div class="rsvp-input"> 
+          <%= f.label "What is one resource that has been helpful to you throughout your career (a network, meetup, e-course, book?) Please include a link if you have one!" %>
+          <%= f.text_area :tip_link, class:"cyan-text lighten-1" %>
+        </div> 
+        
+        <div class="rsvp-input"> 
+          <%= f.label "Please share your bio (a link to your LinkedIn or a bio already online works great!" %>
+          <%= f.text_area :tip_link, class:"cyan-text lighten-1" %>
+        </div> 
+        
+      <div class="rsvp-input"> 
         <%= f.label "What is your undergraduate alma mater?" %>
         <%= f.text_field :school, class:"cyan-text lighten-1" %>
         </div>
       
-      <div class="input-field"> 
-          <%= f.label :major %>
+      <div class="rsvp-input"> 
+          <%= f.label "What did you major in?"%>
           <%= f.text_field :major, class:"cyan-text lighten-1" %>
       </div>
   </div>
   
   <div class="rsvp_choices"> 
       <div class="field">
-          <%= f.label "Which industry roundtable would you want to speak on?" %>
+          <%= f.label "Which industry roundtable will you be speaking on?" %>
           <%= f.hidden_field :breakout , :id =>"field_tipindustry" %>
           
           <div class="tip_industry white btn waves-effect cyan-text lighten-1" id="Griots"> Griots </div>
@@ -67,33 +91,21 @@
          
       </div>
       
-       <div class="input-field"> 
+       <div class="rsvp-input"> 
           <%= f.label "Any accessibility needs we should be aware of?" %>
           <%= f.text_area :access, class:"cyan-text lighten-1" %>
         </div> 
       
-      <div class="input-field"> 
+      <div class="rsvp-input"> 
           <%= f.label "Do you have any food allergies or restrictions we should be aware of?" %>
           <%= f.text_area :food, class:"cyan-text lighten-1" %>
         </div> 
   
-      <div class="input-field"> 
-          <%= f.label "What is one piece of advice you wish you'd known when you were 20 and/or during your last job search?" %>
-          <%= f.text_area :tip, class:"cyan-text lighten-1" %>
-        </div> 
+          <div class="center-align">
+        <%= f.submit "Register", :class => "btn waves cyan white-text lighen-1 center-align"%> 
+        </div>
         
-        <div class="input-field"> 
-          <%= f.label "What is one resource that has been helpful to you throughout your career (a network, meetup, e-course, book?) Please include a link if you have one!" %>
-          <%= f.text_area :tip_link, class:"cyan-text lighten-1" %>
-        </div> 
-        
-        <div class="input-field"> 
-          <%= f.label "What is one resource that has been helpful to you throughout your career (a network, meetup, e-course, book?) Please include a link if you have one!" %>
-          <%= f.text_area :tip_link, class:"cyan-text lighten-1" %>
-        </div> 
   
-  
-
 
  
 </div>
@@ -104,14 +116,14 @@
 
 
 <style> 
-.input-field{
+.rsvp-input{
   margin: 5%;
 }
 
 .field{
   margin: 1% 5%;
 }
-.input-field input {
+.rsvp-input input {
   color: teal;
 }
 </style>

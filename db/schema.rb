@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170721150747) do
+ActiveRecord::Schema.define(version: 20170727172952) do
 
   create_table "ahoy_events", force: :cascade do |t|
     t.integer  "visit_id"
@@ -161,6 +161,7 @@ ActiveRecord::Schema.define(version: 20170721150747) do
     t.string   "tip_link"
     t.string   "image"
     t.string   "linkedin"
+    t.text     "bio"
     t.index ["event_id"], name: "index_rsvps_on_event_id"
     t.index ["user_id"], name: "index_rsvps_on_user_id"
   end
