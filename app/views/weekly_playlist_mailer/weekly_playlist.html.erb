@@ -114,30 +114,29 @@
 											<table width="100%" cellpadding="0" cellspacing="0">
 												<tr>
 													<td data-color="title" data-size="size title" data-min="25" data-max="45" data-link-color="link title color" data-link-style="text-decoration:none; color:#292c34;" class="title" align="center" style="font:35px/38px Arial, Helvetica, sans-serif; color:#4dd0e1; padding:0 0 24px;">
-														Your Career Playlist
+														Hey <%= @user.name.split.first %>
 													</td>
 												</tr>
 												<tr>
 													<td data-color="text" data-size="size text" data-min="10" data-max="26" data-link-color="link text color" data-link-style="font-weight:normal; text-decoration:underline; color:#40aceb;" align="center" style="font:normal 16px/25px Arial, Helvetica, sans-serif; color:#888; padding:0 0 23px;">
-														<p> Morning <%= @user.name.split.first %>, </p>
 													
 														<p> 
-														Last week, KDot & J Cole came together for yet another legendary collaboration and it inspired us to think about ways that we can better a better plug for you and this growing community. 
+														Last week, KDot & J Cole came together for yet another legendary collaboration, and it inspired us to think about ways that we can be a better plug for you and this growing community. 
 														</p>
 														<p> 
-														First off, it made us realize that <span style="color:#4dd0e1"> we want to make the distance between you and advice you actually want as small as possible </span>. You're busy, there is plenty of crazy happening in the world, and we want to help make your career journey as stress free as possible.
+														First off, it made us realize that <span style="color:#4dd0e1"> we want to make the distance between you and advice you actually want as small as possible </span>. You're busy, there is plenty of crazy happening in the world, and we want to help make your career journey is as stress free as possible.
 														</p> 
 														<p>
 														So this week we are bringing your opportunities right into your inbox. <span style="color:#4dd0e1"> No more clicking needed-- you will find your weekly tip and top opportunities below. </span> 
 														</p>
 														
 														<p>
-														We also realized that the best way to figure how to be helpful would be to just ask. <span style="color:#4dd0e1"> So we have a quick favor to ask you- will you take a second to let us know how we better live up to our vision of being the ultimate career coach? (we're going for Oprah level impact) </span>
-														What are you struggling with? What opportunities are you looking for? What do you want us to add from your playlist? What do you want us to take away? Let us know!
+														We also realized that the best way to figure out how to be helpful would be to just ask. <span style="color:#4dd0e1"> So we have a quick favor to ask you-- will you reply back to this email with one piece of feedback? </span>
+														What do you wish we had included in this playlist? What do you want us to take away? What are you struggling with right now, career wise?
 														</p>
 														
 														<p>
-														Have a great week and , as always, don't hesitate to out.
+														Let us know!
 														</p>
 														
 													
@@ -153,7 +152,7 @@
 														<% if @jobs != nil %>
 														<%  @jobs.each do |job| %>
 															<p style="color:#4dd0e1; font-weight: bold; text-transform: uppercase; padding: 2%"> <%= job.title %> @ <%= job.company %> </p>
-															<p> <%= truncate(job.description, :limit => 400) %> </p>
+															<p> <%= truncate(job.description, :limit => 1200) %> </p>
 															<p> <%= link_to "Apply Now", job.link %> </p>
 
 														<% end %> 
@@ -171,7 +170,7 @@
 															<tr>
 																<td data-bgcolor="bg-button" data-size="size button" data-min="10" data-max="16" class="btn" align="center" style="font:12px/14px Arial, Helvetica, sans-serif; color:#f8f9fb; text-transform:uppercase; mso-padding-alt:12px 10px 10px; border-radius:2px;" bgcolor="#4dd0e1">
 				
-																	<a target="_blank" style="text-decoration:none; color:#f8f9fb; display:block; padding:12px 10px 10px;" href="jointhebloc.com/<%=@user.profileurl%>">Your Opportunities! </a>
+																	<a target="_blank" style="text-decoration:none; color:#f8f9fb; display:block; padding:12px 10px 10px;" href="jointhebloc.com/<%=@user.profileurl%>"> More Opportunities! </a>
 																	
 																	
 															</tr>

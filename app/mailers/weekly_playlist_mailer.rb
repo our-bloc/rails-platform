@@ -14,7 +14,7 @@ class WeeklyPlaylistMailer < ApplicationMailer
         
       
   
-        mail(to: @user.email , subject: "Hey "+ @user.firstname + ", here are some opportunities we think you'll love!")
+        mail(to: @user.email , subject: "What do JCole & Kendrick have do to with your career journey?")
         
      end 
 
