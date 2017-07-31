@@ -107,7 +107,7 @@
 							<td data-bgcolor="bg-module" bgcolor="#eaeced">
 								<table class="flexible" width="600" align="center" style="margin:0 auto;" cellpadding="0" cellspacing="0">
 									<tr>
-										<td class="img-flex"><img src="https://68.media.tumblr.com/12458062aa6a5d1867f93f51398bf96a/tumblr_of71j0xqfZ1upk172o1_500.gif" style="vertical-align:top;" width="600" height="306" alt="" /></td>
+										<td class="img-flex"><img src="https://media.giphy.com/media/4DCAQBPgT91ra/giphy.gif" style="vertical-align:top;" width="600" height="306" alt="" /></td>
 									</tr>
 									<tr>
 										<td data-bgcolor="bg-block" class="holder" style="padding:58px 60px 52px;" bgcolor="#f9f9f9">
@@ -119,27 +119,44 @@
 												</tr>
 												<tr>
 													<td data-color="text" data-size="size text" data-min="10" data-max="26" data-link-color="link text color" data-link-style="font-weight:normal; text-decoration:underline; color:#40aceb;" align="center" style="font:normal 16px/25px Arial, Helvetica, sans-serif; color:#888; padding:0 0 23px;">
-														<p> Hey hey <%= @user.name.split.first %>, hope your Monday is off to a great start. </p>
+														<p> Morning <%= @user.name.split.first %>, </p>
 													
-								
 														<p> 
-														Between Insecure coming back to TV, Girls Trip shutting down the box office & Jay finally giving us some visuals for "Kill Jay Z", there was sooo much melanated excellence this weekend, and we're excited to bring you some help opportunities for your own #blackexcellence journey.
+														Last week, KDot & J Cole came together for yet another legendary collaboration and it inspired us to think about ways that we can better a better plug for you and this growing community. 
+														</p>
+														<p> 
+														First off, it made us realize that <span style="color:#4dd0e1"> we want to make the distance between you and advice you actually want as small as possible </span>. You're busy, there is plenty of crazy happening in the world, and we want to help make your career journey as stress free as possible.
+														</p> 
+														<p>
+														So this week we are bringing your opportunities right into your inbox. <span style="color:#4dd0e1"> No more clicking needed-- you will find your weekly tip and top opportunities below. </span> 
 														</p>
 														
 														<p>
-														Have a great week and don't hesitate to <br> 
-														<span style="color:#4dd0e1"> let us know if there are any particular opportunities, tips and/or resources you are searching for</span>.
+														We also realized that the best way to figure how to be helpful would be to just ask. <span style="color:#4dd0e1"> So we have a quick favor to ask you- will you take a second to let us know how we better live up to our vision of being the ultimate career coach? (we're going for Oprah level impact) </span>
+														What are you struggling with? What opportunities are you looking for? What do you want us to add from your playlist? What do you want us to take away? Let us know!
 														</p>
 														
 														<p>
-														Be GREAT,
+														Have a great week and , as always, don't hesitate to out.
 														</p>
+														
 													
-														<p>
-														Bloc Team
-														</p>
+														<hr> </hr> 
+														<%  @tips.each do |tip| %>
+															<p style="color:#4dd0e1; font-weight: bold"> <%= tip.title %> </p>
+															<p> <%= tip.body %> </p>
+														<% end %> 
+														
+														<%  @jobs.each do |job| %>
+															<p style="color:#4dd0e1; font-weight: bold"> <%= job.title %> </p>
+															<p> <%= job.company %> </p>
+														<% end %> 
 														</td>
 														
+											
+										
+										
+													
 												</tr>
 												<tr>
 													<td style="padding:0 0 20px;">
