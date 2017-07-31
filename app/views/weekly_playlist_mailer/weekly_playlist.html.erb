@@ -144,15 +144,18 @@
 														<hr> </hr> 
 														<% if @tips != nil %> 
 														<%  @tips.each do |tip| %>
-															<p style="color:#4dd0e1; font-weight: bold; text-transform: uppercase"> <%= tip.title %> </p>
-															<p> <%= tip.body %> </p>
+															<p style="color:#4dd0e1; font-weight: bold; text-transform: uppercase; padding: 2%"> <%= tip.title %> </p>
+															<p> <%= simple_format(tip.body) %> </p>
+															<p> <%= link_to "Read More" , tip.link %> </p>
 														<% end %> 
 														<% end %> 
 														
 														<% if @jobs != nil %>
 														<%  @jobs.each do |job| %>
-															<p style="color:#4dd0e1; font-weight: bold; text-transform: uppercase"> <%= job.title %> </p>
-															<p> <%= job.company %> </p>
+															<p style="color:#4dd0e1; font-weight: bold; text-transform: uppercase; padding: 2%"> <%= job.title %> @ <%= job.company %> </p>
+															<p> <%= simple_format(job.description) %> </p>
+															<p> <%= link_to "Apply Now", job.link %> </p>
+
 														<% end %> 
 														<% end %> 
 														</td>
