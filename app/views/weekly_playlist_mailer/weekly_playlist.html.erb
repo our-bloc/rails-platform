@@ -142,14 +142,18 @@
 														
 													
 														<hr> </hr> 
+														<% if @tips != nil %> 
 														<%  @tips.each do |tip| %>
-															<p style="color:#4dd0e1; font-weight: bold"> <%= tip.title %> </p>
+															<p style="color:#4dd0e1; font-weight: bold; text-transform: uppercase"> <%= tip.title %> </p>
 															<p> <%= tip.body %> </p>
 														<% end %> 
+														<% end %> 
 														
+														<% if @jobs != nil %>
 														<%  @jobs.each do |job| %>
-															<p style="color:#4dd0e1; font-weight: bold"> <%= job.title %> </p>
+															<p style="color:#4dd0e1; font-weight: bold; text-transform: uppercase"> <%= job.title %> </p>
 															<p> <%= job.company %> </p>
+														<% end %> 
 														<% end %> 
 														</td>
 														
