@@ -43,19 +43,19 @@ class ProfileController < ApplicationController
        
         
         if @user.industry == nil and  @user.gradschool != nil
-            @jobs = Job.all.order("created_at DESC").limit(2)
+            @jobs = Job.order("created_at DESC").limit(2)
             @tips= Tip.where(:industry => @user.gradschool).order("created_at DESC").limit(1)
             
         elsif @user.industry == nil and @user.prep != nil 
-            @jobs = Job.all.order("created_at DESC").limit(2)
+            @jobs = Job.order("created_at DESC").limit(2)
            @tips= Tip.where(:industry => @user.prep).order("created_at DESC").limit(1)
       
         elsif @user.industry != nil 
                 @jobs = Job.where(:industry => @user.industry).order("created_at DESC").limit(2)
                 @tips= Tip.where(:industry => @user.industry).order("created_at DESC").limit(1)
         else
-             @tips = Tip.all.order("created_at DESC").limit(1)    
-             @jobs = Job.all.order("created_at DESC").limit(2)
+             @tips = Tip.order("created_at DESC").limit(1)    
+             @jobs = Job.order("created_at DESC").limit(2)
         end
     
         if @user.gradschool != nil 
@@ -106,17 +106,15 @@ class ProfileController < ApplicationController
                   @indeed_search = IndeedAPI.search_jobs(:q => "marketing "  + @user.firstjob , :limit => 10, :l => @city )
             elsif @user.industry == "Creatives"
                   @indeed_search = IndeedAPI.search_jobs(:q => "entrepreneur "  + @user.firstjob , :limit => 10, :l => @city )
+            elsif @user.industry == nil and @user.firstjob != nil 
+                @indeed_search = IndeedAPI.search_jobs(:q => @user.firstjob , :limit => 10, :l => @city )
             else
                 @indeed_search = IndeedAPI.search_jobs(:q => "internship" , :limit => 10, :l => @city )
 
             end 
             
-            if @user.industry == nil and @user.firstjob != nil 
-                @indeed_search = IndeedAPI.search_jobs(:q => @user.firstjob , :limit => 10, :l => @city )
-            end
-        else
-              @indeed_search = IndeedAPI.search_jobs(:q => "internship" , :limit => 10, :l => @city )
-        end
+            
+   
          
              @indeed_results = @indeed_search.results
     
