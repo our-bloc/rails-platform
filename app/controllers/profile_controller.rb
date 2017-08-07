@@ -41,9 +41,10 @@ class ProfileController < ApplicationController
         
         #render modals
         if @user.industry == nil
-            @jobs = Job.where(:industry => "All").order("created_at DESC").limit(2)
+            @jobs = Job.where(:industry => "All" ).order("created_at DESC").limit(2)
             
             if @user.gradschool != nil
+            @jobs = Job.where(:industry => "All" ).order("created_at DESC").limit(2)
             @tips= Tip.where(:industry => @user.gradschool).order("created_at DESC").limit(1)
             end
        
