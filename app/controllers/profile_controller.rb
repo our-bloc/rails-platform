@@ -40,20 +40,22 @@ class ProfileController < ApplicationController
             @user = User.find_by_profileurl(params[:profileurl])
         
         #render modals
-        if @user.industry == nil
-            @jobs = Job.order("created_at DESC").limit(2)
-            
-            if @user.gradschool != nil
+       
+        
+        if @user.industry == nil and  @user.gradschool != nil
             @jobs = Job.where(:industry => "All" ).order("created_at DESC").limit(2)
             @tips= Tip.where(:industry => @user.gradschool).order("created_at DESC").limit(1)
-            end
-       
-
+            
+        elsif @user.industry == nil and @user.prep != nil 
+            @jobs = Job.where(:industry => "All" ).order("created_at DESC").limit(2)
+           @tips= Tip.where(:industry => @user.prep).order("created_at DESC").limit(1)
+      
         elsif @user.industry != nil 
                 @jobs = Job.where(:industry => @user.industry).order("created_at DESC").limit(2)
                 @tips= Tip.where(:industry => @user.industry).order("created_at DESC").limit(1)
-        
-        
+        else
+             @tips = Tip.where(:industry => "All" ).order("created_at DESC").limit(1)    
+             @jobs = Job.where(:industry => "All" ).order("created_at DESC").limit(2)
         end
     
         if @user.gradschool != nil 
