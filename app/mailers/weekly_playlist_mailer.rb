@@ -1,5 +1,5 @@
 class WeeklyPlaylistMailer < ApplicationMailer
-    default from: "Bloc Team <amina@ourbloc.co>"
+    default from: "Bloc Team <info@jointhebloc.com>"
 
       def weekly_playlist(user, jobs, tips)
         
@@ -14,7 +14,7 @@ class WeeklyPlaylistMailer < ApplicationMailer
         
       
   
-        mail(to: @user.email , subject: "What do JCole & Kendrick have do to with your career journey?")
+        mail(to: @user.email , subject: "Here is why Jessica Williams is our career inspo (+ your opportunities for the week!)")
         
      end 
 
