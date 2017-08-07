@@ -43,19 +43,19 @@ class ProfileController < ApplicationController
        
         
         if @user.industry == nil and  @user.gradschool != nil
-            @jobs = Job.where(:industry => "All" ).order("created_at DESC").limit(2)
+            @jobs = Job.all.order("created_at DESC").limit(2)
             @tips= Tip.where(:industry => @user.gradschool).order("created_at DESC").limit(1)
             
         elsif @user.industry == nil and @user.prep != nil 
-            @jobs = Job.where(:industry => "All" ).order("created_at DESC").limit(2)
+            @jobs = Job.all.order("created_at DESC").limit(2)
            @tips= Tip.where(:industry => @user.prep).order("created_at DESC").limit(1)
       
         elsif @user.industry != nil 
                 @jobs = Job.where(:industry => @user.industry).order("created_at DESC").limit(2)
                 @tips= Tip.where(:industry => @user.industry).order("created_at DESC").limit(1)
         else
-             @tips = Tip.where(:industry => "All" ).order("created_at DESC").limit(1)    
-             @jobs = Job.where(:industry => "All" ).order("created_at DESC").limit(2)
+             @tips = Tip.all.order("created_at DESC").limit(1)    
+             @jobs = Job.all.order("created_at DESC").limit(2)
         end
     
         if @user.gradschool != nil 
