@@ -13,7 +13,7 @@ class JobsController < ApplicationController
   end
   
   def indeed
-    @indeed_jobs = Job.all
+    @indeed_jobs = Job.all.order("created_at DESC")
 
   end
 
