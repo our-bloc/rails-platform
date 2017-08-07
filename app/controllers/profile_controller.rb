@@ -48,7 +48,7 @@ class ProfileController < ApplicationController
             end
        
 
-        elsif @user.industry != nil
+        elsif @user.industry != nil 
                 @jobs = Job.where(:industry => @user.industry).order("created_at DESC").limit(2)
                 @tips= Tip.where(:industry => @user.industry).order("created_at DESC").limit(1)
         

@@ -18,9 +18,15 @@ task :send_playlist => :environment do
               
             elsif user.industry == nil and user.gradschool != nil 
                 @user = user
-                @job = Job.order("created_at DESC").limit(2)
+                @job = Job.where(:industry => "All").order("created_at DESC").limit(2)
                 @tip = Tip.where(:grad => @user.gradschool).order("created_at DESC").limit(1)
-            else 
+            
+             elsif user.industry == nil and user.prep != nil 
+                @user = user
+                @job = Job.where(:industry => "All").order("created_at DESC").limit(2)
+                @tip = Tip.where(:grad => @user.prep).order("created_at DESC").limit(1)
+                
+            else
                 @user = user
               @job = Job.where(:industry => "Creatives").order("created_at DESC").limit(2)
               @tip = Tip.where(:industry => "Creatives").order("created_at DESC").limit(1)
