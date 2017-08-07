@@ -14,7 +14,7 @@ class WeeklyPlaylistMailer < ApplicationMailer
         
       
   
-        mail(to: @user.email , subject: "Here is why Jessica Williams is our career inspo (+ your opportunities for the week!)")
+        mail(to: @user.email , subject: "Here is why Jessica Williams is our career inspo + your opportunities for the week!")
         
      end 
 
