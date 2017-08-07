@@ -25,7 +25,9 @@ class RsvpsController < ApplicationController
   # POST /rsvps.json
   def create
    
+   
    if !user_signed_in? 
+     if User.find_by_email(params[:rsvp][:email]) == nil
         @user = User.create :name       => params[:rsvp][:name], 
                     :email              => params[:rsvp][:email],
                     :prep               => params[:rsvp][:prep],
@@ -35,6 +37,10 @@ class RsvpsController < ApplicationController
                     :role               =>  params[:role]
 
         sign_in @user
+      else
+       @existing_user= User.find(params[:rsvp][:email]) ==nil
+        sign_in @existing_user
+      end
     else
         @user = current_user
     end 
