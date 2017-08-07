@@ -112,8 +112,7 @@ class ProfileController < ApplicationController
                 @indeed_search = IndeedAPI.search_jobs(:q => "internship" , :limit => 10, :l => @city )
 
             end 
-            
-            
+        end
    
          
              @indeed_results = @indeed_search.results
