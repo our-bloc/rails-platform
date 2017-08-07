@@ -89,7 +89,7 @@ class ProfileController < ApplicationController
         
         if @user != nil
             if @user.industry == "Techies"
-                  @indeed_search= IndeedAPI.search_jobs(:q => @user.firstjob + " software" , :limit => 10 , :l => @city )
+                  @indeed_search= IndeedAPI.search_jobs(:q => @user.firstjob + " tech" , :limit => 10 , :l => @city )
               elsif @user.industry == "Advocates"
                   @indeed_search = IndeedAPI.search_jobs(:q => "legal undergraduate " + @user.firstjob , :limit => 10, :l => @city )
               elsif @user.industry == "Educators"
@@ -97,7 +97,7 @@ class ProfileController < ApplicationController
               elsif @user.industry == "Griots"
                   @indeed_search = IndeedAPI.search_jobs(:q => "writing " + @user.firstjob , :limit => 10, :l => @city )
               elsif @user.industry == "Scientists"
-                  @indeed_search = IndeedAPI.search_jobs(:q => "researchU " + @user.firstjob, :limit => 10 )
+                  @indeed_search = IndeedAPI.search_jobs(:q => "research " + @user.firstjob, :limit => 10 )
               elsif @user.industry == "CSuite"
                   @indeed_search = IndeedAPI.search_jobs(:q => "business "  + @user.firstjob , :limit => 10, :l => @city )
             elsif @user.industry == "Activists"
