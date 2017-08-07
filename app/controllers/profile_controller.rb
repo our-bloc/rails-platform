@@ -41,10 +41,10 @@ class ProfileController < ApplicationController
         
         #render modals
         if @user.industry == nil
-            @jobs = Job.where(:industry == "All" ).order("created_at DESC").limit(2)
+            @jobs = Job.order("created_at DESC").limit(2)
             
             if @user.gradschool != nil
-            @jobs = Job.where(:industry == "All" ).order("created_at DESC").limit(2)
+            @jobs = Job.where(:industry => "All" ).order("created_at DESC").limit(2)
             @tips= Tip.where(:industry => @user.gradschool).order("created_at DESC").limit(1)
             end
        
@@ -108,6 +108,10 @@ class ProfileController < ApplicationController
                 @indeed_search = IndeedAPI.search_jobs(:q => "internship" , :limit => 10, :l => @city )
 
             end 
+            
+            if @user.industry == nil and @user.firstjob != nil 
+                @indeed_search = IndeedAPI.search_jobs(:q => @user.firstjob , :limit => 10, :l => @city )
+            end
         else
               @indeed_search = IndeedAPI.search_jobs(:q => "internship" , :limit => 10, :l => @city )
         end
