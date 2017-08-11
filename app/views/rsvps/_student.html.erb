@@ -111,16 +111,13 @@
         </div>
     </div> 
     
-    <div class="center-align">
-        <%= f.submit "Register", :class => "btn waves cyan white-text lighen-1 center-align"%> 
-        </div>
   
 
 <div class="center-align"> 
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" 
           data-key="<%= Rails.application.secrets.stripe_publishable_key %>"
           data-description="Almost there!"
-          data-amount="6500"
+          data-amount="<%= params[:price] %>" %> 
           data-email=" "
           data-locale="auto"> 
     </script>

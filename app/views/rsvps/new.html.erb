@@ -6,7 +6,7 @@
           <h5> November 3rd <% if params[:role] != "Community Org" %> & 4th <% end %> </h5>
           
           <% if params[:role] == "Student" %> 
-          <h5 class="yellow-text"> $65 early registration</h5>
+          <h5 class="yellow-text"> $ <%= params[:price].to_i / 100 %> early registration</h5>
           <% end %> 
           
           

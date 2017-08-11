@@ -5,7 +5,7 @@
     <% @users_all.each do |user| %>   
         <div class="card horizontal white" style="width:50%; height: 40%">
             <div class="card-content teal-text">
-                <h5><%= link_to user.name, edit_user_registration_path(user.id) %> </h5> 
+                <h5><%= link_to user.name, admin_profile_path(user.id) %> </h5> 
         
                    <% if user.prep != nil%> 
                        <h6><%= user.prep %> </h6>
@@ -23,4 +23,4 @@
         </div> 
     <% end %> 
     <% end %> 
- 
+    clL

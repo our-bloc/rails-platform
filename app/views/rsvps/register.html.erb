@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title class="grey-text"> bloc. </title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="lib/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="lib/device-mockups/device-mockups.min.css">
+
+    <!-- Theme CSS -->
+    <link href="css/new-age.css" rel="stylesheet">
+    
+    <!-- Scroll Lock --> 
+    <% content_for :javascript_includes do %>
+  <%= javascript_include_tag "scrollLock.js" %>
+<% end %>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top">
+
+    <%= render 'welcome/conference_nav' %> 
+
+    <header>
+      
+        <div class="container">
+            
+            <div class="row" >
+                <div class="col s12 l12">
+                    <div class="header-content">
+                        <div class="header-content-inner">
+                            <br> 
+                            <h1 class="white-text center-align" style="z-index: 1"> Take charge of your career </h1>
+                             
+                        <!-- FORM FOR REGISTRATION --> 
+                             
+                            
+                                <div class="row center-align" style="width: 100%"> 
+                                    <div class="col l4 s12"> 
+                                        <h2> Starter Pack $25  </h2>
+                                        <ul> Conference registration </ul>
+                                        <ul> Access to online resources (resume templates, Students interviews) </ul>
+                                        <ul> </ul>
+                                        
+                                    <%= link_to "REGISTER", new_rsvp_path(:event_name => "Bloc Conference", :role => "Student", :price => "2500"), 
+                                    class: "conference_button waves-effect cyan btn white-text lighten-1",   style:"margin-top: .5em, margin-bottom: 2em" %>
+
+                                    </div>
+                                    
+                                    <div class="col l4 s12" style="background-color:grey"> 
+                                        <h2> Full Access $50 </h2>
+                                       <ul>  All of the above + </ul>
+                                        <ul> Bloc Crewneck  </ul>
+                                        <ul> Resume review (edits for your reference & a revised copy)</ul>
+                                        
+                                        <div> 
+                                             <%= link_to "REGISTER", new_rsvp_path(:event_name => "Bloc Conference", :role => "Student", :price => "5000"), 
+                                        class: "conference_button waves-effect cyan btn white-text lighten-1",   style:"margin-top: .5em, margin-bottom: 2em" %>
+                                       </div>
+                                        <div style="height: 5em"> <h5 class="yellow-text"> our most popular choice </h5> </div>
+                                    
+                                    </div> 
+                                        
+                                    <div class="col l4 s12"> 
+                                        <h2> VIP $75 </h2>
+                                        <ul> All of the above</ul>
+                                        <ul> Invitation to Influencers mixer </ul>
+                                        <ul> One on one coaching session </ul>
+                                        
+                                         <%= link_to "REGISTER", new_rsvp_path(:event_name => "Bloc Conference", :role => "Student", :price => "7500"), 
+                                    class: "conference_button waves-effect cyan btn white-text lighten-1",   style:"margin-top: .5em, margin-bottom: 2em" %>
+                                    </div>
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+  
+
+   
+    <footer>
+        <div class="container">
+            <p>&copy; 2017 Our Bloc. All Rights Reserved.</p>
+         
+                <!--
+                <li>
+                    <a href="#">Privacy</a>
+                </li>
+                <li>
+                    <a href="#">Terms</a>
+                </li>
+                <li>
+                    <a href="#">FAQ</a>
+                </li>
+                -->
+            </ul>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="lib/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/new-age.min.js"></script>
+
+</body>
+
+</html>
+
+<script> 
+
+$( document ).ready(function() {
+    $('body').css('overflow','hidden');
+    $('body').attr('scroll','no');
+});
+   
+</script>
+
+<style>
+    header {
+        background-image: url("/img/conference/bg.png");
+        height: 100%; 
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>

@@ -1,6 +1,6 @@
 
                                 <div class="col l4 s12" style="padding: 2%">
-                                    <%= link_to "REGISTER TO ATTEND", new_rsvp_path(:event_name => "Bloc Conference", :role => "Student"), class: "conference_button waves-effect cyan btn white-text lighten-1",
+                                    <%= link_to "REGISTER TO ATTEND", register_path, class: "conference_button waves-effect cyan btn white-text lighten-1",
                                     style:"margin-top: .5em, margin-bottom: 2em" %>
                                 </div>
                                 
@@ -10,8 +10,7 @@
                                 </div>
                                 
                                 <div class="col l4 s12" style="padding: 2%">
-                                    <%= link_to "REGISTER AS SPEAKER", new_rsvp_path(:event_name => "Bloc Conference", :role => "Panelist"), class: "conference_button waves-effect cyan btn white-text lighten-1",
-                                    style:"margin-top: .5em, margin-bottom: 2em" %>
+                                    <%= link_to "REGISTER AS SPEAKER", new_rsvp_path(:event_name => "Bloc Conference", :role => "Panelist"), class: "conference_button waves-effect cyan btn white-text lighten-1",   style:"margin-top: .5em, margin-bottom: 2em" %>
                                 </div>
                        
                        

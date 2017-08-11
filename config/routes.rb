@@ -42,7 +42,8 @@ Rails.application.routes.draw do
   get '/hello', to: 'welcome#hello', as: :hello
   get '/morehouse', to: 'welcome#hello', as: :morehouse
   get '/conference', to: 'welcome#conference', as: :conference
-
+  get '/admin', to: 'profile#admin', as: :admin_profile
+  get '/register', to: 'rsvps#register', as: :register
 
   get '/myprofile', to: 'profile#myprofile', as: :myprofile
   get '/myplaylist', to: 'profile#playlist', as: :playlist

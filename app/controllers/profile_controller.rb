@@ -132,6 +132,14 @@ class ProfileController < ApplicationController
         
   
     end
+    
+    def admin
+        @user = User.find(params[:id])
+    end
+    
+    def admin_update
+        @user.update
+    end
 
     
     def set_profile
