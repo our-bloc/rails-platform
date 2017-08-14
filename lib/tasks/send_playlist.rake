@@ -4,7 +4,7 @@ task :send_playlist => :environment do
         
      @users.each do |user|
         
-        if user.role == "Panelist"
+        if user.role != "Panelist"
             if user.industry != nil 
               @user = user
               @job = Job.where(:industry => @user.industry).order("created_at DESC").limit(2)
