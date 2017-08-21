@@ -159,7 +159,7 @@
 														<% if @jobs != nil %>
 														<%  @jobs.each do |job| %>
 															<p style="color:#4dd0e1; font-weight: bold; text-transform: uppercase; padding: 2%"> <%= job.title %> @ <%= job.company %> </p>
-															<p> <%= truncate(job.description, :limit => 1200) %> </p>
+															<p> <%= job.description %> </p>
 															<p> <%= link_to "Apply Now", job.link %> </p>
 
 														<% end %> 
