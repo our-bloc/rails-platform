@@ -14,7 +14,7 @@ class WeeklyPlaylistMailer < ApplicationMailer
         
       
   
-        mail(to: @user.email , subject: "3 quick career lessons & your weekly opportunities")
+        mail(to: @user.email , subject: "Pay me what you owe me...3 career tips inspired by Shonda's move to Netflix")
         
      end 
 
