@@ -38,8 +38,10 @@
 
   <div class="field">
     <%= f.label :industry %>
-    <%= f.hidden_field :industry , :id =>"field_jobindustry" %>
-    
+    <%= f.hidden_field :industry , :id =>"field_jobindustry1" %>
+    <%= f.hidden_field :industry2 , :id =>"field_jobindustry2" %>
+    <%= f.hidden_field :industry3 , :id =>"field_jobindustry3" %>
+
     <div class="job_industry white-text btn waves-effect waves-light" id="Griots"> Griots </div>
     <div class="job_industry white-text btn waves-effect waves-light" id="Techies"> Techies </div>
     <div class="job_industry white-text btn waves-effect waves-light" id="Scientists"> Scientists </div>
@@ -51,6 +53,7 @@
     <div class="job_industry white-text btn waves-effect waves-light" id="Creatives"> Creatives </div>
     <div class="job_industry white-text btn waves-effect waves-light" id="All"> All </div>
   </div>
+  
 
   <div class="actions">
     <%= f.submit %>
@@ -60,13 +63,26 @@
 
 
 <script>
-  $('.job_industry').click(function(){
-      var idval = $(this).attr("id");
-      console.log(idval);
+
+      var count = 1; 
+    
+       $('.job_industry').click(function(){
+          $(this).css ({
+            'border' : "5px solid yellow" });
           
-      $('#field_jobindustry').val(idval);
-            
-  });
+          var idval = $(this).attr("id");
+          console.log(idval + count);
+         
+          
+          var form_field = "#field_jobindustry"+count ; 
+          
+          console.log (form_field)
+         $(form_field).val(idval);
+          
+          count += 1; 
+         
+       });
+
 
   
 </script>

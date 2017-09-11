@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170727172952) do
+ActiveRecord::Schema.define(version: 20170908175631) do
 
   create_table "ahoy_events", force: :cascade do |t|
     t.integer  "visit_id"
@@ -97,6 +97,8 @@ ActiveRecord::Schema.define(version: 20170727172952) do
     t.date     "deadline"
     t.string   "company"
     t.string   "link"
+    t.string   "industry2"
+    t.string   "industry3"
     t.index ["user_id"], name: "index_jobs_on_user_id"
   end
 
@@ -197,6 +199,8 @@ ActiveRecord::Schema.define(version: 20170727172952) do
     t.string   "gradyear"
     t.integer  "visit_id"
     t.integer  "user_id"
+    t.string   "industry2"
+    t.string   "industry3"
     t.index ["user_id"], name: "index_tips_on_user_id"
   end
 
@@ -254,6 +258,8 @@ ActiveRecord::Schema.define(version: 20170727172952) do
     t.string   "career_services"
     t.string   "linkedin"
     t.string   "login_bypass_token"
+    t.string   "industry2"
+    t.string   "industry3"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

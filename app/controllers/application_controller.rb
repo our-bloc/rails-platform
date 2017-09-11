@@ -77,14 +77,15 @@ class ApplicationController < ActionController::Base
     
   
     added_registration_attrs = [:name, :school, :firstname,
-    :industry, :firstjob, :gradschool, :prep, :style, :major, :gradyear, :office, :companies, :referred_by_user_id, :referred_by, :profileurl ,:career_services , :linkedin ]
+    :industry, :firstjob, :gradschool, :prep, :style, :major, :gradyear, :office, :industry2, :industry3,:companies, :referred_by_user_id, :referred_by, :profileurl ,:career_services , :linkedin ]
     
     
     
     added_profile_attrs = [:name, :school, :profileurl, #resume
     :gradyear, :orgs, :resumelink, :geo ,:hometown ,:company, #context
     :industry, :firstjob, :gradschool, :prep, :style, :office, :companies, #profilequiz
-    :gender, :picture, :timezone, :hometown, :firstname
+    :gender, :picture, :timezone, :hometown, :firstname,
+    :industry2 , :industry3
     ]
   
     devise_parameter_sanitizer.permit :sign_up, keys: added_registration_attrs
