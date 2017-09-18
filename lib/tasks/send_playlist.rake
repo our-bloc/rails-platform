@@ -8,9 +8,14 @@ task :send_playlist => :environment do
             if user.industry != nil 
               @user = user
               @jobs1 = Job.where(:industry => @user.industry).order("created_at DESC").limit(2)
+              if @jobs2 != nil
               @jobs2 = Job.where(:industry2 => @user.industry).order("created_at DESC").limit(2)
+              end
+              
+              if @jobs3 != nil
               @jobs3 = Job.where(:industry3 => @user.industry).order("created_at DESC").limit(1)
-              @jobs = @jobs1 + @jobs2 + @jobs3
+            end
+              @jobs = Job.where(:industry => @user.industry).order("created_at DESC").limit(4)
               
               @tip = Tip.order("created_at DESC").limit(1)
               
