@@ -7,7 +7,11 @@ task :send_playlist => :environment do
         if user.role != "Panelist"
             if user.industry != nil 
               @user = user
-              @job = Job.where(:industry => @user.industry).order("created_at DESC").limit(4)
+              @jobs1 = Job.where(:industry => @user.industry).order("created_at DESC").limit(2)
+              @jobs2 = Job.where(:industry2 => @user.industry).order("created_at DESC").limit(2)
+              @jobs3 = Job.where(:industry3 => @user.industry).order("created_at DESC").limit(1)
+              @jobs = @jobs1 + @jobs2 + @jobs3
+              
               @tip = Tip.order("created_at DESC").limit(1)
               
               
