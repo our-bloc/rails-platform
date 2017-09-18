@@ -14,7 +14,7 @@ class WeeklyPlaylistMailer < ApplicationMailer
         
       
   
-        mail(to: @user.email , subject: "Black career excellence at the Emmy's + your opportunities")
+        mail(to: @user.email , subject: "Black career excellence at the Emmys + your opportunities")
         
      end 
 
