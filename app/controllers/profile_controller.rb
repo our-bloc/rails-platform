@@ -43,25 +43,25 @@ class ProfileController < ApplicationController
        
         
         if @user.industry == nil and  @user.gradschool != nil
-            @jobs = Job.order("created_at DESC").limit(2)
+            @jobs = Job.order("created_at DESC").limit(4)
             @tips= Tip.where(:industry => @user.gradschool).order("created_at DESC").limit(1)
             
         elsif @user.industry == nil and @user.prep != nil 
-            @jobs = Job.order("created_at DESC").limit(2)
+            @jobs = Job.order("created_at DESC").limit(4)
            @tips= Tip.where(:industry => @user.prep).order("created_at DESC").limit(1)
       
         elsif @user.industry != nil
-                @industry1 = Job.where(:industry => @user.industry).order("created_at DESC").limit(2)
-                @industry2 = Job.where(:industry2 => @user.industry).order("created_at DESC").limit(2)
-                @industry3 = Job.where(:industry3 => @user.industry).order("created_at DESC").limit(2)
+                @industry1 = Job.where(:industry => @user.industry).order("created_at DESC").limit(4)
+                @industry2 = Job.where(:industry2 => @user.industry).order("created_at DESC").limit(4)
+                @industry3 = Job.where(:industry3 => @user.industry).order("created_at DESC").limit(4)
                 @jobs = @industry1 + @industry2 + @industry3
             
             
-                @jobs = Job.where(:industry => @user.industry).order("created_at DESC").limit(2)
+                @jobs = Job.where(:industry => @user.industry).order("created_at DESC").limit(4)
                 @tips= Tip.where(:industry => @user.industry).order("created_at DESC").limit(1)
         else
              @tips = Tip.order("created_at DESC").limit(1)    
-             @jobs = Job.order("created_at DESC").limit(2)
+             @jobs = Job.order("created_at DESC").limit(4)
         end
     
         if @user.gradschool != nil 
@@ -96,51 +96,51 @@ class ProfileController < ApplicationController
 
         if @user != nil and @user.firstjob == "Internship" or @user.firstjob == "Fellowship"
             if @user.industry == "Techies"
-                  @indeed_search= IndeedAPI.search_jobs(:q => @user.firstjob + " software" , :limit => 10 , :l => @city )
+                  @indeed_search= IndeedAPI.search_jobs(:q => @user.firstjob + " software" , :limit => 10 )
               elsif @user.industry == "Advocates"
-                  @indeed_search = IndeedAPI.search_jobs(:q => "legal undergraduate " + @user.firstjob, :limit => 10, :l => @city )
+                  @indeed_search = IndeedAPI.search_jobs(:q => "legal undergraduate " + @user.firstjob, :limit => 10)
               elsif @user.industry == "Educators"
-                  @indeed_search = IndeedAPI.search_jobs(:q => "teaching children " + @user.firstjob , :limit => 10, :l => @city )
+                  @indeed_search = IndeedAPI.search_jobs(:q => "teaching children " + @user.firstjob , :limit => 10)
               elsif @user.industry == "Griots"
-                  @indeed_search = IndeedAPI.search_jobs(:q => "writing " + @user.firstjob , :limit => 10, :l => @city )
+                  @indeed_search = IndeedAPI.search_jobs(:q => "writing " + @user.firstjob , :limit => 10)
               elsif @user.industry == "Scientists"
                   @indeed_search = IndeedAPI.search_jobs(:q => "research " + @user.firstjob, :limit => 10 )
               elsif @user.industry == "CSuite"
-                  @indeed_search = IndeedAPI.search_jobs(:q => "business "  + @user.firstjob , :limit => 10, :l => @city )
+                  @indeed_search = IndeedAPI.search_jobs(:q => "business "  + @user.firstjob , :limit => 10)
                 elsif @user.industry == "Activists"
-                      @indeed_search = IndeedAPI.search_jobs(:q => "social justice "  + @user.firstjob, :limit => 10, :l => @city )
+                      @indeed_search = IndeedAPI.search_jobs(:q => "social justice "  + @user.firstjob, :limit => 10)
                 elsif @user.industry == "Creatives"
-                      @indeed_search = IndeedAPI.search_jobs(:q => "creative "  + @user.firstjob , :limit => 10, :l => @city )
+                      @indeed_search = IndeedAPI.search_jobs(:q => "creative "  + @user.firstjob , :limit => 10)
                 elsif @user.industry == "Entrepreneurs"
-                      @indeed_search = IndeedAPI.search_jobs(:q => "entrepreneur "  + @user.firstjob , :limit => 10, :l => @city )
+                      @indeed_search = IndeedAPI.search_jobs(:q => "entrepreneur "  + @user.firstjob , :limit => 10)
                 elsif @user.industry == nil and @user.firstjob != nil 
-                    @indeed_search = IndeedAPI.search_jobs(:q => @user.firstjob , :limit => 10, :l => @city )
+                    @indeed_search = IndeedAPI.search_jobs(:q => @user.firstjob , :limit => 10)
                 else
-                    @indeed_search = IndeedAPI.search_jobs(:q => "internship" , :limit => 10, :l => @city )
+                    @indeed_search = IndeedAPI.search_jobs(:q => "internship" , :limit => 10)
                 end 
             else
                 if @user.industry == "Techies"
-                  @indeed_search= IndeedAPI.search_jobs(:q => "software engineer" , :limit => 10 , :l => @city )
+                  @indeed_search= IndeedAPI.search_jobs(:q => "software engineer" , :limit => 10 )
                   elsif @user.industry == "Advocates"
-                      @indeed_search = IndeedAPI.search_jobs(:q => "legal research ", :limit => 10, :l => @city )
+                      @indeed_search = IndeedAPI.search_jobs(:q => "legal research ", :limit => 10)
                   elsif @user.industry == "Educators"
-                      @indeed_search = IndeedAPI.search_jobs(:q => "teacher ", :limit => 10, :l => @city )
+                      @indeed_search = IndeedAPI.search_jobs(:q => "teacher ", :limit => 10)
                   elsif @user.industry == "Griots"
-                      @indeed_search = IndeedAPI.search_jobs(:q => "editorial coordinator " , :limit => 10, :l => @city )
+                      @indeed_search = IndeedAPI.search_jobs(:q => "editorial coordinator " , :limit => 10)
                   elsif @user.industry == "Scientists"
                       @indeed_search = IndeedAPI.search_jobs(:q => "research assistant", :limit => 10 )
                   elsif @user.industry == "CSuite"
-                      @indeed_search = IndeedAPI.search_jobs(:q => "business analyst"  , :limit => 10, :l => @city )
+                      @indeed_search = IndeedAPI.search_jobs(:q => "business analyst"  , :limit => 10)
                     elsif @user.industry == "Activists"
-                          @indeed_search = IndeedAPI.search_jobs(:q => "social justice coordinator" , :limit => 10, :l => @city )
+                          @indeed_search = IndeedAPI.search_jobs(:q => "social justice coordinator" , :limit => 10)
                     elsif @user.industry == "Creatives"
-                          @indeed_search = IndeedAPI.search_jobs(:q => "creative coordinator " , :limit => 10, :l => @city )
+                          @indeed_search = IndeedAPI.search_jobs(:q => "creative coordinator " , :limit => 10)
                     elsif @user.industry == "Entrepreneurs"
-                          @indeed_search = IndeedAPI.search_jobs(:q => "entrepreneur " , :limit => 10, :l => @city )
+                          @indeed_search = IndeedAPI.search_jobs(:q => "entrepreneur " , :limit => 10)
                     elsif @user.industry == nil and @user.firstjob != nil 
-                        @indeed_search = IndeedAPI.search_jobs(:q => @user.firstjob , :limit => 10, :l => @city )
+                        @indeed_search = IndeedAPI.search_jobs(:q => @user.firstjob , :limit => 10)
                     else
-                        @indeed_search = IndeedAPI.search_jobs(:q => "research analyst" , :limit => 10, :l => @city )
+                        @indeed_search = IndeedAPI.search_jobs(:q => "research analyst" , :limit => 10)
         
                     end 
         end
