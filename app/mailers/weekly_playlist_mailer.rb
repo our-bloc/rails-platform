@@ -2,7 +2,7 @@ class WeeklyPlaylistMailer < ApplicationMailer
     default from: "Bloc Team <info@jointhebloc.com>"
 
       def weekly_playlist(user, jobs, tips)
-        
+      
         @user = user
         @jobs= jobs
         @tips = tips
@@ -14,7 +14,7 @@ class WeeklyPlaylistMailer < ApplicationMailer
         
       
   
-        mail(to: @user.email , subject: "Black career excellence at the Emmys + your opportunities")
+        mail(to: @user.email , subject: "There's nothing wrong with playing the game..." )
         
      end 
 
