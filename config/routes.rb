@@ -44,6 +44,8 @@ Rails.application.routes.draw do
   get '/conference', to: 'welcome#conference', as: :conference
   get '/admin', to: 'profile#admin', as: :admin_profile
   get '/register', to: 'rsvps#register', as: :register
+  get '/search', to: 'search_engine#search', as: :search 
+
 
   get '/myprofile', to: 'profile#myprofile', as: :myprofile
   get '/myplaylist', to: 'profile#playlist', as: :playlist

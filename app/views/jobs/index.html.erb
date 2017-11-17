@@ -12,6 +12,8 @@
         <td> 
         <h5> <%= link_to job.title, job.link ,class:"cyan-text lighten-1 job_title" %></h5>
           <p class="grey-text job_company"> <%= job.company  %></p>
+                    <%= @similarity %> 
+
         </td>
 
         <% if user_signed_in? and current_user.name =="Amina Yamusah" %>
@@ -22,6 +24,7 @@
           <td><%= link_to 'Edit', edit_job_path(job) %></td>
           <td><%= link_to 'Delete', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <% end %> 
+        
     
       </div>
     <% end %>
