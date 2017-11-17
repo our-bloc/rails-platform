@@ -1,0 +1,761 @@
+<%= form_tag(jobs_path, :method => "get") do %>
+ <div class="search_field"  >
+      <%= text_field_tag :search, params[:search], placeholder: "Search for more resume templates, cover letter templates, and resources here... " %>
+</div>
+ 
+  
+  <div id="quiz"> 
+                
+                    
+                    <!-- DREAM JOB PORTION OF QUIZ --> 
+                    <section class="section_dream_job" style="margin-top: -20%">
+                    <div id="dreamjob">
+                    <div id="dream_section">
+                        <div class="row">
+                            <div class="col l12 s12">
+                                <h5 style="opacity:1; z-index: 2" class="cyan-text lighten-1 dream_h5"> 1. WHAT TYPE OF OPPORTUNITY ARE YOU LOOKING FOR? </h5>  
+                                
+                                <%= hidden_field :firstjob , params[:firstjob], :id => "field_firstjob", :placeholder => "intern? fellow? entry level?" %>
+                                 <div class="dream_buttons">
+                                <div class="dream_job_button white-text btn waves-effect cyan lighten-1" id="Internship"> Internships (Paid, please!) </div>
+                                <div class="dream_job_button white-text btn waves-effect cyan lighten-1" id="Fellowship"> Fellowships </div>
+                                <div class="dream_job_button white-text btn waves-effect cyan lighten-1" id="Entry Level Position"> Entry Level Positions </div>
+                                <div class="dream_job_button white-text btn waves-effect cyan lighten-1" id="Graduate Program"> Grad Programs </div>
+                                <div class="dream_job_button white-text btn waves-effect cyan lighten-1" id="Job Promotion"> Job Promotion </div>
+                                </div>
+                            </div>
+                    </div>
+                    </div>
+                    </section>
+                    <!-- end dream job portion of quiz --> 
+                    
+                    
+                    
+                    
+                    <section class="section_industry"> 
+                    <div class="row"> 
+                        <div class="col l12"> 
+                            <h5 id="industry_section" style="margin-top: 20%" class="cyan-text lighten-1"> 2. YOUR INDUSTRY? </h5>
+                           
+                              <div class="industry">
+                            
+                                <%= hidden_field_tag :industry, params[:industry], :id => "field_tag_industry" %>
+                                <%= hidden_field_tag :school ,params[:school], :id => "field_tag_school",  :value => params[:university]  %>
+                
+                    
+                                <img class="form_pic" id="Activists" src ="/img/icons/activists.png" >
+                                <img class="form_pic" id="Advocates" src ="/img/icons/advocates.png" >
+                                <img class="form_pic" id="Techies" src ="/img/icons/techies.png" >
+                                <img class="form_pic" id="Entrepreneurs" src ="/img/icons/entrepreneurs.png" >
+                                <img class="form_pic" id="Creatives" src ="/img/icons/creatives.png" >
+                                <img class="form_pic" id="Scientists" src ="/img/icons/scientists.png" >
+                                <img class="form_pic" id="CSuite" src ="/img/icons/csuite.png" >
+                                <img class="form_pic" id="Educators" src ="/img/icons/educators.png" >
+                                <img class="form_pic" id="Griots"  src="/img/icons/griots.png" > 
+                                
+                                 <div> 
+                                  <div id="Griots_description" class="industry_description"> authors, poets, journalists, thought influencers, playwrights, bloggers </div>
+                                  <div id="Advocates_description" class="industry_description"> legal professionals, politicians, advocacy professionals </div>
+                                  <div id="Techies_description" class="industry_description"> software & hardware engineers, IT, data scientists, product managers </div>
+                                  <div id="Scientists_description" class="industry_description"> doctors, research scientists, mathmeticians, medical professionals </div>
+                                  <div id="CSuite_description" class="industry_description"> CEOs, business VPs, financial analysts, consultants, marketing leaders  </div>
+                                  <div id="Educators_description" class="industry_description"> teachers, professors, education reformers </div>
+                                  <div id="Activists_description" class="industry_description"> community organizers, social entrepreneurs </div>
+                                  <div id="Creatives_description" class="industry_description"> artists, creatives, entertainers </div>
+                                </div>
+                        </div>
+                    </div>
+                    
+                    </section>
+                    <!-- end industry portion of quiz --> 
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <!-- STYLE PORTION OF QUIZ --> 
+                    <section> 
+                    <div class="style" id="style">
+                        <div style="height: 10em"> </div>
+                        
+                        <div class="row">
+                            <div class="col l12 s12"> 
+                                <h5 class="cyan-text lighten-1"> 3. WHO IS YOUR DREAM MENTOR? </h5>
+                        
+                                <%= hidden_field_tag :style , params[:style],:id => "field_tag_style" %>
+                            
+                                <img id="Olivia" src ="https://media1.popsugar-assets.com/files/thumbor/Dxm6nPdGeW51cBEPGJhst0j4QRM/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2014/09/25/775/n/1922283/417e9e397005660b_olivia-pope-options/i/When-She-Absolutely-Fearless.gif" class="style_pic">
+                                <img id="Earn" src ="http://ww2.kqed.org/pop/wp-content/uploads/sites/12/2016/10/glover.gif" class="style_pic"> 
+                                <img id="Jackson" src ="https://media.giphy.com/media/sA34qgVDgXFQY/giphy.gif" class="style_pic"> 
+                                <img id="Issa" src ="https://media.giphy.com/media/26tjZjCi41r0cVsKQ/giphy.gif" class="style_pic">
+                             </div>
+                             
+                          </div>
+                        </div>
+                    </section>
+                    <!-- end style portion of quiz --> 
+                    
+                    <!-- grad school section --> 
+                    <section id="grad_section"> 
+                        <div class="row">
+                            <div class="col l12 s12">
+                                <%= hidden_field_tag :gradschool ,params[:gradschool], :id =>"field_tag_grad" %>
+                                <h5 id"grad_header" style=" opacity:1; z-index: 2" class="cyan-text lighten-1"> 4. WHAT ARE YOUR GRAD SCHOOL DREAMS? </h5>  
+                      
+                                
+                                <div class="grad_button white-text btn waves-effect cyan lighten-1" id="Master's Program"> Masters Program </div>
+                                <div class="grad_button white-text btn waves-effect cyan lighten-1" id="PhD Program"> PhD Program </div>
+                                <div class="grad_button white-text btn waves-effect cyan lighten-1" id="Med School"> Med School </div>
+                                <div class="grad_button white-text btn waves-effect cyan lighten-1" id="Law School"> Law School </div>
+                                <div class="grad_button white-text btn waves-effect cyan lighten-1" id="Business School"> Business School </div>
+                                <div class="grad_button white-text btn waves-effect cyan lighten-1" id="None"> None for me </div>
+                                <div class="grad_button white-text btn waves-effect cyan lighten-1" id="Maybe"> Still deciding </div>
+                                
+                            </div>
+                        </div>
+                    </section>
+                    
+                    
+                        
+                    <!-- prep section -->
+                    <section id="prep_head">
+                        <div class="row">
+                            <div class="col l12 s12">
+                                <div id="prep_section" > 
+                                 <h5 class="cyan-text lighten-1"> 5. WHAT IS YOUR LARGEST CAREER STRUGGLE RIGHT NOW? </h5>
+                         
+                                
+                            
+                                <%= hidden_field_tag :prep,params[:prep], :id => "field_tag_prep" %> 
+                        
+                                <div id="salary_negotiation" class="prep_button white-text btn waves-effect cyan lighten-1"> Nailing my interviews </div>
+                                <div id="revise_resume" class="prep_button white-text btn waves-effect cyan lighten-1"> Getting my resume together </div>
+                                <div id="need_jobs" class="prep_button white-text btn waves-effect cyan lighten-1"> Finding & applying to jobs I care about</div>
+                                <div id="cover_letters" class="prep_button white-text btn waves-effect cyan lighten-1"> Cover letters...sigh </div>
+                                <div id="personal_statements" class="prep_button white-text btn waves-effect cyan lighten-1"> Writing personal statements </div>
+                                <div id="salary_negotiation" class="prep_button white-text btn waves-effect cyan lighten-1"> Negotiating my salary </div>
+                    
+                    
+                               </div>
+                               </div>
+                             </div>
+                        </div> 
+                       </section>
+                    
+                
+                    
+                     
+                     <section id="info_section"> 
+                     <div class=row> 
+                        <div class="col s12 l12">
+                             <h5> ALL SET! WHERE SHOULD WE SEND YOUR ADVICE? </h5>
+                        </div> 
+                        
+                        <div class="col s12 l12">
+                   
+                              <%= text_field_tag :name %>
+                       
+                              <%= email_field_tag :email%>
+                         </div> 
+                         </div>
+                      </div>
+                      <%= hidden_field_tag :refererred_by_user_id , :value => "1" %> 
+                      <%= hidden_field_tag :refererred_by , :value => "1" %> 
+                      <%= hidden_field_tag :referral_code , value: session[:referer]%> 
+                    
+                     
+                    
+                     </section> 
+                 </div>
+  
+  
+  
+  
+  
+  
+  <% end %>
+  <%= yield %>
+  
+  
+
+<script>
+
+
+$(document).ready(function(){
+     $('html,body').animate({
+            scrollTop: $("html").offset().top},
+            'slow');
+    
+});
+
+ 
+        
+//don't submit form on enter
+
+//on hover, show industry descriptions
+ $('.form_pic').hover(function(){
+        var industry = "#"+ $(this).attr("id") + "_description";
+            $(industry).css({
+                'display': 'block'
+        }); 
+            
+            }); 
+            
+$('.form_pic').mouseout(function(){
+        var industry = "#"+ $(this).attr("id") + "_description";
+            console.log(industry);
+            
+            $(industry).css({
+                'display': 'none'
+        }); 
+            
+            }); 
+        
+
+//SCRIPT FOR DREAM JOB
+$('.mobile_scroll').click(function(){
+        $('.quiz').show();
+        $('html,body').animate({
+            scrollTop: $("#dreamjob").offset().top},
+            'slow');
+        }); 
+
+
+
+//SCRIPT FOR DREAM JOB
+
+
+
+    $('.dream_job_button').click(function(){
+            var idval = $(this).attr("id");
+
+            $("#field_firstjob").val(idval);
+            
+            $(this).css({
+            'border': '4px solid yellow'
+            }); 
+       
+
+        $('html,body').animate({
+            scrollTop: $(".section_industry").offset().top},
+            'slow');
+        }); 
+//SCRIPT FOR INDUSTRY SECTION OF QUIZ
+    $('.form_pic').click(function(){
+        var industryval = $(this).attr("id");
+            console.log(industryval);
+            
+        $("#field_industry").val(industryval);
+            
+        
+        $(this).css({
+        'border': '4px solid yellow'
+        }); 
+        
+        $(this).siblings().css({
+            'border': 'none'
+            }); 
+            
+        $('html,body').animate({
+            scrollTop: $("#style").offset().top},
+            'slow');
+    });
+    
+    
+    
+//SCRIPT FOR STYLE  SECTION OF QUIZ    
+     $('.style_pic').click(function(){
+        var styleval = $(this).attr("id");
+            console.log(styleval);
+            
+            $("#field_style").val(styleval);
+            
+        $(this).css({
+        'border': '4px solid yellow'
+        }); 
+       
+        $(this).siblings().css({
+            'border': 'none'
+            }); 
+        $('html,body').animate({
+            scrollTop: $("#grad_section").offset().top},
+            'slow');
+
+
+     }); 
+        
+   
+    
+// Grad Section 
+       $('.grad_button').click(function(){
+            var idval = $(this).attr("id");
+            console.log(idval);
+            
+            $("#field_grad").val(idval);
+            
+            $(this).css({
+            'border': '4px solid yellow'
+            }); 
+       
+
+        $('html,body').animate({
+            scrollTop: $("#prep_head").offset().top},
+            'slow');
+        }); 
+        
+        
+//Major & Class 
+ $('#submit_major').click(function(){
+        $('html,body').animate({
+            scrollTop: $("#info_section").offset().top},
+            'slow');
+        }); 
+
+// career services * linkedin
+ $('.services_button').click(function(){
+            var idval = $(this).attr("id");
+            console.log(idval);
+            
+            $("#field_career_services").val(idval);
+            
+            $(this).css({
+            'border': '4px solid yellow'
+            }); 
+        }); 
+        
+ $('.linkedin_button').click(function(){
+            var idval = $(this).attr("id");
+            console.log(idval);
+            
+            $("#field_linkedin").val(idval);
+            
+            $(this).css({
+            'border': '4px solid yellow'
+            }); 
+            
+             $('html,body').animate({
+            scrollTop: $("#prep_head").offset().top},
+            'slow');
+        }); 
+        
+        
+       
+        
+// SUBMIT FORM AFTER CHOOSING PREP 
+     $('.prep_button').click(function(){
+         var idval = $(this).attr("id");
+            console.log(idval);
+            
+             $('#field_prep').val(idval);
+             
+            $(this).css({
+            'border': '4px solid yellow'
+            }); 
+            
+            $(this).siblings().css({
+                'border': 'none'
+                }); 
+            $('form').submit();
+            
+                }); 
+        
+        
+    
+
+$( document ).ready(function() {
+  
+});
+   
+</script>
+
+
+
+
+
+
+<style> 
+
+html{
+    height: 100%;
+    padding: 0%;
+    font-size: 3em;
+    background-color: white;
+}
+
+.confirm_bg{
+    background-color: #4dd0e1; 
+    position: fixed; 
+    height: 100% ; 
+    top: 0%; 
+    left: 0%;
+}
+.confirm_text h5{
+    color: white;
+}
+.mobile_scroll{
+    display:none;
+}
+form {
+    position: absolute;
+    width: 50%;
+}
+.row {
+    width:100%;
+}
+h5{
+    color:  #4dd0e1;
+    width: 70%;
+    z-index: 3;
+    font-size: 2.5em;
+    margin-top: 12%;
+}
+
+h4{
+    font-size: 2.5em;
+    margin-bottom: -5%;
+    margin-top: -2;
+}
+
+input{
+    line-height: 1.2em;
+    padding: 0%;
+    color: #4dd0e1;
+    margin: 0%;
+    font-size: 1em;
+}
+.btn {
+    width: 70%;
+    margin: 1%;
+}
+
+line-height: 1.2;
+}
+
+
+
+.btn:hover {
+    border: 2px solid yellow;
+}
+
+.confirm_text{
+    margin: 10%;
+    width: 100%; 
+}
+.industry_description {
+    margin-top: 2em;
+    display:none;
+    color: white;
+    font-size: 2em;
+    font-family: Montserrat;
+}
+.form_pic{
+    background-color: white;
+    width: 23%;
+    margin: 1%;
+    border: 4px solid  #4dd0e1;
+}
+
+.form_pic:hover {
+    border: 4px solid yellow;
+    background-color: white;
+}
+
+.style_pic{
+    width: 45%;
+    margin: 1%;
+    border: 4px solid  #4dd0e1;
+    background-color: white;
+}
+
+.style_pic:hover {
+    border: 4px solid yellow;
+}
+
+
+
+.industry{
+ 
+    
+}
+table{
+    padding:0%;
+}
+
+td{
+    margin: ;
+}
+.industry a:hover {
+    background-color: white;
+}
+
+#firstbutton{
+    margin-bottom: 100%;
+}
+#header{
+    position: fixed;
+    top: 0%
+    left: 0%;
+    width: 100%;
+    color: grey;
+    background-color: white;
+   
+}
+
+body {
+	background: white;
+	opacity: .8;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	font-family: "Montserrat";
+	}
+	
+#user-header{
+    top: 1%;
+    font-size: 6em;
+    font-family: "Montserrat";
+    color: teal;
+    margin-bottom:0%;
+    
+}
+
+#dreamjob{
+    padding-top: 30%;
+    border-radius: 3em;
+	}
+	
+
+
+
+#nextbutton{
+     margin-bottom: 40%;
+    }
+
+#dreamjob input{
+   color: white;
+}
+
+.white {
+    position: relative;
+    background: none;
+    width: 150%;
+    left: -15%;
+    margin-top: 0%;
+    padding: 8% 20% 100% 20%;
+}
+section {
+    padding: 10% 10% 10% 5%;
+    margin-bottom: 100%;
+
+}
+
+#prep_section{
+    margin-top: 1%;
+}
+
+a:hover {
+    background-color: white;
+}
+
+.style{
+    padding: -10%;
+}
+
+.prep_button{
+    padding-left: 2%;
+    padding-right: 2%;
+}
+.prep_button:hover , .grad_button:hover, .dream_job_button:hover{
+    border: 4px solid yellow;
+}
+
+.field_school, .field_major , .field_gradyear{
+    width: 100%;
+    font-size: .8em;
+}
+.grad_button{
+    width: 70%;
+    margin: 1% 10%;
+    padding: .5% 0%;
+}
+
+.dream_job_button{
+    width: 70%;
+    padding: .5% 0%;
+    margin: 1%;
+}
+@media only screen and (max-device-width: 480px){
+    html{
+        font-size: 6em;
+        line-height: 5em;
+    }
+   .quiz{
+       display: none;
+   }
+    .confirm_bg{
+        background-color: white; 
+        color: #4dd0e1;
+        position: absolute; 
+        height: 100% ; 
+        top: 0%; 
+        left: 0%;
+    }
+    h5{
+        color: #4dd0e1;
+    }
+    .dream_buttons{
+        position: relative;
+        top: -10em;
+    }
+    .hide_mobile{
+        display:none;
+    }
+    .confirm_text h5{
+        color: #4dd0e1;
+    }
+    .mobile_scroll{
+        display:inline ;
+    }
+    
+    form{
+        position: absolute;
+        top: 100%;
+        width: 100%;
+    }
+    .quiz{
+        width: 100%;
+    }
+    h5 {
+        color: white;
+        text-align: center;
+        width: 90%;
+        font-size: 4em;
+        margin-top: 30%;
+    }
+
+    
+
+    button {
+        height: 10em;
+        font-size: 5em;
+        margin: 1%;
+        padding: 2%;
+    }
+   .section_industry{
+       padding-top: 10%;
+   }
+   section{
+       padding-top: 20%;
+   }
+    .industry{
+        position:relative;
+        top: 10em;
+        width: 105%;
+        padding: 0% 0%;
+    }
+  
+    
+     .style_pic{
+         border: 10px solid #4dd0e1;
+     }
+    section{
+        height: 100%;
+    }
+    .grad_button{
+        height: 2.52em;
+        width: 20%;
+        padding: 2%;
+        margin: 2%;
+    }
+    
+    .dream_job_button{
+       width: 90%;
+        font-size: 2.5em;
+        margin: 1% 0% ;
+        height: 2.52em;
+        padding: 2%;
+    }
+    .form_pic{
+        width: 28%;
+        margin: 1%;
+        border: 10px solid #4dd0e1;
+    }
+    #submit_firstjob{
+        width: 100%;
+        padding: 5%;
+        height: 4em;
+        font-size: 2em;
+    }
+     #submit_major{
+        width: 100%;
+        padding: 5%;
+        height: 4em;
+        font-size: 2em;
+    }
+    #dream_section h5{ 
+        top: 30%;
+        margin-bottom: 50%;
+    }
+   
+  
+    
+    .style_pic {
+        width: 45%;
+    }
+    
+    .style h5{
+        margin-bottom: 40%;
+    }
+    .grad_button{
+        width: 90%;
+        font-size: 2.5em;
+    }
+    
+    .services_button{
+        width: 90%;
+        font-size: 2.5em;
+        height: 2.52em;
+        margin: 1% 0% ;
+        padding: 2%;
+    }
+    
+    .linkedin_button{
+        width: 90%;
+        font-size: 2.5em;
+        margin: 1% 0% ;
+        height: 2.52em;
+        padding: 2%;
+
+    }
+    
+    .prep_button{
+        width: 90%;
+        font-size: 2.5em;
+        margin: 1% 0% ;
+        height: 2.52em;
+        padding: 2%;
+
+    }
+    
+    #grad_header{
+        margin-bottom: 10em; 
+    }
+    
+    #services_head h6{
+        color: white;
+        font-size: 2em;
+    }
+    
+    input{
+        width: 90%;
+    }
+    .btn{
+        width: 90%;
+        font-size: 2.5em;
+        margin: 1% 0% ;
+        height: 2.52em;
+        padding: 2%;
+    }
+}
