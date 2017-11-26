@@ -24,6 +24,7 @@ gem 'indeed_api'
 
 #recommendation engine
 gem 'geocoder'
+gem 'httparty'
 
 # payments
 gem 'stripe'
@@ -34,9 +35,13 @@ gem 'omniauth-facebook'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 
+gem 'watir'
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+
+gem 'mechanize'
 
 
 # Use Uglifier as compressor for JavaScript assets

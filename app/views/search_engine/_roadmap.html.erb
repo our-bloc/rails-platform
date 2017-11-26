@@ -1,0 +1,83 @@
+  <h5 style="margin-top: 10%"> Your Road Map </h5> <h5> Black Millennial Inspiration</h5>
+  
+  <div class="row">
+        <div class="col s12 l4">
+          <div class="card">
+            <div class="card-image">
+              <img src="https://images.pexels.com/photos/175696/pexels-photo-175696.jpeg?h=350&auto=compress&cs=tinysrgb">
+              <span class="card-title white-text strong">Use this resume template</span>
+            </div>
+            <div class="card-content">
+              <p>This resume template is clean, vetted by Wharton's career services team, and shows you how to quantify your past experience and format your experience</p>
+            </div>
+            <div class="card-action">
+              <a href="#">Download it now</a>
+            </div>
+          </div>
+        </div>
+        
+          <div class="col s12 l4">
+          <div class="card">
+            <div class="card-image">
+              <img src="https://static.pexels.com/photos/167528/pexels-photo-167528.jpeg">
+              <span class="card-title white-text">Interview Questions you need to know</span>
+            </div>
+            <div class="card-content">
+              <p> Your network is your network...use these email templates to get the plug from a 
+              1. Professor <br>
+              2. Alum<br>
+              3. Friend who graduated before your or had an opportunity you want<br>
+              4. Past employer or colleague<br>
+              </p>
+            </div>
+            <div class="card-action">
+              <a href="#">Download it now</a>
+            </div>
+          </div>
+        </div>
+     
+        <div class="col s12 l4">
+          <div class="card">
+            <div class="card-image">
+              <img src="https://images.pexels.com/photos/47224/pexels-photo-47224.jpeg?h=350&auto=compress&cs=tinysrgb">
+              <span class="card-title white-text">Leverage Your Network</span>
+            </div>
+            <div class="card-content">
+              <p>This is the ultimate informational resume template</p>
+            </div>
+            <div class="card-action">
+              <a href="#">Download it now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+  
+      
+      
+      
+  <h5> You can easily apply for these jobs too... </h5>
+
+  <% @jobs.each do |job| %> 
+         <h5> <%= job.title %> </h5>
+         
+      <% end %> 
+      
+  <%  @indeed_results[0...5].each do |job| %>
+      
+        <p><%= link_to job.job_title + " @ " + job.company , job.url  , :class => "cyan-text lighten-1" %> </p>
+              
+         
+    <% end %> 
+              
+  <h5> More Resources You Can Take Advantage of ... </h5>
+      <% @tips.each do |tip| %> 
+         <h5> <%= tip.title %> </h5>
+      <% end %> 
+
+    <%  @musedata[0...5].each do |tip| %> 
+          <p> <%= link_to tip["name"] , "https://www.themuse.com/advice/"+ tip["short_name"].to_s%> </p>
+                    <p> <%= tip["url"] %> </p>
+
+        <% end %> 
+       

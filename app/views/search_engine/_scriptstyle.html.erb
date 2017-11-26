@@ -1,0 +1,617 @@
+<script>
+
+
+$(document).ready(function(){
+    
+    $(".top-div").css({
+                'display': 'inline'
+        });
+        
+
+    $('#quiz').css({
+                'display': 'none'
+        });
+    
+     $('html,body').animate({
+            scrollTop: $("html").offset().top},
+            'slow');
+    
+});
+ 
+        
+//don't submit form on enter
+$(document).keypress(function(e) {
+  if(e.which == 13) {
+    // enter pressed
+        e.preventDefault();
+        
+         
+        $(".top-div").css({
+                'display': 'none'
+        }); 
+
+           
+         $("#quiz").css({
+                'display': 'inline'
+        });
+         
+  }
+});
+ 
+        
+//don't submit form on enter
+
+//on hover, show industry descriptions
+ $('.form_pic').hover(function(){
+        var industry = "#"+ $(this).attr("id") + "_description";
+            $(industry).css({
+                'display': 'block'
+        }); 
+            
+            }); 
+            
+$('.form_pic').mouseout(function(){
+        var industry = "#"+ $(this).attr("id") + "_description";
+            console.log(industry);
+            
+            $(industry).css({
+                'display': 'none'
+        }); 
+            
+            }); 
+        
+
+//SCRIPT FOR DREAM JOB
+$('.mobile_scroll').click(function(){
+        $('.quiz').show();
+        $('html,body').animate({
+            scrollTop: $("#dreamjob").offset().top},
+            'slow');
+        }); 
+
+
+
+//SCRIPT FOR DREAM JOB
+
+
+
+    $('.dream_job_button').click(function(){
+            var idval = $(this).attr("id");
+
+            $("#field_firstjob").val(idval);
+            
+            $(this).css({
+            'border': '4px solid yellow'
+            }); 
+       
+
+        $('html,body').animate({
+            scrollTop: $(".section_industry").offset().top},
+            'slow');
+        }); 
+//SCRIPT FOR INDUSTRY SECTION OF QUIZ
+    $('.form_pic').click(function(){
+        var industryval = $(this).attr("id");
+            console.log(industryval);
+            
+        $("#field_industry").val(industryval);
+            
+        
+        $(this).css({
+        'border': '4px solid yellow'
+        }); 
+        
+        $(this).siblings().css({
+            'border': 'none'
+            }); 
+            
+        $('html,body').animate({
+            scrollTop: $("#style").offset().top},
+            'slow');
+    });
+    
+    
+    
+//SCRIPT FOR STYLE  SECTION OF QUIZ    
+     $('.style_pic').click(function(){
+        var styleval = $(this).attr("id");
+            console.log(styleval);
+            
+            $("#field_style").val(styleval);
+            
+        $(this).css({
+        'border': '4px solid yellow'
+        }); 
+       
+        $(this).siblings().css({
+            'border': 'none'
+            }); 
+        $('html,body').animate({
+            scrollTop: $("#grad_section").offset().top},
+            'slow');
+
+
+     }); 
+        
+   
+    
+// Grad Section 
+       $('.grad_button').click(function(){
+            var idval = $(this).attr("id");
+            console.log(idval);
+            
+            $("#field_grad").val(idval);
+            
+            $(this).css({
+            'border': '4px solid yellow'
+            }); 
+       
+
+        $('html,body').animate({
+            scrollTop: $("#prep_head").offset().top},
+            'slow');
+        }); 
+        
+        
+//Major & Class 
+ $('#submit_major').click(function(){
+        $('html,body').animate({
+            scrollTop: $("#info_section").offset().top},
+            'slow');
+        }); 
+
+// career services * linkedin
+ $('.services_button').click(function(){
+            var idval = $(this).attr("id");
+            console.log(idval);
+            
+            $("#field_career_services").val(idval);
+            
+            $(this).css({
+            'border': '4px solid yellow'
+            }); 
+        }); 
+        
+ $('.linkedin_button').click(function(){
+            var idval = $(this).attr("id");
+            console.log(idval);
+            
+            $("#field_linkedin").val(idval);
+            
+            $(this).css({
+            'border': '4px solid yellow'
+            }); 
+            
+             $('html,body').animate({
+            scrollTop: $("#prep_head").offset().top},
+            'slow');
+        }); 
+        
+        
+       
+        
+// SUBMIT FORM AFTER CHOOSING PREP 
+     $('.prep_button').click(function(){
+         var idval = $(this).attr("id");
+            console.log(idval);
+            
+             $('#field_prep').val(idval);
+             
+            $(this).css({
+            'border': '4px solid yellow'
+            }); 
+            
+            $(this).siblings().css({
+                'border': 'none'
+                }); 
+            $('form').submit();
+            
+                }); 
+        
+        
+    
+
+$( document ).ready(function() {
+  
+});
+   
+</script>
+
+
+
+
+
+
+<style> 
+
+html{
+    height: 100%;
+    padding: 0%;
+    font-size: 3em;
+    background-color: white;
+}
+
+#search_field {
+    font-size: 2em ;
+    width: 80%;
+}
+
+
+
+.confirm_bg{
+    background-color: #4dd0e1; 
+    position: fixed; 
+    height: 100% ; 
+    top: 0%; 
+    left: 0%;
+}
+.confirm_text h5{
+    color: white;
+}
+.mobile_scroll{
+    display:none;
+}
+form {
+    position: absolute;
+    width: 100%;
+}
+.row {
+    width:100%;
+}
+h5{
+    color:  #4dd0e1;
+    width: 70%;
+    z-index: 3;
+    font-size: 2.5em;
+    margin-top: 0%;
+}
+
+h4{
+    font-size: 2.5em;
+    margin-bottom: -5%;
+    margin-top: -2;
+}
+
+input{
+    line-height: 1.2em;
+    padding: 0%;
+    color: #4dd0e1;
+    margin: 0%;
+    font-size: 1em;
+}
+.btn {
+    width: 70%;
+    margin: 1%;
+}
+
+line-height: 1.2;
+}
+
+
+
+.btn:hover {
+    border: 2px solid yellow;
+}
+
+.confirm_text{
+    margin: 10%;
+    width: 100%; 
+}
+.industry_description {
+    margin-top: 2em;
+    display:none;
+    color: white;
+    font-size: 2em;
+    font-family: Montserrat;
+}
+.form_pic{
+    background-color: white;
+    width: 23%;
+    margin: 1%;
+    border: 4px solid  #4dd0e1;
+}
+
+.form_pic:hover {
+    border: 4px solid yellow;
+    background-color: white;
+}
+
+.style_pic{
+    width: 45%;
+    margin: 1%;
+    border: 4px solid  #4dd0e1;
+    background-color: white;
+}
+
+.style_pic:hover {
+    border: 4px solid yellow;
+}
+
+
+
+.industry{
+ 
+    
+}
+table{
+    padding:0%;
+}
+
+td{
+    margin: ;
+}
+.industry a:hover {
+    background-color: white;
+}
+
+#firstbutton{
+    margin-bottom: 100%;
+}
+#header{
+    position: fixed;
+    top: 0%
+    left: 0%;
+    width: 80%;
+    color: grey;
+    background-color: white;
+   
+}
+
+body {
+	background: white;
+	opacity: .8;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	font-family: "Montserrat";
+	padding-left: 15%;
+	}
+	
+#user-header{
+    top: 1%;
+    font-size: 6em;
+    font-family: "Montserrat";
+    color: teal;
+    margin-bottom:0%;
+    
+}
+
+#dreamjob{
+    padding-top: 30%;
+    border-radius: 3em;
+	}
+	
+
+
+
+#nextbutton{
+     margin-bottom: 40%;
+    }
+
+#dreamjob input{
+   color: white;
+}
+
+.white {
+    position: relative;
+    background: none;
+    width: 150%;
+    left: -15%;
+    margin-top: 0%;
+    padding: 8% 20% 100% 20%;
+}
+section {
+    padding: 10% 10% 10% 5%;
+    margin-bottom: 100%;
+
+}
+
+#prep_section{
+    margin-top: 1%;
+}
+
+a:hover {
+    background-color: white;
+}
+
+.style{
+    padding: -10%;
+}
+
+.prep_button{
+    padding-left: 2%;
+    padding-right: 2%;
+}
+.prep_button:hover , .grad_button:hover, .dream_job_button:hover{
+    border: 4px solid yellow;
+}
+
+.field_school, .field_major , .field_gradyear{
+    width: 100%;
+    font-size: .8em;
+}
+.grad_button{
+    width: 70%;
+    margin: 1% 10%;
+    padding: .5% 0%;
+}
+
+.dream_job_button{
+    width: 70%;
+    padding: .5% 0%;
+    margin: 1%;
+}
+@media only screen and (max-device-width: 480px){
+    html{
+        font-size: 6em;
+        line-height: 5em;
+    }
+   .quiz{
+       display: none;
+   }
+    .confirm_bg{
+        background-color: white; 
+        color: #4dd0e1;
+        position: absolute; 
+        height: 100% ; 
+        top: 0%; 
+        left: 0%;
+    }
+    h5{
+        color: #4dd0e1;
+    }
+    .dream_buttons{
+        position: relative;
+        top: -10em;
+    }
+    .hide_mobile{
+        display:none;
+    }
+    .confirm_text h5{
+        color: #4dd0e1;
+    }
+    .mobile_scroll{
+        display:inline ;
+    }
+    
+    form{
+        position: absolute;
+        top: 100%;
+        width: 90%;
+        left: 10em;
+    }
+    .quiz{
+        width: 100%;
+    }
+    h5 {
+        color: white;
+        text-align: center;
+        width: 90%;
+        font-size: 4em;
+        margin-top: 30%;
+    }
+
+    
+
+    button {
+        height: 10em;
+        font-size: 5em;
+        margin: 1%;
+        padding: 2%;
+    }
+   .section_industry{
+       padding-top: 10%;
+   }
+   section{
+       padding-top: 20%;
+   }
+    .industry{
+        position:relative;
+        top: 10em;
+        width: 105%;
+        padding: 0% 0%;
+    }
+  
+    
+     .style_pic{
+         border: 10px solid #4dd0e1;
+     }
+    section{
+        height: 100%;
+    }
+    .grad_button{
+        height: 2.52em;
+        width: 20%;
+        padding: 2%;
+        margin: 2%;
+    }
+    
+    .dream_job_button{
+       width: 90%;
+        font-size: 2.5em;
+        margin: 1% 0% ;
+        height: 2.52em;
+        padding: 2%;
+    }
+    .form_pic{
+        width: 28%;
+        margin: 1%;
+        border: 10px solid #4dd0e1;
+    }
+    #submit_firstjob{
+        width: 100%;
+        padding: 5%;
+        height: 4em;
+        font-size: 2em;
+    }
+     #submit_major{
+        width: 100%;
+        padding: 5%;
+        height: 4em;
+        font-size: 2em;
+    }
+    #dream_section h5{ 
+        top: 30%;
+        margin-bottom: 50%;
+    }
+   
+  
+    
+    .style_pic {
+        width: 45%;
+    }
+    
+    .style h5{
+        margin-bottom: 40%;
+    }
+    .grad_button{
+        width: 90%;
+        font-size: 2.5em;
+    }
+    
+    .services_button{
+        width: 90%;
+        font-size: 2.5em;
+        height: 2.52em;
+        margin: 1% 0% ;
+        padding: 2%;
+    }
+    
+    .linkedin_button{
+        width: 90%;
+        font-size: 2.5em;
+        margin: 1% 0% ;
+        height: 2.52em;
+        padding: 2%;
+
+    }
+    
+    .prep_button{
+        width: 90%;
+        font-size: 2.5em;
+        margin: 1% 0% ;
+        height: 2.52em;
+        padding: 2%;
+
+    }
+    
+    #grad_header{
+        margin-bottom: 10em; 
+    }
+    
+    #services_head h6{
+        color: white;
+        font-size: 2em;
+    }
+    
+    input{
+        width: 90%;
+    }
+    .btn{
+        width: 90%;
+        font-size: 2.5em;
+        margin: 1% 0% ;
+        height: 2.52em;
+        padding: 2%;
+    }
+}
