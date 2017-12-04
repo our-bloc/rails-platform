@@ -23,7 +23,9 @@ class User < ApplicationRecord
     has_many :feedbacks
     has_many :events
     
+    #created on user create
     has_one :profile
+    has_many :resumes
 
   #RECOMMENDATION ENGINE
 
@@ -38,6 +40,15 @@ class User < ApplicationRecord
     def build_profile
       Profile.create(user: self) 
     end
+    
+  #Build user's first template after sign up 
+    after_create :build_resume 
+      
+    def build_resume 
+        Resume.create(user: self)
+    end 
+    
+    
     
   #create user without password
     def password_required?

@@ -32,7 +32,11 @@ Rails.application.routes.draw do
   resources :asks
   resources :influencers
   
-  
+  resources :resume
+  resources :experience
+
+
+
  
 
   get '/sharesasks', to: 'sharesasks#index', as: :sharesasks
@@ -45,6 +49,7 @@ Rails.application.routes.draw do
   get '/admin', to: 'profile#admin', as: :admin_profile
   get '/register', to: 'rsvps#register', as: :register
   get '/search', to: 'search_engine#search', as: :search 
+  get '/resumebuilder', to: 'resume#build', as: :resumebuilder 
 
 
   get '/myprofile', to: 'profile#myprofile', as: :myprofile
@@ -71,6 +76,6 @@ Rails.application.routes.draw do
     end
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  # resources :users do
-  # end
+  resources :users do
+  end
 end

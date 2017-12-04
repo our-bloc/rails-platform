@@ -1,0 +1,72 @@
+<h2>Admin Edit Users </h2>
+
+<%= form_for @user do |f| %>
+  
+
+  
+
+  <div class="form-group">
+      <%= f.label :name %>
+      <%= f.text_field :name, class: "edit-wrapper" %>
+  </div>
+   
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, class: "edit-wrapper"%>
+  </div>
+  
+ <h2> Professional  </h2>
+ 
+  <div class="form-group">
+      <%= f.label :industry %>
+      <%= f.text_field :industry, class: "edit-wrapper" %>
+  </div>
+  
+   <div class="form-group">
+      <%= f.label :profileurl %>
+      <%= f.text_field :profileurl, class: "edit-wrapper" %>
+  </div>
+
+  <div class="form-group">
+      <%= f.label :style %>
+      <%= f.text_field :style, class: "edit-wrapper" %>
+  </div>
+  
+  <div class="form-group">
+      <%= f.label :hometown %>
+      <%= f.text_field :hometown, class: "edit-wrapper" %>
+  </div>
+  
+  
+   <div class="form-group">
+      <%= f.label :firstjob %>
+      <%= f.text_field :firstjob, class: "edit-wrapper" %>
+  </div>
+  
+   <div class="form-group">
+      <%= f.label :prep %>
+      <%= f.text_field :prep, class: "edit-wrapper" %>
+  </div>
+   
+
+
+
+ <h2> Education </h2>
+  <div class="form-group">
+      <%= f.label :school %>
+      <%= f.text_field :school, class: "edit-wrapper" %>
+  </div>
+
+  <div class="form-group">
+      <%= f.label "Graduation Year" %>
+      <%= f.text_field :gradyear, class: "edit-wrapper" %>
+  </div>
+
+<div class="form-group">
+      <%= f.label :major %>
+      <%= f.text_field :major, class: "edit-wrapper" %>
+  </div>
+
+</div>
+<% end %> 

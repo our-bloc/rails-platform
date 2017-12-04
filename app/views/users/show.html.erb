@@ -1,0 +1,37 @@
+<p>
+  <b>Name:</b>
+  <%= best_in_place @user, :name %>
+</p>
+<p>
+  <b>Email:</b>
+  <%= best_in_place @user, :email %>
+</p>
+<p>
+  <b>Gender:</b>
+  <%= best_in_place @user, :gender, type: :select, collection: [["Male", "Male"], ["Female", "Female"], ["", "Unspecified"]] %>
+</p>
+<p>
+  <b>Public profile:</b>
+  <%= best_in_place @user, :style, type: :checkbox, collection: %w[No Yes] %>
+</p>
+<p>
+  <%= best_in_place @user, :experience, type: :textarea %>
+</p>
+
+
+<script>
+      $('.best_in_place').best_in_place()
+</script>
+
+<style> 
+.purr {
+  position: fixed;
+  top: 30px;
+  right: 100px;
+  width: 250px;
+  padding: 20px;
+  background-color: #FCC;
+  border: solid 2px #C66;
+  &:first-letter { text-transform: uppercase; }
+}
+</style>

@@ -1,0 +1,21 @@
+<div class="menu"> 
+            <div class="col s12 logo"> 
+                <br>
+                <h2 style="font-family: Montserrat; font-size: 2em" class="cyan-text lighten-1"> Bloc <br> Opportunities Board</h2>   
+            </div>
+            
+            <div> 
+                
+
+            
+            </div>
+            
+            <div class="favorities"> 
+                <% if @tips_liked != nil %>
+                <% @tips_liked.each do |fave| %> 
+                    <%= fave.title %> 
+                <% end %> 
+                <% end %> 
+                
+            </div>
+        </div>

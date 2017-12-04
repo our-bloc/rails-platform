@@ -1,14 +1,20 @@
-  <h5 style="margin-top: 10%"> Your Road Map </h5> <h5> Black Millennial Inspiration</h5>
   
+  
+  <h5 style="margin-top: 10%"> Your Resume Template </h5> 
+    <%= render "search_engine/resumebuilder" %> 
+    
+    
+  <h5 style="margin-top: 10%"> More Resources </h5> 
+
   <div class="row">
         <div class="col s12 l4">
           <div class="card">
             <div class="card-image">
               <img src="https://images.pexels.com/photos/175696/pexels-photo-175696.jpeg?h=350&auto=compress&cs=tinysrgb">
-              <span class="card-title white-text strong">Use this resume template</span>
+              <span class="card-title white-text strong">Use this cover letter template</span>
             </div>
             <div class="card-content">
-              <p>This resume template is clean, vetted by Wharton's career services team, and shows you how to quantify your past experience and format your experience</p>
+              <p>This template is clean, vetted by Wharton's career services team, and shows you how to quantify your past experience and format your experience</p>
             </div>
             <div class="card-action">
               <a href="#">Download it now</a>
@@ -23,11 +29,8 @@
               <span class="card-title white-text">Interview Questions you need to know</span>
             </div>
             <div class="card-content">
-              <p> Your network is your network...use these email templates to get the plug from a 
-              1. Professor <br>
-              2. Alum<br>
-              3. Friend who graduated before your or had an opportunity you want<br>
-              4. Past employer or colleague<br>
+              <p> Your network is your network...use these email templates to get the plug from an alum, professor, 
+              mentor and friend. 
               </p>
             </div>
             <div class="card-action">
@@ -70,14 +73,14 @@
          
     <% end %> 
               
-  <h5> More Resources You Can Take Advantage of ... </h5>
+  <h5> More Career Advice ... </h5>
       <% @tips.each do |tip| %> 
          <h5> <%= tip.title %> </h5>
       <% end %> 
 
     <%  @musedata[0...5].each do |tip| %> 
-          <p> <%= link_to tip["name"] , "https://www.themuse.com/advice/"+ tip["short_name"].to_s%> </p>
-                    <p> <%= tip["url"] %> </p>
+          <p style="color:#4dd0e1"> <%= link_to tip["name"] , "https://www.themuse.com/advice/"+ tip["short_name"].to_s , :style => "color:#4dd0e1" %> </p>
+                  
 
         <% end %> 
        

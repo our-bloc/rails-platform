@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dates: MyString
+  type: 
+  detail1: MyString
+  detail2: MyString
+  detail3: MyString
+  detail4: MyString
+  title: MyString
+  position: MyString
+  location: MyString
+  resume_id: 1
+  user_id: 1
+
+two:
+  dates: MyString
+  type: 
+  detail1: MyString
+  detail2: MyString
+  detail3: MyString
+  detail4: MyString
+  title: MyString
+  position: MyString
+  location: MyString
+  resume_id: 1
+  user_id: 1

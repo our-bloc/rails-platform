@@ -25,7 +25,7 @@ gem 'indeed_api'
 #recommendation engine
 gem 'geocoder'
 gem 'httparty'
-
+gem 'best_in_place'
 # payments
 gem 'stripe'
 #authentication gems

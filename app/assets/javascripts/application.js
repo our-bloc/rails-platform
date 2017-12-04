@@ -14,6 +14,11 @@
 //= require ahoy
 //= require welcome
 //= require jquery_ujs 
+
+//= require best_in_place
+//= require jquery.purr
+//= require best_in_place.purr
+
 //= require app.js
 //= require init.js
 //= require materialize/extras/nouislider

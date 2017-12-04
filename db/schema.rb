@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170929222846) do
+ActiveRecord::Schema.define(version: 20171129002915) do
 
   create_table "ahoy_events", force: :cascade do |t|
     t.integer  "visit_id"
@@ -46,6 +46,22 @@ ActiveRecord::Schema.define(version: 20170929222846) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "image"
+  end
+
+  create_table "experiences", force: :cascade do |t|
+    t.string   "dates"
+    t.string   "type"
+    t.string   "detail1"
+    t.string   "detail2"
+    t.string   "detail3"
+    t.string   "detail4"
+    t.string   "title"
+    t.string   "position"
+    t.string   "location"
+    t.integer  "resume_id"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "feedbacks", force: :cascade do |t|
@@ -141,6 +157,24 @@ ActiveRecord::Schema.define(version: 20170929222846) do
     t.index ["user_id"], name: "index_resources_on_user_id"
   end
 
+  create_table "resumes", force: :cascade do |t|
+    t.string   "name"
+    t.string   "address"
+    t.string   "email"
+    t.string   "public"
+    t.string   "school"
+    t.string   "type"
+    t.string   "languageskills"
+    t.string   "computerskills"
+    t.string   "activities"
+    t.string   "interests"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.integer  "user_id"
+    t.string   "phone"
+    t.index ["user_id"], name: "index_resumes_on_user_id"
+  end
+
   create_table "rsvps", force: :cascade do |t|
     t.string   "school"
     t.string   "gradyear"
@@ -176,6 +210,15 @@ ActiveRecord::Schema.define(version: 20170929222846) do
     t.text     "bio"
     t.index ["event_id"], name: "index_rsvps_on_event_id"
     t.index ["user_id"], name: "index_rsvps_on_user_id"
+  end
+
+  create_table "searches", force: :cascade do |t|
+    t.string   "query"
+    t.string   "category"
+    t.string   "industry"
+    t.integer  "frequency"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "sectors", force: :cascade do |t|

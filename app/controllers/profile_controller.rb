@@ -1,6 +1,7 @@
 class ProfileController < ApplicationController
      before_action :set_profile, only: [:edit, :update, :destroy]
-     
+     respond_to :html, :json
+
     def index
         
      
@@ -22,8 +23,9 @@ class ProfileController < ApplicationController
     
     def show
         @user = User.find_by_profileurl(params[:profileurl])
-     
-       
+        @user.update_attributes(params[:user])
+        respond_with @user
+        
         #loads influencer text & image
 
         if @referral_count != nil

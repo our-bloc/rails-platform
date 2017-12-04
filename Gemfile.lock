@@ -55,6 +55,9 @@ GEM
     autoprefixer-rails (6.7.2)
       execjs
     bcrypt (3.1.11)
+    best_in_place (3.1.1)
+      actionpack (>= 3.2)
+      railties (>= 3.2)
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
@@ -262,6 +265,7 @@ PLATFORMS
 
 DEPENDENCIES
   ahoy_matey
+  best_in_place
   bootstrap-sass (~> 3.3.6)
   bundler
   byebug
