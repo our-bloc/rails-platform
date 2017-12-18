@@ -23,8 +23,8 @@ class SearchEngineController < ApplicationController
         
         @resume = Resume.find_by_user_id(current_user.id)
         
-        @resume.update_attributes(:name => current_user.name, 
-                                :email => current_user.email ) 
+        @resume.update_attributes(:name => params[:name], 
+                                :email => params[:email] ) 
 
 
         if @resume.experiences[0] == nil
@@ -58,7 +58,7 @@ class SearchEngineController < ApplicationController
          @jobs = Job.search(params[:search])
          @tips = Tip.search(params[:search])
     
-        @musetips = HTTParty.get('https://api-v2.themuse.com/posts?tag=Engineering&page=1&descending=true',
+        @musetips = HTTParty.get('https://api-v2.themuse.com/posts?tag=Internships&page=1&descending=true',
         :headers =>{'Content-Type' => 'application/json'} )
         
         

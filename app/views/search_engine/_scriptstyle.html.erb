@@ -1,9 +1,6 @@
 <script>
 
 
-
- 
-    
     $(".top-div").css({
                 'display': 'inline'
         });
@@ -64,8 +61,7 @@ $('.highlight').click(function(){
             
 $('.form_pic').mouseout(function(){
         var industry = "#"+ $(this).attr("id") + "_description";
-            console.log(industry);
-            
+
             $(industry).css({
                 'display': 'none'
         }); 
@@ -104,8 +100,7 @@ $('.mobile_scroll').click(function(){
 //SCRIPT FOR INDUSTRY SECTION OF QUIZ
     $('.form_pic').click(function(){
         var industryval = $(this).attr("id");
-            console.log(industryval);
-            
+
         $("#field_industry").val(industryval);
             
         
@@ -125,18 +120,16 @@ $('.mobile_scroll').click(function(){
     
     
 //SCRIPT FOR STYLE  SECTION OF QUIZ 
-    $('.hide_info').click(function(){
-        $('#info_section').hide(0);
-    })
     
-    $('.hide_typo').click(function(){
-        $('#typo_section').hide(0);
-    })
+    $('.hide_section').click(function(){
+       $(this).parent('section').hide();
+    });
+    
+  
     
      $('.style_pic').click(function(){
         var styleval = $(this).attr("id");
-            console.log(styleval);
-            
+
             $("#field_style").val(styleval);
             
         $(this).css({
@@ -158,8 +151,7 @@ $('.mobile_scroll').click(function(){
 // Grad Section 
        $('.grad_button').click(function(){
             var idval = $(this).attr("id");
-            console.log(idval);
-            
+
             $("#field_grad").val(idval);
             
             $(this).css({
@@ -183,8 +175,7 @@ $('.mobile_scroll').click(function(){
 // career services * linkedin
  $('.services_button').click(function(){
             var idval = $(this).attr("id");
-            console.log(idval);
-            
+
             $("#field_career_services").val(idval);
             
             $(this).css({
@@ -194,8 +185,7 @@ $('.mobile_scroll').click(function(){
         
  $('.linkedin_button').click(function(){
             var idval = $(this).attr("id");
-            console.log(idval);
-            
+
             $("#field_linkedin").val(idval);
             
             $(this).css({
@@ -213,8 +203,7 @@ $('.mobile_scroll').click(function(){
 // SUBMIT FORM AFTER CHOOSING PREP 
      $('.prep_button').click(function(){
          var idval = $(this).attr("id");
-            console.log(idval);
-            
+
              $('#field_prep').val(idval);
              
             $(this).css({
@@ -266,7 +255,7 @@ p{
     text-decoration: underline;
 }
 .search_bullets {
-    font-size: 1em;
+    font-size: 1.5em;
 }
 .search_input, #search_field input {
     width: 100%; !important;
@@ -489,7 +478,7 @@ a:hover {
         font-size: 6em;
         line-height: 5em;
     }
-   .quiz{
+   #quiz{
        display: none;
    }
     .confirm_bg{
@@ -523,8 +512,9 @@ a:hover {
         width: 90%;
         left: 10em;
     }
-    .quiz{
+    #quiz{
         width: 100%;
+        display: none;
     }
     h5 {
         color: white;

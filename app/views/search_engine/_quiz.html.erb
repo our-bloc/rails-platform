@@ -1,3 +1,5 @@
+
+  
   <div id="quiz"> 
         <section id="info_section"> 
                      <div class=row> 
@@ -7,17 +9,121 @@
                         
                         <div class="col s12 l12">
                    
-                              Your Name<%= text_field_tag :name  %>
-                              Your Email <%= email_field_tag :email  %>
-                              Current School <%= text_field_tag :school  %>
-                              Your Major <%= text_field_tag :major  %>
-                              Class Year <%= text_field_tag :gradyear  %>
+                              Your Name <%= text_field_tag :name , params[:name]  %>
+                              Email  <%= text_field_tag :email , params[:email]  %>
+                              School <%= text_field_tag :school , params[:school]  %>
+                              Major <%= text_field_tag :major , params[:major]  %>
+                              Class Year <%= text_field_tag :gradyear , params[:gradyear]  %>
 
                          </div> 
                          </div>
                          
-                         <div class="hide_info btn btn-large cyan lighten-1" > Next <div> 
+                         <div class="hide_section btn btn-large cyan lighten-1" id="info" > Next <div> 
         </section>   
+        
+        <section id="connection_section"> 
+                     <div class=row> 
+                        <div class="col s12 l12">
+                             <h5>Tell us a little about why you want this opportunity</h5>
+                        </div> 
+                        
+                        <div class="col s12 l12">
+                   
+                              Do you know someone who works there? <%= text_field_tag :job1_reputation  %>
+                              Do you admire the companies reputation? <div><%= check_box_tag :job1_reputation  %></div>
+    
+                              Have you read something positive about them in the news? <%= text_field_tag :job1_reputation %>
+                              Are there any recent product launches/initiatives you are interested in? <%= text_field_tag :job1_reputation  %>
+                              Do you admire the work of a staff member? <%= text_field_tag :job1_reputation  %>
+                              Do you know someone who works there? <%= text_field_tag :job1_reputation  %>
+
+                         </div> 
+                         
+                   
+                         
+
+                    </div>
+                    <div class="hide_section col s4 btn btn-large cyan lighten-1" id="experience"> Next </div> 
+                    <div class="col s4 next  btn btn-large white cyan-text lighten-1" > SKIP </div> 
+
+        </section>
+        
+        <section id="experience_section"> 
+                     <div class=row> 
+                        <div class="col s12 l12">
+                             <h5>Perfect, let's get started on your professional experiences</h5>
+                        </div> 
+                        
+                        <div class="col s12 l12">
+                   
+                              Where are you currently working?<%= text_field_tag :job1_company  %>
+                              What is your title? <%= email_field_tag :job1_title  %>
+                              Where do you work? <%= text_field_tag :job1_location  %>
+                              What is your largest, quantifiable, accomplishment? <%= text_field_tag :job1_achievement  %>
+                              What are your day to day responsibilities? <%= text_field_tag :job1_responsibilities  %>
+                              What is one concrete skill or software you have learned on the job
+                              <%= text_field_tag :job1_skills  %>
+                         </div> 
+                         
+                   
+                         
+
+                    </div>
+                    <div class="hide_section col s4 btn btn-large cyan lighten-1" id="experience"> Next </div> 
+                    <div class="col s4 next  btn btn-large white cyan-text lighten-1" > SKIP </div> 
+
+        </section>
+        
+        <section id="experience2_section"> 
+                     <div class=row> 
+                        <div class="col s12 l12">
+                             <h5>Perfect, let's get started on your professional experiences</h5>
+                        </div> 
+                        
+                        <div class="col s12 l12">
+                   
+                              Where are you currently working?<%= text_field_tag :job2_company  %>
+                              What is your title? <%= email_field_tag :job2_title  %>
+                              Where do you work? <%= text_field_tag :job2_location  %>
+                              What is your largest, quantifiable, accomplishment? <%= text_field_tag :job2_achievement  %>
+                              What are your day to day responsibilities? <%= text_field_tag :job2_responsibilities  %>
+                              What is one concrete skill or software you have learned on the job
+                              <%= text_field_tag :job2_skills  %>
+                         </div> 
+                         
+                   
+                         
+
+                    </div>
+                    <div class="hide_section col s4 btn btn-large cyan lighten-1" id="experience2"> Next </div> 
+                    <div class="col s4 next  btn btn-large white cyan-text lighten-1" > SKIP </div> 
+
+        </section>
+        
+        <section id="experience3_section"> 
+                     <div class=row> 
+                        <div class="col s12 l12">
+                             <h5>Last one... what is your most notable campus leadership role?</h5>
+                        </div> 
+                        
+                        <div class="col s12 l12">
+                   
+                              Your Organization?<%= text_field_tag :leadership_org  %>
+                              Current Title ? <%= email_field_tag :leadership_title  %>
+                              What is your largest, quantifiable, accomplishment? <%= text_field_tag :leadership_achievement  %>
+                              What are your responsibilities? <%= text_field_tag :leadership_responsibilities  %>
+                              What is one concrete skill or software you have learned on the job?
+                              <%= text_field_tag :leadership_skills  %>
+                         </div> 
+                         
+                   
+                         
+
+                    </div>
+                    <div class="hide_section col s4 btn btn-large cyan lighten-1" id="experience3"> Next </div> 
+                    <div class="col s4 next  btn btn-large white cyan-text lighten-1" > SKIP </div> 
+
+        </section>
         
         <section id="typo_section"> 
                      <div class=row> 
@@ -38,8 +144,39 @@
                          </div> 
                          </div>
                          
-                         <div class="hide_typo btn btn-large cyan lighten-1" > Next <div> 
-        </section>   
+                         <div class="hide_section btn btn-large cyan lighten-1" id="typo"> Next <div> 
+        </section>
+        
+        <section id="personal_section"> 
+                <p> I am always on time and expect people to be also</p>    
+                    <%= range_field_tag :grit , params[:firstjob] , :min => 0, :max => 10 %> 
+                
+                <p> I work harder, not smarter and use tech to do automate tedious tasks</p>    
+                    <%= range_field_tag :grit , params[:firstjob] , :min => 0, :max => 10%> 
+                    
+                <p> It's not what you know, but who you know and how you communicate with them</p>    
+                    <%= range_field_tag :grit , params[:firstjob] , :min => 0, :max => 10%>
+                    
+                <p> I am at my best working as part of a team </p>    
+                    <%= range_field_tag :grit , params[:firstjob] , :min => 0, :max => 10%> 
+                    
+                <p> I'd rather pick up a phone or schedule a meeting to handle tense work situations</p>    
+                    <%= range_field_tag :grit , params[:firstjob] , :min => 0, :max => 10%>
+                    
+                <p> I don't ask a question if I think the answer is on google</p>    
+                    <%= range_field_tag :grit , params[:firstjob] , :min => 0, :max => 10%>
+                    
+                <p> There is no such thing as a stupid question, and I err on the side of caution by asking
+                my managers as many clarifying questions as needed</p>    
+                    <%= range_field_tag :grit , params[:firstjob] , :min => 0, :max => 10%>
+                
+                <p> I'd rather hand it a perfect project late than an above average one on time</p>    
+                    <%= range_field_tag :grit , params[:firstjob] , :min => 0, :max => 10%>
+           
+                    <div class="hide_section col s4 btn btn-large cyan lighten-1" id="experience"> Next </div> 
+                    <div class="col s4 next  btn btn-large white cyan-text lighten-1" > SKIP </div> 
+
+        </section>
                 
                     
                     <!-- DREAM JOB PORTION OF QUIZ --> 
@@ -199,31 +336,4 @@
                  </div>
          </div> 
   
-  
-  <script> 
-  $('.chips').material_chip();
-  $('.chips-initial').material_chip({
-    data: [{
-      tag: 'Apple',
-    }, {
-      tag: 'Microsoft',
-    }, {
-      tag: 'Google',
-    }],
-  });
-  $('.chips-placeholder').material_chip({
-    placeholder: 'Enter a tag',
-    secondaryPlaceholder: '+Tag',
-  });
-  $('.chips-autocomplete').material_chip({
-    autocompleteOptions: {
-      data: {
-        'Apple': null,
-        'Microsoft': null,
-        'Google': null
-      },
-      limit: Infinity,
-      minLength: 1
-    }
-  });</script>
   

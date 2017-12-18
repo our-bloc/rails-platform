@@ -26,6 +26,14 @@ gem 'indeed_api'
 gem 'geocoder'
 gem 'httparty'
 gem 'best_in_place'
+
+
+#scraping & get requests
+gem 'phantomjs', :require => 'phantomjs/poltergeist'
+gem 'poltergeist'
+gem 'capybara'
+gem  'nokogiri'
+gem 'pry'
 # payments
 gem 'stripe'
 #authentication gems
