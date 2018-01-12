@@ -1,7 +1,7 @@
 task :jopwell_signup do
 require "capybara/poltergeist"
 require 'pry'
-
+require 'phantomjs'
 
 capybara = Capybara::Session.new(:poltergeist)
 

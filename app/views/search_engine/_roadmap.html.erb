@@ -1,24 +1,24 @@
   
   
-  <h5 style="margin-top: 10%"> Your Resume Template </h5> 
+  <h5 style="margin-top: 10%"> YOUR RESUME TEMPLATE </h5> 
     <%= render "search_engine/resumebuilder" %> 
     
     
-  <h5 style="margin-top: 10%"> More Resources </h5> 
+  <h5 style="margin-top: 10%"> ESSENTIAL RESOURCES </h5> 
 
   <div class="row">
         <div class="col s12 l4">
           <div class="card">
             <div class="card-image">
               <img src="https://images.pexels.com/photos/175696/pexels-photo-175696.jpeg?h=350&auto=compress&cs=tinysrgb">
-              <span class="card-title white-text strong">Use this cover letter template</span>
+              <span class="card-title white-text strong">Nail Your Technical Interviews with These Resources! </span>
             </div>
             <div class="card-content">
-              <p>This template is clean, vetted by Wharton's career services team, and shows you how to quantify your past experience and format your experience</p>
+              <p><a href="www.interviewcake.com"> Interview Cake </a>- free practice technical questions</p>
+              <p><a href="www.interviewing.io"> Interviewing.io </a> - free mock interviews with software engineers at top companies</p>
+
             </div>
-            <div class="card-action">
-              <a href="#">Download it now</a>
-            </div>
+            
           </div>
         </div>
         
@@ -26,16 +26,14 @@
           <div class="card">
             <div class="card-image">
               <img src="https://static.pexels.com/photos/167528/pexels-photo-167528.jpeg">
-              <span class="card-title white-text">Interview Questions you need to know</span>
+              <span class="card-title white-text">Some #BlackGirlsCODE Inspiration! </span>
             </div>
             <div class="card-content">
-              <p> Your network is your network...use these email templates to get the plug from an alum, professor, 
-              mentor and friend. 
-              </p>
+              <p><a href="www.hackernoon.com/200-black-women-in-tech-to-follow-on-twitter-e33a27303b4a?gi=4240cf008795"> 200 Black Women in Tech </a> A list of over 200 black women techies that you can follow on Twitter</p>
+
             </div>
-            <div class="card-action">
-              <a href="#">Download it now</a>
-            </div>
+            
+            
           </div>
         </div>
      
@@ -43,14 +41,13 @@
           <div class="card">
             <div class="card-image">
               <img src="https://images.pexels.com/photos/47224/pexels-photo-47224.jpeg?h=350&auto=compress&cs=tinysrgb">
-              <span class="card-title white-text">Leverage Your Network</span>
+              <span class="card-title white-text">CODE2040 is accepting applications!</span>
+  
             </div>
             <div class="card-content">
-              <p>This is the ultimate informational resume template</p>
+              <p><a href="www.code2040.org"> Apply now!</a> Apply & gain access to a top network of black and Latinx student software developers </p>
             </div>
-            <div class="card-action">
-              <a href="#">Download it now</a>
-            </div>
+           
           </div>
         </div>
       </div>
@@ -59,24 +56,17 @@
       
       
       
-  <h5> You can easily apply for these jobs too... </h5>
+  <h5> YOUR OPPORTUNITIES </h5>
 
-  <% @jobs.each do |job| %> 
-         <h5> <%= job.title %> </h5>
-         
-      <% end %> 
-      
   <%  @indeed_results[0...5].each do |job| %>
       
         <p><%= link_to job.job_title + " @ " + job.company , job.url  , :class => "cyan-text lighten-1" %> </p>
               
          
     <% end %> 
+    
               
-  <h5> More Career Advice ... </h5>
-      <% @tips.each do |tip| %> 
-         <h5> <%= tip.title %> </h5>
-      <% end %> 
+  <h5> MORE CAREER ADVICE ... </h5>
 
     <%  @musedata[0...5].each do |tip| %> 
           <p style="color:#4dd0e1"> <%= link_to tip["name"] , "https://www.themuse.com/advice/"+ tip["short_name"].to_s , :style => "color:#4dd0e1" %> </p>

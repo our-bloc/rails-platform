@@ -26,14 +26,14 @@
 <h6 class="education_header">EDUCATION</h6> 
     <div class="row"> 
         <div class="col s9">
-        <p style="text-transform: uppercase; font-weight: 800"><%= best_in_place @academic_experience, :title , :place_holder => "Morehouse College" %></p>
+        <p style="text-transform: uppercase; font-weight: 800"><%= best_in_place @academic_experience, :position , :place_holder => "Your School" %></p>
         </div>
         
         <div class="col s3">
         <p style="font-weight: 800"><%= best_in_place @academic_experience, :dates , :place_holder => "Expected Graduation & Year" %></p>
         </div>
     </div>
-    <p><%= best_in_place @academic_experience, :position , :place_holder => "Bachelors of Science in Computer Science" %></p>
+    <p><%= best_in_place @academic_experience, :title , :place_holder => "Your Degree" %></p>
     <p><%= best_in_place @academic_experience, :detail2 , :place_holder => "Fill with Relevant Coursework" %></p>
 
 </div>
@@ -46,12 +46,12 @@
         </div>
         
         <div class="col s3">
-        <p style="font-weight: 800"><%= best_in_place @work_experience, :dates , :place_holder => "Expected Graduation & Year" %></p>
+        <p style="font-weight: 800"><%= best_in_place @work_experience, :dates , :place_holder => "Dates" %></p>
         </div>
     </div>
     
     <div class="row"> 
-    <p><%= best_in_place @work_experience, :position , :place_holder => "Marketing Intern" %></p></ul>
+    <p><%= best_in_place @work_experience, :position , :place_holder => "Your Title" %></p></ul>
     
     <p> &bull; <%= best_in_place @work_experience, :detail2 , :place_holder => "Coordinated £250m pre-IPO private placement within global investor network" %></p>
     <p> &bull;  <%= best_in_place @work_experience, :detail3 , :place_holder => "Started xyz etc..." %></p>
@@ -62,16 +62,16 @@
 
     <div class="row" style="margin-botton: -1%"> 
         <div class="col s9">
-        <p style="text-transform: uppercase; font-weight: 800"><%= best_in_place @work2_experience, :title , :place_holder => "Your Most Recent Opportunity" %></p>
+        <p style="text-transform: uppercase; font-weight: 800"><%= best_in_place @work2_experience, :title , :place_holder => "Your Most Relevant Opportunity" %></p>
         </div>
         
         <div class="col s3">
-        <p style="font-weight: 800"><%= best_in_place @work2_experience, :dates , :place_holder => "Expected Graduation & Year" %></p>
+        <p style="font-weight: 800"><%= best_in_place @work2_experience, :dates , :place_holder => "Dates" %></p>
         </div>
     </div>
     
     <div class="row"> 
-    <p><%= best_in_place @work2_experience, :position , :place_holder => "Marketing Intern" %></p></ul>
+    <p><%= best_in_place @work2_experience, :position , :place_holder => "Title" %></p></ul>
     
     <p> &bull; <%= best_in_place @work2_experience, :detail2 , :place_holder => "Coordinated £250m pre-IPO private placement within global investor network" %></p>
     <p> &bull;  <%= best_in_place @work2_experience, :detail3 , :place_holder => "Started xyz etc..." %></p>
@@ -82,20 +82,20 @@
 
     <div class="row" style="margin-botton: -1%"> 
         <div class="col s9">
-        <p style="text-transform: uppercase; font-weight: 800"><%= best_in_place @academic_experience, :title , :place_holder => "Your Most Recent Opportunity" %></p>
+        <p style="text-transform: uppercase; font-weight: 800"><%= best_in_place @work3_experience, :title , :place_holder => "Your Third Opportunity" %></p>
         </div>
         
         <div class="col s3">
-        <p style="font-weight: 800"><%= best_in_place @work_experience, :dates , :place_holder => "Expected Graduation & Year" %></p>
+        <p style="font-weight: 800"><%= best_in_place @work3_experience, :dates , :place_holder => "Dates" %></p>
         </div>
     </div>
     
     <div class="row"> 
-    <p><%= best_in_place @work_experience, :position , :place_holder => "Marketing Intern" %></p></ul>
+    <p><%= best_in_place @work3_experience, :position , :place_holder => "Your Title" %></p></ul>
     
-    <p> &bull; <%= best_in_place @work_experience, :detail2 , :place_holder => "Coordinated £250m pre-IPO private placement within global investor network" %></p>
-    <p> &bull;  <%= best_in_place @work_experience, :detail3 , :place_holder => "Started xyz etc..." %></p>
-    <p> &bull; <%= best_in_place @work_experience, :detail4 , :place_holder => "Started xyz etc..." %></p>
+    <p> &bull; <%= best_in_place @work3_experience, :detail2 , :place_holder => "Coordinated £250m pre-IPO private placement within global investor network" %></p>
+    <p> &bull;  <%= best_in_place @work3_experience, :detail3 , :place_holder => "Started xyz etc..." %></p>
+    <p> &bull; <%= best_in_place @work3_experience, :detail4 , :place_holder => "Started xyz etc..." %></p>
     </div>
     
 </div>
