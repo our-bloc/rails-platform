@@ -55,13 +55,11 @@ class SearchEngineController < ApplicationController
                   Experience.create :user_id              => current_user.id, 
                                     :resume_id              => @resume.id,
                                     :detail1                 => "Leadership"
-                
             
-        else
               end
         
          @jobs = Job.all.order("created_at DESC")
-         @tips = Tip.all.order("created_at DESC")
+         @tips = Tip.all.order("created_at DESC")s
          @tip = Tip.find(5)
         @influencers = Influencer.all 
         @logo = Partner.find_by_companyurl("thefutureproject")    
@@ -192,6 +190,8 @@ class SearchEngineController < ApplicationController
         @recent_searches = Search.select(:query).distinct.order("created_at DESC")
             
         end
+        
+        redirect_to resumebuilder_path
     end
    
     def recent_search 
