@@ -38,8 +38,11 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    acts_as_votable (0.11.1)
     addressable (2.5.0)
       public_suffix (~> 2.0, >= 2.0.2)
+    after_the_deadline (0.1.3)
+      crack
     ahoy_matey (1.5.4)
       addressable
       browser (~> 2.0)
@@ -54,6 +57,7 @@ GEM
     arel (7.1.4)
     autoprefixer-rails (6.7.2)
       execjs
+    awesome_print (1.8.0)
     bcrypt (3.1.11)
     best_in_place (3.1.1)
       actionpack (>= 3.2)
@@ -71,6 +75,10 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    carrierwave (1.2.2)
+      activemodel (>= 4.0.0)
+      activesupport (>= 4.0.0)
+      mime-types (>= 1.16)
     childprocess (0.8.0)
       ffi (~> 1.0, >= 1.0.11)
     cliver (0.3.2)
@@ -83,6 +91,8 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.4)
+    crack (0.4.3)
+      safe_yaml (~> 1.0.0)
     debug_inspector (0.0.2)
     devise (4.2.0)
       bcrypt (~> 3.0)
@@ -103,6 +113,9 @@ GEM
     formtastic (3.1.4)
       actionpack (>= 3.2.13)
     geocoder (1.4.3)
+    gingerice (1.2.2)
+      addressable
+      awesome_print
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     hashie (3.5.1)
@@ -173,6 +186,7 @@ GEM
       oauth2 (~> 1.0)
       omniauth (~> 1.2)
     orm_adapter (0.5.0)
+    pdfkit (0.8.2)
     pg (0.19.0)
     phantomjs (2.1.1.0)
     poltergeist (1.16.0)
@@ -221,7 +235,9 @@ GEM
     request_store (1.3.2)
     responders (2.3.0)
       railties (>= 4.2.0, < 5.1)
+    rmagick (2.16.0)
     rubyzip (1.2.1)
+    safe_yaml (1.0.4)
     safely_block (0.1.1)
       errbase
     sass (3.4.23)
@@ -277,6 +293,8 @@ GEM
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
+    wicked_pdf (1.1.0)
+    wkhtmltopdf-binary (0.12.3.1)
     xpath (2.1.0)
       nokogiri (~> 1.3)
 
@@ -284,17 +302,21 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  acts_as_votable (~> 0.11.1)
+  after_the_deadline
   ahoy_matey
   best_in_place
   bootstrap-sass (~> 3.3.6)
   bundler
   byebug
   capybara
+  carrierwave
   coffee-rails (~> 4.2)
   devise
   figaro
   formtastic (~> 3.1, >= 3.1.4)
   geocoder
+  gingerice
   httparty
   indeed_api
   jbuilder (~> 2.5)
@@ -305,6 +327,7 @@ DEPENDENCIES
   mechanize
   nokogiri
   omniauth-facebook
+  pdfkit
   pg
   phantomjs
   poltergeist
@@ -312,6 +335,7 @@ DEPENDENCIES
   puma (~> 3.0)
   rails (~> 5.0.0)
   railties
+  rmagick
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
@@ -322,6 +346,8 @@ DEPENDENCIES
   unicorn
   watir
   web-console
+  wicked_pdf
+  wkhtmltopdf-binary
 
 BUNDLED WITH
    1.13.6

@@ -43,24 +43,36 @@
     <%= f.hidden_field :industry2 , :id =>"field_jobindustry2" %>
     <%= f.hidden_field :industry3 , :id =>"field_jobindustry3" %>
 
-    <div class="job_industry white-text btn waves-effect waves-light" id="Griots"> Griots </div>
-    <div class="job_industry white-text btn waves-effect waves-light" id="Techies"> Techies </div>
-    <div class="job_industry white-text btn waves-effect waves-light" id="Scientists"> Scientists </div>
-    <div class="job_industry white-text btn waves-effect waves-light" id="CSuite"> CSuite </div>
-    <div class="job_industry white-text btn waves-effect waves-light" id="Educators"> Educators </div>
-    <div class="job_industry white-text btn waves-effect waves-light" id="Activists"> Activists </div>
-    <div class="job_industry white-text btn waves-effect waves-light" id="Advocates"> Advocates </div>
-    <div class="job_industry white-text btn waves-effect waves-light" id="Entrepreneurs"> Entrepreneurs </div>
-    <div class="job_industry white-text btn waves-effect waves-light" id="Creatives"> Creatives </div>
-    <div class="job_industry white-text btn waves-effect waves-light" id="All"> All </div>
+    <div class="job_industry cyan-text btn waves-effect white" id="Griots"> Griots </div>
+    <div class="job_industry cyan-text btn waves-effect white" id="Techies"> Techies </div>
+    <div class="job_industry cyan-text btn waves-effect white" id="Scientists"> Scientists </div>
+    <div class="job_industry cyan-text btn waves-effect white" id="CSuite"> CSuite </div>
+    <div class="job_industry cyan-text btn waves-effect white" id="Educators"> Educators </div>
+    <div class="job_industry cyan-text btn waves-effect white" id="Activists"> Activists </div>
+    <div class="job_industry cyan-text btn waves-effect white" id="Advocates"> Advocates </div>
+    <div class="job_industry cyan-text btn waves-effect white" id="Entrepreneurs"> Entrepreneurs </div>
+    <div class="job_industry cyan-text btn waves-effect white" id="Creatives"> Creatives </div>
+    <div class="job_industry cyan-text btn waves-effect white" id="All"> All </div>
   </div>
   
 
-  <div class="actions">
-    <%= f.submit %>
+  <div class="waves-effect cyan cyan-text waves-light btn center" id="signupbtn">
+    <%= f.submit "Create Opportunity" , :class => "white-text" %>
   </div>
+
 <% end %>
 
+<style>
+  .field {
+    margin: 2% 5%;
+  }
+  
+  .btn {
+    padding: 0% 5% !important;
+    margin: 1%;
+  }
+  
+</style>
 
 
 <script>

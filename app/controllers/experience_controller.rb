@@ -1,6 +1,12 @@
+require 'after_the_deadline'
+require 'gingerice'
+
+
+
+
 class ExperienceController < ApplicationController
         respond_to :html, :json
-    
+        include ActiveModel::Dirty
       # GET /experiences/1
   # GET /experiences/1.json
   def show
@@ -44,7 +50,20 @@ class ExperienceController < ApplicationController
   # PATCH/PUT /experiences/1.json
   def update
     @experience = Experience.find(params[:id])
+    parser = Gingerice::Parser.new
+    
+    if params[:experience][:title] != nil
+        typo = parser.parse params[:experience][:title]
+        @experience.update_attributes(:typo_title => typo["result"])
+        
+    elsif params[:experience][:position] != nil
+        typo = parser.parse params[:experience][:position]
+        @experience.update_attributes(:typo_position => typo["result"]) 
+    
+    end
+    
       @experience.update_attributes(experience_params)
+    
       respond_with @experience
   end
 

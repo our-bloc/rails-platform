@@ -31,7 +31,7 @@ class ApplicationController < ActionController::Base
   
   def add_user_location
     #update user location
-        if request.location.city == nil 
+        if request.location == nil 
             @city = nil
         else
             @city = request.location.city 

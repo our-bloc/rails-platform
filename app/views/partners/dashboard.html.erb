@@ -1,0 +1,351 @@
+<div class="row"> 
+  <div class="web-sidebar" > 
+      <div class="left-menu">
+        <img class="circle" id="logo" src="<%=@logo%> ">
+        <a href=#stats><p > METRICS </h5> </a>
+        <a href=#resources > <p style="margin-top: 5%"> UPLOAD NEW RESOURCE </p></a>
+        <a href=#opportunities ><p style="margin-top: 5%"> MANAGE RESOURCES </p> </a> 
+        <a href=#sponsors ><p style="margin-top: 5%"> MANAGE SPONSORS </p> </a> 
+        <a href=#manage ><p style="margin-top: 5%"> MANAGE EVENTS </p> </a>
+        <a href=#emails><p style="margin-top: 5%"> SEND EMAIL </p> </a> 
+
+
+        
+        <div>
+          <% if user_signed_in? %> 
+            <%= @user.name %> | <%= link_to "my account", edit_partner_path(@partner.id) , class: "cyan-text" %> 
+          <% end %> 
+        </div> 
+      
+      </div>
+      
+  </div>
+  
+  
+  <div class="col s12 l7 offset-l4"> 
+    
+        <div class="navbar white"> 
+          <div class="row">
+          
+            <div> <i class="fa fa-paper-plane cyan-text"></i><%= link_to "invite" , edit_partner_path(@partner.id) , :class => "col s6 l2 offset-l9 btn cyan"%>  </div>
+          </div>
+        </div>
+    
+        <div class="bgdiv" style="z-index: -3"> 
+            <img class="sidepic" src="<%= @banner%>"> 
+            
+         
+          
+            
+         </div>
+         
+         <section id="stats" style="z-index: 5"> 
+                    <h5 style="margin-top: 10%"> Total students onboarded </h5>
+                    <p class="white-text"> 302 this week |  545 this month   | 1601 to date</p>
+                   <h5 style="margin-top: 10%, color:white"> Popular Resources </h5> 
+                       <p class="white-text"> Mock Interview Bot </p>
+                    <h5 style="margin-top: 10%"> Popular Opportunities </h5>
+                      <p class="white-text"> YAIP Summer Internship Program </p>
+                      <p class="white-text"> Leadership Alliance Summer Research Program </p>
+                  
+
+            </section>
+        
+        <section id="stats" > 
+          
+       
+        </section>  
+        
+        
+        <section id="resources"> 
+        
+          <div class="row" >
+                <div style="height: 10em"></div>
+                <div class="col s12 l4" >
+                  <i class="fa fa-graduation-cap fa-5x white-text" > </i>
+                  <h5><%= link_to "Post new opportunity", new_job_path(:company => @partner.company) , class: "white-text link" %> </h5>
+                </div>
+
+                <div class="col s12 l4" >
+                  <i class="fa fa-clipboard fa-5x white-text" > </i>
+                   <h5><%= link_to "Post new resource" , new_tip_path(:company => @partner.company), class: "white-text strong link" %></h5>
+                </div>
+                
+                <div class="col s12 l4" >
+                  <i class="fa fa-user fa-5x white-text" > </i>
+                   <h5> <%= link_to "Post new role model", new_influencer_path(:partner_form => "true"), class: "white-text strong link" %></h5>
+                </div>
+        </section> 
+              
+          
+              
+              
+      <section id="opportunities">    
+          <h5> RECENTLY POSTED  </h5>
+        
+          <%  @jobs[0...5].each do |job| %>
+                <p><%= link_to job.title + " @ " + job.company , edit_job_path(job.id)  , :class => "white-text lighten-1 link" %> </p>
+            <% end %> 
+      </section>   
+      
+      <section id="sponsors"> 
+        <h5> NEW SPONSOR POSTS</h5>
+        <%  @jobs[0...5].each do |job| %>
+              
+                <p><%= link_to job.title + " @ " + job.company , job.link  , :class => "white-text lighten-1 link" %> </p>
+                      
+                 
+            <% end %> 
+      </section>
+      
+      <section id="manage"> 
+          <h5> MANAGE EVENTS  <span class="cyan-text" id="show_events"> See Events </span> <span class="cyan-text hide_events" id="create_event"> Create Event </span>  </h5>
+          
+          <div class="row hide_events">
+            <% @events[0...5].each do |event| %>
+            <div class="col s12 l6">
+                  <img style="width: 100%; border: 5px solid white" src="<%= event.image %>">
+            </div>
+            <% end %> 
+          </div>
+          
+          
+          <div class="new_event" >
+            <h5 class="cyan-text"> Create new event </h5>
+            <%= semantic_form_for @event do |f| %>
+                <%= f.inputs do %>
+              
+                  <%= f.hidden_field :org, class: "teal-text" , :value => @partner.company %>
+                  <%= f.hidden_field :contact, class: "teal-text" , :value => current_user.name %>
+                  
+                  <div class="input-field teal-text">
+                      <%= f.label "Event Name" %> 
+                      <%= f.text_field :name, class: "teal-text"%>
+                  </div>
+              
+                  <div class="input-field teal-text">
+                      <%= f.date_field :date, class: "teal-text" %>
+                  </div> 
+              
+                 
+                  <div class="input-field teal-text">
+                      <%= f.label "Event Description" %> 
+                      <%= f.text_area :body, class: "teal-text" %>
+                  </div> 
+                  <br>
+                  
+                  <div class="input-field teal-text">
+                      <%= f.label "Social Media Handles" %> 
+                      <%= f.text_field :social, class: "teal-text"%>
+                  </div>
+                  <br>
+                  <div class="upload-field teal-text"> 
+                      <%= f.label "Upload Flyer" %> 
+                      <%= f.file_field :image, class: "teal-text" %> 
+                  </div>
+                  <br> 
+                  
+                <% end %>
+              
+                
+                  <%= f.submit "Create Event" , class:"btn btn-large cyan" %>
+
+                
+              <% end %>
+          </div>
+
+      </section>
+      
+      <section id="emails" >
+        <div class="emails" style="background-color:white"> 
+        <h5 class="cyan-text"> Send Newsletter </h5>
+        <%= form_for @partner, url: {action: "send_email"}  do%>
+          Email : </br><%= text_field_tag(:email)%></br>
+          Subject: </br><%= text_field_tag(:subject)%></br>
+          Body:<%= text_area_tag(:body)%>
+          Add event:<%= hidden_field_tag(:event1)%>
+          
+          
+          Add featured opportunities: 
+            
+
+            
+            
+          <!-- allow admin to add job to email newsletter --> 
+              <%  @jobs[0...5].each do |job| %>
+              
+                <p>
+                  <i class="fa fa-check-square show_job_email fa-1x"> </i>
+                  <i class="fa fa-check-circle hide_job_email fa-1x"> </i>
+                  <%= link_to job.title + " @ " + job.company , job_path(job.id)  , :class => "cyan-text lighten-1 email_job link" %> 
+                </p>
+                
+                <%= hidden_field_tag(:include_jobs, :multiple => true, :id => "include_job")   %>
+                <%= hidden_field_tag(:include_job_links ,:multiple => true, :id => "include_job_link" ) %>
+                
+            <% end %> 
+          
+          
+          <%= submit_tag "submit",:value => "Send Email"%>
+          
+          
+        <%end%>
+        </div>
+      
+         </div>
+      </section>
+               
+    </div>
+</div>
+<style>
+   .sidepic{
+     position:absolute;
+     top: 0;
+     left: 0%;
+     overflow: hidden;
+     width: 100%;
+     height: 100%;
+     opacity: 1;
+     }
+    
+  
+
+   .bgdiv{
+     position:fixed;
+     top: 0;
+     left: 30%;
+     height: 100%;
+     width: 100%;
+   }
+   .emails {
+     padding: 2%;
+     border-radius: 1%;
+   }
+   h5{ 
+     color: white;
+     font-weight: 800;
+   }
+  
+    #stats p{
+      margin-left: 10%;
+    }
+    #opportunities a:hover{
+      background-color: inherit;
+      color: yellow;
+    }
+    
+    a:hover{
+      color: yellow;
+    }
+    
+    .navbar{
+      position: fixed;
+      background-color: white;
+      height: 6%;
+      width: 70%;
+      left: 30%;
+      opacity: 1;
+      box-shadow: 0 4px 2px -2px gray;
+    }
+    
+    #menu h5, #opportunities h5, #opportunities p {
+      color: white;
+    }
+    .new_event{
+      padding: 1%;
+      background-color: white;
+      border-radius: 1%;
+    }
+    
+    .left-menu{
+      padding: 0%;
+      margin:0%;
+      left: 5em;
+      top: 10em;
+      width: 100%;
+      position:absolute;
+    }
+    
+    .web-sidebar{
+      position: fixed;
+      padding:0%;
+      width: 25%;
+      font-weight: 800;
+    }
+    
+    #logo{
+      width: 20%;
+    }
+    section{
+      margin-bottom: 50em;
+      height: 100%;
+    }
+    
+    h1{
+      font-size: 2em;
+    }
+    
+    .hide_events{
+      display:none;
+    }
+    
+    input {
+    }
+    
+    .link {
+      font-family: Montserrat;
+      font-weight: 800;
+    }
+    
+    .link:hover{
+      color: yellow !important;
+    }
+    
+    p {
+      font-weight: 400;
+      font-family: Montserrat;
+    }
+</style>
+
+<script> 
+$( document ).ready(function() {
+    $('body').css('overflow','hidden');
+    $('body').attr('scroll','no');
+    $('.hide_job_email').hide();
+});
+
+
+$(".show_job_email").click(function(){
+    $(this).hide(0);
+    $(this).next('.hide_job_email').show(0);
+    
+    var name = $(this).next(".email_job").text();
+    var link = $(this).next(".email_job").attr('href');
+    
+    $(this).next('#include_job').val(name);
+    $(this).next('#include_job_link').val(link);
+});
+
+$('.hide_job_email').click(function(){
+   $(this).hide(0);
+  $(this).prev('.show_job_email').show(0);
+
+    $(this).next('#include_job').val();
+    $(this).next('#include_job_link').val();
+})
+
+$('#show_events').click(function(){
+  $(this).hide();
+  $(".hide_events").css("display","inline");
+  $(".new_event").hide();
+})
+
+$('#create_event').click(function(){
+  $(this).hide();
+  $(".hide_events").css("display","none");
+  $(".new_event").show();
+  $("#show_events").show();
+})
+
+   
+</script>

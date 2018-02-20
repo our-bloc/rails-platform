@@ -1,6 +1,12 @@
+require 'pdfkit'
+require 'after_the_deadline'
+require 'gingerice'
+AfterTheDeadline(nil, nil) # no custom dictionary, accept all error types
+
 class ResumeController < ApplicationController
     respond_to :html, :json
     before_action :create_experience , only: [:build]
+    
       # GET /resumes/1
   # GET /resumes/1.json
   def show
@@ -16,14 +22,67 @@ class ResumeController < ApplicationController
   # GET /resumes/1/edit
   def edit
   end
+  
+  def export 
+   resume = Resume.find(params[:resume_id])
+    PDFKit.new("#{request.referer}", :page_size => 'A3').to_file("#{resume.name}.pdf")
+    respond_to do |format|
+      format.html
+      format.pdf{
+        render pdf: resume.id
+      }
+    end
+  end 
 
   def build
-      @resume = Resume.find_by_user_id([current_user.id])
-     @academic_experience = Experience.where(detail1: 'Academic', resume_id: @resume.id)[0]
-    @work_experience = Experience.where(detail1: 'Work', resume_id: @resume.id)[0]
+    @resume = Resume.find_by_user_id([current_user.id])
+    
+    if @resume.experiences[0] == nil
+                
+                  Experience.create :user_id              => current_user.id, 
+                                    :resume_id              => @resume.id,
+                                    :detail1                   => "Academic", 
+                                    :position               => params[:school],
+                                    :title           => params[:degree] +" in " + params[:major],
+                                    :detail2            => params[:gpa],
+                                    :dates               => params[:school_dates]
+
+        
+                  Experience.create :user_id              => current_user.id, 
+                                    :resume_id              => @resume.id,
+                                    :detail1                   => "Work"       
+         
+                  Experience.create :user_id              => current_user.id, 
+                                    :resume_id              => @resume.id,
+                                    :detail1                   => "Work" 
+                  
+                  Experience.create :user_id              => current_user.id, 
+                                    :resume_id              => @resume.id,
+                                    :detail1                 => "Work" 
+                                    
+    end
+    
+    
+        @academic_experience = Experience.where(detail1: 'Academic', resume_id: @resume.id)[0]
+        
+
+        @work_experience = Experience.where(detail1: 'Work', resume_id: @resume.id)[0]
         @work2_experience = Experience.where(detail1: 'Work', resume_id: @resume.id)[1]
         @work3_experience = Experience.where(detail1: 'Work', resume_id: @resume.id)[2]
-        @leadership_experience = Experience.where(detail1: 'Leadership', resume_id: @resume.id)[0]
+        
+        if @leadership_experience == nil 
+          Experience.create :user_id              => current_user.id, 
+                                    :resume_id              => @resume.id,
+                                    :detail1                 => "Leadership"
+          
+          @leadership_experience = Experience.where(detail1: 'Leadership', resume_id: @resume.id)[0]
+
+                          
+        else
+          @leadership_experience = Experience.where(detail1: 'Leadership', resume_id: @resume.id)[0]
+        end 
+        
+        
 
   end 
   # POST /resumes
@@ -49,8 +108,14 @@ class ResumeController < ApplicationController
   # PATCH/PUT /resumes/1.json
   def update
     @resume = Resume.find(params[:id])
-      @resume.update_attributes(resume_params)
-      respond_with @resume
+    @resume.update_attributes(resume_params)
+    
+    @academic_experience = Experience.where(detail1: 'Academic', resume_id: @resume.id)[0]
+    @academic_title_error= AfterTheDeadline.check @academic_experience.title
+    @academic_position_error= AfterTheDeadline.check @academic_experience.position
+    
+      respond_with @resume , @academic_title_error , @academic_position_error
+    
   end
 
   # DELETE /resumes/1

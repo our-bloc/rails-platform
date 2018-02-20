@@ -1,5 +1,13 @@
-<h1>New Tip</h1>
+<h1 class="cyan-text">Create a new Resource </h1>
 
 <%= render 'form', tip: @tip %>
 
 <%= link_to 'Back', tips_path %>
+
+<style>
+    h1 {
+        font-weight: 800;
+        text-transform: uppercase;
+        margin: 5%;
+    }
+</style>

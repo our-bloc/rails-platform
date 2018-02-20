@@ -1,7 +1,7 @@
 task :crawl_resumes => :environment do
 require "capybara/poltergeist"
 require 'pry'
-require 'phantomjs'
+
 
 
 capybara = Capybara::Session.new(:poltergeist)
@@ -24,7 +24,7 @@ capybara.click_button('Sign In', disabled: :all)
         resume_link = resume[:href]
         puts resume_link
         
-        Iresume.create :name => resume.text,
+        Iresume.create :name => resume.text, 
                         :description => resume.link
     end
     

@@ -14,6 +14,7 @@ class User < ApplicationRecord
     has_many :influencers
     has_many :tips 
     has_many :visions
+    belongs_to :parnters
     #EVENT RSVPS
     has_many :rsvps
     has_many :events, through: :rsvps

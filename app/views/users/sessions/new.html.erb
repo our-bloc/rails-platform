@@ -1,14 +1,17 @@
-<h1 id="formhead" class="teal-text">WELCOME BACK</h1>
+<h5 id="formhead" class="cyan-text center-align"> welcome!</h5>
 
 <div class="loginback"> </div>
 
 <div class="loginform">
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  
   <div class="field">
     <%= f.label "EMAIL" , :class =>"fieldtext" %><br />
     <%= f.email_field :email, autofocus: true  , :class =>"fieldtext"%>
   </div>
+  
+  <%= f.hidden_field :company , value: params[:referring_org] %> 
 
   <div class="field">
     <%= f.label "PASSWORD" , :class =>"fieldtext" %><br />
@@ -22,32 +25,33 @@
     </div>
   <% end -%>
 
-  <div class="waves-effect waves-light btn" id="signupbtn">
-    <%= f.submit "Log in" , :class => "white-text" %>
+  <div class="waves-effect cyan waves-light btn" id="signupbtn">
+    <%= f.submit "Log in" , :class => "cyan white-text" %>
   </div>
 <% end %>
 
 <%= render "users/shared/links" %>
-
-</div>
+<%= render "users/sessions/payment" %> </div>
 
 <style>
 
 body {
-	background: url("http://www.ourbloc.co/uploads/2/4/0/1/24014742/blackwomen_orig.jpg") no-repeat center center fixed;
+	background: url("/img/bgimages.jpg") no-repeat center center fixed;
 	margin: 0 auto;
+	font-family: Montserrat;
 	background-size: cover;
 	width: 100%;
+	height: 100%;
 	}
 	
 #formhead {
-  position: absolute;
-  left: 20%;
-  top: 15%;
-  font-size: 5em;
+  margin: 5% 10%
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 2em;
   color: black;
-  font-weight: strong;
-  
+  font-weight: 800;
+  position:fixed;
 }
 
 #loginfooter{
@@ -57,20 +61,22 @@ body {
 
 .fieldtext{
   line-height: 2;
-  font-size: 4em;
+  font-size: 2em;
 }
 
 .loginform{
-   position: absolute;
-   left: 10%;
+   position: fixed;
    width: 80%;
-   top: 35%;
-    padding: 3%;
+   height: 70%;
+   top: 5%;
+   margin: 10% 10%;
     font-size: .8em;
+    background-color:white;
+    padding: 2% 10%;
 }
 
 input.fieldtext{
-  font-size: 4em;
+  font-size: 2em;
   color: teal;
 }
 
@@ -90,10 +96,15 @@ input.fieldtext{
   color: white;
   position: relative;
   font-size: 1.5em;
-  margin-top: 5%;
+  margin-top: 0%;
   left: 20%;
-  height: 20%;
+  height: 15%;
   width: 50%;
 }
 
 </style>
+
+
+<script>
+  
+</script>

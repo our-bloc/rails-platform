@@ -88,6 +88,9 @@ label {
   display: block;
 }
 
+.btn .btn-large {
+
+}
 .job_index_card {
     position: relative;
     text-align: center;
@@ -100,10 +103,6 @@ label {
     left: 25%;
 }
 
-.job_title {
-  margin-bottom: 0%;
-  padding-bottom: 0%;
-}
 
 .job_company {
   margin-top: 0%;
@@ -131,3 +130,47 @@ label {
   width: 100%;
   padding: 3% 10%;
 }
+
+@media print{
+    
+    body, h5, p, h6 {
+        -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        font-family: "Times New Roman" !important;
+        text-align: center;
+    }
+    ul{
+        list-style-type: circle;
+        margin: -.1%;
+    }
+    body{
+        padding: 7%;
+    } 
+    p {
+        font-size: 11px;
+        margin: .5%;
+    }
+    
+    h5, h6 {
+        text-transform: uppercase;
+        font-weight: strong ; 
+        text-align: center;
+    }
+    h6{ 
+        font-size: 14px;
+    }
+    h5{ 
+        margin-top: 5%;
+        size: 25px;
+    }
+    .row{
+        padding: 0;
+        margin: 0;
+    }
+
+    
+    .education_header{ 
+        width: 100%;
+        border-bottom: 1px solid black;
+  }
+} 

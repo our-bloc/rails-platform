@@ -8,6 +8,8 @@ gem 'rails', '~> 5.0.0'
 #storing ENV variables
 gem 'figaro'
 
+#likes&voting
+gem 'acts_as_votable', '~> 0.11.1'
 
 
 #tracking visits, analytics
@@ -27,6 +29,18 @@ gem 'geocoder'
 gem 'httparty'
 gem 'best_in_place'
 
+#to pdf
+gem 'wkhtmltopdf-binary'
+gem 'pdfkit'
+gem 'wicked_pdf'
+
+#spellchecker
+gem 'gingerice'
+gem 'after_the_deadline'
+
+#uploads
+gem "rmagick"
+gem "carrierwave"
 
 #scraping & get requests
 gem 'phantomjs', :require => 'phantomjs/poltergeist'

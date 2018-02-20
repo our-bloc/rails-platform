@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171218162801) do
+ActiveRecord::Schema.define(version: 20180218224324) do
 
   create_table "ahoy_events", force: :cascade do |t|
     t.integer  "visit_id"
@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(version: 20171218162801) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "image"
+    t.string   "name"
   end
 
   create_table "experiences", force: :cascade do |t|
@@ -60,8 +61,16 @@ ActiveRecord::Schema.define(version: 20171218162801) do
     t.string   "location"
     t.integer  "resume_id"
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.string   "typo"
+    t.string   "typo_styled"
+    t.string   "typo_metrics"
+    t.string   "typo_title"
+    t.string   "typo_position"
+    t.string   "typo_detail2"
+    t.string   "typo_detail3"
+    t.string   "typo_detail4"
   end
 
   create_table "feedbacks", force: :cascade do |t|
@@ -136,6 +145,27 @@ ActiveRecord::Schema.define(version: 20171218162801) do
     t.string   "user_agent"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "partners", force: :cascade do |t|
+    t.string   "company"
+    t.string   "admin_name"
+    t.string   "sponsors"
+    t.string   "color"
+    t.string   "banner"
+    t.string   "quote"
+    t.string   "location"
+    t.string   "demo"
+    t.string   "email"
+    t.string   "gender"
+    t.string   "plan"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "logo"
+    t.string   "companyurl"
+    t.date     "end_date"
+    t.string   "coupon"
+    t.string   "customer_id"
   end
 
   create_table "profiles", force: :cascade do |t|
@@ -396,6 +426,20 @@ ActiveRecord::Schema.define(version: 20171218162801) do
     t.datetime "started_at"
     t.index ["user_id"], name: "index_visits_on_user_id"
     t.index ["visit_token"], name: "index_visits_on_visit_token", unique: true
+  end
+
+  create_table "votes", force: :cascade do |t|
+    t.string   "votable_type"
+    t.integer  "votable_id"
+    t.string   "voter_type"
+    t.integer  "voter_id"
+    t.boolean  "vote_flag"
+    t.string   "vote_scope"
+    t.integer  "vote_weight"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.index ["votable_id", "votable_type", "vote_scope"], name: "index_votes_on_votable_id_and_votable_type_and_vote_scope"
+    t.index ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope"
   end
 
 end

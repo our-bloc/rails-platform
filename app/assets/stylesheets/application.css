@@ -1,0 +1,93 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require jquery-ui
+ *= require_tree .
+ *= require_self
+ *= require formtastic
+  *= require my_formtastic_changes
+ */
+ 
+@import "materialize/extras/nouislider";
+@import "materialize/components/color";
+@import "materialize";
+
+body,html{
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+}
+
+.btn .btn-large{
+  padding: 0% 2%;
+}
+
+.about_us {
+    position:absolute;
+}
+
+@media only screen and (max-device-width: 480px){
+    .about_us {
+        position:relative;
+    }
+    
+    #career_advice_header{
+        font-size: 2.5em;
+    }
+}
+
+@media print{
+    
+    body, h5, p, h6 {
+        -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        font-family: "Times New Roman" !important;
+        text-align: left;
+    }
+    ul{
+        list-style-type: circle;
+        margin: -.1%;
+    }
+    body{
+        padding: 7%;
+    } 
+    p {
+        font-size: 11px;
+        margin: .5%;
+    }
+    
+    h5, h6 {
+        text-transform: uppercase;
+        font-weight: strong ; 
+        text-align: center;
+    }
+    h6{ 
+        font-size: 14px;
+    }
+    h5{ 
+        margin-top: 5%;
+        size: 25px;
+    }
+    .row{
+        padding: 0;
+        margin: 0;
+    }
+
+    
+    .education_header{ 
+        width: 100%;
+        border-bottom: 1px solid black;
+}
+        } 
+        
+        
+  

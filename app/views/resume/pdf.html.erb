@@ -1,0 +1,173 @@
+<div class="header_div"> 
+
+<h5 class="center"> <%=  @resume.name %></h5>
+
+    <div class="row contact_row"> 
+        <div class="col s4 center"> 
+            <p><%=  @resume.address, :place_holder => "Click to fill" %> | </p>
+        </div>
+        <div class="col s4 center"> 
+            <p><%=  @resume.email, :place_holder => "Enter Your Email" %> </p>  
+        </div>
+        <div class="col s4 center"> 
+            <p><%=  @resume.phone, :place_holder => "Enter Your Phone" %> </p>  
+        </div>
+    </div>
+</div>
+
+<div class="education_section"> 
+<h6 class="education_header">EDUCATION</h6> 
+    <div class="row"> 
+        <div class="col s9">
+        <p style="text-transform: uppercase; font-weight: 800"><%=  @academic_experience, :title , :place_holder => "Morehouse College" %></p>
+        </div>
+        
+        <div class="col s3">
+        <p style="font-weight: 800"><%=  @academic_experience, :dates , :place_holder => "Expected Graduation & Year" %></p>
+        </div>
+    </div>
+    <p><%=  @academic_experience, :position , :place_holder => "Bachelors of Science in Computer Science" %></p>
+    <p><%=  @academic_experience, :detail2 , :place_holder => "Fill with Relevant Coursework" %></p>
+
+</div>
+
+<div class="work_section"> 
+<h6 class="education_header">EXPERIENCE</h6> 
+   <div class="row" style="margin-botton: -1%"> 
+        <div class="col s9">
+        <p style="text-transform: uppercase; font-weight: 800"><%=  @work_experience, :title , :place_holder => "Your Most Recent Opportunity" %></p>
+        </div>
+        
+        <div class="col s3">
+        <p style="font-weight: 800"><%=  @work_experience, :dates , :place_holder => "Expected Graduation & Year" %></p>
+        </div>
+    </div>
+    
+    <div class="row"> 
+    <p><%=  @work_experience, :position , :place_holder => "Marketing Intern" %></p></ul>
+    
+    <p> &bull; <%=  @work_experience, :detail2 , :place_holder => "Coordinated £250m pre-IPO private placement within global investor network" %></p>
+    <p> &bull;  <%=  @work_experience, :detail3 , :place_holder => "Started xyz etc..." %></p>
+    <p> &bull; <%=  @work_experience, :detail4 , :place_holder => "Started xyz etc..." %></p>
+    </div>
+    
+    <br> 
+
+    <div class="row" style="margin-botton: -1%"> 
+        <div class="col s9">
+        <p style="text-transform: uppercase; font-weight: 800"><%=  @work2_experience, :title , :place_holder => "Your Most Recent Opportunity" %></p>
+        </div>
+        
+        <div class="col s3">
+        <p style="font-weight: 800"><%=  @work2_experience, :dates , :place_holder => "Expected Graduation & Year" %></p>
+        </div>
+    </div>
+    
+    <div class="row"> 
+    <p><%=  @work2_experience, :position , :place_holder => "Marketing Intern" %></p></ul>
+    
+    <p> &bull; <%=  @work2_experience, :detail2 , :place_holder => "Coordinated £250m pre-IPO private placement within global investor network" %></p>
+    <p> &bull;  <%=  @work2_experience, :detail3 , :place_holder => "Started xyz etc..." %></p>
+    <p> &bull; <%=  @work2_experience, :detail4 , :place_holder => "Started xyz etc..." %></p>
+    </div>
+    
+        <br> 
+
+    <div class="row" style="margin-botton: -1%"> 
+        <div class="col s9">
+        <p style="text-transform: uppercase; font-weight: 800"><%=  @academic_experience, :title , :place_holder => "Your Most Recent Opportunity" %></p>
+        </div>
+        
+        <div class="col s3">
+        <p style="font-weight: 800"><%=  @work_experience, :dates , :place_holder => "Expected Graduation & Year" %></p>
+        </div>
+    </div>
+    
+    <div class="row"> 
+    <p><%=  @work_experience, :position , :place_holder => "Marketing Intern" %></p></ul>
+    
+    <p> &bull; <%=  @work_experience, :detail2 , :place_holder => "Coordinated £250m pre-IPO private placement within global investor network" %></p>
+    <p> &bull;  <%=  @work_experience, :detail3 , :place_holder => "Started xyz etc..." %></p>
+    <p> &bull; <%=  @work_experience, :detail4 , :place_holder => "Started xyz etc..." %></p>
+    </div>
+    
+</div>
+
+<div class="leadership_section"> 
+<h6 class="education_header">LEADERSHIP EXPERIENCE</h6> 
+    <div class="row" style="margin-botton: -1%"> 
+        <div class="col s9">
+        <p style="text-transform: uppercase; font-weight: 800"><%=  @leadership_experience, :title , :place_holder => "Your Most Significant Campus Leadership Role" %></p>
+        </div>
+        
+        <div class="col s3">
+        <p style="font-weight: 800"><%=  @leadership_experience, :dates , :place_holder => "Expected Graduation & Year" %></p>
+        </div>
+    </div>
+    
+    <div class="row"> 
+    <p><%=  @leadership_experience, :position , :place_holder => "Student Organization President" %></p></ul>
+    
+    <p> &bull; <%=  @leadership_experience, :detail2 , :place_holder => "Coordinated £250m pre-IPO private placement within global investor network" %></p>
+    <p> &bull;  <%=  @leadership_experience, :detail3 , :place_holder => "Started xyz etc..." %></p>
+    <p> &bull; <%=  @leadership_experience, :detail4 , :place_holder => "Started xyz etc..." %></p>
+    </div>
+</div>
+
+<div class="skills_section"> 
+<h6 class="education_header">Skills</h6> 
+    
+    <p> <span style="font-weight:800"> LANGUAGE SKILLS </span><%=  @resume, :languageskills, :place_holder => "Click to fill" %></p>
+    <p> <span style="font-weight:800"> COMPUTER SKILLS </span><%=  @resume, :computerskills, :place_holder => "Click to fill" %></p>
+
+    
+   
+</div>
+
+<div class="btn btn-larg cyan white-text"> <%= link_to "Export", resume_path(:id => @resume.id, :format => :pdf) %> 
+
+</div>
+
+
+
+<script>
+      $('.').()
+</script>
+
+<style> 
+    body, h5, p, h6 {
+        font-family: "Times New Roman";
+    }
+    ul{
+        list-style-type: circle;
+        margin: -.1%;
+    }
+    body{
+        padding: 7%;
+    } 
+    p {
+        font-size: 11px;
+        margin: .5%;
+    }
+    
+    h5, h6 {
+        text-transform: uppercase;
+        font-weight: strong ; 
+    }
+    h6{ 
+        font-size: 14px;
+    }
+    h5{ 
+        margin-top: 5%;
+        size: 25px;
+    }
+    .row{
+        padding: 0;
+        margin: 0;
+    }
+    
+    .education_header{ 
+        width: 100%;
+        border-bottom: 1px solid black;
+    
+</style>

@@ -60,8 +60,11 @@ class SearchEngineController < ApplicationController
         else
               end
         
-         @jobs = Job.where(:industry == params[:industry])
-         @tips = Tip.search(params[:search])
+         @jobs = Job.all.order("created_at DESC")
+         @tips = Tip.all.order("created_at DESC")
+         @tip = Tip.find(5)
+        @influencers = Influencer.all 
+        @logo = Partner.find_by_companyurl("thefutureproject")    
     
         @musetips = HTTParty.get('https://api-v2.themuse.com/posts?tag=Engineering&page=1&descending=true',
         :headers =>{'Content-Type' => 'application/json'} )
@@ -196,7 +199,12 @@ class SearchEngineController < ApplicationController
         @new_input = @search.query 
         :back 
     end 
-        
+    
+    def testdashboard
+    end 
+    
+  
+    
     private
     
     

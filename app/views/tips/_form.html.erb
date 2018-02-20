@@ -1,110 +1,114 @@
 <%= semantic_form_for @tip do |f| %>
   <%= f.inputs do %>
+  
   <div class="input-field"> 
-    <%= f.label :title %>
-    <%= f.text_field :title, class:"teal-text" %>
+    <%= f.label :title , class:"title_label" %>
+    <%= f.text_field :title , class: "cyan-text title_input" %>
+  </div>
+    
+  <div class="input-field"> 
+    <%= f.label :link  , class:"title_label" %>
+    <%= f.text_field :link, class:"cyan-text title_input" %>
     </div>
     
-  <div class="input-field"> 
-    <%= f.label :body %>
-    <%= f.text_area :body, class:"teal-text" %>
-  </div> 
-  
-  
-    
-<div class="input-field"> 
-    <%= f.label :link %>
-    <%= f.text_field :link, class:"teal-text" %>
+    <div class="input-field"> 
+    <%= f.label :body  , class:"title_label" %>
+    <%= f.text_field :body, class:"cyan-text title_input" %>
     </div>
     
-<div class="field">
+<div class="input-field">
     <%= f.label :industry %>
     <%= f.hidden_field :industry , :id =>"field_tipindustry" %>
     
-    <div class="tip_industry white-text btn waves-effect waves-light" id="Griots"> Griots </div>
-    <div class="tip_industry white-text btn waves-effect waves-light" id="Techies"> Techies </div>
-    <div class="tip_industry white-text btn waves-effect waves-light" id="Scientists"> Scientists </div>
-    <div class="tip_industry white-text btn waves-effect waves-light" id="CSuite"> CSuite </div>
-    <div class="tip_industry white-text btn waves-effect waves-light" id="Educators"> Educators </div>
-    <div class="tip_industry white-text btn waves-effect waves-light" id="Activists"> Activists </div>
-    <div class="tip_industry white-text btn waves-effect waves-light" id="Advocates"> Advocates </div>
-    <div class="tip_industry white-text btn waves-effect waves-light" id="Entrepreneurs"> Entrepreneurs </div>
-    <div class="tip_industry white-text btn waves-effect waves-light" id="Creatives"> Creatives </div>
-    <div class="tip_industry white-text btn waves-effect waves-light" id="All"> All </div>
+    <div class="tip_industry cyan-text btn waves-effect waves-light white" id="Griots"> Griots </div>
+    <div class="tip_industry cyan-text btn waves-effect waves-light white" id="Techies"> Techies </div>
+    <div class="tip_industry cyan-text btn waves-effect waves-light white" id="Scientists"> Scientists </div>
+    <div class="tip_industry cyan-text btn waves-effect waves-light white" id="CSuite"> CSuite </div>
+    <div class="tip_industry cyan-text btn waves-effect waves-light white" id="Educators"> Educators </div>
+    <div class="tip_industry cyan-text btn waves-effect waves-light white" id="Activists"> Activists </div>
+    <div class="tip_industry cyan-text btn waves-effect waves-light white" id="Advocates"> Advocates </div>
+    <div class="tip_industry cyan-text btn waves-effect waves-light white" id="Entrepreneurs"> Entrepreneurs </div>
+    <div class="tip_industry cyan-text btn waves-effect waves-light white" id="Creatives"> Creatives </div>
+    <div class="tip_industry cyan-text btn waves-effect waves-light white" id="All"> All </div>
 
 
     
   </div>
     
   
-<div class="field"> 
+<div class="input-field"> 
     <%= f.label "Grad School Related" %>
     <%= f.hidden_field :grad , :id =>"field_tipgrad" %>
 
-  <div class="grad_button white-text btn waves-effect waves-light" id="None"> Nope </div>
-    <div class="tip_grad white-text btn waves-effect waves-light" id="Maybe"> Maybe </div>
-    <div class="tip_grad white-text btn waves-effect waves-light" id="Master's Program"> Masters Program </div>
-    <div class="tip_grad white-text btn waves-effect waves-light" id="PhD Program"> PhD Program </div>
-    <div class="tip_grad white-text btn waves-effect waves-light" id="Law School"> Law School </div>
-    <div class="tip_grad white-text btn waves-effect waves-light" id="Med School"> Med School </div>
-    <div class="tip_grad white-text btn waves-effect waves-light" id="Business School"> Business School </div>
+  <div class="grad_button cyan-text btn waves-effect waves-light white" id="None"> Nope </div>
+    <div class="tip_grad cyan-text btn waves-effect waves-light white " id="Maybe"> Maybe </div>
+    <div class="tip_grad cyan-text btn waves-effect waves-light white" id="Master's Program"> Masters Program </div>
+    <div class="tip_grad cyan-text btn waves-effect waves-light white" id="PhD Program"> PhD Program </div>
+    <div class="tip_grad cyan-text btn waves-effect waves-light white" id="Law School"> Law School </div>
+    <div class="tip_grad cyan-text btn waves-effect waves-light white" id="Med School"> Med School </div>
+    <div class="tip_grad cyan-text btn waves-effect waves-light white" id="Business School"> Business School </div>
 </div>
 
-<div class ="field"> 
+<div class ="input-field"> 
     <%= f.label "Class Year " %>
     <%= f.hidden_field :gradyear , :id =>"field_tipgradyear" %>
 
-  <div class="grad_button white-text btn waves-effect waves-light" id="2020"> 2020 </div>
-    <div class="tip_gradyear white-text btn waves-effect waves-light" id="2019"> 2019 </div>
-    <div class="tip_gradyear white-text btn waves-effect waves-light" id="2018"> 2018</div>
-    <div class="tip_gradyear white-text btn waves-effect waves-light" id="2017"> 2017 </div>
-    <div class="tip_gradyear white-text btn waves-effect waves-light" id="Alum"> Alum </div>
-   
-</div>
-
-<div class ="field"> 
-    <%= f.label "Going in email? " %>
-    <%= f.hidden_field :for_email , :id =>"field_tipforemail" %>
-
-    <div class="tip_for_email white-text btn waves-effect waves-light" id="true"> Yep </div>
-    <div class="tip_for_email white-text btn waves-effect waves-light" id="false"> Nah</div>
-   
+  <div class="grad_button cyan-text btn waves-effect waves-light white" id="2020"> 2020 </div>
+    <div class="tip_gradyear cyan-text btn waves-effect waves-light white" id="2019"> 2019 </div>
+    <div class="tip_gradyear cyan-text btn waves-effect waves-light white" id="2018"> 2018</div>
+    <div class="tip_gradyear cyan-text btn waves-effect waves-light white" id="2017"> 2017 </div>
+    <div class="tip_gradyear cyan-text btn waves-effect waves-light white" id="Alum"> Alum </div>
    
 </div>
 
 
 
-<div class ="field"> 
+
+
+<div class ="input-field"> 
     <%= f.label "Tip Category" %>
     <%= f.hidden_field :prep , :id =>"field_tipprep" %>
 
-   <div id="need_resume" class="tip_prep white-text btn waves-effect waves-light"> Starting a resume </div>
-    <div id="salary_negotiation" class="tip_prep white-text btn waves-effect waves-light"> Nailing my interviews </div>
-    <div id="revise_resume" class="tip_prep white-text btn waves-effect waves-light"> Getting my resume together </div>
-    <div id="need_connections" class="tip_prep white-text btn waves-effect waves-light"> Hearing back on applications</div>
-    <div id="need_jobs" class="tip_prep white-text btn waves-effect waves-light"> Finding jobs I care about</div>
-    <div id="cover_letters" class="tip_prep white-text btn waves-effect waves-light"> Cover letters...sigh </div>
-    <div id="personal_statements" class="tip_prep white-text btn waves-effect waves-light"> Writing personal statements </div>
-    <div id="salary_negotiation" class="tip_prep white-text btn waves-effect waves-light"> Negotiating my salary </div>
+   <div id="need_resume" class="tip_prep cyan-text btn waves-effect waves-light white"> Starting a resume </div>
+    <div id="salary_negotiation" class="tip_prep cyan-text btn waves-effect waves-light white"> Nailing my interviews </div>
+    <div id="revise_resume" class="tip_prep cyan-text btn waves-effect waves-light white"> Getting my resume together </div>
+    <div id="need_connections" class="tip_prep cyan-text btn waves-effect waves-light white"> Hearing back on applications</div>
+    <div id="need_jobs" class="tip_prep cyan-text btn waves-effect waves-light white"> Finding jobs I care about</div>
+    <div id="cover_letters" class="tip_prep cyan-text btn waves-effect waves-light white"> Cover letters...sigh </div>
+    <div id="personal_statements" class="tip_prep cyan-text btn waves-effect waves-light white"> Writing personal statements </div>
+    <div id="salary_negotiation" class="tip_prep cyan-text btn waves-effect waves-light white"> Negotiating my salary </div>
   </diV>
   <% end %>
   
-  <%= f.actions do %>
-    <%= f.action :submit, :as => :input %>
-  <% end %>
+
+  
+  <div class="waves-effect cyan cyan-text waves-light btn center" id="signupbtn">
+    <%= f.submit "Create Resource" , :class => "white-text" %>
+  </div>
 <% end %>
 
 
 <style> 
 .input-field{
-  margin: 5%;
+  margin: 2% 10%;
 }
 
 .field{
   margin: 1% 5%;
 }
-.input-field input {
-  color: teal;
+
+.title_label {
+  margin-bottom: -10em;
+}
+
+.title_input {
+  position: relative;
+  margin-top: 2em !important;
+  width: 50%;
+}
+
+.btn {
+  padding: 0% 2%;
 }
 </style>
 

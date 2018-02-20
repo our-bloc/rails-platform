@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  org: MyString
+  admin: MyString
+  sponsors: MyString
+  color: MyString
+  banner: MyString
+  quote: MyString
+  location: MyString
+  demo: MyString
+  location: MyString
+
+two:
+  org: MyString
+  admin: MyString
+  sponsors: MyString
+  color: MyString
+  banner: MyString
+  quote: MyString
+  location: MyString
+  demo: MyString
+  location: MyString

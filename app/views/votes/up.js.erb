@@ -1,0 +1,4 @@
+$('.like_object').bind('ajax:success', function(){
+   $(this).closest('.like_object').hide();
+   $(this).closest('.votes').html(' <%= link_to '<i class="fa fa-heart fa-2x"></i>' .html_safe, down_votes_path(object:'Tip', id: 5), remote: true, method: :get, class: 'unlike_object' %>');
+});

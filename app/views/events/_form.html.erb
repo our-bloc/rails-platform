@@ -2,7 +2,7 @@
   <%= f.inputs do %>
     <div class="input-field teal-text">
     <%= f.label "Name of your organization" %> 
-    <%= f.text_field :org, class: "teal-text"  %>
+    <%= f.text_field :org, class: "teal-text" , :value => params[:company]  %>
     </div> 
     
     <div class="input-field teal-text">
@@ -12,7 +12,7 @@
 
     <div class="input-field teal-text">
     <%= f.label "Contact person?" %> 
-    <%= f.text_field :contact, class: "teal-text" %>
+    <%= f.text_field :contact, class: "teal-text" , :value => params[:admin]%>
     </div> 
     
     <div class="input-field teal-text">
@@ -50,16 +50,6 @@
   <% end %>
 <% end %>
 
-<style>
-form{ 
-  position: absolute;
-  width: 60%;
-  left: 20%;
-}
-  input{
-   color: teal;
-  }
-</style>
 
 <script>
   $('.event_industry').click(function(){

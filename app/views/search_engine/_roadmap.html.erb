@@ -1,76 +1,212 @@
-  
-  
-  <h5 style="margin-top: 10%"> YOUR RESUME TEMPLATE </h5> 
-    <%= render "search_engine/resumebuilder" %> 
-    
-    
-  <h5 style="margin-top: 10%"> ESSENTIAL RESOURCES </h5> 
 
-  <div class="row">
-        <div class="col s12 l4">
-          <div class="card">
-            <div class="card-image">
-              <img src="https://images.pexels.com/photos/175696/pexels-photo-175696.jpeg?h=350&auto=compress&cs=tinysrgb">
-              <span class="card-title white-text strong">Nail Your Technical Interviews with These Resources! </span>
-            </div>
-            <div class="card-content">
-              <p><a href="www.interviewcake.com"> Interview Cake </a>- free practice technical questions</p>
-              <p><a href="www.interviewing.io"> Interviewing.io </a> - free mock interviews with software engineers at top companies</p>
+  
+ <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
-            </div>
-            
-          </div>
-        </div>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+          
+
+  <div class="web-sidebar" > 
+      <div class="left-menu">
+        <img class="circle" id="logo" src="data:image/jpeg;base64,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 ">
+        <a href=#resources> <p style="margin-top: 10%"> YOUR RESOURCES </p></a>
+        <p style="margin-top:10%; font-size: 1.5em"> <%= link_to "YOUR RESUME TEMPLATE" , resumebuilder_path%> </p>
+        <a href=#opportunities><p style="margin-top: 10%"> OPPORTUNITIES </p> </a> 
+        <a href=#rolemodels><p style="margin-top: 10%"> ROLE MODELS </p> </a> 
         
-          <div class="col s12 l4">
-          <div class="card">
-            <div class="card-image">
-              <img src="https://static.pexels.com/photos/167528/pexels-photo-167528.jpeg">
-              <span class="card-title white-text">Some #BlackGirlsCODE Inspiration! </span>
-            </div>
-            <div class="card-content">
-              <p><a href="www.hackernoon.com/200-black-women-in-tech-to-follow-on-twitter-e33a27303b4a?gi=4240cf008795"> 200 Black Women in Tech </a> A list of over 200 black women techies that you can follow on Twitter</p>
-
-            </div>
-            
-            
-          </div>
-        </div>
-     
-        <div class="col s12 l4">
-          <div class="card">
-            <div class="card-image">
-              <img src="https://images.pexels.com/photos/47224/pexels-photo-47224.jpeg?h=350&auto=compress&cs=tinysrgb">
-              <span class="card-title white-text">CODE2040 is accepting applications!</span>
-  
-            </div>
-            <div class="card-content">
-              <p><a href="www.code2040.org"> Apply now!</a> Apply & gain access to a top network of black and Latinx student software developers </p>
-            </div>
-           
-          </div>
-        </div>
+        <div style="margin-left: 3em">
+          <% if user_signed_in? %> 
+            <%= current_user.name %> 
+            <%= link_to "my account", myprofile_path , class: "cyan-text" %> 
+          <% end %> 
+        </div> 
+      
       </div>
       
+  </div>
   
-      
-      
-      
-  <h5> YOUR OPPORTUNITIES </h5>
-
-  <%  @indeed_results[0...5].each do |job| %>
-      
-        <p><%= link_to job.job_title + " @ " + job.company , job.url  , :class => "cyan-text lighten-1" %> </p>
-              
+  <div class="row"> 
+  <div class="col s3"></div>
+  <div class="col s9"> 
+        <div class="bgdiv" style="z-index: -3"> 
+            <img class="sidepic" src="img/bgimages.jpg"> 
+            
          
-    <% end %> 
-    
+          
+            
+         </div>
+         
+         <section id="menu" style="z-index: 5"> 
+                   <a href=#resources> <h5 style="margin-top: 10%"> WELCOME TO YOUR PERSONAL CAREER PORTAL </h5> </a>
+                   
+                   <p class="white-text" style="margin-left: 0%"> " Making your mark on the world is hard. If it were easy, everybody would do it. But it's not. 
+                   It takes patience, it takes commitment and it comes with plenty of failure along the way. "</p>
+                   
+                   <p class="white-text" style="margin-left: 50%"> Barack Obama </p> 
+                   
+            </section>
+        
+        <section id="resume" style="background-color: white"> 
+          
+            <%= render "search_engine/resumebuilder" %> 
+        </section>  
+        
+        
+        
+        <section id="resources"> 
+          <div class="row">
+          <% @tips[0...2].each do |tip| %> 
+                <div class="col s12 l6">
+                  <div class="card" style="40em">
+                    <div class="card-image">
+                      <img src="https://images.pexels.com/photos/47224/pexels-photo-47224.jpeg?h=350&auto=compress&cs=tinysrgb">
+                      <span class="card-title white-text cyan" style="font-weight: 800; height: 5em ; text-transform:uppercase; font-size:1.5em "> <%= tip.title %> </span>
+                    </div>
+                    <div class="card-content">
+                      <p style="font-size: .7em"><%= tip.body %> </p>
+                    </div>
+                <div class="card-action" style="height: 2em; position:absolute;right: 2em; bottom: 2em">
+
+                      <div class="votes teal-text tip_like" style="position:absolute; bottom:2em; right: 5em" > 
+                        <% if tip.liked_by @user %> 
+                          <%= link_to '<i class="fa fa-heart-o fa-2x "></i>' .html_safe, up_votes_path(object:'Tip', id: 5)  ,method: :get, remote: true , class: "like_object", :style => "color:#4dd0e1"%> 
+                        <% else %> 
+                          <%= link_to '<i class="fa fa-heart fa-2x "></i>' .html_safe, down_votes_path(object:'Tip', id: 5) ,method: :get, remote: true, class: "unlike_object",:style => "color:#4dd0e1" %>
+                        <% end %> 
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <% end %> 
+                
+              </div>
+        
+          
+        </section> 
               
-  <h5> MORE CAREER ADVICE ... </h5>
-
-    <%  @musedata[0...5].each do |tip| %> 
-          <p style="color:#4dd0e1"> <%= link_to tip["name"] , "https://www.themuse.com/advice/"+ tip["short_name"].to_s , :style => "color:#4dd0e1" %> </p>
-                  
-
-        <% end %> 
+          
+              
+              
+        <section id="opportunities">    
+          <h5> YOUR OPPORTUNITIES </h5>
+        
+          <%  @jobs[0...2].each do |job| %>
+              
+                <p> <i class="fa fa-star yellow-text"> </i><%= link_to job.title + " @ " + job.company , job_path(job.id)  , :class => "white-text lighten-1 opp_links" %> 
+  
+            <% end %> 
+          <%  @indeed_results[0...5].each do |job| %>
+              
+                <p><%= link_to job.job_title + " @ " + job.company , job.url  , :class => "white-text lighten-1 opp_links" %> 
+  
+            <% end %> 
+            
+             
+        </section>
+        
+        <section id="more_advice">
+          <h5> MORE CAREER ADVICE ... </h5>
+        
+            <%  @musedata[0...5].each do |tip| %> 
+                  <p style="color:white"> <%= link_to tip["name"] , "https://www.themuse.com/advice/"+ tip["short_name"].to_s , :style => "color:#4dd0e1" %> </p>
+                          
+        
+                <% end %> 
+      </section>   
+      
+      <section id="rolemodels">
+          <div class="row">
+          <% @influencers[0...2].each do |influencer| %> 
+                <div class="col s12 l6">
+                  <div class="card" style="height: 40em">
+                    <div class="card-image">
+                      <img src="<%= influencer.image%> ">
+                      <span class="card-title white-tText" style="font-weight: 800"> </span>
+                    </div>
+                    <div class="card-content">
+                      <p style="font-size: .7em"><%= influencer.description.truncate(500) %> </p>
+                    </div>
+                    <div class="card-action" style="height: 2em; position:absolute;right: 2em; bottom: 2em">
+                      <div class="votes teal-text tip_like" > 
+                        <% if influencer.liked_by @user %> 
+                          <%= link_to '<i class="fa fa-heart-o fa-2x"></i>' .html_safe, up_votes_path(object:'Influencer', id: 2)  ,method: :get, remote: true , class: "like_object", :style => "color:#4dd0e1"%> 
+                        <% else %> 
+                          <%= link_to '<i class="fa fa-heart fa-2x"></i>' .html_safe, down_votes_path(object:'Influencer', id: 2) ,method: :get, remote: true, class: "unlike_object" , :style => "color:#4dd0e1"%>
+                        <% end %> 
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <% end %> 
+                
+              </div>
+        
+        
+      </section>
+               
+    </div>
+</div>
        
+<style>
+   .sidepic{
+     position:absolute;
+     top: 0;
+     left: 0%;
+     overflow: hidden;
+     width: 100%;
+     height: 100%;
+     opacity: 1;
+     }
+ 
+   .bgdiv{
+     position:fixed;
+     top: 0;
+     left: 30%;
+     height: 100%;
+     width: 100%;
+   }
+   
+   h5{ 
+     color: white;
+   }
+  
+    #opportunities a:hover{
+      background-color: inherit;
+    }
+    
+    #menu h5, #opportunities h5, #opportunities p {
+      color: white;
+    }
+    
+    .opp_links{
+      font-weight: 800;
+    }
+    
+    .left-menu{
+      padding: 0%;
+      margin:0%;
+      left: -10em;
+      position:absolute;
+    }
+    
+    .web-sidebar{
+      position: fixed;
+      padding:0%;
+    }
+    
+    #logo{
+      width: 45%;
+    }
+    .opp_links:hover {
+      color: yellow !important;
+    }
+</style>
+
+<script> 
+$( document ).ready(function() {
+    $('body').css('overflow','hidden');
+    $('body').attr('scroll','no');
+    $('.hide_job_email').hide();
+});
+</script>

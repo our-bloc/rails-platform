@@ -1,0 +1,111 @@
+<h5 class="center-align strong cyan-text"> build your own career prep portal</h5>
+<img src="/img/bgimages.png" id="bg">
+<div class="partner_registration row card">
+  <div class="col s12 l6" > 
+    <h2 class="cyan-text strong"> bloc.</h2>
+    <h5> build your career portal & help your students succeed</h5>
+    <% if params[:registration]== "design" %> 
+      <h1> 2. design your portal </h1>
+    <% elsif params[:registration]=="end_trial" %> 
+      <h1> We can't believe it's been 14 days already!</h1>
+    <% else %> 
+    <h1> 1. create your account</h1>
+    <% end %> 
+  </div>
+  
+  <div class="col s12 l6">
+      <%= form_for(partner) do |f| %>
+        <% if partner.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(partner.errors.count, "error") %> prohibited this partner from being saved:</h2>
+      
+            <ul>
+            <% partner.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+        
+        <div class="field">
+          <%= f.label "Your Name" %>
+          <%= f.text_field :admin_name %>
+        </div>
+        
+        
+        <div class="field">
+          <%= f.label :company %>
+          <%= f.text_field :company %>
+        </div>
+        
+        <div class="field">
+          <%= f.label :email %>
+          <%= f.text_field :email %>
+        </div>
+        
+        <% if params[:registration] == "payment" %> 
+        <div class="center-align"> 
+        
+        <%= hidden_field_tag params[:price] , id: "price_field" %> 
+          <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" 
+                  data-key="<%= Rails.application.secrets.stripe_publishable_key %>"
+                  data-description="Almost there!"
+                  data-amount="<%= params[:price] %>" %> 
+                  data-email=" "
+                  data-locale="auto"> 
+            </script>
+          </div>
+        <% end %> 
+        
+      
+      <div class="actions center-align">
+          <%= f.submit "Join Bloc", :class => "btn btn-large cyan strong" , :registration => "design" %>
+        </div>
+      <% end %>
+
+  </div>
+</div>
+
+
+<style>
+body{
+  background-color: #F0FFFF;
+}
+.partner_registration{
+  padding:2%;
+}
+.plan{
+}
+#icon{
+  width: 7em;
+  height: 7em;
+}
+#bg {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+#title{
+  position: absolute;
+  top: 20%;
+  z-index: -1;
+}
+.partner_registration {
+  position: fixed;
+  width: 75%;
+  height: 70%;
+  margin: 5% 12%;
+}
+</style>
+
+<script> 
+$(".plan").click(function(){
+  var plan_type = $(this).attr("id");
+  $("#plan_field").val(plan_type);
+  
+  var plan_price = $(this).attr("data-price");
+  $("#price_field").val(plan_price);
+  console.log(plan_price)
+});
+</script>

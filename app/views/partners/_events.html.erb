@@ -1,0 +1,37 @@
+<%= semantic_form_for @event do |f| %>
+  <%= f.inputs do %>
+
+    <%= f.hidden_field :org, class: "teal-text" , :value => @partner.company %>
+    <%= f.hidden_field :contact, class: "teal-text" , :value => current_user.name %>
+
+    <div class="input-field teal-text">
+        <%= f.date_field :date, class: "teal-text" %>
+    </div> 
+
+   
+    <div class="input-field teal-text">
+        <%= f.label "Event Description" %> 
+        <%= f.text_area :body, class: "teal-text" %>
+    </div> 
+    
+    <div class="input-field teal-text"></div>
+        <%= f.label "Social Media Handles" %> 
+        <%= f.text_field :social, class: "teal-text"%>
+    </div>
+    
+    <div class="upload-field teal-text"> 
+        <%= f.label "Link to image address of flyer" %> 
+        <%= f.file_field :image, class: "teal-text" %> 
+    </div>
+    <br> 
+    
+  <% end %>
+
+  <%= f.actions do %>
+     <div> 
+    <%= f.action :submit , class:"btn btn-large teal" %>
+    </div>
+  <% end %>
+  
+<% end %>
+

@@ -1,0 +1,144 @@
+<%= form_for(influencer) do |f| %>
+  <% if influencer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(influencer.errors.count, "error") %> prohibited this influencer from being saved:</h2>
+
+      <ul>
+      <% influencer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+    
+    
+    
+  <% end %>
+  
+  <h5> Role Model Info </h5>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  
+   <div class="field">
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  </div>
+  
+   <div class="field">
+    <%= f.label "Alma Mater" %>
+    <%= f.text_field :school %>
+  </div>
+  
+  <div class="field">
+    <%= f.label "Class of ..."  %>
+    <%= f.text_field :gradyear %>
+  </div>
+  
+  <div class="field">
+    <%= f.label "Graduate or Professional School?" %>
+    <%= f.text_field :grad %>
+  </div>
+  
+  <h5> Role Model Professional Experiences </h5>
+   <div class="field">
+    <%= f.label "Graduate or Professional School Class Year" %>
+    <%= f.text_field :grad_gradyear %>
+  </div>
+  
+   <div class="field">
+    <%= f.label "First job role out of school" %>
+    <%= f.text_field :experience,  :multiple => true %>
+  </div>
+  
+  <div class="field">
+    <%= f.label "Company"  %>
+    <%= f.text_field :experience,  :multiple => true %>
+  </div>
+
+  <div class="field">
+    <%= f.label "1 Sentence Bio" %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :industry %>
+    <%= f.hidden_field :industry , :id =>"field_influencerindustry" %>
+    
+    <div class="row">
+      <div class="influencer_industry cyan-text btn white  col m3" id="Griots"> Griots </div>
+      <div class="influencer_industry cyan-text btn waves-effect white col m3" id="Techies"> Techies </div>
+      <div class="influencer_industry cyan-text btn waves-effect white col m3" id="Scientists"> Scientists </div>
+      <div class="influencer_industry cyan-text btn waves-effect white col m3" id="CSuite"> CSuite </div>
+      <div class="influencer_industry cyan-text btn waves-effect white col m3" id="Educators"> Educators </div>
+      <div class="influencer_industry cyan-text btn waves-effect white col m3" id="Activists"> Activists </div>
+      <div class="influencer_industry cyan-text btn waves-effect white col m3" id="Advocates"> Advocates </div>
+    </div>
+  </div>
+  
+
+
+  <h5> What advice does your role model have to offer current students? </h5>
+   <div class="field">
+      <%= f.label :advice1 %>
+      <%= f.text_area :advice1 %>
+    </div>
+    
+     <div class="field">
+      <%= f.label :advice2 %>
+      <%= f.text_area :advice2 %>
+    </div>
+    
+     <div class="field">
+      <%= f.label :advice3 %>
+      <%= f.text_area :advice3 %>
+    </div>
+    
+    <div class="field">
+      <%= f.label "Name a professional resource that helped you while in school (ie resume template, website, network, groupme, LinkedIn" %>
+      <%= f.text_area :resources, multiple: true %>
+    </div>
+    
+     <div class="field">
+      <%= f.label "What category would your resource fall into?" %>
+      <%= f.text_area :resources, multiple: true %>
+    </div>
+    
+    <div class="field">
+      <%= f.label "Is there a link to a resource you'd like to share?" %>
+      <%= f.text_area :resources, multiple: true %>
+    </div>
+    
+    
+  <div class="waves-effect cyan white-text cyan btn center" >
+    <%= f.submit "Create Role Model" , :class => "white-text" %>
+  </div>
+<% end %>
+
+<style> 
+  .btn , .btn-large{
+    margin: .5%;
+    padding: 0% 5%;
+  }
+  
+  
+</style>
+<script>
+  $('.influencer_industry').click(function(){
+      var idval = $(this).attr("id");
+      console.log(idval);
+          
+      $('#field_influencerindustry').val(idval);
+            
+  });
+
+//SCRIPT FOR STYLE  SECTION OF QUIZ    
+       $('.influencer_style').click(function(){
+      var idval = $(this).attr("id");
+      console.log(idval);
+          
+      $('#field_influencerstyle').val(idval);
+            
+  });
+</script>
+

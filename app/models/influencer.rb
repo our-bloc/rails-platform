@@ -1,5 +1,7 @@
 class Influencer < ApplicationRecord
      belongs_to :user
+     mount_uploader :image, ImageUploader
+     acts_as_votable
      
      def self.search(search)
         # where(:title, query) -> This would return an exact match of the query
